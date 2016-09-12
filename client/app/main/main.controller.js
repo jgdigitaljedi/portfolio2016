@@ -43,10 +43,11 @@ angular.module('portfolioApp')
         }
 
         $http.get('/lastfm')
-            .success(function(result) {
+            .then(function successCallback (result) {
                 result = result.recenttracks.track;
                 makeLastFmWidget(result);
-            }).error(function(result) {
+            }, function failureCallback (error) {
+                console.log('error with lastfm', error);
                 $scope.showLastfm = false;
             });
   });
