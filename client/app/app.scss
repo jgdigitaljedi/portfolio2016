@@ -12,7 +12,25 @@
      }
    }
  }
+ @import url('http://fonts.googleapis.com/css?family=Viga|Signika');
+ @import url('https://fonts.googleapis.com/css?family=Exo:400,700,800,400italic,700italic,900');
+ @font-face {
+   font-family: 'langdon';
+   src: url('../assets/fonts/langdon-webfont.eot');
+   src: url('../assets/fonts/langdon-webfont.eot?#iefix') format('embedded-opentype'),
+   url('../assets/fonts/langdon-webfont.woff') format('woff'),
+   url('../assets/fonts/langdon-webfont.ttf') format('truetype'),
+   url('../assets/fonts/langdon-webfont.svg#Langdon') format('svg');
+ }
 
+ body {
+   font-family: 'Exo', sans-serif;
+   color: #f1f1f1;
+ }
+
+ .no-scroll {
+   overflow: hidden !important;
+ }
 // Component styles are injected through grunt
 // injector
 @import 'main/main.scss';

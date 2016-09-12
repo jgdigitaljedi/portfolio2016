@@ -1,43 +1,52 @@
 'use strict';
 
 angular.module('portfolioApp')
-  .controller('MainCtrl', function ($scope, $http) {
-    $scope.awesomeThings = [];
+    .controller('MainCtrl', function ($scope, $http, $compile) {
+        var mainVm = this;
+        mainVm.showLastfm = true;
 
-    $http.get('/api/things').success(function(awesomeThings) {
-      $scope.awesomeThings = awesomeThings;
-    });
+        function makeLastFmWidget(result) {
+            for(var i = 0; i < 5; i++) {
+                var artistWeb = result[i].artist['#text'].split(' ').join('+'),
+                    nameWeb = result[i].name.split(' ').join('+'),
+                    ytUrl = 'https://www.youtube.com/results?search_query=' + artistWeb + '-' + nameWeb,
+                    albumImage = result[i].image[1]['#text'] ? result[i].image[1]['#text'] : '../../../assets/images/no-image.png',
+                    template = $compile('<a href="' + ytUrl + '" target=\'__blank\'><img src="' + albumImage +
+                        '" class="song-image"/><md-tooltip style="color: black;">' + result[i].artist['#text'] + ' / ' + result[i].name +
+                        '</md-tooltip></a>')($scope);
+                    angular.element( document.querySelector('#lastfm-widget')).append(template);
+                    //if (result[i].image[1]['#text']) {
+                    //    albumImage = result[i].image[1]['#text'];
+                    //    var template = $compile('<a href="' + ytUrl + '" target=\'__blank\'><img src="' + result[i].image[1]['#text'] +
+                    //        '" class="song-image"/><md-tooltip style="color: black;">' + result[i].artist['#text'] + ' / ' + result[i].name +
+                    //        '</md-tooltip></a>')($scope);
+                    //    angular.element( document.querySelector('#lastfm-widget')).append(template);
+                    //} else {
+                    //    $http.get('/lastart/' + result[i].artist['#text']).then( function successCallback (response) {
+                    //        console.log('response', response.data.results.artistmatches.artist[0].image[1]['#text']);
+                    //        albumImage = response.data.results.artistmatches.artist[0].image[1]['#text'];
+                    //        var template = $compile('<a href="' + ytUrl + '" target=\'__blank\'><img src="' + albumImage +
+                    //            '" class="song-image"/><md-tooltip style="color: black;">' + result[i].artist['#text'] + ' / ' + result[i].name +
+                    //            '</md-tooltip></a>')($scope);
+                    //        angular.element( document.querySelector('#lastfm-widget')).append(template);
+                    //    }, function errorCallback (response) {
+                    //        console.log('epic fail', response);
+                    //    });
+                    //}
 
-    $scope.getColor = function($index) {
-      var _d = ($index + 1) % 11;
-      var bg = '';
+            }
+            var lastfmSite = $compile('<a href="http://www.last.fm/user/joeygstrings" target=\'__blank\'>' +
+                '<img class="lastfm-ender" src="assets/images/lastfm-icon.png" />' +
+                '<md-tooltip style="color: black;">My Lastfm Profile</md-tooltip>')($scope);
+            angular.element( document.querySelector('#lastfm-widget')).append(lastfmSite);
 
-      switch(_d) {
-        case 1:       bg = 'red';         break;
-        case 2:       bg = 'green';       break;
-        case 3:       bg = 'darkBlue';    break;
-        case 4:       bg = 'blue';        break;
-        case 5:       bg = 'yellow';      break;
-        case 6:       bg = 'pink';        break;
-        case 7:       bg = 'darkBlue';    break;
-        case 8:       bg = 'purple';      break;
-        case 9:       bg = 'deepBlue';    break;
-        case 10:      bg = 'lightPurple'; break;
-        default:      bg = 'yellow';      break;
-      }
+        }
 
-      return bg;
-    };
-
-    $scope.getSpan = function($index) {
-      var _d = ($index + 1) % 11;
-
-      if (_d === 1 || _d === 5) {
-        return 2;
-      }
-    };
-
-    $scope.deleteThing = function(thing) {
-      $http.delete('/api/things/' + thing._id);
-    };
+        $http.get('/lastfm')
+            .success(function(result) {
+                result = result.recenttracks.track;
+                makeLastFmWidget(result);
+            }).error(function(result) {
+                $scope.showLastfm = false;
+            });
   });
