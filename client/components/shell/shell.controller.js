@@ -1,9 +1,15 @@
 'use strict';
 
 angular.module('portfolioApp')
-  .controller('ShellCtrl', function ($mdSidenav, $mdDialog, $scope, $location) {
+  .controller('ShellCtrl', function ($mdSidenav, $mdDialog, $scope, $location, $rootScope) {
 
-    
+    $scope.overrideTheme = function () {
+      $rootScope.theme = $rootScope.theme === 'day' ? 'night' : 'day';
+      $scope.theme = $rootScope.theme;
+      $rootScope.$broadcast('theme change');
+    };
+
+    $scope.isDay = $rootScope.theme === 'day' ? true : false;
 
     $scope.isActive = function(route) {
       return route === $location.path();

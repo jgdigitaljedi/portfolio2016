@@ -29,7 +29,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div ui-view="" md-theme="{{vm.default ? 'day' : 'night'}}"></div>
+    <div ui-view="" ng-controller="AppCtrl" md-theme="{{theme === 'day' ? 'day' : 'night'}}"></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -68,6 +68,7 @@
         <script src="app/app.js"></script>
           <!-- injector:js -->
           <script src="app/about/about.controller.js"></script>
+          <script src="app/blog/blog.controller.js"></script>
           <script src="app/contact/contact.controller.js"></script>
           <script src="app/fun/fun.controller.js"></script>
           <script src="app/main.js"></script>

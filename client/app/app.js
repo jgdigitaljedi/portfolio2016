@@ -45,4 +45,8 @@ angular.module('portfolioApp', [
         .warnPalette('red');
       
     $mdThemingProvider.alwaysWatchTheme(true);
+}).controller('AppCtrl', function ($scope, $rootScope) {
+    var theHour = parseInt(moment().format('HH'));
+    $scope.theme = theHour >= 7 || theHour <= 19 ? 'day' : 'night';
+    $rootScope.theme = $scope.theme;
 });

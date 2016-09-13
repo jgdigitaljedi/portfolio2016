@@ -1,4 +1,5 @@
-<section class="resume-section" ng-controller="ResumeControllerController as rc">
+<div ng-include="'components/shell/shell.html'" ng-class="{'night':rc.theme === 'night', 'day': rc.theme === 'day'}"></div>
+<section class="resume-section" ng-controller="ResumeCtrl as rc" md-theme="{{rc.theme}}" ng-class="{'night':rc.theme === 'night', 'day': rc.theme === 'day'}">
     <div layout="column" layout-align="center start">
         <div class="resume-container">
             <p>Download my resum&eacute; here</p>

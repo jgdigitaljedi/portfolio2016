@@ -1,7 +1,8 @@
 /**
  * App-wide Styles
  */
-
+$blue-gray: #607d8b;
+$dark-amber: #ffc107;
  .main-shell {
    .profile-container {
      height: 100%;
@@ -31,9 +32,20 @@
  .no-scroll {
    overflow: hidden !important;
  }
+
+ .day {
+   background-color: #f1f1f1;
+   color: #212121;
+ }
+
+ .night {
+   background-color: #040615;
+   color: #f1f1f1;
+ }
 // Component styles are injected through grunt
 // injector
 @import 'about/about.scss';
+@import 'blog/blog.scss';
 @import 'contact/contact.scss';
 @import 'fun/fun.scss';
 @import 'main/main.scss';

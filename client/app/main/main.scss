@@ -41,10 +41,18 @@ $dark-amber: #ffc107;
 }
 
 .about-section {
-  color: #f1f1f1;
-  height: 77vh;
+  // color: #f1f1f1;
+  // height: 77vh;
   overflow: hidden;
-  
+  background-image: url('../../assets/images/AustinSkylineCropped.svg');
+  background-position: bottom;
+  background-size: contain;
+  background-repeat:  no-repeat;
+  height: calc(100vh - 64px);
+
+  .top-column {
+    margin-top: 20px;
+  }
   .about-me-bio-area {
   .my-name {
     font-size: 5em;

@@ -1,9 +1,14 @@
 'use strict';
 
 angular.module('portfolioApp')
-    .controller('MainCtrl', function ($scope, $http, $compile) {
+    .controller('MainCtrl', function ($scope, $http, $compile, $rootScope) {
         var mainVm = this;
         mainVm.showLastfm = true;
+        mainVm.theme = $rootScope.theme;
+
+        $rootScope.$on('theme change', function () {
+            mainVm.theme = $rootScope.theme;
+        });
 
         function makeLastFmWidget(result) {
             for(var i = 0; i < 5; i++) {
