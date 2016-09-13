@@ -44,6 +44,7 @@ angular.module('portfolioApp')
 
         $http.get('/lastfm')
             .then(function successCallback (result) {
+                console.log('result', result);
                 result = result.recenttracks.track;
                 makeLastFmWidget(result);
             }, function failureCallback (error) {

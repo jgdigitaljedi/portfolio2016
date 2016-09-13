@@ -8,7 +8,6 @@ var express = require('express'),
 	request = require('request'), 
 	qs = require('querystring'),  
 	_ = require('lodash'),
-	keys = require('../../keys.json'),
 	logger = require('tracer').colorConsole();
 
 exports.getYelpInfo = function(req, res) {
@@ -22,16 +21,16 @@ exports.getYelpInfo = function(req, res) {
 		    term: 'food'
 		},
 		required_parameters = {
-		    oauth_consumer_key : keys.yelp_oauth_consumer_key,
-		    oauth_token : keys.yelp_oauth_token,
+		    oauth_consumer_key : process.env.JYELPKEY,
+		    oauth_token : process.env.JYELPTOKEN,
 		    oauth_nonce : n(),
 		    oauth_timestamp : n().toString().substr(0,10),
 		    oauth_signature_method : 'HMAC-SHA1',
 		    oauth_version : '1.0'
 		},
 		parameters = _.assign(default_parameters, req, required_parameters),
-		consumerSecret = keys.yelp_consumerSecret,
-		tokenSecret = keys.yelp_tokenSecret,
+		consumerSecret = process.env.JYELPSECRET,
+		tokenSecret = process.env.JYELPTOKENSECRET,
 		signature = oauthSignature.generate(httpMethod, url, parameters, consumerSecret, tokenSecret, { encodeSignature: false});
 
 	parameters.oauth_signature = signature;

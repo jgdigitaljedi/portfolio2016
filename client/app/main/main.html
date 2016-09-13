@@ -1,38 +1,24 @@
 <div ng-include="'components/shell/shell.html'"></div>
-<!-- 
-<md-grid-list class="things-list" md-cols-sm="1" md-cols-md="2" md-cols-gt-md="5"
-        md-row-height-gt-md="1:1" md-row-height="4:3"
-        md-gutter="8px" md-gutter-gt-sm="4px">
-  <md-grid-tile ng-repeat="thing in awesomeThings" ng-class="getColor($index)" md-rowspan="{{getSpan($index)}}"
-                  md-colspan="{{getSpan($index)}}"
-                  md-colspan-sm="1">
-    
-    <md-icon class="avatar-icon" md-svg-icon="avatar:svg-{{ ($index + 1) % 11 }}"></md-icon>
-    <md-grid-tile-footer><h3>{{thing.name}}</h3></md-grid-tile-footer>
-  </md-grid-tile>
-</md-grid-list>
- -->
- <section class="about-section" ng-controller="MainCtrl as mainVm">
- 	<div layout="column" layout-align="start center">
- 		<div layout="row" layout layout-align="center center">
- 			<img src="assets/images/large_619034.png" class="pics-of-me fade-in" />
- 		</div>
- 		<div layout="row" layout layout-align="center center">
- 			<img src="assets/images/divider.png" class="divider-graphic fade-in" />
- 		</div>
- 		<div class="about-me-bio-area">
-             <div  layout-align="center center" class="writeup-box" layout="column">
-                 <p class="my-name fade-in">joey gauthier</p>
-                 <p class="my-profession fade-in">JavaScript / UXUI Developer</p>
-                 <p class="small-desc-line fade-in">NodeJS tinkerer, guitar extraordinaire, Raspberry Pi project lover, and beard enthusiast.</p>
-             </div>
-
- 		</div>
- 	</div>
- 	<div class="last-fm-section" layout="row" layout-align="center end" ng-show="aboutVm.showLastfm">
-         <div class="last-card">
-             <span><em>Last 5 songs I've listened to (hover for info)...</em></span>
-             <div id="lastfm-widget"></div>
-         </div>
- 	</div>
- </section>
+<section class="about-section" ng-controller="MainCtrl as mainVm">
+	<div layout="column" layout-align="start center">
+		<div layout="row" layout layout-align="center center">
+			<img src="assets/images/large_619034.png" class="pics-of-me fade-in" />
+		</div>
+		<div layout="row" layout layout-align="center center">
+			<img src="assets/images/divider.png" class="divider-graphic fade-in" />
+		</div>
+		<div class="about-me-bio-area">
+	        <div  layout-align="center center" class="writeup-box" layout="column">
+	            <p class="my-name fade-in">joey gauthier</p>
+	            <p class="my-profession fade-in">JavaScript / UXUI Developer</p>
+	            <p class="small-desc-line fade-in">Disc golf weekender, guitar player, Raspberry Pi project lover, and beard enthusiast.</p>
+	        </div>
+		</div>
+	</div>
+	<div class="last-fm-section" layout="row" layout-align="center end" ng-show="aboutVm.showLastfm">
+	    <div class="last-card">
+	        <span><em>Last 5 songs I've listened to (hover for info)...</em></span>
+	        <div id="lastfm-widget"></div>
+	    </div>
+	</div>
+</section>

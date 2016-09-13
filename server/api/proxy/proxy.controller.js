@@ -3,19 +3,18 @@
 var request = require('request'),
 	nodemailer = require('nodemailer'),
 	smtpTransport = require('nodemailer-smtp-transport'),
-	keys = require('../../keys.json'),
 	path = require('path');
 	
 exports.conditions = function(req, res) {
 	//console.log('weather conditions proxy used', req.params.loc);
 	var location = req.params.loc,
-		url = 'http://api.wunderground.com/api/' + keys.wu + '/geolookup/conditions/q/' + location + '.json';
+		url = 'http://api.wunderground.com/api/' + process.env.JWUKEY + '/geolookup/conditions/q/' + location + '.json';
 
 	request.get(
 	    url,
 		function (error, response, body) {
 	        if (!error && response.statusCode === 200) {
-	          var obj = JSON.parse(body);
+	          	var obj = JSON.parse(body);
 	            res.json(obj);
 	        }
 	    }
@@ -24,14 +23,16 @@ exports.conditions = function(req, res) {
 
 exports.lastfm = function(req, res) {
 	//console.log('lastfm proxy used');
-	var url = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=joeygstrings&api_key=' + keys.last + '&format=json';
+	var url = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=joeygstrings&api_key=' + process.env.JLASTKEY + '&format=json';
 
 	request.get(
 	    url,
 		function (error, response, body) {
 	        if (!error && response.statusCode === 200) {
-	          var obj = JSON.parse(body);
+	          	var obj = JSON.parse(body);
 	            res.json(obj);
+	        } else {
+	        	res.json({error: true, message: error});
 	        }
 	    }
 	);
@@ -39,7 +40,7 @@ exports.lastfm = function(req, res) {
 
 exports.lastArt = function (req, res) {
 	var data = req.params.band,
-		theUrl =  'http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=' + data + '&api_key=' + keys.last + '&format=json';
+		theUrl =  'http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=' + data + '&api_key=' + process.env.JLASTKEY + '&format=json';
 
     function callback (error, response, body) {
         if (!error && response.statusCode === 200) {
@@ -58,8 +59,8 @@ exports.sendMail = function(req, res) {
 			{
 				service: 'yahoo',
 				auth: {
-					user: keys.yahooUser,
-					pass: keys.yahooPass
+					user: process.env.JYAHOOUSER,
+					pass: process.env.JYAHOOPASS
 				}
 			}
 		),
@@ -70,8 +71,8 @@ exports.sendMail = function(req, res) {
 		company = '';
 	}
     transporter.sendMail({
-        from: keys.yahooUser,
-        to: keys.myEmail,
+        from: process.env.JYAHOOUSER,
+        to: process.env.JPERSONALEMAIL,
         subject: 'Message from ' + data.firstName + ' ' + data.lastName + company,
         text: data.comment
     }, function(error, response){  //callback

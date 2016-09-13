@@ -1,7 +1,6 @@
 'use strict';
 
 var express = require('express'),
-    keys = require('../../keys.json'),
     app = express(),
     http = require('http'),
     mornObj = {},
@@ -45,7 +44,7 @@ function getCalendar(res, anoon) {
 function getForecast(res, anoon) {
     http.get({
         host: 'api.wunderground.com',
-        path: '/api/' + keys.wu + '/forecast/q/TX/' + (anoon ? 'Manor' : 'Austin') + '.json'
+        path: '/api/' + process.env.JWUKEY + '/forecast/q/TX/' + (anoon ? 'Manor' : 'Austin') + '.json'
     }, function (response) {
         var body = '';
         if (response.statusCode < 200 || response.statusCode > 299) {
@@ -69,7 +68,7 @@ function getForecast(res, anoon) {
 function getConditions(res, anoon) {
     http.get({
         host: 'api.wunderground.com',
-        path: '/api/' + keys.wu + '/conditions/q/TX/' + (anoon ? 'Manor' : 'Austin') + '.json'
+        path: '/api/' + process.env.JWUKEY + '/conditions/q/TX/' + (anoon ? 'Manor' : 'Austin') + '.json'
     }, function (response) {
         var body = '';
         if (response.statusCode < 200 || response.statusCode > 299) {
@@ -90,11 +89,11 @@ function getConditions(res, anoon) {
 }
 
 function getTraffic(res, anoon) {
-    var home = encodeURI(keys.homeAdd),
-        parking = encodeURI(keys.workAdd);
+    var home = encodeURI(process.env.JHOMEADD),
+        parking = encodeURI(process.env.JWORKADD);
     http.get({
         host: 'dev.virtualearth.net',
-        path: '/REST/V1/Routes/Driving?wp.0=' + (anoon ? parking : home) + '&wp.1=' + (anoon ? home : parking) + '&avoid=minimizeTolls&key=' + keys.bing
+        path: '/REST/V1/Routes/Driving?wp.0=' + (anoon ? parking : home) + '&wp.1=' + (anoon ? home : parking) + '&avoid=minimizeTolls&key=' + process.env.JBINGMAPS
     }, function (response) {
         var body = '';
         if (response.statusCode < 200 || response.statusCode > 299) {

@@ -1,53 +1,97 @@
 <div ng-controller="ShellCtrl" class="main-shell">
-  <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
-    <md-toolbar class="md-tall md-accent">
-      
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+        <md-toolbar class="md-accent">
+            <div style="width: 100%; text-align: center;">
+                <h3>Navigation</h3>
+            </div>
+        </md-toolbar>
+        <md-content layout-padding>
+            <md-list>
+                <md-list-item>
+                    <md-button>
+                        <md-icon md-svg-icon="action:home" class="nav-icon" aria-label="home" size="24"></md-icon>
+                        Home
+                    </md-button>
+                </md-list-item>
+                <md-list-item>
+                    <md-button>
+                        <md-icon md-svg-icon="av:library_books" class="nav-icon" aria-label="about" size="24"></md-icon>
+                        About
+                    </md-button>
+                </md-list-item>
+                <md-list-item>
+                    <md-button>
+                        <md-icon md-svg-icon="action:perm_media" class="nav-icon" aria-label="projects" size="24"></md-icon>
+                        Projects
+                    </md-button>
+                </md-list-item>
+                <md-list-item>
+                    <md-button>
+                        <md-icon md-svg-icon="social:group" class="nav-icon" aria-label="social" size="24"></md-icon>
+                        Social
+                    </md-button>
+                </md-list-item>
+                <md-list-item>
+                    <md-button>
+                        <md-icon md-svg-icon="editor:format_list_bulleted" class="nav-icon" aria-label="resume" size="24"></md-icon>
+                        Resume
+                    </md-button>
+                </md-list-item>
+                <md-list-item>
+                    <md-button>
+                        <md-icon md-svg-icon="communication:contact_mail" class="nav-icon" aria-label="contact" size="24"></md-icon>
+                        Contact
+                    </md-button>
+                </md-list-item>
+                <md-list-item>
+                    <md-button>
+                        <md-icon md-svg-icon="social:mood" class="nav-icon" aria-label="fun" size="24"></md-icon>
+                        Fun
+                    </md-button>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </md-sidenav>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <md-button ng-click="toggleLeft()" class="md-icon-button" aria-label="Settings">
+                <md-icon md-svg-icon="assets/icons/menu.svg"></md-icon>
+            </md-button>
+            <h2>
+                <span>portfolio</span>
+            </h2>
+            <span flex=""></span>
+            <md-menu>
+                <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdOpenMenu, $event)">
+                    <md-icon md-menu-origin md-svg-icon="assets/icons/dots-vertical.svg"></md-icon>
+                </md-button>
+                <md-menu-content width="4">
+                    <md-menu-item>
+                        <md-button ng-click="showAddDialog($event)">
+                            <md-icon md-svg-icon="content:add" md-menu-align-target></md-icon>
+                            Add
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button ng-click="redial($event)">
+                            <md-icon md-svg-icon="communication:dialpad" md-menu-align-target></md-icon>
+                            Redial
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button disabled="disabled" ng-click="checkVoicemail()">
+                            <md-icon md-svg-icon="communication:voicemail"></md-icon>
+                            Check voicemail
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button ng-click="toggleNotifications()">
+                            <md-icon md-svg-icon="social:notifications{{notificationsEnabled ? '_off' : ''}}"></md-icon>
+                            {{notificationsEnabled ? 'Disable' : 'Enable' }} notifications
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+        </div>
     </md-toolbar>
-    <md-content layout-padding>
-
-    </md-content>
-  </md-sidenav>
-  <md-toolbar>
-    <div class="md-toolbar-tools">
-      <md-button ng-click="toggleLeft()" class="md-icon-button" aria-label="Settings">
-        <md-icon md-svg-icon="assets/icons/menu.svg"></md-icon>
-      </md-button>
-      <h2>
-          <span>portfolio</span>
-        </h2>
-      <span flex=""></span>
-      <md-menu>
-        <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdOpenMenu, $event)">
-          <md-icon md-menu-origin md-svg-icon="assets/icons/dots-vertical.svg"></md-icon>
-        </md-button>
-        <md-menu-content width="4">
-          <md-menu-item>
-            <md-button ng-click="showAddDialog($event)">
-              <md-icon md-svg-icon="content:add" md-menu-align-target></md-icon>
-              Add
-            </md-button>
-          </md-menu-item>
-          <md-menu-item>
-            <md-button ng-click="redial($event)">
-              <md-icon md-svg-icon="communication:dialpad" md-menu-align-target></md-icon>
-              Redial
-            </md-button>
-          </md-menu-item>
-          <md-menu-item>
-            <md-button disabled="disabled" ng-click="checkVoicemail()">
-              <md-icon md-svg-icon="communication:voicemail"></md-icon>
-              Check voicemail
-            </md-button>
-          </md-menu-item>
-          <md-menu-item>
-            <md-button ng-click="toggleNotifications()">
-              <md-icon md-svg-icon="social:notifications{{notificationsEnabled ? '_off' : ''}}"></md-icon>
-              {{notificationsEnabled ? 'Disable' : 'Enable' }} notifications
-            </md-button>
-          </md-menu-item>
-          
-        </md-menu-content>
-      </md-menu>
-    </div>
-  </md-toolbar>
 </div>
