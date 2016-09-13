@@ -3,6 +3,8 @@
  */
 $blue-gray: #607d8b;
 $dark-amber: #ffc107;
+$flat-black: #212121;
+$flat-white: #f1f1f1;
  .main-shell {
    .profile-container {
      height: 100%;
@@ -26,7 +28,7 @@ $dark-amber: #ffc107;
 
  body {
    font-family: 'Exo', sans-serif;
-   color: #f1f1f1;
+   color: $flat-white;
  }
 
  .no-scroll {
@@ -34,13 +36,13 @@ $dark-amber: #ffc107;
  }
 
  .day {
-   background-color: #f1f1f1;
-   color: #212121;
+   background-color: $flat-white;
+   color: $flat-black;
  }
 
  .night {
    background-color: #040615;
-   color: #f1f1f1;
+   color: $flat-white;
  }
 // Component styles are injected through grunt
 // injector

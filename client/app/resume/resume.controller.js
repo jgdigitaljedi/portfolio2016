@@ -7,6 +7,20 @@ angular.module('portfolioApp').controller('ResumeCtrl', ['$window', 'D3Resume', 
 		rc.openFab = false;
 		rc.theme = $rootScope.theme;
 
+		function colorChartText () {
+			var svgText = document.getElementsByTagName('text');
+			var tLen = svgText.length;
+			console.log('svgText', svgText);
+			for (var i = 0; i < tLen; i++) {
+				if (rc.theme === 'day') {
+					svgText[i].style.fill = '#212121';
+				} else {
+					svgText[i].style.fill = '#f1f1f1';					
+				}
+			}
+		}
+
+
 		rc.docClicked = function () {
             $window.open('../../assets/resume/resume2015.docx', '_blank');
 		};
@@ -21,6 +35,7 @@ angular.module('portfolioApp').controller('ResumeCtrl', ['$window', 'D3Resume', 
 
 		$rootScope.$on('theme change', function () {
 		    rc.theme = $rootScope.theme;
+		    colorChartText();
 		});
 
 		// var resume = new D3Resume({
@@ -34,5 +49,6 @@ angular.module('portfolioApp').controller('ResumeCtrl', ['$window', 'D3Resume', 
 		  		return colorArr[Math.floor(Math.random()*48)];
 		  	}
 		});
+		colorChartText();
 	}
 ]);
