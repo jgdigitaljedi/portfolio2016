@@ -29,17 +29,17 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div ui-view="" md-theme="{{vm.default ? 'lime' : 'blue'}}"></div>
+    <div ui-view="" md-theme="{{vm.default ? 'day' : 'night'}}"></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-XXXXX-X');
-      ga('send', 'pageview');
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-69453970-1', 'auto');
+  ga('send', 'pageview');
     </script>
 
     <!--[if lt IE 9]>
@@ -67,8 +67,9 @@
         
         <script src="app/app.js"></script>
           <!-- injector:js -->
+          <script src="app/about/about.controller.js"></script>
+          <script src="app/main.js"></script>
           <script src="app/main/main.controller.js"></script>
-          <script src="app/main/main.js"></script>
           <script src="components/shell/dialog/dialog.controller.js"></script>
           <script src="components/shell/shell.controller.js"></script>
           <!-- endinjector -->

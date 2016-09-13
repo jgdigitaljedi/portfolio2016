@@ -1,0 +1,57 @@
+$blue-gray: #607d8b;
+$dark-amber: #ffc107;
+
+.resume-section {
+  #resume {
+    svg {
+      text {
+        fill: #f1f1f1;
+      }      
+    }
+  }
+  
+  .resume-container {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .menu-button {
+    color: #f1f1f1;
+    background-color: $dark-amber;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    padding: 15px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .resume-button {
+    background-color: #f1f1f1;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    padding: 11px;
+    color: @blue-gray;
+
+    i {
+      margin: 0 auto;
+    }
+  }
+
+  .fabSpeedDialdemoBasicUsage .text-capitalize {
+    text-transform: capitalize; }
+  .fabSpeedDialdemoBasicUsage .md-fab:hover, .fabSpeedDialdemoBasicUsage .md-fab.md-focused {
+    background-color: #000 !important; }
+  .fabSpeedDialdemoBasicUsage p.note {
+    font-size: 1.2rem; }
+  .fabSpeedDialdemoBasicUsage .lock-size {
+    min-width: 300px;
+    min-height: 300px;
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto; }
+	
+}

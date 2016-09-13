@@ -33,16 +33,16 @@ angular.module('portfolioApp', [
 
     $locationProvider.html5Mode(true);
 
-    $mdThemingProvider.theme('blue')
+    $mdThemingProvider.theme('night')
         .primaryPalette('blue-grey')
         .accentPalette('amber')
         .warnPalette('red')
         .dark();
 
-    $mdThemingProvider.theme('lime')
-        .primaryPalette('lime')
-        .accentPalette('orange')
-        .warnPalette('blue');
+    $mdThemingProvider.theme('day')
+        .primaryPalette('blue-grey')
+        .accentPalette('amber')
+        .warnPalette('red');
       
     $mdThemingProvider.alwaysWatchTheme(true);
 });
