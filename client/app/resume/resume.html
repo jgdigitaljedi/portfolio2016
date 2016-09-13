@@ -1,20 +1,20 @@
-<section class="resume-section" ng-controller="ResumeControllerController as resumeVm">
+<section class="resume-section" ng-controller="ResumeControllerController as rc">
     <div layout="column" layout-align="center start">
         <div class="resume-container">
             <p>Download my resum&eacute; here</p>
             <div layout="row" layout-align="center start" style="width: 100%">
-                <md-fab-speed-dial md-direction="down" class="md-scale" md-open="resumeVm.openFab">
+                <md-fab-speed-dial md-direction="down" class="md-scale" md-open="rc.openFab">
                     <md-fab-trigger aria-label="Resume format">
                         <md-icon md-svg-icon="menu" class="menu-button"></md-icon>
                     </md-fab-trigger>
                     <md-fab-actions>
-                        <md-button aria-label="PDF" ng-click="resumeVm.pdfClicked()">
+                        <md-button aria-label="PDF" ng-click="rc.pdfClicked()">
                             <md-icon class="resume-button"><i class="fa fa-file-pdf-o fa-2x"></i></md-icon>
                         </md-button>
-                        <md-button aria-label="DOCX" ng-click="resumeVm.docClicked()">
+                        <md-button aria-label="DOCX" ng-click="rc.docClicked()">
                             <md-icon class="resume-button"><i class="fa fa-file-word-o fa-2x"></i></md-icon>
                         </md-button>
-                        <md-button aria-label="ODT" ng-click="resumeVm.odtClicked()">
+                        <md-button aria-label="ODT" ng-click="rc.odtClicked()">
                             <md-icon class="resume-button"><i class="fa fa-file-text-o fa-2x"></i></md-icon>
                         </md-button>
                     </md-fab-actions>

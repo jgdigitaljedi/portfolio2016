@@ -1,6 +1,9 @@
 {
   "name": "portfolio",
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "babel": {
+    "ignore": "client/components/services/d3.service.js"
+  },
   "main": "server/app.js",
   "dependencies": {
     "body-parser": "~1.5.0",

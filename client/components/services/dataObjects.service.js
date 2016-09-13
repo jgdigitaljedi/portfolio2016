@@ -153,12 +153,13 @@ angular.module('portfolioApp').factory('Dataobjects', [
 		        },
 		        {
 		            'type':'Employment',
-		            'institution':'Schneider Electric',
+		            'institution':'Kapsch TrafficCom',
 		            'title':'Software Engineer',
 		            'from':'2014-11-03',
 		            'to':null, /* because this is my current job, it doesn't have an end date */
 		            'description':'Design JavaScript/Angular applications to visualize tolling and traffic data. '+
-		            	'\n Create many types of data visualizations using Kendo UI, D3, ChartJS, Raphael, Google Maps, and more.',
+		            	'\n Create many types of data visualizations using Kendo UI, D3, ChartJS, Raphael, Google Maps, and more.'+
+                        '\n Architect, design, and implement NodeJS server and app solutions.',
 		            'default_item':true
 		        }
 		    ],

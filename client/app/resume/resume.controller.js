@@ -1,19 +1,19 @@
 'use strict';
 
-angular.module('portfolioApp').controller('ResumeControllerController', ['$window', 'D3Resume', 'Dataobjects',
+angular.module('portfolioApp').controller('ResumeCtrl', ['$window', 'D3Resume', 'Dataobjects',
 	function($window, D3Resume, Dataobjects) {
-		var resumeVm = this;
-		resumeVm.openFab = false;
+		var rc = this;
+		rc.openFab = false;
 
-		resumeVm.docClicked = function () {
+		rc.docClicked = function () {
             $window.open('../../assets/resume/resume2015.docx', '_blank');
 		};
 
-		resumeVm.pdfClicked = function () {
+		rc.pdfClicked = function () {
 			$window.open('../../assets/resume/resume2015.pdf', '_blank');
 		};
 
-		resumeVm.odtClicked = function () {
+		rc.odtClicked = function () {
 			$window.open('../../assets/resume/resume2015.odt', '_blank');
 		};
 

@@ -487,7 +487,8 @@ module.exports = function (grunt) {
     // Compiles ES6 to JavaScript using Babel
     babel: {
       options: {
-        sourceMap: true
+        sourceMap: true,
+        ignore: 'client/components/services/d3.service.js'
       },
       server: {
         files: [{
