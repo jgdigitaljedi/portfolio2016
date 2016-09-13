@@ -488,7 +488,7 @@ module.exports = function (grunt) {
     babel: {
       options: {
         sourceMap: true,
-        ignore: 'client/components/services/d3.service.js'
+        ignore: ['client/components/services/d3.service.js', 'client/components/services/resume.service.js'] 
       },
       server: {
         files: [{

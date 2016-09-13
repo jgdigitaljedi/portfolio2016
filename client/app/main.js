@@ -7,7 +7,7 @@ angular.module('portfolioApp')
         		url: '/',
         		templateUrl: 'app/main/main.html',
         		controller: 'MainCtrl',
-        		controllerAs: 'mc'
+        		controllerAs: 'mainVm'
       		})
       		.state('about', {
       			url: '/about',

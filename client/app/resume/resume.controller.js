@@ -2,8 +2,10 @@
 
 angular.module('portfolioApp').controller('ResumeCtrl', ['$window', 'D3Resume', 'Dataobjects', '$rootScope',
 	function($window, D3Resume, Dataobjects, $rootScope) {
+		console.log('resume controller');
 		var rc = this;
 		rc.openFab = false;
+		rc.theme = $rootScope.theme;
 
 		rc.docClicked = function () {
             $window.open('../../assets/resume/resume2015.docx', '_blank');

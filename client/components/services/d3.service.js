@@ -2769,6 +2769,7 @@ angular.module('portfolioApp').factory('d3', [
   }
   function d3_time_parseFullYear(date, string, i) {
     d3_time_numberRe.lastIndex = 0;
+    // if (typeof(string) === 'object') string = moment(string).format('YYYY-MM-DD'); // **** added by me
     var n = d3_time_numberRe.exec(string.slice(i, i + 4));
     return n ? (date.y = +n[0], i + n[0].length) : -1;
   }

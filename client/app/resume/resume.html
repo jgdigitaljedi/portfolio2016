@@ -1,28 +1,19 @@
-<div ng-include="'components/shell/shell.html'" ng-class="{'night':rc.theme === 'night', 'day': rc.theme === 'day'}"></div>
-<section class="resume-section" ng-controller="ResumeCtrl as rc" md-theme="{{rc.theme}}" ng-class="{'night':rc.theme === 'night', 'day': rc.theme === 'day'}">
+<div ng-include="'components/shell/shell.html'" md-theme="{{rc.theme}}" ng-class="{'night':rc.theme === 'night', 'day': rc.theme === 'day'}"></div>
+<section class="resume-section" md-theme="{{rc.theme}}" ng-class="{'night':rc.theme === 'night', 'day': rc.theme === 'day'}">
     <div layout="column" layout-align="center start">
         <div class="resume-container">
-            <p>Download my resum&eacute; here</p>
+            <p>Download my resum&eacute; here: </p>
+            <md-input-container>
+                <label>Format</label>
+                <md-select ng-model="rc.resumeFormat">
+                    <md-option>PDF</md-option>
+                    <md-option>MS Word (.docx)</md-option>
+                    <md-option>OpenDocument Text (.odt)</md-option>
+                    <md-option>Plain Text (.txt)</md-option>
+                </md-select>
+            </md-input-container>
             <div layout="row" layout-align="center start" style="width: 100%">
-                <md-fab-speed-dial md-direction="down" class="md-scale" md-open="rc.openFab">
-                    <md-fab-trigger aria-label="Resume format">
-                        <md-icon md-svg-icon="menu" class="menu-button"></md-icon>
-                    </md-fab-trigger>
-                    <md-fab-actions>
-                        <md-button aria-label="PDF" ng-click="rc.pdfClicked()">
-                            <md-icon class="resume-button"><i class="fa fa-file-pdf-o fa-2x"></i></md-icon>
-                        </md-button>
-                        <md-button aria-label="DOCX" ng-click="rc.docClicked()">
-                            <md-icon class="resume-button"><i class="fa fa-file-word-o fa-2x"></i></md-icon>
-                        </md-button>
-                        <md-button aria-label="ODT" ng-click="rc.odtClicked()">
-                            <md-icon class="resume-button"><i class="fa fa-file-text-o fa-2x"></i></md-icon>
-                        </md-button>
-                    </md-fab-actions>
-                </md-fab-speed-dial>
-            </div>
-            <div layout="row" layout-align="center start" style="width: 100%">
-                <div id="resume" style="margin-top: -120px"></div>
+                <div id="resume" style="margin-top: 160px"></div>
             </div>
         </div>
     </div>
