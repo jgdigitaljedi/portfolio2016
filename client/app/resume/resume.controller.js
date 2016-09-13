@@ -10,7 +10,6 @@ angular.module('portfolioApp').controller('ResumeCtrl', ['$window', 'D3Resume', 
 		function colorChartText () {
 			var svgText = document.getElementsByTagName('text');
 			var tLen = svgText.length;
-			console.log('svgText', svgText);
 			for (var i = 0; i < tLen; i++) {
 				if (rc.theme === 'day') {
 					svgText[i].style.fill = '#212121';
