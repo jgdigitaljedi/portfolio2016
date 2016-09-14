@@ -1,0 +1,42 @@
+<md-dialog class="projects-gallery" md-theme={{theme}} 
+    ng-class="{'night':theme === 'night', 'day': theme === 'day'}" flex="85" layout layout-wrap layout-padding>
+    <div class="gallery-title">
+        <span ng-click="closeGallery()">
+            <md-icon md-svg-icon="navigation:close"></md-icon>
+        </span>
+        <h1>{{which.title}}</h1>
+    </div>
+    <div class="gallery-area" flex layout layout-align="center center" layout-wrap flex-md="100" flex-sm="100">
+        <div class="photo-area" layout="column" flex="{{which.images ? 75 : 0}}">
+            <div layout="row" flex>
+                <div class="vertical-film" layout="column" flex="15" ng-show="{{which.images.length > 1}}" hide-sm hide-md>
+                    <div class="photo-film" ng-repeat="image in which.images">
+                        <img class="film-square" ng-src="{{image}}" ng-click="changePic($event, image)" ng-class="$index === 0 ? 'selected-thumb' : ''" />
+                    </div>
+                </div>
+                <div class="pro-preview" layout="column" flex="85" layout-align="center center" ng-show="which.images">
+                    <img class="big-pic fade-in" ng-src="{{selectedPic}}" />
+                </div>
+            </div>
+        </div>
+        <md-card class="writeup-area" layout="column" flex="{{which.images ? 25 : 100}}" layout-wrap flex-md="100" flex-sm="100">
+            <h3 class="gallery-head">Description</h3>
+            {{which.description}}
+            <h3 class="gallery-head" ng-show="which.techs">Technologies</h3>
+            {{which.techs}}
+            <h3 class="gallery-head" ng-show="which.apis">APIs</h3>
+            {{which.apis}}
+            <h3 class="gallery-head" ng-show="which.members">Total UI Team Members (myself included)</h3>
+            {{which.members}}
+            <h3 class="gallery-head" ng-show="which.link || which.github">Links</h3>
+            <span class="gallery-links" flex layout="row" layout-align="start center">
+                <a ng-href="{{which.link}}" target="__blank" class="link-span" ng-show="which.link">
+                    <i class="fa fa-link"></i>
+                </a>
+                <a ng-href="{{which.github}}" target="__blank" class="github-link" ng-show="which.github">
+                    <i class="fa fa-github-alt"></i>
+                </a>
+            </span>
+        </md-card>
+    </div>
+</md-dialog>

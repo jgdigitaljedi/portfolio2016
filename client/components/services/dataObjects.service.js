@@ -7,6 +7,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
 		var projectsObject = {
             personal: {
     			dash: {
+                    shortName: 'dash',
     				title: 'My Dash',
                     images: ['../assets/images/dash/dash-gallery-1.png', '../assets/images/dash/dash-gallery-2.png', '../assets/images/dash/dash-gallery-3.png',
                         '../assets/images/dash/dash-gallery-4.png', '../assets/images/dash/dash-gallery-5.png'],
@@ -19,6 +20,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     apis: 'FourSquare, WeatherUnderground, Openweathermap, Boxoh, Pushbullet, HomeJS, Firebase, and Google Maps'
     			},
                 lassos: {
+                    shortName: 'lassos',
                     title: 'Texas Lassos Alumni Connect',
                     images: ['../assets/images/lassos/lassos-gallery-1.png', '../assets/images/lassos/lassos-gallery-2.png', '../assets/images/lassos/lassos-gallery-3.png',
                         '../assets/images/lassos/lassos_admin.png', '../assets/images/lassos/lassos_profile.png'],
@@ -32,6 +34,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     techs: 'Ruby on Rails, Devise gem, Roo gem, jQuery, Bootstrap'
                 },
                 rr: {
+                    shortName: 'rr',
                     title: 'Restaurant Roulette',
                     images: ['../assets/images/rr/rr-gallery-1.png', '../assets/images/rr/rr-gallery-2.png', '../assets/images/rr/rr-gallery-3.png', '../assets/images/rr/rr-gallery-4.png',
                         '../assets/images/rr/rr-gallery-5.png'],
@@ -44,6 +47,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     apis: 'Foursquare, Google Maps'
                 },
                 toolbox: {
+                    shortName: 'toolbox',
                     title: 'Toolbox',
                     images: ['../assets/images/toolbox-screen.png'],
                     description: 'After writing a countless number of vbscripts and batch files to perform remote and batch tasks, I finally decided to write an' +
@@ -56,6 +60,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     techs: 'VBScript, batch, JavaScript, ActiveX'
                 },
                 portfolio: {
+                    shortName: 'portfolio',
                     title: 'Portfolio',
                     description: 'Well, this is the page you\'re looking at right now. Why list it as a project? There\'s a lot going on here, that\'s why! For starters, I deploy my team\'s apps at work ' +
                     'so I decided I might as well rough it here too. This is running on a DigitalOcean server and I used zero helpers to get it up and running. All configuration ' +
@@ -65,10 +70,11 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     'string is then read aloud to me over my truck\s stereo so I know what to expect my commute to be like. I am also working on integrating a call to my calendar to read back my ' +
                     'events for the day as well. I have more plans for the server too, but time is greatest my obstacle. \n \n TLDR: I am doing some cool things with this server I have setup!',
                     github: 'https://github.com/jgdigitaljedi/newPort',
-                    techs: 'MongoDB, ExpressJS, AngularJS, NodeJS, Angular Material, MomentJS, Nodemailer, d3',
-                    apis: 'Weather Underground, Last.fm, Bing Maps, GitHub'
+                    techs: 'MongoDB, ExpressJS, AngularJS, NodeJS, Angular Material, MomentJS, Nodemailer, d3, Phaser',
+                    apis: 'Weather Underground, Last.fm, Bing Maps, GitHub, Yelp'
                 },
                 game: {
+                    shortName: 'game',
                     title: 'Phangular 2048',
                     description: 'As a coding challenge once, I was asked to make a 2048 game. I liked the project '+
                         'so much I decided to include it in the "Fun" section of this site. Check it out!',
@@ -76,6 +82,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     techs: 'Node, Angular, Express, MongoDB, Phaser, Angular Material'
                 },
                 restaurant: {
+                    shortName: 'restaurant',
                     title: 'Restaurant Roulette Remix',
                     description: 'I made the original version of this app with 2 other guys during a 1 day hackathon '+
                         'while attending MakerSquare. For the sake of getting things done quickly, we used the '+
@@ -88,6 +95,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
             },
             work: {
                 host: {
+                    shortName: 'host',
                     title: 'Host Reports',
                     description: 'DUE TO A NONDISCLOSURE AGREEMENT, I AM LIMITED AS TO WHAT I CAN SAY ABOUT THIS APP AND CANNOT PROVIDE IMAGES. The purpose of this app is to give very' +
                     ' detailed, highly customizable reports to the client across a wide array of data sets. The app is' +
@@ -101,6 +109,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     members: 4
                 },
                 roms: {
+                    shortName: 'roms',
                     title: 'WebROMS',
                     description: 'DUE TO A NONDISCLOSURE AGREEMENT, I AM LIMITED AS TO WHAT I CAN SAY ABOUT THIS APP AND CANNOT PROVIDE IMAGES. This app was meant for our internal technicians ' +
                     'as well as the people in a more technical role in our client\'s organization. This application visualizes data with interactive maps, multiple chart types, and Kendo grids. ' +
@@ -114,6 +123,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     members: 7
                 },
                 elcc: {
+                    shortName: 'elcc',
                     title: 'ELCC',
                     description: 'DUE TO A NONDISCLOSURE AGREEMENT, I AM LIMITED AS TO WHAT I CAN SAY ABOUT THIS APP AND CANNOT PROVIDE IMAGES. This is my most recent project and the entire UI' +
                     ' was written by myself and 1 other team member. The purpose of the application was to allow our clients to monitor their toll roads at the sensor level. This allows for ' +
@@ -128,6 +138,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     members: 3
                 },
                 printer: {
+                    shortName: 'printer',
                     title: 'Printable Reports Generator',
                     description: 'My company had a real need to create a PDF generator so our client\'s could print '+
                         'from our reports app. Our old solution was in Python and had some very hardcoded, report specific '+

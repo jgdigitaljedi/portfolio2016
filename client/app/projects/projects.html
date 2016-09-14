@@ -13,15 +13,20 @@
         </md-switch>
         Work Projects
 	</div>
-	<div layout-padding layout-align="center center" flex>
-		<md-grid-list
-	        md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="5"
-	        md-row-height-gt-md="1:1" md-row-height="4:3"
-	        md-gutter="8px" md-gutter-gt-sm="4px" >
-	        <md-grid-tile ng-repeat="project in pc.projects track by $index" md-rowspan="1" md-colspan="1"
-	        	ng-style="{'background-image': 'url(' + project.images[0] + ')', 'background-color': pc.getRandomColor()}">
-	        	<md-grid-tile-footer><h3>{{project.title}}</h3></md-grid-tile-footer>
-	        </md-grid-tile>
-	    </md-grid-list>
+	<div layout-padding layout="row" layout-align="center center" flex>
+		<md-card style="width: 80%; ">
+			<md-card-content>
+				<md-grid-list
+			        md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="3"
+			        md-row-height-gt-md="1:1" md-row-height="4:3"
+			        md-gutter="8px" md-gutter-gt-sm="4px">
+			        <md-grid-tile ng-repeat="project in pc.projects track by $index" md-rowspan="1" md-colspan="1"
+			        	ng-style="{'background-image': 'url(' + project.images[0] + ')', 'background-color': project.color}"
+			        	ng-click="pc.openProject(project.shortName)">
+			        	<md-grid-tile-footer><h3>{{project.title}}</h3></md-grid-tile-footer>
+			        </md-grid-tile>
+			    </md-grid-list>
+			</md-card-content>
+		</md-card>
 	</div>
 </section>
