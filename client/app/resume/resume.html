@@ -3,17 +3,23 @@
     <div layout="column" layout-align="center start">
         <div class="resume-container">
             <p>Download my resum&eacute; here: </p>
-            <md-input-container>
-                <label>Format</label>
-                <md-select ng-model="rc.resumeFormat">
-                    <md-option>PDF</md-option>
-                    <md-option>MS Word (.docx)</md-option>
-                    <md-option>OpenDocument Text (.odt)</md-option>
-                    <md-option>Plain Text (.txt)</md-option>
-                </md-select>
+            <md-input-container layout="row" layout-align="center center">
+                <div>
+                    <!-- <label>Format</label> -->
+                    <md-select placeholder="Format" ng-model="rc.resumeFormat">
+                        <md-option value="pdf">PDF</md-option>
+                        <md-option value="docx">MS Word (.docx)</md-option>
+                        <md-option value="odt">OpenDocument Text (.odt)</md-option>
+                        <md-option value="txt">Plain Text (.txt)</md-option>
+                    </md-select>
+                </div>
+                <md-button style="margin-left: 10px;" ng-click="rc.downloadResume()">
+                    <md-icon md-svg-icon="file:file_download"></md-icon>
+                    Download
+                </md-button>
             </md-input-container>
             <div layout="row" layout-align="center start" style="width: 100%">
-                <div id="resume" style="margin-top: 160px"></div>
+                <div id="resume" style="margin-top: 100px"></div>
             </div>
         </div>
     </div>

@@ -19,17 +19,10 @@ angular.module('portfolioApp').controller('ResumeCtrl', ['$window', 'D3Resume', 
 			}
 		}
 
-
-		rc.docClicked = function () {
-            $window.open('../../assets/resume/resume2015.docx', '_blank');
-		};
-
-		rc.pdfClicked = function () {
-			$window.open('../../assets/resume/resume2015.pdf', '_blank');
-		};
-
-		rc.odtClicked = function () {
-			$window.open('../../assets/resume/resume2015.odt', '_blank');
+		rc.downloadResume = function () {
+			if (rc.resumeFormat) {
+				$window.open('../../assets/resumes/resume2015.' + rc.resumeFormat, '_blank');
+			}
 		};
 
 		$rootScope.$on('theme change', function () {
@@ -37,12 +30,10 @@ angular.module('portfolioApp').controller('ResumeCtrl', ['$window', 'D3Resume', 
 		    colorChartText();
 		});
 
-		// var resume = new D3Resume({
 		D3Resume.getResumeLogic({
 		  	width: window.innerWidth - 40,
 		  	height: 420,
 		  	wrapperSelector: '#resume',
-		  	// dataUrl: 'resume.json',
 		  	getItemFillCollor: function (item) {
 		  		var colorArr = Dataobjects.getMaterialColors();
 		  		return colorArr[Math.floor(Math.random()*48)];

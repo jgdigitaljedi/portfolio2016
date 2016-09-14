@@ -23,16 +23,17 @@ exports.conditions = function(req, res) {
 
 exports.lastfm = function(req, res) {
 	//console.log('lastfm proxy used');
-	var url = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=joeygstrings&api_key=' + process.env.JLASTKEY + '&format=json';
-
+	var url = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=joeygstrings&api_key=' + 
+		process.env.JLASTKEY + '&format=json';
 	request.get(
 	    url,
 		function (error, response, body) {
 	        if (!error && response.statusCode === 200) {
+	console.log('url', url);
 	          	var obj = JSON.parse(body);
-	            res.json(obj);
+	            return res.json(obj);
 	        } else {
-	        	res.json({error: true, message: error});
+	        	return res.json({error: true, message: error});
 	        }
 	    }
 	);
@@ -40,7 +41,8 @@ exports.lastfm = function(req, res) {
 
 exports.lastArt = function (req, res) {
 	var data = req.params.band,
-		theUrl =  'http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=' + data + '&api_key=' + process.env.JLASTKEY + '&format=json';
+		theUrl =  'http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=' + data + '&api_key=' + 
+			process.env.JLASTKEY + '&format=json';
 
     function callback (error, response, body) {
         if (!error && response.statusCode === 200) {

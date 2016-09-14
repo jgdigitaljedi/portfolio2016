@@ -11,6 +11,7 @@ angular.module('portfolioApp')
         });
 
         function makeLastFmWidget(result) {
+                console.log('result', result);
             for(var i = 0; i < 5; i++) {
                 var artistWeb = result[i].artist['#text'].split(' ').join('+'),
                     nameWeb = result[i].name.split(' ').join('+'),
@@ -47,10 +48,9 @@ angular.module('portfolioApp')
 
         }
 
-        $http.get('/lastfm')
+        $http.get('/api/proxy/lastfm')
             .then(function successCallback (result) {
-                console.log('result', result);
-                result = result.recenttracks.track;
+                result = result.data.recenttracks.track;
                 makeLastFmWidget(result);
             }, function failureCallback (error) {
                 console.log('error with lastfm', error);

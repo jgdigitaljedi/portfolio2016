@@ -48,6 +48,6 @@ angular.module('portfolioApp', [
     $mdThemingProvider.enableBrowserColor({theme: 'night'});
 }).controller('AppCtrl', function ($scope, $rootScope) {
     var theHour = parseInt(moment().format('HH'));
-    $scope.theme = theHour >= 7 || theHour <= 19 ? 'day' : 'night';
+    $scope.theme = (theHour >= 7 && theHour <= 19) ? 'day' : 'night';
     $rootScope.theme = $scope.theme;
 });
