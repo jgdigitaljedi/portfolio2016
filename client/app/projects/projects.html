@@ -1,4 +1,27 @@
-<div ng-include="'components/shell/shell.html'" ng-class="{'night':pc.theme === 'night', 'day': pc.theme === 'day'}"></div>
-<section ng-class="{'night':pc.theme === 'night', 'day': pc.theme === 'day'}" class="projects-section">
+<div ng-include="'components/shell/shell.html'" md-theme="{{pc.theme}}" 
+	ng-class="{'night':pc.theme === 'night', 'day': pc.theme === 'day'}"></div>
+<section ng-class="{'night':pc.theme === 'night', 'day': pc.theme === 'day'}" md-theme="{{pc.theme}}" 
+	class="projects-section">
 
+	<div class="title-area" layout="row" layout-align="center center" style="width: 100%;">
+		<h1>Projects</h1>
+	</div>
+	<div class="switch-area" layout="row" layout-align="center center" style="width: 100%;">
+		Personal Projects
+        <md-switch ng-model="isPersonal" style="margin: auto 12px;" aria-label="Project Type" 
+        	ng-change="pc.changeProjectSet()">
+        </md-switch>
+        Work Projects
+	</div>
+	<div layout-padding layout-align="center center" flex>
+		<md-grid-list
+	        md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="5"
+	        md-row-height-gt-md="1:1" md-row-height="4:3"
+	        md-gutter="8px" md-gutter-gt-sm="4px" >
+	        <md-grid-tile ng-repeat="project in pc.projects track by $index" md-rowspan="1" md-colspan="1"
+	        	ng-style="{'background-image': 'url(' + project.images[0] + ')', 'background-color': pc.getRandomColor()}">
+	        	<md-grid-tile-footer><h3>{{project.title}}</h3></md-grid-tile-footer>
+	        </md-grid-tile>
+	    </md-grid-list>
+	</div>
 </section>
