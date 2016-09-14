@@ -12,7 +12,7 @@ angular.module('portfolioApp').controller('ProjectsCtrl', ['$rootScope', 'Dataob
 		});
 
 		pc.getRandomColor = function () {
-			return pc.colors[Math.floor(Math.random() * cLen + 1)];
+			return pc.colors[Math.floor(Math.random() * cLen)];
 		};
 
 		function makeProjectGrid () {

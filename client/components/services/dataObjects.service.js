@@ -67,6 +67,23 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     github: 'https://github.com/jgdigitaljedi/newPort',
                     techs: 'MongoDB, ExpressJS, AngularJS, NodeJS, Angular Material, MomentJS, Nodemailer, d3',
                     apis: 'Weather Underground, Last.fm, Bing Maps, GitHub'
+                },
+                game: {
+                    title: 'Phangular 2048',
+                    description: 'As a coding challenge once, I was asked to make a 2048 game. I liked the project '+
+                        'so much I decided to include it in the "Fun" section of this site. Check it out!',
+                    github: '',
+                    techs: 'Node, Angular, Express, MongoDB, Phaser, Angular Material'
+                },
+                restaurant: {
+                    title: 'Restaurant Roulette Remix',
+                    description: 'I made the original version of this app with 2 other guys during a 1 day hackathon '+
+                        'while attending MakerSquare. For the sake of getting things done quickly, we used the '+
+                        'FourSquare API and kind of ignored best practices. Since that was hosted on divshot which '+
+                        'has since been terminated, I made a new version of it hosted on this site using the Yelp! '+
+                        'API with more options. No github link since the code lives in this page\'s code.',
+                    techs: 'Angular Material, Angular, Node, Express',
+                    apis: 'Yelp!'
                 }
             },
             work: {
@@ -109,6 +126,18 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     apis: 'Weather Underground, Google Maps',
                     techs: 'AngularJS, ExpressJS, NodeJS, Kendo UI, Bootstrap, MomentJS, Raphael',
                     members: 3
+                },
+                printer: {
+                    title: 'Printable Reports Generator',
+                    description: 'My company had a real need to create a PDF generator so our client\'s could print '+
+                        'from our reports app. Our old solution was in Python and had some very hardcoded, report specific '+
+                        'parts to it. I volunteered to create a new solution. I used Node and Express to generate a '+
+                        'server instance with some endpoints. From there I was able to create a PDF generator that receives '+
+                        'a string containing the html of the report table and, using some custom css and phantomJS, I '+
+                        'render the report and return it back to the caller in a stream. I didn\'t stop there. I went ahead '+
+                        'and added endpoints and logic for csv and Excel document creation from JSON objects as well.',
+                    techs: 'Node, Express, PhantomJS, Bluebird, ms-excelbuilder-colorfix',
+                    members: 1
                 }
             }
 		};
