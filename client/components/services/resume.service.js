@@ -13,6 +13,16 @@ angular.module('portfolioApp').factory('D3Resume', ['d3', 'Dataobjects',
 			var x = null;
 			var y = null;
 			var xAxis = null;
+			var screenWidth = window.innerWidth;
+			var ticks;
+
+			if (screenWidth >= 1200) {
+				ticks = 30;
+			} else if (screenWidth < 1200 && screenWidth >= 600) {
+				ticks = 20;
+			} else if (screenWidth < 600) {
+				ticks = 15;
+			}
 
 		  	var init = function() {
 				svg = d3
@@ -28,7 +38,7 @@ angular.module('portfolioApp').factory('D3Resume', ['d3', 'Dataobjects',
 				xAxis = d3.svg.axis()
 					.scale(x)
 					.orient('bottom')
-					.ticks(30)
+					.ticks(ticks)
 					// .tickFormat(d3.time.format('%Y-%m'));
 					.tickFormat(d3.time.format('%b %Y'));
 
@@ -143,7 +153,7 @@ angular.module('portfolioApp').factory('D3Resume', ['d3', 'Dataobjects',
 
 				addItemDetail(gInfo, '18px', 'translate('+[0,0]+')', 'normal', function(d) {return d.type;});
 				addItemDetail(gInfo, '18px', 'translate('+[0,25]+')', 'normal', function(d) {return d.title;});
-				addItemDetail(gInfo, '23px', 'translate('+[0,50]+')', 'normal',function(d) {return d.institution;});
+				addItemDetail(gInfo, '23px', 'translate('+[0,50]+')', 'bold',function(d) {return d.institution;});
 				addItemDetail(gInfo, '14px', 'translate('+[0,70]+')', 'bold', function(d) {
 					var text = formatToShow(d.from) + ' - ';
 					if (d.to === null) {

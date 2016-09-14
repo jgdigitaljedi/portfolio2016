@@ -30,8 +30,8 @@ angular.module('portfolioApp').controller('ResumeCtrl', ['$window', 'D3Resume', 
 		});
 
 		D3Resume.getResumeLogic({
-		  	width: window.innerWidth - 40,
-		  	height: 420,
+		  	width: window.innerWidth * 0.8,
+		  	height: 600,
 		  	wrapperSelector: '#resume',
 		  	getItemFillCollor: function (item) {
 		  		var colorArr = Dataobjects.getMaterialColors();
