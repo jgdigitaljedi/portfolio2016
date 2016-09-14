@@ -4,11 +4,10 @@ angular.module('portfolioApp').controller('ContactCtrl', ['$scope', '$http', '$m
 	function($scope, $http, $mdDialog, $rootScope) {
 		// TODO: fix success and failure modals and add loading animation while sending
 		var cc = this;
-		cc.theme = $rootScope.theme;
 
 		function colorHoldouts () {
 			if (cc.theme === 'day') {
-				cc.buttonColor = '#212121';
+				cc.buttonColor = '#ffc107';
 				cc.labelColor = '#212121';
 			} else {
 				cc.buttonColor = '#ffc107';
@@ -28,39 +27,42 @@ angular.module('portfolioApp').controller('ContactCtrl', ['$scope', '$http', '$m
 				lastName: user.lastName,
 				company: user.company,
 				comment: user.comments
-			}).success(function(res, status) {
-				// if(res.error) {
-				// 	$mdDialog.show({
-				// 	    controller: function DialogController($scope, $mdDialog) {
-		  //           		$scope.closeDialog = function() {
-		  //             			$mdDialog.hide();
-		  //           		};
-		  //         		},
-				// 	    templateUrl: '/modules/core/views/failure.contact.alert.template.html',
-				// 	    parent: angular.element(document.body)
-				// 	});
-				// } else {
-				// 	$mdDialog.show({
-				// 	    controller: function DialogController($scope, $mdDialog) {
-		  //           		$scope.closeDialog = function() {
-		  //             			$mdDialog.hide();
-		  //           		};
-		  //         		},
-				// 	    templateUrl: '/modules/core/views/success.contact.alert.template.html',
-				// 	    parent: angular.element(document.body)
-				// 	});
-				// }
+			}).success(function(res) {
+				if(res.error) {
+					$mdDialog.show({
+					    controller: function DialogController($scope, $mdDialog) {
+					    	$scope.theme = cc.theme;
+		            		$scope.closeDialog = function() {
+		              			$mdDialog.hide();
+		            		};
+		          		},
+					    templateUrl: '/app/contact/modals/failure.contact.modal.html',
+					    parent: angular.element(document.body)
+					});
+				} else {
+					$mdDialog.show({
+					    controller: function DialogController($scope, $mdDialog) {
+					    	$scope.theme = cc.theme;
+		            		$scope.closeDialog = function() {
+		              			$mdDialog.hide();
+		            		};
+		          		},
+					    templateUrl: '/app/contact/modals/success.contact.modal.html',
+					    parent: angular.element(document.body)
+					});
+				}
 				console.log('success');
-			}).error(function(res) {
-				// $mdDialog.show({
-				//     controller: function DialogController($scope, $mdDialog) {
-	   //          		$scope.closeDialog = function() {
-	   //            			$mdDialog.hide();
-	   //          		};
-	   //        		},
-				//     templateUrl: '/modules/core/views/success.contact.alert.template.html',
-				//     parent: angular.element(document.body)
-				// });
+			}).error(function() {
+				$mdDialog.show({
+				    controller: function DialogController($scope, $mdDialog) {
+				    	$scope.theme = cc.theme;
+	            		$scope.closeDialog = function() {
+	              			$mdDialog.hide();
+	            		};
+	          		},
+				    templateUrl: '/app/contact/modals/failure.contact.modal.html',
+				    parent: angular.element(document.body)
+				});
 				console.log('error');
 			});
 
@@ -68,9 +70,11 @@ angular.module('portfolioApp').controller('ContactCtrl', ['$scope', '$http', '$m
 				$mdDialog.hide();
 			};
 
-			(function init () {
-				colorHoldouts();
-			})();
 		};		
+		
+		(function init () {
+			cc.theme = $rootScope.theme;
+			colorHoldouts();
+		})();
 	}
 ]);

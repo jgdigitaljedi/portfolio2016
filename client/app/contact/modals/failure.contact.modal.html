@@ -1,0 +1,20 @@
+<md-dialog aria-label="Something Went Wrong"  md-theme="{{theme}}">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Something Went Wrong</h2>
+        </div>
+    </md-toolbar>
+    <md-dialog-content>
+        <div>
+            <div class="success-icon">
+                <md-icon md-svg-icon="alert:error" 
+                    ng-class="{'day-icon': theme === 'day', 'night-icon': theme === 'night'}">
+                </md-icon>
+            </div>
+            <p class="alert-text">OH NO! Something didn't work as planned! You can email me at digitaljedi@outlook.com and please do to let me know that this isn't working!</p>
+        </div>
+    </md-dialog-content>
+    <md-dialog-actions>
+        <md-button ng-click="closeDialog()" class="md-accent"><i class="fa fa-times"></i> Close </md-button>
+    </md-dialog-actions>
+</md-dialog>

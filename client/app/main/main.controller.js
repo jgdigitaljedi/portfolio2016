@@ -6,7 +6,7 @@ angular.module('portfolioApp')
         mainVm.showLastfm = true;
         mainVm.theme = $rootScope.theme;
 
-       $rootScope.$on('theme change', function () {
+        $rootScope.$on('theme change', function () {
             mainVm.theme = $rootScope.theme;
         });
 

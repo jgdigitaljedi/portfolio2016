@@ -3,6 +3,10 @@ $dark-amber: #ffc107;
 
 .resume-section {
   height: calc(100vh - 64px);
+  background-image: url('../../assets/images/AustinSkylineCropped.svg');
+  background-position: bottom;
+  background-size: contain;
+  background-repeat:  no-repeat;
   // background-image: url('../../assets/images/austin-skyline2.svg');
   // background-position: bottom;
   // background-size: contain;

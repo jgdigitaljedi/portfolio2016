@@ -7,15 +7,42 @@ input:-webkit-autofill {
 .success-icon {
 	width: 100%;
 	text-align: center;
-	// color: $dark-amber;
+	color: $dark-amber;
+	margin-top: 12px;
+
+	.day-icon {
+		background-color: $blue-gray;
+
+		svg {
+			margin: 10px auto 0 10px;
+			color: $dark-amber;
+		}
+	}
+	.night-icon {
+		background-color: $dark-amber;
+		svg {
+			margin: 10px auto 0 10px;
+			color: $blue-gray;
+		}
+	}
+	.day-icon, .night-icon {
+		border-radius: 100%;
+		height: 80px;
+		width: 80px;
+	}
 }
 
 .alert-text {
 	// color: white;
+	padding: 12px;
 }
 
 .contact-section {
 	height: calc(100vh - 64px);
+	background-image: url('../../assets/images/AustinSkylineCropped.svg');
+	background-position: bottom;
+	background-size: contain;
+	background-repeat:  no-repeat;
 
 	.contact-header {
 		// color: white;

@@ -79,9 +79,9 @@ exports.sendMail = function(req, res) {
         text: data.comment
     }, function(error, response){  //callback
 			if(error) {
-			    res.json({error: true});
+			    return res.json({error: true});
 			} else {
-    			res.json({error: false});
+    			return res.json({error: false});
 			}
 		}
    

@@ -1,0 +1,20 @@
+<md-dialog aria-label="Email Sent" md-theme="{{theme}}">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Email Sent</h2>
+        </div>
+    </md-toolbar>
+    <md-dialog-content>
+        <div>
+            <div class="success-icon">
+                <md-icon md-svg-icon="navigation:check" 
+                    ng-class="{'day-icon': theme === 'day', 'night-icon': theme === 'night'}">
+                </md-icon>
+            </div>
+            <p class="alert-text">Thanks for checking out the site and for contacting me. I will get back to you as soon as I can. Enjoy your stay!</p>
+        </div>
+    </md-dialog-content>
+    <md-dialog-actions>
+        <md-button ng-click="closeDialog()" class="md-accent"><i class="fa fa-times"></i> Close </md-button>
+    </md-dialog-actions>
+</md-dialog>
