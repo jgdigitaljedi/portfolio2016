@@ -1,0 +1,39 @@
+// @dark-amber: #ffc107;
+input:-webkit-autofill {
+	// -webkit-box-shadow: 0 0 0 1000px #424242 inset;
+	// -webkit-text-fill-color: white !important;
+} 
+
+.success-icon {
+	width: 100%;
+	text-align: center;
+	// color: $dark-amber;
+}
+
+.alert-text {
+	// color: white;
+}
+
+.contact-section {
+	height: calc(100vh - 64px);
+
+	.contact-header {
+		// color: white;
+		font-weight: bold;
+	}
+	.contact-form {
+		width: 60%;
+	}
+	.half-width {
+		width: 50%;
+	}
+	.accent-label {
+		// color: $dark-amber;
+	}
+	.trans-back {
+		background: transparent;
+	}
+	.height-fix {
+		min-height: 280px;
+	}
+}

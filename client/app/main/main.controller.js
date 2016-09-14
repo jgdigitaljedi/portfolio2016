@@ -6,7 +6,7 @@ angular.module('portfolioApp')
         mainVm.showLastfm = true;
         mainVm.theme = $rootScope.theme;
 
-        $rootScope.$on('theme change', function () {
+       $rootScope.$on('theme change', function () {
             mainVm.theme = $rootScope.theme;
         });
 
@@ -18,7 +18,7 @@ angular.module('portfolioApp')
                     ytUrl = 'https://www.youtube.com/results?search_query=' + artistWeb + '-' + nameWeb,
                     albumImage = result[i].image[1]['#text'] ? result[i].image[1]['#text'] : '../../../assets/images/no-image.png',
                     template = $compile('<a href="' + ytUrl + '" target=\'__blank\'><img src="' + albumImage +
-                        '" class="song-image"/><md-tooltip style="color: black;">' + result[i].artist['#text'] + ' / ' + result[i].name +
+                        '" class="song-image"/><md-tooltip style="color: #ffc107;">' + result[i].artist['#text'] + ' / ' + result[i].name +
                         '</md-tooltip></a>')($scope);
                     angular.element( document.querySelector('#lastfm-widget')).append(template);
                     //if (result[i].image[1]['#text']) {
@@ -42,18 +42,21 @@ angular.module('portfolioApp')
 
             }
             var lastfmSite = $compile('<a href="http://www.last.fm/user/joeygstrings" target=\'__blank\'>' +
-                '<img class="lastfm-ender" src="assets/images/lastfm-icon.png" />' +
-                '<md-tooltip style="color: black;">My Lastfm Profile</md-tooltip>')($scope);
+                '<img class="lastfm-ender" ng-style="{\'border-left\': mainVm.borderColor}" src="assets/images/lastfm-icon.png" />' +
+                '<md-tooltip style="color: #f1f1f1;">My Lastfm Profile</md-tooltip>')($scope);
             angular.element( document.querySelector('#lastfm-widget')).append(lastfmSite);
 
         }
 
-        $http.get('/api/proxy/lastfm')
-            .then(function successCallback (result) {
-                result = result.data.recenttracks.track;
-                makeLastFmWidget(result);
-            }, function failureCallback (error) {
-                console.log('error with lastfm', error);
-                $scope.showLastfm = false;
-            });
+        (function init () {
+
+            $http.get('/api/proxy/lastfm')
+                .then(function successCallback (result) {
+                    result = result.data.recenttracks.track;
+                    makeLastFmWidget(result);
+                }, function failureCallback (error) {
+                    console.log('error with lastfm', error);
+                    $scope.showLastfm = false;
+                });
+        })();
   });

@@ -4,7 +4,6 @@ angular.module('portfolioApp').controller('ResumeCtrl', ['$window', 'D3Resume', 
 	function($window, D3Resume, Dataobjects, $rootScope) {
 		console.log('resume controller');
 		var rc = this;
-		rc.openFab = false;
 		rc.theme = $rootScope.theme;
 
 		function colorChartText () {

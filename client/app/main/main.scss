@@ -90,6 +90,7 @@ $dark-amber: #ffc107;
     min-height: 18vh;
     opacity:0;
     @include fadeIn;
+    color: $dark-amber;
 
     -webkit-animation-fill-mode:forwards;
     -moz-animation-fill-mode:forwards;
@@ -99,7 +100,7 @@ $dark-amber: #ffc107;
     animation-duration:3.3s;
 
     .lastfm-ender {
-      border-left: 1px solid #f1f1f1;
+      border-left: 1px solid #ffc107;
       padding-left: 10px;
     }
   }
