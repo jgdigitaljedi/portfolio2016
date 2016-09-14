@@ -206,15 +206,24 @@ $dark-amber: #ffc107;
 }
 
 .main-shell {
-  button {
-    width: 100%;
-    padding-left: 60px;
-    text-align: left;
-    font-size: 1.1em;
+
+  .nav-list {
+    .md-button {
+      width: 100%;
+      padding-left: 60px;
+      text-align: left;
+      font-size: 1.1em;
+    }
   }
 
   .nav-icon {
     margin-right: 12px;
     vertical-align: middle;
   }
+}
+
+md-tooltip.theme-tooltip .md-content { // tooltip gets placed outside of class where written, but put this here for organization
+  height: auto;
+  white-space: initial;
+  max-width: 250px;
 }

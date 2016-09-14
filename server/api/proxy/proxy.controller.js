@@ -68,7 +68,7 @@ exports.sendMail = function(req, res) {
 		),
  		data = req.body;
  	if(data.company !== undefined || data.company !== '') {
-		company = 'with ' + data.company;
+		company = ' with ' + data.company;
 	} else {
 		company = '';
 	}

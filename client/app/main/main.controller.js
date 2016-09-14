@@ -11,7 +11,6 @@ angular.module('portfolioApp')
         });
 
         function makeLastFmWidget(result) {
-                console.log('result', result);
             for(var i = 0; i < 5; i++) {
                 var artistWeb = result[i].artist['#text'].split(' ').join('+'),
                     nameWeb = result[i].name.split(' ').join('+'),

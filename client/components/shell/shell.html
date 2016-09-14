@@ -6,7 +6,7 @@
             </div>
         </md-toolbar>
         <md-content layout-padding>
-            <md-list>
+            <md-list class="nav-list">
                 <md-list-item>
                     <md-button ui-sref="main">
                         <md-icon md-svg-icon="action:home" class="nav-icon" aria-label="home" size="24"></md-icon>
@@ -60,7 +60,7 @@
     </md-sidenav>
     <md-toolbar>
         <div class="md-toolbar-tools" layout layout-align="space-between center" flex>
-            <div layout layout-align="start center" flex="33">
+            <div layout layout-align="start center" flex="50">
                 <md-button ng-click="toggleLeft()" class="md-icon-button" aria-label="Settings">
                     <md-icon md-svg-icon="assets/icons/menu.svg"></md-icon>
                 </md-button>
@@ -68,15 +68,22 @@
                     <span>Joey Gauthier</span>
                 </h2>
             </div>
-            <div layout layout-align="center center" flex="33">
-                <div layout="row">
+            <div layout layout-align="end center" flex="50">
+                <div layout="row" layout-align="end center">
+                    <div style="margin-right: 10px;"> 
+                        Theme
+                        <md-tooltip style="font-size: 1em;" class="theme-tooltip">
+                        Theme changes with time of day,<br/>
+                        but you can change it manually if you'd like!
+                        </md-tooltip>
+                    </div>
                     <md-icon md-svg-icon="image:brightness_3"></md-icon>
                     <md-switch ng-model="isDay" aria-label="Change Theme" ng-change="overrideTheme()"></md-switch>
-                    <md-icon md-svg-icon="image:wb_sunny"></md-icon>
+                    <md-icon md-svg-icon="image:wb_sunny" style="margin-right: 8px;"></md-icon>
                 </div>
             </div>
             <!-- <span flex=""></span> -->
-            <div layout layout-align="end center" flex="33">
+            <!-- <div layout layout-align="end center" flex="33">
                 <div>
                 <md-menu>
                     <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdOpenMenu, $event)">
@@ -110,7 +117,7 @@
                     </md-menu-content>
                 </md-menu>
                 </div>
-            </div>
+            </div> -->
         </div>
     </md-toolbar>
 </div>
