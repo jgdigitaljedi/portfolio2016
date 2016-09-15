@@ -89,7 +89,8 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     shortName: 'game',
                     title: 'Phangular 2048',
                     color: '#AFB42B',
-                    tile: '',
+                    tile: '../assets/images/2048/gallery1.jpg',
+                    images: ['../assets/images/2048/gallery1.jpg', '../assets/images/2048/gallery2.jpg'],
                     description: 'As a coding challenge once, I was asked to make a 2048 game. I liked the project '+
                         'so much I decided to include it in the "Fun" section of this site. Check it out!',
                     github: 'https://github.com/jgdigitaljedi/ng2048',
@@ -111,8 +112,10 @@ angular.module('portfolioApp').factory('Dataobjects', [
                 entertainment: {
                     shortName: 'entertainment',
                     title: 'Home Entertainment Control Center',
-                    color: '#33691E',
-                    tile: '',
+                    color: '#424242',
+                    tile: '../assets/images/home/gallery1.jpg',
+                    images: ['../assets/images/home/gallery1.jpg', '../assets/images/home/gallery3.jpg',
+                        '../assets/images/home/gallery4.jpg', '../assets/images/home/gallery5.jpg'],
                     description: 'I\'ve got 10 video game consoles along with streaming boxes, a bluray player, '+
                         'a surround system, and more hooked up to my living room entertainment center. My wife '+
                         'and, on occasion, our houseguests find it difficult to know how to operate everything. '+
