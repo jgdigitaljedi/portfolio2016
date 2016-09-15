@@ -4,7 +4,7 @@
 	class="projects-section">
 
 	<div class="title-area" layout="row" layout-align="center center" style="width: 100%;">
-		<h1>Projects</h1>
+		<p>projects</p>
 	</div>
 	<div class="switch-area" layout="row" layout-align="center center" style="width: 100%;">
 		Personal Projects
@@ -21,7 +21,7 @@
 			        md-row-height-gt-md="1:1" md-row-height="4:3"
 			        md-gutter="8px" md-gutter-gt-sm="4px">
 			        <md-grid-tile ng-repeat="project in pc.projects track by $index" md-rowspan="1" md-colspan="1"
-			        	ng-style="{'background-image': 'url(' + project.images[0] + ')', 'background-color': project.color}"
+			        	ng-style="{'background-image': 'url(' + project.tile + ')', 'background-color': project.color}"
 			        	ng-click="pc.openProject(project.shortName)">
 			        	<md-grid-tile-footer><h3>{{project.title}}</h3></md-grid-tile-footer>
 			        </md-grid-tile>

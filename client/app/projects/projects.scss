@@ -1,6 +1,15 @@
 .projects-section {
 	min-height: 100%;
 
+  .title-area {
+    font-family: 'langdon';
+    font-size: 5em;
+
+    p {
+      margin: 16px;
+    }
+  }
+
 	md-grid-list {
 		
 		md-grid-tile {

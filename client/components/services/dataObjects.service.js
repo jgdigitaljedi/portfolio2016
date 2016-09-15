@@ -10,11 +10,12 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     shortName: 'dash',
     				title: 'My Dash',
                     color: '#BF360C',
+                    tile: '../assets/images/dash/dash-gallery-1.png',
                     images: ['../assets/images/dash/dash-gallery-1.png', '../assets/images/dash/dash-gallery-2.png', '../assets/images/dash/dash-gallery-3.png',
                         '../assets/images/dash/dash-gallery-4.png', '../assets/images/dash/dash-gallery-5.png'],
-                    description: 'Get randomized restaurant and bar suggestions, view weather info and radar, track packages, ' +
-                    'view phone notifications, and control your HomeJS devices all from one screen! I have not launched this app ' +
-                    'because I want to rebuild it with my newly learned superpowers!',
+                    description: 'This was one of my "senior projects" at MakerSquare. Get randomized restaurant and bar suggestions, view weather '+
+                        'info and radar, track packages, view phone notifications, and control your HomeJS devices all from one screen! I have not launched this app ' +
+                        'because I want to rebuild it with my newly learned superpowers!',
                     link: false,
                     github: 'https://github.com/jgdigitaljedi/dashboard',
                     techs: 'AngularJS, Bootstrap',
@@ -24,13 +25,13 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     shortName: 'lassos',
                     title: 'Texas Lassos Alumni Connect',
                     color: '#F57F17',
-                    images: ['../assets/images/lassos/lassos-gallery-1.png', '../assets/images/lassos/lassos-gallery-2.png', '../assets/images/lassos/lassos-gallery-3.png',
-                        '../assets/images/lassos/lassos_admin.png', '../assets/images/lassos/lassos_profile.png'],
+                    tile: '../assets/images/lassos/lassos-gallery-1.png',
+                    images: ['../assets/images/lassos/lassos-gallery-1.png', '../assets/images/lassos/lassos-gallery-2.png', '../assets/images/lassos/lassos-gallery-3.png'],
                     description: 'This application was built by request for the Texas Lassos Alumni Group. I worked on a team with two other developers' +
-                    ' to create a private social network for the group. The app has a table for all alums and a table for alums who have joined the' +
-                    ' network. Upon signing up, the app notifies the admins, tells the user they must wait for approval, and ' +
-                    'looks for the user in the alum table to see if it can move their info to the active user table. After approval' +
-                    ' the user is notified to log in and can edit their profile and use the app. Admins can import and export user info via Excel sheets.',
+                        ' to create a private social network for the group. The app has a table for all alums and a table for alums who have joined the' +
+                        ' network. Upon signing up, the app notifies the admins, tells the user they must wait for approval, and ' +
+                        'looks for the user in the alum table to see if it can move their info to the active user table. After approval' +
+                        ' the user is notified to log in and can edit their profile and use the app. Admins can import and export user info via Excel sheets.',
                     link: 'http://connect.lassoalumni.org/users/sign_in',
                     github: 'https://github.com/jgdigitaljedi/tx-lassos',
                     techs: 'Ruby on Rails, Devise gem, Roo gem, jQuery, Bootstrap'
@@ -39,11 +40,13 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     shortName: 'rr',
                     title: 'Restaurant Roulette',
                     color: '#B71C1C',
+                    tile: '../assets/images/rr/rr-gallery-1.png',
                     images: ['../assets/images/rr/rr-gallery-1.png', '../assets/images/rr/rr-gallery-2.png', '../assets/images/rr/rr-gallery-3.png', '../assets/images/rr/rr-gallery-4.png',
                         '../assets/images/rr/rr-gallery-5.png'],
                     description: 'This app was done during a 2 day hackathon when I was completely new to Angular so I chose to use it as a way to teach myself how it works . It geolocates you via IP address,' +
-                    ' gets a list of 30 restaurants near you via the FourSquare API, then randomly selects 2 choices for you providing you with a website link and ' +
-                    'Google map for each one. The idea was to take the trouble out of deciding where to eat lunch. I have plans to do a complete rewrite and host it on this server eventually',
+                        ' gets a list of 30 restaurants near you via the FourSquare API, then randomly selects 2 choices for you providing you with a website link and ' +
+                        'Google map for each one. The idea was to take the trouble out of deciding where to eat lunch. I have plans to do a complete rewrite and host '+
+                        'it on this server eventually',
                     link: false,
                     github: 'https://github.com/jgdigitaljedi/hackday/tree/gh-pages',
                     techs: 'AngularJS, Angular-strap',
@@ -53,12 +56,13 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     shortName: 'toolbox',
                     title: 'Toolbox',
                     color: '#2196F3',
+                    tile: '../assets/images/toolbox-screen.png',
                     images: ['../assets/images/toolbox-screen.png'],
                     description: 'After writing a countless number of vbscripts and batch files to perform remote and batch tasks, I finally decided to write an' +
-                    ' HTA to give the script collection a GUI and make it easier for anyone to use my scripts. Although a lot of features had to be removed prior' +
-                    ' to posting to GitHub because they contained server addresses or were for very client specific tasks, the project is still huge and loaded with' +
-                    ' functionality. I used vbscript, JavaScript, HTML, and CSS to generate an HTA that has many external vbscript and batch file dependencies. This ' +
-                    'is a Windows desktop app made to function inside a Windows domain and was made for people in IT positions.',
+                        ' HTA to give the script collection a GUI and make it easier for anyone to use my scripts. Although a lot of features had to be removed prior' +
+                        ' to posting to GitHub because they contained server addresses or were for very client specific tasks, the project is still huge and loaded with' +
+                        ' functionality. I used vbscript, JavaScript, HTML, and CSS to generate an HTA that has many external vbscript and batch file dependencies. This ' +
+                        'is a Windows desktop app made to function inside a Windows domain and was made for people in IT positions.',
                     link: false,
                     github: 'https://github.com/jgdigitaljedi/myToolBox',
                     techs: 'VBScript, batch, JavaScript, ActiveX'
@@ -67,14 +71,16 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     shortName: 'portfolio',
                     title: 'Portfolio',
                     color: '#FBC02D',
-                    images: ['../assets/images/port/gallery1.png'],
-                    description: 'Well, this is the page you\'re looking at right now. Why list it as a project? There\'s a lot going on here, that\'s why! For starters, I deploy my team\'s apps at work ' +
-                    'so I decided I might as well rough it here too. This is running on a DigitalOcean server and I used zero helpers to get it up and running. All configuration ' +
-                    'was done through ssh. Aside from that and just from generally liking what I\'ve done here, I\'ve got some things going on that you can\'t see. I decided to use this server for more ' +
-                    'than just hosting my portfolio. I\'ve used Express to make routes that just return data to me. For example, got to http://joeyg.me/morning and you\'ll see a string returned ' +
-                    'that is talking about traffic and weather. I use an app called Tasker on my phone to hit that address in the morning when my phone connects to the bluetooth in my truck. That ' +
-                    'string is then read aloud to me over my truck\s stereo so I know what to expect my commute to be like. I am also working on integrating a call to my calendar to read back my ' +
-                    'events for the day as well. I have more plans for the server too, but time is greatest my obstacle. \n \n TLDR: I am doing some cool things with this server I have setup!',
+                    tile: '../assets/images/port/gallery1.jpg',
+                    description: 'Well, this is the page you\'re looking at right now. Why list it as a project? There\'s a lot going on here, that\'s why! For starters, '+
+                        'I deploy my team\'s apps at work so I decided I might as well rough it here too. This is running on a DigitalOcean server and I used zero '+
+                        'helpers to get it up and running. All configuration was done through ssh. Aside from that and just from generally liking what I\'ve done '+
+                        'here, I\'ve got some things going on that you can\'t see. I decided to use this server for more than just hosting my portfolio. I\'ve used '+
+                        'Express to make routes that just return data to me. For example, got to http://joeyg.me/morning and you\'ll see a string returned ' +
+                        'that is talking about traffic and weather. I use an app called Tasker on my phone to hit that address in the morning when my phone connects '+
+                        'to the bluetooth in my truck. That string is then read aloud to me over my truck\s stereo so I know what to expect my commute to be like. I am also working on integrating a call to my calendar to read back my ' +
+                        'events for the day as well. I have more plans for the server too, but time is greatest my obstacle. \n \n TLDR: I am doing some cool things '+
+                        'with this server I have setup!',
                     github: 'https://github.com/jgdigitaljedi/portfolio2016',
                     techs: 'MongoDB, ExpressJS, AngularJS, NodeJS, Angular Material, MomentJS, Nodemailer, d3, Phaser',
                     apis: 'Weather Underground, Last.fm, Bing Maps, GitHub, Yelp'
@@ -83,6 +89,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     shortName: 'game',
                     title: 'Phangular 2048',
                     color: '#AFB42B',
+                    tile: '',
                     description: 'As a coding challenge once, I was asked to make a 2048 game. I liked the project '+
                         'so much I decided to include it in the "Fun" section of this site. Check it out!',
                     github: 'https://github.com/jgdigitaljedi/ng2048',
@@ -92,6 +99,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     shortName: 'restaurant',
                     title: 'Restaurant Roulette Remix',
                     color: '#2196F3',
+                    tile: '',
                     description: 'I made the original version of this app with 2 other guys during a 2 day hackathon '+
                         'while attending MakerSquare. For the sake of getting things done quickly, we used the '+
                         'FourSquare API and kind of ignored best practices. Since that was hosted on divshot which '+
@@ -104,6 +112,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     shortName: 'entertainment',
                     title: 'Home Entertainment Control Center',
                     color: '#33691E',
+                    tile: '',
                     description: 'I\'ve got 10 video game consoles along with streaming boxes, a bluray player, '+
                         'a surround system, and more hooked up to my living room entertainment center. My wife '+
                         'and, on occasion, our houseguests find it difficult to know how to operate everything. '+
