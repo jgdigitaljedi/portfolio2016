@@ -1,25 +1,21 @@
 .projects-section {
 	min-height: 100%;
-	// height: calc(100vh - 64px);
-	// background-image: url('../../assets/images/AustinSkylineCropped.svg');
-	// background-position: bottom;
-	// background-size: contain;
-	// background-repeat:  no-repeat;
-	// background-image: url('../../assets/images/austin-skyline2.svg');
 
 	md-grid-list {
-		// margin-top: 40px;
 		
 		md-grid-tile {
 			background-size: contain;
 			background-repeat:  no-repeat;
 			background-position: center;
+			@include box_shadow(1);
 		}
 	}
 }
 
 .projects-gallery { // this is the modal
   max-height: 800px;
+  margin: 0;
+  padding: 0;
 
   .exit-modal {
 
@@ -30,26 +26,18 @@
   }
 
   .gallery-title {
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    color: #f1f1f1;
     width: 100%;
 
     h1 {
-      display: inline-block;
-    }
-
-    i {
-      top: 4px;
-      right: 4px;
-      position: absolute;
-      color: $dark-amber;
-      cursor: pointer;
+      display: inline;
+      margin: 0;
     }
   }
   .gallery-area {
     padding: 8px;
-    //margin: 8px;
 
     .vertical-film, .photo-film, .film-square {
       -webkit-user-select: none; /* Chrome/Safari */
@@ -59,9 +47,6 @@
       user-select: none;
     }
 
-    .film-square {
-      // include @box-shadow(2);
-    }
     .photo-area {
       //max-height: 585px;
 
@@ -71,6 +56,7 @@
         margin: 2px;
         padding: 1px;
         cursor: pointer;
+        @include box_shadow(1);
       }
 
       .big-pic {
@@ -81,6 +67,7 @@
         max-height: 600px;
         width: 98%;
         opacity: 0;
+        @include box_shadow(2);
       }
 
       .fade-in {
@@ -98,15 +85,16 @@
       font-size: .9em;
       padding: 12px;
       margin: 0;
-      // .BoxShadowHelper(2);
+      @include box_shadow(2);
 
       .gallery-head {
         color: $dark-amber;
         margin-bottom: 4px;
       }
-      
+
       a {
         color: #f1f1f1;
+        margin: auto 8px;
       }
       
       a:hover {
@@ -115,10 +103,6 @@
       
       a:visited {
         color: #424242;
-      }
-      
-      i {
-        margin-right: 12px;
       }
     }
   }

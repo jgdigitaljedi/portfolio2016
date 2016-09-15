@@ -9,6 +9,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
     			dash: {
                     shortName: 'dash',
     				title: 'My Dash',
+                    color: '#BF360C',
                     images: ['../assets/images/dash/dash-gallery-1.png', '../assets/images/dash/dash-gallery-2.png', '../assets/images/dash/dash-gallery-3.png',
                         '../assets/images/dash/dash-gallery-4.png', '../assets/images/dash/dash-gallery-5.png'],
                     description: 'Get randomized restaurant and bar suggestions, view weather info and radar, track packages, ' +
@@ -22,6 +23,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
                 lassos: {
                     shortName: 'lassos',
                     title: 'Texas Lassos Alumni Connect',
+                    color: '#F57F17',
                     images: ['../assets/images/lassos/lassos-gallery-1.png', '../assets/images/lassos/lassos-gallery-2.png', '../assets/images/lassos/lassos-gallery-3.png',
                         '../assets/images/lassos/lassos_admin.png', '../assets/images/lassos/lassos_profile.png'],
                     description: 'This application was built by request for the Texas Lassos Alumni Group. I worked on a team with two other developers' +
@@ -36,12 +38,13 @@ angular.module('portfolioApp').factory('Dataobjects', [
                 rr: {
                     shortName: 'rr',
                     title: 'Restaurant Roulette',
+                    color: '#B71C1C',
                     images: ['../assets/images/rr/rr-gallery-1.png', '../assets/images/rr/rr-gallery-2.png', '../assets/images/rr/rr-gallery-3.png', '../assets/images/rr/rr-gallery-4.png',
                         '../assets/images/rr/rr-gallery-5.png'],
                     description: 'This app was done during a 2 day hackathon when I was completely new to Angular so I chose to use it as a way to teach myself how it works . It geolocates you via IP address,' +
                     ' gets a list of 30 restaurants near you via the FourSquare API, then randomly selects 2 choices for you providing you with a website link and ' +
                     'Google map for each one. The idea was to take the trouble out of deciding where to eat lunch. I have plans to do a complete rewrite and host it on this server eventually',
-                    link: 'http://development.restaurant-roulette.divshot.io/',
+                    link: false,
                     github: 'https://github.com/jgdigitaljedi/hackday/tree/gh-pages',
                     techs: 'AngularJS, Angular-strap',
                     apis: 'Foursquare, Google Maps'
@@ -49,6 +52,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
                 toolbox: {
                     shortName: 'toolbox',
                     title: 'Toolbox',
+                    color: '#2196F3',
                     images: ['../assets/images/toolbox-screen.png'],
                     description: 'After writing a countless number of vbscripts and batch files to perform remote and batch tasks, I finally decided to write an' +
                     ' HTA to give the script collection a GUI and make it easier for anyone to use my scripts. Although a lot of features had to be removed prior' +
@@ -62,6 +66,8 @@ angular.module('portfolioApp').factory('Dataobjects', [
                 portfolio: {
                     shortName: 'portfolio',
                     title: 'Portfolio',
+                    color: '#FBC02D',
+                    images: ['../assets/images/port/gallery1.png'],
                     description: 'Well, this is the page you\'re looking at right now. Why list it as a project? There\'s a lot going on here, that\'s why! For starters, I deploy my team\'s apps at work ' +
                     'so I decided I might as well rough it here too. This is running on a DigitalOcean server and I used zero helpers to get it up and running. All configuration ' +
                     'was done through ssh. Aside from that and just from generally liking what I\'ve done here, I\'ve got some things going on that you can\'t see. I decided to use this server for more ' +
@@ -69,28 +75,45 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     'that is talking about traffic and weather. I use an app called Tasker on my phone to hit that address in the morning when my phone connects to the bluetooth in my truck. That ' +
                     'string is then read aloud to me over my truck\s stereo so I know what to expect my commute to be like. I am also working on integrating a call to my calendar to read back my ' +
                     'events for the day as well. I have more plans for the server too, but time is greatest my obstacle. \n \n TLDR: I am doing some cool things with this server I have setup!',
-                    github: 'https://github.com/jgdigitaljedi/newPort',
+                    github: 'https://github.com/jgdigitaljedi/portfolio2016',
                     techs: 'MongoDB, ExpressJS, AngularJS, NodeJS, Angular Material, MomentJS, Nodemailer, d3, Phaser',
                     apis: 'Weather Underground, Last.fm, Bing Maps, GitHub, Yelp'
                 },
                 game: {
                     shortName: 'game',
                     title: 'Phangular 2048',
+                    color: '#AFB42B',
                     description: 'As a coding challenge once, I was asked to make a 2048 game. I liked the project '+
                         'so much I decided to include it in the "Fun" section of this site. Check it out!',
-                    github: '',
+                    github: 'https://github.com/jgdigitaljedi/ng2048',
                     techs: 'Node, Angular, Express, MongoDB, Phaser, Angular Material'
                 },
                 restaurant: {
                     shortName: 'restaurant',
                     title: 'Restaurant Roulette Remix',
-                    description: 'I made the original version of this app with 2 other guys during a 1 day hackathon '+
+                    color: '#2196F3',
+                    description: 'I made the original version of this app with 2 other guys during a 2 day hackathon '+
                         'while attending MakerSquare. For the sake of getting things done quickly, we used the '+
                         'FourSquare API and kind of ignored best practices. Since that was hosted on divshot which '+
                         'has since been terminated, I made a new version of it hosted on this site using the Yelp! '+
-                        'API with more options. No github link since the code lives in this page\'s code.',
+                        'API with more options. No github link since the code lives in this sites\'s code.',
                     techs: 'Angular Material, Angular, Node, Express',
                     apis: 'Yelp!'
+                },
+                entertainment: {
+                    shortName: 'entertainment',
+                    title: 'Home Entertainment Control Center',
+                    color: '#33691E',
+                    description: 'I\'ve got 10 video game consoles along with streaming boxes, a bluray player, '+
+                        'a surround system, and more hooked up to my living room entertainment center. My wife '+
+                        'and, on occasion, our houseguests find it difficult to know how to operate everything. '+
+                        'This app started as a basic guide with pictures to instruct you how to use everything. '+
+                        'It has since grown and become a video game library database and more. This on is still got '+
+                        'a fair amount of development left, but I have my master branch version running on my home '+
+                        'server and a Raspberry Pi acting as my DNS server to route traffic from "ghome.help" to this app.',
+                    github: 'https://github.com/jgdigitaljedi/homeEntertainment',
+                    techs: 'Node, MongoDB, Angular, Express, Angular Material',
+                    apis: 'GiantBomb, WeatherUnderground'
                 }
             },
             work: {

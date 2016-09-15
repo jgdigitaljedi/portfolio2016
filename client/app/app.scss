@@ -40,23 +40,15 @@ $flat-white: #f1f1f1;
    color: $flat-black;
  }
 
+ .day-modal {
+  color: $flat-black;
+  background-color: #B0BEC5;
+ }
+
  .night {
    background-color: #040615;
    color: $flat-white;
  }
-// Component styles are injected through grunt
-// injector
-@import 'about/about.scss';
-@import 'blog/blog.scss';
-@import 'contact/contact.scss';
-@import 'fun/fun.scss';
-@import 'main/main.scss';
-@import 'projects/projects.scss';
-@import 'resume/resume.scss';
-@import 'social/social.scss';
-// endinjector
-
-
 @mixin box_shadow ($level) {
 
     @if $level == 1 {
@@ -72,3 +64,17 @@ $flat-white: #f1f1f1;
     }
 
 }
+
+// Component styles are injected through grunt
+// injector
+@import 'about/about.scss';
+@import 'blog/blog.scss';
+@import 'contact/contact.scss';
+@import 'fun/fun.scss';
+@import 'main/main.scss';
+@import 'projects/projects.scss';
+@import 'resume/resume.scss';
+@import 'social/social.scss';
+// endinjector
+
+

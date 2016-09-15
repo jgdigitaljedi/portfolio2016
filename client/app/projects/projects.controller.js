@@ -17,10 +17,11 @@ angular.module('portfolioApp').controller('ProjectsCtrl', ['$rootScope', 'Dataob
 
 		function makeProjectGrid () {
 			pc.projects = projects[pc.whichProjects];
-			for (var project in pc.projects) {
-				pc.projects[project].color = getRandomColor();
+			if (pc.whichProjects === 'work') {
+				for (var project in pc.projects) {
+					pc.projects[project].color = getRandomColor();
+				}				
 			}
-			console.log('pc.projects', pc.projects);
 		}
 
 		pc.changeProjectSet = function () {
