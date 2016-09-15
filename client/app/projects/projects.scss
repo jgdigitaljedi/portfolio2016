@@ -22,8 +22,9 @@
 
   .github-logos {
     background-image: url('../assets/images/github_projects.jpg');
-    background-size: cover;
-    height: 300px;
+    background-size: 30%;
+    background-repeat: repeat;
+    height: 250px;
     width: 80%;
     @include inset_shadow(6);
   }
