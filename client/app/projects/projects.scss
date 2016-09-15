@@ -19,6 +19,14 @@
 			@include box_shadow(1);
 		}
 	}
+
+  .github-logos {
+    background-image: url('../assets/images/github_projects.jpg');
+    background-size: cover;
+    height: 300px;
+    width: 80%;
+    @include inset_shadow(6);
+  }
 }
 
 .projects-gallery { // this is the modal

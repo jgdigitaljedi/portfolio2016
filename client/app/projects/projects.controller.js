@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('portfolioApp').controller('ProjectsCtrl', ['$rootScope', 'Dataobjects', '$mdDialog', '$timeout',
-	function ($rootScope, Dataobjects, $mdDialog, $timeout) {
+angular.module('portfolioApp').controller('ProjectsCtrl', ['$rootScope', '$scope', 'Dataobjects', '$mdDialog', '$timeout', '$http', '$compile',
+	function ($rootScope, $scope, Dataobjects, $mdDialog, $timeout, $http, $compile) {
 		var pc = this,
 			projects,
 			cLen;
@@ -68,6 +68,25 @@ angular.module('portfolioApp').controller('ProjectsCtrl', ['$rootScope', 'Dataob
             });
 		};
 
+		function gitHubWidget () {
+			$http({
+	            method: 'GET',
+	            url: '/api/proxy/mygithub'
+	        }).then(function successCallback (response) {
+	            var rLen = response.data.length;
+	            for (var i = 0; i < rLen; i++) {
+	                var tooltipString = 'Language: ' + (response.data[i].language ? response.data[i].language : 'Unknown') + 
+	                        ' / Last Updated: ' + moment(response.data[i].updated_at).format('MM/DD/YYYY hh:mm a'),
+	                    template = $compile('<md-button ng-click="openGhProject(\'' + response.data[i].html_url + 
+	                        '\')" class="op-entry"><span>' + response.data[i].name + 
+	                        '</span><md-tooltip style="color: black; font-size: 1.1em;">' + tooltipString + '</md-tooltip></md-button>')($scope);
+	                angular.element(document.querySelector('.op-area')).append(template);
+	            }
+	        }, function errorCallback (response) {
+	            console.log('github info', response);
+	        });			
+		}
+
 		(function () {
 			projects = Dataobjects.getProjects();
 			pc.colors = Dataobjects.getMaterialColors();
@@ -75,6 +94,7 @@ angular.module('portfolioApp').controller('ProjectsCtrl', ['$rootScope', 'Dataob
 			pc.whichProjects = 'personal';
 			pc.isPersonal = true;
 			makeProjectGrid();
+			gitHubWidget();
 		})();
 	}
 ]);
