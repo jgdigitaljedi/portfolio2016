@@ -11,7 +11,7 @@ angular.module('portfolioApp').controller('ContactCtrl', ['$scope', '$http', '$m
 				cc.labelColor = '#212121';
 			} else {
 				cc.buttonColor = '#ffc107';
-				cc.labelColor = '#f1f1f1';
+				cc.labelColor = '#ffc107';
 			}
 		}
 

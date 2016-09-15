@@ -1,5 +1,9 @@
 .projects-section {
 	min-height: 100%;
+    // background-image: url('../assets/images/austin2.svg');
+    // background-size: contain;
+    // background-position: bottom;
+    // background-repeat: no-repeat;
 
   .title-area {
     font-family: 'langdon';
@@ -10,15 +14,15 @@
     }
   }
 
-	md-grid-list {
-		
-		md-grid-tile {
-			background-size: contain;
-			background-repeat:  no-repeat;
-			background-position: center;
-			@include box_shadow(1);
-		}
-	}
+  md-grid-list {
+    
+    md-grid-tile {
+      background-size: contain;
+      background-repeat:  no-repeat;
+      background-position: center;
+      @include box_shadow(1);
+    }
+  }
 
   .github-logos {
     background-image: url('../assets/images/github_projects.jpg');

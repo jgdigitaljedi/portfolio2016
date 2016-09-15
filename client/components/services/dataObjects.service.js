@@ -73,8 +73,8 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     color: '#FBC02D',
                     tile: '../assets/images/port/gallery1.jpg',
                     description: 'Well, this is the page you\'re looking at right now. Why list it as a project? There\'s a lot going on here, that\'s why! For starters, '+
-                        'I deploy my team\'s apps at work so I decided I might as well rough it here too. This is running on a DigitalOcean server and I used zero '+
-                        'helpers to get it up and running. All configuration was done through ssh. Aside from that and just from generally liking what I\'ve done '+
+                        'I deploy my team\'s apps at work so I decided I might as well rough it here too. This is running on a DigitalOcean server on my '+
+                        'server config setup. All configuration was done through ssh. Aside from that and just from generally liking what I\'ve done '+
                         'here, I\'ve got some things going on that you can\'t see. I decided to use this server for more than just hosting my portfolio. I\'ve used '+
                         'Express to make routes that just return data to me. For example, got to http://joeyg.me/morning and you\'ll see a string returned ' +
                         'that is talking about traffic and weather. I use an app called Tasker on my phone to hit that address in the morning when my phone connects '+
@@ -155,22 +155,23 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     ' and back allowing the team to make standard http requests.',
                     apis: 'Weather Underground, Google Maps',
                     techs: 'AngularJS, ExpressJS, NodeJS, MongoDB, Kendo UI, Bootstrap, MomentJS, Gridster',
-                    members: 7
+                    members: 12
                 },
                 elcc: {
                     shortName: 'elcc',
                     title: 'ELCC',
-                    description: 'DUE TO A NONDISCLOSURE AGREEMENT, I AM LIMITED AS TO WHAT I CAN SAY ABOUT THIS APP AND CANNOT PROVIDE IMAGES. This is my most recent project and the entire UI' +
-                    ' was written by myself and 1 other team member. The purpose of the application was to allow our clients to monitor their toll roads at the sensor level. This allows for ' +
-                    'traffic map generation, more visualizations for the client, and the creation of a dynamic pricing engine that adjusts the toll rates according to the current volume and ' +
-                    'historical data. This application was more focused on traffic, rates, and transactions than the others I\'ve worked on professionally. The granular security components are more ' +
-                    'widesporead throughout this application because the user can change toll rates and signs from this application, granted they have the permissions or have a supervisor override. The ' +
-                    'application features maps with clickable canvas elements that change data parameters represented on the page; almost every chart type available in Kendo UI with date/time pickers ' +
-                    'and dropdowns to change the parameters and rebuild the charts; grids that can be sorted, filtered, and reordered; live camera feeds; and much more. During development the decision ' +
-                    'was made to take the design into a material design direction making this the most visually appealing app I have been a part of yet.',
+                    description: 'DUE TO A NONDISCLOSURE AGREEMENT, I AM LIMITED AS TO WHAT I CAN SAY ABOUT THIS APP AND CANNOT PROVIDE IMAGES. This is my most '+
+                        'recent project and the entire UI was written by myself and 1 other team member. The purpose of the application was to allow our clients to '+
+                        'monitor their toll roads at the sensor level. This allows for traffic map generation, more visualizations for the client, and the creation '+
+                        'of a dynamic pricing engine that adjusts the toll rates according to the current volume and historical data. The granular security '+
+                        'components are more widesporead throughout this application because the user can change toll rates and signs from this application, granted '+
+                        'they have the permissions or have a supervisor override. The application features maps with clickable canvas elements that change data parameters '+
+                        'represented on the page; almost every chart type available in Kendo UI with date/time pickers and dropdowns to change the parameters and '+
+                        'rebuild the charts; grids that can be sorted, filtered, and reordered; live camera feeds; live updating data; and much more. During development '+
+                        'the decision was made to take the design into a material design direction making this the most visually appealing app I have been a part of yet.',
                     apis: 'Weather Underground, Google Maps',
-                    techs: 'AngularJS, ExpressJS, NodeJS, Kendo UI, Bootstrap, MomentJS, Raphael',
-                    members: 3
+                    techs: 'AngularJS, ExpressJS, NodeJS, Kendo UI, Bootstrap, MomentJS, Raphael, Socket.IO',
+                    members: 8
                 },
                 printer: {
                     shortName: 'printer',
@@ -179,7 +180,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
                         'from our reports app. Our old solution was in Python and had some very hardcoded, report specific '+
                         'parts to it. I volunteered to create a new solution. I used Node and Express to generate a '+
                         'server instance with some endpoints. From there I was able to create a PDF generator that receives '+
-                        'a string containing the html of the report table and, using some custom css and phantomJS, I '+
+                        'a string containing the html of the report table and, using some custom css and PhantomJS, I '+
                         'render the report and return it back to the caller in a stream. I didn\'t stop there. I went ahead '+
                         'and added endpoints and logic for csv and Excel document creation from JSON objects as well.',
                     techs: 'Node, Express, PhantomJS, Bluebird, ms-excelbuilder-colorfix',
@@ -238,7 +239,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
 		            'to':null, /* because this is my current job, it doesn't have an end date */
 		            'description':'Design JavaScript/Angular applications to visualize tolling and traffic data. '+
 		            	'\n Create many types of data visualizations using Kendo UI, D3, ChartJS, Raphael, Google Maps, and more.'+
-                        '\n Architect, design, and implement NodeJS server and app solutions.',
+                        '\n Architect, design, and implement NodeJS server and application solutions.',
 		            'default_item':true
 		        }
 		    ],
@@ -249,8 +250,9 @@ angular.module('portfolioApp').factory('Dataobjects', [
 		            'title':'Student',
 		            'from':'2014-07-14',
 		            'to':'2014-10-03',
-		            'description':'Learned modern web technologies, best practices, and methods.'+
-		            	'\n Developed apps in JavaScript, Angular, and Rails.',
+		            'description':'Learned modern web technologies, best practices, and methodologies.'+
+                        '\n Got exposed to Rails, Angular, Node, Underscore, and many more frameworks and libraries.'+
+		            	'\n Developed and deployed apps built on Angular and Rails.',
 		            'default_item':false
 		        }
 		    ]
