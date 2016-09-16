@@ -3,7 +3,7 @@
 <section ng-class="{'night':pc.theme === 'night', 'day': pc.theme === 'day'}" md-theme="{{pc.theme}}" 
 	class="projects-section">
 
-	<div class="projects-topper"></div>
+	<div class="projects-topper" parallax-background parallax-ratio="0.2" parallax-vertical-offset="80"></div>
 	<div class="projects-label-container"  layout="row" layout-align="center center">
 		<div class="projects-label" ng-style="{'background-color': pc.theme === 'day' ? '#f1f1f1' : '#040615'}">
 			<div class="title-area" layout="row" layout-align="center center">
@@ -36,7 +36,7 @@
 			<!-- </md-card-content> -->
 		<!-- </md-card> -->
 	</div>
-	<div parallax-background parallax-ratio="0.4" class="github-logos" layout="row">
+	<div parallax-background parallax-ratio="0.2" parallax-vertical-offset="80" class="github-logos" layout="row">
 	</div>
 	<div layout="row" layout-align="center center" style="margin: 16px auto 32px;">
 		<md-card class="other-projects" style="width: 80%; margin-bottom: 200px;" layout-padding>

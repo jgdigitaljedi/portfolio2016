@@ -7,18 +7,18 @@
 
   .projects-topper {
     background-image: url('../assets/images/Austin_pic2.jpg');
-    background-size: cover;
+    background-size: 100%;
     background-position: bottom;
     height: 450px;
     width: 100%;
-    -webkit-clip-path: polygon(0 0, 3000px 0, 3000px 77%, 0 100%);
-    clip-path: polygon(0 0, 3000px 0, 3000px 77%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 77%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 77%, 0 100%);
     // @include angle(after);
 
   }
 
   .projects-label-container {
-    margin: -66px auto 16px;
+    margin: -86px auto 16px;
 
     .projects-label {
       width: 400px;
@@ -71,12 +71,12 @@
     background-image: url('../assets/images/github_projects.jpg');
     background-size: 33.3%;
     background-repeat: repeat;
-    height: 250px;
+    height: 350px;
     width: 100%;
     margin-bottom: 0;
-    @include inset_shadow(6);
-    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    // @include inset_shadow(6);
+    -webkit-clip-path: polygon(100% 23%, 0 0, 0 77%, 100% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 77%, 0 100%);
   }
 
   // .here-for-overlay:after {
