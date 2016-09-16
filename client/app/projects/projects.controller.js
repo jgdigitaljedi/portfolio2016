@@ -6,6 +6,7 @@ angular.module('portfolioApp').controller('ProjectsCtrl', ['$rootScope', '$scope
 			projects,
 			cLen;
 		pc.theme = $rootScope.theme;
+		pc.showLabel = true;
 
 		$rootScope.$on('theme change', function () {
 		    pc.theme = $rootScope.theme;
@@ -31,6 +32,7 @@ angular.module('portfolioApp').controller('ProjectsCtrl', ['$rootScope', '$scope
 		};
 
 		pc.openProject = function (which) {
+			pc.showLabel = false;
 			var selectedProject = pc.projects[which];
 			console.log('which', selectedProject);
 			$mdDialog.show({
@@ -44,6 +46,7 @@ angular.module('portfolioApp').controller('ProjectsCtrl', ['$rootScope', '$scope
                     }
 
                     $scope.closeGallery = function () {
+						pc.showLabel = true;;
                         $mdDialog.cancel();
                     };
 

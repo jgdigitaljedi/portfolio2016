@@ -38,6 +38,7 @@ input:-webkit-autofill {
 
 .contact-section {
 	height: calc(100vh - 64px);
+	@include fade-In(1s);
 	// background-image: url('../../assets/images/AustinSkylineCropped.svg');
 	// background-position: bottom;
 	// background-size: contain;

@@ -6,9 +6,27 @@ angular.module('portfolioApp').factory('Dataobjects', [
 	function() {
 		var projectsObject = {
             personal: {
-    			dash: {
+                entertainment: {
+                    shortName: 'entertainment',
+                    title: 'Home Entertainment Control Center',
+                    color: '#424242',
+                    tile: '../assets/images/home/gallery1.jpg',
+                    images: ['../assets/images/home/gallery1.jpg', '../assets/images/home/gallery3.jpg',
+                        '../assets/images/home/gallery4.jpg', '../assets/images/home/gallery5.jpg'],
+                    description: 'I\'ve got 10 video game consoles along with streaming boxes, a bluray player, '+
+                        'a surround system, and more hooked up to my living room entertainment center. My wife '+
+                        'and, on occasion, our houseguests find it difficult to know how to operate everything. '+
+                        'This app started as a basic guide with pictures to instruct you how to use everything. '+
+                        'It has since grown and become a video game library database and more. This on is still got '+
+                        'a fair amount of development left, but I have my master branch version running on my home '+
+                        'server and a Raspberry Pi acting as my DNS server to route traffic from "ghome.help" to this app.',
+                    github: 'https://github.com/jgdigitaljedi/homeEntertainment',
+                    techs: 'Node, MongoDB, Angular, Express, Angular Material',
+                    apis: 'GiantBomb, WeatherUnderground'
+                },
+                dash: {
                     shortName: 'dash',
-    				title: 'My Dash',
+                    title: 'My Dash',
                     color: '#BF360C',
                     tile: '../assets/images/dash/dash-gallery-1.png',
                     images: ['../assets/images/dash/dash-gallery-1.png', '../assets/images/dash/dash-gallery-2.png', '../assets/images/dash/dash-gallery-3.png',
@@ -20,7 +38,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     github: 'https://github.com/jgdigitaljedi/dashboard',
                     techs: 'AngularJS, Bootstrap',
                     apis: 'FourSquare, WeatherUnderground, Openweathermap, Boxoh, Pushbullet, HomeJS, Firebase, and Google Maps'
-    			},
+                },
                 lassos: {
                     shortName: 'lassos',
                     title: 'Texas Lassos Alumni Connect',
@@ -52,20 +70,16 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     techs: 'AngularJS, Angular-strap',
                     apis: 'Foursquare, Google Maps'
                 },
-                toolbox: {
-                    shortName: 'toolbox',
-                    title: 'Toolbox',
-                    color: '#2196F3',
-                    tile: '../assets/images/toolbox-screen.png',
-                    images: ['../assets/images/toolbox-screen.png'],
-                    description: 'After writing a countless number of vbscripts and batch files to perform remote and batch tasks, I finally decided to write an' +
-                        ' HTA to give the script collection a GUI and make it easier for anyone to use my scripts. Although a lot of features had to be removed prior' +
-                        ' to posting to GitHub because they contained server addresses or were for very client specific tasks, the project is still huge and loaded with' +
-                        ' functionality. I used vbscript, JavaScript, HTML, and CSS to generate an HTA that has many external vbscript and batch file dependencies. This ' +
-                        'is a Windows desktop app made to function inside a Windows domain and was made for people in IT positions.',
-                    link: false,
-                    github: 'https://github.com/jgdigitaljedi/myToolBox',
-                    techs: 'VBScript, batch, JavaScript, ActiveX'
+                game: {
+                    shortName: 'game',
+                    title: 'Phangular 2048',
+                    color: '#AFB42B',
+                    tile: '../assets/images/2048/gallery1.jpg',
+                    images: ['../assets/images/2048/gallery1.jpg', '../assets/images/2048/gallery2.jpg'],
+                    description: 'As a coding challenge once, I was asked to make a 2048 game. I liked the project '+
+                        'so much I decided to include it in the "Fun" section of this site. Check it out!',
+                    github: 'https://github.com/jgdigitaljedi/ng2048',
+                    techs: 'Node, Angular, Express, MongoDB, Phaser, Angular Material'
                 },
                 portfolio: {
                     shortName: 'portfolio',
@@ -85,16 +99,20 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     techs: 'MongoDB, ExpressJS, AngularJS, NodeJS, Angular Material, MomentJS, Nodemailer, d3, Phaser',
                     apis: 'Weather Underground, Last.fm, Bing Maps, GitHub, Yelp'
                 },
-                game: {
-                    shortName: 'game',
-                    title: 'Phangular 2048',
-                    color: '#AFB42B',
-                    tile: '../assets/images/2048/gallery1.jpg',
-                    images: ['../assets/images/2048/gallery1.jpg', '../assets/images/2048/gallery2.jpg'],
-                    description: 'As a coding challenge once, I was asked to make a 2048 game. I liked the project '+
-                        'so much I decided to include it in the "Fun" section of this site. Check it out!',
-                    github: 'https://github.com/jgdigitaljedi/ng2048',
-                    techs: 'Node, Angular, Express, MongoDB, Phaser, Angular Material'
+                toolbox: {
+                    shortName: 'toolbox',
+                    title: 'Toolbox',
+                    color: '#2196F3',
+                    tile: '../assets/images/toolbox-screen.png',
+                    images: ['../assets/images/toolbox-screen.png'],
+                    description: 'After writing a countless number of vbscripts and batch files to perform remote and batch tasks, I finally decided to write an' +
+                        ' HTA to give the script collection a GUI and make it easier for anyone to use my scripts. Although a lot of features had to be removed prior' +
+                        ' to posting to GitHub because they contained server addresses or were for very client specific tasks, the project is still huge and loaded with' +
+                        ' functionality. I used vbscript, JavaScript, HTML, and CSS to generate an HTA that has many external vbscript and batch file dependencies. This ' +
+                        'is a Windows desktop app made to function inside a Windows domain and was made for people in IT positions.',
+                    link: false,
+                    github: 'https://github.com/jgdigitaljedi/myToolBox',
+                    techs: 'VBScript, batch, JavaScript, ActiveX'
                 },
                 restaurant: {
                     shortName: 'restaurant',
@@ -108,24 +126,6 @@ angular.module('portfolioApp').factory('Dataobjects', [
                         'API with more options. No github link since the code lives in this sites\'s code.',
                     techs: 'Angular Material, Angular, Node, Express',
                     apis: 'Yelp!'
-                },
-                entertainment: {
-                    shortName: 'entertainment',
-                    title: 'Home Entertainment Control Center',
-                    color: '#424242',
-                    tile: '../assets/images/home/gallery1.jpg',
-                    images: ['../assets/images/home/gallery1.jpg', '../assets/images/home/gallery3.jpg',
-                        '../assets/images/home/gallery4.jpg', '../assets/images/home/gallery5.jpg'],
-                    description: 'I\'ve got 10 video game consoles along with streaming boxes, a bluray player, '+
-                        'a surround system, and more hooked up to my living room entertainment center. My wife '+
-                        'and, on occasion, our houseguests find it difficult to know how to operate everything. '+
-                        'This app started as a basic guide with pictures to instruct you how to use everything. '+
-                        'It has since grown and become a video game library database and more. This on is still got '+
-                        'a fair amount of development left, but I have my master branch version running on my home '+
-                        'server and a Raspberry Pi acting as my DNS server to route traffic from "ghome.help" to this app.',
-                    github: 'https://github.com/jgdigitaljedi/homeEntertainment',
-                    techs: 'Node, MongoDB, Angular, Express, Angular Material',
-                    apis: 'GiantBomb, WeatherUnderground'
                 }
             },
             work: {

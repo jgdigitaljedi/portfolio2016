@@ -3,6 +3,7 @@ $dark-amber: #ffc107;
 
 .resume-section {
   height: calc(100vh - 64px);
+  @include fade-In(1s);
   // min-height: 100%;
   // background-image: url('../../assets/images/AustinSkylineCropped.svg');
   // background-position: bottom;

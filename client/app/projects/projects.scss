@@ -1,9 +1,6 @@
 .projects-section {
 	min-height: 100%;
-    // background-image: url('../assets/images/austin4.svg');
-    // background-size: contain;
-    // background-position: bottom;
-    // background-repeat: no-repeat;
+  @include fade-In(1s);
 
   .projects-topper {
     background-image: url('../assets/images/Austin_pic2.jpg');
@@ -25,6 +22,7 @@
       width: 22%;
       height: 22%;
       z-index: 9000;
+      @include box_shadow(1);
     }
   }
 
@@ -94,13 +92,13 @@
   }
 
   .github-logos {
-    background-image: url('../assets/images/Austin_pic1.jpg');
-    background-size: cover;
-    // background-repeat: repeat;
-    height: 350px;
+    background-image: url('../assets/images/matrix_pattern.jpg');
+    // background-size: cover;
+    background-repeat: repeat;
+    height: 300px;
     width: 100%;
     margin-bottom: 0;
-    // @include inset_shadow(6);
+    @include inset_shadow(6);
     -webkit-clip-path: polygon(100% 23%, 0 0, 0 77%, 100% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 77%, 0 100%);
   }

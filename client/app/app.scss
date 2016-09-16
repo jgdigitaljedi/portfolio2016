@@ -82,6 +82,33 @@ $flat-white: #f1f1f1;
     }
 
 }
+$prefix:'-moz-', '-webkit-', '-o-', '-ms-', '';
+@mixin keyframe-fadeIn {
+  0%   { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes fadeIn {
+  @include keyframe-fadeIn;
+}
+@-webkit-keyframes fadeIn {
+  @include keyframe-fadeIn;
+}
+@-o-keyframes fadeIn {
+  @include keyframe-fadeIn;
+}
+@-ms-keyframes fadeIn {
+  @include keyframe-fadeIn;
+}
+@keyframes fadeIn {
+  @include keyframe-fadeIn;
+}
+@mixin fade-In($arg) {
+  $keyframe-name:fadeIn;
+  $duration:$arg;
+  @each $p in $prefix {
+    #{$p}animation:$keyframe-name $duration;
+  }
+}
 
 @mixin angle($pseudo, $flip: false, $angle: 1.5deg) {
   // Possible values for $pseudo are: before, after, both
