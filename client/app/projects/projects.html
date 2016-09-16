@@ -3,7 +3,7 @@
 <section ng-class="{'night':pc.theme === 'night', 'day': pc.theme === 'day'}" md-theme="{{pc.theme}}" 
 	class="projects-section">
 
-	<div class="projects-topper" parallax-background parallax-ratio="0.2" parallax-vertical-offset="80"></div>
+	<div class="projects-topper" parallax-background parallax-ratio="0.2" parallax-vertical-offset="200"></div>
 	<div class="projects-label-container"  layout="row" layout-align="center center">
 		<div class="projects-label" ng-style="{'background-color': pc.theme === 'day' ? '#f1f1f1' : '#040615'}">
 			<div class="title-area" layout="row" layout-align="center center">
@@ -29,6 +29,7 @@
 			        <md-grid-tile ng-repeat="project in pc.projects track by $index" md-rowspan="1" md-colspan="1"
 			        	ng-style="{'background-image': 'url(' + project.tile + ')', 'background-color': project.color}"
 			        	ng-click="pc.openProject(project.shortName)">
+			        	<span></span>
 			        	<md-grid-tile-footer><h3>{{project.title}}</h3></md-grid-tile-footer>
 			        </md-grid-tile>
 			    </md-grid-list>
@@ -36,7 +37,10 @@
 			<!-- </md-card-content> -->
 		<!-- </md-card> -->
 	</div>
-	<div parallax-background parallax-ratio="0.2" parallax-vertical-offset="80" class="github-logos" layout="row">
+	<div parallax-background parallax-ratio="0.075" parallax-vertical-offset="400" class="github-logos" layout="row">
+	</div>
+	<div layout="row" layout-align="center center" class="gh-logo-container">
+		<img src="../assets/images/github_projects.jpg" class="github-logo" />
 	</div>
 	<div layout="row" layout-align="center center" style="margin: 16px auto 32px;">
 		<md-card class="other-projects" style="width: 80%; margin-bottom: 200px;" layout-padding>

@@ -44,12 +44,7 @@ angular.module('portfolioApp').controller('ProjectsCtrl', ['$rootScope', '$scope
                     }
 
                     $scope.closeGallery = function () {
-                        angular.element(document.body).addClass('no-scroll');
                         $mdDialog.cancel();
-                        $timeout(function() {
-                            angular.element(document.body).removeClass('no-scroll');
-                        }, 750);
-                        //angular.element(document.body).css('overflow', 'auto');
                     };
 
                     $scope.changePic = function (e, picPath) {
