@@ -5,36 +5,33 @@
   .projects-topper {
     background-image: url('../assets/images/Austin_pic2.jpg');
     background-size: 100%;
-    background-position: bottom;
-    height: 450px;
+    background-position: 50% -350px;
+    // background-position: bottom;
+    height: 350px;
     width: 100%;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 77%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 77%, 0 100%);
-    // @include angle(after);
-
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
   }
 
   .gh-logo-container {
-    margin-top: -86px;
+    margin-top: -136px;
     z-index: 30;
 
     .github-logo {
       width: 22%;
       height: 22%;
       z-index: 31;
-      @include box_shadow(1);
+      @include box_shadow(2);
     }
   }
 
   .projects-label-container {
-    margin: -86px auto 16px;
+    margin: -96px auto 16px;
 
     .projects-label {
       width: 400px;
       padding: 12px;
-      // background-color: #f1f1f1;
       z-index: 30;
-      // @include box_shadow(1);
 
       .title-area {
         font-family: 'langdon';
@@ -95,25 +92,13 @@
     background-image: url('../assets/images/matrix_pattern.jpg');
     // background-size: cover;
     background-repeat: repeat;
-    height: 300px;
+    height: 350px;
     width: 100%;
     margin-bottom: 0;
     @include inset_shadow(6);
-    -webkit-clip-path: polygon(100% 23%, 0 0, 0 77%, 100% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 77%, 0 100%);
+    -webkit-clip-path: polygon(100% 30%, 0 0, 0 70%, 100% 100%);
+    clip-path: polygon(100% 30%, 0 0, 0 70%, 100% 100%);
   }
-
-  // .here-for-overlay:after {
-  //   content: '\A';
-  //   position: absolute;
-  //   width: 80%;
-  //   height: 250px;
-  //   margin: -7px;
-
-  //   // top: 0;
-  //   // left: 0;
-  //   background: rgba(0, 0, 0, 0.3);
-  // }
 }
 
 .projects-gallery { // this is the modal
