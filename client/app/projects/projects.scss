@@ -16,12 +16,12 @@
 
   .gh-logo-container {
     margin-top: -86px;
-    z-index: 8999;
+    z-index: 30;
 
     .github-logo {
       width: 22%;
       height: 22%;
-      z-index: 9000;
+      z-index: 31;
       @include box_shadow(1);
     }
   }
@@ -33,13 +33,13 @@
       width: 400px;
       padding: 12px;
       // background-color: #f1f1f1;
-      z-index: 8999;
+      z-index: 30;
       // @include box_shadow(1);
 
       .title-area {
         font-family: 'langdon';
         font-size: 5em;
-        z-index: 9000;
+        z-index: 31;
         padding: 0;
 
         p {
