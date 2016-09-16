@@ -3,19 +3,25 @@
 <section ng-class="{'night':pc.theme === 'night', 'day': pc.theme === 'day'}" md-theme="{{pc.theme}}" 
 	class="projects-section">
 
-	<div class="title-area" layout="row" layout-align="center center" style="width: 100%;">
-		<p>projects</p>
-	</div>
-	<div class="switch-area" layout="row" layout-align="center center" style="width: 100%;">
-		Personal Projects
-        <md-switch ng-model="isPersonal" style="margin: auto 12px;" aria-label="Project Type" 
-        	ng-change="pc.changeProjectSet()">
-        </md-switch>
-        Work Projects
+	<div class="projects-topper"></div>
+	<div class="projects-label-container"  layout="row" layout-align="center center">
+		<div class="projects-label" ng-style="{'background-color': pc.theme === 'day' ? '#f1f1f1' : '#040615'}">
+			<div class="title-area" layout="row" layout-align="center center">
+				<p>projects</p>
+			</div>
+			<div class="switch-area" layout="row" layout-align="center center" style="width: 100%;">
+				Personal Projects
+		        <md-switch ng-model="isPersonal" style="margin: auto 12px;" aria-label="Project Type" 
+		        	ng-change="pc.changeProjectSet()">
+		        </md-switch>
+		        Work Projects
+			</div>
+		</div>
 	</div>
 	<div layout-padding layout="row" layout-align="center center" flex>
-		<md-card style="width: 80%; ">
-			<md-card-content>
+		<!-- <md-card style="width: 80%; ">
+			<md-card-content> -->
+			<div style="width: 80%;">
 				<md-grid-list
 			        md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="3"
 			        md-row-height-gt-md="1:1" md-row-height="4:3"
@@ -26,12 +32,15 @@
 			        	<md-grid-tile-footer><h3>{{project.title}}</h3></md-grid-tile-footer>
 			        </md-grid-tile>
 			    </md-grid-list>
-			</md-card-content>
-		</md-card>
+			</div>
+			<!-- </md-card-content> -->
+		<!-- </md-card> -->
+	</div>
+	<div parallax-background parallax-ratio="0.4" class="github-logos" layout="row">
 	</div>
 	<div layout="row" layout-align="center center" style="margin: 16px auto 32px;">
 		<md-card class="other-projects" style="width: 80%; margin-bottom: 200px;" layout-padding>
-			<div parallax-background parallax-ratio="0.4" class="github-logos" layout="row"></div>
+				<div class="here-for-overlay"></div>
 	        <h2>Hover over a project name to see some information or click it to see the source on GitHub:</h2>
 	        <br>
 	        <div class="op-area"></div>

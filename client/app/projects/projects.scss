@@ -5,22 +5,52 @@
     // background-position: bottom;
     // background-repeat: no-repeat;
 
-  .title-area {
-    font-family: 'langdon';
-    font-size: 5em;
+  .projects-topper {
+    background-image: url('../assets/images/Austin_pic2.jpg');
+    background-size: cover;
+    background-position: bottom;
+    height: 450px;
+    width: 100%;
+    -webkit-clip-path: polygon(0 0, 3000px 0, 3000px 77%, 0 100%);
+    clip-path: polygon(0 0, 3000px 0, 3000px 77%, 0 100%);
+    // @include angle(after);
 
-    p {
-      margin: 16px;
-    }
+  }
+
+  .projects-label-container {
+    margin: -66px auto 16px;
+
+    .projects-label {
+      width: 400px;
+      padding: 12px;
+      // background-color: #f1f1f1;
+      z-index: 8999;
+
+      .title-area {
+        font-family: 'langdon';
+        font-size: 5em;
+        z-index: 9000;
+        padding: 0;
+
+        p {
+          z-index: 9001;
+          margin: 0;
+        }
+      }
+    }    
   }
 
   md-grid-list {
     
     md-grid-tile {
-      background-size: contain;
+      background-size: cover;
       background-repeat:  no-repeat;
       background-position: center;
       @include box_shadow(1);
+
+      md-grid-tile-footer {
+        background: rgba(0, 0, 0, 0.5) !important;
+      }
     }
   }
 
@@ -30,6 +60,7 @@
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
+
     h2 {
       color: $dark-amber;
       text-shadow: 1px 1px #212121;
@@ -44,7 +75,21 @@
     width: 100%;
     margin-bottom: 0;
     @include inset_shadow(6);
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   }
+
+  // .here-for-overlay:after {
+  //   content: '\A';
+  //   position: absolute;
+  //   width: 80%;
+  //   height: 250px;
+  //   margin: -7px;
+
+  //   // top: 0;
+  //   // left: 0;
+  //   background: rgba(0, 0, 0, 0.3);
+  // }
 }
 
 .projects-gallery { // this is the modal
