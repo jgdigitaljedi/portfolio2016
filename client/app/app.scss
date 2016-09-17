@@ -5,16 +5,7 @@ $blue-gray: #607d8b;
 $dark-amber: #ffc107;
 $flat-black: #212121;
 $flat-white: #f1f1f1;
- .main-shell {
-   .profile-container {
-     height: 100%;
-     font-size: 14px;
 
-     .profile-name {
-       font-weight: 500;
-     }
-   }
- }
  @import url('http://fonts.googleapis.com/css?family=Viga|Signika');
  @import url('https://fonts.googleapis.com/css?family=Exo:400,700,800,400italic,700italic,900');
  @font-face {
@@ -188,7 +179,20 @@ $prefix:'-moz-', '-webkit-', '-o-', '-ms-', '';
     }
   }
 }
+ .main-shell {
 
+  .md-toolbar-tools {
+    @include box_shadow(1);    
+  }
+   .profile-container {
+     height: 100%;
+     font-size: 14px;
+
+     .profile-name {
+       font-weight: 500;
+     }
+   }
+ }
 
 // Component styles are injected through grunt
 // injector

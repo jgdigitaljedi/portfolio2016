@@ -1,8 +1,13 @@
 'use strict';
 
-angular.module('portfolioApp')
-  .controller('ShellCtrl', function ($mdSidenav, $mdDialog, $scope, $location, $rootScope) {
+angular.module('portfolioApp').controller('ShellCtrl', ['$mdSidenav', '$mdDialog', '$scope', '$location', '$rootScope',
+  function ($mdSidenav, $mdDialog, $scope, $location, $rootScope) {
 
+    $scope.socialCrap = {
+      url: 'http://joeyg.me',
+      name: 'Joey Gauthier\'s Portfolio'
+    };
+    // SocialButtons.initButtons();
     $scope.overrideTheme = function () {
       $rootScope.theme = $rootScope.theme === 'day' ? 'night' : 'day';
       $scope.theme = $rootScope.theme;
@@ -56,4 +61,5 @@ angular.module('portfolioApp')
         controller: 'DialogController'
       });
     };
-  });
+  }
+]);
