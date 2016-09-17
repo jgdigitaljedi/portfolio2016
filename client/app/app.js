@@ -47,11 +47,10 @@ angular.module('portfolioApp', [
       
     $mdThemingProvider.alwaysWatchTheme(true);
     $mdThemingProvider.enableBrowserColor({theme: 'night'});
-}).controller('AppCtrl', function ($scope, $rootScope, SocialButtons) {
+}).controller('AppCtrl', function ($scope, $rootScope) {
     var theHour = parseInt(moment().format('HH'));
     $scope.theme = (theHour >= 7 && theHour < 19) ? 'day' : 'night';
     $rootScope.theme = $scope.theme;
-    SocialButtons.initButtons();
 
     // // social network button garbage
     // //Facebook
