@@ -441,7 +441,7 @@ module.exports = function (grunt) {
       dist: [
         'babel',
         'sass',
-        'imagemin',
+        // 'imagemin',
         'svgmin'
       ]
     },

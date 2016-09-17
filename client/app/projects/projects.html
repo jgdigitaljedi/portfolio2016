@@ -3,7 +3,7 @@
 <section ng-class="{'night':pc.theme === 'night', 'day': pc.theme === 'day'}" md-theme="{{pc.theme}}" 
 	class="projects-section" ng-cloak>
 
-	<div class="projects-topper" parallax-background parallax-ratio="0.2" parallax-vertical-offset="350"></div>
+	<div class="projects-topper" parallax-background parallax-ratio="0.6"></div>
 	<!-- <div class="projects-topper">
 		<img parallax parallax-ratio="0.2" parallax-vertical-offset="350" class="top-image" src="../assets/images/austin2.jpg" />
 	</div> -->
@@ -40,17 +40,19 @@
 			<!-- </md-card-content> -->
 		<!-- </md-card> -->
 	</div>
-	<div parallax-background parallax-ratio="0.6" class="github-logos" layout="row">
+	<!-- <div parallax-background parallax-ratio="0.6" class="github-logos" layout="row">
+	</div> -->
+	<div class="bottom-gh-area">
+		<div layout="row" layout-align="center center" class="gh-logo-container">
+			<img src="../assets/images/github_projects.jpg" class="github-logo" />
+		</div>
+		<div layout="row" layout-align="center center" style="margin: 16px auto 0;">
+			<md-card class="other-projects" style="width: 80%;" layout-padding>
+					<div class="here-for-overlay"></div>
+		        <h2>Hover over a project name to see some information or click it to see the source on GitHub:</h2>
+		        <br>
+		        <div class="op-area"></div>
+	    	</md-card>
+	    </div>
 	</div>
-	<div layout="row" layout-align="center center" class="gh-logo-container">
-		<img src="../assets/images/github_projects.jpg" class="github-logo" />
-	</div>
-	<div layout="row" layout-align="center center" style="margin: 16px auto 32px;">
-		<md-card class="other-projects" style="width: 80%;" layout-padding>
-				<div class="here-for-overlay"></div>
-	        <h2>Hover over a project name to see some information or click it to see the source on GitHub:</h2>
-	        <br>
-	        <div class="op-area"></div>
-    	</md-card>
-    </div>
 </section>

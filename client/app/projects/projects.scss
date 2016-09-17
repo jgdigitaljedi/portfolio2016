@@ -3,27 +3,14 @@
   @include fade-In(1s);
 
   .projects-topper {
-    background-image: url('../assets/images/Austin_pic2.jpg');
-    background-size: 100%;
-    background-position: 50% -350px;
-    // background-position: bottom;
+    background-image: url('../assets/images/matrix_pattern.jpg');
+    background-repeat: repeat;
     height: 350px;
     width: 100%;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
   }
 
-  .gh-logo-container {
-    margin-top: -136px;
-    z-index: 30;
-
-    .github-logo {
-      width: 22%;
-      height: 22%;
-      z-index: 31;
-      @include box_shadow(2);
-    }
-  }
 
   .projects-label-container {
     margin: -96px auto 16px;
@@ -75,29 +62,47 @@
     }
   }
 
-  .other-projects {
-    background-color: $blue-gray;
-    font-weight: bold;
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
 
-    h2 {
-      color: $dark-amber;
-      text-shadow: 1px 1px #212121;
-    }
-  }
+  // .github-logos {
+  //   background-image: url('../assets/images/matrix_pattern.jpg');
+  //   // background-size: cover;
+  //   background-repeat: repeat;
+  //   height: 350px;
+  //   width: 100%;
+  //   margin-bottom: 0;
+  //   @include inset_shadow(6);
+  //   -webkit-clip-path: polygon(100% 30%, 0 0, 0 100%, 100% 100%);
+  //   clip-path: polygon(100% 30%, 0 0, 0 100%, 100% 100%);
+  // }
+  .bottom-gh-area {
+  	-webkit-clip-path: polygon(100% 30%, 0 0, 0 100%, 100% 100%);
+    clip-path: polygon(100% 30%, 0 0, 0 100%, 100% 100%);
+    background-color: $flat-black;
+	  .gh-logo-container {
+	    // z-index: 30;
+	  	// margin-top: 111px;
 
-  .github-logos {
-    background-image: url('../assets/images/matrix_pattern.jpg');
-    // background-size: cover;
-    background-repeat: repeat;
-    height: 350px;
-    width: 100%;
-    margin-bottom: 0;
-    @include inset_shadow(6);
-    -webkit-clip-path: polygon(100% 30%, 0 0, 0 70%, 100% 100%);
-    clip-path: polygon(100% 30%, 0 0, 0 70%, 100% 100%);
+	    .github-logo {
+	      width: 22%;
+	      height: 22%;
+	      z-index: 31;
+	      @include box_shadow(2);
+	      margin-top: 120px;
+	    }
+	  }
+
+	.other-projects {
+	    background-color: $blue-gray;
+	    font-weight: bold;
+	    background-size: cover;
+	    background-position: bottom;
+	    background-repeat: no-repeat;
+
+	    h2 {
+	      	color: $dark-amber;
+	      	text-shadow: 1px 1px #212121;
+	    }
+	}
   }
 }
 
