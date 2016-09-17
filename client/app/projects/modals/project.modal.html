@@ -9,7 +9,7 @@
         </div>
     </div>
     <div class="gallery-area" flex layout layout-align="center center" layout-wrap flex-md="100" flex-sm="100">
-        <div class="photo-area" layout="column" flex="{{which.images ? 75 : 0}}">
+        <div class="photo-area" layout="column" flex="{{which.images ? 70 : 0}}">
             <div layout="row" flex>
                 <div class="vertical-film" layout="column" flex="15" ng-show="{{which.images.length > 1}}" hide-sm hide-md>
                     <div class="photo-film" ng-repeat="image in which.images">
@@ -21,7 +21,7 @@
                 </div>
             </div>
         </div>
-        <md-card class="writeup-area" layout="column" flex="{{which.images ? 25 : 100}}" 
+        <md-card class="writeup-area" layout="column" flex="{{which.images ? 30 : 100}}" 
             layout-wrap flex-md="100" flex-sm="100">
             <h3 class="gallery-head">Description</h3>
             {{which.description}}

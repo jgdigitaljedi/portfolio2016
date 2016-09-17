@@ -49,6 +49,10 @@ $flat-white: #f1f1f1;
    background-color: #040615;
    color: $flat-white;
  }
+
+ .fb-like, .twitter-share-button, .twitter-follow-button {
+  margin: 8px;
+ }
 @mixin box_shadow ($level) {
 
     @if $level == 1 {
