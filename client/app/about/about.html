@@ -1,8 +1,31 @@
 <div ng-include="'components/shell/shell.html'" ng-class="{'night':ac.theme === 'night', 'day': ac.theme === 'day'}"></div>
-<section ng-class="{'night':ac.theme === 'night', 'day': ac.theme === 'day'}" class="about-section">
-	<div layout="row" layout-align="center center" class="about-header">
-		<div>about joey</div>
+<section ng-class="{'night':ac.theme === 'night', 'day': ac.theme === 'day'}" class="aboutme-section">
+	<div layout="row" layout-align="center center" class="top-container" flex>
+		<div layout="column" class="little-info" layout-align="center start" flex="35">
+			<div layout="row" layout-align="center center" class="about-header">
+				<div>about joey</div>
+			</div>
+			<div class="top-text">
+				I'm a Web Application Software Engineer from Austin, TX.
+			</div>
+			<div class="summary-text">
+				While design is part of my job and is something I enjoy, I mainly prefer to write 
+				the nuts and bolts logic of a web app as I'm more of a function over form kind 
+				of guy. When I'm not staring at a screen I'm playing disc golf with my buddies, 
+				jamming some tunes on my guitar, or spending time with my family.
+			</div>
+		</div>
+		<div layout="column" class="little-photos" layout-align="center end" flex="35">
+			<img class="big-photo" ng-src="{{ac.photo}}" />
+		</div>
 	</div>
+	<div class="thumb-container" layout="row" layout-align="center center">
+		<div class="thumbstrip" layout="row" layout-align="space-between center" flex="70">
+			<div ng-repeat="photo in ac.photoArr" class="thumb">
+				<img ng-src="{{photo}}" />
+			</div>
+		</div>
+	</div>
+	<md-divider></md-divider>
 
-	
 </section>

@@ -1,8 +1,49 @@
-.about-section {
+.aboutme-section {
+	min-height: 100%;
+  	@include fade-In(1s);
 
-	.about-header {
-		font-family: 'langdon';
-		font-size: 5em;
-		margin: 12px auto;
+
+	.top-container {
+		padding-top: 40px;
+
+		.about-header {
+			font-family: 'langdon';
+			font-size: 5em;
+			margin-bottom: 16px;
+		}
+		.little-info {
+
+			.top-text {
+				font-size: 1.5em;
+				margin-bottom: 16px;
+			}
+
+		}
+
+		.little-photos {
+
+			.big-photo {
+				max-width: 350px;
+				max-height: 350px;
+				@include box_shadow(2);
+				border-radius: 8px;
+			}
+		}
+	}
+	
+	.thumb-container {
+		margin-top: 16px;
+
+		.thumbstrip {
+
+			.thumb {
+
+				img {
+					width: 20%;
+					height: 20%;
+					@include box_shadow(1);						
+				}
+			}
+		}
 	}
 }
