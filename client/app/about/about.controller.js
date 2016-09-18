@@ -22,23 +22,27 @@ angular.module('portfolioApp').controller('AboutCtrl', ['$scope','$rootScope', '
             ac.theme = $rootScope.theme;
         });
 
-        function chartTime (which) {
-        	if (!which) currChart = ac.skills[0];
-        	var template = '',
-        		colors = Dataobjects.getMaterialColors(),
-        		cLen = colors.length,
-        		skillsLen = currChart.skillList.length,
-        		barWidth = chartAreaWidth / ((skillsLen*2) + 1);
-        	console.log('bar width is ' + barWidth + ' and skillsLen is ' + skillsLen + ' and chart area is ' + chartAreaWidth);
-        	currChart.skillList.forEach(function (item) {
-        		template += '<div class="chart-bar" style="background-color: '+
-        						colors[Math.floor(Math.random() * cLen) + 1] +'; height: ' + 320 * (item.rating / 100) +
-        						'px; width: ' + barWidth + 'px;" layout="column">'+
-        					'</div>';
+        ac.chartTime = function (which) {
+        	// if (!which) ac.currentChart = ac.skills[0];
+        	console.log('which', which);
+        	ac.currentChart = !which ? ac.skills[0] : ac.skills[which];
+        	// if (!which) currChart = ac.skills[0];
+        	// var template = '',
+        	// 	colors = Dataobjects.getMaterialColors(),
+        	// 	cLen = colors.length,
+        	// 	skillsLen = currChart.skillList.length,
+        	// 	barWidth = chartAreaWidth / ((skillsLen*2) + 1);
+        	// console.log('bar width is ' + barWidth + ' and skillsLen is ' + skillsLen + ' and chart area is ' + chartAreaWidth);
+        	// currChart.skillList.forEach(function (item) {
+        	// 	template += '<div class="chart-bar" style="background-color: '+
+        	// 					colors[Math.floor(Math.random() * cLen) + 1] +'; height: ' + 320 * (item.rating / 100) +
+        	// 					'px; width: ' + barWidth + 'px;" layout="column">'+
+        	// 					'<span>' + item.name + '</span>' +
+        	// 				'</div>';
 
-        	});
-        	angular.element(document.getElementById('custom-chartish-thing')).html($compile(template)($scope));
-        }
+        	// });
+        	// angular.element(document.getElementById('custom-chartish-thing')).html($compile(template)($scope));
+        };
 
         (function init () {
         	photoInt = $interval(function () {
@@ -49,7 +53,6 @@ angular.module('portfolioApp').controller('AboutCtrl', ['$scope','$rootScope', '
         					return;
         				} else {
         					nextIndex = index + 1;
-        				console.log('ac.photo', ac.photo);
         					return;
         				}
         			}
@@ -57,9 +60,11 @@ angular.module('portfolioApp').controller('AboutCtrl', ['$scope','$rootScope', '
         		ac.photo = ac.photoArr[nextIndex];
         	}, 5000);
         	$timeout(function () {
-        		chartAreaWidth = angular.element(document.getElementById('custom-chartish-thing')).width();
-        		chartTime();
+        		// chartAreaWidth = angular.element(document.getElementById('custom-chartish-thing')).width();
+        		// ac.chartWidth = angular.element(document.getElementById('custom-chartish-thing')).width();
+        		ac.chartAreaWidth = angular.element(document.getElementById('skills-chart-area')).width();
         	}, 500);
+        		ac.chartTime();
         })();
 
         $scope.$on('$destroy', function () {
