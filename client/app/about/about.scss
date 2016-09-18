@@ -32,7 +32,7 @@
 	}
 	
 	.thumb-container {
-		margin-top: 16px;
+		margin: 16px auto 40px;;
 
 		.thumbstrip {
 
@@ -45,5 +45,10 @@
 				}
 			}
 		}
+	}
+
+	.random-facts {
+		margin-top: 40px;
+		padding-bottom: 40px;
 	}
 }
