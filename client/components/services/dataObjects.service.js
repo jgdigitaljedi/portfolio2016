@@ -263,10 +263,46 @@ angular.module('portfolioApp').factory('Dataobjects', [
 		'#0097A7', '#006064', '#009688', '#00796B', '#004D40', '#4CAF50', '#388E3C', '#1B5E20', '#8BC34A', '#689F38', '#33691E', '#CDDC39', 
 		'#AFB42B', '#827717', '#FFEB3B', '#FBC02D', '#F57F17', '#FFC107', '#FFA000', '#FF6F00', '#FF9800', '#F57C00', '#E65100', '#FF5722',
 		'#E64A19', '#BF360C'];
+
+        var skills = [
+            {
+                title: 'UI',
+                skillList: [
+                    {name: 'JavaScript', rating: 92},
+                    {name: 'HTML', rating: 90},
+                    {name: 'CSS', rating: 88},
+                    {name: 'LESS', rating: 80},
+                    {name: 'SASS', rating: 75}
+                ]
+            }, {
+                title: 'JavaScript',
+                skillList: [
+                    {name: 'Angular', rating: 90},
+                    {name: 'Node', rating: 84},
+                    {name: 'jQuery', rating: 80}
+                ]
+            }, {
+                title: 'General Programming',
+                skillSet: [
+                    {name: 'JavaScript', rating: 92},
+                    {name: 'VB Script', rating: 80},
+                    {name: 'Ruby', rating: 80},
+                    {name: 'Python', rating: 65}
+                ]
+            }, {
+                title: 'Database',
+                skillSet: [
+                    {name: 'MongoDB', rating: 85},
+                    {name: 'PostgreSQL', rating: 65}
+                ]
+            }
+        ];
+
 		return {
 			getResume: function () { return resumeObject; },
 			getMaterialColors: function () { return materialArray; },
-			getProjects: function () { return projectsObject; }
+            getProjects: function () { return projectsObject; },
+			getSkills: function () { return skills; }
 		};
 	}
 ]);

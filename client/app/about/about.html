@@ -48,12 +48,26 @@
 						<p>I started going bald at age 17.</p>
 						<p>All of my pets have Harry Potter related names.</p>
 					</article>
-				</p>
+				</div>
 			</div>
 		</div>
 	</div>
 	<md-divider></md-divider>
+	<div layout="row" layout-align="center center">
+		<div><h3>Skills</h3></div>
+	</div>
 	<div class="skills-container" layout="row" layout-align="center center">
-
+		<div layout="row" layout-align="space-between center" flex="70">
+			<div class="skills-list" layout="column" layout-align="center start" flex="30">
+				<md-list ng-repeat="skill in ac.skills">
+					<md-list-item>
+						{{skill.title}}
+					</md-list-item>
+				</md-list>
+			</div>
+			<div class="skills-chart-area" layout="column" layout-align="end center" flex="70">
+				<div id="custom-chartish-thing" layout="row" layout-fill layout-align="space-around end"></div>
+			</div>
+		</div>
 	</div>
 </section>
