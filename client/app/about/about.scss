@@ -54,18 +54,16 @@
 
 	.skills-container {
 
-		.skills-list {
-
+		.selected-skill {
+			background-color: $blue-gray;
+			color: $flat-white;
 		}
 
 		#skills-chart-area {
-			
-			#custom-chartish-thing {
-				height: 320px;
-
-				.chart-bar {
-					// width: 20px;
-				}
+			.chart-bar {
+				@include box_shadow(1);
+				border-top-left-radius: 0.5em;
+				border-top-right-radius: 0.5em;
 			}
 		}
 	}

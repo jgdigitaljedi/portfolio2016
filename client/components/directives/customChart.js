@@ -10,9 +10,7 @@ angular.module('portfolioApp').directive('skillChart', ['Dataobjects', '$compile
                 skillData: '=',
                 chartWidth: '='
             },
-            link: function(scope, elem, attrs) {
-                console.log('skillData', scope.skillData);
-                console.log('chartWidth', scope.chartWidth);
+            link: function(scope, elem) {
 
                 function createChart () {
                     var template = '',
@@ -20,16 +18,16 @@ angular.module('portfolioApp').directive('skillChart', ['Dataobjects', '$compile
                         cLen = colors.length,
                         skillsLen = scope.skillData.skillList.length,
                         barWidth = scope.chartWidth / ((skillsLen*2) + 1);
-                    console.log('bar width is ' + barWidth + ' and skillsLen is ' + skillsLen + ' and chart area is ' + scope.chartWidth);
+                    
                     scope.skillData.skillList.forEach(function (item) {
-                        template += '<div class="chart-bar" style="background-color: '+
-                            colors[Math.floor(Math.random() * cLen) + 1] +'; height: ' + 320 * (item.rating / 100) +
+                        template += '<div layout="column" layout-align="center center"><div>' + item.rating + '%</div>'+
+                            '<div class="chart-bar" style="background-color: '+
+                            colors[Math.floor(Math.random() * cLen)] +'; height: ' + 320 * (item.rating / 100) +
                             'px; width: ' + barWidth + 'px;" layout="column">'+
-                                '<span>' + item.name + '</span>' +
+                            '</div>'+
+                                '<span>' + item.name + '</span>'+
                             '</div>';
-                    });
-                    // scope.template = $compile(template)(scope);                    
-                    scope.template = template;   
+                    }); 
                     elem.html($compile(template)(scope));                 
                 }
 

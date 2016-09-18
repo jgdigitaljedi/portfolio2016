@@ -60,13 +60,13 @@
 		<div layout="row" layout-align="space-between center" flex="70">
 			<div class="skills-list" layout="column" layout-align="center start" flex="30">
 				<md-list ng-repeat="skill in ac.skills track by $index">
-					<md-list-item style="cursor: pointer;" ng-click="ac.chartTime($index)">
+					<md-list-item style="cursor: pointer;" ng-click="ac.chartTime($index)"
+						ng-class="{'selected-skill': ac.currentChart.title === skill.title}">
 						{{skill.title}}
 					</md-list-item>
 				</md-list>
 			</div>
 			<div id="skills-chart-area" layout="column" layout-align="end center" flex="70">
-				<!-- <div id="custom-chartish-thing" layout="row" layout-fill layout-align="space-around end"></div> -->
 				<skill-chart skill-data="ac.currentChart" chart-width="ac.chartAreaWidth"
 					layout="row" layout-fill layout-align="space-around end">
 				</skill-chart>

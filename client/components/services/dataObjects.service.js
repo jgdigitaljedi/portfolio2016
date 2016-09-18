@@ -283,7 +283,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
                 ]
             }, {
                 title: 'General Programming',
-                skillSet: [
+                skillList: [
                     {name: 'JavaScript', rating: 92},
                     {name: 'VB Script', rating: 80},
                     {name: 'Ruby', rating: 80},
@@ -291,7 +291,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
                 ]
             }, {
                 title: 'Database',
-                skillSet: [
+                skillList: [
                     {name: 'MongoDB', rating: 85},
                     {name: 'PostgreSQL', rating: 65}
                 ]
