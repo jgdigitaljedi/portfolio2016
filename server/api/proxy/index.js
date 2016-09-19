@@ -8,8 +8,9 @@ var proxy = require('./proxy.controller'),
 var router = express.Router();
 
 router.get('/lastfm', proxy.lastfm);
-router.get('/conditions/:loc', proxy.conditions);
+router.get('/conditions/:state/:city', proxy.conditions);
 router.get('/lastart/:band', proxy.lastArt);
+router.get('/lastfmweeklyartists', proxy.lastfmWeeklyArtists);
 router.post('/contact', proxy.sendMail);
 router.get('/morning', morning.getInfo);
 router.get('/mygithub', proxy.myGithub);

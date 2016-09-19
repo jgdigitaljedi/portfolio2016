@@ -4,9 +4,9 @@
 		fun stuff
 	</div>
 	<div layout="row" layout-align="center center" style="margin-top: 40px;">
-		<div layout="row" layout-align="space-around center" flex="70">
+		<div layout="row" layout-align="space-between start" flex="70">
 			<div layout="column" class="app-section" flex="40">
-				<md-card class="app-card">
+				<md-card class="app-card gray-card">
 					<md-card-content>
 						<h3> Fun Apps Hosted Here</h3>
 						<p>
@@ -20,11 +20,19 @@
 					</md-card-content>
 				</md-card>
 			</div>
-			<div layout="column" class="widget-section" flex="60">
-				<md-card class="joey-weather">
-					<md-card-content layout="row">
+			<div layout="column" class="widget-section" layout-align="start end" flex="60">
+				<md-card class="gray-card">
+					<md-card-content>
+						<h2>Quasi-intersting stuff about me</h2>
+					</md-card-content>
+				</md-card>
+				<md-card class="joey-weather gray-card">
+					<md-card-content layout="row" layout-align="center space-between">
 						<div>Weather in my neck of the woods: </div>
-						<div>{{fc.weatherString}}</div>
+						<div style="margin-left: 16px;">
+							{{fc.austinTemp}} &nbsp; 
+							<img ng-src="{{fc.austinIcon}}" class="weather-icon"/>
+						</div>
 					</md-card-content>
 				</md-card>
 			</div>

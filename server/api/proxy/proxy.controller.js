@@ -7,8 +7,10 @@ var request = require('request'),
 	
 exports.conditions = function(req, res) {
 	//console.log('weather conditions proxy used', req.params.loc);
-	var location = req.params.loc,
-		url = 'http://api.wunderground.com/api/' + process.env.JWUKEY + '/geolookup/conditions/q/' + location + '.json';
+	var state = req.params.state,
+		city = req.params.city,
+		url = 'http://api.wunderground.com/api/' + process.env.JWUKEY + '/geolookup/conditions/q/' + state +
+			'/' + city + '.json';
 
 	request.get(
 	    url,
@@ -29,11 +31,26 @@ exports.lastfm = function(req, res) {
 	    url,
 		function (error, response, body) {
 	        if (!error && response.statusCode === 200) {
-	console.log('url', url);
 	          	var obj = JSON.parse(body);
 	            return res.json(obj);
 	        } else {
 	        	return res.json({error: true, message: error});
+	        }
+	    }
+	);
+};
+
+exports.lastfmWeeklyArtists = function (req, res) {
+	var url = 'http://ws.audioscrobbler.com/2.0/?method=user.getweeklyartistchart&user=joeygstrings&api_key=' +
+		process.env.JLASTKEY + '&format=json';
+	request.get(
+	    url,
+		function (error, response, body) {
+	        if (!error && response.statusCode === 200) {
+	          	var obj = JSON.parse(body);
+	            return res.json(obj);
+	        } else {
+	        	return res.json({error: true, message: response, error: error, body: body});
 	        }
 	    }
 	);

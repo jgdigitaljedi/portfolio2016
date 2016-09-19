@@ -10,4 +10,23 @@
         font-size: 5em;
     	padding-top: 20px;
 	}
+
+	.gray-card {
+		background-color: $blue-gray;
+		color: $flat-white;
+	}
+
+	.widget-section {
+
+		.joey-weather {
+			max-width: 420px;
+			
+			.weather-icon {
+				height: 40px;
+				width: 40px;
+				margin: -14px 0;
+			}
+		}
+	}
+
 }
