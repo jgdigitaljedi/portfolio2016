@@ -2,9 +2,14 @@
 	min-height: 100%;
   	@include fade-In(1s);
 
+  	md-divider {
+  		@include box_shadow(1);
+  	}
+
 
 	.top-container {
 		padding-top: 40px;
+		margin-bottom: 40px;
 
 		.about-header {
 			font-family: 'langdon';
@@ -40,15 +45,14 @@
 
 				img {
 					width: 20%;
-					height: 20%;
-					@include box_shadow(1);						
+					height: 20%;					
 				}
 			}
 		}
 	}
 
 	.random-facts {
-		margin-top: 40px;
+		padding-top: 40px;
 		padding-bottom: 40px;
 	}
 
@@ -64,5 +68,22 @@
 	.feature-title {
 		font-weight: bold;
 		font-style: italic;
+	}
+
+	.story-link {
+		text-decoration: none;
+    	background: $flat-white;
+    	padding: 4px 6px;
+    	border-radius: 4px;
+    	color: $flat-black;
+    	@include box_shadow(1);
+
+    	&:hover {
+    		color: $blue-gray;
+    	}
+
+    	&:visited {
+    		color: $dark-amber;
+    	}
 	}
 }

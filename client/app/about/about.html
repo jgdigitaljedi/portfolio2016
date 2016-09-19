@@ -19,15 +19,16 @@
 			<img class="big-photo" ng-src="{{ac.photo}}" />
 		</div>
 	</div>
-	<div class="thumb-container" layout="row" layout-align="center center">
+	<!-- <div class="thumb-container" layout="row" layout-align="center center">
 		<div class="thumbstrip" layout="row" layout-align="space-between center" flex="70">
 			<div ng-repeat="photo in ac.photoArr" class="thumb">
 				<img ng-src="{{photo}}" />
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<md-divider></md-divider>
-	<div class="random-facts" layout="row" layout-align="center center">
+	<div class="random-facts" layout="row" layout-align="center center" 
+		ng-style="ac.theme === 'day' && {'background-color': 'white'} || ac.theme === 'night' && {'background-color': '#607d8b'}">
 		<div layout="row" layout-align="space-between center" flex="70">
 			<div class="random-image" layout="column" layout-align="start center" flex="50">
 				<img src="../assets/images/about/DJSigtouchedup.jpg" />
@@ -74,44 +75,46 @@
 		</div>
 	</div>
 	<md-divider></md-divider>
-	<div layout="row" layout-align="center center">
-		<h3 style="margin-bottom: 16px;">A few times my work has been featured</h3>
-	</div>
-	<div class="featured" layout="row" layout-align="center center">
-		<div layout="row" layout-align="space-between start" flex="70">
-			<div layout="column" flex="33" style="margin: auto 6px;">
-				<div class="feature-title">MoPac Express Lanes Command Center</div>
-				<div>
-					<p>I designed and wrote the UI for this project. Two other UI developers were 
-					on this project with me for a couple of months, but for the vast majority of 
-					a year and a half this was my baby. The video in this story shows just a few 
-					of the screens I created.
-					</p>
+	<div ng-style="ac.theme === 'day' && {'background-color': 'white'} || ac.theme === 'night' && {'background-color': '#607d8b'}">
+		<div layout="row" layout-align="center center">
+			<h3 style="margin-bottom: 16px;">A few times my work has been featured</h3>
+		</div>
+		<div class="featured" layout="row" layout-align="center start">
+			<div layout="row" layout-align="space-between start" flex="70">
+				<div layout="column" flex="33" style="margin: 0 6px;">
+					<div class="feature-title">MoPac Express Lanes Command Center</div>
+					<div>
+						<p>I designed and wrote the UI for this project. Two other UI developers were 
+						on this project with me for a couple of months, but for the vast majority of 
+						a year and a half this was my baby. The video in this story shows just a few 
+						of the screens I created.
+						</p>
+					</div>
+					<div>
+						<a class="story-link" href="http://www.fox7austin.com/news/local-news/190282082-story" target="__blank">Fox 7 story</a>
+					</div>
 				</div>
-				<div>
-					<a href="http://www.fox7austin.com/news/local-news/190282082-story">Fox 7 story</a>
+				<div layout="column" flex="33" style="margin: 0 6px;">
+					<div class="feature-title">MoPac Express Lanes Command Center</div>
+					<div>
+						<p>This is regarding the same project as the previous feature, but there is an 
+						image in the story showing one of the many screens I developed on this project.
+						</p>
+					</div>
+					<div>
+						<a class="story-link" href="http://www.mystatesman.com/news/news/transportation/dynamic-tolls-on-mopac-to-gauge-how-austinites-val/nrt5S/" target="__blank">Austin American Statesman story</a>
+					</div>
 				</div>
-			</div>
-			<div layout="column" flex="33" style="margin: auto 6px;">
-				<div class="feature-title">MoPac Express Lanes Command Center</div>
-				<div>
-					<p>This is regarding the same project as the previous feature, but there is an 
-					image in the story showing one of the many screens I developed on this project.
-					</p>
-				</div>
-				<div>
-					<a href="http://www.mystatesman.com/news/news/transportation/dynamic-tolls-on-mopac-to-gauge-how-austinites-val/nrt5S/">Austin American Statesman story</a>
-				</div>
-			</div>
-			<div layout="column" flex="33" style="margin: auto 6px;">
-				<div class="feature-title">My Dash</div>
-				<div>
-					<p>While attending MakerSquare, I did a solo project called 'My Dash' that they tweeted about. 
-					It's not a big deal, but I thought it was cool enough to mention here!
-					</p>
-				</div>
-				<div>
-					<a href="https://twitter.com/MakerSquare/status/517837514913366017">Twitter</a>
+				<div layout="column" flex="33" style="margin: 0 6px;">
+					<div class="feature-title">My Dash</div>
+					<div>
+						<p>While attending MakerSquare, I did a solo project called 'My Dash' that they tweeted about. 
+						It's not a big deal, but I thought it was cool enough to mention here!
+						</p>
+					</div>
+					<div>
+						<a class="story-link" href="https://twitter.com/MakerSquare/status/517837514913366017" target="__blank">Twitter</a>
+					</div>
 				</div>
 			</div>
 		</div>
