@@ -4,8 +4,8 @@
 		fun stuff
 	</div>
 	<div layout="row" layout-align="center center" style="margin-top: 40px;">
-		<div layout="row" layout-align="space-between start" flex="70">
-			<div layout="column" class="app-section" flex="40">
+		<div layout="row" layout-align="center start" flex="70">
+			<div layout="column" class="app-section" flex="50">
 				<md-card class="app-card gray-card">
 					<md-card-content>
 						<h3> Fun Apps Hosted Here</h3>
@@ -20,18 +20,44 @@
 					</md-card-content>
 				</md-card>
 			</div>
-			<div layout="column" class="widget-section" layout-align="start end" flex="60">
+			<div layout="column" class="widget-section" layout-align="center end" flex="50">
 				<md-card class="gray-card">
 					<md-card-content>
-						<h2>Quasi-intersting stuff about me</h2>
-					</md-card-content>
-				</md-card>
-				<md-card class="joey-weather gray-card">
-					<md-card-content layout="row" layout-align="center space-between">
-						<div>Weather in my neck of the woods: </div>
-						<div style="margin-left: 16px;">
-							{{fc.austinTemp}} &nbsp; 
-							<img ng-src="{{fc.austinIcon}}" class="weather-icon"/>
+						<div><h2>Quasi-intersting stuff about me</h2></div>
+						<div layout="row" layout-align="center space-between" class="joey-weather">
+							<div>Weather in my neck of the woods: </div>
+							<div style="margin-left: 16px;">
+								{{fc.austinTemp}} &nbsp; 
+								<img ng-src="{{fc.austinIcon}}" class="weather-icon"/>
+							</div>
+						</div>
+						<md-divider></md-divider>
+						<div layout="row" layout-align="space-around center" class="lastfm-stats">
+							<div layout="column" layout-align="center center">
+								<span>
+									My Top 5 Most Listened to<br>
+									Artists in the Past Week
+								</span>
+								<md-list>
+									<md-list-item ng-repeat="artist in fc.music.artists" 
+										ng-click="fc.openMusicLink(artist.url)" class="music-list-item">
+										{{artist.name}}
+									</md-list-item>	
+								</md-list>
+							</div>
+							<div layout="column" layout-align="center center">
+								<span>
+									My Top 5 Most Listened to<br>
+									Tracks in the Past Week
+								</span>
+								<md-list>
+									<md-list-item ng-repeat="track in fc.music.tracks" 
+										ng-click="fc.openMusicLink(track.url)" class="music-list-item">
+										{{track.name}}<br>
+										by {{track.artist}}
+									</md-list-item>	
+								</md-list>
+							</div>
 						</div>
 					</md-card-content>
 				</md-card>

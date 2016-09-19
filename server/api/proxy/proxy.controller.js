@@ -56,6 +56,23 @@ exports.lastfmWeeklyArtists = function (req, res) {
 	);
 };
 
+exports.lastfmWeeklyTracks = function (req, res) {
+	// /2.0/?method=user.getweeklytrackchart&user=rj&api_key=
+	var url = 'http://ws.audioscrobbler.com/2.0/?method=user.getweeklytrackchart&user=joeygstrings&api_key=' +
+		process.env.JLASTKEY + '&format=json';
+	request.get(
+	    url,
+		function (error, response, body) {
+	        if (!error && response.statusCode === 200) {
+	          	var obj = JSON.parse(body);
+	            return res.json(obj);
+	        } else {
+	        	return res.json({error: true, message: response, error: error, body: body});
+	        }
+	    }
+	);
+};
+
 exports.lastArt = function (req, res) {
 	var data = req.params.band,
 		theUrl =  'http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=' + data + '&api_key=' + 
