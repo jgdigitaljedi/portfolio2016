@@ -50,5 +50,16 @@ angular.module('portfolioApp')
         		templateUrl: 'app/social/social.html',
         		controller: 'SocialCtrl',
         		controllerAs: 'sc'
-      		});
+      		})
+          .state('2048', {
+            url: '/fun/2048',
+            templateUrl: 'app/fun/2048/2048.html',
+            controller: 'Ng2048Ctrl',
+            controllerAs: 'tfec'
+          }).state('rrr', {
+            url: '/fun/rrr',
+            templateUrl: 'app/fun/rrr/rrr.html',
+            controller: 'RrrCtrl',
+            controllerAs: 'rrrc'
+          });
   	});

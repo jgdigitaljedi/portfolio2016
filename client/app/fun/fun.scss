@@ -1,0 +1,13 @@
+.fun-section {
+	background-image: url('../../assets/images/austin2.svg');
+	background-position: bottom;
+	background-size: contain;
+	background-repeat:  no-repeat;
+	height: calc(100vh - 64px);
+
+	.title-area {
+		font-family: 'langdon';
+        font-size: 5em;
+    	padding-top: 20px;
+	}
+}

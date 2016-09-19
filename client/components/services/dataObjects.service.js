@@ -74,8 +74,8 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     shortName: 'game',
                     title: 'Phangular 2048',
                     color: '#AFB42B',
-                    tile: '../assets/images/2048/gallery1.jpg',
-                    images: ['../assets/images/2048/gallery1.jpg', '../assets/images/2048/gallery2.jpg'],
+                    tile: '../assets/images/2048/preview/gallery1.jpg',
+                    images: ['../assets/images/2048/preview/gallery1.jpg', '../assets/images/2048/preview/gallery2.jpg'],
                     description: 'As a coding challenge once, I was asked to make a 2048 game. I liked the project '+
                         'so much I decided to include it in the "Fun" section of this site. Check it out!',
                     github: 'https://github.com/jgdigitaljedi/ng2048',
