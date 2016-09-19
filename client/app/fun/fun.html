@@ -3,4 +3,31 @@
 	<div layout="row" layout-align="center center" class="title-area">
 		fun stuff
 	</div>
+	<div layout="row" layout-align="center center" style="margin-top: 40px;">
+		<div layout="row" layout-align="space-around center" flex="70">
+			<div layout="column" class="app-section" flex="40">
+				<md-card class="app-card">
+					<md-card-content>
+						<h3> Fun Apps Hosted Here</h3>
+						<p>
+							Here are some apps I've developed and never deployed...UNTIL NOW! 
+							I thought it might be fun to include them here. More to come as time passes.
+						</p>
+						<md-list>
+							<md-list-item ui-sref="2048">Phangular 2048</md-list-item>
+							<md-list-item ui-sref="rrr">Restaurant Roulette Remix</md-list-item>
+						</md-list>
+					</md-card-content>
+				</md-card>
+			</div>
+			<div layout="column" class="widget-section" flex="60">
+				<md-card class="joey-weather">
+					<md-card-content layout="row">
+						<div>Weather in my neck of the woods: </div>
+						<div>{{fc.weatherString}}</div>
+					</md-card-content>
+				</md-card>
+			</div>
+		</div>
+	</div>
 </section>

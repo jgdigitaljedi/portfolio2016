@@ -2,29 +2,34 @@
 
 angular.module('portfolioApp').controller('Ng2048Ctrl', ['$scope', '$rootScope', '$http', '$mdDialog', 'GameLogicService',
 	function ($scope, $rootScope, $http, $mdDialog, GameLogicService) {
-        /*jshint validthis: true */
-        var tfec = this;
+        var tfec = this,
+        	gameOverDialog;
         tfec.theme = $rootScope.theme;
 
         $rootScope.$on('theme change', function () {
             tfec.theme = $rootScope.theme;
         });
 
-		var gameOverDialog;
-		tfec.title = 'Phangular 2048!';
 		tfec.userScore = sessionStorage.getItem('2048score') ? parseInt(sessionStorage.getItem('2048score')) : 0;
 		tfec.name = 'Player 1';
 
-		$http.get('/api/2048/gethighscore')
-			.success(function (data) {
-				console.log('success data hs', data);
-				tfec.highScore = data;
-				$scope.$broadcast('hs', data);
-			})
-			.error(function(data) {
-				console.log('error getting hs', data);
-			});
+		tfec.newGame = function () {
+			sessionStorage.clear();
+			tfec.userScore = 0;
+			GameLogicService.newGame($scope);
+		};
 
+		tfec.enteringName = function () {
+			// if (tfec.enterName) $scope.$parent.tfec.name = tfec.playerName;
+			tfec.enterName = !tfec.enterName;
+		};
+
+		tfec.checkForEnter = function (key) {
+			console.log('key', key);
+			if (key.which === 13) tfec.enteringName();
+		};
+
+		// listening to game logic service events
 		$scope.$on('addScore', function (e, score) {
 			$scope.$apply(function () {
 				tfec.userScore += score;
@@ -54,21 +59,15 @@ angular.module('portfolioApp').controller('Ng2048Ctrl', ['$scope', '$rootScope',
 			$mdDialog.show(gameOverDialog);
 		});
 
-		tfec.newGame = function () {
-			sessionStorage.clear();
-			$scope.$parent.tfec.userScore = 0;
-			GameLogicService.newGame($scope);
-		};
-
-		tfec.enteringName = function () {
-			if (tfec.enterName) $scope.$parent.tfec.name = tfec.playerName;
-			tfec.enterName = !tfec.enterName;
-		};
-
-		tfec.checkForEnter = function (key) {
-			console.log('key', key);
-			if (key.which === 13) tfec.enteringName();
-		};
-
+		(function init () {
+			$http.get('/api/2048/gethighscore')
+				.success(function (data) {
+					console.log('success data hs', data);
+					tfec.highScore = data;
+				})
+				.error(function(data) {
+					console.log('error getting hs', data);
+				});
+			})();
     }
 ]);
