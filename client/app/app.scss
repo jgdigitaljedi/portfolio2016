@@ -202,6 +202,10 @@ $prefix:'-moz-', '-webkit-', '-o-', '-ms-', '';
    }
  }
 
+ .twitter-follow-button {
+  margin-top: 0;
+ }
+
 // Component styles are injected through grunt
 // injector
 @import 'about/about.scss';
@@ -212,6 +216,7 @@ $prefix:'-moz-', '-webkit-', '-o-', '-ms-', '';
 @import 'projects/projects.scss';
 @import 'resume/resume.scss';
 @import 'social/social.scss';
+@import 'directives/customChart.scss';
 // endinjector
 
 

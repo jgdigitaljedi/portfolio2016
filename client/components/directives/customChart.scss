@@ -1,0 +1,10 @@
+.custom-chart-container {
+	border-left: 1px dashed gray;
+	border-bottom: 1px dashed gray;
+
+	.chart-bar {
+		@include box_shadow(1);
+		border-top-left-radius: 0.5em;
+		border-top-right-radius: 0.5em;
+	}
+}

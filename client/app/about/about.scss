@@ -53,18 +53,16 @@
 	}
 
 	.skills-container {
+		margin-bottom: 40px;
 
 		.selected-skill {
 			background-color: $blue-gray;
 			color: $flat-white;
 		}
+	}
 
-		#skills-chart-area {
-			.chart-bar {
-				@include box_shadow(1);
-				border-top-left-radius: 0.5em;
-				border-top-right-radius: 0.5em;
-			}
-		}
+	.feature-title {
+		font-weight: bold;
+		font-style: italic;
 	}
 }
