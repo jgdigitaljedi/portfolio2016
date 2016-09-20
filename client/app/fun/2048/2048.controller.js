@@ -21,9 +21,8 @@ angular.module('portfolioApp').controller('Ng2048Ctrl', ['$scope', '$rootScope',
 			sessionStorage.setItem('2048playerName', tfec.playerName);
 		};
 
-		tfec.checkForEnter = function (key) {
-			console.log('key', key);
-			if (key.which === 13) tfec.enteringName();
+		tfec.switchFocus = function (keyEvent) {
+			document.getElementById('name-entry').blur();
 		};
 
 		// listening to game logic service events

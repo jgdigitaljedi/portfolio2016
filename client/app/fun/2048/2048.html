@@ -1,5 +1,6 @@
 <div ng-include="'components/shell/shell.html'" md-theme="{{tfec.theme}}" ng-class="{'night':tfec.theme === 'night', 'day': tfec.theme === 'day'}"></div>
 <section ng-class="{'night':tfec.theme === 'night', 'day': tfec.theme === 'day'}" md-theme="{{tfec.theme}}" class="ng-game-section">
+	<a href="#"></a>
 	<div layout="row" layout-align="center center" class="game-area">
 		<div layout="column" layout-align="center center" style="margin-right: 40px;">
 			<div class="game-title">Phangular 2048</div>
@@ -21,7 +22,7 @@
 	</div>
 	<md-divider></md-divider>
 	<div layout="row" layout-align="center center" class="highscore-and-buttons">
-		<div layout="row" layout-align="space-around start" flex="70">
+		<div layout="row" layout-align="center start" flex="70">
 			<md-card layout="column" class="bottom-card">
 				<div class="card-title">High Score: </div>
 				<md-card-content>
@@ -35,7 +36,7 @@
 				<md-card-content>
 					<md-input-container>
 						<label for="name-entry">Enter Your Name Here</label><br>
-						<input name="name-entry" id="name-entry" ng-model="tfec.playerName" ng-change="tfec.changeName()" />
+						<input name="name-entry" id="name-entry" ng-model="tfec.playerName" ng-change="tfec.changeName()" enter-pressed="tfec.switchFocus()" />
 					</md-input-container>
 				</md-card-content>
 			</md-card>

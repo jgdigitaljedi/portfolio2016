@@ -16,6 +16,16 @@ $flat-white: #f1f1f1;
    url('../assets/fonts/langdon-webfont.ttf') format('truetype'),
    url('../assets/fonts/langdon-webfont.svg#Langdon') format('svg');
  }
+
+ @font-face {
+   font-family: 'depressionist';
+   src: url('../assets/fonts/depressionist_3_revisited_2010-webfont.eot');
+   src: url('../assets/fonts/depressionist_3_revisited_2010-webfont.eot?#iefix') format('embedded-opentype'),
+   url('../assets/fonts/depressionist_3_revisited_2010-webfont.woff') format('woff'),
+   url('../assets/fonts/depressionist_3_revisited_2010-webfont.ttf') format('truetype'),
+   url('../assets/fonts/depressionist_3_revisited_2010-webfont.svg#Depressionist') format('svg');
+ }
+
  html {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
@@ -124,6 +134,60 @@ $prefix:'-moz-', '-webkit-', '-o-', '-ms-', '';
 }
 @mixin fade-In($arg) {
   $keyframe-name:fadeIn;
+  $duration:$arg;
+  @each $p in $prefix {
+    #{$p}animation:$keyframe-name $duration;
+  }
+}
+
+@mixin keyframe-slideInRight {
+  0% { transform: translateX(2000px); }
+  100% { transform: translateX(0%); }
+}
+@-moz-keyframes slideInRight {
+  @include keyframe-slideInRight;
+}
+@-webkit-keyframes slideInRight {
+  @include keyframe-slideInRight;
+}
+@-o-keyframes slideInRight {
+  @include keyframe-slideInRight;
+}
+@-ms-keyframes slideInRight {
+  @include keyframe-slideInRight;
+}
+@keyframes slideInRight {
+  @include keyframe-slideInRight;
+}
+@mixin slideInRight ($arg) {
+  $keyframe-name:slideInRight;
+  $duration:$arg;
+  @each $p in $prefix {
+    #{$p}animation:$keyframe-name $duration;
+  }
+}
+
+@mixin keyframe-slideInLeft {
+  0% { transform: translateX(-2000px); }
+  100% { transform: translateX(0%); }
+}
+@-moz-keyframes slideInLeft {
+  @include keyframe-slideInLeft;
+}
+@-webkit-keyframes slideInLeft {
+  @include keyframe-slideInLeft;
+}
+@-o-keyframes slideInLeft {
+  @include keyframe-slideInLeft;
+}
+@-ms-keyframes slideInLeft {
+  @include keyframe-slideInLeft;
+}
+@keyframes slideInLeft {
+  @include keyframe-slideInLeft;
+}
+@mixin slideInLeft ($arg) {
+  $keyframe-name:slideInLeft;
   $duration:$arg;
   @each $p in $prefix {
     #{$p}animation:$keyframe-name $duration;

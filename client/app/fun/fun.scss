@@ -4,6 +4,7 @@
 	background-size: contain;
 	background-repeat:  no-repeat;
 	height: calc(100vh - 64px);
+	@include fade-In(1s);
 
 	.title-area {
 		font-family: 'langdon';

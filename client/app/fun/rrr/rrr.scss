@@ -1,7 +1,52 @@
 .rrr-section {
+	background: 
+		linear-gradient(
+	      rgba(96, 125, 139, 0.55), 
+	      rgba(96, 125, 139, 0.55)
+	    )
+		,url('../../assets/images/restaurant_icons.png') repeat;
+	overflow-x: hidden;
+	height: calc(100vh - 64px);
+	@include fade-In(1s);
 
-	.title-area {
+	.restaurant {
 		font-family: 'langdon';
-        font-size: 5em;
+		font-size: 5em;
+		-webkit-margin-after: 10px;
+		-webkit-margin-before: 10px;
+	    @include slideInRight(1s);
+	}
+
+	.roulette {
+		font-family: 'langdon';
+		font-size: 5em;
+		-webkit-margin-after: 10px;
+		-webkit-margin-before: 10px;
+	    @include slideInLeft(1s);
+	}
+
+	.rr-title:first-of-type {
+		margin-top: 100px;
+	}
+
+	.tilted-remix {
+		font-family: 'depressionist';
+		font-size: 4em;
+		transform: rotate(-10deg);
+		color: #455A64;
+		margin-top: 0;
+		@include fade-In(2s);
+	}
+
+	.welcome-card {
+		width: 400px;
+		height: 200px;
+		background: #f1f1f1;
+		color: #455A64;
+		// -webkit-animation-delay: 2.3s;
+		// -moz-animation-delay: 2.3s;
+		// animation-delay: 2.3s;
+		@include fade-In(3s);
+		@include box_shadow(3);
 	}
 }

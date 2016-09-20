@@ -16,6 +16,6 @@ router.post('/contact', proxy.sendMail);
 router.get('/morning', morning.getInfo);
 router.get('/mygithub', proxy.myGithub);
 router.get('/afterwork', morning.getHomeCommute);
-router.get('/getYelpInfo/:lat/:long', yelp.getYelpInfo);
+router.get('/getyelpinfo/:lat/:long', yelp.getYelpInfo);
 
 module.exports = router;

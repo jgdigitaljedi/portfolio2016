@@ -93,7 +93,7 @@ function getTraffic(res, anoon) {
         parking = encodeURI(process.env.JWORKADD);
     http.get({
         host: 'dev.virtualearth.net',
-        path: '/REST/V1/Routes/Driving?wp.0=' + (anoon ? parking : home) + '&wp.1=' + (anoon ? home : parking) + '&avoid=minimizeTolls&key=' + process.env.JBINGMAPS
+        path: '/REST/V1/Routes/Driving?wp.0=' + (anoon ? parking : home) + '&wp.1=' + (anoon ? home : parking) + '&key=' + process.env.JBINGMAPS
     }, function (response) {
         var body = '';
         if (response.statusCode < 200 || response.statusCode > 299) {
