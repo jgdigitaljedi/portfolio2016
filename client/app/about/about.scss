@@ -70,20 +70,27 @@
 		font-style: italic;
 	}
 
-	.story-link {
-		text-decoration: none;
-    	background: $flat-white;
-    	padding: 4px 6px;
-    	border-radius: 4px;
-    	color: $flat-black;
-    	@include box_shadow(1);
+	.featured {
+		padding-bottom: 40px;
+		
+		.story-link {
+			text-decoration: none;
+	    	background: $flat-white;
+	    	padding: 4px 6px;
+	    	border-radius: 4px;
+	    	color: $flat-black;
+	    	@include box_shadow(1);
+	    	text-shadow: 1px 1px gray;
+	    	font-weight: bold;
 
-    	&:hover {
-    		color: $blue-gray;
-    	}
+	    	&:hover {
+	    		color: $blue-gray;
+	    	}
 
-    	&:visited {
-    		color: $dark-amber;
-    	}
+	    	&:visited {
+	    		color: $dark-amber;
+	    	}
+		}
 	}
+
 }

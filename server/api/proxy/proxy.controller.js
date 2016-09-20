@@ -3,24 +3,63 @@
 var request = require('request'),
 	nodemailer = require('nodemailer'),
 	smtpTransport = require('nodemailer-smtp-transport'),
-	path = require('path');
+	path = require('path'),
+	moment = require('moment'),
+	weatherCache;
 	
-exports.conditions = function(req, res) {
-	//console.log('weather conditions proxy used', req.params.loc);
-	var state = req.params.state,
-		city = req.params.city,
-		url = 'http://api.wunderground.com/api/' + process.env.JWUKEY + '/geolookup/conditions/q/' + state +
-			'/' + city + '.json';
+var mongoose = require('mongoose');
+mongoose.createConnection('mongodb://localhost/random');
+var Randoms = require('../../schemas/randomSingles.schema.js');
 
-	request.get(
-	    url,
-		function (error, response, body) {
-	        if (!error && response.statusCode === 200) {
-	          	var obj = JSON.parse(body);
-	            res.json(obj);
-	        }
-	    }
-	);
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'weather connection error:'));
+db.once('open', function() {
+	Randoms.findOne({name: 'weather'}, function (err, item) {
+		if (!item || err) {
+			console.log('setting initial weather cache');
+			weatherCache = {name: 'weather', dateTime: '1234', value: ''};
+			var initWc = new Randoms(weatherCache);
+			initWc.save(function (error) {
+				if (error) throw err;
+			});
+		} else {
+			var parsedValue = JSON.parse(item.value);
+			item.value = parsedValue;
+			weatherCache = item;
+		}
+	});
+});
+
+exports.conditions = function(req, res) {
+	
+	if (parseInt(moment().unix()) - parseInt(weatherCache.dateTime) >= 90000) {
+		var state = req.params.state,
+			city = req.params.city,
+			url = 'http://api.wunderground.com/api/' + process.env.JWUKEY + '/geolookup/conditions/q/' + state +
+				'/' + city + '.json';
+
+		request.get(
+		    url,
+			function (error, response, body) {
+		        if (!error && response.statusCode === 200) {
+		        	Randoms.findOneAndUpdate({name: 'weather'},
+		        		{$set: {name: 'weather', dateTime: moment().unix(), value: body}}, {new: true},
+		        		function (error, item) {
+							console.log('weather call made');
+						});
+		          	var obj = JSON.parse(body);
+		          	weatherCache = obj;
+		            res.json(obj);
+		        }
+		    }
+		);		
+	} else {
+		Randoms.findOne({name: 'weather'}, function (err, item) {
+			var obj = JSON.parse(item.value)
+			obj.cached = true;
+			res.json(obj);
+		});
+	}
 };
 
 exports.lastfm = function(req, res) {

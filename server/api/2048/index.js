@@ -33,7 +33,6 @@ db.once('open', function() {
 // read and write db
 router.get('/gethighscore', function (req, res) {
 	HighScores.findOne( {which: 'highest'}, function (err, item) {
-		console.log(item.dateTime);
 		res.send(item);
 	});
 });

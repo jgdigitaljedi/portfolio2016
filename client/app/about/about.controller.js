@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('portfolioApp').controller('AboutCtrl', ['$scope','$rootScope', '$interval', 'Dataobjects', '$compile',
-	'$timeout',
-	function ($scope, $rootScope, $interval, Dataobjects, $compile, $timeout) {
+	'$timeout', '$http',
+	function ($scope, $rootScope, $interval, Dataobjects, $compile, $timeout, $http) {
 		var ac = this,
 			photoInt,
 			nextIndex;
@@ -42,6 +42,22 @@ angular.module('portfolioApp').controller('AboutCtrl', ['$scope','$rootScope', '
         		ac.chartAreaWidth = angular.element(document.getElementById('skills-chart-area')).width();
         	}, 500);
         	ac.chartTime();
+            $http.get('/api/proxy/conditions/TX/Manor')
+                /*jshint camelcase: false */
+                .success(function (response) {
+                    console.log('response', response);
+                    if (!response.error) {
+                        response = response.current_observation;
+                        ac.austinTemp = response.temp_f + '°F';
+                        ac.weather = response.weather.toLowerCase();                       
+                    } else {
+                        ac.austinTemp = false;
+                    }
+                })
+                .error(function (error) {
+                    console.log('weather error', error);
+                    ac.austinTemp = false;
+                });
         })();
 
         $scope.$on('$destroy', function () {

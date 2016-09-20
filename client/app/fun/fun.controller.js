@@ -33,20 +33,6 @@ angular.module('portfolioApp').controller('FunCtrl', ['$scope', '$rootScope', '$
         	$window.open(url, '__blank');
         };
 
-    	$http.get('/api/proxy/conditions/TX/Manor')
-    		.success(function (response) {
-    			response = response.current_observation;
-    			fc.austinTemp = response.temp_f + ' F';
-    			fc.austinIcon = '../assets/images/' + response.icon + '.png';
-    			fc.state.weather.loaded = true;
-    			fc.state.weather.error = false;
-    		})
-    		.error(function (error) {
-    			console.log('weather error', error);
-    			fc.state.weather.loaded = true;
-    			fc.state.weather.error = true;
-    		});
-
     	$http.get('/api/proxy/lastfmweeklyartists')
     		.success(function (data) {
     			data = data.weeklyartistchart.artist;
