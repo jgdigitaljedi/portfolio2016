@@ -10,8 +10,6 @@ angular.module('portfolioApp').controller('Ng2048Ctrl', ['$scope', '$rootScope',
             tfec.theme = $rootScope.theme;
         });
 
-		tfec.userScore = sessionStorage.getItem('2048score') ? parseInt(sessionStorage.getItem('2048score')) : 0;
-		tfec.name = 'Player 1';
 
 		tfec.newGame = function () {
 			sessionStorage.clear();
@@ -19,9 +17,8 @@ angular.module('portfolioApp').controller('Ng2048Ctrl', ['$scope', '$rootScope',
 			GameLogicService.newGame($scope);
 		};
 
-		tfec.enteringName = function () {
-			// if (tfec.enterName) $scope.$parent.tfec.name = tfec.playerName;
-			tfec.enterName = !tfec.enterName;
+		tfec.changeName = function () {
+			sessionStorage.setItem('2048playerName', tfec.playerName);
 		};
 
 		tfec.checkForEnter = function (key) {
@@ -39,7 +36,12 @@ angular.module('portfolioApp').controller('Ng2048Ctrl', ['$scope', '$rootScope',
 				$http.post('/api/2048/updatescore', JSON.stringify(params))
 					.success(function (data) {
 						console.log('success data', data);
-						$scope.$broadcast('hs', data.score);
+						// data = JSON.parse(data);
+						tfec.highScore = {
+							name: data.score.name,
+							score:data.score.score,
+							dateTime: data.score.dateTime
+						};
 					})
 					.error(function(data) {
 						console.log('error data', data);
@@ -60,6 +62,8 @@ angular.module('portfolioApp').controller('Ng2048Ctrl', ['$scope', '$rootScope',
 		});
 
 		(function init () {
+			tfec.userScore = sessionStorage.getItem('2048score') ? parseInt(sessionStorage.getItem('2048score')) : 0;
+			tfec.playerName = sessionStorage.getItem('2048playerName') ? sessionStorage.getItem('2048playerName') : 'Player 1';
 			$http.get('/api/2048/gethighscore')
 				.success(function (data) {
 					console.log('success data hs', data);

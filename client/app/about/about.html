@@ -1,5 +1,5 @@
-<div ng-include="'components/shell/shell.html'" ng-class="{'night':ac.theme === 'night', 'day': ac.theme === 'day'}"></div>
-<section ng-class="{'night':ac.theme === 'night', 'day': ac.theme === 'day'}" class="aboutme-section">
+<div ng-include="'components/shell/shell.html'" md-theme="{{ac.theme}}" ng-class="{'night':ac.theme === 'night', 'day': ac.theme === 'day'}"></div>
+<section md-theme="{{ac.theme}}" ng-class="{'night':ac.theme === 'night', 'day': ac.theme === 'day'}" class="aboutme-section">
 	<div layout="row" layout-align="center center" class="top-container" flex>
 		<div layout="column" class="little-info" layout-align="center start" flex="35">
 			<div layout="row" layout-align="center center" class="about-header">

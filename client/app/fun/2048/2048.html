@@ -1,7 +1,7 @@
-<div ng-include="'components/shell/shell.html'" ng-class="{'night':tfec.theme === 'night', 'day': tfec.theme === 'day'}"></div>
-<section ng-class="{'night':tfec.theme === 'night', 'day': tfec.theme === 'day'}" class="ng-game-section">
+<div ng-include="'components/shell/shell.html'" md-theme="{{tfec.theme}}" ng-class="{'night':tfec.theme === 'night', 'day': tfec.theme === 'day'}"></div>
+<section ng-class="{'night':tfec.theme === 'night', 'day': tfec.theme === 'day'}" md-theme="{{tfec.theme}}" class="ng-game-section">
 	<div layout="row" layout-align="center center" class="game-area">
-		<div layout="column" layout-align="center center">
+		<div layout="column" layout-align="center center" style="margin-right: 40px;">
 			<div class="game-title">Phangular 2048</div>
         	<h2>A 2048 game built on Phaser and Angular</h2>
         </div>
@@ -31,10 +31,20 @@
 				</md-card-content>
 			</md-card>
 			<md-card layout="column" class="bottom-card">
-				<div class="card-title">Enter Name: </div>
+				<div class="card-title">Player Name: </div>
 				<md-card-content>
-					<label for="name-entry">Click to Enter Name...</label>
-					<input name="name-entry" id="name-entry" ng-model="tfec.playerName" />
+					<md-input-container>
+						<label for="name-entry">Enter Your Name Here</label><br>
+						<input name="name-entry" id="name-entry" ng-model="tfec.playerName" ng-change="tfec.changeName()" />
+					</md-input-container>
+				</md-card-content>
+			</md-card>
+			<md-card layout="column" class="bottom-card">
+				<div class="card-title">Wanna Start Over? </div>
+				<md-card-content>
+					<md-button ng-click="tfec.newGame()">
+						<md-icon md-svg-icon="navigation:refresh" style="margin-top: 3px;"></md-icon> New Game
+					</md-button>
 				</md-card-content>
 			</md-card>
 		</div>

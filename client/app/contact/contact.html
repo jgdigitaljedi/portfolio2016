@@ -1,5 +1,5 @@
-<div ng-include="'components/shell/shell.html'" ng-class="{'night':cc.theme === 'night', 'day': cc.theme === 'day'}"></div>
-<section ng-class="{'night':cc.theme === 'night', 'day': cc.theme === 'day'}" class="contact-section" ng-controller="ContactCtrl as cc">
+<div ng-include="'components/shell/shell.html'" md-theme="{{cc.theme}}" ng-class="{'night':cc.theme === 'night', 'day': cc.theme === 'day'}"></div>
+<section md-theme="{{cc.theme}}" ng-class="{'night':cc.theme === 'night', 'day': cc.theme === 'day'}" class="contact-section" ng-controller="ContactCtrl as cc">
 	<div layout layout-align="center center">
 		<span layout="row" layout-align="center center">
 			<p class="md-display-2 contact-header">drop me a line</p>
