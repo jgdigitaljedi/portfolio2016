@@ -1,11 +1,25 @@
 .ng-game-section {
-	min-height: 100%;
-	.title-area {
+	// min-height: 100%;
+	.game-area {
+		margin-bottom: 20px;
 
 		.game-title {
-			font-family: 'langdon';
+			// font-family: 'langdon';
 	        font-size: 5em;	
 	        padding-top: 20px;
 		}
+	}
+
+	.highscore-and-buttons {
+		padding-top: 20px;
+
+		.bottom-card {
+			padding: 6px;
+			
+			.card-title {
+				font-weight: bold;
+			}
+		}
+
 	}
 }

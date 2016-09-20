@@ -9,12 +9,8 @@ angular.module('portfolioApp').controller('FunCtrl', ['$scope', '$rootScope', '$
         	tracks: []
         };
         fc.state = {
-        	weather: {
-        		loaded: false,
-        		error: false
-        	},
         	music: {
-        		arists: {
+        		artists: {
         			loaded: false,
         			error: false
         		},

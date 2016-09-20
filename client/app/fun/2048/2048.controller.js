@@ -34,7 +34,7 @@ angular.module('portfolioApp').controller('Ng2048Ctrl', ['$scope', '$rootScope',
 			$scope.$apply(function () {
 				tfec.userScore += score;
 			});
-			var params = {name: tfec.name, score: tfec.userScore};
+			var params = {name: tfec.playerName, score: tfec.userScore};
 			if (tfec.userScore > tfec.highScore.score) {
 				$http.post('/api/2048/updatescore', JSON.stringify(params))
 					.success(function (data) {
