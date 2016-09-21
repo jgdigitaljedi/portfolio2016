@@ -30,10 +30,13 @@
 			<h2>Step 2:</h2>
 			Food Type Filters
 			<md-card-content>
-				<md-checkbox ng-repeat="cat in rrrc.categories" ng-model="rrrc.selectedCategories">
+				<md-checkbox ng-repeat="cat in rrrc.categories" ng-model="rrrc.selectedCategories[cat]">
 					{{cat}}
 				</md-checkbox>
 			</md-card-content>
+			<md-card-actions>
+				<md-button ng-click="rrrc.doneWithCats()">Next Step</md-button>
+			</md-card-actions>
 		</md-card>
 		<md-card layout="column" layout-padding flex="33">
 			<h2>Step 3:</h2>

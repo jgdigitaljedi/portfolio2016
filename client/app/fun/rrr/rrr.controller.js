@@ -47,6 +47,7 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 			if (choice) {
 				rrrc.filteredChoices = [];
 				rrrc.categories = [];
+				rrrc.selectedCategories = {};
 				var limit = distances[choice];
 				rrrc.restaurantChoices.forEach(function (item) {
 					if (item.distance <= limit) {
@@ -56,9 +57,11 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 								console.log('cat', rrrc.categories.indexOf(ite));
 								if (rrrc.categories.length === 0) {
 									rrrc.categories.push(ite[0])
+									rrrc.selectedCategories[ite] = false;
 								}
 								if (rrrc.categories.indexOf(ite[0]) === -1) {
 									rrrc.categories.push(ite[0]);
+									rrrc.selectedCategories[ite] = false;
 								}
 							});
 						}
@@ -68,6 +71,20 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 				console.log('distance choices', rrrc.filteredChoices);
 				rrrc.showStep2 = true;		
 			}
+		};
+
+		rrrc.doneWithCats = function () {
+			var catArr = [];
+			for (var cat in rrrc.selectedCategories) {
+				if (rrrc.selectedCategories[cat]) {
+					catArr.push(cat);
+				}
+			}
+			console.log('catArr', catArr);
+			// rrrc.filteredChoices.forEach(function (item) {
+
+			// });
+			console.log('rrrc.selectedCategories', rrrc.selectedCategories);
 		};
 
 		rrrc.showMeTheMoney = function () {
