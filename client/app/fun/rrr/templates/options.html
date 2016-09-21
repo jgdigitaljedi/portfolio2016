@@ -1,25 +1,49 @@
-<section class="options-section" layout="row" layout-align="center center">
-	<!-- <div layout="row" layout-align="center center"> -->
+<section class="options-section" layout="column" layout-align="center center" flex="100">
+	<div layout="row" layout-align="center center">
 		<div class="options-title">options</div>
-	<!-- </div> -->
+	</div>
 	<div class="option-cards" layout="row" layout-align="center center">
-		<md-card layout="column">
-			Distance Options
+		<md-card layout="column" layout-padding flex="33">
+			<h2>Step 1:</h2>
+			Max Distance Options
 			<md-card-content>
-
+				<md-radio-group ng-model="rrrc.selectedDistance" ng-change="rrrc.filterDistance(rrrc.selectedDistance)">
+					<md-radio-button value="shortWalk">
+						Short Walk
+					</md-radio-button>
+					<md-radio-button value="longWalk">
+						Decent Walk
+					</md-radio-button>
+					<md-radio-button value="shortDrive">
+						Short Drive
+					</md-radio-button>
+					<md-radio-button value="noPreference">
+						Just keep it in general area
+					</md-radio-button>
+				</md-radio-group>
+			</md-card-content>
+			<md-card-actions>
+				<!-- <md-button ng-click="rrrc.filterDistance(rrrc.selectedDistance)">Next Step</md-button> -->
+			</md-card-actions>
+		</md-card>
+		<md-card layout="column" layout-padding flex="33">
+			<h2>Step 2:</h2>
+			Food Type Filters
+			<md-card-content>
+				<md-checkbox ng-repeat="cat in rrrc.categories" ng-model="rrrc.selectedCategories">
+					{{cat}}
+				</md-checkbox>
 			</md-card-content>
 		</md-card>
-		<md-card layout="column">
-			Type Options
+		<md-card layout="column" layout-padding flex="33">
+			<h2>Step 3:</h2>
+			Ratings Filter
 			<md-card-content>
-
+			stuff
 			</md-card-content>
 		</md-card>
-		<md-card layout="column">
-			Ratings Options
-			<md-card-content>
-
-			</md-card-content>
-		</md-card>
+	</div>
+	<div layout="row" layout-align="center center">
+		<md-button ng-click="rrrc.showMeTheMoney()">Go! <md-icon md-svg-icon="content:send"></md-icon></md-button>
 	</div>
 </section>

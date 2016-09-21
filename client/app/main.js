@@ -65,11 +65,13 @@ angular.module('portfolioApp')
           })
           .state('rrr.main', {
             parent: 'rrr',
-            templateUrl: 'app/fun/rrr/templates/main.html'
+            templateUrl: 'app/fun/rrr/templates/main.html',
           })
           .state('rrr.options', {
             parent: 'rrr',
-            templateUrl: 'app/fun/rrr/templates/options.html'
+            templateUrl: 'app/fun/rrr/templates/options.html',
+            // controller: 'RrrOptionsCtrl',
+            // controlelrAs: 'rroc'
           })
           .state('rrr.results', {
             parent: 'rrr',
