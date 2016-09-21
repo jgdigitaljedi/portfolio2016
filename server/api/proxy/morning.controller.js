@@ -64,8 +64,11 @@ function windAbbrToText (abb) {
         case 'NNW':
             windText = 'north northwest';
             break;
+        default:
+            windText = false;
+            break;
     }
-
+    return windText;
 }
 
 function organizeResponse(res, anoon) {
@@ -111,8 +114,18 @@ function getForecast(res, anoon) {
             response.on('end', function () {
                 var parsed = JSON.parse(body);
                 mornObj.forecast = parsed.forecast.txt_forecast.forecastday[0].fcttext;
-                var windAbbr = mornObj.forecast.match(/\b(N|NNE|NE|ENE|E|ESE|SE|SSE|S|SSW|SW|WSW|W|WNW|NW|NNW)\b/g);
-                // mornObj.forecast = 
+                var windAbbr = mornObj.forecast.match(/\b(N|NNE|NE|ENE|E|ESE|SE|SSE|S|SSW|SW|WSW|W|WNW|NW|NNW)\b/g)[0];
+                if (windAbbr) {
+                    var windText = windAbbr ? windAbbrToText(windAbbr) : false;
+                    if (windText) {
+                        var forecastArr = mornObj.forecast.split(' ');
+                        var index = forecastArr.indexOf(windAbbr);
+                        if (index !== -1) {
+                            forecastArr[index] = windText;
+                            mornObj.forecast = forecastArr.join(' ');
+                        }
+                    }
+                }
                 mornObj.rain = parsed.forecast.txt_forecast.forecastday[0]['pop']; // jshint ignore:line
                 mornObj.high = Math.round(parsed.forecast.simpleforecast.forecastday[0].high.fahrenheit);
                 mornObj.low = Math.round(parsed.forecast.simpleforecast.forecastday[0].low.fahrenheit);
