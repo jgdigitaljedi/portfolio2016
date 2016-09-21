@@ -13,6 +13,61 @@ function randomNum(num) {
     return Math.floor(Math.random() * num);
 }
 
+function windAbbrToText (abb) {
+    var windText;
+    switch (abb) {
+        case 'N':
+            windText = 'north';
+            break;
+        case 'NNE':
+            windText = 'north northeast';
+            break;
+        case 'NE':
+            windText = 'northeast';
+            break;
+        case 'ENE':
+            windText = 'east northeast';
+            break;
+        case 'E':
+            windText = 'east';
+            break;
+        case 'ESE':
+            windText = 'east southeast';
+            break;
+        case 'SE':
+            windText = 'southeast';
+            break;
+        case 'SSE':
+            windText = 'south southeast';
+            break;
+        case 'S':
+            windText = 'south';
+            break;
+        case 'SSW':
+            windText = 'south southwest';
+            break;
+        case 'SW':
+            windText = 'southwest';
+            break;
+        case 'WSW':
+            windText = 'west southwest';
+            break;
+        case 'W':
+            windText = 'west';
+            break;
+        case 'WNW':
+            windText = 'west northwest';
+            break;
+        case 'NW':
+            windText = 'northwest';
+            break;
+        case 'NNW':
+            windText = 'north northwest';
+            break;
+    }
+
+}
+
 function organizeResponse(res, anoon) {
     var currentBit = mornObj.curTemp ? '. Currently it is ' + mornObj.curTemp + ' degrees and ' + mornObj.curCondition : '. Current conditions not available',
         forecastBit = mornObj.forecast ? '. Forecast is ' + mornObj.forecast : '. Forecast not available',
@@ -20,11 +75,11 @@ function organizeResponse(res, anoon) {
             ' It\'s gonna be a wet one! Looks like there is a ' + mornObj.rain + ' percent chance of precipitation.',
             ' Expect to have soggy feet when you get to work because there is a ' + mornObj.rain + ' percent chance of precipitation.'],
         trafficTime = mornObj.traffic ? 'Today\'s commute should take about ' +  Math.round(mornObj.traffic.travelDurationTraffic / 60) + ' minutes' : 'Bing fucked up so no traffic data';
-    if (mornObj.low <= 50 && !anoon) {
+    if (parseFloat(mornObj.low) <= 50 && !anoon) {
         var needCoat = coldMessage[randomNum(4)];
         currentBit += needCoat;
     }
-    if (mornObj.high >= 100 && !anoon) {
+    if (parseFloat(mornObj.high) >= 100 && !anoon) {
         var texasDay = hotMessage[randomNum(4)];
         currentBit += texasDay;
     }
@@ -56,6 +111,8 @@ function getForecast(res, anoon) {
             response.on('end', function () {
                 var parsed = JSON.parse(body);
                 mornObj.forecast = parsed.forecast.txt_forecast.forecastday[0].fcttext;
+                var windAbbr = mornObj.forecast.match(/\b(N|NNE|NE|ENE|E|ESE|SE|SSE|S|SSW|SW|WSW|W|WNW|NW|NNW)\b/g);
+                // mornObj.forecast = 
                 mornObj.rain = parsed.forecast.txt_forecast.forecastday[0]['pop']; // jshint ignore:line
                 mornObj.high = Math.round(parsed.forecast.simpleforecast.forecastday[0].high.fahrenheit);
                 mornObj.low = Math.round(parsed.forecast.simpleforecast.forecastday[0].low.fahrenheit);

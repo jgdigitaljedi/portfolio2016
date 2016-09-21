@@ -32,7 +32,7 @@ db.once('open', function() {
 
 exports.conditions = function(req, res) {
 	
-	if (parseInt(moment().unix()) - parseInt(weatherCache.dateTime) >= 90000) {
+	if (parseInt(moment().unix()) - parseInt(weatherCache.dateTime) >= 900) {  // only allow weather calls every 15 minutes
 		var state = req.params.state,
 			city = req.params.city,
 			url = 'http://api.wunderground.com/api/' + process.env.JWUKEY + '/geolookup/conditions/q/' + state +
@@ -53,7 +53,7 @@ exports.conditions = function(req, res) {
 		        }
 		    }
 		);		
-	} else {
+	} else { // use cached weather if called less than 15 minutes ago
 		Randoms.findOne({name: 'weather'}, function (err, item) {
 			var obj = JSON.parse(item.value)
 			obj.cached = true;
