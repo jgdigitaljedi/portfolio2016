@@ -49,4 +49,16 @@
 		@include fade-In(3s);
 		@include box_shadow(3);
 	}
+
+	.options-section {
+
+		.options-title {
+			font-family: 'langdon';
+			font-size: 5em;
+		}
+
+		.option-cards {
+			margin-top: 40px;
+		}
+	}
 }

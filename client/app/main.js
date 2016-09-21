@@ -56,10 +56,23 @@ angular.module('portfolioApp')
             templateUrl: 'app/fun/2048/2048.html',
             controller: 'Ng2048Ctrl',
             controllerAs: 'tfec'
-          }).state('rrr', {
+          })
+          .state('rrr', {
             url: '/fun/rrr',
             templateUrl: 'app/fun/rrr/rrr.html',
             controller: 'RrrCtrl',
             controllerAs: 'rrrc'
+          })
+          .state('rrr.main', {
+            parent: 'rrr',
+            templateUrl: 'app/fun/rrr/templates/main.html'
+          })
+          .state('rrr.options', {
+            parent: 'rrr',
+            templateUrl: 'app/fun/rrr/templates/options.html'
+          })
+          .state('rrr.results', {
+            parent: 'rrr',
+            templateUrl: 'app/fun/rrr/templates/results.html'
           });
   	});
