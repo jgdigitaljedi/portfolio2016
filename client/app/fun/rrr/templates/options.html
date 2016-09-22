@@ -3,7 +3,7 @@
 		<div class="options-title">options</div>
 	</div>
 	<div class="option-cards" layout="row" layout-align="center center">
-		<md-card layout="column" layout-padding flex="33">
+		<md-card layout="column" layout-padding ng-show="rrrc.step === 'first'">
 			<h2>Step 1:</h2>
 			Max Distance Options
 			<md-card-content>
@@ -22,11 +22,8 @@
 					</md-radio-button>
 				</md-radio-group>
 			</md-card-content>
-			<md-card-actions>
-				<!-- <md-button ng-click="rrrc.filterDistance(rrrc.selectedDistance)">Next Step</md-button> -->
-			</md-card-actions>
 		</md-card>
-		<md-card layout="column" layout-padding flex="33">
+		<md-card layout="column" layout-padding ng-show="rrrc.step === 'second'" class="types-card">
 			<h2>Step 2:</h2>
 			Food Type Filters
 			<md-card-content>
@@ -38,15 +35,22 @@
 				<md-button ng-click="rrrc.doneWithCats()">Next Step</md-button>
 			</md-card-actions>
 		</md-card>
-		<md-card layout="column" layout-padding flex="33">
+		<md-card layout="column" layout-padding ng-show="rrrc.step === 'last'">
 			<h2>Step 3:</h2>
-			Ratings Filter
+			Results Options
 			<md-card-content>
-			stuff
+				<md-radio-group ng-model="rrrc.userChoices">
+					<md-radio-button value="1">
+						1 result (let me decide for you)
+					</md-radio-button>
+					<md-radio-button value="2">
+						2 results (you still get some power here)
+					</md-radio-button>
+				</md-radio-group>
 			</md-card-content>
+			<md-card-actions>
+				<md-button ng-click="rrrc.showMeTheMoney()">Go! <md-icon md-svg-icon="content:send"></md-icon></md-button>
+			</md-card-actions>
 		</md-card>
-	</div>
-	<div layout="row" layout-align="center center">
-		<md-button ng-click="rrrc.showMeTheMoney()">Go! <md-icon md-svg-icon="content:send"></md-icon></md-button>
 	</div>
 </section>
