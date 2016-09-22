@@ -109,7 +109,11 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 			});
 			console.log('no dupes', rrrc.rChoicesNoDupes);
 			resultsLen = rrrc.rChoicesNoDupes.length;
-			rrrc.step = 'last';
+			if (resultsLen > 1) {
+				rrrc.step = 'last';
+			} else {
+				rrrc.showMeTheMoney();
+			}
 		};
 
 		function getRandomPlace (first) {
@@ -142,5 +146,17 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 		rrrc.backToStart = function () {
 			$state.go('rrr.main');
 		}
+
+		rrrc.backToOptions = function () {
+			rrrc.step = resultsLen > 1 ? 'last' : 'second';
+			$state.go('rrr.options');
+		};
+
+		rrrc.selectOptions = function (which) {
+			for (var cat in rrrc.selectedCategories) {
+				if (cat !== 'list') rrrc.selectedCategories[cat] = which;
+			}
+			console.log('this shit', rrrc.selectedCategories);
+		};
     }
 ]);

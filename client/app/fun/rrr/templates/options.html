@@ -22,6 +22,9 @@
 					</md-radio-button>
 				</md-radio-group>
 			</md-card-content>
+			<md-card-actions>
+				<md-button ui-sref="rrr.main">Back to Start</md-button>
+			</md-card-actions>
 		</md-card>
 		<md-card layout="column" layout-padding ng-show="rrrc.step === 'second'" class="types-card">
 			<h2>Step 2:</h2>
@@ -30,6 +33,13 @@
 				<md-checkbox ng-repeat="cat in rrrc.categories" ng-model="rrrc.selectedCategories[cat]">
 					{{cat}}
 				</md-checkbox>
+				<md-divider></md-divider>
+				<md-button ng-click="rrrc.selectOptions(true)">
+					Select All
+				</md-button>
+				<md-button ng-click="rrrc.selectOptions(false)">
+					Select None
+				</md-button>
 			</md-card-content>
 			<md-card-actions>
 				<md-button ng-click="rrrc.doneWithCats()">Next Step</md-button>
