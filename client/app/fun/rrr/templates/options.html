@@ -8,16 +8,16 @@
 			Max Distance Options
 			<md-card-content>
 				<md-radio-group ng-model="rrrc.selectedDistance" ng-change="rrrc.filterDistance(rrrc.selectedDistance)">
-					<md-radio-button value="shortWalk">
+					<md-radio-button value="shortWalk" ng-show="rrrc.showDistOptions.shortWalk">
 						Short Walk
 					</md-radio-button>
-					<md-radio-button value="longWalk">
+					<md-radio-button value="longWalk" ng-show="rrrc.showDistOptions.longWalk">
 						Decent Walk
 					</md-radio-button>
-					<md-radio-button value="shortDrive">
+					<md-radio-button value="shortDrive" ng-show="rrrc.showDistOptions.shortDrive">
 						Short Drive
 					</md-radio-button>
-					<md-radio-button value="noPreference">
+					<md-radio-button value="noPreference" ng-show="rrrc.showDistOptions.noPreference">
 						Just keep it in general area
 					</md-radio-button>
 				</md-radio-group>
@@ -45,7 +45,6 @@
 				<md-button ng-click="rrrc.doneWithCats()">Next Step</md-button>
 				<md-button ng-click="rrrc.step = 'first'">
 					Back to Step 1 &nbsp; 
-					<md-icon md-svg-icon="hardware:keyboard_backspace"></md-icon>
 				</md-button>
 			</md-card-actions>
 		</md-card>
@@ -64,8 +63,7 @@
 			</md-card-content>
 			<md-card-actions>
 				<md-button ng-click="rrrc.step = 'second'">
-					Back to Step 2 &nbsp; 
-					<md-icon md-svg-icon="hardware:keyboard_backspace"></md-icon>
+					Back to Step 2
 				</md-button>
 				<!-- <md-button ng-click="rrrc.showMeTheMoney()">Go! <md-icon md-svg-icon="content:send"></md-icon></md-button> -->
 			</md-card-actions>

@@ -5,12 +5,12 @@
 			<div class="result-title">
 				{{result.name}}
 			</div>
-			<div><img ng-src="{{result.image_url}}" class="result-image" /></div>
+			<div><a ng-href="{{result.url}}" target="_blank"><img ng-src="{{result.image_url}}" class="result-image" /></a></div>
 			<md-card-content>
-				<div layout="row">
+				<div layout="row" layout-align="start start">
 					<span class="line-title">Categories:</span> &nbsp;
 					<span ng-repeat="cat in result.categories track by $index">{{cat[0]}}
-						<span ng-if="$index + 1 !== result.categories.length"> | &nbsp; </span>
+						<span ng-if="$index + 1 !== result.categories.length" style="font-weight: bold;">&nbsp; | &nbsp; </span>
 					</span>
 
 				</div>
@@ -38,4 +38,8 @@
 			Start Over <md-icon md-svg-icon="navigation:refresh"></md-icon>
 		</md-button>
 	</md-card>
+	<div layout="row" layout-align="center center" class="yelp">
+		<span class="powered-by">Powered By </span>
+		<a href="http://www.yelp.com" target="__blank"><img src="../assets/images/yelp.png" /></a>
+	</div>
 </div>

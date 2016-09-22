@@ -10,6 +10,12 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
         		noPreference: 80467 // 50 miles
         	},
         	resultsLen;
+        rrrc.showDistOptions = {
+        	shortWalk: true,
+        	longWalk: true,
+        	shortDrive: true,
+        	noPreference: true
+        };
         rrrc.theme = $rootScope.theme;
         if ($state.current.name === 'rrr') {
         	$state.go('rrr.main');
@@ -24,6 +30,26 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 				.success(function (response) {
 					response = JSON.parse(response.content);
 					rrrc.restaurantChoices = response.businesses;
+					var firstDistance = rrrc.restaurantChoices[0].distance;
+					var lastDistance = rrrc.restaurantChoices[rrrc.restaurantChoices.length-1].distance;
+					if (firstDistance > distances.shortWalk) { // remove smaller distance options if no results match
+						rrrc.showDistOptions.shortWalk = false;
+					} else if (firstDistance > distances.longWalk) {
+						rrrc.showDistOptions.longTalk = false;
+					} else if (firstDistance > distances.shortDrive) {
+						rrrc.showDistOptions.shortDrive = false;
+					}
+					if (lastDistance < distances.shortDrive) { // remove larger distance options if no results match
+						rrrc.showDistOptions.noPreference = false;
+					} else if (lastDistance < distances.longWalk) {
+						rrrc.showDistOptions.noPreference = false;
+						rrrc.showDistOptions.shortDrive = false;
+					} else if (lastDistance < distances.shortWalk) {
+						rrrc.showDistOptions.noPreference = false;
+						rrrc.showDistOptions.shortDrive = false;
+						rrrc.showDistOptions.longWalk = false;
+						rrrc.step = 'second';
+					}
 					console.log('response', rrrc.restaurantChoices);
 				})
 				.error(function (error) {
