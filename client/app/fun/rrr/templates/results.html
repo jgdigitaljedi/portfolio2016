@@ -1,0 +1,27 @@
+<div layout="column" layout-align="center center" class="results-container">
+	<h2>...and Here's Where You Should Eat!</h2>
+	<md-card ng-repeat="result in rrrc.finalAnswer" layout="column" layout-align="center center" layout-padding>
+		<div class="result-title">
+			{{result.name}}
+		</div>
+		<div><img ng-src="{{result.image_url}}" class="result-image" /></div>
+		<md-card-content>
+			<div layout="row">
+				<span class="line-title">Categories:</span> &nbsp;
+				<span ng-repeat="cat in result.categories track by $index">{{cat[0]}}
+					<span ng-if="$index + 1 !== result.categories.length"> | &nbsp; </span>
+				</span>
+
+			</div>
+			<div layout="row">
+				<span class="line-title">Rating:</span> &nbsp; <img ng-src="{{result.rating_img_url}}" /> &nbsp; out of {{result.review_count}} reviews
+			</div>
+			<div layout="row">
+				<span class="line-title">Phone:</span> &nbsp; {{result.display_phone}}
+			</div>
+			<div layout="row">
+				<span class="line-title">Distance:</span> &nbsp; {{result.distance}}
+			</div>
+		</md-card-content>
+	</md-card>
+</div>

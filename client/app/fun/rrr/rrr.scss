@@ -14,7 +14,7 @@
 		font-size: 5em;
 		-webkit-margin-after: 10px;
 		-webkit-margin-before: 10px;
-	    @include slideInRight(1s);
+	    @include fade-In(2s);
 	}
 
 	.roulette {
@@ -22,7 +22,7 @@
 		font-size: 5em;
 		-webkit-margin-after: 10px;
 		-webkit-margin-before: 10px;
-	    @include slideInLeft(1s);
+	    @include fade-In(2s);
 	}
 
 	.rr-title:first-of-type {
@@ -63,6 +63,23 @@
 
 			.types-card {
 				max-width: 700px;
+			}
+		}
+	}
+
+	.results-container {
+		padding-top: 40px;
+
+		md-card {
+			max-width: 400px;
+
+
+			.result-title, .line-title {
+				font-weight: bold;
+			}
+
+			.result-image {
+				max-width: 320px;
 			}
 		}
 	}

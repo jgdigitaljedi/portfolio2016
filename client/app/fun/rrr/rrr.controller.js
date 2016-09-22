@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$http', 'Geolocation', '$state',
-	function ($scope, $rootScope, $http, Geolocation, $state) {
+angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$http', 'Geolocation', '$state', 'Helpers',
+	function ($scope, $rootScope, $http, Geolocation, $state, Helpers) {
         var rrrc = this,
         	distances = {
         		shortWalk: 600, // 7.5 minutes at 80m per minute
@@ -11,7 +11,6 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
         	},
         	resultsLen;
         rrrc.theme = $rootScope.theme;
-        console.log('state', $state.current);
         if ($state.current.name === 'rrr') {
         	$state.go('rrr.main');
         }
@@ -82,7 +81,8 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 		rrrc.doneWithCats = function () {
 			console.log('rrrc.selectedCategories', rrrc.selectedCategories);
 			var catArr = [],
-				rChoices = [];
+				rChoices = [],
+				dupeArr = [];
 			rrrc.rChoicesNoDupes = [];
 			for (var cat in rrrc.selectedCategories) {
 				if (rrrc.selectedCategories[cat]) {
@@ -98,9 +98,11 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 				if (item && item.length > 0) {
 					item.forEach(function (itm) {
 						if (rrrc.rChoicesNoDupes.length === 0) {
-							rrrc.rChoicesNoDupes.push({[itm.id]: itm});
-						} else if (!rrrc.rChoicesNoDupes.hasOwnProperty(item.id)) {
-							rrrc.rChoicesNoDupes.push({[itm.id]: itm});
+							rrrc.rChoicesNoDupes.push(itm);
+							dupeArr.push(itm.id);
+						} else if (dupeArr.indexOf(itm.id) === -1) {
+							rrrc.rChoicesNoDupes.push(itm);
+							dupeArr.push(itm.id);
 						}
 					});					
 				}
@@ -116,15 +118,25 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 			}
 		}
 
+		function goToResults () {
+			console.log('finalAnswer', rrrc.finalAnswer);
+			rrrc.step = 'first';
+			$state.go('rrr.results');
+		}
+
 		rrrc.showMeTheMoney = function () {
 			rrrc.finalAnswer = [];
-			if (rrrc.finalAnswer.length === 0) {
-				rrrc.finalAnswer.push(getRandomPlace());
+			rrrc.finalAnswer.push(getRandomPlace());
+			rrrc.finalAnswer[0].distance = Helpers.distanceConversion(rrrc.finalAnswer[0].distance, 'miles');
+			if (rrrc.userChoices === '2') {
+				var nextChoice = getRandomPlace();
+				while (nextChoice.name === rrrc.finalAnswer[0].name) {
+					nextChoice = getRandomPlace();
+				}
+				nextChoice.distance = Helpers.distanceConversion(nextChoice.distance, 'miles');
+				rrrc.finalAnswer.push(nextChoice);
 			}
-			// if (rrrc.userChoices === 2) {
-			// 	var nextChoice = getRandomPlace();
-			// 	if 
-			// }
+			goToResults();
 		};
     }
 ]);
