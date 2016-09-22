@@ -33,13 +33,17 @@
 			</md-card-content>
 			<md-card-actions>
 				<md-button ng-click="rrrc.doneWithCats()">Next Step</md-button>
+				<md-button ng-click="rrrc.step = 'first'">
+					Back to Step 1 &nbsp; 
+					<md-icon md-svg-icon="hardware:keyboard_backspace"></md-icon>
+				</md-button>
 			</md-card-actions>
 		</md-card>
 		<md-card layout="column" layout-padding ng-show="rrrc.step === 'last'">
 			<h2>Step 3:</h2>
 			Results Options
 			<md-card-content>
-				<md-radio-group ng-model="rrrc.userChoices">
+				<md-radio-group ng-model="rrrc.userChoices" ng-change="rrrc.showMeTheMoney()">
 					<md-radio-button value="1">
 						1 result (let me decide for you)
 					</md-radio-button>
@@ -49,7 +53,11 @@
 				</md-radio-group>
 			</md-card-content>
 			<md-card-actions>
-				<md-button ng-click="rrrc.showMeTheMoney()">Go! <md-icon md-svg-icon="content:send"></md-icon></md-button>
+				<md-button ng-click="rrrc.step = 'second'">
+					Back to Step 2 &nbsp; 
+					<md-icon md-svg-icon="hardware:keyboard_backspace"></md-icon>
+				</md-button>
+				<!-- <md-button ng-click="rrrc.showMeTheMoney()">Go! <md-icon md-svg-icon="content:send"></md-icon></md-button> -->
 			</md-card-actions>
 		</md-card>
 	</div>

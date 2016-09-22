@@ -138,5 +138,9 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 			}
 			goToResults();
 		};
+
+		rrrc.backToStart = function () {
+			$state.go('rrr.main');
+		}
     }
 ]);
