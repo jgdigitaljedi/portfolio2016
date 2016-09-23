@@ -6,43 +6,6 @@ angular.module('portfolioApp').factory('Googlemaps', [
 		return {
 			generateStaticMap: function (options) {
 				console.log('options', options.options);
-				options = options.options;
-				// var map;
-				// window.initializeGMap = function (directions) {
-				//   	var mapOptions = {
-				// 	    zoom: options.zoom || 12,
-				// 	    center: new google.maps.LatLng(options.centerLat, options.centerLong),
-				// 	    scrollwheel: options.scroll || false,
-				// 	    navigationControl: options.navControl || false,
-				// 	    mapTypeControl: options.typeControl || false,
-				// 	    scaleControl: options.scaleControl || false,
-				// 	    zoomControl: options.zoomControl || false,
-				// 	    draggable: options.draggable || false
-				// 	};
-
-				// 	map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions),
-				//     trafficLayer = new google.maps.TrafficLayer();
-				//   	trafficLayer.setMap(map);
-				//   	if (directions) window.calcRoute()
-				// };
-
-				// window.calcRoute = function () {
-				// 	var directionsDisplay;
-				// 	var directionsService = new google.maps.DirectionsService();
-				// 	var destination = new google.maps.LatLng(options.dest.lat, options.dest.long);
-				// 	var origin = new google.maps.LatLng(options.origin.lat, options.origin.long);
-				// 	// var selectedMode = document.getElementById('mode').value;
-				// 	var request = {
-				// 	    origin: origin,
-				// 	    destination: destination,
-				// 	    travelMode: google.maps.TravelMode['WALKING']
-				// 	};
-				//     directionsService.route(request, function(response, status) {
-				//     	if (status == 'OK') {
-				//       		directionsDisplay.setDirections(response);
-				//     	}
-				//   	});
-				// };
 				var script = document.createElement('script');
 				var directionsDisplay;
 				var directionsService;
