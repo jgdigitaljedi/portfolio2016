@@ -171,9 +171,10 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 
 		rrrc.backToStart = function () {
 			$state.go('rrr.main');
-		}
+		};
 
 		rrrc.backToOptions = function () {
+			rrrc.userChoices = false;
 			rrrc.step = resultsLen > 1 ? 'last' : 'second';
 			$state.go('rrr.options');
 		};

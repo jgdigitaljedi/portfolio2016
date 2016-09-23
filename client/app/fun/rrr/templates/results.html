@@ -1,4 +1,4 @@
-<div layout="column" layout-align="center center" class="results-container">
+<div layout="column" layout-align="center center" class="results-container" ng-cloak>
 	<h2>...and Here's Where You Should Eat!</h2>
 	<div layout="row" layout-align="center center" class="cards-container">
 		<md-card ng-repeat="result in rrrc.finalAnswer" layout="column" layout-align="center center" layout-padding>
@@ -28,14 +28,16 @@
 	</div>
 	<md-card layout="row" layout-align="center center">
 		<md-button ng-click="rrrc.backToOptions()">
-			Back to Last Step &nbsp; 
-			<md-icon md-svg-icon="hardware:keyboard_backspace"></md-icon>
+			Back a Step &nbsp; 
+			<!-- <md-icon md-svg-icon="hardware:keyboard_backspace"></md-icon> -->
 		</md-button>
 		<md-button ng-click="rrrc.showMeTheMoney()">
-			Randomly Select Again <md-icon md-svg-icon="action:autorenew"></md-icon>
+			Select Again 
+			<!-- <md-icon md-svg-icon="action:autorenew"></md-icon> -->
 		</md-button>
 		<md-button ng-click="rrrc.backToStart()">
-			Start Over <md-icon md-svg-icon="navigation:refresh"></md-icon>
+			Start Over 
+			<!-- <md-icon md-svg-icon="navigation:refresh"></md-icon> -->
 		</md-button>
 	</md-card>
 	<div layout="row" layout-align="center center" class="yelp">

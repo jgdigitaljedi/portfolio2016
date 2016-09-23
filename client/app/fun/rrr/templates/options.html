@@ -1,4 +1,4 @@
-<section class="options-section" layout="column" layout-align="center center" flex="100">
+<section class="options-section" layout="column" layout-align="center center" flex="100" ng-cloak>
 	<div layout="row" layout-align="center center">
 		<div class="options-title">options</div>
 	</div>
@@ -43,7 +43,7 @@
 			</md-card-content>
 			<md-card-actions>
 				<md-button ng-click="rrrc.doneWithCats()">Next Step</md-button>
-				<md-button ng-click="rrrc.step = 'first'">
+				<md-button ng-click="rrrc.selectedDistance = false; rrrc.step = 'first'">
 					Back to Step 1 &nbsp; 
 				</md-button>
 			</md-card-actions>
