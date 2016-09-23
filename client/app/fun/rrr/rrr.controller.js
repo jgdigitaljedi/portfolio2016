@@ -6,8 +6,8 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
         	distances = {
         		shortWalk: 600, // 7.5 minutes at 80m per minute
         		longWalk: 1200, // 15 minutes
-        		shortDrive: 8046, // 5 miles
-        		noPreference: 80467 // 50 miles
+        		shortDrive: 4828, // 3 miles
+        		noPreference: 80467 // 50 miles (just a really big number to make sure I get everything)
         	},
         	resultsLen;
         rrrc.showDistOptions = {
@@ -50,7 +50,6 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 						rrrc.showDistOptions.longWalk = false;
 						rrrc.step = 'second';
 					}
-					console.log('response', rrrc.restaurantChoices);
 				})
 				.error(function (error) {
 					console.log('yelp error', error);
@@ -70,7 +69,6 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
         };
 
 		rrrc.filterDistance = function (choice) {
-			console.log('choice', choice);
 			if (choice) {
 				rrrc.filteredChoices = [];
 				rrrc.categories = [];
@@ -105,7 +103,6 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 		};
 
 		rrrc.doneWithCats = function () {
-			console.log('rrrc.selectedCategories', rrrc.selectedCategories);
 			var catArr = [],
 				rChoices = [],
 				dupeArr = [];
@@ -115,11 +112,9 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 					catArr.push(cat);
 				}
 			}
-			console.log('catArr', catArr);
 			catArr.forEach(function (item) {
 				rChoices.push(rrrc.selectedCategories.list[item]);
 			});
-			console.log('rChoices', rChoices);
 			rChoices.forEach(function (item) {
 				if (item && item.length > 0) {
 					item.forEach(function (itm) {
@@ -133,7 +128,6 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 					});					
 				}
 			});
-			console.log('no dupes', rrrc.rChoicesNoDupes);
 			resultsLen = rrrc.rChoicesNoDupes.length;
 			if (resultsLen > 1) {
 				rrrc.step = 'last';
@@ -154,16 +148,28 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 			$state.go('rrr.results');
 		}
 
+		function cleanCategories (result) {
+			var concatted = '',
+				rLen = result.length;
+			result.forEach(function (item, index) {
+				concatted += item[0];
+				if (index + 1 !== rLen) concatted += ' | ';
+			});
+			return concatted;
+		}
+
 		rrrc.showMeTheMoney = function () {
 			rrrc.finalAnswer = [];
 			rrrc.finalAnswer.push(getRandomPlace());
-			rrrc.finalAnswer[0].distance = Helpers.distanceConversion(rrrc.finalAnswer[0].distance, 'miles');
+			rrrc.finalAnswer[0].distance = Helpers.bigDistanceUnits(rrrc.finalAnswer[0].distance);
+			rrrc.finalAnswer[0].categories_cleaned = cleanCategories(rrrc.finalAnswer[0].categories);
 			if (rrrc.userChoices === '2') {
 				var nextChoice = getRandomPlace();
 				while (nextChoice.name === rrrc.finalAnswer[0].name) {
 					nextChoice = getRandomPlace();
 				}
-				nextChoice.distance = Helpers.distanceConversion(nextChoice.distance, 'miles');
+				nextChoice.distance = Helpers.bigDistanceUnits(nextChoice.distance);
+				nextChoice.categories_cleaned = cleanCategories(nextChoice.categories);
 				rrrc.finalAnswer.push(nextChoice);
 			}
 			goToResults();
@@ -183,7 +189,10 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 			for (var cat in rrrc.selectedCategories) {
 				if (cat !== 'list') rrrc.selectedCategories[cat] = which;
 			}
-			console.log('this shit', rrrc.selectedCategories);
+		};
+
+		rrrc.getDirections = function (choice) {
+
 		};
     }
 ]);

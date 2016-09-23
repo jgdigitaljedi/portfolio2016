@@ -6,6 +6,7 @@
 		<md-card layout="column" layout-padding ng-show="rrrc.step === 'first'">
 			<h2>Step 1:</h2>
 			Max Distance Options
+			<md-divider></md-divider>
 			<md-card-content>
 				<md-radio-group ng-model="rrrc.selectedDistance" ng-change="rrrc.filterDistance(rrrc.selectedDistance)">
 					<md-radio-button value="shortWalk" ng-show="rrrc.showDistOptions.shortWalk">
@@ -29,6 +30,7 @@
 		<md-card layout="column" layout-padding ng-show="rrrc.step === 'second'" class="types-card">
 			<h2>Step 2:</h2>
 			Food Type Filters
+			<md-divider></md-divider>
 			<md-card-content>
 				<md-checkbox ng-repeat="cat in rrrc.categories" ng-model="rrrc.selectedCategories[cat]">
 					{{cat}}
@@ -51,6 +53,7 @@
 		<md-card layout="column" layout-padding ng-show="rrrc.step === 'last'">
 			<h2>Step 3:</h2>
 			Results Options
+			<md-divider></md-divider>
 			<md-card-content>
 				<md-radio-group ng-model="rrrc.userChoices" ng-change="rrrc.showMeTheMoney()">
 					<md-radio-button value="1">

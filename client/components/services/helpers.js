@@ -14,6 +14,10 @@ angular.module('portfolioApp').factory('Helpers', [
 			}
 		}
 
+		function metersToFeet (meters) {
+			return (meters * 3.28084).toFixed(2);
+		}
+
 		function metersToKilometers (meters) {
 			meters = parseFloat(meters);
 			if (meters < 250) {
@@ -30,6 +34,9 @@ angular.module('portfolioApp').factory('Helpers', [
 				} else {
 					return metersToKilometers(meters);
 				}
+			},
+			bigDistanceUnits: function (meters) {
+				return metersToMiles(meters) + ' / ' + metersToKilometers(meters); 
 			}
 		};
 	}

@@ -8,14 +8,10 @@
 			<div><a ng-href="{{result.url}}" target="_blank"><img ng-src="{{result.image_url}}" class="result-image" /></a></div>
 			<md-card-content>
 				<div layout="row" layout-align="start start">
-					<span class="line-title">Categories:</span> &nbsp;
-					<span ng-repeat="cat in result.categories track by $index">{{cat[0]}}
-						<span ng-if="$index + 1 !== result.categories.length" style="font-weight: bold;">&nbsp; | &nbsp; </span>
-					</span>
-
+					<span class="line-title">Categories:</span> &nbsp; {{result.categories_cleaned}}
 				</div>
 				<div layout="row">
-					<span class="line-title">Rating:</span> &nbsp; <img ng-src="{{result.rating_img_url}}" /> &nbsp; out of {{result.review_count}} reviews
+					<span class="line-title">Rating:</span> &nbsp; <img ng-src="{{result.rating_img_url}}" /> &nbsp; {{result.rating}} out of {{result.review_count}} reviews
 				</div>
 				<div layout="row">
 					<span class="line-title">Phone:</span> &nbsp; {{result.display_phone}}
@@ -23,21 +19,33 @@
 				<div layout="row">
 					<span class="line-title">Distance:</span> &nbsp; {{result.distance}}
 				</div>
+				<div layout="row" layout-align="start start">
+					<div class="line-title" layout="column">
+						Address:
+					</div>
+					<div layout="column" style="margin-left: 8px;">
+						<div ng-repeat="line in result.location.address">{{line}}</div>
+						<div>{{result.location.city}}, {{result.location.state_code}} {{result.location.postal_code}}</div>
+					</div>
+				</div>
+				<div layout="row">
+					<md-button ng-click="rrrc.getDirections(result)">
+						Get Directions &nbsp;
+						<md-icon md-svg-icon="maps:directions"></md-icon>
+					</md-button>
+				</div>
 			</md-card-content>
 		</md-card>
 	</div>
 	<md-card layout="row" layout-align="center center">
 		<md-button ng-click="rrrc.backToOptions()">
-			Back a Step &nbsp; 
-			<!-- <md-icon md-svg-icon="hardware:keyboard_backspace"></md-icon> -->
+			Back a Step
 		</md-button>
 		<md-button ng-click="rrrc.showMeTheMoney()">
-			Select Again 
-			<!-- <md-icon md-svg-icon="action:autorenew"></md-icon> -->
+			Select Again
 		</md-button>
 		<md-button ng-click="rrrc.backToStart()">
-			Start Over 
-			<!-- <md-icon md-svg-icon="navigation:refresh"></md-icon> -->
+			Start Over
 		</md-button>
 	</md-card>
 	<div layout="row" layout-align="center center" class="yelp">
