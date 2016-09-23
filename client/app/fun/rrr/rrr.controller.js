@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$http', 'Geolocation', '$state', 'Helpers',
-	function ($scope, $rootScope, $http, Geolocation, $state, Helpers) {
+angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$http', 'Geolocation', '$state', 'Helpers', 'Googlemaps', '$timeout',
+	function ($scope, $rootScope, $http, Geolocation, $state, Helpers, Googlemaps, $timeout) {
         var rrrc = this,
         	distances = {
         		shortWalk: 600, // 7.5 minutes at 80m per minute
@@ -9,7 +9,8 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
         		shortDrive: 4828, // 3 miles
         		noPreference: 80467 // 50 miles (just a really big number to make sure I get everything)
         	},
-        	resultsLen;
+        	resultsLen,
+        	userCoords;
         rrrc.showDistOptions = {
         	shortWalk: true,
         	longWalk: true,
@@ -58,6 +59,10 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 
         rrrc.getCurrentLocation = function () {
         	Geolocation.getCurrentPosition().then(function (data) {
+        		userCoords = {
+        			lat: data.location.coords.latitude,
+        			long: data.location.coords.longitude
+        		};
         		callYelp(data.location.coords.latitude, data.location.coords.longitude);
         		rrrc.step = 'first';
         		$state.go('rrr.options');
@@ -192,7 +197,31 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 		};
 
 		rrrc.getDirections = function (choice) {
+			$state.go('rrr.directions');
 
+			var options = {
+				zoom: 12,
+				centerLat: userCoords.lat,
+				centerLong: userCoords.long,
+				scroll: true,
+				navControl: false,
+				typeControl: true,
+				scaleControl: true,
+				zoomControl: true,
+				draggable: true,
+				origin: {
+					lat: parseFloat(userCoords.lat),
+					long: parseFloat(userCoords.long)
+				},
+				dest: {
+					lat: parseFloat(choice.location.coordinate.latitude),
+					long: parseFloat(choice.location.coordinate.longitude)
+				}
+			};
+			console.log('options', options);
+			$timeout(function () {
+				Googlemaps.generateStaticMap({options});
+			}, 1200);
 		};
     }
 ]);

@@ -70,11 +70,13 @@ angular.module('portfolioApp')
           .state('rrr.options', {
             parent: 'rrr',
             templateUrl: 'app/fun/rrr/templates/options.html',
-            // controller: 'RrrOptionsCtrl',
-            // controlelrAs: 'rroc'
           })
           .state('rrr.results', {
             parent: 'rrr',
             templateUrl: 'app/fun/rrr/templates/results.html'
+          })
+          .state('rrr.directions', {
+            parent: 'rrr',
+            templateUrl: 'app/fun/rrr/templates/directions.html'
           });
   	});
