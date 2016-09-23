@@ -17,7 +17,7 @@ This app/site uses a number of open source projects to work properly:
 
 
 ### Installation
-You must have Ruby and Sass installed for this to work.
+You must have Ruby and Sass installed for this to work. Also, you would need to set env variables for all of the API key references in the server code.
 
 ```sh
 $ npm install grunt bower -g
@@ -29,11 +29,20 @@ $ npm install
 $ grunt serve
 ```
 
+### APIs
+
+ - Yelp!
+ - Weather Underground
+ - Google Maps
+ - Last.fm
+ - Bing!
+ - GitHub
+
 ### Todos
 
  - Style it up
  - Make it more responsive
- - finish fun page
- - start and complete social page
- - add Restaurant Roulette Remix
- - eventually add a blog
+ - Finish fun page
+ - Make a social page
+ - Finish Restaurant Roulette Remix
+ - Eventually add a blog
