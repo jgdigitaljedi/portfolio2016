@@ -221,7 +221,11 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 			console.log('options', options);
 			$timeout(function () {
 				Googlemaps.generateStaticMap({options});
-			}, 1200);
+			}, 500);
+		};
+
+		rrrc.backToResults = function () {
+			$state.go('rrr.results');
 		};
     }
 ]);

@@ -49,7 +49,7 @@ angular.module('portfolioApp').factory('Googlemaps', [
 				var map;
 
 			  	script.type = 'text/javascript';
-			  	script.src = 'https://maps.googleapis.com/maps/api/js?key=' + YOUR_API_KEY_FROM_GOOGLE + '&callback=initializeGMap';
+			  	script.src = 'https://maps.googleapis.com/maps/api/js?key=' + PUT_YOUR_KEY_HERE + '&callback=initializeGMap';
 			  	document.body.appendChild(script);
 
 				window.initializeGMap = function () {
