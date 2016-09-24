@@ -181,3 +181,7 @@ exports.myGithub = function (req, res) {
 
     request(options, callback);
 };
+
+exports.gmapkey = function (req, res) {
+	res.send(process.env.GMAPDIRSKEY);
+};

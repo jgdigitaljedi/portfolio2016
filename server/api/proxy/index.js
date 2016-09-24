@@ -17,5 +17,6 @@ router.get('/morning', morning.getInfo);
 router.get('/mygithub', proxy.myGithub);
 router.get('/afterwork', morning.getHomeCommute);
 router.get('/getyelpinfo/:lat/:long', yelp.getYelpInfo);
+router.get('/getgmapkey', proxy.gmapkey);
 
 module.exports = router;
