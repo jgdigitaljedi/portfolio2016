@@ -78,5 +78,9 @@ angular.module('portfolioApp')
           .state('rrr.directions', {
             parent: 'rrr',
             templateUrl: 'app/fun/rrr/templates/directions.html'
+          })
+          .state('rrr.manual', {
+            parent: 'rrr',
+            templateUrl: 'app/fun/rrr/templates/manual.html'
           });
   	});

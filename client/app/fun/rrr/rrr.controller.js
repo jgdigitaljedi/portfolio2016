@@ -71,6 +71,7 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 
         rrrc.manualLocation = function () {
         	// route with a map and have the user click then get coords
+        	$state.go('rrr.manual');
         };
 
 		rrrc.filterDistance = function (choice) {
@@ -198,7 +199,6 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 
 		rrrc.getDirections = function (choice) {
 			$state.go('rrr.directions');
-
 			var options = {
 				zoom: 12,
 				centerLat: userCoords.lat,
@@ -210,15 +210,14 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 				zoomControl: true,
 				draggable: true,
 				origin: {
-					lat: parseFloat(userCoords.lat),
-					long: parseFloat(userCoords.long)
+					lat: userCoords.lat,
+					long: userCoords.long
 				},
 				dest: {
-					lat: parseFloat(choice.location.coordinate.latitude),
-					long: parseFloat(choice.location.coordinate.longitude)
+					lat: choice.location.coordinate.latitude,
+					long: choice.location.coordinate.longitude
 				}
 			};
-			console.log('options', options);
 			$timeout(function () {
 				Googlemaps.generateStaticMap({options});
 			}, 500);
