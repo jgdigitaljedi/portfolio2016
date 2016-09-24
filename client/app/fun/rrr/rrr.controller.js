@@ -72,6 +72,7 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
         rrrc.manualLocation = function () {
         	// route with a map and have the user click then get coords
         	$state.go('rrr.manual');
+        	Googlemaps.placesPicker();
         };
 
 		rrrc.filterDistance = function (choice) {

@@ -1,34 +1,24 @@
 <section class="manual-address" layout="row" layout-align="center center">
 	<div layout="column" layout-align="center start">
-		<p class="rr-title">Select a location</p>
-		<md-card>
-			<form>
-				<md-card-title>
-					Enter Address
-				</md-card-title>
-				<md-card-content>
-					<md-input-container>
-						<label>Street Address</label>
-						<input type="text" name="street" ng-model="rrrc.userAddress.street" required>
-					</md-input-container>
-					<md-input-container>
-						<label>City</label>
-						<input type="text" name="city" ng-model="rrrc.userAddress.city" required>
-					</md-input-container>
-					<md-input-container>
-						<label>State</label>
-						<input name="state" ng-model="rrrc.userAddress.state" required>
-					</md-input-container>
-					<md-input-container>
-						<label>Zipcode</label>
-						<input type="text" name="zip" ng-model="rrrc.userAddress.zip" required>
-					</md-input-container>
-				</md-card-content>
-				<md-card-actions>
-					<md-button>Use Address</md-button>
-				</md-card-actions>
-			</form>
+		<md-card class="google-places-picker"> 
+			<md-card-content style="width: 480px; height: 480px";>
+				<input id="pac-input" class="controls" type="text"
+				        placeholder="Enter a location">
+			    <!-- <div id="type-selector" class="controls">
+			      	<input type="radio" name="type" id="changetype-all" checked="checked">
+			      	<label for="changetype-all">All</label>
+
+			      	<input type="radio" name="type" id="changetype-establishment">
+			      	<label for="changetype-establishment">Establishments</label>
+
+			      	<input type="radio" name="type" id="changetype-address">
+			      	<label for="changetype-address">Addresses</label>
+
+			      	<input type="radio" name="type" id="changetype-geocode">
+			      	<label for="changetype-geocode">Geocodes</label>
+			    </div> -->
+			    <div id="places-picker"></div>
+			</md-card-content>
 		</md-card>
-		<md-button>Select on Map</md-button>
 	</div>
 </section>
