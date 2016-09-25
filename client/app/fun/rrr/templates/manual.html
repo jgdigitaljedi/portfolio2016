@@ -2,23 +2,14 @@
 	<div layout="column" layout-align="center start">
 		<md-card class="google-places-picker"> 
 			<md-card-content style="width: 480px; height: 480px";>
-				<input id="pac-input" class="controls" type="text"
-				        placeholder="Enter a location">
-			    <!-- <div id="type-selector" class="controls">
-			      	<input type="radio" name="type" id="changetype-all" checked="checked">
-			      	<label for="changetype-all">All</label>
-
-			      	<input type="radio" name="type" id="changetype-establishment">
-			      	<label for="changetype-establishment">Establishments</label>
-
-			      	<input type="radio" name="type" id="changetype-address">
-			      	<label for="changetype-address">Addresses</label>
-
-			      	<input type="radio" name="type" id="changetype-geocode">
-			      	<label for="changetype-geocode">Geocodes</label>
-			    </div> -->
+				<input id="pac-input" class="controls" type="text" autocomplete="on" 
+				        placeholder="Enter a location" ng-model="rrrc.manualAddress">
 			    <div id="places-picker"></div>
 			</md-card-content>
+			<md-card-actions>
+				<md-button ng-click="rrrc.acceptAddress()">Use This Place</md-button>
+				<md-button ng-click="rrrc.backToStart()">Back to Start</md-button>
+			</md-card-actions>
 		</md-card>
 	</div>
 </section>

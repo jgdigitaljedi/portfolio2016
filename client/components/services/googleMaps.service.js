@@ -1,8 +1,8 @@
 'use strict';
 /*global google */
 
-angular.module('portfolioApp').service('Googlemaps', ['$http', '$q',
-	function($http, $q) {
+angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope',
+	function($http, $q, $rootScope) {
 		// I hate having vars like this but Google ain't easy to work with
 		var directionsDisplay;
 		var directionsService;
@@ -63,16 +63,17 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q',
 	          marker.setVisible(false);
 	          var place = autocomplete.getPlace();
 	          if (!place.geometry) {
-	            // window.alert("Autocomplete's returned place contains no geometry");
+	          	$rootScope.manualAddress = place;
 	            return;
 	          }
 
 	          // If the place has a geometry, then present it on a map.
 	          if (place.geometry.viewport) {
+	          	$rootScope.manualPlace = {lat: place.geometry.location.lat(), long: place.geometry.location.lng()};
 	            map.fitBounds(place.geometry.viewport);
 	          } else {
 	            map.setCenter(place.geometry.location);
-	            map.setZoom(17);  // Why 17? Because it looks good.
+	            map.setZoom(17);
 	          }
 	          marker.setIcon(/** @type {google.maps.Icon} */({
 	            url: place.icon,
@@ -96,20 +97,6 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q',
 	          infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
 	          infowindow.open(map, marker);
 	        });
-
-	        // Sets a listener on a radio button to change the filter type on Places
-	        // Autocomplete.
-	        // function setupClickListener(id, types) {
-	        //   var radioButton = document.getElementById(id);
-	        //   radioButton.addEventListener('click', function() {
-	        //     autocomplete.setTypes(types);
-	        //   });
-	        // }
-
-	        // setupClickListener('changetype-all', []);
-	        // setupClickListener('changetype-address', ['address']);
-	        // setupClickListener('changetype-establishment', ['establishment']);
-	        // setupClickListener('changetype-geocode', ['geocode']);
 		}
 
 		function calcRoute (options) {
@@ -173,9 +160,9 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q',
 			placesPicker: function () {
 				gmapKey = sessionStorage.getItem('gmapKey');
 				directionsMap = false;
-				// var pMap;
 
 				if (!gmapsLoaded || !sessionStorage.getItem('gmapKey')) {
+					console.log('loadScript');
 					getGmapKey().then(function (key) {
 						gmapKey = key;
 						loadScript();

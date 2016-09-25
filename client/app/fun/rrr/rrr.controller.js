@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$http', 'Geolocation', '$state', 'Helpers', 'Googlemaps', '$timeout',
+angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$http', 'Geolocation', '$state', 
+	'Helpers', 'Googlemaps', '$timeout',
 	function ($scope, $rootScope, $http, Geolocation, $state, Helpers, Googlemaps, $timeout) {
         var rrrc = this,
         	distances = {
@@ -73,6 +74,14 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
         	// route with a map and have the user click then get coords
         	$state.go('rrr.manual');
         	Googlemaps.placesPicker();
+        };
+
+        rrrc.acceptAddress = function () {
+        	console.log('place', $rootScope.manualPlace);
+        	userCoords = $rootScope.manualPlace;
+        	callYelp(userCoords.lat, userCoords.long);
+        	rrrc.step = 'first';
+        	$state.go('rrr.options');
         };
 
 		rrrc.filterDistance = function (choice) {
