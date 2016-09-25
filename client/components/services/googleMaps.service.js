@@ -1,5 +1,6 @@
 'use strict';
 /*global google */
+/*jshint camelcase: false */
 
 angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope',
 	function($http, $q, $rootScope) {
@@ -46,9 +47,19 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope
 		    	zoom: 12,
 		    	center: center
 		  	};
+	        if (!input) {
+	        	var inTemp = '<input id="pac-input" class="controls" ng-if="rrrc.mapView === \'manual\'"'+
+		        'placeholder="Enter a location" ng-model="rrrc.manualAddress">';
+		        var ele = document.createElement('input');
+		        var el = document.getElementById('map_canvas');
+		        ele.innerHTML = inTemp;
+		        while (ele.children.length > 0) {
+		            el.appendChild(ele.children[0]);
+		         }
+	        	input = /** @type {!HTMLInputElement} */(
+	            	document.getElementById('pac-input'));
+	        }
 		  	map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-	        if (!input) input = /** @type {!HTMLInputElement} */(
-	            document.getElementById('pac-input'));
 
 	        var types = document.getElementById('type-selector');
 	        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
