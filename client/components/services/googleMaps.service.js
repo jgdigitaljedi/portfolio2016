@@ -11,6 +11,9 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope
 		var directionsMap;
 		var map;
 		var firstOptions;
+		var input;
+		var autocomplete;
+		var infowindow;
 
 		function loadScript () {
 			if (!gmapsLoaded) {
@@ -38,21 +41,25 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope
 		}
 
 		function placesElement () {
-	        var map = new google.maps.Map(document.getElementById('places-picker'), {
-	          center: {lat: 30.260478, lng: -97.736472},
-	          zoom: 12
-	        });
-	        var input = /** @type {!HTMLInputElement} */(
+			var center = new google.maps.LatLng(30.260478, -97.736472);
+		  	var mapOptions = {
+		    	zoom: 12,
+		    	center: center
+		  	};
+		  	map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+	        if (!input) input = /** @type {!HTMLInputElement} */(
 	            document.getElementById('pac-input'));
 
 	        var types = document.getElementById('type-selector');
 	        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 	        map.controls[google.maps.ControlPosition.TOP_LEFT].push(types);
 
-	        var autocomplete = new google.maps.places.Autocomplete(input);
+	        if (!autocomplete) {
+	        	autocomplete = new google.maps.places.Autocomplete(input);
+	        }
 	        autocomplete.bindTo('bounds', map);
 
-	        var infowindow = new google.maps.InfoWindow();
+	        infowindow = new google.maps.InfoWindow();
 	        var marker = new google.maps.Marker({
 	          map: map,
 	          anchorPoint: new google.maps.Point(0, -29)
@@ -166,7 +173,6 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope
 					getGmapKey().then(function (key) {
 						gmapKey = key;
 						loadScript();
-
 					});
 				} else {
 					window.initializeGMap();

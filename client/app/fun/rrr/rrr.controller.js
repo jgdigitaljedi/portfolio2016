@@ -72,8 +72,9 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 
         rrrc.manualLocation = function () {
         	// route with a map and have the user click then get coords
-        	$state.go('rrr.manual');
-        	Googlemaps.placesPicker();
+        	rrrc.mapView = 'manual';
+        	$state.go('rrr.directions');
+        	$timeout(function () { Googlemaps.placesPicker(); }, 500);
         };
 
         rrrc.acceptAddress = function () {
@@ -196,6 +197,7 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 		};
 
 		rrrc.backToOptions = function () {
+			rrrc.mapView = 'manual';
 			rrrc.userChoices = false;
 			rrrc.step = resultsLen > 1 ? 'last' : 'second';
 			$state.go('rrr.options');
@@ -208,6 +210,7 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 		};
 
 		rrrc.getDirections = function (choice) {
+			rrrc.mapView = 'directions';
 			$state.go('rrr.directions');
 			var options = {
 				zoom: 12,

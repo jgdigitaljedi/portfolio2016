@@ -2,9 +2,10 @@
 	<div layout="column" layout-align="center start">
 		<md-card class="google-places-picker"> 
 			<md-card-content style="width: 480px; height: 480px";>
-				<input id="pac-input" class="controls" type="text" autocomplete="on" 
+				<!-- <input id="pac-input" class="controls" type="text" autocomplete="on" 
 				        placeholder="Enter a location" ng-model="rrrc.manualAddress">
-			    <div id="places-picker"></div>
+			    <div id="map_canvas"></div> -->
+			    <ng-include src="'/app/fun/rrr/templates/gmaps.html'"></ng-include>
 			</md-card-content>
 			<md-card-actions>
 				<md-button ng-click="rrrc.acceptAddress()">Use This Place</md-button>
