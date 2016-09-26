@@ -123,7 +123,7 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope
 		  	var request = {
 		    	origin: new google.maps.LatLng(options.origin.lat, options.origin.long),
 		    	destination: new google.maps.LatLng(options.dest.lat, options.dest.long),
-		    	travelMode: 'WALKING' // no to make this changeable eventually
+		    	travelMode: 'WALKING' // need to make this changeable eventually
 		  	};
 		  	directionsService.route(request, function(result, status) {
 		    	if (status === 'OK') {
