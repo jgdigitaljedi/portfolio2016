@@ -5,16 +5,16 @@
 angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope',
 	function($http, $q, $rootScope) {
 		// I hate having vars like this but Google ain't easy to work with
-		var directionsDisplay;
-		var directionsService;
-		var gmapsLoaded = false;
-		var gmapKey;
-		var directionsMap;
-		var map;
-		var firstOptions;
-		var input;
-		var autocomplete;
-		var infowindow;
+		var directionsDisplay,
+			directionsService,
+			gmapsLoaded = false,
+			gmapKey,
+			directionsMap,
+			map,
+			firstOptions,
+			input,
+			autocomplete,
+			infowindow;
 
 		function loadScript () {
 			if (!gmapsLoaded) {
@@ -35,23 +35,23 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope
 				def.resolve(gmapKey);
 			})
 			.error(function (data) {
-				console.log('gmaps error', data);
+				console.log('gmaps key error', data);
 				def.reject(data);
 			});
 			return def.promise;
 		}
 
 		function placesElement () {
-			var center = new google.maps.LatLng(30.260478, -97.736472);
-		  	var mapOptions = {
+			var center = new google.maps.LatLng(30.260478, -97.736472), // why not downtown Austin? It's moot anyway.
+		  		mapOptions = {
 		    	zoom: 12,
 		    	center: center
 		  	};
 	        if (!input) {
 	        	var inTemp = '<input id="pac-input" class="controls" ng-if="rrrc.mapView === \'manual\'"'+
-		        'placeholder="Enter a location" ng-model="rrrc.manualAddress">';
-		        var ele = document.createElement('input');
-		        var el = document.getElementById('map_canvas');
+		        	'placeholder="Enter a location" ng-model="rrrc.manualAddress">',
+		        	ele = document.createElement('input'),
+		        	el = document.getElementById('map_canvas');
 		        ele.innerHTML = inTemp;
 		        while (ele.children.length > 0) {
 		            el.appendChild(ele.children[0]);
@@ -82,6 +82,7 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope
 	          var place = autocomplete.getPlace();
 	          if (!place.geometry) {
 	          	$rootScope.manualAddress = place;
+	          	console.log('gonna have to find another way to get this one', $rootScope.manualAddress);
 	            return;
 	          }
 
@@ -122,7 +123,7 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope
 		  	var request = {
 		    	origin: new google.maps.LatLng(options.origin.lat, options.origin.long),
 		    	destination: new google.maps.LatLng(options.dest.lat, options.dest.long),
-		    	travelMode: 'WALKING'
+		    	travelMode: 'WALKING' // no to make this changeable eventually
 		  	};
 		  	directionsService.route(request, function(result, status) {
 		    	if (status === 'OK') {
@@ -134,8 +135,8 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope
 		function dirMap (options) {
 			directionsService = new google.maps.DirectionsService();
 		  	directionsDisplay = new google.maps.DirectionsRenderer();
-		  	var center = new google.maps.LatLng(options.centerLat, options.centerLong);
-		  	var mapOptions = {
+		  	var center = new google.maps.LatLng(options.centerLat, options.centerLong),
+		  		mapOptions = {
 		    	zoom: options.zoom,
 		    	center: center
 		  	};
@@ -158,36 +159,30 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope
 			}
 		};
 
+		function loadItUp (which, options) {
+			if (!options) options = '';
+			if (!gmapsLoaded || !sessionStorage.getItem('gmapKey')) {
+				getGmapKey().then(function (key) {
+					gmapKey = key;
+					loadScript();
+					if (which === 'directions') firstOptions = options;
+				});
+			} else {
+				window.initializeGMap(options);
+			}
+		}
+
 		return {
 			generateStaticMap: function (options) {
 				options = options.options;
 				gmapKey = sessionStorage.getItem('gmapKey');
 				directionsMap = true;
-
-				if (!gmapsLoaded || !sessionStorage.getItem('gmapKey')) {
-					getGmapKey().then(function (key) {
-						gmapKey = key;
-						loadScript();
-						firstOptions = options;
-					});
-				} else {
-					window.initializeGMap(options);
-				}
-
+				loadItUp('directions', options);
 			},
 			placesPicker: function () {
 				gmapKey = sessionStorage.getItem('gmapKey');
 				directionsMap = false;
-
-				if (!gmapsLoaded || !sessionStorage.getItem('gmapKey')) {
-					console.log('loadScript');
-					getGmapKey().then(function (key) {
-						gmapKey = key;
-						loadScript();
-					});
-				} else {
-					window.initializeGMap();
-				}
+				loadItUp('places');
 			}
 		};
 	}
