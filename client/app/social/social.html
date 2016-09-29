@@ -1,4 +1,36 @@
 <div ng-include="'components/shell/shell.html'" ng-class="{'night':sc.theme === 'night', 'day': sc.theme === 'day'}"></div>
 <section ng-class="{'night':sc.theme === 'night', 'day': sc.theme === 'day'}" class="social-section">
-
+	<div layout="column" class="widget-section" layout-align="center end" flex="50">
+		<md-card class="gray-card">
+			<md-card-content>
+				<div layout="row" layout-align="space-around center" class="lastfm-stats">
+					<div layout="column" layout-align="center center">
+						<span>
+							My Top 5 Most Listened to<br>
+							Artists in the Past Week
+						</span>
+						<md-list>
+							<md-list-item ng-repeat="artist in sc.music.artists" 
+								ng-click="sc.openMusicLink(artist.url)" class="music-list-item">
+								{{artist.name}}
+							</md-list-item>	
+						</md-list>
+					</div>
+					<div layout="column" layout-align="center center">
+						<span>
+							My Top 5 Most Listened to<br>
+							Tracks in the Past Week
+						</span>
+						<md-list>
+							<md-list-item ng-repeat="track in sc.music.tracks" 
+								ng-click="sc.openMusicLink(track.url)" class="music-list-item">
+								{{track.name}}<br>
+								by {{track.artist}}
+							</md-list-item>	
+						</md-list>
+					</div>
+				</div>
+			</md-card-content>
+		</md-card>
+	</div>
 </section>

@@ -4,9 +4,16 @@
 		fun stuff
 	</div>
 	<div layout="row" layout-align="center center" style="margin-top: 40px;">
-		<div layout="row" layout-align="center start" flex="70">
-			<div layout="column" class="app-section" flex="50">
-				<md-card class="app-card gray-card">
+		<md-card class="gray-card not-too-big">
+			<md-card-content>
+				I think of this site less as just a portfolio and more of a personal playground.
+				That said, I occasionally tinker on something that I wouldn't mind sharing with the rest of the world.
+				This is where I'll be sharing that stuff! Below are some apps that I've created for fun. Enjoy!
+			</md-card-content>
+		</md-card>
+		<!-- <div layout="row" layout-align="center start" flex="70"> -->
+			<!-- <div layout="column" class="app-section"> -->
+				<!-- <md-card class="app-card gray-card">
 					<md-card-content>
 						<h3> Fun Apps Hosted Here</h3>
 						<p>
@@ -18,41 +25,8 @@
 							<md-list-item ui-sref="rrr.main">Restaurant Roulette Remix</md-list-item>
 						</md-list>
 					</md-card-content>
-				</md-card>
-			</div>
-			<div layout="column" class="widget-section" layout-align="center end" flex="50">
-				<md-card class="gray-card">
-					<md-card-content>
-						<div layout="row" layout-align="space-around center" class="lastfm-stats">
-							<div layout="column" layout-align="center center">
-								<span>
-									My Top 5 Most Listened to<br>
-									Artists in the Past Week
-								</span>
-								<md-list>
-									<md-list-item ng-repeat="artist in fc.music.artists" 
-										ng-click="fc.openMusicLink(artist.url)" class="music-list-item">
-										{{artist.name}}
-									</md-list-item>	
-								</md-list>
-							</div>
-							<div layout="column" layout-align="center center">
-								<span>
-									My Top 5 Most Listened to<br>
-									Tracks in the Past Week
-								</span>
-								<md-list>
-									<md-list-item ng-repeat="track in fc.music.tracks" 
-										ng-click="fc.openMusicLink(track.url)" class="music-list-item">
-										{{track.name}}<br>
-										by {{track.artist}}
-									</md-list-item>	
-								</md-list>
-							</div>
-						</div>
-					</md-card-content>
-				</md-card>
-			</div>
-		</div>
+				</md-card> -->
+			<!-- </div> -->
+		<!-- </div> -->
 	</div>
 </section>

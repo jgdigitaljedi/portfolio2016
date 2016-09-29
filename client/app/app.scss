@@ -26,6 +26,15 @@ $flat-white: #f1f1f1;
    url('../assets/fonts/depressionist_3_revisited_2010-webfont.svg#Depressionist') format('svg');
  }
 
+ @font-face {
+   font-family: 'mr_robot';
+   src: url('../assets/fonts/mr_robot.eot');
+   src: url('../assets/fonts/mr_robot.eot?#iefix') format('embedded-opentype'),
+   url('../assets/fonts/mr_robot.woff') format('woff'),
+   url('../assets/fonts/mr_robot.ttf') format('truetype'),
+   url('../assets/fonts/mr_robot.svg#mr_robot') format('svg');
+ }
+
  html {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
