@@ -52,40 +52,42 @@ angular.module('portfolioApp', [
     $scope.theme = (theHour >= 7 && theHour < 19) ? 'day' : 'night';
     $rootScope.theme = $scope.theme;
 
-    // // social network button garbage
-    // //Facebook
-    // (function(d, s, id) {
-    //   var js, fjs = d.getElementsByTagName(s)[0];
-    //   if (d.getElementById(id)) return;
-    //   js = d.createElement(s);
-    //   js.id = id;
-    //   js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7';
-    //   fjs.parentNode.insertBefore(js, fjs);
-    // }(document, 'script', 'facebook-jssdk'));
-
-    // // Twitter
-    // window.twttr = (function(d, s, id) {
-    //   var js,
-    //     fjs = d.getElementsByTagName(s)[0],
-    //     t = window.twttr || {};
-    //   if (d.getElementById(id)) return t;
-    //   js = d.createElement(s);
-    //   js.id = id;
-    //   js.src = 'https://platform.twitter.com/widgets.js';
-    //   fjs.parentNode.insertBefore(js, fjs);
-     
-    //   t._e = [];
-    //   t.ready = function(f) {
-    //     t._e.push(f);
-    //   };
-     
-    //   return t;
-    // }(document, 'script', 'twitter-wjs'));
-
-    // // Google+
-    // (function() {
-    //   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    //   po.src = 'https://apis.google.com/js/platform.js';
-    //   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-    // })();
+    // konami code
+    var neededkeys = [38,38,40,40,37,39,37,39,66,65],
+        started = false,
+        count = 0;
+    function reset() {
+        started = false; count = 0;
+        return;
+    }
+    $(document).keydown(function (e){
+        var key = e.keyCode;
+        //Set start to true only if having pressed the first key in the konami sequence.
+        if (!started){
+            if (key === 38){
+                started = true;
+            }
+        }
+        //If we've started, pay attention to key presses, looking for right sequence.
+        if (started){
+            if (neededkeys[count] === key){
+                //We're good so far.
+                count++;
+            } else {
+                //Oops, not the right sequence, lets restart from the top.
+                reset();
+            }
+            if (count === 10){
+                //We made it! Do something cool here.
+                // audio.play();
+                $scope.konami = true;
+                //Reset the conditions so that someone can do it all again.
+                reset();
+            }
+        } else {
+        //Oops.
+            reset();
+        }
+    });
+    //Function used to reset us back to starting point.
 });
