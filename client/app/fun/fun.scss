@@ -1,13 +1,14 @@
 .fun-section {
-	background-image: url('../../assets/images/austin2.svg');
-	background-position: bottom;
-	background-size: contain;
-	background-repeat:  no-repeat;
+	// background-image: url('../../assets/images/austin2.svg');
+	// background-position: bottom;
+	// background-size: contain;
+	// background-repeat:  no-repeat;
 	height: calc(100vh - 64px);
 	@include fade-In(1s);
 
+
 	.title-area {
-		font-family: 'langdon';
+		font-family: 'mr_robot';
         font-size: 5em;
     	padding-top: 20px;
 	}
@@ -15,10 +16,33 @@
 	.gray-card {
 		background-color: $blue-gray;
 		color: $flat-white;
+		max-width: 500px;
+		font-weight: bold;
 	}
 
-	.not-too-big {
+	.inset-disclaimer {
 		max-width: 500px;
+		font-weight: bold;
+		@include inset_shadow(2);
+		padding: 8px;
+	}
+
+	.apps-area {
+
+		.app-row {
+			display: flex;
+			.app-card {
+				
+				.app-title {
+					font-size: 2em;
+					font-weight: bold;
+				}
+
+				.app-description {
+					min-height: 150px
+				}
+			}
+		}
 	}
 
 }

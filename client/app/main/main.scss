@@ -56,7 +56,7 @@ $dark-amber: #ffc107;
   .about-me-bio-area {
   .my-name {
     font-size: 5em;
-    font-family: 'langdon';
+    font-family: 'mr_robot';
     margin: 30px auto 12px;
     -webkit-animation-delay: 1.1s;
     -moz-animation-delay: 1.1s;
@@ -87,7 +87,8 @@ $dark-amber: #ffc107;
   
   }
   .last-fm-section {
-    min-height: 18vh;
+    // min-height: 18vh;
+    padding-top: 8px;
     opacity:0;
     @include fadeIn;
     color: $dark-amber;
@@ -173,7 +174,7 @@ $dark-amber: #ffc107;
   }
 
   .last-card {
-    margin: 12px auto 0;
+    margin: 0 auto;
     text-align: center;
 
     a:link, a:hover {

@@ -4,29 +4,40 @@
 		fun stuff
 	</div>
 	<div layout="row" layout-align="center center" style="margin-top: 40px;">
-		<md-card class="gray-card not-too-big">
-			<md-card-content>
-				I think of this site less as just a portfolio and more of a personal playground.
-				That said, I occasionally tinker on something that I wouldn't mind sharing with the rest of the world.
-				This is where I'll be sharing that stuff! Below are some apps that I've created for fun. Enjoy!
-			</md-card-content>
-		</md-card>
-		<!-- <div layout="row" layout-align="center start" flex="70"> -->
-			<!-- <div layout="column" class="app-section"> -->
-				<!-- <md-card class="app-card gray-card">
-					<md-card-content>
-						<h3> Fun Apps Hosted Here</h3>
-						<p>
-							Here are some apps I've developed and never deployed...UNTIL NOW! 
-							I thought it might be fun to include them here. More to come as time passes.
-						</p>
-						<md-list>
-							<md-list-item ui-sref="2048">Phangular 2048</md-list-item>
-							<md-list-item ui-sref="rrr.main">Restaurant Roulette Remix</md-list-item>
-						</md-list>
-					</md-card-content>
-				</md-card> -->
-			<!-- </div> -->
-		<!-- </div> -->
+		<div class="inset-disclaimer">
+			I think of this site less as just a portfolio and more of a personal playground.
+			That said, I occasionally tinker on something that I wouldn't mind sharing with the rest of the world.
+			This is where I'll be sharing that stuff! Below are some apps that I've created for fun. Enjoy!
+		</div>
+	</div>
+	<div layout="row" layout-align="center start" class="apps-area">
+		<div layout="row" layout-align="center start" class="app-row" layout-padding flex="80">
+			<md-card layout="column" class="app-card" flex="50" flex-sm="100">
+				<p class="app-title">Phangular 2048</p>
+				<md-card-contents>
+					<div class="app-description" hide-xs>
+						This is just a little 2048 game I developed. I had never really done any game development and figured this
+						would be an easy one to get me going. I used this as an opportunity to explore Phaser which is a sort of
+						game engine for JavaScript. After getting a feel for what Phaser does, I can definitely say that I'll be 
+						using this to create more little games in the future. Make sure to enter your name because this is hooked up 
+						to a little database that will store the highest score!
+					</div>
+					<md-button ui-sref="2048">Play It!</md-button>
+				</md-card-contents>
+			</md-card>
+			<md-card layout="column" class="app-card" flex="50" flex-sm="100">
+				<p class="app-title">Restaurant Roulette Remix</p>
+				<md-card-contents>
+					<div class="app-description" hide-xs>
+						A few years ago while attending MakerSquare I participated in a short hackathon. I was on a team with a couple
+						of other guys and we had a fifteen minute debate about where to eat lunch the day before. That inspired us to write
+						something that would settle future debates and just tell us where to eat based off of location and call it Restaurant 
+						Roulette. Years later I still liked the idea and knew I had enough knowledge to do it a lot better. This is the result, 
+						hence the name Restaurant Roulette Remix. Put and end to those "where should we eat" arguments! 
+					</div>
+					<md-button ui-sref="rrr.main">Try It!</md-button>
+				</md-card-contents>
+			</md-card>
+		</div>
 	</div>
 </section>
