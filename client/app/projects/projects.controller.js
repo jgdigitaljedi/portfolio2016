@@ -46,7 +46,7 @@ angular.module('portfolioApp').controller('ProjectsCtrl', ['$rootScope', '$scope
                     }
 
                     $scope.closeGallery = function () {
-						pc.showLabel = true;;
+						pc.showLabel = true;
                         $mdDialog.cancel();
                     };
 

@@ -41,19 +41,19 @@
       background-repeat:  no-repeat;
       background-position: center;
       @include box_shadow(1);
+      overflow: hidden;
 
-      span {
-        display: block;
-        height: 100%;
-        width: 100%;
-        opacity: 1;
-        background: rgba(0,0,0,0.4);
-        -moz-transition: all 0.6s;
-        -webkit-transition: all 0.6s;
+      .project-image {
+        object-fit: cover;
+        width: 800px;
         transition: all 0.6s;
+        -webkit-filter: grayscale(60%);
+
         &:hover {
-          opacity: 0;
+          transform: scale(1.1);
+          -webkit-filter: grayscale(0%);
         }
+
       }
 
       md-grid-tile-footer {

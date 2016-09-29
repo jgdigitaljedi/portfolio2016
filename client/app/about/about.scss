@@ -6,6 +6,9 @@
   		@include box_shadow(1);
   	}
 
+  	.width-container {
+		max-width: 1300px;  		
+  	}
 
 	.top-container {
 		padding-top: 40px;
@@ -17,6 +20,7 @@
 			margin-bottom: 16px;
 		}
 		.little-info {
+
 
 			.top-text {
 				font-size: 1.5em;
