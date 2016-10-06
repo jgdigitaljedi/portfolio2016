@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('portfolioApp')
-    .controller('MainCtrl', function ($scope, $http, $compile, $rootScope) {
+    .controller('MainCtrl', function ($scope, $http, $compile, $rootScope, $timeout) {
         var mainVm = this;
         mainVm.showLastfm = true;
         mainVm.theme = $rootScope.theme;
@@ -57,5 +57,23 @@ angular.module('portfolioApp')
                     console.log('error with lastfm', error);
                     $scope.showLastfm = false;
                 });
+
+            mainVm.todImage = mainVm.theme === 'day' ? 'sun.png' : 'moon.png';
+            $timeout(function () {
+                var screenWidth = window.innerWidth;
+                var screenHeight = window.innerHeight - 186; // minus 64 for toolbar and 20 more for a comfortable margin and 90 more to center object
+                var start = mainVm.theme === 'day' ? ' 07:00' : ' 19:00'; // day or night time to base position off of
+                var today = moment().format('MM/DD/YYYY');
+                var timeSince = moment().diff(today + start, 'minutes'); // minutes since start
+                var timeElapsedPercent = (timeSince / 720); // 12 hours is 720 minutes
+                var angle = 180 * timeElapsedPercent; // angle from half circle vertex in which sun or moon should be placed
+                // var angle = 90; // here for testing
+                var x = (screenWidth / 2 - 90) + screenHeight * (Math.cos(angle*(Math.PI/180)));
+                var y = -90 + screenHeight * Math.sin(angle*(Math.PI/180));
+                mainVm.objCoords = {x: x, y: y};
+                console.log('width', screenWidth);
+                console.log('height', screenHeight);
+                console.log('coords are ' + x + ' and ' + y);                
+            });
         })();
   });

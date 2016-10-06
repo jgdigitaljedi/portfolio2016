@@ -50,11 +50,24 @@ $dark-amber: #ffc107;
   background-repeat:  no-repeat;
   height: calc(100vh - 64px);
 
+  .sun-moon {
+    position: absolute;
+    z-index: 2;
+    margin-top: 20px;
+
+    .sun-moon-pic {
+      max-width: 180px;
+
+    }
+  }
+
   .top-column {
     margin-top: 20px;
+    z-index: 5;
   }
   .about-me-bio-area {
   .my-name {
+    z-index: 5;
     font-size: 5em;
     font-family: 'mr_robot';
     margin: 30px auto 12px;
@@ -64,6 +77,7 @@ $dark-amber: #ffc107;
   }
   
   .my-profession {
+    z-index: 5;
     color: $dark-amber;
     font-size: 1.5em;
     font-weight: bold;
@@ -75,6 +89,7 @@ $dark-amber: #ffc107;
       animation-delay: 1.5s;
   }
   .small-desc-line {
+    z-index: 5;
     color: $dark-amber;
     font-weight: bold;
     margin: 0 auto 12px;
@@ -88,6 +103,7 @@ $dark-amber: #ffc107;
   }
   .last-fm-section {
     // min-height: 18vh;
+    z-index: 5;
     padding-top: 8px;
     opacity:0;
     @include fadeIn;
@@ -128,6 +144,7 @@ $dark-amber: #ffc107;
     width: 80px;
   }
   .pics-of-me {
+    z-index: 5;
     width: 80%;
     height: 80%;
     border-radius: 50%;
@@ -137,6 +154,7 @@ $dark-amber: #ffc107;
     animation-delay: 0.4s;
   }
   .divider-graphic {
+    z-index: 5;
     width: 70%;
     height: 70%;
     -webkit-animation-delay: 0.7s;
@@ -144,6 +162,7 @@ $dark-amber: #ffc107;
     animation-delay: 0.7s;
   }
   .writeup-box {
+    z-index: 5;
     text-align: center;
     width: 100%;
     margin-top: 6px;

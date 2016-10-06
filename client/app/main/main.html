@@ -1,6 +1,9 @@
 <div ng-include="'components/shell/shell.html'" md-theme="{{mainVm.theme}}" ng-class="{'night':mainVm.theme === 'night', 'day': mainVm.theme === 'day'}"></div>
 <section class="about-section" md-theme="{{mainVm.theme}}" 
 	ng-class="{'night':mainVm.theme === 'night', 'day': mainVm.theme === 'day'}">
+	<div class="sun-moon" ng-style="{'left': mainVm.objCoords.x, 'bottom': mainVm.objCoords.y}">
+		<img ng-src="../../assets/images/{{mainVm.todImage}}" class="sun-moon-pic" />
+	</div>
 	<div class="top-column" layout="column" layout-align="start center">
 		<div layout="row" layout layout-align="center center">
 			<img src="../../assets/images/large_619034.png" class="pics-of-me fade-in" />
