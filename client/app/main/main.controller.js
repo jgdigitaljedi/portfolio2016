@@ -8,6 +8,7 @@ angular.module('portfolioApp')
 
         $rootScope.$on('theme change', function () {
             mainVm.theme = $rootScope.theme;
+            mainVm.todImage = mainVm.theme === 'day' ? 'sun.png' : 'moon.png';
         });
 
         function makeLastFmWidget(result) {
@@ -69,7 +70,7 @@ angular.module('portfolioApp')
                 var angle = 180 * timeElapsedPercent; // angle from half circle vertex in which sun or moon should be placed
                 // var angle = 90; // here for testing
                 var x = (screenWidth / 2 - 90) + screenHeight * (Math.cos(angle*(Math.PI/180)));
-                var y = -90 + screenHeight * Math.sin(angle*(Math.PI/180));
+                var y = 0 + screenHeight * Math.sin(angle*(Math.PI/180));
                 mainVm.objCoords = {x: x, y: y};
                 console.log('width', screenWidth);
                 console.log('height', screenHeight);

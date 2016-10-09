@@ -77,17 +77,40 @@
             </div> -->
         </div>
     </md-sidenav>
-    <md-toolbar>
+    <md-toolbar layout="row" layout-align="space-between">
         <div class="md-toolbar-tools" layout layout-align="space-between center" flex>
-            <div layout layout-align="start center" flex="50">
-                <md-button ng-click="toggleLeft()" class="md-icon-button" aria-label="Settings">
+            <div layout layout-align="start center">
+                <md-button ng-click="toggleLeft()" class="md-icon-button" aria-label="Mobile Menu" hide-gt-md>
                     <md-icon md-svg-icon="assets/icons/menu.svg"></md-icon>
                 </md-button>
                 <h2>
                     <span>Joey Gauthier</span>
                 </h2>
             </div>
-            <div layout layout-align="end center" flex="50">
+            <div layout="row" layout-align="center center" hide-xs hide-sm hide-md>
+                <md-button ui-sref="main">
+                    Home
+                </md-button>
+                <md-button ui-sref="about">
+                    About Me
+                </md-button>
+                <md-button ui-sref="projects">
+                    Projects
+                </md-button>
+                <md-button ui-sref="social">
+                    Social
+                </md-button>
+                <md-button ui-sref="resume">
+                    Resum&eacute
+                </md-button>
+                <md-button ui-sref="contact">
+                    Contact
+                </md-button>
+                <md-button ui-sref="fun">
+                    Fun Stuff
+                </md-button>
+            </div>
+            <div layout layout-align="end center">
                 <div layout="row" layout-align="end center">
                     <div style="margin-right: 10px;"> 
                         Theme
@@ -101,42 +124,6 @@
                     <md-icon md-svg-icon="image:wb_sunny" style="margin-right: 8px;"></md-icon>
                 </div>
             </div>
-            <!-- <span flex=""></span> -->
-            <!-- <div layout layout-align="end center" flex="33">
-                <div>
-                <md-menu>
-                    <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdOpenMenu, $event)">
-                        <md-icon md-menu-origin md-svg-icon="assets/icons/dots-vertical.svg"></md-icon>
-                    </md-button>
-                    <md-menu-content width="4">
-                        <md-menu-item>
-                            <md-button ng-click="showAddDialog($event)">
-                                <md-icon md-svg-icon="content:add" md-menu-align-target></md-icon>
-                                Add
-                            </md-button>
-                        </md-menu-item>
-                        <md-menu-item>
-                            <md-button ng-click="redial($event)">
-                                <md-icon md-svg-icon="communication:dialpad" md-menu-align-target></md-icon>
-                                Redial
-                            </md-button>
-                        </md-menu-item>
-                        <md-menu-item>
-                            <md-button disabled="disabled" ng-click="checkVoicemail()">
-                                <md-icon md-svg-icon="communication:voicemail"></md-icon>
-                                Check voicemail
-                            </md-button>
-                        </md-menu-item>
-                        <md-menu-item>
-                            <md-button ng-click="toggleNotifications()">
-                                <md-icon md-svg-icon="social:notifications{{notificationsEnabled ? '_off' : ''}}"></md-icon>
-                                {{notificationsEnabled ? 'Disable' : 'Enable' }} notifications
-                            </md-button>
-                        </md-menu-item>
-                    </md-menu-content>
-                </md-menu>
-                </div>
-            </div> -->
         </div>
     </md-toolbar>
 </div>

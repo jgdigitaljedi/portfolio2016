@@ -1,9 +1,11 @@
 <div ng-include="'components/shell/shell.html'" md-theme="{{mainVm.theme}}" ng-class="{'night':mainVm.theme === 'night', 'day': mainVm.theme === 'day'}"></div>
 <section class="about-section" md-theme="{{mainVm.theme}}" 
 	ng-class="{'night':mainVm.theme === 'night', 'day': mainVm.theme === 'day'}">
-	<div class="sun-moon" ng-style="{'left': mainVm.objCoords.x, 'bottom': mainVm.objCoords.y}">
+	<div class="sun-moon" ng-style="{'left': mainVm.objCoords.x, 'bottom': mainVm.objCoords.y}"
+		hide-md hide-sm hide-xs>
 		<img ng-src="../../assets/images/{{mainVm.todImage}}" class="sun-moon-pic" />
 	</div>
+	<img class="austin" src="../../assets/images/AustinSkylineCropped.svg" />
 	<div class="top-column" layout="column" layout-align="start center">
 		<div layout="row" layout layout-align="center center">
 			<img src="../../assets/images/large_619034.png" class="pics-of-me fade-in" />
@@ -13,9 +15,9 @@
 		</div>
 		<div class="about-me-bio-area">
 	        <div  layout-align="center center" class="writeup-box" layout="column">
-	            <p class="my-name fade-in">joey<br>gauthier</p>
+	            <p class="my-name fade-in">joey gauthier</p>
 	            <p class="my-profession fade-in">JavaScript / UXUI Developer</p>
-	            <p class="small-desc-line fade-in">Disc golf weekender, guitar player, Raspberry Pi project lover, and beard enthusiast.</p>
+	            <p class="small-desc-line fade-in">Disc golfer, guitar player, Raspberry Pi hacker, and beard enthusiast.</p>
 	        </div>
 		</div>
 	</div>

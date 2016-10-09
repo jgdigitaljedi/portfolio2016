@@ -20,11 +20,15 @@
 			margin-bottom: 16px;
 		}
 		.little-info {
-
+			max-width: 650px;
 
 			.top-text {
 				font-size: 1.5em;
 				margin-bottom: 16px;
+			}
+
+			.summary-text {
+				padding-right: 16px;
 			}
 
 		}
@@ -58,6 +62,10 @@
 	.random-facts {
 		padding-top: 40px;
 		padding-bottom: 40px;
+
+		img {
+			margin: auto 36px;
+		}
 	}
 
 	.skills-container {
@@ -72,6 +80,7 @@
 	.feature-title {
 		font-weight: bold;
 		font-style: italic;
+		margin-top: 8px;
 	}
 
 	.featured {

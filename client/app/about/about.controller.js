@@ -5,7 +5,10 @@ angular.module('portfolioApp').controller('AboutCtrl', ['$scope','$rootScope', '
 	function ($scope, $rootScope, $interval, Dataobjects, $compile, $timeout, $http) {
 		var ac = this,
 			photoInt,
-			nextIndex;
+			nextIndex,
+            screenWidth = window.innerWidth;
+
+        ac.gtMd = screenWidth >= 1280 ? true : false;
         ac.showLastfm = true;
         ac.theme = $rootScope.theme;
         ac.photoArr = ['../assets/images/about/meDsShow.jpg', '../assets/images/about/coachingSoccer.jpg',
