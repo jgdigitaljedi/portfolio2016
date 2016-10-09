@@ -1,4 +1,5 @@
 'use strict';
+/*jshint camelcase: false */
 
 angular.module('portfolioApp').controller('ProjectsCtrl', ['$rootScope', '$scope', 'Dataobjects', '$mdDialog', '$timeout', '$http', '$compile',
 	function ($rootScope, $scope, Dataobjects, $mdDialog, $timeout, $http, $compile) {
@@ -21,6 +22,7 @@ angular.module('portfolioApp').controller('ProjectsCtrl', ['$rootScope', '$scope
 			if (pc.whichProjects === 'work') {
 				for (var project in pc.projects) {
 					pc.projects[project].color = getRandomColor();
+					pc.projects[project].tile = '../../assets/images/no-image.png';
 				}				
 			}
 		}
