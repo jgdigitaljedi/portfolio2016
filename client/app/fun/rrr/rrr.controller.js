@@ -50,8 +50,9 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 						rrrc.showDistOptions.noPreference = false;
 						rrrc.showDistOptions.shortDrive = false;
 						rrrc.showDistOptions.longWalk = false;
-						rrrc.step = 'second';
 					}
+					rrrc.step = 'first';
+					// rrrc.step = 'second';
 				})
 				.error(function (error) {
 					console.log('yelp error', error);
@@ -65,7 +66,7 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
         			long: data.location.coords.longitude
         		};
         		callYelp(data.location.coords.latitude, data.location.coords.longitude);
-        		rrrc.step = 'first';
+        		// rrrc.step = 'first';
         		$state.go('rrr.options');
         	});
         };

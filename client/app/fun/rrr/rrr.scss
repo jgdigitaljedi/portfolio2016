@@ -60,6 +60,7 @@
 
 		.option-cards {
 			margin-top: 40px;
+			@include fade-In(1.3s);			
 
 			.types-card {
 				max-width: 700px;
