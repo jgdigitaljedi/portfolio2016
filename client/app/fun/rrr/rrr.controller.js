@@ -52,7 +52,6 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 						rrrc.showDistOptions.longWalk = false;
 					}
 					rrrc.step = 'first';
-					// rrrc.step = 'second';
 				})
 				.error(function (error) {
 					console.log('yelp error', error);
