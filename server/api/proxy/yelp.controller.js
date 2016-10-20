@@ -18,7 +18,8 @@ exports.getYelpInfo = function(req, res) {
 		default_parameters = {
 		    ll: req.lat + ',' + req.long,
 		    sort: '1',
-		    term: 'food'
+		    term: 'food',
+		    radius_filter: 40000
 		},
 		required_parameters = {
 		    oauth_consumer_key : process.env.JYELPKEY,

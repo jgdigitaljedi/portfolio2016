@@ -42,7 +42,11 @@ $ grunt serve
 
  - Style it up
  - Make it more responsive
- - Finish fun page
+ - Redesign fun page (no thoughts on something visually appealing yet)
  - Make a social page
  - Finish Restaurant Roulette Remix
+ 	- make result cards same height always
+ 	- stress test it some more
+ 	- darken background in night mode
+ 	- delay distance options card rendering until possible options are calculated
  - Eventually add a blog
