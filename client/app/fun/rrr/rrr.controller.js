@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$http', 'Geolocation', '$state', 
-	'Helpers', 'Googlemaps', '$timeout',
-	function ($scope, $rootScope, $http, Geolocation, $state, Helpers, Googlemaps, $timeout) {
+	'Helpers', 'Googlemaps', '$timeout', '$compile',
+	function ($scope, $rootScope, $http, Geolocation, $state, Helpers, Googlemaps, $timeout, $compile) {
         var rrrc = this,
         	distances = {
         		shortWalk: 600, // 7.5 minutes at 80m per minute
@@ -50,6 +50,7 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 						rrrc.showDistOptions.noPreference = false;
 						rrrc.showDistOptions.shortDrive = false;
 						rrrc.showDistOptions.longWalk = false;
+						// rrrc.step = 'second';
 					}
 					rrrc.step = 'first';
 				})
@@ -78,7 +79,6 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
         };
 
         rrrc.acceptAddress = function () {
-        	console.log('place', $rootScope.manualPlace);
         	userCoords = $rootScope.manualPlace;
         	callYelp(userCoords.lat, userCoords.long);
         	rrrc.step = 'first';
@@ -160,7 +160,6 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 		}
 
 		function goToResults () {
-			console.log('finalAnswer', rrrc.finalAnswer);
 			rrrc.step = 'first';
 			$state.go('rrr.results');
 		}
@@ -193,6 +192,22 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 		};
 
 		rrrc.backToStart = function () {
+			rrrc.selectedDistance = null;
+			rrrc.finalAnswer = [];
+			$rootScope.manualPlace = '';
+			rrrc.restaurantChoices = [];
+			rrrc.userChoices = null;
+			rrrc.selectOptions(false);
+			rrrc.categories = [];
+			rrrc.filteredChoices = [];
+			rrrc.categories = [];
+			rrrc.selectedCategories = {list: []};
+			rrrc.showDistOptions = {
+				shortWalk: true,
+				longWalk: true,
+				shortDrive: true,
+				noPreference: true
+			};
 			$state.go('rrr.main');
 		};
 
@@ -210,6 +225,12 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 		};
 
 		rrrc.getDirections = function (choice) {
+			var travelMode;
+			if (rrrc.selectedDistance === 'shortWalk' || rrrc.selectedDistance === 'longWalk') {
+				travelMode = 'WALKING';
+			} else {
+				travelMode = 'DRIVING';
+			}
 			rrrc.mapView = 'directions';
 			$state.go('rrr.directions');
 			var options = {
@@ -229,12 +250,26 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 				dest: {
 					lat: choice.location.coordinate.latitude,
 					long: choice.location.coordinate.longitude
-				}
+				},
+				travelMode: travelMode
 			};
 			$timeout(function () {
 				Googlemaps.generateStaticMap({options});
 			}, 500);
 		};
+
+		$rootScope.$on('directionsStringReady', function () {
+			var directions = Googlemaps.getDirections(),
+				dirTemp = '<div>',
+				dLen = directions.steps.length;
+			directions.steps.forEach(function (item, index) {
+				// dirTemp += item.instructions + ' <span> (' + item.duration.text + ')</span><br>';
+				dirTemp += item.instructions + ' <br>';
+				if (index + 1 === dLen) dirTemp += '<span style="font-style: italic; color: blue;">(' + directions.duration + ')</span></div>';
+			});
+			var dirs = $compile(dirTemp)($scope);
+			$('#card-content').append(dirs);
+		});
 
 		rrrc.backToResults = function () {
 			$state.go('rrr.results');

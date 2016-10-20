@@ -14,7 +14,8 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope
 			firstOptions,
 			input,
 			autocomplete,
-			infowindow;
+			infowindow,
+			steps = {};
 
 		function loadScript () {
 			if (!gmapsLoaded) {
@@ -119,15 +120,17 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope
 		}
 
 		function calcRoute (options) {
-			console.log('calc options', options);
 		  	var request = {
 		    	origin: new google.maps.LatLng(options.origin.lat, options.origin.long),
 		    	destination: new google.maps.LatLng(options.dest.lat, options.dest.long),
-		    	travelMode: 'WALKING' // need to make this changeable eventually
+		    	travelMode: options.travelMode // need to make this changeable eventually
 		  	};
 		  	directionsService.route(request, function(result, status) {
 		    	if (status === 'OK') {
 		      		directionsDisplay.setDirections(result);
+		      		steps.steps = result.routes[0].legs[0].steps;
+		      		steps.duration = result.routes[0].legs[0].duration.text;
+		      		$rootScope.$broadcast('directionsStringReady');
 		    	}
 		  	});
 		}
@@ -154,7 +157,6 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope
 					dirMap(firstOptions);
 				}
 			} else {
-				console.log('places picker');
 				placesElement();
 			}
 		};
@@ -183,6 +185,9 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope
 				gmapKey = sessionStorage.getItem('gmapKey');
 				directionsMap = false;
 				loadItUp('places');
+			},
+			getDirections: function () {
+				return steps;
 			}
 		};
 	}
