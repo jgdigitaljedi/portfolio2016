@@ -1,8 +1,10 @@
 'use strict';
+ /*jshint camelcase: false */
 
 angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$http', 'Geolocation', '$state', 
 	'Helpers', 'Googlemaps', '$timeout', '$compile',
 	function ($scope, $rootScope, $http, Geolocation, $state, Helpers, Googlemaps, $timeout, $compile) {
+		// this controller needs an organizational/DRY refactor soon
         var rrrc = this,
         	distances = {
         		shortWalk: 600, // 7.5 minutes at 80m per minute
@@ -28,6 +30,12 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
         });
 
         function callYelp (uLat, uLong) {
+        	rrrc.showDistOptions = {
+        		shortWalk: true,
+        		longWalk: true,
+        		shortDrive: true,
+        		noPreference: true
+        	};
 			$http.get('/api/proxy/getyelpinfo/' + uLat + '/' + uLong)
 				.success(function (response) {
 					response = JSON.parse(response.content);
@@ -162,6 +170,15 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 		function goToResults () {
 			rrrc.step = 'first';
 			$state.go('rrr.results');
+			if (rrrc.userChoices === '2') {
+				$timeout(function () {
+					var cards = $('.result-card'),
+						tallest = 0;
+					tallest = cards[0].clientHeight > cards[1].clientHeight ? cards[0].clientHeight : cards[1].clientHeight;
+					tallest = tallest - 16;
+					$(cards).height(tallest);
+				}, 100);				
+			}
 		}
 
 		function cleanCategories (result) {

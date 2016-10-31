@@ -1,6 +1,10 @@
 /**
  * App-wide Styles
  */
+
+ html, body {
+  min-height: 100%;
+ }
 $blue-gray: #607d8b;
 $dark-amber: #ffc107;
 $flat-black: #212121;

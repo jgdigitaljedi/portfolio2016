@@ -3,7 +3,9 @@
 	// background-position: bottom;
 	// background-size: contain;
 	// background-repeat:  no-repeat;
-	height: calc(100vh - 64px);
+	background-size: 100% auto;
+	min-height: calc(100vh - 64px);
+	height: 100%;
 	@include fade-In(1s);
 
 
@@ -32,6 +34,7 @@
 		.app-row {
 			display: flex;
 			.app-card {
+				max-width: 800px;
 				
 				.app-title {
 					font-size: 2em;
