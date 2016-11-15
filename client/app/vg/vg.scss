@@ -1,0 +1,9 @@
+.games-collection-section {
+    min-height: 100%;
+    @include fade-In(1s);
+
+    md-tabs {
+      height: calc(100vh - 46px);
+    }
+
+}

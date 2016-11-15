@@ -82,5 +82,11 @@ angular.module('portfolioApp')
           .state('rrr.manual', {
             parent: 'rrr',
             templateUrl: 'app/fun/rrr/templates/manual.html'
+          })
+          .state('games', {
+            url:'/games',
+            templateUrl: 'app/vg/games.html',
+            controller: 'GamesCtrl',
+            controllerAs: 'gc'
           });
   	});

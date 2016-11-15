@@ -3,7 +3,8 @@
 var express = require('express');
 var proxy = require('./proxy.controller'),
     morning = require('./morning.controller'),
-    yelp = require('./yelp.controller');
+    yelp = require('./yelp.controller'),
+    games = require('./games.controller');
 
 var router = express.Router();
 
@@ -18,5 +19,6 @@ router.get('/mygithub', proxy.myGithub);
 router.get('/afterwork', morning.getHomeCommute);
 router.get('/getyelpinfo/:lat/:long', yelp.getYelpInfo);
 router.get('/getgmapkey', proxy.gmapkey);
+router.get('/gameslibrary', games.getlibrary);
 
 module.exports = router;
