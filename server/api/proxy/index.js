@@ -20,5 +20,6 @@ router.get('/afterwork', morning.getHomeCommute);
 router.get('/getyelpinfo/:lat/:long', yelp.getYelpInfo);
 router.get('/getgmapkey', proxy.gmapkey);
 router.get('/gameslibrary', games.getlibrary);
+router.get('/hardwarelibrary', games.getHWLibrary);
 
 module.exports = router;

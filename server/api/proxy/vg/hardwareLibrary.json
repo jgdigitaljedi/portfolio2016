@@ -282,11 +282,74 @@
       "Total" : 200
     },
     {
-      "Accessory" : "Wii U",
-      "Console" : "Wii U",
+      "Accessory" : "N64",
+      "Console" : "N64",
       "Quantity" : 1,
-      "Value" : 200,
-      "Total" : 200
+      "Value" : 65,
+      "Total" : 65
+    },
+    {
+      "Accessory" : "Genesis",
+      "Console" : "Genesis",
+      "Quantity" : 1,
+      "Value" : 60,
+      "Total" : 60
+    },
+    {
+      "Accessory" : "PS2 Slim",
+      "Console" : "PS2",
+      "Quantity" : 1,
+      "Value" : 65,
+      "Total" : 65
+    },
+    {
+      "Accessory" : "PS3",
+      "Console" : "PS3",
+      "Quantity" : 1,
+      "Value" : 100,
+      "Total" : 100
+    },
+    {
+      "Accessory" : "Wii",
+      "Console" : "Wii",
+      "Quantity" : 1,
+      "Value" : 75,
+      "Total" : 75
+    },
+    {
+      "Accessory" : "PSP 1001",
+      "Console" : "PSP",
+      "Quantity" : 1,
+      "Value" : 60,
+      "Total" : 60
+    },
+    {
+      "Accessory" : "GBA SP",
+      "Console" : "GBA SP",
+      "Quantity" : 1,
+      "Value" : 30,
+      "Total" : 30
+    },
+    {
+      "Accessory" : "3DS",
+      "Console" : "3DS",
+      "Quantity" : 1,
+      "Value" : 150,
+      "Total" : 150
+    },
+    {
+      "Accessory" : "NES",
+      "Console" : "NES",
+      "Quantity" : 1,
+      "Value" : 75,
+      "Total" : 75
+    },
+    {
+      "Accessory" : "Gamecube",
+      "Console" : "Gamecube",
+      "Quantity" : 1,
+      "Value" : 50,
+      "Total" : 50
     }
   ]
 }
