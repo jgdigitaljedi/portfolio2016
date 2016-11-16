@@ -1,0 +1,292 @@
+
+{
+  "hardware" : [
+    {
+      "Accessory" : "Sega Controller",
+      "Console" : "Dreamcast",
+      "Quantity" : 2,
+      "Value" : 20,
+      "Total" : 40
+    },
+    {
+      "Accessory" : "VMU",
+      "Console" : "Dreamcast",
+      "Quantity" : 1,
+      "Value" : 8,
+      "Total" : 8
+    },
+    {
+      "Accessory" : "Memory Card",
+      "Console" : "Dreamcast",
+      "Quantity" : 1,
+      "Value" : 5,
+      "Total" : 5
+    },
+    {
+      "Accessory" : "Jump Pack",
+      "Console" : "Dreamcast",
+      "Quantity" : 1,
+      "Value" : 7,
+      "Total" : 7
+    },
+    {
+      "Accessory" : "Wavebird Controller",
+      "Console" : "Gamecube",
+      "Quantity" : 2,
+      "Value" : 35,
+      "Total" : 70
+    },
+    {
+      "Accessory" : "Nintendo Controller",
+      "Console" : "Gamecube",
+      "Quantity" : 2,
+      "Value" : 15,
+      "Total" : 30
+    },
+    {
+      "Accessory" : "Microphone",
+      "Console" : "Gamecube",
+      "Quantity" : 1,
+      "Value" : 6,
+      "Total" : 6
+    },
+    {
+      "Accessory" : "Memory Card",
+      "Console" : "Gamecube",
+      "Quantity" : 1,
+      "Value" : 6,
+      "Total" : 6
+    },
+    {
+      "Accessory" : "Bongo Controller",
+      "Console" : "Gamecube",
+      "Quantity" : 2,
+      "Value" : 7,
+      "Total" : 14
+    },
+    {
+      "Accessory" : "Sega Controller",
+      "Console" : "Genesis",
+      "Quantity" : 1,
+      "Value" : 11,
+      "Total" : 11
+    },
+    {
+      "Accessory" : "Nintendo Controller",
+      "Console" : "NES",
+      "Quantity" : 3,
+      "Value" : 14,
+      "Total" : 42
+    },
+    {
+      "Accessory" : "Light Gun",
+      "Console" : "NES",
+      "Quantity" : 1,
+      "Value" : 14,
+      "Total" : 14
+    },
+    {
+      "Accessory" : "Charger",
+      "Console" : "3DS",
+      "Quantity" : 2,
+      "Value" : 5,
+      "Total" : 10
+    },
+    {
+      "Accessory" : "Carrying Case",
+      "Console" : "3DS",
+      "Quantity" : 1,
+      "Value" : 15,
+      "Total" : 15
+    },
+    {
+      "Accessory" : "Nintendo Controller",
+      "Console" : "N64",
+      "Quantity" : 1,
+      "Value" : 10,
+      "Total" : 10
+    },
+    {
+      "Accessory" : "3rd Party Controller",
+      "Console" : "N64",
+      "Quantity" : 1,
+      "Value" : 8,
+      "Total" : 8
+    },
+    {
+      "Accessory" : "Expansion Card",
+      "Console" : "N64",
+      "Quantity" : 1,
+      "Value" : 25,
+      "Total" : 25
+    },
+    {
+      "Accessory" : "Rumble Pack",
+      "Console" : "N64",
+      "Quantity" : 1,
+      "Value" : 11,
+      "Total" : 11
+    },
+    {
+      "Accessory" : "Memory Card",
+      "Console" : "N64",
+      "Quantity" : 1,
+      "Value" : 8,
+      "Total" : 8
+    },
+    {
+      "Accessory" : "Sony Controller",
+      "Console" : "PS2",
+      "Quantity" : 3,
+      "Value" : 7,
+      "Total" : 21
+    },
+    {
+      "Accessory" : "Memory Card",
+      "Console" : "PS2",
+      "Quantity" : 2,
+      "Value" : 8,
+      "Total" : 16
+    },
+    {
+      "Accessory" : "Multi-Tap",
+      "Console" : "PS2",
+      "Quantity" : 1,
+      "Value" : 8,
+      "Total" : 8
+    },
+    {
+      "Accessory" : "Guitar Controller",
+      "Console" : "PS2",
+      "Quantity" : 2,
+      "Value" : 18,
+      "Total" : 36
+    },
+    {
+      "Accessory" : "Taiko Drum Controller",
+      "Console" : "PS2",
+      "Quantity" : 1,
+      "Value" : 15,
+      "Total" : 15
+    },
+    {
+      "Accessory" : "DVD Remote",
+      "Console" : "PS2",
+      "Quantity" : 1,
+      "Value" : 5,
+      "Total" : 5
+    },
+    {
+      "Accessory" : "Sony Controller",
+      "Console" : "PS3",
+      "Quantity" : 2,
+      "Value" : 15,
+      "Total" : 30
+    },
+    {
+      "Accessory" : "Bluetooth Headset",
+      "Console" : "PS3",
+      "Quantity" : 1,
+      "Value" : 10,
+      "Total" : 10
+    },
+    {
+      "Accessory" : "Bluray Remote",
+      "Console" : "PS3",
+      "Quantity" : 1,
+      "Value" : 20,
+      "Total" : 20
+    },
+    {
+      "Accessory" : "Charger",
+      "Console" : "PSP",
+      "Quantity" : 1,
+      "Value" : 5,
+      "Total" : 5
+    },
+    {
+      "Accessory" : "Carrying Case",
+      "Console" : "PSP",
+      "Quantity" : 1,
+      "Value" : 10,
+      "Total" : 10
+    },
+    {
+      "Accessory" : "Game Case",
+      "Console" : "PSP",
+      "Quantity" : 1,
+      "Value" : 8,
+      "Total" : 8
+    },
+    {
+      "Accessory" : "Nintendo Nunchuck",
+      "Console" : "Wii",
+      "Quantity" : 3,
+      "Value" : 5,
+      "Total" : 15
+    },
+    {
+      "Accessory" : "Nintendo Wiimote",
+      "Console" : "Wii",
+      "Quantity" : 4,
+      "Value" : 16,
+      "Total" : 64
+    },
+    {
+      "Accessory" : "3rd Party Wiimote",
+      "Console" : "Wii",
+      "Quantity" : 1,
+      "Value" : 8,
+      "Total" : 8
+    },
+    {
+      "Accessory" : "Nintendo Classic Controller",
+      "Console" : "Wii",
+      "Quantity" : 1,
+      "Value" : 10,
+      "Total" : 10
+    },
+    {
+      "Accessory" : "Steering Wheel Remote",
+      "Console" : "Wii",
+      "Quantity" : 1,
+      "Value" : 7,
+      "Total" : 7
+    },
+    {
+      "Accessory" : "Gun Remote",
+      "Console" : "Wii",
+      "Quantity" : 2,
+      "Value" : 5,
+      "Total" : 10
+    },
+    {
+      "Accessory" : "Premium Light Bar",
+      "Console" : "Wii U",
+      "Quantity" : 1,
+      "Value" : 30,
+      "Total" : 30
+    },
+    {
+      "Accessory" : "Sega Dreamcast",
+      "Console" : "Dreamcast",
+      "Quantity" : 56,
+      "Value" : 40,
+      "Total" : 40
+    },
+    {
+      "Accessory" : "Wii U",
+      "Console" : "Wii U",
+      "Quantity" : 1,
+      "Value" : 200,
+      "Total" : 200
+    },
+    {
+      "Accessory" : "Wii U",
+      "Console" : "Wii U",
+      "Quantity" : 1,
+      "Value" : 200,
+      "Total" : 200
+    }
+  ]
+}
