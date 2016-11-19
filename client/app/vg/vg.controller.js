@@ -140,8 +140,52 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 			}
 		}
 
-		function buildGameWishlistTable () {
+		function gwlTable () {
+			console.log('games wishlist', gc.gamesWl);
+			$('#games-wishlist-table').DataTable({
+				aaData: gc.hwLibrary,
+				aoColumns: [
+					{'mDataProp': 'game', title: 'Game'},
+					{'mDataProp': 'console', title: 'Console'},
+					{'mDataProp': 'price', title: 'Price (loose)', render: {'_': 'filter', 'filter': 'filter', 'display': 'display'}},
+					{'mDataProp': 'cib', title: 'Price (CIB)', render: {'_': 'filter', 'filter': 'filter', 'display': 'display'}}
+				],
+				'aaSorting': [[1,'asc'], [0,'asc']],
+				'lengthMenu': [[10, 25, 50, -1], [10, 25, 50, 'All']],
+				'iDisplayLength': -1
+			});
+			var table = $('#games-wishlist-table').dataTable();
+			table.fnClearTable();
+			table.fnAddData(gc.gamesWl);
+		}
 
+		function buildGameWishlistTable () {
+			if (!gc.gamesWl) {
+				getData('gameswishlist').then(function (response) {
+					console.log('games wishlist', response);
+					gc.gamesWl = [];
+					for (var key in response) {
+						for (var game in response[key]) {
+							gc.gamesWl.push({
+								console: key,
+								price: {
+									filter: response[key][game].price,
+									display: response[key][game].price ? formatPrice(response[key][game].price) : '--'
+								},
+								cib: {
+									filter: response[key][game].price_CIB || '--',
+									display: response[key][game].price_CIB ? formatPrice(response[key][game].price_CIB) : '--'
+								},
+								game: response[key][game].games});
+						}
+					}
+					gwlTable();
+				});
+			} else {
+				if (!($('#games-wishlist-table').hasClass('dataTable'))) {
+					gwlTable();				
+				}
+			}
 		}
 
 		function buildHWWishlist () {

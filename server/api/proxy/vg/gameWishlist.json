@@ -1,0 +1,1001 @@
+{
+  "NES" : {
+    "A Boy and His Blob" : {
+      "games" : "A Boy and His Blob",
+      "price_CIB" : 32,
+      "price" : 12
+    },
+    "Baseball Stars" : {
+      "games" : "Baseball Stars",
+      "price_CIB" : 27,
+      "price" : 11
+    },
+    "Baseball Stars 2" : {
+      "games" : "Baseball Stars 2",
+      "price_CIB" : 38,
+      "price" : 18
+    },
+    "Batman" : {
+      "games" : "Batman",
+      "price_CIB" : 35,
+      "price" : 8
+    },
+    "Blaster Master" : {
+      "games" : "Blaster Master",
+      "price_CIB" : 31,
+      "price" : 10
+    },
+    "Castlevania " : {
+      "games" : "Castlevania ",
+      "price_CIB" : 75,
+      "price" : 19
+    },
+    "Castlevania  2" : {
+      "games" : "Castlevania  2",
+      "price_CIB" : 31,
+      "price" : 9
+    },
+    "Contra" : {
+      "games" : "Contra",
+      "price_CIB" : 83,
+      "price" : 32
+    },
+    "Double Dragon" : {
+      "games" : "Double Dragon",
+      "price_CIB" : 40,
+      "price" : 10
+    },
+    "Double Dragon 2" : {
+      "games" : "Double Dragon 2",
+      "price_CIB" : 34,
+      "price" : 11
+    },
+    "Excitebike" : {
+      "games" : "Excitebike",
+      "price_CIB" : 36,
+      "price" : 8
+    },
+    "Final Fantasy" : {
+      "games" : "Final Fantasy",
+      "price_CIB" : 60,
+      "price" : 16
+    },
+    "Ghosts and Goblins" : {
+      "games" : "Ghosts and Goblins",
+      "price_CIB" : 71,
+      "price" : 13
+    },
+    "Gradius" : {
+      "games" : "Gradius",
+      "price_CIB" : 47,
+      "price" : 11
+    },
+    "Kid Icarus" : {
+      "games" : "Kid Icarus",
+      "price_CIB" : 65,
+      "price" : 18
+    },
+    "Kung Fu" : {
+      "games" : "Kung Fu",
+      "price_CIB" : 34,
+      "price" : 6
+    },
+    "Lifeforce" : {
+      "games" : "Lifeforce",
+      "price_CIB" : 35,
+      "price" : 12
+    },
+    "Mario 2" : {
+      "games" : "Mario 2",
+      "price_CIB" : 35,
+      "price" : 16
+    },
+    "Mega Man (all)" : {
+      "games" : "Mega Man (all)",
+      "price_CIB" : "",
+      "price" : ""
+    },
+    "Metroid" : {
+      "games" : "Metroid",
+      "price_CIB" : 67,
+      "price" : 18
+    },
+    "Mike Tyson's Punch Out" : {
+      "games" : "Mike Tyson's Punch Out",
+      "price_CIB" : 87,
+      "price" : 25
+    },
+    "Ninja Gaiden" : {
+      "games" : "Ninja Gaiden",
+      "price_CIB" : 42,
+      "price" : 11
+    },
+    "Ninja Gaiden 2" : {
+      "games" : "Ninja Gaiden 2",
+      "price_CIB" : 46,
+      "price" : 10
+    },
+    "RC Pro Am" : {
+      "games" : "RC Pro Am",
+      "price_CIB" : 20,
+      "price" : 6
+    },
+    "RC Pro AM 2" : {
+      "games" : "RC Pro AM 2",
+      "price_CIB" : 160,
+      "price" : 74
+    },
+    "Space Shuttle" : {
+      "games" : "Space Shuttle",
+      "price_CIB" : 29,
+      "price" : 16
+    },
+    "Super C" : {
+      "games" : "Super C",
+      "price_CIB" : 60,
+      "price" : 17
+    },
+    "Tecmo Super Bowl" : {
+      "games" : "Tecmo Super Bowl",
+      "price_CIB" : 28,
+      "price" : 26
+    },
+    "Zelda" : {
+      "games" : "Zelda",
+      "price_CIB" : 52,
+      "price" : 20
+    },
+    "Zelda II: The Adventure of Link" : {
+      "games" : "Zelda II: The Adventure of Link",
+      "price_CIB" : 56,
+      "price" : 15
+    }
+  },
+  "Genesis" : {
+    "Aladdin" : {
+      "games" : "Aladdin",
+      "price_CIB" : 16,
+      "price" : 9
+    },
+    "Altered Beast" : {
+      "games" : "Altered Beast",
+      "price_CIB" : 15,
+      "price" : 9
+    },
+    "Blades of Vengence" : {
+      "games" : "Blades of Vengence",
+      "price_CIB" : 65,
+      "price" : 40
+    },
+    "Castlevania: Bloodlines" : {
+      "games" : "Castlevania: Bloodlines",
+      "price_CIB" : 85,
+      "price" : 50
+    },
+    "Ghouls 'n Ghosts" : {
+      "games" : "Ghouls 'n Ghosts",
+      "price_CIB" : 45,
+      "price" : 23.5
+    },
+    "Golden Axe" : {
+      "games" : "Golden Axe",
+      "price_CIB" : 24,
+      "price" : 11.5
+    },
+    "Mazin Saga Mutant Fighter" : {
+      "games" : "Mazin Saga Mutant Fighter",
+      "price_CIB" : 80,
+      "price" : 28
+    },
+    "Michael Jackson’s Moonwalker" : {
+      "games" : "Michael Jackson’s Moonwalker",
+      "price_CIB" : 72,
+      "price" : 40
+    },
+    "Mortal Kombat II" : {
+      "games" : "Mortal Kombat II",
+      "price_CIB" : 13,
+      "price" : 8
+    },
+    "NBA Jam TE" : {
+      "games" : "NBA Jam TE",
+      "price_CIB" : 10,
+      "price" : 7
+    },
+    "Revenge of Shinobi" : {
+      "games" : "Revenge of Shinobi",
+      "price_CIB" : 33.5,
+      "price" : 12
+    },
+    "Sonic 3D Blast" : {
+      "games" : "Sonic 3D Blast",
+      "price_CIB" : 18,
+      "price" : 6
+    },
+    "Sonic Spinball" : {
+      "games" : "Sonic Spinball",
+      "price_CIB" : 9,
+      "price" : 5
+    },
+    "Sonic the Hedgehog" : {
+      "games" : "Sonic the Hedgehog",
+      "price_CIB" : 11,
+      "price" : 7
+    },
+    "Sonic the Hedgehog 3" : {
+      "games" : "Sonic the Hedgehog 3",
+      "price_CIB" : 22,
+      "price" : 10
+    },
+    "Streets of Rage" : {
+      "games" : "Streets of Rage",
+      "price_CIB" : 32,
+      "price" : 15
+    },
+    "Streets of Rage 2" : {
+      "games" : "Streets of Rage 2",
+      "price_CIB" : 32,
+      "price" : 15
+    },
+    "Streets of Rage 3" : {
+      "games" : "Streets of Rage 3",
+      "price_CIB" : 74,
+      "price" : 36
+    },
+    "Super Baseball 2020" : {
+      "games" : "Super Baseball 2020",
+      "price_CIB" : 12,
+      "price" : 7
+    },
+    "Super Street Fighter 2" : {
+      "games" : "Super Street Fighter 2",
+      "price_CIB" : 18,
+      "price" : 11
+    },
+    "Toejam and Earl" : {
+      "games" : "Toejam and Earl",
+      "price_CIB" : 20,
+      "price" : 13
+    }
+  },
+  "N64" : {
+    "Banjo Kazooie" : {
+      "games" : "Banjo Kazooie",
+      "price_CIB" : 35,
+      "price" : 17
+    },
+    "Blast Corps" : {
+      "games" : "Blast Corps",
+      "price_CIB" : 25,
+      "price" : 7
+    },
+    "Castlevania" : {
+      "games" : "Castlevania",
+      "price_CIB" : 30,
+      "price" : 10    
+    },
+    "Conker’s Bad Fur Day" : {
+      "games" : "Conker’s Bad Fur Day",
+      "price_CIB" : 133,
+      "price" : 80
+    },
+    "Diddy Kong Racing" : {
+      "games" : "Diddy Kong Racing",
+      "price_CIB" : 35,
+      "price" : 13
+    },
+    "Diddy Kong Racing 2" : {
+      "games" : "Diddy Kong Racing 2",
+      "price_CIB" : 30,
+      "price" : 10
+    },
+    "Duke Nukem: Zero Hour" : {
+      "games" : "Duke Nukem: Zero Hour",
+      "price_CIB" : 30,
+      "price" : 10
+    },
+    "Excitebike 64" : {
+      "games" : "Excitebike 64",
+      "price_CIB" : 21,
+      "price" : 8
+    },
+    "Extreme G" : {
+      "games" : "Extreme G",
+      "price_CIB" : 10,
+      "price" : 6
+    },
+    "F-Zero X" : {
+      "games" : "F-Zero X",
+      "price_CIB" : 40,
+      "price" : 13
+    },
+    "Kirby 64" : {
+      "games" : "Kirby 64",
+      "price_CIB" : 52,
+      "price" : 18
+    },
+    "Mario 64" : {
+      "games" : "Mario 64",
+      "price_CIB" : 44,
+      "price" : 24
+    },
+    "Mario Golf" : {
+      "games" : "Mario Golf",
+      "price_CIB" : 32,
+      "price" : 13
+    },
+    "Mario Kart 64" : {
+      "games" : "Mario Kart 64",
+      "price_CIB" : 60,
+      "price" : 37
+    },
+    "Mario Party" : {
+      "games" : "Mario Party",
+      "price_CIB" : 70,
+      "price" : 37
+    },
+    "Micro Machines 64" : {
+      "games" : "Micro Machines 64",
+      "price_CIB" : 20,
+      "price" : 10
+    },
+    "Mortal Kombat 4" : {
+      "games" : "Mortal Kombat 4",
+      "price_CIB" : 26,
+      "price" : 14
+    },
+    "Rogue Squadron" : {
+      "games" : "Rogue Squadron",
+      "price_CIB" : 17,
+      "price" : 8
+    },
+    "Star Fox 64" : {
+      "games" : "Star Fox 64",
+      "price_CIB" : 50,
+      "price" : 11
+    },
+    "Star Wars Episode 1 Racer" : {
+      "games" : "Star Wars Episode 1 Racer",
+      "price_CIB" : 15,
+      "price" : 5
+    },
+    "Super Smash Bros" : {
+      "games" : "Super Smash Bros",
+      "price_CIB" : 75,
+      "price" : 46
+    },
+    "The World is not Enough" : {
+      "games" : "The World is not Enough",
+      "price_CIB" : 20,
+      "price" : 7
+    },
+    "Yoshi's Story" : {
+      "games" : "Yoshi's Story",
+      "price_CIB" : 36,
+      "price" : 16
+    },
+    "Zelda: Majora's Mask" : {
+      "games" : "Zelda: Majora's Mask",
+      "price_CIB" : 70,
+      "price" : 32
+    }
+  },
+  "Dreamcast" : {
+    "Chu Chu Rocket" : {
+      "games" : "Chu Chu Rocket",
+      "price_CIB" : 12,
+      "price" : 8
+    },
+    "Crazy Taxi 2" : {
+      "games" : "Crazy Taxi 2",
+      "price_CIB" : 17,
+      "price" : 11
+    },
+    "Ecco the Dolphin: Defender of the Future" : {
+      "games" : "Ecco the Dolphin: Defender of the Future",
+      "price_CIB" : 14,
+      "price" : 8
+    },
+    "Jet Grind Radio" : {
+      "games" : "Jet Grind Radio",
+      "price_CIB" : 17.5,
+      "price" : 16
+    },
+    "Marvel vs Capcom 2" : {
+      "games" : "Marvel vs Capcom 2",
+      "price_CIB" : 56,
+      "price" : 46
+    },
+    "Power Stone 2" : {
+      "games" : "Power Stone 2",
+      "price_CIB" : 86,
+      "price" : 72
+    },
+    "Quake 3: Arena" : {
+      "games" : "Quake 3: Arena",
+      "price_CIB" : 10,
+      "price" : 8
+    },
+    "Re-Volt" : {
+      "games" : "Re-Volt",
+      "price_CIB" : 16,
+      "price" : 13
+    },
+    "Ready 2 Rumble Boxing" : {
+      "games" : "Ready 2 Rumble Boxing",
+      "price_CIB" : 10,
+      "price" : 6
+    },
+    "Shenmue" : {
+      "games" : "Shenmue",
+      "price_CIB" : 40,
+      "price" : 29
+    },
+    "Sonic Adventure" : {
+      "games" : "Sonic Adventure",
+      "price_CIB" : 18,
+      "price" : 12
+    },
+    "Sonic Adventure 2" : {
+      "games" : "Sonic Adventure 2",
+      "price_CIB" : 40,
+      "price" : 25
+    },
+    "Soul Calibur" : {
+      "games" : "Soul Calibur",
+      "price_CIB" : 17,
+      "price" : 12
+    },
+    "Street Fighter 3: Double Impact" : {
+      "games" : "Street Fighter 3: Double Impact",
+      "price_CIB" : 40,
+      "price" : 31
+    },
+    "Toy Commander" : {
+      "games" : "Toy Commander",
+      "price_CIB" : 12,
+      "price" : 8
+    },
+    "Worms World Party" : {
+      "games" : "Worms World Party",
+      "price_CIB" : 22,
+      "price" : 16
+    }
+  },
+  "Gamecube" : {
+    "Donkey Kong: Jungle Beat" : {
+      "games" : "Donkey Kong: Jungle Beat",
+      "price" : 11
+    },
+    "Eternal Darkness: Sanity's Requiem" : {
+      "games" : "Eternal Darkness: Sanity's Requiem",
+      "price" : 39
+    },
+    "Luigi's Mansion" : {
+      "games" : "Luigi's Mansion",
+      "price" : 27
+    },
+    "Mario Party 4" : {
+      "games" : "Mario Party 4",
+      "price" : 27
+    },
+    "Mario Party 5" : {
+      "games" : "Mario Party 5",
+      "price" : 36
+    },
+    "Mario Power Tennis" : {
+      "games" : "Mario Power Tennis",
+      "price" : 12.5
+    },
+    "Metroid Prime 2: Echoes" : {
+      "games" : "Metroid Prime 2: Echoes",
+      "price" : 15
+    },
+    "Sonic Adventure 2 DX" : {
+      "games" : "Sonic Adventure 2 DX",
+      "price" : 21
+    },
+    "Soul Calibur 2" : {
+      "games" : "Soul Calibur 2",
+      "price" : 15
+    },
+    "Star Fox: Assault" : {
+      "games" : "Star Fox: Assault",
+      "price" : 24
+    },
+    "Star Wars Rogue Squadron 2" : {
+      "games" : "Star Wars Rogue Squadron 2",
+      "price" : 11
+    },
+    "Super Mario Strikers" : {
+      "games" : "Super Mario Strikers",
+      "price" : 30
+    },
+    "Super Monkey Ball" : {
+      "games" : "Super Monkey Ball",
+      "price" : 13
+    },
+    "Super Smash Bros Melee" : {
+      "games" : "Super Smash Bros Melee",
+      "price" : 49
+    },
+    "Time Splitters 2" : {
+      "games" : "Time Splitters 2",
+      "price" : 15.5
+    },
+    "Viewtiful Joe" : {
+      "games" : "Viewtiful Joe",
+      "price" : 11
+    },
+    "Viewtiful Joe 2" : {
+      "games" : "Viewtiful Joe 2",
+      "price" : 11
+    },
+    "Zelda Twilight Princess" : {
+      "games" : "Zelda Twilight Princess",
+      "price" : 42
+    }
+  },
+  "PS2" : {
+    "007 Nightfire" : {
+      "games" : "007 Nightfire",
+      "price" : 6
+    },
+    "Bully" : {
+      "games" : "Bully",
+      "price" : 11
+    },
+    "Devil May Cry 2" : {
+      "games" : "Devil May Cry 2",
+      "price" : 6
+    },
+    "Devil May Cry 3" : {
+      "games" : "Devil May Cry 3",
+      "price" : 5.25
+    },
+    "Final Fantasy X" : {
+      "games" : "Final Fantasy X",
+      "price" : 9
+    },
+    "Final Fantasy XII" : {
+      "games" : "Final Fantasy XII",
+      "price" : 7
+    },
+    "Frequency" : {
+      "games" : "Frequency",
+      "price" : 6
+    },
+    "God of War 2" : {
+      "games" : "God of War 2",
+      "price" : 7
+    },
+    "Gran Turismo 4" : {
+      "games" : "Gran Turismo 4",
+      "price" : 6
+    },
+    "Grand Theft Auto III" : {
+      "games" : "Grand Theft Auto III",
+      "price" : 4
+    },
+    "Grand Theft Auto Vice City" : {
+      "games" : "Grand Theft Auto Vice City",
+      "price" : 4
+    },
+    "Guitaroo-Man" : {
+      "games" : "Guitaroo-Man",
+      "price" : 17
+    },
+    "Half Life" : {
+      "games" : "Half Life",
+      "price" : 16
+    },
+    "Katamari Damacy" : {
+      "games" : "Katamari Damacy",
+      "price" : 13
+    },
+    "Manhunt" : {
+      "games" : "Manhunt",
+      "price" : 10
+    },
+    "Manhunt 2" : {
+      "games" : "Manhunt 2",
+      "price" : 15
+    },
+    "Ratchet and Clank: Up Your Arsenal" : {
+      "games" : "Ratchet and Clank: Up Your Arsenal",
+      "price" : 10
+    },
+    "Shadow of the Colossus" : {
+      "games" : "Shadow of the Colossus",
+      "price" : 15
+    },
+    "Star Wars: Battlefront 1" : {
+      "games" : "Star Wars: Battlefront 1",
+      "price" : 10.5
+    },
+    "Star Wars: Battlefront 2" : {
+      "games" : "Star Wars: Battlefront 2",
+      "price" : 13
+    },
+    "Star Wars: Jedi Starfighter" : {
+      "games" : "Star Wars: Jedi Starfighter",
+      "price" : 5
+    },
+    "Tekken Tag Tournament" : {
+      "games" : "Tekken Tag Tournament",
+      "price" : 5
+    },
+    "The Warriors" : {
+      "games" : "The Warriors",
+      "price" : 22
+    },
+    "Time Splitters: Future Perfect" : {
+      "games" : "Time Splitters: Future Perfect",
+      "price" : 23
+    },
+    "Tony Hawk Pro Skater 3" : {
+      "games" : "Tony Hawk Pro Skater 3",
+      "price" : 5.3
+    },
+    "Unreal Tournament" : {
+      "games" : "Unreal Tournament",
+      "price" : 6
+    }
+  },
+  "PS3" : {
+    "Assassin's Creed Brotherhood" : {
+      "games" : "Assassin's Creed Brotherhood",
+      "price" : 5
+    },
+    "Assassin's Creed IV" : {
+      "games" : "Assassin's Creed IV",
+      "price" : 6
+    },
+    "Assassin's Creed Revelations" : {
+      "games" : "Assassin's Creed Revelations",
+      "price" : 5
+    },
+    "Assassins Creed" : {
+      "games" : "Assassins Creed",
+      "price" : 5
+    },
+    "Assassins Creed III" : {
+      "games" : "Assassins Creed III",
+      "price" : 5
+    },
+    "Battlefield (all)" : {
+      "games" : "Battlefield (all)",
+      "price" : ""
+    },
+    "Borderlands 2" : {
+      "games" : "Borderlands 2",
+      "price" : 5
+    },
+    "Gran Turismo 5" : {
+      "games" : "Gran Turismo 5",
+      "price" : 5
+    },
+    "Gran Turismo 6" : {
+      "games" : "Gran Turismo 6",
+      "price" : 11
+    },
+    "Grand Theft Auto 4" : {
+      "games" : "Grand Theft Auto 4",
+      "price" : 6
+    },
+    "Killzone" : {
+      "games" : "Killzone",
+      "price" : 6
+    },
+    "Killzone 2" : {
+      "games" : "Killzone 2",
+      "price" : 5
+    },
+    "Killzone 3" : {
+      "games" : "Killzone 3",
+      "price" : 5
+    },
+    "Little Big Planet 2" : {
+      "games" : "Little Big Planet 2",
+      "price" : 9
+    },
+    "ModNation Racers" : {
+      "games" : "ModNation Racers",
+      "price" : 8
+    },
+    "Portal 2" : {
+      "games" : "Portal 2",
+      "price" : 12
+    },
+    "Red Dead Redemption" : {
+      "games" : "Red Dead Redemption",
+      "price" : 8
+    },
+    "Resident Evil 5" : {
+      "games" : "Resident Evil 5",
+      "price" : 7
+    },
+    "Sonic Generations" : {
+      "games" : "Sonic Generations",
+      "price" : 13
+    },
+    "Uncharted" : {
+      "games" : "Uncharted",
+      "price" : 6
+    },
+    "Uncharted 2" : {
+      "games" : "Uncharted 2",
+      "price" : 4
+    },
+    "Uncharted 3" : {
+      "games" : "Uncharted 3",
+      "price" : 5
+    },
+    "Uncharted 4" : {
+      "games" : "Uncharted 4",
+      "price" : 35
+    },
+    "Warhawk" : {
+      "games" : "Warhawk",
+      "price" : 5
+    }
+  },
+  "Wii" : {
+    "ExciteBots" : {
+      "games" : "ExciteBots",
+      "price" : 8
+    },
+    "Mario and Sonic London 2012 Olympics" : {
+      "games" : "Mario and Sonic London 2012 Olympics",
+      "price" : 8
+    },
+    "Mario and Sonic Olympic Winter games" : {
+      "games" : "Mario and Sonic Olympic Winter games",
+      "price" : 9
+    },
+    "New Super Mario Bros Wii" : {
+      "games" : "New Super Mario Bros Wii",
+      "price" : 13.5
+    },
+    "Resident Evil 4" : {
+      "games" : "Resident Evil 4",
+      "price" : 6
+    },
+    "Sega Superstar Tennis" : {
+      "games" : "Sega Superstar Tennis",
+      "price" : 4
+    },
+    "Tiger Woods PGA Tour 10" : {
+      "games" : "Tiger Woods PGA Tour 10",
+      "price" : 6
+    },
+    "Wacky Races Crash & Dash" : {
+      "games" : "Wacky Races: Crash & Dash",
+      "price" : 9
+    },
+    "Warioware: Smooth Moves" : {
+      "games" : "Warioware: Smooth Moves",
+      "price" : 14
+    },
+    "Wii Party" : {
+      "games" : "Wii Party",
+      "price" : 20
+    },
+    "Wii Play" : {
+      "games" : "Wii Play",
+      "price" : 5
+    },
+    "Xenoblade Chronicles" : {
+      "games" : "Xenoblade Chronicles",
+      "price" : 40
+    },
+    "Zelda: Skyward Sword" : {
+      "games" : "Zelda: Skyward Sword",
+      "price" : 30
+    }
+  },
+  "Wii U" : {
+    "Bayonetta 2" : {
+      "games" : "Bayonetta 2",
+      "price" : 50
+    },
+    "Hyrule Warriors" : {
+      "games" : "Hyrule Warriors",
+      "price" : 38
+    },
+    "Lego Star Wars The Force Awakens" : {
+      "games" : "Lego Star Wars: The Force Awakens",
+      "price" : 30
+    },
+    "Mario & Sonic Rio 2016 Olympics" : {
+      "games" : "Mario & Sonic Rio 2016 Olympics",
+      "price" : ""
+    },
+    "Mario Party 10" : {
+      "games" : "Mario Party 10",
+      "price" : 32
+    },
+    "Minecraft Wii U Edition" : {
+      "games" : "Minecraft Wii U Edition",
+      "price" : 28
+    },
+    "New Super Luigi U" : {
+      "games" : "New Super Luigi U",
+      "price" : 30
+    },
+    "New Super Mario Bros U" : {
+      "games" : "New Super Mario Bros U",
+      "price" : 28
+    },
+    "Pikmin 3" : {
+      "games" : "Pikmin 3",
+      "price" : 22
+    },
+    "Sonic Lost World" : {
+      "games" : "Sonic Lost World",
+      "price" : 22
+    },
+    "Splatoon" : {
+      "games" : "Splatoon",
+      "price" : 46
+    },
+    "Wii Sports Club" : {
+      "games" : "Wii Sports Club",
+      "price" : 60
+    },
+    "Xenoblade Chronicles X" : {
+      "games" : "Xenoblade Chronicles X",
+      "price" : 30
+    },
+    "Yoshi's Wooly World" : {
+      "games" : "Yoshi's Wooly World",
+      "price" : 27
+    },
+    "Zelda: Twilight Princess HD" : {
+      "games" : "Zelda: Twilight Princess HD",
+      "price" : 37
+    },
+    "Zelda: Wind Waker HD" : {
+      "games" : "Zelda: Wind Waker HD",
+      "price" : 25
+    },
+    "ZombiU" : {
+      "games" : "ZombiU",
+      "price" : 9.5
+    }
+  },
+  "PS4" : {
+    "Battlefield 1" : {
+      "games " : "Battlefield 1",
+      "price" : 60
+    },
+    "Call of Duty Black Ops 3" : {
+      "games " : "Call of Duty: Black Ops 3",
+      "price" : 50
+    },
+    "Dark Souls 3" : {
+      "games " : "Dark Souls 3",
+      "price" : 40
+    },
+    "Destiny" : {
+      "games " : "Destiny",
+      "price" : 60
+    },
+    "Grand Theft Auto V" : {
+      "games " : "Grand Theft Auto V",
+      "price" : 39
+    },
+    "Overwatch" : {
+      "games " : "Overwatch",
+      "price" : 60
+    },
+    "Pro Evolution Soccer 2017" : {
+      "games " : "Pro Evolution Soccer 2017",
+      "price" : 40
+    },
+    "Ratchet and Clank" : {
+      "games " : "Ratchet and Clank",
+      "price" : 20
+    },
+    "The Last of Us Remastered" : {
+      "games " : "The Last of Us Remastered",
+      "price" : 25
+    },
+    "The Witcher 3" : {
+      "games " : "The Witcher 3",
+      "price" : 39
+    },
+    "Uncharted 4" : {
+      "games " : "Uncharted 4",
+      "price" : 40
+    }
+  },
+  "PSP" : {
+    "Final Fantasy 7: Crisis Core" : {
+      "games" : "Final Fantasy 7: Crisis Core",
+      "price" : 10
+    },
+    "Twisted Metal Head On" : {
+      "games" : "Twisted Metal Head On",
+      "price" : 5.5
+    },
+    "Pursuit Force" : {
+      "games" : "Pursuit Force",
+      "price" : 10
+    },
+    "SOCOM Fireteam Bravo  1, 2, & 3" : {
+      "games" : "SOCOM Fireteam Bravo  1, 2, & 3",
+      "price" : 5
+    },
+    "SOCOM Tactical Strike" : {
+      "games" : "SOCOM Tactical Strike",
+      "price" : 4
+    },
+    "Metal Gear Solid Portable Ops" : {
+      "games" : "Metal Gear Solid Portable Ops",
+      "price" : 12
+    },
+    "Silent Hill: Shattered Memories" : {
+      "games" : "Silent Hill: Shattered Memories",
+      "price" : 19
+    },
+    "Hexyz Force" : {
+      "games" : "Hexyz Force",
+      "price" : 59
+    },
+    "Daxter" : {
+      "games" : "Daxter",
+      "price" : 7
+    },
+    "Gradius Collection" : {
+      "games" : "Gradius Collection",
+      "price" : 31
+    }
+  },
+  "GBA" : {
+    "Castlevania: Aria of Sorrow" : {
+      "games" : "Castlevania: Aria of Sorrow",
+      "price" : 35
+    },
+    "Final Fantasy 6 Advance" : {
+      "games" : "Final Fantasy 6 Advance",
+      "price" : 35
+    },
+    "Final Fantasy Tactics Advance" : {
+      "games" : "Final Fantasy Tactics Advance",
+      "price" : 10
+    },
+    "Kirby & the Amazing Mirror" : {
+      "games" : "Kirby & the Amazing Mirror",
+      "price" : 17
+    },
+    "Mario & Luigi: Superstar Saga" : {
+      "games" : "Mario & Luigi: Superstar Saga",
+      "price" : 14
+    },
+    "Mario Golf: Advance Tour" : {
+      "games" : "Mario Golf: Advance Tour",
+      "price" : 15
+    },
+    "Mario Kart: Super Circuit" : {
+      "games" : "Mario Kart: Super Circuit",
+      "price" : 9
+    },
+    "Metroid Fusion" : {
+      "games" : "Metroid Fusion",
+      "price" : 21
+    },
+    "Super Mario Advance 4" : {
+      "games" : "Super Mario Advance 4",
+      "price" : 26
+    },
+    "Wario Land 4" : {
+      "games" : "Wario Land 4",
+      "price" : 10
+    },
+    "WarioWare, Inc." : {
+      "games" : "WarioWare Inc.",
+      "price" : 27
+    }
+  }
+}
