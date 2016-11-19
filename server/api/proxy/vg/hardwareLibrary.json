@@ -270,7 +270,7 @@
     {
       "Accessory" : "Sega Dreamcast",
       "Console" : "Dreamcast",
-      "Quantity" : 56,
+      "Quantity" : 1,
       "Value" : 40,
       "Total" : 40
     },
@@ -349,7 +349,7 @@
       "Console" : "Gamecube",
       "Quantity" : 1,
       "Value" : 50,
-      "Total" : 50
+      "Total" : 50  
     }
   ]
 }

@@ -33,7 +33,7 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 
 		function glTable () {
 			$('#game-library-table').DataTable({
-				aaData: gc.gamelibrary,
+				aaData: gc.gameLibrary,
 				aoColumns: [
 					{'mDataProp': 'title', title: 'Title'},
 					{'mDataProp': 'platform', title: 'Platform'},
@@ -68,29 +68,75 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 							}
 
 						});
-						gc.gamelibrary = response.games;
+						gc.gameLibrary = response.games;
 						glTable();
 					} else {
 						console.warn('game lib error', response);
 					}
 				});
 			} else {
-				glTable();
+				if (!($('#game-library-table').hasClass('dataTable'))) {
+					glTable();					
+				}
 			}
 		}
 
 		function hwTable () {
-
+			console.log('hw table', gc.hwLibrary);
+			// var table = $('#hardware-library-table').dataTable();
+			$('#hardware-library-table').DataTable({
+				aaData: gc.hwLibrary,
+				aoColumns: [
+					{'mDataProp': 'Accessory', title: 'Hardware'},
+					{'mDataProp': 'Console', title: 'Console'},
+					{'mDataProp': 'Quantity', title: 'Quantity'},
+					{'mDataProp': 'Value', title: 'Value', render: {'_': 'filter', 'filter': 'filter', 'display': 'display'}},
+					{'mDataProp': 'Total', title: 'Total Value', render: {'_': 'filter', 'filter': 'filter', 'display': 'display'}}
+				],
+				'aaSorting': [[1,'asc'], [0,'asc']],
+				'lengthMenu': [[10, 25, 50, -1], [10, 25, 50, 'All']],
+				'iDisplayLength': -1
+			});
+			var table = $('#hardware-library-table').dataTable();
+			table.fnClearTable();
+			table.fnAddData(gc.hwLibrary.hardware);
 		}
 
 		function buildHWLibraryTable () {
 			if (!gc.hwLibrary) {
 				getData('hardwarelibrary').then(function (response) {
+					response.hardware.forEach(function (item) {
+						if (!item.Value) {
+							item.Value = {
+								filter: null,
+								display: '--'
+							};
+						} else {
+							item.Value = {
+								filter: item.Value,
+								display: formatPrice(item.Value)
+							};
+						}
+						if (!item.Total) {
+							item.Total = {
+								filter: null,
+								display: '--'
+							};
+						} else {
+							item.Total = {
+								filter: item.Total,
+								display: formatPrice(item.Total)
+							};
+						}
+
+					});
 					gc.hwLibrary = response;
 					hwTable();
 				});
 			} else {
-				hwTable();
+				if (!($('#hardware-library-table').hasClass('dataTable'))) {
+					hwTable();				
+				}
 			}
 		}
 
@@ -119,4 +165,5 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 			}
 		};
 	}
+
 ]);
