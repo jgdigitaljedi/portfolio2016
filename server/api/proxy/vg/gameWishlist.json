@@ -866,47 +866,47 @@
   },
   "PS4" : {
     "Battlefield 1" : {
-      "games " : "Battlefield 1",
+      "games" : "Battlefield 1",
       "price" : 60
     },
     "Call of Duty Black Ops 3" : {
-      "games " : "Call of Duty: Black Ops 3",
+      "games" : "Call of Duty: Black Ops 3",
       "price" : 50
     },
     "Dark Souls 3" : {
-      "games " : "Dark Souls 3",
+      "games" : "Dark Souls 3",
       "price" : 40
     },
     "Destiny" : {
-      "games " : "Destiny",
+      "games" : "Destiny",
       "price" : 60
     },
     "Grand Theft Auto V" : {
-      "games " : "Grand Theft Auto V",
+      "games" : "Grand Theft Auto V",
       "price" : 39
     },
     "Overwatch" : {
-      "games " : "Overwatch",
+      "games" : "Overwatch",
       "price" : 60
     },
     "Pro Evolution Soccer 2017" : {
-      "games " : "Pro Evolution Soccer 2017",
+      "games" : "Pro Evolution Soccer 2017",
       "price" : 40
     },
     "Ratchet and Clank" : {
-      "games " : "Ratchet and Clank",
+      "games" : "Ratchet and Clank",
       "price" : 20
     },
     "The Last of Us Remastered" : {
-      "games " : "The Last of Us Remastered",
+      "games" : "The Last of Us Remastered",
       "price" : 25
     },
     "The Witcher 3" : {
-      "games " : "The Witcher 3",
+      "games" : "The Witcher 3",
       "price" : 39
     },
     "Uncharted 4" : {
-      "games " : "Uncharted 4",
+      "games" : "Uncharted 4",
       "price" : 40
     }
   },

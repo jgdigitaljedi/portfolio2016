@@ -4,9 +4,9 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 	function ($rootScope, $scope, $http, $q) {
 		var gc = this;
 
-		$rootScope.$on('theme change', function () {
-		    gc.theme = $rootScope.theme;
-		});
+		// $rootScope.$on('theme change', function () {
+		//     gc.theme = $rootScope.theme;
+		// });
 
 		function formatPrice (price) {
 			return '$' + price.toFixed(2);
@@ -102,7 +102,7 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 			table.fnAddData(gc.hwLibrary.hardware);
 		}
 
-		function buildHWLibraryTable () {
+		function buildHWLibraryTable (justGet) {
 			if (!gc.hwLibrary) {
 				getData('hardwarelibrary').then(function (response) {
 					response.hardware.forEach(function (item) {
@@ -131,11 +131,11 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 
 					});
 					gc.hwLibrary = response;
-					hwTable();
+					if (!justGet) hwTable();
 				});
 			} else {
 				if (!($('#hardware-library-table').hasClass('dataTable'))) {
-					hwTable();				
+					if (!justGet) hwTable();				
 				}
 			}
 		}
@@ -166,6 +166,10 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 					gc.gamesWl = [];
 					for (var key in response) {
 						for (var game in response[key]) {
+							if (key === 'PS4') {
+								console.log('response', response[key]);
+								console.log('response.key.game', response[key][game]);								
+							}
 							gc.gamesWl.push({
 								console: key,
 								price: {
@@ -192,6 +196,18 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 
 		}
 
+		function libraryTotals () {
+			// games data fist
+			console.log('games yo', gc.gameLibrary);
+		}
+
+		function buildLibraryTotals () {
+			if (!gc.hwLibrary) {
+				buildHWLibraryTable(true);
+			}
+			libraryTotals();
+		}
+
 		gc.tabClick = function (which) {
 			switch(which) {
 				case 'GL':
@@ -206,6 +222,8 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 				case 'HW':
 					buildHWWishlist();
 					break;
+				case 'LT':
+					buildLibraryTotals();
 			}
 		};
 	}
