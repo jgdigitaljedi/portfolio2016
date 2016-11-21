@@ -1,8 +1,10 @@
 'use strict';
+/*jshint camelcase: false */
 
 angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', '$http', '$q',
 	function ($rootScope, $scope, $http, $q) {
-		var gc = this;
+		var gc = this,
+			genreObj = {};
 
 		// $rootScope.$on('theme change', function () {
 		//     gc.theme = $rootScope.theme;
@@ -17,7 +19,6 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 			$http.get('/api/proxy/' + which)
 				.success(function (data) {
 					if (!data.error) {
-						console.log('data', data.data);
 						def.resolve(data.data);
 					} else {
 						console.warn('data error', data);
@@ -82,8 +83,6 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 		}
 
 		function hwTable () {
-			console.log('hw table', gc.hwLibrary);
-			// var table = $('#hardware-library-table').dataTable();
 			$('#hardware-library-table').DataTable({
 				aaData: gc.hwLibrary,
 				aoColumns: [
@@ -141,7 +140,6 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 		}
 
 		function gwlTable () {
-			console.log('games wishlist', gc.gamesWl);
 			$('#games-wishlist-table').DataTable({
 				aaData: gc.hwLibrary,
 				aoColumns: [
@@ -162,13 +160,10 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 		function buildGameWishlistTable () {
 			if (!gc.gamesWl) {
 				getData('gameswishlist').then(function (response) {
-					console.log('games wishlist', response);
 					gc.gamesWl = [];
 					for (var key in response) {
 						for (var game in response[key]) {
-							if (key === 'PS4') {
-								console.log('response', response[key]);
-								console.log('response.key.game', response[key][game]);								
+							if (key === 'PS4') {							
 							}
 							gc.gamesWl.push({
 								console: key,
@@ -196,9 +191,47 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 
 		}
 
+		function genreTracker (genre) {
+			var gen = genre.split(',');
+			if (gen.length > 1) {
+				gen.forEach(function (item) {
+					item = item.trim();
+					if (!genreObj.hasOwnProperty(item)) {
+						genreObj[item] = 1;
+					} else {
+						genreObj[item]++;
+					}
+				});
+			} else {
+				if (!genreObj.hasOwnProperty(genre)) {
+					genreObj[genre] = 1;
+				} else {
+					genreObj[genre]++;
+				}
+			}
+		}
+
 		function libraryTotals () {
 			// games data fist
-			console.log('games yo', gc.gameLibrary);
+			var totalGamePrice = 0,
+				gamesCount = 0,
+				gamesByConsole = {};
+			gc.gameLibrary.forEach(function (item) {
+				if (!gamesByConsole.hasOwnProperty(item.platform)) gamesByConsole[item.platform] = [];
+				gamesByConsole[item.platform].push({title: item.title, price: item.price});
+				totalGamePrice += item.price.filter;
+				gamesCount++;
+				genreTracker(item.genre);
+				// if (!genreObj.hasOwnProperty(item.genre)) {
+				// 	genreObj[item.genre] = 1;
+				// } else {
+				// 	genreObj[item.genre]++;
+				// }
+			});
+			console.log('genre obj', genreObj);
+			console.log('totalGamePrice', totalGamePrice);
+			console.log('gamesCount', gamesCount);
+			console.log('gamesByConsole', gamesByConsole);
 		}
 
 		function buildLibraryTotals () {
