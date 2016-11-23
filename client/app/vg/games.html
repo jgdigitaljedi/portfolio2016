@@ -1,5 +1,5 @@
 
-<section ng-class="{'night':gc.theme === 'night', 'day': gc.theme === 'day'}" md-theme="day" 
+<section ng-class="{'night':gc.theme === 'night', 'day': gc.theme === 'day'}" md-theme="day"
 	class="games-collection-section" ng-cloak>
 	<md-content class="md-padding">
 	    <md-tabs md-selected="data.selectedIndex" md-theme="{{gc.theme}}">
@@ -36,9 +36,47 @@
 	        	</md-tab-body>
 	      	</md-tab>
 	      	<md-tab id="library-totals-tab" md-on-select="gc.tabClick('LT')">
-	        	<md-tab-label>Library Totals</md-tab-label>
+	        	<md-tab-label>Totals</md-tab-label>
 	        	<md-tab-body>
 	          		Just a bunch of data.
+              <div class="games-totals" layout="row" layout-align="space-around center">
+                <div>
+                  <h2>Game Library Totals</h2>
+                  <table class="ng-custom-table">
+                    <thead>
+                      <th>System</th>
+                      <th>Games</th>
+                      <th>Avg Price</th>
+                      <th>Total</th>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="(key, value) in gc.gamesData.gamesByConsole">
+                        <td>{{key}}</td>
+                        <td class="number-format">{{value.items}}</td>
+                        <td class="number-format">${{(value.total / value.items).toFixed(2)}}</td>
+                        <td class="number-format">${{value.total}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div>
+                  <h2>Hardware Library Totals</h2>
+                  <table class="ng-custom-table">
+                    <thead>
+                      <th>Console</th>
+                      <th>Items</th>
+                      <th>Total Price</th>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="(key, value) in gc.hwData.hwByConsole">
+                        <td>{{key}}</td>
+                        <td class="number-format">{{value.items}}</td>
+                        <td class="number-format">${{value.total}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
 	          		<table id="library-totals-table" class="display" cellspacing="0" width="100%" height="100%">
 					</table>
 	        	</md-tab-body>

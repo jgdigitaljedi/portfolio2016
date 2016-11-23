@@ -6,4 +6,17 @@
       height: calc(100vh - 46px);
     }
 
+  .ng-custom-table {
+    td, th {
+      padding: 2px 6px;
+    }
+    tbody tr:nth-child(odd) {
+      background-color: #ccc;
+    }
+
+    .number-format {
+      text-align: right;
+    }
+  }
+
 }

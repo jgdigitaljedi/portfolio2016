@@ -51,7 +51,7 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 			if (!gc.gameLibrary) {
 				getData('gameslibrary').then(function (response) {
 					if (!response.error) {
-						// buildGameLibraryTable(response);					
+						// buildGameLibraryTable(response);
 						response.games.forEach(function (item) {
 							if (!item.price) {
 								item.price = {
@@ -77,7 +77,7 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 				});
 			} else {
 				if (!($('#game-library-table').hasClass('dataTable'))) {
-					glTable();					
+					glTable();
 				}
 			}
 		}
@@ -142,7 +142,7 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 						libraryTotals();
 					} else {
 						hwTable();
-					}			
+					}
 				}
 			}
 		}
@@ -171,7 +171,7 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 					gc.gamesWl = [];
 					for (var key in response) {
 						for (var game in response[key]) {
-							if (key === 'PS4') {							
+							if (key === 'PS4') {
 							}
 							gc.gamesWl.push({
 								console: key,
@@ -190,7 +190,7 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 				});
 			} else {
 				if (!($('#games-wishlist-table').hasClass('dataTable'))) {
-					gwlTable();				
+					gwlTable();
 				}
 			}
 		}
@@ -227,8 +227,8 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 				gamesByConsole: {}
 			};
 			gc.gameLibrary.forEach(function (item) {
-				if (!gc.gamesData.gamesByConsole.hasOwnProperty(item.platform)) gc.gamesData.gamesByConsole[item.platform] = {games: [], total: 0};
-				gc.gamesData.gamesByConsole[item.platform].games.push({title: item.title, price: item.price});
+				if (!gc.gamesData.gamesByConsole.hasOwnProperty(item.platform)) gc.gamesData.gamesByConsole[item.platform] = {items: 0, total: 0};
+				gc.gamesData.gamesByConsole[item.platform].items++;
 				gc.gamesData.gamesByConsole[item.platform].total += item.price.filter;
 				gc.gamesData.totalPrice += item.price.filter;
 				gc.gamesData.count++;
@@ -247,9 +247,9 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 			gc.hwLibrary.hardware.forEach(function (item) {
 				gc.hwData.items += item.Quantity;
 				gc.hwData.totalPrice += item.Total.filter;
-				if (!gc.hwData.hwByConsole[item.Console]) gc.hwData.hwByConsole[item.Console] = {hw: [], total: 0};
-				gc.hwData.hwByConsole[item.Console].hw.push(item);
-				gc.hwData.hwByConsole[item.Console].totalPrice += item.Total.filter;
+				if (!gc.hwData.hwByConsole[item.Console]) gc.hwData.hwByConsole[item.Console] = {items: 0, total: 0};
+				gc.hwData.hwByConsole[item.Console].items++;
+				gc.hwData.hwByConsole[item.Console].total += item.Total.filter;
 			});
 			console.log('hwData', gc.hwData);
 		}
@@ -258,7 +258,7 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 			if (!gc.hwLibrary) {
 				buildHWLibraryTable(true);
 			} else {
-				libraryTotals();				
+				libraryTotals();
 			}
 		}
 
