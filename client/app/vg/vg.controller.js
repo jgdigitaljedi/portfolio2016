@@ -130,11 +130,19 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 
 					});
 					gc.hwLibrary = response;
-					if (!justGet) hwTable();
+					if (justGet) {
+						libraryTotals();
+					} else {
+						hwTable();
+					}
 				});
 			} else {
 				if (!($('#hardware-library-table').hasClass('dataTable'))) {
-					if (!justGet) hwTable();				
+					if (justGet) {
+						libraryTotals();
+					} else {
+						hwTable();
+					}			
 				}
 			}
 		}
@@ -213,32 +221,45 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 
 		function libraryTotals () {
 			// games data fist
-			var totalGamePrice = 0,
-				gamesCount = 0,
-				gamesByConsole = {};
+			gc.gamesData = {
+				totalPrice: 0,
+				count: 0,
+				gamesByConsole: {}
+			};
 			gc.gameLibrary.forEach(function (item) {
-				if (!gamesByConsole.hasOwnProperty(item.platform)) gamesByConsole[item.platform] = [];
-				gamesByConsole[item.platform].push({title: item.title, price: item.price});
-				totalGamePrice += item.price.filter;
-				gamesCount++;
+				if (!gc.gamesData.gamesByConsole.hasOwnProperty(item.platform)) gc.gamesData.gamesByConsole[item.platform] = {games: [], total: 0};
+				gc.gamesData.gamesByConsole[item.platform].games.push({title: item.title, price: item.price});
+				gc.gamesData.gamesByConsole[item.platform].total += item.price.filter;
+				gc.gamesData.totalPrice += item.price.filter;
+				gc.gamesData.count++;
 				genreTracker(item.genre);
-				// if (!genreObj.hasOwnProperty(item.genre)) {
-				// 	genreObj[item.genre] = 1;
-				// } else {
-				// 	genreObj[item.genre]++;
-				// }
 			});
-			console.log('genre obj', genreObj);
-			console.log('totalGamePrice', totalGamePrice);
-			console.log('gamesCount', gamesCount);
-			console.log('gamesByConsole', gamesByConsole);
+			gc.gamesData.genres = genreObj;
+			console.log('gamesData', gc.gamesData);
+			console.log('hw', gc.hwLibrary);
+
+			// hw data
+			gc.hwData = {
+				totalPrice: 0,
+				items: 0,
+				hwByConsole: {}
+			};
+			gc.hwLibrary.hardware.forEach(function (item) {
+				gc.hwData.items += item.Quantity;
+				gc.hwData.totalPrice += item.Total.filter;
+				if (!gc.hwData.hwByConsole[item.Console]) gc.hwData.hwByConsole[item.Console] = {hw: [], total: 0};
+				gc.hwData.hwByConsole[item.Console].hw.push(item);
+				gc.hwData.hwByConsole[item.Console].totalPrice += item.Total.filter;
+			});
+			console.log('hwData', gc.hwData);
 		}
 
 		function buildLibraryTotals () {
 			if (!gc.hwLibrary) {
 				buildHWLibraryTable(true);
+			} else {
+				libraryTotals();				
 			}
-			libraryTotals();
 		}
 
 		gc.tabClick = function (which) {
