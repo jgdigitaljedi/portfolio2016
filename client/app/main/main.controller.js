@@ -62,7 +62,7 @@ angular.module('portfolioApp')
             mainVm.todImage = mainVm.theme === 'day' ? 'sun.png' : 'moon.png';
             $timeout(function () {
                 var screenWidth = window.innerWidth;
-                var screenHeight = window.innerHeight - 186; // minus 64 for toolbar and 20 more for a comfortable margin and 90 more to center object
+                var screenHeight = window.innerHeight - 206; // minus 64 for toolbar and 20 more for a comfortable margin and 90 more to center object
                 var start = mainVm.theme === 'day' ? ' 07:00' : ' 19:00'; // day or night time to base position off of
                 var today = moment().format('MM/DD/YYYY');
                 var timeSince = moment().diff(today + start, 'minutes'); // minutes since start

@@ -57,6 +57,14 @@
                         <td class="number-format">${{value.total}}</td>
                       </tr>
                     </tbody>
+                    <tfoot>
+                    	<tr class="table-foot">
+                    		<td>Total</td>
+                    		<td class="number-format">{{gc.gamesData.count}}</td>
+                    		<td class="number-format">--</td>
+                    		<td class="number-format">${{gc.gamesData.totalPrice.toFixed(2)}}</td>
+                    	</tr>
+                    </tfoot>
                   </table>
                 </div>
                 <div>
@@ -74,6 +82,13 @@
                         <td class="number-format">${{value.total}}</td>
                       </tr>
                     </tbody>
+                    <tfoot>
+                    	<tr class="table-foot">
+                    		<td>Total</td>
+                    		<td class="number-format">{{gc.hwData.items}}</td>
+                    		<td class="number-format">${{gc.hwData.totalPrice.toFixed(2)}}</td>
+                    	</tr>
+                    </tfoot>
                   </table>
                 </div>
               </div>
