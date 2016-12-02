@@ -2,7 +2,7 @@
 
 angular.module('portfolioApp').controller('ResumeCtrl', ['$window', 'D3Resume', 'Dataobjects', '$rootScope',
 	function ($window, D3Resume, Dataobjects, $rootScope) {
-		console.log('resume controller');
+		// console.log('resume controller');
 		var rc = this;
 		rc.theme = $rootScope.theme;
 

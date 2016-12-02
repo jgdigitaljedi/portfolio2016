@@ -48,7 +48,7 @@ angular.module('portfolioApp').controller('AboutCtrl', ['$scope','$rootScope', '
             $http.get('/api/proxy/conditions/TX/Manor')
                 /*jshint camelcase: false */
                 .success(function (response) {
-                    console.log('response', response);
+                    // console.log('response', response);
                     if (!response.error) {
                         response = response.current_observation;
                         ac.austinTemp = response.temp_f + '°F';

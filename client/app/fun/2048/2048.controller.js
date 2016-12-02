@@ -65,7 +65,7 @@ angular.module('portfolioApp').controller('Ng2048Ctrl', ['$scope', '$rootScope',
 			tfec.playerName = sessionStorage.getItem('2048playerName') ? sessionStorage.getItem('2048playerName') : 'Player 1';
 			$http.get('/api/2048/gethighscore')
 				.success(function (data) {
-					console.log('success data hs', data);
+					// console.log('success data hs', data);
 					tfec.highScore = data;
 				})
 				.error(function(data) {
