@@ -356,7 +356,6 @@ module.exports = function (grunt) {
         html: ['<%= yeoman.dist %>/public/*.html']
       }
     },
-
     // Copies remaining files to places other tasks can use
     copy: {
       dist: {
@@ -369,7 +368,10 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             'bower_components/**/*',
-            'assets/images/{,*/}*.{webp}',
+            'assets/images/*',
+            'assets/images/**/*',
+            'app/**/modals/*',
+            // 'assets/images/{,*/}*.{webp}',
             'assets/fonts/**/*',
             'assets/icons/**/*',
             'assets/iconsets/**/*',
@@ -699,7 +701,7 @@ module.exports = function (grunt) {
     'cdnify',
     'cssmin',
     'uglify',
-    'rev',
+    // 'rev',
     'usemin'
   ]);
 

@@ -58,6 +58,16 @@
             "price": 15.5
         },
         {
+            "title": "Quake III Area",
+            "releasedate": "10/25/2000",
+            "platform": "Dreamcast",
+            "genre": "FPS",
+            "publisher": "Sega",
+            "developer": "id SOftware",
+            "addeddate": "10/4/2016",
+            "price": 10
+        },
+        {
             "title": "San Francisco Rush 2049",
             "releasedate": 36799,
             "platform": "Dreamcast",
@@ -283,6 +293,16 @@
             "developer": "Acclaim Studios",
             "addeddate": 42515,
             "price": 15
+        },
+        {
+            "title": "Columns",
+            "releasedate": "6/30/1990",
+            "platform": "Genesis / Mega Drive",
+            "genre": "Puzzle",
+            "publisher": "",
+            "developer": "",
+            "addeddate": "12/4/2016",
+            "price": 10
         },
         {
             "title": "General Chaos",
@@ -1112,6 +1132,16 @@
             "price": 7
         },
         {
+            "title": "Gran Turismo 5",
+            "releasedate": "11/24/2010",
+            "platform": "PlayStation 3",
+            "genre": "Racing",
+            "publisher": "Sony Interactive Entertainment",
+            "developer": "Polyphony Digital, Inc.",
+            "addeddate": "12/4/2016",
+            "price": 6
+        },
+        {
             "title": "Grand Theft Auto V",
             "releasedate": 41534,
             "platform": "PlayStation 3",
@@ -1448,6 +1478,16 @@
             "price": 11.4
         },
         {
+            "title": "Mario & Sonic at the Winter Olympic Games 2014",
+            "releasedate": "11/15/2013",
+            "platform": "Wii U",
+            "genre": "Sports",
+            "publisher": "Sega Nintendo",
+            "developer": "Sega",
+            "addeddate": "12/4/2016",
+            "price": 10
+        },
+        {
             "title": "Mario Kart 8",
             "releasedate": 41789,
             "platform": "Wii U",
@@ -1604,6 +1644,13 @@
             "genre": "Platformer",
             "addeddate": 42681,
             "price": 3
+        },
+        {
+            "title": "Tony Hawk Pro Skater 2",
+            "platform": "Gameboy Advance SP",
+            "genre": "Sports",
+            "addeddate": "12/4/2016",
+            "price": 5
         }
     ]
 }

@@ -1,13 +1,13 @@
 'use strict';
 
 angular.module('portfolioApp', [
+    'ngMaterial',
     'ngCookies',
     'ngResource',
     'ngSanitize',
     'ngAnimate',
     'ngMessages',
     'ui.router',
-    'ngMaterial',
     'angulike'
 ]).config(function($mdIconProvider) {
     $mdIconProvider
