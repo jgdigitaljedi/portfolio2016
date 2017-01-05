@@ -70,11 +70,8 @@ angular.module('portfolioApp')
                 var angle = 180 * timeElapsedPercent; // angle from half circle vertex in which sun or moon should be placed
                 // var angle = 90; // here for testing
                 var x = (screenWidth / 2 - 90) + screenHeight * (Math.cos(angle*(Math.PI/180)));
-                var y = 0 + screenHeight * Math.sin(angle*(Math.PI/180));
+                var y = -60 + screenHeight * Math.sin(angle*(Math.PI/180));
                 mainVm.objCoords = {x: x, y: y};
-                // console.log('width', screenWidth);
-                // console.log('height', screenHeight);
-                // console.log('coords are ' + x + ' and ' + y);                
             });
         })();
   });
