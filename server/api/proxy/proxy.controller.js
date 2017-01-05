@@ -6,7 +6,7 @@ var request = require('request'),
 	path = require('path'),
 	moment = require('moment'),
 	weatherCache;
-	
+
 var mongoose = require('mongoose');
 mongoose.createConnection('mongodb://localhost/random');
 var Randoms = require('../../schemas/randomSingles.schema.js');
@@ -31,7 +31,7 @@ db.once('open', function() {
 });
 
 exports.conditions = function(req, res) {
-	
+
 	if (parseInt(moment().unix()) - parseInt(weatherCache.dateTime) >= 900) {  // only allow weather calls every 15 minutes
 		var state = req.params.state,
 			city = req.params.city,
@@ -52,7 +52,7 @@ exports.conditions = function(req, res) {
 		            res.json(obj);
 		        }
 		    }
-		);		
+		);
 	} else { // use cached weather if called less than 15 minutes ago
 		Randoms.findOne({name: 'weather'}, function (err, item) {
 			var obj = JSON.parse(item.value)
@@ -64,7 +64,7 @@ exports.conditions = function(req, res) {
 
 exports.lastfm = function(req, res) {
 	//console.log('lastfm proxy used');
-	var url = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=joeygstrings&api_key=' + 
+	var url = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=joeygstrings&api_key=' +
 		process.env.JLASTKEY + '&format=json';
 	request.get(
 	    url,
@@ -114,7 +114,7 @@ exports.lastfmWeeklyTracks = function (req, res) {
 
 exports.lastArt = function (req, res) {
 	var data = req.params.band,
-		theUrl =  'http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=' + data + '&api_key=' + 
+		theUrl =  'http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=' + data + '&api_key=' +
 			process.env.JLASTKEY + '&format=json';
 
     function callback (error, response, body) {
@@ -152,12 +152,12 @@ exports.sendMail = function(req, res) {
         text: data.comment
     }, function(error, response){  //callback
 			if(error) {
-			    return res.json({error: true});
+			    return res.json({error: true, message: error});
 			} else {
     			return res.json({error: false});
 			}
 		}
-   
+
    	);
  	transporter.close();
 };

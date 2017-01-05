@@ -15,6 +15,18 @@ angular.module('portfolioApp').controller('ContactCtrl', ['$scope', '$http', '$m
 			}
 		}
 
+		function openDialog (which) {
+		  let whichTemplate = which === 'success' ? '/app/contact/modals/success.contact.modal.html' :
+        '/app/contact/modals/failure.contact.modal.html';
+
+		  $mdDialog.show({
+		    controller: 'ContactModalCtrl',
+        templateUrl: whichTemplate,
+        parent: angular.element(document.body),
+        locals: {whichModal: which, theme: cc.theme}
+      });
+    }
+
 		$rootScope.$on('theme change', function () {
 		    cc.theme = $rootScope.theme;
 		    colorHoldouts();
@@ -29,49 +41,17 @@ angular.module('portfolioApp').controller('ContactCtrl', ['$scope', '$http', '$m
 				comment: user.comments
 			}).success(function(res) {
 				if(res.error) {
-					$mdDialog.show({
-					    controller: function DialogController($scope, $mdDialog) {
-					    	$scope.theme = cc.theme;
-		            		$scope.closeDialog = function() {
-		              			$mdDialog.hide();
-		            		};
-		          		},
-					    templateUrl: '/app/contact/modals/failure.contact.modal.html',
-					    parent: angular.element(document.body)
-					});
+				  console.log('error', res);
+				  openDialog('failure');
 				} else {
-					$mdDialog.show({
-					    controller: function DialogController($scope, $mdDialog) {
-					    	$scope.theme = cc.theme;
-		            		$scope.closeDialog = function() {
-		              			$mdDialog.hide();
-		            		};
-		          		},
-					    templateUrl: '/app/contact/modals/success.contact.modal.html',
-					    parent: angular.element(document.body)
-					});
+				  openDialog('success');
 				}
 				console.log('success');
 			}).error(function() {
-				$mdDialog.show({
-				    controller: function DialogController($scope, $mdDialog) {
-				    	$scope.theme = cc.theme;
-	            		$scope.closeDialog = function() {
-	              			$mdDialog.hide();
-	            		};
-	          		},
-				    templateUrl: '/app/contact/modals/failure.contact.modal.html',
-				    parent: angular.element(document.body)
-				});
-				console.log('error');
+        openDialog('failure');
 			});
+		};
 
-			$scope.closeDialog = function() {
-				$mdDialog.hide();
-			};
-
-		};		
-		
 		(function init () {
 			cc.theme = $rootScope.theme;
 			colorHoldouts();
