@@ -23,7 +23,7 @@ angular.module('portfolioApp').controller('ProjectsCtrl', ['$rootScope', '$scope
 				for (var project in pc.projects) {
 					pc.projects[project].color = getRandomColor();
 					pc.projects[project].tile = '../../assets/images/no-image.png';
-				}				
+				}
 			}
 		}
 
@@ -37,35 +37,47 @@ angular.module('portfolioApp').controller('ProjectsCtrl', ['$rootScope', '$scope
 			pc.showLabel = false;
 			var selectedProject = pc.projects[which];
 			console.log('which', selectedProject);
+			var modalData = {
+			  theme: pc.theme,
+        selectedProject: pc.projects[which],
+        thumbs: document.getElementsByClassName('film-square')
+      };
 			$mdDialog.show({
-                controller: function GalleryController($scope, $mdDialog) {
-                	$scope.theme = pc.theme;
-                    $scope.which = selectedProject;
-                    var thumbs = document.getElementsByClassName('film-square');
-
-                    if($scope.which.images) {
-                        $scope.selectedPic = selectedProject.images[0];
-                    }
-
-                    $scope.closeGallery = function () {
-						pc.showLabel = true;
-                        $mdDialog.cancel();
-                    };
-
-                    $scope.changePic = function (e, picPath) {
-                        angular.element(thumbs).removeClass('selected-thumb');
-                        angular.element(e.target).addClass('selected-thumb');
-                        angular.element(document.querySelector('.big-pic')).removeClass('fade-in');
-                        $timeout(function () {
-                            angular.element(document.querySelector('.big-pic')).addClass('fade-in');
-                        }, 30);
-                        $scope.selectedPic = picPath;
-                    };
-                },
-                templateUrl: '/app/projects/modals/project.modal.html',
-                parent: angular.element(document.body),
-                clickOutsideToClose: true
-            });
+			  controller: 'ProjectsModalCtrl',
+        templateUrl: '/app/projects/modals/project.modal.html',
+        parent: angular.element(document.body),
+        clickOutsideToClose: true,
+        locals: {modalData: modalData}
+      })
+            // $mdDialog.show({
+            //     controller: function GalleryController($scope, $mdDialog) {
+            //     	$scope.theme = pc.theme;
+            //         $scope.which = selectedProject;
+            //         var thumbs = document.getElementsByClassName('film-square');
+            //
+            //         if($scope.which.images) {
+            //             $scope.selectedPic = selectedProject.images[0];
+            //         }
+            //
+            //         $scope.closeGallery = function () {
+				// 		pc.showLabel = true;
+            //             $mdDialog.cancel();
+            //         };
+            //
+            //         $scope.changePic = function (e, picPath) {
+            //             angular.element(thumbs).removeClass('selected-thumb');
+            //             angular.element(e.target).addClass('selected-thumb');
+            //             angular.element(document.querySelector('.big-pic')).removeClass('fade-in');
+            //             $timeout(function () {
+            //                 angular.element(document.querySelector('.big-pic')).addClass('fade-in');
+            //             }, 30);
+            //             $scope.selectedPic = picPath;
+            //         };
+            //     },
+            //     templateUrl: '/app/projects/modals/project.modal.html',
+            //     parent: angular.element(document.body),
+            //     clickOutsideToClose: true
+            // });
 		};
 
 		function gitHubWidget () {
@@ -75,16 +87,16 @@ angular.module('portfolioApp').controller('ProjectsCtrl', ['$rootScope', '$scope
 	        }).then(function successCallback (response) {
 	            var rLen = response.data.length;
 	            for (var i = 0; i < rLen; i++) {
-	                var tooltipString = 'Language: ' + (response.data[i].language ? response.data[i].language : 'Unknown') + 
+	                var tooltipString = 'Language: ' + (response.data[i].language ? response.data[i].language : 'Unknown') +
 	                        ' / Last Updated: ' + moment(response.data[i].updated_at).format('MM/DD/YYYY hh:mm a'),
-	                    template = $compile('<md-button ng-click="openGhProject(\'' + response.data[i].html_url + 
-	                        '\')" class="op-entry"><span>' + response.data[i].name + 
+	                    template = $compile('<md-button ng-click="openGhProject(\'' + response.data[i].html_url +
+	                        '\')" class="op-entry"><span>' + response.data[i].name +
 	                        '</span><md-tooltip style="color: black; font-size: 1.1em;">' + tooltipString + '</md-tooltip></md-button>')($scope);
 	                angular.element(document.querySelector('.op-area')).append(template);
 	            }
 	        }, function errorCallback (response) {
 	            console.log('github info', response);
-	        });			
+	        });
 		}
 
 		(function () {
