@@ -118,14 +118,15 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     shortName: 'restaurant',
                     title: 'Restaurant Roulette Remix',
                     color: '#2196F3',
-                    tile: '',
+                    tile: '../assets/images/rrMain.png',
+                    images: ['../assets/images/rrMain.png', '../assets/images/rr1.png', '../assets/images/rr2.png', '../assets/images/rr3.png'],
                     description: 'I made the original version of this app with 2 other guys during a 2 day hackathon '+
                         'while attending MakerSquare. For the sake of getting things done quickly, we used the '+
                         'FourSquare API and kind of ignored best practices. Since that was hosted on divshot which '+
                         'has since been terminated, I made a new version of it hosted on this site using the Yelp! '+
                         'API with more options. No github link since the code lives in this sites\'s code.',
                     techs: 'Angular Material, Angular, Node, Express',
-                    apis: 'Yelp!'
+                    apis: 'Yelp!, Google Maps'
                 }
             },
             work: {
