@@ -31,11 +31,11 @@
           margin: 0;
         }
       }
-    }    
+    }
   }
 
   md-grid-list {
-    
+
     md-grid-tile {
       background-size: cover;
       background-repeat:  no-repeat;
@@ -157,7 +157,7 @@
         // width: auto;
         object-fit: contain;
         height: auto;
-        max-width: 720px;
+        max-width: 95%;
         max-height: 600px;
         // width: 98%;
         opacity: 0;
@@ -173,7 +173,7 @@
       //  opacity: 0;
       //}
     }
-    
+
     .writeup-area {
       background-color: $blue-gray;
       font-size: .9em;
@@ -190,11 +190,11 @@
         color: #f1f1f1;
         margin: auto 8px;
       }
-      
+
       a:hover {
         color: $dark-amber;
       }
-      
+
       a:visited {
         color: #424242;
       }
