@@ -1,6 +1,15 @@
 {
     "games": [
         {
+          "title": "Metal Head",
+          "releasedate": "02/24/95",
+          "platform": "32X",
+          "genre": "Action",
+          "publisher": "Sega",
+          "addeddate": "01/06/17",
+          "price": 9
+        },
+        {
             "title": "Crazy Taxi",
             "releasedate": 36560,
             "platform": "Dreamcast",
@@ -20,62 +29,65 @@
             "addeddate": 42560,
             "price": 10.25
         },
-        {
-            "title": "Jet Set Radio",
-            "releasedate": 36706,
-            "platform": "Dreamcast",
-            "genre": "Sports",
-            "publisher": "Sega",
-            "developer": "Smilebit",
-            "addeddate": 42560
-        },
-        {
-            "title": "Looney Tunes: Space Race",
-            "releasedate": 36857,
-            "platform": "Dreamcast",
-            "genre": "Action, Racing",
-            "publisher": "Atari",
-            "developer": "Atari",
-            "addeddate": 42560
-        },
-        {
-            "title": "Marvel vs. Capcom: Clash of Super Heroes",
-            "releasedate": 36244,
-            "platform": "Dreamcast",
-            "genre": "Fighting",
-            "publisher": "Capcom",
-            "developer": "Capcom",
-            "addeddate": 42560
-        },
-        {
-            "title": "Mortal Kombat Gold",
-            "releasedate": 36412,
-            "platform": "Dreamcast",
-            "genre": "Fighting",
-            "publisher": "Midway",
-            "developer": "Eurocom Developments Ltd.",
-            "addeddate": 42559,
-            "price": 15.5
-        },
-        {
-            "title": "Quake III Area",
-            "releasedate": "10/25/2000",
-            "platform": "Dreamcast",
-            "genre": "FPS",
-            "publisher": "Sega",
-            "developer": "id SOftware",
-            "addeddate": "10/4/2016",
-            "price": 10
-        },
-        {
-            "title": "San Francisco Rush 2049",
-            "releasedate": 36799,
-            "platform": "Dreamcast",
-            "genre": "Racing",
-            "publisher": "Midway",
-            "developer": "Midway",
-            "addeddate": 42560
-        },
+      {
+        "title": "Jet Set Radio",
+        "releasedate": 36706,
+        "platform": "Dreamcast",
+        "genre": "Sports",
+        "publisher": "Sega",
+        "developer": "Smilebit",
+        "addeddate": 42560,
+        "price": 19.5
+      },
+      {
+        "title": "Looney Tunes: Space Race",
+        "releasedate": 36857,
+        "platform": "Dreamcast",
+        "genre": "Action, Racing",
+        "publisher": "Atari",
+        "developer": "Atari",
+        "addeddate": 42560,
+        "price": 14
+      },
+      {
+        "title": "Marvel vs. Capcom",
+        "releasedate": 36244,
+        "platform": "Dreamcast",
+        "genre": "Fighting",
+        "publisher": "Capcom",
+        "developer": "Capcom",
+        "addeddate": 42560,
+        "price": 26
+      },
+      {
+        "title": "Mortal Kombat Gold",
+        "releasedate": "10/24/00",
+        "platform": "Dreamcast",
+        "genre": "FPS",
+        "publisher": "Sega",
+        "addeddate": "1/6/17",
+        "price": 8
+      },
+      {
+        "title": "Quake III: Arena",
+        "releasedate": 36412,
+        "platform": "Dreamcast",
+        "genre": "Fighting",
+        "publisher": "Midway",
+        "developer": "Eurocom Developments Ltd.",
+        "addeddate": 42559,
+        "price": 15.5
+      },
+      {
+        "title": "San Francisco Rush 2049",
+        "releasedate": 36799,
+        "platform": "Dreamcast",
+        "genre": "Racing",
+        "publisher": "Midway",
+        "developer": "Midway",
+        "addeddate": 42560,
+        "price": 16
+      },
         {
             "title": "Sonic Adventure",
             "releasedate": 36152,
@@ -96,24 +108,26 @@
             "addeddate": 42559,
             "price": 8
         },
-        {
-            "title": "Virtua Tennis",
-            "releasedate": 36777,
-            "platform": "Dreamcast",
-            "genre": "Sports",
-            "publisher": "Sega",
-            "developer": "AM3",
-            "addeddate": 42560
-        },
-        {
-            "title": "Wacky Races",
-            "releasedate": 36707,
-            "platform": "Dreamcast",
-            "genre": "Racing",
-            "publisher": "Atari",
-            "developer": "Infogrames Sheffield House",
-            "addeddate": 42560
-        },
+      {
+        "title": "Virtua Tennis",
+        "releasedate": 36777,
+        "platform": "Dreamcast",
+        "genre": "Sports",
+        "publisher": "Sega",
+        "developer": "AM3",
+        "addeddate": 42560,
+        "price": 5.5
+      },
+      {
+        "title": "Wacky Races",
+        "releasedate": 36707,
+        "platform": "Dreamcast",
+        "genre": "Racing",
+        "publisher": "Atari",
+        "developer": "Infogrames Sheffield House",
+        "addeddate": 42560,
+        "price": 19
+      },
         {
             "title": "Worms: Armageddon",
             "releasedate": 36504,
@@ -295,14 +309,13 @@
             "price": 15
         },
         {
-            "title": "Columns",
-            "releasedate": "6/30/1990",
-            "platform": "Genesis / Mega Drive",
-            "genre": "Puzzle",
-            "publisher": "",
-            "developer": "",
-            "addeddate": "12/4/2016",
-            "price": 10
+          "title": "Columns",
+          "releasedate": 1990,
+          "platform": "Genesis / Mega Drive",
+          "genre": "Puzzle",
+          "publisher": "Sega",
+          "addeddate": "01/06/17",
+          "price": 9
         },
         {
             "title": "General Chaos",
@@ -624,6 +637,15 @@
             "addeddate": 42515,
             "price": 7
         },
+      {
+        "title": "Luigi's Mansion: Dark Moon",
+        "releasedate": "03/28/13",
+        "platform": "Nintendo 3DS",
+        "genre": "Action/Adventure",
+        "publisher": "Nintendo",
+        "addeddate": "01/06/17",
+        "price": 17.66
+      },
         {
             "title": "Super Mario 3D Land",
             "releasedate": 40862,
@@ -734,6 +756,15 @@
             "addeddate": 42515,
             "price": 7.7
         },
+      {
+        "title": "Star Wars: Rogue Squadron",
+        "releasedate": "04/12/98",
+        "platform": "Nintendo 64",
+        "genre": "Flight Simulator",
+        "publisher": "Lucas Arts",
+        "addeddate": "01/06/17",
+        "price": 9
+      },
         {
             "title": "Amplitude",
             "releasedate": 37705,
@@ -1035,7 +1066,7 @@
             "price": 7
         },
         {
-            "title": "Bejeweled 2",
+            "title": "Bejeweled 2 (PSN)",
             "releasedate": 39784,
             "platform": "PlayStation 3",
             "genre": "Puzzle",
@@ -1074,7 +1105,7 @@
             "price": 10
         },
         {
-            "title": "Dungeon Hunter: Alliance",
+            "title": "Dungeon Hunter: Alliance (PSN)",
             "releasedate": 40645,
             "platform": "PlayStation 3",
             "genre": "Hack & Slash",
@@ -1083,7 +1114,7 @@
             "addeddate": 42560
         },
         {
-            "title": "echochrome",
+            "title": " (PSN)",
             "releasedate": 39633,
             "platform": "PlayStation 3",
             "genre": "Puzzle",
@@ -1152,7 +1183,7 @@
             "price": 17
         },
         {
-            "title": "High Stakes on the Vegas Strip: Poker Edition",
+            "title": "High Stakes on the Vegas Strip: Poker Edition (PSN)",
             "platform": "PlayStation 3",
             "genre": "Card, Gambling",
             "publisher": "Daybreak Game Company",
@@ -1160,7 +1191,7 @@
             "addeddate": 42560
         },
         {
-            "title": "High Velocity Bowling",
+            "title": "High Velocity Bowling (PSN)",
             "releasedate": 39422,
             "platform": "PlayStation 3",
             "genre": "Sports",
@@ -1179,7 +1210,7 @@
             "price": 13
         },
         {
-            "title": "Jeopardy!",
+            "title": "Jeopardy! (PSN)",
             "platform": "PlayStation 3",
             "genre": "Game Show",
             "publisher": "THQ",
@@ -1187,7 +1218,7 @@
             "addeddate": 42560
         },
         {
-            "title": "LittleBigPlanet",
+            "title": "LittleBigPlanet (PSN)",
             "releasedate": 39749,
             "platform": "PlayStation 3",
             "genre": "Entertainment, Platformer",
@@ -1196,7 +1227,7 @@
             "addeddate": 42560
         },
         {
-            "title": "NBA Jam: On Fire Edition",
+            "title": "NBA Jam: On Fire Edition (PSN)",
             "platform": "PlayStation 3",
             "genre": "Sports",
             "publisher": "Electronic Arts",
@@ -1204,7 +1235,7 @@
             "addeddate": 42560
         },
         {
-            "title": "The Price Is Right",
+            "title": "The Price Is Right (PSN)",
             "platform": "PlayStation 3",
             "genre": "Game Show",
             "publisher": "Ludia Inc.",
@@ -1262,7 +1293,7 @@
             "price": 11.5
         },
         {
-            "title": "Tom Clancy's Ghost Recon: Future Soldier",
+            "title": "Tom Clancy's Ghost Recon: Future Soldier (PSN)",
             "releasedate": 41051,
             "platform": "PlayStation 3",
             "genre": "Action",
@@ -1271,7 +1302,7 @@
             "addeddate": 42560
         },
         {
-            "title": "Wipeout HD Fury",
+            "title": "Wipeout HD Fury (PSN)",
             "releasedate": 40100,
             "platform": "PlayStation 3",
             "genre": "Action",
@@ -1280,7 +1311,7 @@
             "addeddate": 42560
         },
         {
-            "title": "Wolfenstein 3D",
+            "title": "Wolfenstein 3D (PSN)",
             "releasedate": 33830,
             "platform": "PlayStation 3",
             "genre": "Action, FPS",
@@ -1289,7 +1320,7 @@
             "addeddate": 42560
         },
         {
-            "title": "Worms",
+            "title": "Worms (PSN)",
             "releasedate": 39898,
             "platform": "PlayStation 3",
             "genre": "Strategy",
@@ -1297,6 +1328,77 @@
             "developer": "Team 17",
             "addeddate": 42560
         },
+      {
+        "title": "Amplitude (PSN)",
+        "releasedate": "01/05/16",
+        "platform": "PlayStation 4",
+        "genre": "Music",
+        "addeddate": "01/06/17",
+        "price": 20
+      },
+      {
+        "title": "Doom",
+        "releasedate": "05/13/16",
+        "platform": "PlayStation 4",
+        "genre": "FPS",
+        "publisher": "Bethesda",
+        "addeddate": "01/06/17",
+        "price": 22
+      },
+      {
+        "title": "Killzone: Shadow Fall",
+        "releasedate": "11/29/13",
+        "platform": "PlayStation 4",
+        "genre": "Action, Shooter",
+        "publisher": "SCEE",
+        "addeddate": "01/06/17",
+        "price": 8.36
+      },
+      {
+        "title": "The Last of Us Remastered",
+        "releasedate": "08/01/14",
+        "platform": "PlayStation 4",
+        "genre": "Action/Adventure",
+        "publisher": "SCEE",
+        "addeddate": "01/06/17",
+        "price": 17.21
+      },
+      {
+        "title": "Mortal Kombat XL",
+        "releasedate": "03/14/16",
+        "platform": "PlayStation 4",
+        "genre": "Fighting",
+        "publisher": "Warner Bros",
+        "addeddate": "01/06/17",
+        "price": 29
+      },
+      {
+        "title": "Ratchet & Clank",
+        "releasedate": "04/22/16",
+        "platform": "PlayStation 4",
+        "genre": "Platformer",
+        "publisher": "SCEE",
+        "addeddate": "01/06/17",
+        "price": 21.45
+      },
+      {
+        "title": "Rayman Legends",
+        "releasedate": "02/21/14",
+        "platform": "PlayStation 4",
+        "genre": "Action/Adventure",
+        "publisher": "Ubisoft",
+        "addeddate": "01/06/17",
+        "price": 17.74
+      },
+      {
+        "title": "Watch Dogs",
+        "releasedate": "05/27/14",
+        "platform": "PlayStation 4",
+        "genre": "Action",
+        "publisher": "Ubisoft",
+        "addeddate": "01/06/17",
+        "price": 13.23
+      },
         {
             "title": "God of War: Chains of Olympus",
             "releasedate": 39511,
