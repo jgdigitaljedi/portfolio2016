@@ -3,8 +3,8 @@
 	<div layout="row" layout-align="center center" class="title-area">
 		fun stuff
 	</div>
-	<div layout="row" layout-align="center center" style="margin-top: 40px;">
-		<div class="inset-disclaimer">
+	<div layout="row" layout-align="center center" style="margin-top: 40px;" layout-padding>
+		<div layout="row" layout-align="center center" class="disclaimer" flex="80">
 			I think of this site less as just a portfolio and more of a personal playground.
 			That said, I occasionally tinker on something that I wouldn't mind sharing with the rest of the world.
 			This is where I'll be sharing that stuff! Below are some apps that I've created for fun. Enjoy!
@@ -13,7 +13,10 @@
 	<div layout="row" layout-align="center start" class="apps-area">
 		<div layout="row" layout-align="center start" class="app-row" layout-padding flex="80">
 			<md-card layout="column" class="app-card" flex="50" flex-sm="100">
-				<p class="app-title">Phangular 2048</p>
+				<p class="app-title">
+          Phangular 2048 &nbsp;
+          <md-icon md-svg-icon="hardware:gamepad" class="nav-icon" aria-label="projects" size="128"></md-icon>
+        </p>
 				<md-card-contents>
 					<div class="app-description" hide-xs>
 						This is just a little 2048 game I developed. I had never really done any game development and figured this
@@ -26,7 +29,10 @@
 				</md-card-contents>
 			</md-card>
 			<md-card layout="column" class="app-card" flex="50" flex-sm="100">
-				<p class="app-title">Restaurant Roulette Remix</p>
+				<p class="app-title">
+          Restaurant Roulette Remix
+          <md-icon md-svg-icon="maps:local_dining" class="nav-icon" aria-label="projects" size="128"></md-icon>
+        </p>
 				<md-card-contents>
 					<div class="app-description" hide-xs>
 						A few years ago while attending MakerSquare I participated in a short hackathon. I was on a team with a couple
@@ -41,9 +47,9 @@
 		</div>
 	</div>
   <div layout="row" layout-align="center center">
-    <md-card class="there-are-games">
+    <md-card class="there-are-games" layout="row" layout-align="center center" layout-padding flex="80">
       <md-card-content>
-        Also, it might be kind of interesting to some folks to see my video game collection. I throw together some
+        Also, it might be kind of interesting to some folks to see my video game collection. I threw together some
         data tables for myself so I could see what I had already or remind myself of things I decided I wanted to add
         to the collection soon. I realized that some folks might find it interesting as well. You can view my collection
         <a href="/games">HERE</a>!

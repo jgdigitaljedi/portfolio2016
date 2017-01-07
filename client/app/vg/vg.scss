@@ -24,13 +24,6 @@
       font-weight: bold;
     }
   }
-
-  .dataTables {
-    input {
-      @include box_shadow(1);
-    }
-  }
-
 }
 
 .dataTables_wrapper .dataTables_filter input {
