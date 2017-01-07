@@ -25,4 +25,20 @@
     }
   }
 
+  .dataTables {
+    input {
+      @include box_shadow(1);
+    }
+  }
+
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  @include inset_shadow(1);
+}
+
+.dataTables_wrapper select {
+  background-color: $blue-gray !important;
+  color: white;
+  @include box_shadow(1);
 }

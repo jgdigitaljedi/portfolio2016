@@ -2,10 +2,38 @@
 {
   "hardware" : [
     {
+      "Accessory" : "6 button controller",
+      "Console" : "32X",
+      "Quantity" : 1,
+      "Value" : 12,
+      "Total" : 12
+    },
+    {
       "Accessory" : "Sega Controller",
       "Console" : "Dreamcast",
       "Quantity" : 2,
       "Value" : 20,
+      "Total" : 40
+    },
+    {
+      "Accessory" : "Controller Extension",
+      "Console" : "Dreamcast",
+      "Quantity" : 2,
+      "Value" : 5,
+      "Total" : 10
+    },
+    {
+      "Accessory" : "VGA Cable",
+      "Console" : "Dreamcast",
+      "Quantity" : 1,
+      "Value" : 14,
+      "Total" : 14
+    },
+    {
+      "Accessory" : "VGA Upscaler",
+      "Console" : "Dreamcast",
+      "Quantity" : 1,
+      "Value" : 40,
       "Total" : 40
     },
     {
@@ -58,6 +86,20 @@
       "Total" : 6
     },
     {
+      "Accessory" : "S-Video Cable",
+      "Console" : "Gamecube",
+      "Quantity" : 1,
+      "Value" : 15,
+      "Total" : 15
+    },
+    {
+      "Accessory" : "S-Video Upscaler",
+      "Console" : "Gamecube",
+      "Quantity" : 1,
+      "Value" : 40,
+      "Total" : 40
+    },
+    {
       "Accessory" : "Bongo Controller",
       "Console" : "Gamecube",
       "Quantity" : 2,
@@ -72,6 +114,13 @@
       "Total" : 11
     },
     {
+      "Accessory" : "Controller Extension",
+      "Console" : "Genesis",
+      "Quantity" : 2,
+      "Value" : 5,
+      "Total" : 10
+    },
+    {
       "Accessory" : "Nintendo Controller",
       "Console" : "NES",
       "Quantity" : 3,
@@ -84,6 +133,13 @@
       "Quantity" : 1,
       "Value" : 14,
       "Total" : 14
+    },
+    {
+      "Accessory" : "Composite Upscaler",
+      "Console" : "NES",
+      "Quantity" : 1,
+      "Value" : 30,
+      "Total" : 30
     },
     {
       "Accessory" : "Charger",
@@ -112,6 +168,13 @@
       "Quantity" : 1,
       "Value" : 8,
       "Total" : 8
+    },
+    {
+      "Accessory" : "Controller Extension",
+      "Console" : "N64",
+      "Quantity" : 2,
+      "Value" : 7.5,
+      "Total" : 15
     },
     {
       "Accessory" : "Expansion Card",
@@ -154,6 +217,13 @@
       "Quantity" : 1,
       "Value" : 8,
       "Total" : 8
+    },
+    {
+      "Accessory" : "Component Upscaler",
+      "Console" : "PS2",
+      "Quantity" : 1,
+      "Value" : 40,
+      "Total" : 40
     },
     {
       "Accessory" : "Guitar Controller",
@@ -268,6 +338,13 @@
       "Total" : 30
     },
     {
+      "Accessory" : "Dualshock Controller",
+      "Console" : "PS4",
+      "Quantity" : 2,
+      "Value" : 60,
+      "Total" : 120
+    },
+    {
       "Accessory" : "Sega Dreamcast",
       "Console" : "Dreamcast",
       "Quantity" : 1,
@@ -349,7 +426,21 @@
       "Console" : "Gamecube",
       "Quantity" : 1,
       "Value" : 50,
-      "Total" : 50  
+      "Total" : 50
+    },
+    {
+      "Accessory" : "32X",
+      "Console" : "32X",
+      "Quantity" : 1,
+      "Value" : 40,
+      "Total" : 40
+    },
+    {
+      "Accessory" : "Playstation 4 Pro",
+      "Console" : "PS4",
+      "Quantity" : 1,
+      "Value" : 400,
+      "Total" : 400
     }
   ]
 }

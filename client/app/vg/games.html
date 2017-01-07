@@ -39,7 +39,7 @@
 	        	<md-tab-label>Totals</md-tab-label>
 	        	<md-tab-body>
 	          		Just a bunch of data.
-		            <div class="games-totals" layout="row" layout-align="space-around center">
+		            <div class="games-totals" layout="column" layout-gt-md="row" layout-align-gt-md="space-around start" layout-align="center center">
 		                <div>
 		                  	<h2>Game Library Totals</h2>
 		                  	<table class="ng-custom-table">
@@ -91,25 +91,26 @@
 		                    	</tfoot>
 		                  	</table>
 		                </div>
+                  <div>
+                    <h2>Game Genres</h2>
+                    <table class="ng-custom-table">
+                      <thead>
+                      <th>Genre</th>
+                      <th>Games</th>
+                      </thead>
+                      <tbody>
+                      <tr ng-repeat="(key, value) in gc.gamesData.genres">
+                        <td>{{key}}</td>
+                        <td class="number-format">{{value}}</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
 		            </div>
-		            <md-divider></md-divider>
-		            <div class="misc-totals" layout="row" layout-align="space-around center">
-		            	<div>
-		            		<h2>Game Genres</h2>
-			          		<table class="ng-custom-table">
-			          			<thead>
-			          				<th>Genre</th>
-			          				<th>Games</th>
-			          			</thead>
-			          			<tbody>
-			          				<tr ng-repeat="(key, value) in gc.gamesData.genres">
-			          					<td>{{key}}</td>
-			          					<td class="number-format">{{value}}</td>
-			          				</tr>
-			          			</tbody>
-							</table>
-						</div>
-		            </div>
+		            <!--<md-divider></md-divider>-->
+
+              <!--<div class="misc-totals" layout="row" layout-align="space-around center">-->
+		            <!--</div>-->
 	        	</md-tab-body>
 	      	</md-tab>
 
