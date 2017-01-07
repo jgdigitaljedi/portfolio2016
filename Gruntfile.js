@@ -103,9 +103,9 @@ module.exports = function (grunt) {
         files: [
           '{.tmp,<%= yeoman.client %>}/{app,components}/**/*.css',
           '{.tmp,<%= yeoman.client %>}/{app,components}/**/*.html',
-          
+
           '.tmp/{app,components}/**/*.js',
-          
+
           '!{.tmp,<%= yeoman.client %>}{app,components}/**/*.spec.js',
           '!{.tmp,<%= yeoman.client %>}/{app,components}/**/*.mock.js',
           '<%= yeoman.client %>/assets/images/{,*//*}*.{png,jpg,jpeg,gif,webp,svg}',
@@ -292,7 +292,8 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.client %>/assets/images',
-          src: '{,*/}*.{png,jpg,jpeg,gif}',
+          // src: '{,*/}*.{png,jpg,jpeg,gif}',
+          src: '[*/*.{png,jpg,jpeg,gif,svg}]',
           dest: '<%= yeoman.dist %>/public/assets/images'
         }]
       }
@@ -443,7 +444,7 @@ module.exports = function (grunt) {
       dist: [
         'babel',
         'sass',
-        // 'imagemin',
+        'imagemin',
         'svgmin'
       ]
     },
@@ -490,7 +491,7 @@ module.exports = function (grunt) {
     babel: {
       options: {
         sourceMap: true,
-        ignore: ['client/components/services/d3.service.js', 'client/components/services/resume.service.js'] 
+        ignore: ['client/components/services/d3.service.js', 'client/components/services/resume.service.js']
       },
       server: {
         files: [{
@@ -540,9 +541,9 @@ module.exports = function (grunt) {
         files: {
           '<%= yeoman.client %>/index.html': [
                [
-                 
+
                  '.tmp/{app,components}/**/*.js',
-                 
+
                  '!{.tmp,<%= yeoman.client %>}/app/app.js',
                  '!{.tmp,<%= yeoman.client %>}/{app,components}/**/*.spec.js',
                  '!{.tmp,<%= yeoman.client %>}/{app,components}/**/*.mock.js'
@@ -615,7 +616,7 @@ module.exports = function (grunt) {
       return grunt.task.run([
         'clean:server',
         'env:all',
-        'injector:sass', 
+        'injector:sass',
         'concurrent:server',
         'injector',
         'wiredep',
@@ -627,7 +628,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'env:all',
-      'injector:sass', 
+      'injector:sass',
       'concurrent:server',
       'injector',
       'wiredep',
@@ -657,7 +658,7 @@ module.exports = function (grunt) {
       return grunt.task.run([
         'clean:server',
         'env:all',
-        'injector:sass', 
+        'injector:sass',
         'concurrent:test',
         'injector',
         'autoprefixer',
@@ -670,7 +671,7 @@ module.exports = function (grunt) {
         'clean:server',
         'env:all',
         'env:test',
-        'injector:sass', 
+        'injector:sass',
         'concurrent:test',
         'injector',
         'wiredep',
@@ -688,7 +689,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'injector:sass', 
+    'injector:sass',
     'concurrent:dist',
     'injector',
     'wiredep',
