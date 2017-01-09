@@ -75,6 +75,10 @@ $flat-white: #f1f1f1;
  .fb-like, .twitter-share-button, .twitter-follow-button {
   margin: 8px;
  }
+
+ .selected-nav {
+   color: $dark-amber !important;
+ }
 @mixin box_shadow ($level) {
 
     @if $level == 1 {
@@ -284,7 +288,7 @@ $prefix:'-moz-', '-webkit-', '-o-', '-ms-', '';
  .main-shell {
 
   .md-toolbar-tools {
-    @include box_shadow(1);    
+    @include box_shadow(1);
   }
    .profile-container {
      height: 100%;

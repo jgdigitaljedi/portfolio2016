@@ -8,19 +8,19 @@
         <md-content layout-padding>
             <md-list class="nav-list">
                 <md-list-item>
-                    <md-button ui-sref="main">
+                    <md-button ui-sref="main" ng-class="{'selected-nav': highlight === 'main'}">
                         <md-icon md-svg-icon="action:home" class="nav-icon" aria-label="home" size="24"></md-icon>
                         Home
                     </md-button>
                 </md-list-item>
                 <md-list-item>
-                    <md-button ui-sref="about">
+                    <md-button ui-sref="about" ng-class="{'selected-nav': highlight === 'about'}">
                         <md-icon md-svg-icon="av:library_books" class="nav-icon" aria-label="about" size="24"></md-icon>
                         About Me
                     </md-button>
                 </md-list-item>
                 <md-list-item>
-                    <md-button ui-sref="projects">
+                    <md-button ui-sref="projects" ng-class="{'selected-nav': highlight === 'projects'}">
                         <md-icon md-svg-icon="action:perm_media" class="nav-icon" aria-label="projects" size="24"></md-icon>
                         Projects
                     </md-button>
@@ -32,13 +32,13 @@
                     </md-button>
                 </md-list-item> -->
                 <md-list-item>
-                    <md-button ui-sref="resume">
+                    <md-button ui-sref="resume" ng-class="{'selected-nav': highlight === 'resume'}">
                         <md-icon md-svg-icon="editor:format_list_bulleted" class="nav-icon" aria-label="resume" size="24"></md-icon>
                         Resum&eacute
                     </md-button>
                 </md-list-item>
                 <md-list-item>
-                    <md-button ui-sref="contact">
+                    <md-button ui-sref="contact" ng-class="{'selected-nav': highlight === 'contact'}">
                         <md-icon md-svg-icon="communication:contact_mail" class="nav-icon" aria-label="contact" size="24"></md-icon>
                         Contact
                     </md-button>
@@ -49,7 +49,7 @@
                         Blog
                     </md-button>
                 </md-list-item> -->
-                <md-list-item>
+                <md-list-item ng-class="{'selected-nav': highlight === 'fun'}">
                     <md-button ui-sref="fun">
                         <md-icon md-svg-icon="social:mood" class="nav-icon" aria-label="fun" size="24"></md-icon>
                         Fun Stuff
@@ -62,7 +62,7 @@
             <div google-plus="socialCrap.url" style="margin: 2px auto 0 8px;"></div>
             <div tweet="socialCrap.name" tweet-url="socialCrap.url"></div>
             <div twitter-follow twt-name="'jgdigitaljedi'"></div>
-            <!-- <div class="fb-like" data-href="http://joeyg.me" data-layout="button_count" 
+            <!-- <div class="fb-like" data-href="http://joeyg.me" data-layout="button_count"
                 data-action="like" data-size="small" data-show-faces="true" data-share="true">
             </div>
             <div>
@@ -88,32 +88,32 @@
                 </h2>
             </div>
             <div layout="row" layout-align="center center" hide-xs hide-sm hide-md>
-                <md-button ui-sref="main">
+                <md-button ui-sref="main" ng-class="{'selected-nav': highlight === 'main'}">
                     Home
                 </md-button>
-                <md-button ui-sref="about">
+                <md-button ui-sref="about" ng-class="{'selected-nav': highlight === 'about'}">
                     About Me
                 </md-button>
-                <md-button ui-sref="projects">
+                <md-button ui-sref="projects" ng-class="{'selected-nav': highlight === 'projects'}">
                     Projects
                 </md-button>
                 <!-- <md-button ui-sref="social">
                     Social
                 </md-button> -->
-                <md-button ui-sref="resume">
+                <md-button ui-sref="resume" ng-class="{'selected-nav': highlight === 'resume'}">
                     Resum&eacute
                 </md-button>
-                <md-button ui-sref="contact">
+                <md-button ui-sref="contact" ng-class="{'selected-nav': highlight === 'contact'}">
                     Contact
                 </md-button>
-                <md-button ui-sref="fun">
+                <md-button ui-sref="fun" ng-class="{'selected-nav': highlight === 'fun'}">
                     Fun Stuff
                 </md-button>
             </div>
             <div layout layout-align="end center">
                 <div layout="row" layout-align="end center">
-                    <div style="margin-right: 10px;"> 
-                        Theme
+                    <div style="margin-right: 10px;">
+                        <span hide-sm hide-xs>Theme</span>
                         <md-tooltip style="font-size: 1em;" class="theme-tooltip">
                         Theme changes with time of day,<br/>
                         but you can change it manually if you'd like!

@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('portfolioApp').controller('ShellCtrl', ['$mdSidenav', '$mdDialog', '$scope', '$location', '$rootScope',
-  function ($mdSidenav, $mdDialog, $scope, $location, $rootScope) {
+angular.module('portfolioApp').controller('ShellCtrl', ['$mdSidenav', '$mdDialog', '$scope', '$location', '$rootScope', '$state',
+  function ($mdSidenav, $mdDialog, $scope, $location, $rootScope, $state) {
 
     $scope.socialCrap = {
       url: 'http://joeyg.me',
@@ -61,5 +61,8 @@ angular.module('portfolioApp').controller('ShellCtrl', ['$mdSidenav', '$mdDialog
         controller: 'DialogController'
       });
     };
+
+    $scope.highlight = $state.current.name;
+    console.log('highlight', $scope.highlight);
   }
 ]);
