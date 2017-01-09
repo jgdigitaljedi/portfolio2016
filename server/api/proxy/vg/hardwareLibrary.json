@@ -121,6 +121,20 @@
       "Total" : 10
     },
     {
+      "Accessory" : "SCART cable",
+      "Console" : "Genesis",
+      "Quantity" : 1,
+      "Value" : 15,
+      "Total" : 15
+    },
+    {
+      "Accessory" : "SCART upscaler",
+      "Console" : "Genesis",
+      "Quantity" : 1,
+      "Value" : 40,
+      "Total" : 40
+    },
+    {
       "Accessory" : "Nintendo Controller",
       "Console" : "NES",
       "Quantity" : 3,
