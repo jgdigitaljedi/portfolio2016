@@ -35,7 +35,7 @@
 			display: flex;
 			.app-card {
 				max-width: 800px;
-				
+
 				.app-title {
 					font-size: 2em;
 					font-weight: bold;
@@ -47,5 +47,17 @@
 			}
 		}
 	}
+
+  .there-are-games {
+    a {
+      font-weight: bold;
+    }
+
+    a:visited {
+      text-decoration: none !important;
+      color: $blue-gray;
+      font-weight: bold;
+    }
+  }
 
 }
