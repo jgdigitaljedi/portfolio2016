@@ -646,6 +646,16 @@
         "addeddate": "01/06/17",
         "price": 17.66
       },
+      {
+        "title": "Pokemon X/Y",
+        "releasedate": "10/12/13",
+        "platform": "Nintendo 3DS",
+        "genre": "RPG",
+        "publisher": "Nintendo",
+        "developer": "Game Freak",
+        "addeddate": "01/09/17",
+        "price": 40
+      },
         {
             "title": "Super Mario 3D Land",
             "releasedate": 40862,
@@ -656,6 +666,16 @@
             "addeddate": 42560,
             "price": 15
         },
+      {
+        "title": "Super Mario Maker 3DS",
+        "releasedate": "12/01/16",
+        "platform": "Nintendo 3DS",
+        "genre": "Puzzle, Platformer",
+        "publisher": "Nintendo",
+        "developer": "Nintendo",
+        "addeddate": 42560,
+        "price": 40
+      },
         {
             "title": "Terraria",
             "releasedate": 42412,
@@ -1389,6 +1409,15 @@
         "publisher": "Ubisoft",
         "addeddate": "01/06/17",
         "price": 17.74
+      },
+      {
+        "title": "Rocket League GOTY Edition",
+        "releasedate": "07/07/15",
+        "platform": "PlayStation 4",
+        "genre": "Driving/Racing, Vehicular Combat, Soccer",
+        "publisher": "Psyonix",
+        "addeddate": "01/09/17",
+        "price": 20
       },
       {
         "title": "Watch Dogs",
