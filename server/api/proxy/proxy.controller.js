@@ -17,7 +17,7 @@ db.once('open', function() {
 	Randoms.findOne({name: 'weather'}, function (err, item) {
 		if (!item || err) {
 			console.log('setting initial weather cache');
-			weatherCache = {name: 'weather', dateTime: '1234', value: ''};
+			weatherCache = {name: 'weather', dateTime: '1234', value: '{}'};
 			var initWc = new Randoms(weatherCache);
 			initWc.save(function (error) {
 				if (error) throw err;

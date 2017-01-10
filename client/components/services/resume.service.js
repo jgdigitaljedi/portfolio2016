@@ -5,9 +5,7 @@ angular.module('portfolioApp').factory('D3Resume', ['Dataobjects',
 		var D3Resume = function (_config) {
 
 			var lastTimeout = null;
-			// var formatToShow = d3.time.format('%m/%d/%Y');
 			var formatToShow = d3.timeFormat('%m/%d/%Y');
-			// var format = d3.time.format('%Y-%m-%d');
 			var format = d3.timeFormat('%Y-%m-%d');
 			var parseDate = d3.timeParse(format);
 			var svg = null;
@@ -33,18 +31,12 @@ angular.module('portfolioApp').factory('D3Resume', ['Dataobjects',
 		      		.attr('width', config.width)
 		      		.attr('height', config.height);
 
-		  		// x = d3.timeFormat.scale().range([20, config.width]);
-		  		x = d3.scaleTime().range([20, config.width]);
-				// y = d3.scale.linear().range([config.height, 0]);
+				x = d3.scaleTime().range([20, config.width]);
 				y = d3.scaleTime().range([config.height, 0]);
 				y.domain([0, config.height]);
 
-				// xAxis = d3.svg.axis()
 				xAxis = d3.axisBottom(x)
-					// .scale(x)
-					// .orient('bottom')
 					.tickArguments([ticks, 's'])
-					// .tickFormat(d3.time.format('%Y-%m'));
 					.tickFormat(d3.timeFormat('%b %Y'));
 
 				loadData();

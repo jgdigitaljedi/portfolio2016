@@ -63,6 +63,5 @@ angular.module('portfolioApp').controller('ShellCtrl', ['$mdSidenav', '$mdDialog
     };
 
     $scope.highlight = $state.current.name;
-    console.log('highlight', $scope.highlight);
   }
 ]);
