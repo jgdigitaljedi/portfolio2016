@@ -17,7 +17,8 @@
     "phaser": "^2.6.2",
     "datatables.net-dt": "^1.10.12",
     "datatables.net-responsive-dt": "^2.1.0",
-    "datatables.net-scroller-dt": "^1.4.2"
+    "datatables.net-scroller-dt": "^1.4.2",
+    "d3": "^4.4.1"
   },
   "devDependencies": {
     "angular-mocks": ">=1.2.*",

@@ -16,7 +16,7 @@ angular.module('portfolioApp').controller('ContactCtrl', ['$scope', '$http', '$m
 		}
 
 		function openDialog (which) {
-		  let whichTemplate = which === 'success' ? '/app/contact/modals/success.contact.modal.html' :
+		  var whichTemplate = which === 'success' ? '/app/contact/modals/success.contact.modal.html' :
         '/app/contact/modals/failure.contact.modal.html';
 
 		  $mdDialog.show({

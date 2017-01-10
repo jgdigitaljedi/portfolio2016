@@ -44,7 +44,7 @@ angular.module('portfolioApp', [
         .primaryPalette('blue-grey')
         .accentPalette('amber')
         .warnPalette('red');
-      
+
     $mdThemingProvider.alwaysWatchTheme(true);
     $mdThemingProvider.enableBrowserColor({theme: 'night'});
 }).controller('AppCtrl', function ($scope, $rootScope) {
