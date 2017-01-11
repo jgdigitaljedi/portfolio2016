@@ -228,7 +228,8 @@ angular.module('portfolioApp').factory('D3Resume', ['Dataobjects',
 		};
 		return {
 			getResumeLogic: function (config) {
-				return new D3Resume(config);
+			  d3.select(config.wrapperSelector).selectAll('*').remove();
+				return D3Resume(config);
 			}
 		};
 	}

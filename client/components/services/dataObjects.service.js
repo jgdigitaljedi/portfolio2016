@@ -301,7 +301,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
         ];
 
 		return {
-			getResume: function () { return resumeObject; },
+			getResume: function () { return angular.copy(resumeObject); },
 			getMaterialColors: function () { return materialArray; },
             getProjects: function () { return projectsObject; },
 			getSkills: function () { return skills; }
