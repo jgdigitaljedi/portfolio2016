@@ -62,3 +62,5 @@ $ grunt serve
  - figure out why the game library page won't hit the API on the server when it has no issues in development environment
  - fix overflow issue with sun/moon on home page when near 7:00
  - projects modal, contact page, and rrr enter location page don't work as intended on mobile 
+ - bug in game library totals tab with float on ps4 total
+ - nodemailer stopped working again. Gonna try a different email service
