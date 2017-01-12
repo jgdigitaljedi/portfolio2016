@@ -47,7 +47,49 @@ angular.module('portfolioApp').factory('GameLogicService', [
 					game.load.image('tile', '../../assets/images/2048/tile.png');
 					game.load.image('grid', '../../assets/images/2048/grid.png');
 				}
-				
+
+        function endSwipe () {
+				  console.log('endswipe', this.startX)
+          var endX = game.input.worldX;
+          var endY = game.input.worldY;
+          var distX = this.startX-endX;
+          var distY = this.startY-endY;
+          // in order to have an horizontal swipe, we need that x distance is at least twice the y distance
+          // and the amount of horizontal distance is at least 10 pixels
+          if(Math.abs(distX)>Math.abs(distY)*2 && Math.abs(distX)>10){
+            // moving left, calling move function with horizontal and vertical tiles to move as arguments
+            if(distX>0){
+              moveLeft(this);
+            }
+            // moving right, calling move function with horizontal and vertical tiles to move as arguments
+            else{
+              moveRight(this);
+            }
+          }
+          // in order to have a vertical swipe, we need that y distance is at least twice the x distance
+          // and the amount of vertical distance is at least 10 pixels
+          if(Math.abs(distY)>Math.abs(distX)*2 && Math.abs(distY)>10){
+            // moving up, calling move function with horizontal and vertical tiles to move as arguments
+            if(distY>0){
+              moveUp(this);
+            }
+            // moving down, calling move function with horizontal and vertical tiles to move as arguments
+            else{
+              moveDown(this);
+            }
+          }
+          // stop listening for the player to release finger/mouse, let's start listening for the player to click/touch
+          game.input.onDown.add(beginSwipe, this);
+          game.input.onUp.remove(endSwipe);
+        }
+
+				function beginSwipe () {
+          var startX = game.input.worldX;
+          var startY = game.input.worldY;
+          game.input.onDown.remove(beginSwipe);
+          game.input.onUp.add(endSwipe, {startX: startX, startY: startY});
+        }
+
 				function onCreate() {
 					/*jshint validthis:true */
 					var world = game.world;
@@ -66,9 +108,11 @@ angular.module('portfolioApp').factory('GameLogicService', [
 					rightKey.onDown.add(moveRight, this);
 					cursors.right.onDown.add(moveRight, this);
 					tileSprites = game.add.group();
+
+          game.input.onDown.add(beginSwipe, this);
 					if (!previousBoard) {
 						addTwo();
-						addTwo();						
+						addTwo();
 					} else {
 						createOldLayout();
 					}
@@ -101,7 +145,7 @@ angular.module('portfolioApp').factory('GameLogicService', [
 				function addTwo () {
 					var randomValue;
 					while (fieldArray[randomValue] !== 0) {
-						randomValue = Math.floor(Math.random() * 16);				
+						randomValue = Math.floor(Math.random() * 16);
 					}
 					fieldArray[randomValue] = 2;
 					var tile = game.add.sprite(toCol(randomValue) * tileSize, toRow(randomValue) * tileSize, 'tile');
@@ -119,29 +163,29 @@ angular.module('portfolioApp').factory('GameLogicService', [
 					});
 					fadeIn.start();
 				}
-				
+
 				function toRow (n) {
 					return Math.floor(n / 4);
 				}
-				
+
 				function toCol (n) {
-					return n % 4;	
+					return n % 4;
 				}
 
 				function updateScore (num) {
 					// score += (num * 2);
 					scope.$emit('addScore', num * 2);
 				}
-				
+
 				function updateNumbers () {
 					tileSprites.forEach(function (item) {
 						var value = fieldArray[item.pos];
 						item.getChildAt(0).text = value;
 						item.tint = colors[value];
-					});	
+					});
 				}
-				
-				
+
+
 				function endMove (m) {
 					if (m) {
 						addTwo();
@@ -157,7 +201,7 @@ angular.module('portfolioApp').factory('GameLogicService', [
 					// 	scope.$emit('gameOver');
 					// }
 				}
-				
+
 				function moveTile (tile, from, to, remove) {
 					fieldArray[to] = fieldArray[from];
 			        fieldArray[from] = 0;
@@ -181,14 +225,14 @@ angular.module('portfolioApp').factory('GameLogicService', [
 						tileSprites.forEach(function (item) {
 							var row = toRow(item.pos);
 							var col = toCol(item.pos);
-							if (row > 0) {  
+							if (row > 0) {
 			                    var remove = false;
 								for (var i = row - 1; i >= 0; i--) {
 									if (fieldArray[i * 4 + col] !== 0) {
 										if (fieldArray[i * 4 + col] === fieldArray[row * 4 + col]) {
 											updateScore(fieldArray[i * 4 + col]);
 											remove = true;
-											i--;                                             
+											i--;
 										}
 			                            break;
 									}
@@ -218,7 +262,7 @@ angular.module('portfolioApp').factory('GameLogicService', [
 										if (fieldArray[row * 4 + i] === fieldArray[row * 4 + col]) {
 											updateScore(fieldArray[row*4+i]);
 											remove = true;
-											i--;                                             
+											i--;
 										}
 										break;
 									}
@@ -248,7 +292,7 @@ angular.module('portfolioApp').factory('GameLogicService', [
 			                            if (fieldArray[row * 4 + i] === fieldArray[row * 4 + col]) {
 											remove = true;
 											updateScore(fieldArray[row * 4 + i]);
-											i++;                                             
+											i++;
 										}
 										break;
 									}
@@ -278,7 +322,7 @@ angular.module('portfolioApp').factory('GameLogicService', [
 										if (fieldArray[i * 4 + col] === fieldArray[row * 4 + col]) {
 											updateScore(fieldArray[i * 4 + col]);
 											remove = true;
-											i++;                                             
+											i++;
 										}
 			                            break;
 									}

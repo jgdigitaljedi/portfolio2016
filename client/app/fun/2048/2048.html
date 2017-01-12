@@ -2,7 +2,7 @@
 <section ng-class="{'night':tfec.theme === 'night', 'day': tfec.theme === 'day'}" md-theme="{{tfec.theme}}" class="ng-game-section">
 	<a href="#"></a>
 	<div layout="row" layout-align="center center" class="game-area">
-		<div layout="column" layout-align="center center" style="margin-right: 40px;">
+		<div layout="column" layout-align="center center" hide-sm hide-xs style="margin-right: 40px;">
 			<div class="game-title">Phangular 2048</div>
         	<h2>A 2048 game built on Phaser and Angular</h2>
         </div>
@@ -14,7 +14,7 @@
 		        <md-divider></md-divider>
 		        <div id="game-container" layout="row" layout-align="center center">
 		            <game-canvas style="margin-top: 10px;" ng-class="{'light-border': !tfec.default, 'dark-border': tfec.default}">
-		                
+
 		            </game-canvas>
 		        </div>
 		    </md-card-content>
@@ -22,7 +22,7 @@
 	</div>
 	<md-divider></md-divider>
 	<div layout="row" layout-align="center center" class="highscore-and-buttons">
-		<div layout="row" layout-align="center start" flex="70">
+		<div layout="row" layout-sm="column" layout-xs="column" layout-align="center start" flex="70">
 			<md-card layout="column" class="bottom-card">
 				<div class="card-title">High Score: </div>
 				<md-card-content>
