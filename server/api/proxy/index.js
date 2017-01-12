@@ -22,5 +22,6 @@ router.get('/getgmapkey', proxy.gmapkey);
 router.get('/gameslibrary', games.getlibrary);
 router.get('/hardwarelibrary', games.getHWLibrary);
 router.get('/gameswishlist', games.getGamesWishlist);
+router.get('/resumepdf', proxy.getresume);
 
 module.exports = router;

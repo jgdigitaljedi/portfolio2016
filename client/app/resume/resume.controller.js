@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('portfolioApp').controller('ResumeCtrl', ['$window', 'D3Resume', 'Dataobjects', '$rootScope',
-	function ($window, D3Resume, Dataobjects, $rootScope) {
+angular.module('portfolioApp').controller('ResumeCtrl', ['$window', 'D3Resume', 'Dataobjects', '$rootScope', '$http',
+	function ($window, D3Resume, Dataobjects, $rootScope, $http) {
 		// console.log('resume controller');
 		var rc = this;
 		rc.theme = $rootScope.theme;
@@ -19,7 +19,31 @@ angular.module('portfolioApp').controller('ResumeCtrl', ['$window', 'D3Resume', 
 		}
 
 		rc.downloadResume = function () {
-      $window.open('../../assets/resumes/PaulGauthier2017resume.pdf', '_blank');
+      $http({
+        method: 'GET',
+        url: '/api/proxy/resumepdf',
+        params : {},
+        headers : {
+          'Content-type' : 'application/pdf',
+        },
+        responseType : 'arraybuffer'
+      })
+        .success(function (data, status, headers, config) {
+          var file = new Blob([ data ], {
+            type : 'application/csv'
+          });
+          //trick to download store a file having its URL
+          var fileURL = URL.createObjectURL(file);
+          var a         = document.createElement('a');
+          a.href        = fileURL;
+          a.target      = '_blank';
+          a.download    = 'JoeyGauthierResume.pdf';
+          document.body.appendChild(a);
+          a.click();
+        })
+        .error(function(data, status, headers, config) {
+          console.log('pdf error', data);
+        });
 		};
 
 		$rootScope.$on('theme change', function () {

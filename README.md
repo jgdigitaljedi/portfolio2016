@@ -17,6 +17,16 @@ This app/site uses a number of open source projects to work properly:
 * [D3](https://d3js.org/) - Data Driven Documents
 * [DataTables](https://datatables.net/) - Table plugin for jQuery
 
+### APIs
+
+ - Yelp!
+ - Weather Underground
+ - Google Maps Directions
+ - Google Maps Places
+ - Last.fm
+ - Bing!
+ - GitHub
+
 ### Installation
 You must have Ruby and Sass installed for this to work. Also, you would need to set env variables for all of the API key references in the server code.
 
@@ -31,15 +41,6 @@ $ bower install
 $ grunt serve
 ```
 
-### APIs
-
- - Yelp!
- - Weather Underground
- - Google Maps Directions
- - Google Maps Places
- - Last.fm
- - Bing!
- - GitHub
 
 ### Todos
 

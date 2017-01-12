@@ -5,7 +5,8 @@ var request = require('request'),
 	smtpTransport = require('nodemailer-smtp-transport'),
 	path = require('path'),
 	moment = require('moment'),
-	weatherCache;
+	weatherCache,
+  fs = require('fs');
 
 var mongoose = require('mongoose');
 mongoose.createConnection('mongodb://localhost/random');
@@ -184,4 +185,21 @@ exports.myGithub = function (req, res) {
 
 exports.gmapkey = function (req, res) {
 	res.send(process.env.GMAPDIRSKEY);
+};
+
+exports.getresume = function (req, res) {
+  // var stream = fs.readStream(path.join(__dirname, 'assets'));
+  // var filename = 'PaulGauthier2017resume.pdf';
+  // filename = encodeURIComponent(filename);
+  // res.setHeader('Content-disposition', 'inline; filename="' + filename + '"');
+  // res.setHeader('Content-type', 'application/pdf');
+  //
+  // stream.pipe(res);
+
+  var file = fs.createReadStream(path.join(__dirname, 'assets/PaulGauthier2017resume.pdf'));
+  var stat = fs.statSync(path.join(__dirname, 'assets/PaulGauthier2017resume.pdf'));
+  res.setHeader('Content-Length', stat.size);
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader('Content-Disposition', 'attachment; filename=quote.pdf');
+  file.pipe(res);
 };
