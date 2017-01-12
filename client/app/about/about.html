@@ -2,7 +2,8 @@
 <section md-theme="{{ac.theme}}" ng-class="{'night':ac.theme === 'night', 'day': ac.theme === 'day'}" class="aboutme-section">
 	<div layout="row" layout-align="center center" class="top-container" flex>
 		<div class="width-container" layout="row" layout-align="center center">
-			<div layout="column" class="little-info" layout-align="center start">
+			<div layout="column" class="little-info" layout-align="center start" layout-align-sm="center center"
+           layout-align-xs="center center" ng-style="ac.stupidSmall && {'padding': '10px'} || {'padding': '0'}">
 				<div layout="row" layout-align="center center" class="about-header">
 					<div>about joey</div>
 				</div>
@@ -10,9 +11,9 @@
 					I'm a Web Application Software Engineer from Austin, TX.
 				</div>
 				<div class="summary-text">
-					While design is part of my job and is something I enjoy, I mainly prefer to write 
-					the nuts and bolts logic of a web app as I'm more of a function over form kind 
-					of guy. When I'm not staring at a screen I'm playing disc golf with my buddies, 
+					While design is part of my job and is something I enjoy, I mainly prefer to write
+					the nuts and bolts logic of a web app as I'm more of a function over form kind
+					of guy. When I'm not staring at a screen I'm playing disc golf with my buddies,
 					jamming some tunes on my guitar, or spending time with my family.
 				</div>
 			</div>
@@ -29,14 +30,15 @@
 		</div>
 	</div> -->
 	<md-divider></md-divider>
-	<div class="random-facts" layout="row" layout-align="center center" 
+	<div class="random-facts" layout="row" layout-align="center center"
 		ng-style="ac.theme === 'day' && {'background-color': 'white'} || ac.theme === 'night' && {'background-color': '#607d8b'}">
 		<div layout="row" class="width-container" layout-align="center center" flex="70">
 			<div class="random-image" layout="column" layout-align="start center" hide-sm hide-xs>
 				<img src="../assets/images/about/DJSigtouchedup.jpg" />
 			</div>
-			<div class="random-stuff" layout="column" layout-align="end center">
-				<div>
+			<div class="random-stuff" layout="column" layout-align="end center" layout-align-sm="center center"
+           layout-align-xs="center center">
+				<div ng-style="ac.stupidSmall && {'padding': '10px'} || {'padding': '0'}">
 					<h3>Random Facts</h3>
 					<article>
 						<p>My wife thinks I'm a robot.</p>
@@ -91,14 +93,14 @@
 						</p>
 					</div>
 					<div>
-						<a class="story-link" href="http://www.fox7austin.com/news/local-news/190282082-story" 
+						<a class="story-link" href="http://www.fox7austin.com/news/local-news/190282082-story"
 							target="__blank">Fox 7 story</a>
 					</div>
 				</div>
 				<div layout="column" style="margin: 0 6px;" ng-style="{'width': ac.gtMd ? '33%' : '100%'}">
 					<div class="feature-title">MoPac Express Lanes Command Center</div>
 					<div>
-						<p>This is regarding the same project as the previous feature, but there is an 
+						<p>This is regarding the same project as the previous feature, but there is an
 						image in the story showing one of the many screens I developed on this project.
 						</p>
 					</div>
@@ -109,12 +111,12 @@
 				<div layout="column" style="margin: 0 6px;" ng-style="{'width': ac.gtMd ? '33%' : '100%'}">
 					<div class="feature-title">My Dash</div>
 					<div>
-						<p>While attending MakerSquare, I did a solo project called 'My Dash' that they tweeted about. 
+						<p>While attending MakerSquare, I did a solo project called 'My Dash' that they tweeted about.
 						It's not a big deal, but I thought it was cool enough to mention here!
 						</p>
 					</div>
 					<div>
-						<a class="story-link" href="https://twitter.com/MakerSquare/status/517837514913366017" 
+						<a class="story-link" href="https://twitter.com/MakerSquare/status/517837514913366017"
 							target="__blank">Twitter</a>
 					</div>
 				</div>

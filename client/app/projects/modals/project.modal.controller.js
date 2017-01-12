@@ -5,11 +5,14 @@ angular.module('portfolioApp').controller('ProjectsModalCtrl', ['$scope', 'Datao
   function ($scope, Dataobjects, $mdDialog, $timeout, modalData) {
     $scope.theme = modalData.theme;
     $scope.which = modalData.selectedProject;
-    var thumbs = document.getElementsByClassName('film-square');
+    var thumbs = document.getElementsByClassName('film-square'),
+      screenwidth = window.innerWidth;
 
     if($scope.which.images) {
       $scope.selectedPic = modalData.selectedProject.images[0];
     }
+
+    $scope.makeItBig = screenwidth < 1000;
 
     $scope.closeGallery = function () {
       // pc.showLabel = true;

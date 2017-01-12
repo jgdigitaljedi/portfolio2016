@@ -268,32 +268,32 @@ angular.module('portfolioApp').factory('Dataobjects', [
             {
                 title: 'UI',
                 skillList: [
-                    {name: 'JavaScript', rating: 92},
-                    {name: 'HTML', rating: 90},
-                    {name: 'CSS', rating: 88},
-                    {name: 'LESS', rating: 80},
-                    {name: 'SASS', rating: 75}
+                    {name: 'JavaScript', rating: 95},
+                    {name: 'HTML', rating: 95},
+                    {name: 'CSS', rating: 92},
+                    {name: 'LESS', rating: 90},
+                    {name: 'SASS', rating: 85}
                 ]
             }, {
                 title: 'JavaScript',
                 skillList: [
-                    {name: 'Angular', rating: 90},
+                    {name: 'Angular', rating: 95},
                     {name: 'Node', rating: 84},
                     {name: 'jQuery', rating: 80}
                 ]
             }, {
-                title: 'General Programming',
+                title: 'Languages',
                 skillList: [
-                    {name: 'JavaScript', rating: 92},
-                    {name: 'VB Script', rating: 80},
-                    {name: 'Ruby', rating: 80},
+                    {name: 'JavaScript', rating: 95},
+                    {name: 'VB Script', rating: 75},
+                    {name: 'Ruby', rating: 70},
                     {name: 'Python', rating: 65}
                 ]
             }, {
                 title: 'Database',
                 skillList: [
                     {name: 'MongoDB', rating: 85},
-                    {name: 'PostgreSQL', rating: 65}
+                    {name: 'PostgreSQL', rating: 55}
                 ]
             }
         ];

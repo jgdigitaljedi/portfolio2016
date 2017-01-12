@@ -9,6 +9,7 @@ angular.module('portfolioApp').controller('AboutCtrl', ['$scope','$rootScope', '
             screenWidth = window.innerWidth;
 
         ac.gtMd = screenWidth >= 1280 ? true : false;
+        ac.stupidSmall = screenWidth < 960;
         ac.showLastfm = true;
         ac.theme = $rootScope.theme;
         ac.photoArr = ['../assets/images/about/meDsShow.jpg', '../assets/images/about/coachingSoccer.jpg',
@@ -52,7 +53,7 @@ angular.module('portfolioApp').controller('AboutCtrl', ['$scope','$rootScope', '
                     if (!response.error) {
                         response = response.current_observation;
                         ac.austinTemp = response.temp_f + '°F';
-                        ac.weather = response.weather.toLowerCase();                       
+                        ac.weather = response.weather.toLowerCase();
                     } else {
                         ac.austinTemp = false;
                     }
