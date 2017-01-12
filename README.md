@@ -56,7 +56,6 @@ $ grunt serve
  
 ### Todos that came to my attention after deployment
  
- - get https working because geolocation no longer works without it
  - fix overflow issue with sun/moon on home page when near 7:00
  - projects modal, contact page, and rrr enter location page don't work as intended on mobile 
  - bug in game library totals tab with float on ps4 total
