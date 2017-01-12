@@ -50,13 +50,12 @@ $ grunt serve
  - Make a social page
  - Finish Restaurant Roulette Remix
  	- make result cards same height always
- 	- stress test it some more
  	- darken background in night mode
  	- delay distance options card rendering until possible options are calculated
  - Eventually add a blog
  
  
- ### Todos that came to my attention after deployment
+### Todos that came to my attention after deployment
  
  - get https working because geolocation no longer works without it
  - figure out why the game library page won't hit the API on the server when it has no issues in development environment
