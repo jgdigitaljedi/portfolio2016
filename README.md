@@ -14,7 +14,8 @@ This app/site uses a number of open source projects to work properly:
 * [Express](https://github.com/expressjs/express) - Express.js: the fast, unopinionated, minimalist web framework for node
 * [Mongoose](https://github.com/Automattic/mongoose) - MongoDB object modeling designed to work in an asynchronous environment.
 * [MongoDB](https://www.mongodb.com/) - Building on the Best of Relational with the Innovations of NoSQL
-
+* [D3](https://d3js.org/) - Data Driven Documents
+* [DataTables](https://datatables.net/) - Table plugin for jQuery
 
 ### Installation
 You must have Ruby and Sass installed for this to work. Also, you would need to set env variables for all of the API key references in the server code.
@@ -22,6 +23,7 @@ You must have Ruby and Sass installed for this to work. Also, you would need to 
 ```sh
 $ npm install grunt bower -g
 $ npm install
+$ bower install
 ```
 
 ### To Run It
@@ -52,9 +54,10 @@ $ grunt serve
  	- delay distance options card rendering until possible options are calculated
  - Eventually add a blog
  
+ 
  ### Todos that came to my attention after deployment
  
  - get https working because geolocation no longer works without it
  - figure out why the game library page won't hit the API on the server when it has no issues in development environment
  - fix overflow issue with sun/moon on home page when near 7:00
- 
+ - projects modal, contact page, and rrr enter location page don't work as intended on mobile 

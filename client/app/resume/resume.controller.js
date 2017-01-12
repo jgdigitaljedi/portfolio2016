@@ -13,15 +13,13 @@ angular.module('portfolioApp').controller('ResumeCtrl', ['$window', 'D3Resume', 
 				if (rc.theme === 'day') {
 					svgText[i].style.fill = '#212121';
 				} else {
-					svgText[i].style.fill = '#f1f1f1';					
+					svgText[i].style.fill = '#f1f1f1';
 				}
 			}
 		}
 
 		rc.downloadResume = function () {
-			if (rc.resumeFormat) {
-				$window.open('../../assets/resumes/resume2015.' + rc.resumeFormat, '_blank');
-			}
+      $window.open('../../assets/resumes/PaulGauthier2017resume.pdf', '_blank');
 		};
 
 		$rootScope.$on('theme change', function () {

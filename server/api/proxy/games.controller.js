@@ -1,9 +1,10 @@
 'use strict();'
 
 var fs = require('fs');
+var path = require('path');
 
 exports.getlibrary = function (req, res) {
-	fs.readFile('./server/api/proxy/vg/gameLibrary.json', 'utf-8', function (err, data) {
+	fs.readFile(path.join(__dirname,'vg/gameLibrary.json'), 'utf-8', function (err, data) {
 		var returnData = {},
 			status;
 		// if (err.code !== 'ENOENT') throw err;
@@ -19,7 +20,7 @@ exports.getlibrary = function (req, res) {
 };
 
 exports.getHWLibrary = function (req, res) {
-	fs.readFile('./server/api/proxy/vg/hardwareLibrary.json', 'utf-8', function (err, data) {
+	fs.readFile(path.join(__dirname, 'vg/hardwareLibrary.json'), 'utf-8', function (err, data) {
 		var returnData = {},
 			status;
 		// if (err.code !== 'ENOENT') throw err;
@@ -35,7 +36,7 @@ exports.getHWLibrary = function (req, res) {
 };
 
 exports.getGamesWishlist = function (req, res) {
-	fs.readFile('./server/api/proxy/vg/gameWishlist.json', 'utf-8', function (err, data) {
+	fs.readFile(path.join(__dirname, 'vg/gameWishlist.json'), 'utf-8', function (err, data) {
 		var returnData = {},
 			status;
 		// if (err.code !== 'ENOENT') throw err;
