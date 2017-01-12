@@ -49,8 +49,7 @@ $ grunt serve
  - Redesign fun page (no thoughts on something visually appealing yet)
  - Make a social page
  - Finish Restaurant Roulette Remix
- 	- make result cards same height always
- 	- darken background in night mode
+  - add button to launch google maps if viewed on a phone
  	- delay distance options card rendering until possible options are calculated
  - Eventually add a blog
  
@@ -58,7 +57,6 @@ $ grunt serve
 ### Todos that came to my attention after deployment
  
  - get https working because geolocation no longer works without it
- - figure out why the game library page won't hit the API on the server when it has no issues in development environment
  - fix overflow issue with sun/moon on home page when near 7:00
  - projects modal, contact page, and rrr enter location page don't work as intended on mobile 
  - bug in game library totals tab with float on ps4 total

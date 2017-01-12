@@ -86,18 +86,16 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     title: 'Portfolio',
                     color: '#FBC02D',
                     tile: '../assets/images/port/gallery1.jpg',
-                    description: 'Well, this is the page you\'re looking at right now. Why list it as a project? There\'s a lot going on here, that\'s why! For starters, '+
-                        'I deploy my team\'s apps at work so I decided I might as well rough it here too. This is running on a DigitalOcean server on my '+
-                        'server config setup. All configuration was done through ssh. Aside from that and just from generally liking what I\'ve done '+
-                        'here, I\'ve got some things going on that you can\'t see. I decided to use this server for more than just hosting my portfolio. I\'ve used '+
-                        'Express to make routes that just return data to me. For example, got to http://joeyg.me/morning and you\'ll see a string returned ' +
-                        'that is talking about traffic and weather. I use an app called Tasker on my phone to hit that address in the morning when my phone connects '+
-                        'to the bluetooth in my truck. That string is then read aloud to me over my truck\s stereo so I know what to expect my commute to be like. I am also working on integrating a call to my calendar to read back my ' +
-                        'events for the day as well. I have more plans for the server too, but time is greatest my obstacle. \n \n TLDR: I am doing some cool things '+
-                        'with this server I have setup!',
+                    description: 'Well, this is the page you\'re looking at right now. Why list it as a project? There\'s a lot going on here, that\'s why! '+
+                        'This is running on a DigitalOcean server on my '+
+                        'server config setup and build process. Aside from that and just from generally liking what I\'ve done '+
+                        'here, I\'ve got some things going on that you can\'t see. I decided to use this server for more than just hosting my portfolio. ' +
+                        'There\'s a game I created in the "Fun" tab as well as a remake of an app I did a couple years ago that helps you decide where to eat.' +
+                        'I\'ve even got a quasi-hidden page for cataloging my video game collection. There\'s more than meets the eye here, and I plan on ' +
+                        'continually adding to it!',
                     github: 'https://github.com/jgdigitaljedi/portfolio2016',
                     techs: 'MongoDB, ExpressJS, AngularJS, NodeJS, Angular Material, MomentJS, Nodemailer, d3, Phaser',
-                    apis: 'Weather Underground, Last.fm, Bing Maps, GitHub, Yelp'
+                    apis: 'Weather Underground, Last.fm, Bing Maps, GitHub, Yelp, Google Maps'
                 },
                 toolbox: {
                     shortName: 'toolbox',
