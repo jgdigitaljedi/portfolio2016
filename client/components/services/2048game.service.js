@@ -49,43 +49,31 @@ angular.module('portfolioApp').factory('GameLogicService', [
 				}
 
         function endSwipe () {
-				  console.log('endswipe', this.startX)
-          var endX = game.input.worldX;
-          var endY = game.input.worldY;
-          var distX = this.startX-endX;
-          var distY = this.startY-endY;
-          // in order to have an horizontal swipe, we need that x distance is at least twice the y distance
-          // and the amount of horizontal distance is at least 10 pixels
-          if(Math.abs(distX)>Math.abs(distY)*2 && Math.abs(distX)>10){
-            // moving left, calling move function with horizontal and vertical tiles to move as arguments
-            if(distX>0){
+          var endX = game.input.worldX,
+            endY = game.input.worldY,
+            distX = this.startX - endX,
+            distY = this.startY - endY;
+          if (Math.abs(distX) > Math.abs(distY) * 2 && Math.abs(distX) > 10) {
+            if (distX > 0) {
               moveLeft(this);
-            }
-            // moving right, calling move function with horizontal and vertical tiles to move as arguments
-            else{
+            } else {
               moveRight(this);
             }
           }
-          // in order to have a vertical swipe, we need that y distance is at least twice the x distance
-          // and the amount of vertical distance is at least 10 pixels
-          if(Math.abs(distY)>Math.abs(distX)*2 && Math.abs(distY)>10){
-            // moving up, calling move function with horizontal and vertical tiles to move as arguments
-            if(distY>0){
+          if (Math.abs(distY) > Math.abs(distX) * 2 && Math.abs(distY) > 10) {
+            if (distY > 0) {
               moveUp(this);
-            }
-            // moving down, calling move function with horizontal and vertical tiles to move as arguments
-            else{
+            } else {
               moveDown(this);
             }
           }
-          // stop listening for the player to release finger/mouse, let's start listening for the player to click/touch
           game.input.onDown.add(beginSwipe, this);
           game.input.onUp.remove(endSwipe);
         }
 
 				function beginSwipe () {
-          var startX = game.input.worldX;
-          var startY = game.input.worldY;
+          var startX = game.input.worldX,
+            startY = game.input.worldY;
           game.input.onDown.remove(beginSwipe);
           game.input.onUp.add(endSwipe, {startX: startX, startY: startY});
         }
@@ -93,8 +81,8 @@ angular.module('portfolioApp').factory('GameLogicService', [
 				function onCreate() {
 					/*jshint validthis:true */
 					var world = game.world;
-			  		game.add.image(0, 0, 'grid').anchor.set(0);
-			  		var cursors = game.input.keyboard.createCursorKeys();
+          game.add.image(0, 0, 'grid').anchor.set(0);
+          var cursors = game.input.keyboard.createCursorKeys();
 					upKey = game.input.keyboard.addKey(Phaser.Keyboard.W);
 					upKey.onDown.add(moveUp, this);
 					cursors.up.onDown.add(moveUp, this);

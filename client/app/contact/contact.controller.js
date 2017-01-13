@@ -3,7 +3,10 @@
 angular.module('portfolioApp').controller('ContactCtrl', ['$scope', '$http', '$mdDialog', '$rootScope',
 	function($scope, $http, $mdDialog, $rootScope) {
 		// TODO: fix success and failure modals and add loading animation while sending
-		var cc = this;
+		var cc = this,
+      screenWidth = window.innerWidth;
+
+		cc.smallView = screenWidth < 960;
 
 		function colorHoldouts () {
 			if (cc.theme === 'day') {

@@ -1,6 +1,6 @@
-<div ng-include="'components/shell/shell.html'" md-theme="{{pc.theme}}" 
+<div ng-include="'components/shell/shell.html'" md-theme="{{pc.theme}}"
 	ng-class="{'night':pc.theme === 'night', 'day': pc.theme === 'day'}"></div>
-<section ng-class="{'night':pc.theme === 'night', 'day': pc.theme === 'day'}" md-theme="{{pc.theme}}" 
+<section ng-class="{'night':pc.theme === 'night', 'day': pc.theme === 'day'}" md-theme="{{pc.theme}}"
 	class="projects-section" ng-cloak>
 
 	<div class="projects-topper" parallax-background parallax-ratio="0.8"></div>
@@ -14,7 +14,7 @@
 			</div>
 			<div class="switch-area" layout="row" layout-align="center center" style="width: 100%;">
 				Personal Projects
-		        <md-switch ng-model="isPersonal" style="margin: auto 12px;" aria-label="Project Type" 
+		        <md-switch ng-model="isPersonal" style="margin: auto 12px;" aria-label="Project Type"
 		        	ng-change="pc.changeProjectSet()">
 		        </md-switch>
 		        Work Projects
@@ -42,7 +42,7 @@
 	</div>
 	<!-- <div parallax-background parallax-ratio="0.6" class="github-logos" layout="row">
 	</div> -->
-	<div class="bottom-gh-area">
+	<div class="bottom-gh-area" hide-sm hide-xs>
 		<div layout="row" layout-align="center center" class="gh-logo-container">
 			<img src="../assets/images/github_projects.jpg" class="github-logo" />
 		</div>

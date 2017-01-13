@@ -1,32 +1,32 @@
 <div ng-include="'components/shell/shell.html'" md-theme="{{cc.theme}}" ng-class="{'night':cc.theme === 'night', 'day': cc.theme === 'day'}"></div>
 <section md-theme="{{cc.theme}}" ng-class="{'night':cc.theme === 'night', 'day': cc.theme === 'day'}" class="contact-section" ng-controller="ContactCtrl as cc">
-	<div layout layout-align="center center">
-		<span layout="row" layout-align="center center">
-			<p class="md-display-2 contact-header">drop me a line</p>
+	<div layout layout-align="center center" layout="row">
+		<span layout="row" layout-sm="column" layout-xs="column" layout-align="center center">
+			<p class="md-display-2 contact-header" layout-padding>drop me a line</p>
 		</span>
 	</div>
-	<md-content layout-padding layout="row" layout-align="center center" class="trans-back">
+	<md-content layout-padding layout="column" layout-align="center center" class="trans-back">
 	    <form name="userForm" class="contact-form">
 	  		<md-content layout-padding class="trans-back height-fix">
-	      		<div layout>
-			        <md-input-container class="half-width">
+	      		<div layout="row" layout-sm="column" layout-xs="column">
+			        <md-input-container ng-class="{'half-width': !cc.smallView}" layout-sm="row" layout-xs="row">
 			          	<label class="accent-label" ng-style="{'color': cc.labelColor}">First name</label>
 			          	<input required name="firstName" ng-model="user.firstName" ng-style="{'color': cc.labelColor, 'border-bottom': '1px solid' + cc.labelColor}">
 			          	<!-- <div ng-messages="userForm.firstName.$error">
 			             	<div ng-message="required">I need to know who your are!</div>
 			            </div> -->
 			        </md-input-container>
-			        <md-input-container class="half-width">
+			        <md-input-container ng-class="{'half-width': !cc.smallView}" layout-sm="row" layout-xs="row">
 			          	<label class="accent-label" ng-style="{'color': cc.labelColor}">Last Name</label>
 			          	<input ng-model="user.lastName" ng-style="{'color': cc.labelColor, 'border-bottom': '1px solid' + cc.labelColor}">
 			        </md-input-container>
 	      		</div>
-	      		<div layout>
-	        		<md-input-container class="half-width">
+	      		<div layout="row" layout-sm="column" layout-xs="column">
+	        		<md-input-container ng-class="{'half-width': !cc.smallView}" layout-sm="row" layout-xs="row">
 	            		<label class="accent-label" ng-style="{'color': cc.labelColor}"><i class="fa fa-building"></i> Company (optional)</label>
 	            		<input ng-model="user.company" ng-style="{'color': cc.labelColor, 'border-bottom': '1px solid' + cc.labelColor}">
 	          		</md-input-container>
-			    	<md-input-container class="half-width">
+			    	<md-input-container ng-class="{'half-width': !cc.smallView}" layout-sm="row" layout-xs="row">
 			      		<label class="accent-label" ng-style="{'color': cc.labelColor}"><i class="fa fa-envelope"></i> Email</label>
 			      		<input ng-model="user.email" required name="email" type="email" ng-style="{'color': cc.labelColor, 'border-bottom': '1px solid' + cc.labelColor}">
 			      		<!-- <div ng-messages="userForm.email.$error">
@@ -34,14 +34,16 @@
 			            </div> -->
 			    	</md-input-container>
 			    </div>
-			    <md-input-container flex>
-			        <label class="accent-label" ng-style="{'color': cc.labelColor}"><i class="fa fa-comment"></i> Comments</label>
-			        <textarea ng-model="user.comments" columns="1" md-maxlength="500" required name="comments" 
-			        	ng-style="{'color': cc.labelColor, 'border-bottom': '1px solid' + cc.labelColor}"></textarea>
-			        <!-- <div ng-messages="userForm.comments.$error">
-			            <div ng-message="required">Why are you contacting me?</div>
-			        </div> -->
-			    </md-input-container>
+          <div layout="row">
+            <md-input-container flex="100">
+                <label class="accent-label" ng-style="{'color': cc.labelColor}"><i class="fa fa-comment"></i> Comments</label>
+                <textarea ng-model="user.comments" style="width: 100%;" columns="2" md-maxlength="500" required name="comments"
+                  ng-style="{'color': cc.labelColor, 'border-bottom': '1px solid' + cc.labelColor}"></textarea>
+                <!-- <div ng-messages="userForm.comments.$error">
+                    <div ng-message="required">Why are you contacting me?</div>
+                </div> -->
+            </md-input-container>
+        </div>
 			</md-content>
 			<div layout layout-align="center center">
 				<md-button ng-click="cc.sendEmail(user)" ng-style="{'color': cc.buttonColor}" class="md-accent">
