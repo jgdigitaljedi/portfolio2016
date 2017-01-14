@@ -79,12 +79,12 @@ $dark-amber: #ffc107;
     z-index: 5;
     font-size: 4em;
     font-family: 'mr_robot';
-    margin: 30px auto 12px;
+    margin: 20px auto 12px;
     -webkit-animation-delay: 1.1s;
     -moz-animation-delay: 1.1s;
     animation-delay: 1.1s;
   }
-  
+
   .my-profession {
     z-index: 5;
     color: $dark-amber;
@@ -108,7 +108,7 @@ $dark-amber: #ffc107;
       -moz-animation-delay: 1.9s;
       animation-delay: 1.9s;
   }
-  
+
   }
   .last-fm-section {
     // min-height: 18vh;
@@ -231,7 +231,7 @@ $dark-amber: #ffc107;
   .small-desc-line {
     margin-bottom: 0;
   }
-  
+
   .last-fm-section {
     min-height: 16vh;
   }

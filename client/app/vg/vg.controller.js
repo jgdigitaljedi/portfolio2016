@@ -229,7 +229,7 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 			gc.gameLibrary.forEach(function (item) {
 				if (!gc.gamesData.gamesByConsole.hasOwnProperty(item.platform)) gc.gamesData.gamesByConsole[item.platform] = {items: 0, total: 0};
 				gc.gamesData.gamesByConsole[item.platform].items++;
-				gc.gamesData.gamesByConsole[item.platform].total += item.price.filter;
+				gc.gamesData.gamesByConsole[item.platform].total += parseFloat(item.price.filter.toFixed(2));
 				gc.gamesData.totalPrice += item.price.filter;
 				gc.gamesData.count++;
 				genreTracker(item.genre);

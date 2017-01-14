@@ -56,4 +56,3 @@ $ grunt serve
 ### Todos that came to my attention after deployment
 
  - projects modal doesn't work as intended on mobile
- - bug in game library totals tab with float on ps4 total
