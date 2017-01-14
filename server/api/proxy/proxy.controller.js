@@ -133,7 +133,7 @@ exports.sendMail = function(req, res) {
 	var company,
 		transporter = nodemailer.createTransport(
 			{
-				service: 'Aol',
+				service: 'aol',
 				auth: {
 					user: process.env.JYAHOOUSER,
 					pass: process.env.JYAHOOPASS
