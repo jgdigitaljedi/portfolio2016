@@ -229,11 +229,15 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 			gc.gameLibrary.forEach(function (item) {
 				if (!gc.gamesData.gamesByConsole.hasOwnProperty(item.platform)) gc.gamesData.gamesByConsole[item.platform] = {items: 0, total: 0};
 				gc.gamesData.gamesByConsole[item.platform].items++;
-				gc.gamesData.gamesByConsole[item.platform].total += parseFloat(item.price.filter.toFixed(2));
+				gc.gamesData.gamesByConsole[item.platform].total += item.price.filter !== null ? parseFloat(item.price.filter.toFixed(2)) : 0;
 				gc.gamesData.totalPrice += item.price.filter;
 				gc.gamesData.count++;
 				genreTracker(item.genre);
 			});
+			for (var key in gc.gamesData.gamesByConsole) {
+			  gc.gamesData.gamesByConsole[key].total = parseFloat(gc.gamesData.gamesByConsole[key].total.toFixed(2));
+      }
+			gc.gamesData.gamesByConsole
 			gc.gamesData.genres = genreObj;
 			console.log('gamesData', gc.gamesData);
 			console.log('hw', gc.hwLibrary);
