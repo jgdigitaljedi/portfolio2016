@@ -52,11 +52,12 @@ $ grunt serve
   - add button to launch google maps if viewed on a phone
  	- delay distance options card rendering until possible options are calculated
  - Eventually add a blog
+ - In RRR on directions view, add open in Google Maps if on Android
  
  
 ### Todos that came to my attention after deployment
  
  - fix overflow issue with sun/moon on home page when near 7:00
- - projects modal, contact page, and rrr enter location page don't work as intended on mobile 
+ - projects modal doesn't work as intended on mobile
  - bug in game library totals tab with float on ps4 total
- - nodemailer stopped working again. Gonna try a different email service
+ - nodemailer stopped working again. Gonna try a different email service.

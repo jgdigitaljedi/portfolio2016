@@ -75,6 +75,10 @@ angular.module('portfolioApp').factory('D3Resume', ['Dataobjects',
 					.style('text-anchor', 'end')
 					.attr('transform', 'translate('+[0,2]+') rotate(-70)');
 
+				// remove last x-label so it doesn't get chopped off
+				var lastOne = (xAxilsEl.selectAll('text')._groups[0]).length - 1;
+				d3.select((xAxilsEl.selectAll('text')._groups[0])[lastOne]).attr('visibility', 'hidden');
+
 				graphContainer.append('text')
 					.classed('axis-label',true)
 					.text('WORKS')
@@ -143,15 +147,19 @@ angular.module('portfolioApp').factory('D3Resume', ['Dataobjects',
 						.classed('info',true)
 						.classed('default',function(d) {return d.default_item;})
 						.classed(className,true)
-						.attr('transform', 'translate('+[config.width*0.1,infoTopPosition]+')')
+						.attr('transform', 'translate('+[config.width*0.02,infoTopPosition]+')')
 						.attr('fill-opacity', function(d) {
 							return d.default_item ? 1 : 0;
 						});
 
-				addItemDetail(gInfo, '18px', 'translate('+[0,0]+')', 'normal', function(d) {return d.type;});
-				addItemDetail(gInfo, '18px', 'translate('+[0,25]+')', 'normal', function(d) {return d.title;});
-				addItemDetail(gInfo, '23px', 'translate('+[0,50]+')', 'bold',function(d) {return d.institution;});
-				addItemDetail(gInfo, '14px', 'translate('+[0,70]+')', 'bold', function(d) {
+				var textSizes = {};
+				textSizes.primary = screenWidth > 900 ? '18px' : '0.9em';
+				textSizes.title = screenWidth > 900 ? '23px' : '1em';
+				textSizes.small = screenWidth > 900 ? '14px' : '0.7em';
+				addItemDetail(gInfo, textSizes.primary, 'translate('+[0,0]+')', 'normal', function(d) {return d.type;});
+				addItemDetail(gInfo, textSizes.primary, 'translate('+[0,25]+')', 'normal', function(d) {return d.title;});
+				addItemDetail(gInfo, textSizes.title, 'translate('+[0,50]+')', 'bold',function(d) {return d.institution;});
+				addItemDetail(gInfo, textSizes.small, 'translate('+[0,70]+')', 'bold', function(d) {
 					var text = formatToShow(d.from) + ' - ';
 					if (d.to === null) {
 						text += 'Now';
@@ -174,7 +182,7 @@ angular.module('portfolioApp').factory('D3Resume', ['Dataobjects',
 					})
 					.enter();
 
-				addItemDetail(descriptionWrapper, '14px', function(d) {return 'translate(0,'+d.position+')';},
+				if (screenWidth >= 560) addItemDetail(descriptionWrapper, textSizes.small, function(d) {return 'translate(0,'+d.position+')';},
 					'normal',function(d){return d.text;});
 
 

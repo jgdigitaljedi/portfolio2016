@@ -206,8 +206,8 @@ angular.module('portfolioApp').factory('Dataobjects', [
 		            'title':'Owner/Technician',
 		            'from':'2007-04-01',
 		            'to':'2014-07-12',
-		            'description':'Worked as owner and technician requiring me to balance my time between the business tasks and client services.'+
-		            	'\n Provided PC repair, home theater installation, and networking solutions for customers at their home or business.',
+		            'description':'Worked as owner and technician.'+
+		            	'\n Provided PC repair, building, and networking solutions for customers.',
 		            'default_item':false
 		        },
 		        {
