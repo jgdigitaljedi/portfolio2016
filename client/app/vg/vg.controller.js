@@ -195,8 +195,37 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 			}
 		}
 
-		function buildHWWishlist () {
+		function buildConsoleWLTable () {
+      $('#console-wishlist-table').DataTable({
+        aaData: gc.consoleWL,
+        aoColumns: [
+          {'mDataProp': 'name', title: 'Console'},
+          {'mDataProp': 'releaseYear', title: 'Release Year'},
+          {'mDataProp': 'ebayPrice', title: 'Ebay Price', render: {'_': 'filter', 'filter': 'filter', 'display': 'display'}}
+        ],
+        'aaSorting': [[1,'asc'], [0,'asc']],
+        'iDisplayLength': -1
+      });
+      var table = $('#console-wishlist-table').dataTable();
+      table.fnClearTable();
+      table.fnAddData(gc.consoleWL);
+    }
 
+		function buildHWWishlist () {
+		  if (!gc.consoleWL) {
+        getData('consolewl').then(function (response) {
+          gc.consoleWL = response.hardwareWL.map(function (item) {
+            item.ebayPrice = {
+              filter: item.ebayPrice,
+              display: formatPrice(item.ebayPrice)
+            };
+            return item;
+          });
+          buildConsoleWLTable();
+        });
+      } else if (!($('#console-wishlist-table').hasClass('dataTable'))) {
+        buildConsoleWLTable();
+      }
 		}
 
 		function genreTracker (genre) {

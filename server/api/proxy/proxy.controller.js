@@ -188,14 +188,6 @@ exports.gmapkey = function (req, res) {
 };
 
 exports.getresume = function (req, res) {
-  // var stream = fs.readStream(path.join(__dirname, 'assets'));
-  // var filename = 'PaulGauthier2017resume.pdf';
-  // filename = encodeURIComponent(filename);
-  // res.setHeader('Content-disposition', 'inline; filename="' + filename + '"');
-  // res.setHeader('Content-type', 'application/pdf');
-  //
-  // stream.pipe(res);
-
   var file = fs.createReadStream(path.join(__dirname, 'assets/PaulGauthier2017resume.pdf'));
   var stat = fs.statSync(path.join(__dirname, 'assets/PaulGauthier2017resume.pdf'));
   res.setHeader('Content-Length', stat.size);

@@ -272,7 +272,7 @@
     "Castlevania" : {
       "games" : "Castlevania",
       "price_CIB" : 30,
-      "price" : 10    
+      "price" : 10
     },
     "Conker’s Bad Fur Day" : {
       "games" : "Conker’s Bad Fur Day",
@@ -411,11 +411,6 @@
       "price_CIB" : 86,
       "price" : 72
     },
-    "Quake 3: Arena" : {
-      "games" : "Quake 3: Arena",
-      "price_CIB" : 10,
-      "price" : 8
-    },
     "Re-Volt" : {
       "games" : "Re-Volt",
       "price_CIB" : 16,
@@ -430,11 +425,6 @@
       "games" : "Shenmue",
       "price_CIB" : 40,
       "price" : 29
-    },
-    "Sonic Adventure" : {
-      "games" : "Sonic Adventure",
-      "price_CIB" : 18,
-      "price" : 12
     },
     "Sonic Adventure 2" : {
       "games" : "Sonic Adventure 2",
@@ -671,10 +661,6 @@
       "games" : "Borderlands 2",
       "price" : 5
     },
-    "Gran Turismo 5" : {
-      "games" : "Gran Turismo 5",
-      "price" : 5
-    },
     "Gran Turismo 6" : {
       "games" : "Gran Turismo 6",
       "price" : 11
@@ -893,14 +879,6 @@
       "games" : "Pro Evolution Soccer 2017",
       "price" : 40
     },
-    "Ratchet and Clank" : {
-      "games" : "Ratchet and Clank",
-      "price" : 20
-    },
-    "The Last of Us Remastered" : {
-      "games" : "The Last of Us Remastered",
-      "price" : 25
-    },
     "The Witcher 3" : {
       "games" : "The Witcher 3",
       "price" : 39
@@ -996,6 +974,58 @@
     "WarioWare, Inc." : {
       "games" : "WarioWare Inc.",
       "price" : 27
+    }
+  },
+  "32X": {
+    "After Burner": {
+      "games": "After Burner",
+      "price_CIB": 33.5,
+      "price": 27
+    },
+    "Blackthorne": {
+      "games": "Blackthorne",
+      "price_CIB": 122.5,
+      "price": 73
+    },
+    "Doom": {
+      "games": "Doom",
+      "price_CIB": 15,
+      "price": 8
+    },
+    "Knuckles Choatix": {
+      "games": "Knuckles Choatix",
+      "price_CIB": 80,
+      "price": 50
+    },
+    "Kolibri": {
+      "games": "Kolibri",
+      "price_CIB": 99,
+      "price": 50
+    },
+    "Mortal Kombat II": {
+      "games": "Mortal Kombat II",
+      "price_CIB": 32,
+      "price": 20
+    },
+    "NBA Jam Tournament Edition": {
+      "games": "NBA Jam Tournament Edition",
+      "price_CIB": 25,
+      "price": 21
+    },
+    "Shadow Squadron": {
+      "games": "Shadow Squadron",
+      "price_CIB": 50,
+      "price": 16
+    },
+    "Star Wars Arcade": {
+      "games": "Star Wars Arcade",
+      "price_CIB": 15,
+      "price": 8
+    },
+    "Virtua Fighter": {
+      "games": "Virtua Fighter",
+      "price_CIB": 20,
+      "price": 9
     }
   }
 }

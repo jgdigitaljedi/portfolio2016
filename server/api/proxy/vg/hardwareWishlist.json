@@ -1,0 +1,119 @@
+{
+  "hardwareWL": [
+    {
+      "name": "Atari 2600",
+      "releaseYear": 1977,
+      "ebayPrice": 20
+    },
+    {
+      "name": "Atari 5200",
+      "releaseYear": 1982,
+      "ebayPrice": 45
+    },
+    {
+      "name": "Atari 7800",
+      "releaseYear": 1986,
+      "ebayPrice": 56
+    },
+    {
+      "name": "Atari Jaguar",
+      "releaseYear": 1993,
+      "ebayPrice": 200
+    },
+    {
+      "name": "ColecoVision",
+      "releaseYear": 1982,
+      "ebayPrice": 65
+    },
+    {
+      "name": "Intellivision",
+      "releaseYear": 1979,
+      "ebayPrice": 45
+    },
+    {
+      "name": "Magnovox Odyssey 2",
+      "releaseYear": 1978,
+      "ebayPrice": 50
+    },
+    {
+      "name": "NEO GEO",
+      "releaseYear": 1990,
+      "ebayPrice": 250
+    },
+    {
+      "name": "NEO GEO CD",
+      "releaseYear": 1990,
+      "ebayPrice": 120
+    },
+    {
+      "name": "Panasonic 3DO",
+      "releaseYear": 1993,
+      "ebayPrice": 150
+    },
+    {
+      "name": "Philips CDi",
+      "releaseYear": 1992,
+      "ebayPrice": 70
+    },
+    {
+      "name": "Playstation",
+      "releaseYear": 1994,
+      "ebayPrice": 40
+    },
+    {
+      "name": "Playstation VITA",
+      "releaseYear": 2011,
+      "ebayPrice": 150
+    },
+    {
+      "name": "Sega CD (model 2)",
+      "releaseYear": 1992,
+      "ebayPrice": 120
+    },
+    {
+      "name": "Sega Game Gear",
+      "releaseYear": 1991,
+      "ebayPrice": 65
+    },
+    {
+      "name": "Sega Master System",
+      "releaseYear": 1986,
+      "ebayPrice": 75
+    },
+    {
+      "name": "Sega Nomad",
+      "releaseYear": 1995,
+      "ebayPrice": 120
+    },
+    {
+      "name": "Sega Saturn",
+      "releaseYear": 1995,
+      "ebayPrice": 120
+    },
+    {
+      "name": "Super Nintendo",
+      "releaseYear": 1990,
+      "ebayPrice": 100
+    },
+    {
+      "name": "Turbografx-16",
+      "releaseYear": 1987,
+      "ebayPrice": 200
+    },
+    {
+      "name": "XBOX",
+      "releaseYear": 2001,
+      "ebayPrice": 65
+    },
+    {
+      "name": "XBOX 360",
+      "releaseYear": 2005,
+      "ebayPrice": 120
+    },
+    {
+      "name": "Wonderswan",
+      "releaseYear": 1999,
+      "ebayPrice": 80
+    }
+  ]
+}
