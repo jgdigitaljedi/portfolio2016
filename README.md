@@ -56,3 +56,4 @@ $ grunt serve
 ### Todos that came to my attention after deployment
 
  - projects modal doesn't work as intended on mobile
+ - shrinkwrap npm modules; npm install didn't get everything and some new dep versions break things now
