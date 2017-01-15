@@ -1,36 +1,10 @@
 'use strict';
 /*jshint camelcase: false */
 
-angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', '$http', '$q',
-	function ($rootScope, $scope, $http, $q) {
+angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData',
+	function ($scope, VgData) {
 		var gc = this,
 			genreObj = {};
-
-		// $rootScope.$on('theme change', function () {
-		//     gc.theme = $rootScope.theme;
-		// });
-
-		function formatPrice (price) {
-			return '$' + price.toFixed(2);
-		}
-
-		function getData (which) {
-			var def = $q.defer();
-			$http.get('/api/proxy/' + which)
-				.success(function (data) {
-					if (!data.error) {
-						def.resolve(data.data);
-					} else {
-						console.warn('data error', data);
-						def.resolve(data.data);
-					}
-				})
-				.error(function (data) {
-					console.warn('data error', data);
-					def.reject(data);
-				});
-				return def.promise;
-		}
 
 		function glTable () {
 			$('#game-library-table').DataTable({
@@ -49,36 +23,12 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 
 		function buildGameLibraryTable () {
 			if (!gc.gameLibrary) {
-				getData('gameslibrary').then(function (response) {
-					if (!response.error) {
-						// buildGameLibraryTable(response);
-						response.games.forEach(function (item) {
-							if (!item.price) {
-								item.price = {
-									filter: null,
-									display: '--'
-								};
-							} else {
-								item.price = {
-									filter: item.price,
-									display: formatPrice(item.price)
-								};
-							}
-							if (!item.genre) {
-								item.genre = '--';
-							}
-
-						});
-						gc.gameLibrary = response.games;
-						glTable();
-					} else {
-						console.warn('game lib error', response);
-					}
-				});
-			} else {
-				if (!($('#game-library-table').hasClass('dataTable'))) {
-					glTable();
-				}
+			  VgData.getOwnedGames().then(function (data) {
+			    gc.gameLibrary = data;
+			    glTable();
+        });
+			} else if (!($('#game-library-table').hasClass('dataTable'))) {
+        glTable();
 			}
 		}
 
@@ -103,39 +53,14 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 
 		function buildHWLibraryTable (justGet) {
 			if (!gc.hwLibrary) {
-				getData('hardwarelibrary').then(function (response) {
-					response.hardware.forEach(function (item) {
-						if (!item.Value) {
-							item.Value = {
-								filter: null,
-								display: '--'
-							};
-						} else {
-							item.Value = {
-								filter: item.Value,
-								display: formatPrice(item.Value)
-							};
-						}
-						if (!item.Total) {
-							item.Total = {
-								filter: null,
-								display: '--'
-							};
-						} else {
-							item.Total = {
-								filter: item.Total,
-								display: formatPrice(item.Total)
-							};
-						}
-
-					});
-					gc.hwLibrary = response;
-					if (justGet) {
-						libraryTotals();
-					} else {
-						hwTable();
-					}
-				});
+			  VgData.getOwnedHardware().then(function (data) {
+			    gc.hwLibrary = data;
+          if (justGet) {
+            libraryTotals();
+          } else {
+            hwTable();
+          }
+        });
 			} else {
 				if (!($('#hardware-library-table').hasClass('dataTable'))) {
 					if (justGet) {
@@ -149,7 +74,7 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 
 		function gwlTable () {
 			$('#games-wishlist-table').DataTable({
-				aaData: gc.hwLibrary,
+				aaData: gc.gamesWl,
 				aoColumns: [
 					{'mDataProp': 'game', title: 'Game'},
 					{'mDataProp': 'console', title: 'Console'},
@@ -167,27 +92,10 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 
 		function buildGameWishlistTable () {
 			if (!gc.gamesWl) {
-				getData('gameswishlist').then(function (response) {
-					gc.gamesWl = [];
-					for (var key in response) {
-						for (var game in response[key]) {
-							if (key === 'PS4') {
-							}
-							gc.gamesWl.push({
-								console: key,
-								price: {
-									filter: response[key][game].price,
-									display: response[key][game].price ? formatPrice(response[key][game].price) : '--'
-								},
-								cib: {
-									filter: response[key][game].price_CIB || '--',
-									display: response[key][game].price_CIB ? formatPrice(response[key][game].price_CIB) : '--'
-								},
-								game: response[key][game].games});
-						}
-					}
-					gwlTable();
-				});
+			  VgData.getGameWishlist().then(function (data) {
+			    gc.gamesWl = data;
+			    gwlTable();
+        });
 			} else {
 				if (!($('#games-wishlist-table').hasClass('dataTable'))) {
 					gwlTable();
@@ -213,15 +121,9 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 
 		function buildHWWishlist () {
 		  if (!gc.consoleWL) {
-        getData('consolewl').then(function (response) {
-          gc.consoleWL = response.hardwareWL.map(function (item) {
-            item.ebayPrice = {
-              filter: item.ebayPrice,
-              display: formatPrice(item.ebayPrice)
-            };
-            return item;
-          });
-          buildConsoleWLTable();
+		    VgData.getConsoleWishlist().then(function (data) {
+		      gc.consoleWL = data;
+		      buildConsoleWLTable();
         });
       } else if (!($('#console-wishlist-table').hasClass('dataTable'))) {
         buildConsoleWLTable();
@@ -249,42 +151,9 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 		}
 
 		function libraryTotals () {
-			// games data fist
-			gc.gamesData = {
-				totalPrice: 0,
-				count: 0,
-				gamesByConsole: {}
-			};
-			gc.gameLibrary.forEach(function (item) {
-				if (!gc.gamesData.gamesByConsole.hasOwnProperty(item.platform)) gc.gamesData.gamesByConsole[item.platform] = {items: 0, total: 0};
-				gc.gamesData.gamesByConsole[item.platform].items++;
-				gc.gamesData.gamesByConsole[item.platform].total += item.price.filter !== null ? parseFloat(item.price.filter.toFixed(2)) : 0;
-				gc.gamesData.totalPrice += item.price.filter;
-				gc.gamesData.count++;
-				genreTracker(item.genre);
-			});
-			for (var key in gc.gamesData.gamesByConsole) {
-			  gc.gamesData.gamesByConsole[key].total = parseFloat(gc.gamesData.gamesByConsole[key].total.toFixed(2));
-      }
-			gc.gamesData.gamesByConsole
-			gc.gamesData.genres = genreObj;
-			console.log('gamesData', gc.gamesData);
-			console.log('hw', gc.hwLibrary);
-
-			// hw data
-			gc.hwData = {
-				totalPrice: 0,
-				items: 0,
-				hwByConsole: {}
-			};
-			gc.hwLibrary.hardware.forEach(function (item) {
-				gc.hwData.items += item.Quantity;
-				gc.hwData.totalPrice += item.Total.filter;
-				if (!gc.hwData.hwByConsole[item.Console]) gc.hwData.hwByConsole[item.Console] = {items: 0, total: 0};
-				gc.hwData.hwByConsole[item.Console].items++;
-				gc.hwData.hwByConsole[item.Console].total += item.Total.filter;
-			});
-			console.log('hwData', gc.hwData);
+		  var totalsData = VgData.gameTotals(gc.gameLibrary, gc.hwLibrary);
+		  gc.gamesData = totalsData.gameLib;
+		  gc.hwData = totalsData.hwLib;
 		}
 
 		function buildLibraryTotals () {
@@ -314,5 +183,4 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$rootScope', '$scope', 
 			}
 		};
 	}
-
 ]);
