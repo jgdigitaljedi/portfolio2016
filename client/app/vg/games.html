@@ -91,22 +91,28 @@
 		                    	</tfoot>
 		                  	</table>
 		                </div>
-                  <div>
-                    <h2>Game Genres</h2>
-                    <table class="ng-custom-table">
-                      <thead>
-                      <th>Genre</th>
-                      <th>Games</th>
-                      </thead>
-                      <tbody>
-                      <tr ng-repeat="(key, value) in gc.gamesData.genres">
-                        <td>{{key}}</td>
-                        <td class="number-format">{{value}}</td>
-                      </tr>
-                      </tbody>
-                    </table>
-                  </div>
 		            </div>
+              <md-divider></md-divider>
+              <div layout="row" layout-align="space-around center" layout-sm="column" layout-xs="column" ng-if="gc.genrePieOptions">
+                <div>
+                  <h2>Game Genres</h2>
+                  <table class="ng-custom-table">
+                    <thead>
+                    <th>Genre</th>
+                    <th>Games</th>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="(key, value) in gc.gamesData.genres">
+                      <td>{{key}}</td>
+                      <td class="number-format">{{value}}</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div layout="column" layout-align="center center">
+                  <svg-pie pie-options="gc.genrePieOptions"></svg-pie>
+                </div>
+              </div>
 		            <!--<md-divider></md-divider>-->
 
               <!--<div class="misc-totals" layout="row" layout-align="space-around center">-->

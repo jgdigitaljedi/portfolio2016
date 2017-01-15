@@ -162,7 +162,8 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
           items: 0,
           hwByConsole: {}
         },
-        genreObj = {};
+        genreObj = {},
+        genresCleaned = [];
       gameData.forEach(function (item) {
         if (!gameReturn.gamesByConsole.hasOwnProperty(item.platform)) gameReturn.gamesByConsole[item.platform] = {items: 0, total: 0};
         gameReturn.gamesByConsole[item.platform].items++;
@@ -184,7 +185,13 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
         hwData.hwByConsole[item.Console].items++;
         hwData.hwByConsole[item.Console].total += item.Total.filter;
       });
-      return {gameLib: gameReturn, hwLib: hwData};
+
+      var objCount = 0;
+      for (var j in genreObj) {
+        genresCleaned.push({genre: j, count: genreObj[j], colorIndex: objCount});
+        objCount++;
+      }
+      return {gameLib: gameReturn, hwLib: hwData, genres: genresCleaned};
     }
 
     return {

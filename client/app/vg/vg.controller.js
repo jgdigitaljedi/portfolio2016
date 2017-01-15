@@ -154,6 +154,14 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData',
 		  var totalsData = VgData.gameTotals(gc.gameLibrary, gc.hwLibrary);
 		  gc.gamesData = totalsData.gameLib;
 		  gc.hwData = totalsData.hwLib;
+		  console.log('genres', totalsData.gameLib.genres);
+		  gc.genrePieOptions = {
+		    width: 550,
+        height: 550,
+        data: totalsData.genres,
+        dataValue: 'count',
+        dataKey: 'genre'
+      };
 		}
 
 		function buildLibraryTotals () {
