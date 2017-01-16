@@ -15,13 +15,19 @@ angular.module('portfolioApp').directive('svgPie', ['Dataobjects',
           height = scope.pieOptions.height,
           radius = Math.min(width, height) / 2,
           colors = Dataobjects.getMaterialColors(),
-          colorArr = Array.apply(null, {length: scope.pieOptions}).map(function () {return colors[Math.floor(Math.random()*48)];}),
-          elemSvg = elem.find('svg')[0];;
-        console.log('pieOptions', scope.pieOptions);
-        console.log('colorArr', colors);
+          elemSvg = elem.find('svg')[0];
 
-        var color = d3.scaleOrdinal()
-        .range(colorArr);
+        function showTooltip (d) {
+          console.log('tooltip', d3.event);
+          d3.select("#genre-pie-tooltip")
+          .style("left", (window.pageXOffset + d3.event.pageX) + "px")
+          .style("top", (window.pageYOffset + d3.event.pageY) + "px")
+          .style("opacity", 1)
+          .select("#genre-value")
+          .text(d.data[scope.pieOptions.dataValue])
+          .select('#genre-tt-label')
+          .text(d.data[scope.pieOptions.dataKey]);
+        }
 
         var arc = d3.arc()
         .outerRadius(radius - 50)
@@ -34,42 +40,41 @@ angular.module('portfolioApp').directive('svgPie', ['Dataobjects',
         });
 
         var svg = d3.select(elemSvg)
-        .attr('width', width)
-        .attr('height', height)
-        .append('g')
-        .attr('transform', 'translate(' + width / 2 + '','' + height / 2 + '')'');
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
 
         var labelArc = d3.arc()
         .outerRadius(radius)
         .innerRadius(radius - 150);
 
-        var g = svg.selectAll('.arc')
+        var g = svg.selectAll(".arc")
         .data(pie(scope.pieOptions.data))
-        .enter().append('g')
-        .attr('class', 'arc');
+        .enter().append("g")
+        .attr("class", "arc")
+        .on("mouseover", function (d) {
+          showTooltip(d);
+        })
+        .on("mouseout", function () {
+          // Hide the tooltip
+          d3.select("#genre-pie-tooltip")
+          .style("opacity", 0);
+        });
 
-        g.append('path')
-        .attr('d', arc)
-        .style('fill', function (d) {
+        g.append("path")
+        .attr("d", arc)
+        .style("fill", function (d) {
           console.log('dataKey', d);
           return colors[d.data.colorIndex];
         });
 
-        // g.append('text')
-        // .attr('transform', function (d) {
-        //   return 'translate(' + arc.centroid(d) + ')';
-        // })
-        // .attr('dy', '.35em')
-        // .style('text-anchor', 'top')
-        // .text(function (d) {
-        //   return d.data[scope.pieOptions.dataKey];
-        // });
-
-        g.append('text')
-        .attr('transform', function(d) {
+        g.append("text")
+        .attr("transform", function(d) {
           var midAngle = d.endAngle < Math.PI ? d.startAngle/2 + d.endAngle/2 : d.startAngle/2  + d.endAngle/2 + Math.PI ;
-          return 'translate(' + labelArc.centroid(d)[0] + '','' + labelArc.centroid(d)[1] + '') rotate(-90) rotate('' + (midAngle * 180/Math.PI) + '')''; })
-        .attr('dy', '.35em')
+          return "translate(" + labelArc.centroid(d)[0] + "," + labelArc.centroid(d)[1] + ") rotate(-90) rotate(" + (midAngle * 180/Math.PI) + ")"; })
+        .attr("dy", ".35em")
         .attr('text-anchor','middle')
         .text(function(d) { return (d.data[scope.pieOptions.dataValue] > 2) ? d.data[scope.pieOptions.dataKey] : null; });
       }
