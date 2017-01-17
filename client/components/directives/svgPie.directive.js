@@ -26,9 +26,9 @@ angular.module('portfolioApp').directive('svgPie', ['Dataobjects',
         .outerRadius(radius - 50)
         .innerRadius(0);
 
-        // var arcOver = d3.arc()
-        // .innerRadius(0)
-        // .outerRadius(radius);
+        var arcOver = d3.arc()
+        .innerRadius(0)
+        .outerRadius(radius);
 
         var pie = d3.pie()
         .sort(null)
@@ -58,29 +58,39 @@ angular.module('portfolioApp').directive('svgPie', ['Dataobjects',
         .style('fill', function (d) {
           return colors[d.data.colorIndex];
         })
+        .attr('stroke', 'white')
+        .attr('stroke-width', 1)
         .on('mouseover', function (d) {
           // d3.select(this)
           //   .attr('fill', '#ff0000');
           //
-          // d3.select(this).transition()
-          // .duration(1000)
-          // .attr("d", arcOver);
+          d3.select(this).transition()
+            .duration(500)
+            .attr('d', arcOver)
+            .style("fill", function(d){return d3.rgb(colors[d.data.colorIndex]).darker(1);});
 
           tooltip.transition()
-          .style('opacity', 1);
+            .style('opacity', 1);
 
           tooltip.html(d.data[scope.pieOptions.dataKey])
-          .style('left',(d3.event.pageX + 10) + 'px')
-          .style('top', (d3.event.pageY + 10) + 'px')
-          .append('p')
-          .text(d.data[scope.pieOptions.dataValue]);
+            .style('left',(d3.event.pageX + 10) + 'px')
+            .style('top', (d3.event.pageY + 10) + 'px')
+            .append('p')
+            .text(d.data[scope.pieOptions.dataValue]);
         })
         .on('mouseout', function () {
           tooltip.transition()
-          .style('opacity', 0)
+            .style('opacity', 0);
+
+          d3.select(this).transition()
+            .duration(500)
+            .attr('d', arc)
+          .style("fill", function (d) {return colors[d.data.colorIndex];});
         });
 
         g.append('text')
+        .attr('fill', '#ffc107')
+        .attr("class", "shadow")
         .attr('transform', function(d) {
           var midAngle = d.endAngle < Math.PI ? d.startAngle/2 + d.endAngle/2 : d.startAngle/2  + d.endAngle/2 + Math.PI ;
           return 'translate(' + labelArc.centroid(d)[0] + ',' + labelArc.centroid(d)[1] + ') rotate(-90) rotate(' + (midAngle * 180/Math.PI) + ')'; })

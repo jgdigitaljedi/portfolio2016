@@ -3,7 +3,8 @@
     @include fade-In(1s);
 
     md-tabs {
-      height: calc(100vh - 46px);
+      height: calc(100vh);
+      min-height: 100%;
     }
 
   .games-totals {
@@ -11,6 +12,8 @@
   }
 
   .ng-custom-table {
+    @include box_shadow(1);
+    margin-right: 20px;
     td, th {
       padding: 2px 6px;
     }
@@ -51,4 +54,11 @@
   color: black;
   font-size: 0.8em;
   border-radius: 5px;
+}
+
+text.shadow {
+  font-weight: bold;
+  stroke: black;
+  stroke-width: 0.8px;
+  opacity: 0.8;
 }

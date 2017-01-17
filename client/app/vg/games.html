@@ -1,7 +1,7 @@
 
 <section ng-class="{'night':gc.theme === 'night', 'day': gc.theme === 'day'}" md-theme="day"
 	class="games-collection-section" ng-cloak>
-	<md-content class="md-padding">
+	<md-content style="min-height: 100%;">
 	    <md-tabs md-selected="data.selectedIndex" md-theme="{{gc.theme}}">
 	    	<md-tab id="lib-game-tab" md-on-select="gc.tabClick('GL')">
 	        	<md-tab-label>Game Library</md-tab-label>
@@ -38,7 +38,6 @@
 	      	<md-tab id="library-totals-tab" md-on-select="gc.tabClick('LT')">
 	        	<md-tab-label>Totals</md-tab-label>
 	        	<md-tab-body>
-	          		Just a bunch of data.
 		            <div class="games-totals" layout="column" layout-gt-md="row" layout-align-gt-md="space-around start" layout-align="center center">
 		                <div>
 		                  	<h2>Game Library Totals</h2>
@@ -130,6 +129,9 @@
                   </div>
                 </div>
                 <div layout="column" layout-align="center center">
+                  <div>
+                    <h4 style="font-style: italic">(hover to see hidden labels of smaller slices)</h4>
+                  </div>
                   <svg-pie pie-options="gc.genrePieOptions"></svg-pie>
                 </div>
               </div>
