@@ -14,7 +14,8 @@ angular.module('portfolioApp').controller('AboutCtrl', ['$scope','$rootScope', '
         ac.theme = $rootScope.theme;
         ac.photoArr = ['../assets/images/about/meDsShow.jpg', '../assets/images/about/coachingSoccer.jpg',
         	'../assets/images/about/meGuitarShoot.jpg'];
-        ac.photo = ac.photoArr[0];
+        // ac.photo = ac.photoArr[0];
+        ac.photo = '../assets/images/about/meDsShow.jpg';
         var paLen = ac.photoArr.length;
 
         ac.skills = Dataobjects.getSkills();
@@ -28,20 +29,20 @@ angular.module('portfolioApp').controller('AboutCtrl', ['$scope','$rootScope', '
         };
 
         (function init () {
-        	photoInt = $interval(function () {
-        		ac.photoArr.forEach(function (item, index) {
-        			if (ac.photo === item) {
-        				if (index + 1 === paLen) {
-        					nextIndex = 0;
-        					return;
-        				} else {
-        					nextIndex = index + 1;
-        					return;
-        				}
-        			}
-        		});
-        		ac.photo = ac.photoArr[nextIndex];
-        	}, 5000);
+        // 	photoInt = $interval(function () {
+        // 		ac.photoArr.forEach(function (item, index) {
+        // 			if (ac.photo === item) {
+        // 				if (index + 1 === paLen) {
+        // 					nextIndex = 0;
+        // 					return;
+        // 				} else {
+        // 					nextIndex = index + 1;
+        // 					return;
+        // 				}
+        // 			}
+        // 		});
+        // 		ac.photo = ac.photoArr[nextIndex];
+        // 	}, 5000);
         	$timeout(function () {
         		ac.chartAreaWidth = angular.element(document.getElementById('skills-chart-area')).width();
         	}, 500);

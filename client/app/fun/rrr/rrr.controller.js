@@ -1,7 +1,7 @@
 'use strict';
  /*jshint camelcase: false */
 
-angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$http', 'Geolocation', '$state', 
+angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$http', 'Geolocation', '$state',
 	'Helpers', 'Googlemaps', '$timeout', '$compile',
 	function ($scope, $rootScope, $http, Geolocation, $state, Helpers, Googlemaps, $timeout, $compile) {
 		// this controller needs an organizational/DRY refactor soon
@@ -9,11 +9,14 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
         	distances = {
         		shortWalk: 600, // 7.5 minutes at 80m per minute
         		longWalk: 1200, // 15 minutes
-        		shortDrive: 4828, // 3 miles
+        		// shortDrive: 4828, // 3 miles
+        		shortDrive: 8046, // 5 miles
         		noPreference: 80467 // 50 miles (just a really big number to make sure I get everything)
         	},
         	resultsLen,
-        	userCoords;
+        	userCoords,
+          eatArray = ['...and here\'s where you should eat!', 'EAT HERE!', 'Drumroll please!', 'Try this place:', 'MMMMMMM...food!'];
+
         rrrc.showDistOptions = {
         	shortWalk: true,
         	longWalk: true,
@@ -123,7 +126,7 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 						}
 					}
 				});
-				rrrc.step = 'second';	
+				rrrc.step = 'second';
 			}
 		};
 
@@ -150,7 +153,7 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 							rrrc.rChoicesNoDupes.push(itm);
 							dupeArr.push(itm.id);
 						}
-					});					
+					});
 				}
 			});
 			resultsLen = rrrc.rChoicesNoDupes.length;
@@ -168,6 +171,7 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 		}
 
 		function goToResults () {
+      rrrc.eatMessage = eatArray[Math.floor(Math.random() * (eatArray.length))];
 			rrrc.step = 'first';
 			$state.go('rrr.results');
 			if (rrrc.userChoices === '2') {
@@ -177,7 +181,7 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 					tallest = cards[0].clientHeight > cards[1].clientHeight ? cards[0].clientHeight : cards[1].clientHeight;
 					tallest = tallest - 16;
 					$(cards).height(tallest);
-				}, 100);				
+				}, 100);
 			}
 		}
 
