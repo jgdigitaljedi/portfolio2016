@@ -150,11 +150,23 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData',
 			}
 		}
 
-		function libraryTotals () {
-		  var totalsData = VgData.gameTotals(gc.gameLibrary, gc.hwLibrary);
-		  gc.gamesData = totalsData.gameLib;
-		  gc.hwData = totalsData.hwLib;
-		  console.log('genres', totalsData.gameLib.genres);
+    function libraryTotals () {
+      var totalsData = VgData.gameTotals(gc.gameLibrary, gc.hwLibrary);
+      gc.gamesData = totalsData.gameLib;
+      gc.firstGenreTable = {};
+      gc.secondGenreTable = {};
+      var genresLength = Object.keys(gc.gamesData.genres).length,
+        counter = 1;
+      gc.hwData = totalsData.hwLib;
+      for (var genre in gc.gamesData.genres) {
+        if (counter <= genresLength / 2) {
+          gc.firstGenreTable[genre] = gc.gamesData.genres[genre];
+        } else {
+          gc.secondGenreTable[genre] = gc.gamesData.genres[genre];
+        }
+        counter++;
+      }
+
 		  gc.genrePieOptions = {
 		    width: 550,
         height: 550,

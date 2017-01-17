@@ -93,28 +93,44 @@
 		                </div>
 		            </div>
               <md-divider></md-divider>
-              <div layout="row" layout-align="space-around center" layout-sm="column" layout-xs="column" ng-if="gc.genrePieOptions">
-                <div>
+              <div layout="row" layout-align="center center">
+                <div layout="column" layout-align="center center">
                   <h2>Game Genres</h2>
+                </div>
+              </div>
+              <div layout="row" layout-align="space-around center" layout-sm="column" layout-xs="column" ng-if="gc.genrePieOptions">
+                <div layout="row">
+                  <div>
                   <table class="ng-custom-table">
                     <thead>
                     <th>Genre</th>
                     <th>Games</th>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="(key, value) in gc.gamesData.genres">
+                    <tr ng-repeat="(key, value) in gc.firstGenreTable">
                       <td>{{key}}</td>
                       <td class="number-format">{{value}}</td>
                     </tr>
                     </tbody>
                   </table>
+                  </div>
+                  <div>
+                    <table class="ng-custom-table">
+                      <thead>
+                      <th>Genre</th>
+                      <th>Games</th>
+                      </thead>
+                      <tbody>
+                      <tr ng-repeat="(key, value) in gc.secondGenreTable">
+                        <td>{{key}}</td>
+                        <td class="number-format">{{value}}</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
                 <div layout="column" layout-align="center center">
                   <svg-pie pie-options="gc.genrePieOptions"></svg-pie>
-                </div>
-                <div id="genre-pie-tooltip" class="hidden">
-                  <p><span id="genre-tt-label"></span></p>
-                  <p><span id="genre-value"></span></p>
                 </div>
               </div>
 		            <!--<md-divider></md-divider>-->
@@ -126,4 +142,5 @@
 
 		</md-tabs>
 	</md-content>
+
 </section>
