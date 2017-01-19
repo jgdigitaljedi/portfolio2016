@@ -1,10 +1,9 @@
 'use strict';
 
-angular.module('portfolioApp').directive('d3Resume', ['Dataobjects',
-  function (Dataobjects) {
+angular.module('portfolioApp').directive('d3Resume', [
+  function () {
     return {
       restrict: 'AE',
-      // replace: true,
       transclude: true,
       template: '<svg></svg>',
       scope: {
@@ -32,23 +31,6 @@ angular.module('portfolioApp').directive('d3Resume', ['Dataobjects',
           ticks = 15;
         }
 
-        function normalize (rData) {
-          for (var key in rData) {
-            console.log('key', key);
-            rData[key] = rData[key].map(function (d, index) {
-              d.id = index + 1;
-              d.from = parseDate(d.from);
-              if (d.to === null) {
-                d.pto = new Date();
-              } else {
-                d.to = parseDate(d.to);
-                d.pto = d.to;
-              }
-              return d;
-            });
-          }
-        }
-
         function loadData (error, data) {
           var rData = scope.resumeOptions.rData;
           data = {};
@@ -66,7 +48,6 @@ angular.module('portfolioApp').directive('d3Resume', ['Dataobjects',
               return d;
             });
           }
-          console.log('data', data);
 
           x.domain([
             d3.min([
