@@ -73,8 +73,9 @@ angular.module('portfolioApp').directive('svgPie', ['Dataobjects',
         .style('fill', function (d) {
           return colors[d.data.colorIndex];
         })
-        .attr('stroke', 'white')
-        .attr('stroke-width', 1)
+        // .attr('stroke', 'white')
+        .attr('shape-rendering', 'optimizeQuality')
+        .attr('stroke-width', 0)
         .attr('id', function (d) {
           return  d.data.genre.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/\s]/gi, '');
         })
@@ -99,6 +100,7 @@ angular.module('portfolioApp').directive('svgPie', ['Dataobjects',
           return 'translate(' + labelArc.centroid(d)[0] + ',' + labelArc.centroid(d)[1] + ') rotate(-90) rotate(' + (midAngle * 180 / Math.PI) + ')'; })
         .attr('dy', '.35em')
         .attr('text-anchor','middle')
+        .attr('shape-rendering', 'optimizeQuality')
         .text(function(d) {return (d.data[scope.pieOptions.dataValue] > 2) ? d.data[scope.pieOptions.dataKey] : null})
         .on('mouseover', function (d) {
           var idName = d.data.genre.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/\s]/gi, '');
