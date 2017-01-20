@@ -45,7 +45,7 @@ angular.module('portfolioApp').directive('svgPie', ['Dataobjects',
 
         var labelArc = d3.arc()
         .outerRadius(radius)
-        .innerRadius(radius - 150);
+        .innerRadius(radius - 110);
 
         var g = svg.selectAll('.arc')
         .data(pie(scope.pieOptions.data))
@@ -56,7 +56,7 @@ angular.module('portfolioApp').directive('svgPie', ['Dataobjects',
           d3.select(path).transition()
           .duration(500)
           .attr('d', arcOver)
-          .style("fill", function(d){return d3.rgb(colors[ele.data.colorIndex]).darker(1);});
+          .style("fill", function (d) {return d3.rgb(colors[ele.data.colorIndex]).darker(1);});
 
           tooltip.transition()
           .style('opacity', 1);
@@ -99,8 +99,11 @@ angular.module('portfolioApp').directive('svgPie', ['Dataobjects',
           var midAngle = d.endAngle < Math.PI ? d.startAngle / 2 + d.endAngle / 2 : d.startAngle / 2  + d.endAngle / 2 + Math.PI ;
           return 'translate(' + labelArc.centroid(d)[0] + ',' + labelArc.centroid(d)[1] + ') rotate(-90) rotate(' + (midAngle * 180 / Math.PI) + ')'; })
         .attr('dy', '.35em')
-        .attr('text-anchor','middle')
+        .attr('text-anchor', function (d) {
+          return d.endAngle < Math.PI ? 'end' : 'start';
+        })
         .attr('shape-rendering', 'optimizeQuality')
+        .attr('cursor', 'default')
         .text(function(d) {return (d.data[scope.pieOptions.dataValue] > 2) ? d.data[scope.pieOptions.dataKey] : null})
         .on('mouseover', function (d) {
           var idName = d.data.genre.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/\s]/gi, '');
