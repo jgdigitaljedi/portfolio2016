@@ -56,7 +56,7 @@ angular.module('portfolioApp').directive('svgPie', ['Dataobjects',
           d3.select(path).transition()
           .duration(500)
           .attr('d', arcOver)
-          .style("fill", function (d) {return d3.rgb(colors[ele.data.colorIndex]).darker(1);});
+          .style('fill', function (d) {return d3.rgb(colors[ele.data.colorIndex]).darker(1);});
 
           tooltip.transition()
           .style('opacity', 1);
@@ -77,7 +77,7 @@ angular.module('portfolioApp').directive('svgPie', ['Dataobjects',
         .attr('shape-rendering', 'optimizeQuality')
         .attr('stroke-width', 0)
         .attr('id', function (d) {
-          return  d.data.genre.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/\s]/gi, '');
+          return  d.data.genre.replace(/[~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/\s]/gi, '');
         })
         .on('mouseover', function (d) {
           mouseAction(this, d);
@@ -106,7 +106,7 @@ angular.module('portfolioApp').directive('svgPie', ['Dataobjects',
         .attr('cursor', 'default')
         .text(function(d) {return (d.data[scope.pieOptions.dataValue] > 2) ? d.data[scope.pieOptions.dataKey] : null})
         .on('mouseover', function (d) {
-          var idName = d.data.genre.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/\s]/gi, '');
+          var idName = d.data.genre.replace(/[~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/\s]/gi, '');
           mouseAction(d3.select('path#' + idName).node(), d3.select('path#' + idName)._groups[0][0].__data__);
         })
         .on('mouseout', function (d) {
