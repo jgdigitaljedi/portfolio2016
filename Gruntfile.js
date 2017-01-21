@@ -18,6 +18,7 @@ module.exports = function (grunt) {
     protractor: 'grunt-protractor-runner',
     buildcontrol: 'grunt-build-control'
   });
+  require('events').EventEmitter.prototype._maxListeners = 100;
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
@@ -287,13 +288,42 @@ module.exports = function (grunt) {
     },
 
     // The following *-min tasks produce minified files in the dist folder
-    imagemin: {
+    // imagemin: {
+    //   dist: {
+    //     files: [{
+    //       expand: true,
+    //       cwd: '<%= yeoman.client %>/assets/images',
+    //       // src: ['**/*.{png,jpg,gif}'],
+    //       // src: ['**/*.jpg', '**/*.jpeg', '**/*.gif'],
+    //       // src: ['{,*/}*.{png,jpg,jpeg,gif}'],
+    //       // src: '[*/*.{png,jpg,jpeg,gif,svg}]',
+    //       src: ['**/*.{png,jpg,gif}'],
+    //       dest: '<%= yeoman.dist %>/public/assets/images'
+    //     }]
+    //   }
+    // },
+
+    image: {
       dist: {
+        options: {
+          pngquant: true,
+          optipng: false,
+          zopflipng: true,
+          jpegRecompress: false,
+          jpegoptim: true,
+          mozjpeg: true,
+          gifsicle: true,
+          svgo: true
+        },
         files: [{
           expand: true,
           cwd: '<%= yeoman.client %>/assets/images',
-          // src: '{,*/}*.{png,jpg,jpeg,gif}',
-          src: '[*/*.{png,jpg,jpeg,gif,svg}]',
+          // cwd: 'client/assets/images',
+          // src: ['**/*.{png,jpg,gif}'],
+          // src: ['**/*.jpg', '**/*.jpeg', '**/*.gif'],
+          // src: ['{,*/}*.{png,jpg,jpeg,gif}'],
+          // src: '[*/*.{png,jpg,jpeg,gif,svg}]',
+          src: ['**/*.{png,jpg,gif}'],
           dest: '<%= yeoman.dist %>/public/assets/images'
         }]
       }
@@ -369,8 +399,8 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             'bower_components/**/*',
-            'assets/images/*',
-            'assets/images/**/*',
+            // 'assets/images/*',
+            // 'assets/images/**/*',
             'app/**/modals/*',
             // 'assets/images/{,*/}*.{webp}',
             'assets/fonts/**/*',
@@ -444,7 +474,8 @@ module.exports = function (grunt) {
       dist: [
         'babel',
         'sass',
-        'imagemin',
+        // 'imagemin',
+        'image',
         'svgmin'
       ]
     },
@@ -702,7 +733,7 @@ module.exports = function (grunt) {
     'cdnify',
     'cssmin',
     'uglify',
-    // 'rev',
+    'rev',
     'usemin'
   ]);
 
