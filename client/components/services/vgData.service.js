@@ -12,15 +12,15 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
     function getData (which) {
       var def = $q.defer();
       $http.get('/api/proxy/' + which)
-      .success(function (data) {
-        if (!data.error) {
-          def.resolve(data.data);
+      .then(function (data) {
+        if (!data.data.error) {
+          def.resolve(data.data.data);
         } else {
           console.warn('data error', data);
-          def.resolve(data.data);
+          def.resolve(data.data.data);
         }
       })
-      .error(function (data) {
+      .catch(function (data) {
         console.warn('data error', data);
         def.reject(data);
       });

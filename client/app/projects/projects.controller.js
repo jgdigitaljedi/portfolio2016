@@ -36,7 +36,7 @@ angular.module('portfolioApp').controller('ProjectsCtrl', ['$rootScope', '$scope
 		pc.openProject = function (which) {
 			pc.showLabel = false;
 			var selectedProject = pc.projects[which];
-			console.log('which', selectedProject);
+			// console.log('which', selectedProject);
 			var modalData = {
 			  theme: pc.theme,
         selectedProject: pc.projects[which],

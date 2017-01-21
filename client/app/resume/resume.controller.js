@@ -28,9 +28,9 @@ angular.module('portfolioApp').controller('ResumeCtrl', ['$window', 'D3Resume', 
         },
         responseType : 'arraybuffer'
       })
-        .success(function (data, status, headers, config) {
-          var file = new Blob([ data ], {
-            type : 'application/csv'
+        .then(function (data, status, headers, config) {
+          var file = new Blob([ data.data ], {
+            type : 'application/pdf'
           });
           //trick to download store a file having its URL
           var fileURL = URL.createObjectURL(file);
@@ -41,7 +41,7 @@ angular.module('portfolioApp').controller('ResumeCtrl', ['$window', 'D3Resume', 
           document.body.appendChild(a);
           a.click();
         })
-        .error(function(data, status, headers, config) {
+        .catch(function(data, status, headers, config) {
           console.log('pdf error', data);
         });
 		};

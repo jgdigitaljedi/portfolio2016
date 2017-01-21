@@ -49,17 +49,16 @@ angular.module('portfolioApp').controller('AboutCtrl', ['$scope','$rootScope', '
         	ac.chartTime();
             $http.get('/api/proxy/conditions/TX/Manor')
                 /*jshint camelcase: false */
-                .success(function (response) {
-                    // console.log('response', response);
+                .then(function (response) {
                     if (!response.error) {
-                        response = response.current_observation;
+                        response = response.data.current_observation;
                         ac.austinTemp = response.temp_f + '°F';
                         ac.weather = response.weather.toLowerCase();
                     } else {
                         ac.austinTemp = false;
                     }
                 })
-                .error(function (error) {
+                .catch(function (error) {
                     console.log('weather error', error);
                     ac.austinTemp = false;
                 });

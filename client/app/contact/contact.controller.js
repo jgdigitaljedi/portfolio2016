@@ -42,15 +42,15 @@ angular.module('portfolioApp').controller('ContactCtrl', ['$scope', '$http', '$m
 				lastName: user.lastName,
 				company: user.company,
 				comment: user.comments
-			}).success(function(res) {
-				if(res.error) {
+			}).then(function(res) {
+				if(res.data.error) {
 				  console.log('error', res);
 				  openDialog('failure');
 				} else {
 				  openDialog('success');
 				}
 				console.log('success');
-			}).error(function() {
+			}).catch(function() {
         openDialog('failure');
 			});
 		};

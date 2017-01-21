@@ -33,18 +33,17 @@ angular.module('portfolioApp').controller('Ng2048Ctrl', ['$scope', '$rootScope',
 			var params = {name: tfec.playerName, score: tfec.userScore};
 			if (tfec.userScore > tfec.highScore.score) {
 				$http.post('/api/2048/updatescore', JSON.stringify(params))
-					.success(function (data) {
-						console.log('success data', data);
+					.then(function (data) {
 						// data = JSON.parse(data);
 						tfec.highScore = {
-							name: data.score.name,
-							score:data.score.score,
-							dateTime: data.score.dateTime
+							name: data.data.score.name,
+							score:data.data.score.score,
+							dateTime: data.data.score.dateTime
 						};
 					})
-					.error(function(data) {
+					.catch(function(data) {
 						console.log('error data', data);
-					});				
+					});
 			}
 			sessionStorage.setItem('2048score', tfec.userScore);
 		});
@@ -64,11 +63,11 @@ angular.module('portfolioApp').controller('Ng2048Ctrl', ['$scope', '$rootScope',
 			tfec.userScore = sessionStorage.getItem('2048score') ? parseInt(sessionStorage.getItem('2048score')) : 0;
 			tfec.playerName = sessionStorage.getItem('2048playerName') ? sessionStorage.getItem('2048playerName') : 'Player 1';
 			$http.get('/api/2048/gethighscore')
-				.success(function (data) {
+				.then(function (data) {
 					// console.log('success data hs', data);
-					tfec.highScore = data;
+					tfec.highScore = data.data;
 				})
-				.error(function(data) {
+				.catch(function(data) {
 					console.log('error getting hs', data);
 				});
 			})();

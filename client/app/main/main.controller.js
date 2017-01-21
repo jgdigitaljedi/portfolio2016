@@ -52,6 +52,7 @@ angular.module('portfolioApp')
 
             $http.get('/api/proxy/lastfm')
                 .then(function successCallback (result) {
+                  // console.log('result', result);
                     result = result.data.recenttracks.track;
                     makeLastFmWidget(result);
                 }, function failureCallback (error) {

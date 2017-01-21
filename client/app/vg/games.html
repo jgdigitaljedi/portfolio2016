@@ -2,8 +2,8 @@
 <section ng-class="{'night':gc.theme === 'night', 'day': gc.theme === 'day'}" md-theme="day"
 	class="games-collection-section" ng-cloak>
 	<md-content style="min-height: 100%;">
-	    <md-tabs md-selected="data.selectedIndex" md-theme="{{gc.theme}}">
-	    	<md-tab id="lib-game-tab" md-on-select="gc.tabClick('GL')">
+	    <md-tabs md-theme="{{gc.theme}}">
+	    	<md-tab id="lib-game-tab" md-on-select="gc.tabClick('GL')" md-autoselect="true">
 	        	<md-tab-label>Game Library</md-tab-label>
 	        	<md-tab-body>
 	          		These are the games I already have. This way I never end up with duplicates!

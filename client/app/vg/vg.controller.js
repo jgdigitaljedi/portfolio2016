@@ -202,5 +202,9 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData',
 					buildLibraryTotals();
 			}
 		};
+
+    (function () {
+      buildGameLibraryTable();
+    })();
 	}
 ]);

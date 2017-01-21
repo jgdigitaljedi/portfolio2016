@@ -51,7 +51,11 @@ exports.conditions = function(req, res) {
 		          	var obj = JSON.parse(body);
 		          	weatherCache = obj;
 		            res.json(obj);
-		        }
+		        } else {
+		          var obj = JSON.parse(body);
+		          res.json(obj);
+		          console.log('why are we here');
+            }
 		    }
 		);
 	} else { // use cached weather if called less than 15 minutes ago

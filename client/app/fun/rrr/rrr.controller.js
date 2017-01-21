@@ -40,8 +40,8 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
         		noPreference: true
         	};
 			$http.get('/api/proxy/getyelpinfo/' + uLat + '/' + uLong)
-				.success(function (response) {
-					response = JSON.parse(response.content);
+				.then(function (response) {
+					response = JSON.parse(response.data.content);
 					rrrc.restaurantChoices = response.businesses;
 					var firstDistance = rrrc.restaurantChoices[0].distance;
 					var lastDistance = rrrc.restaurantChoices[rrrc.restaurantChoices.length-1].distance;
@@ -65,7 +65,7 @@ angular.module('portfolioApp').controller('RrrCtrl', ['$scope', '$rootScope', '$
 					}
 					rrrc.step = 'first';
 				})
-				.error(function (error) {
+				.catch(function (error) {
 					console.log('yelp error', error);
 				});
 		}

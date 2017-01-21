@@ -23,19 +23,20 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope
 			  	script.type = 'text/javascript';
 			  	script.src = 'https://maps.googleapis.com/maps/api/js?key=' + gmapKey +
 			  		'&libraries=places&callback=initializeGMap';
-			  	document.body.appendChild(script);						
+			  	document.body.appendChild(script);
 			}
 		}
 
 		function getGmapKey () {
 			var def = $q.defer();
 			$http.get('/api/proxy/getgmapkey')
-			.success(function (data) {
-				gmapKey = data;
+			.then(function (data) {
+			  // console.log('data', data);
+				gmapKey = data.data;
 				sessionStorage.setItem('gmapKey', gmapKey);
 				def.resolve(gmapKey);
 			})
-			.error(function (data) {
+			.catch(function (data) {
 				console.log('gmaps key error', data);
 				def.reject(data);
 			});
@@ -145,7 +146,7 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope
 		  	};
 		  	map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 		  	directionsDisplay.setMap(map);
-		  	calcRoute(options);				
+		  	calcRoute(options);
 		}
 
 		window.initializeGMap = function (options) {

@@ -85,7 +85,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     shortName: 'portfolio',
                     title: 'Portfolio',
                     color: '#FBC02D',
-                    tile: '../assets/images/port/gallery1.png',
+                    tile: '../assets/images/port/gallery1.jpg',
                     description: 'Well, this is the page you\'re looking at right now. Why list it as a project? There\'s a lot going on here, that\'s why! '+
                         'This is running on a DigitalOcean server on my '+
                         'server config setup and build process. Aside from that and just from generally liking what I\'ve done '+
