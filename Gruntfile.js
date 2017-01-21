@@ -475,8 +475,8 @@ module.exports = function (grunt) {
         'babel',
         'sass',
         // 'imagemin',
-        'image',
-        'svgmin'
+        // 'image',
+        // 'svgmin'
       ]
     },
 
@@ -722,6 +722,8 @@ module.exports = function (grunt) {
     'clean:dist',
     'injector:sass',
     'concurrent:dist',
+    'image',
+    'svgmin',
     'injector',
     'wiredep',
     'useminPrepare',
@@ -733,7 +735,7 @@ module.exports = function (grunt) {
     'cdnify',
     'cssmin',
     'uglify',
-    'rev',
+    // 'rev',
     'usemin'
   ]);
 
