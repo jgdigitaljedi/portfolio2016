@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+  <url>
+    <loc>https://joeyg.me</loc>
+    <priority>1.0</priority>
+    <lastmod>2017-01-21</lastmod>
+	<changefreq>monthly</changefreq>
+    <image:image>
+       <image:loc>https://joeyg.me/assets/images/large_619034.png</image:loc>
+       <image:caption>Joey Cartoon Drawing</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>https://joeyg.me/assets/images/lastfm-icon.png</image:loc>
+       <image:caption>Lastfm logo</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://joeyg.me/about</loc>
+    <priority>0.9</priority>
+    <lastmod>2017-01-21</lastmod>
+	<changefreq>monthly</changefreq>
+    <image:image>
+       <image:loc>https://joeyg.me/assets/images/about/meDsShow.jpg</image:loc>
+       <image:caption>Joey Playing Guitar at Rock Show</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>https://joeyg.me/assets/images/about/DJSigtouchedup.jpg</image:loc>
+       <image:caption>DigitalJedi Forum Signature</image:caption>
+    </image:image>
+  </url>
+  <url>
+  	<loc>https://joeyg.me/projects</loc>
+	<priority>0.8</priority>
+	<lastmod>2017-01-21</lastmod>
+	<changefreq>monthly</changefreq>
+	<image:image>
+   		<image:loc>https://joeyg.me/assets/images/github_projects.jpg</image:loc>
+   		<image:caption>GitHub logos</image:caption>
+	</image:image>
+  </url>
+  <url>
+  	<loc>https://joeyg.me/resume</loc>
+    <priority>0.7</priority>
+    <lastmod>2017-01-21</lastmod>
+	<changefreq>monthly</changefreq>
+  </url>
+  <url>
+  	<loc>https://joeyg.me/contact</loc>
+    <priority>0.5</priority>
+    <lastmod>2017-01-21</lastmod>
+	<changefreq>never</changefreq>
+  </url>
+  <url>
+  	<loc>https://joeyg.me/fun</loc>
+    <priority>0.6</priority>
+    <lastmod>2017-01-21</lastmod>
+	<changefreq>monthly</changefreq>
+  </url>
+  <url>
+  	<loc>https://joeyg.me/fun/2048</loc>
+    <priority>0.55</priority>
+    <lastmod>2017-01-21</lastmod>
+	<changefreq>monthly</changefreq>
+  </url>
+  <url>
+  	<loc>https://joeyg.me/fun/rrr</loc>
+    <priority>0.75</priority>
+    <lastmod>2017-01-21</lastmod>
+	<changefreq>monthly</changefreq>
+  </url>
+  <url>
+  	<loc>https://joeyg.me/games</loc>
+    <priority>0.4</priority>
+    <lastmod>2017-01-21</lastmod>
+	<changefreq>monthly</changefreq>
+  </url>
+</urlset>

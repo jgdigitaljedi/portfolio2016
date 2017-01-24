@@ -1357,6 +1357,15 @@
         "price": 20
       },
       {
+        "title": "Child of Light",
+        "releasedate": "04/29/14",
+        "platform": "PlayStation 4",
+        "genre": "RPG",
+        "publisher": "Ubisoft",
+        "addeddate": "01/24/17",
+        "price": 15
+      },
+      {
         "title": "Doom",
         "releasedate": "05/13/16",
         "platform": "PlayStation 4",
@@ -1364,6 +1373,15 @@
         "publisher": "Bethesda",
         "addeddate": "01/06/17",
         "price": 22
+      },
+      {
+        "title": "Gauntlet: Slayer Edition",
+        "releasedate": "09/23/14",
+        "platform": "PlayStation 4",
+        "genre": "Adventure, Action, Hack & Slash",
+        "publisher": "WB Games",
+        "addeddate": "01/24/17",
+        "price": 5
       },
       {
         "title": "Killzone: Shadow Fall",
@@ -1384,6 +1402,15 @@
         "price": 17.21
       },
       {
+        "title": "LEGO: The Hobbit",
+        "releasedate": "04/08/14",
+        "platform": "PlayStation 4",
+        "genre": "Adventure, Action",
+        "publisher": "TT Games",
+        "addeddate": "01/24/17",
+        "price": 13.50
+      },
+      {
         "title": "Mortal Kombat XL",
         "releasedate": "03/14/16",
         "platform": "PlayStation 4",
@@ -1391,6 +1418,15 @@
         "publisher": "Warner Bros",
         "addeddate": "01/06/17",
         "price": 29
+      },
+      {
+        "title": "Outlast",
+        "releasedate": "09/04/13",
+        "platform": "PlayStation 4",
+        "genre": "Horror",
+        "publisher": "Red Barrels",
+        "addeddate": "01/24/17",
+        "price": 5
       },
       {
         "title": "Ratchet & Clank",
@@ -1420,6 +1456,15 @@
         "price": 20
       },
       {
+        "title": "The Walking Dead",
+        "releasedate": "11/21/12",
+        "platform": "PlayStation 4",
+        "genre": "Adventure",
+        "publisher": "Telltale Games",
+        "addeddate": "01/24/17",
+        "price": 17
+      },
+      {
         "title": "Watch Dogs",
         "releasedate": "05/27/14",
         "platform": "PlayStation 4",
@@ -1427,6 +1472,15 @@
         "publisher": "Ubisoft",
         "addeddate": "01/06/17",
         "price": 13.23
+      },
+      {
+        "title": "The Wolf Among Us",
+        "releasedate": "10/11/13",
+        "platform": "PlayStation 4",
+        "genre": "Adventure",
+        "publisher": "WB Games",
+        "addeddate": "01/24/17",
+        "price": 17
       },
         {
             "title": "God of War: Chains of Olympus",
