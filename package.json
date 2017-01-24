@@ -32,6 +32,7 @@
     "tracer": "^0.8.3"
   },
   "devDependencies": {
+    "compression": "^1.0.11",
     "connect-livereload": "~0.4.0",
     "grunt": "~0.4.4",
     "grunt-angular-templates": "^0.5.4",

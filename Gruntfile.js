@@ -399,8 +399,12 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             'bower_components/**/*',
-            // 'assets/images/*',
-            // 'assets/images/**/*',
+            'assets/images/*.png',
+            'assets/images/*.jpeg',
+            'assets/images/*.jpg',
+            'assets/images/**/*.png',
+            'assets/images/**/*.jpeg',
+            'assets/images/**/*.jpg',
             'app/**/modals/*',
             // 'assets/images/{,*/}*.{webp}',
             'assets/fonts/**/*',
@@ -476,7 +480,7 @@ module.exports = function (grunt) {
         'sass',
         // 'imagemin',
         // 'image',
-        // 'svgmin'
+        'svgmin'
       ]
     },
 
@@ -722,7 +726,7 @@ module.exports = function (grunt) {
     'clean:dist',
     'injector:sass',
     'concurrent:dist',
-    'image',
+    // 'image',
     'svgmin',
     'injector',
     'wiredep',
