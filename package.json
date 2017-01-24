@@ -21,7 +21,7 @@
     "moment": "^2.15.0",
     "mongoose": "~4.0.3",
     "morgan": "~1.0.0",
-    "nodemailer": "^2.6.0",
+    "nodemailer": "^2.7.2",
     "nodemailer-smtp-transport": "^2.7.2",
     "nonce": "^1.0.4",
     "oauth": "^0.9.14",
