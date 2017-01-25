@@ -49,6 +49,7 @@ $ grunt serve
 - Finish Restaurant Roulette Remix
   - add button to launch google maps if viewed on a phone
 - Eventually add a blog
+- pixel perfection
  
  
 ### Todos that came to my attention after deployment
