@@ -1,3 +1,5 @@
 # robotstxt.org
 
 User-agent: *
+
+SITEMAP: https://joeyg.me/sitemap.xml

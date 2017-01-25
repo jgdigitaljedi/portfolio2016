@@ -1,42 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://joeyg.me</loc>
     <priority>1.0</priority>
     <lastmod>2017-01-21</lastmod>
 	<changefreq>monthly</changefreq>
-    <image:image>
-       <image:loc>https://joeyg.me/assets/images/large_619034.png</image:loc>
-       <image:caption>Joey Cartoon Drawing</image:caption>
-    </image:image>
-    <image:image>
-       <image:loc>https://joeyg.me/assets/images/lastfm-icon.png</image:loc>
-       <image:caption>Lastfm logo</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://joeyg.me/about</loc>
     <priority>0.9</priority>
     <lastmod>2017-01-21</lastmod>
 	<changefreq>monthly</changefreq>
-    <image:image>
-       <image:loc>https://joeyg.me/assets/images/about/meDsShow.jpg</image:loc>
-       <image:caption>Joey Playing Guitar at Rock Show</image:caption>
-    </image:image>
-    <image:image>
-       <image:loc>https://joeyg.me/assets/images/about/DJSigtouchedup.jpg</image:loc>
-       <image:caption>DigitalJedi Forum Signature</image:caption>
-    </image:image>
   </url>
   <url>
   	<loc>https://joeyg.me/projects</loc>
 	<priority>0.8</priority>
 	<lastmod>2017-01-21</lastmod>
 	<changefreq>monthly</changefreq>
-	<image:image>
-   		<image:loc>https://joeyg.me/assets/images/github_projects.jpg</image:loc>
-   		<image:caption>GitHub logos</image:caption>
-	</image:image>
   </url>
   <url>
   	<loc>https://joeyg.me/resume</loc>

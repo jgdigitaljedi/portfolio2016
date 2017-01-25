@@ -410,7 +410,8 @@ module.exports = function (grunt) {
             'assets/fonts/**/*',
             'assets/icons/**/*',
             'assets/iconsets/**/*',
-            'index.html'
+            'index.html',
+            'sitemap.xml'
           ]
         }, {
           expand: true,
