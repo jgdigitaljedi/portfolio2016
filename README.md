@@ -1,4 +1,4 @@
-# 2016 Portfolio rewrite
+# 2016-2107 Portfolio rewrite
 
 ...because I never spent much time on one before and my old ones were boring!
 
@@ -43,17 +43,30 @@ $ grunt serve
 
 
 ### Todos
-
- - Style it up
- - Redesign fun page (no thoughts on something visually appealing yet)
- - Make a social page
- - Finish Restaurant Roulette Remix
+- Style it up
+- Redesign fun page (no thoughts on something visually appealing yet)
+- Make a social page
+- Finish Restaurant Roulette Remix
   - add button to launch google maps if viewed on a phone
- 	- delay distance options card rendering until possible options are calculated
- - Eventually add a blog
+- Eventually add a blog
  
  
 ### Todos that came to my attention after deployment
+- projects modal doesn't work as intended on mobile
+- cdnify grunt task not injecting tags/should also stop cdnified deps from ending up in vendor.js
+- get rev task working for browser cache
+- maybe add ng-templates
+- nodemailer works in local dev and not on site/figure it out
 
- - projects modal doesn't work as intended on mobile
- - shrinkwrap npm modules; npm install didn't get everything and some new dep versions break things now
+### Eventual improvements
+- Change video game library to MongoDB instead of JSON
+- Login/Auth with UI for me to manually CRUD items in video game library
+- Use weather conditions to add clouds, rain, fog, etc to landing page
+- Refactor some of the older code for cleanliness and performance
+- Think of another app to dev and add to Fun page
+
+### Deployment goals accomplished
+- Serving with gzip if file > 256 kb
+- Serving with SSL and certs auto renew
+- Linux service to auto start app if server reboots
+
