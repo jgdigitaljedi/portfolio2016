@@ -248,7 +248,7 @@ module.exports = function (grunt) {
             '<%= yeoman.dist %>/public/assets/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             '<%= yeoman.dist %>/public/assets/icons/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             '<%= yeoman.dist %>/public/assets/iconsets/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-            '<%= yeoman.dist %>/public/assets/fonts/*'
+            '<%= yeoman.dist %>/public/assets/fonts/{,*/}*.{eot, svg, ttf, woff, woff2, otf}'
           ]
         }
       }
@@ -273,15 +273,19 @@ module.exports = function (grunt) {
         assetsDirs: [
           '<%= yeoman.dist %>/public',
           '<%= yeoman.dist %>/public/assets/images',
+          '<%= yeoman.dist %>/public/assets/images/**',
           '<%= yeoman.dist %>/public/assets/icons',
-          '<%= yeoman.dist %>/public/assets/iconsets'
+          '<%= yeoman.dist %>/public/assets/iconsets',
+          '<%= yeoman.dist %>/public/assets/fonts'
+
         ],
         // This is so we update image references in our ng-templates
         patterns: {
           js: [
             [/(assets\/images\/.*?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the JS to reference our revved images'],
             [/(assets\/icons\/.*?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the JS to reference our revved icons'],
-            [/(assets\/iconsets\/.*?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the JS to reference our revved iconsets']
+            [/(assets\/iconsets\/.*?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the JS to reference our revved iconsets'],
+            [/(assets\/fonts\/.*?\.(?:eot|otf|svg|woff|woff2|ttf))/gm, 'Update the JS to reference our revved fonts']
           ]
         }
       }
@@ -303,31 +307,31 @@ module.exports = function (grunt) {
     //   }
     // },
 
-    image: {
-      dist: {
-        options: {
-          pngquant: true,
-          optipng: false,
-          zopflipng: true,
-          jpegRecompress: false,
-          jpegoptim: true,
-          mozjpeg: true,
-          gifsicle: true,
-          svgo: true
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.client %>/assets/images',
-          // cwd: 'client/assets/images',
-          // src: ['**/*.{png,jpg,gif}'],
-          // src: ['**/*.jpg', '**/*.jpeg', '**/*.gif'],
-          // src: ['{,*/}*.{png,jpg,jpeg,gif}'],
-          // src: '[*/*.{png,jpg,jpeg,gif,svg}]',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: '<%= yeoman.dist %>/public/assets/images'
-        }]
-      }
-    },
+    // image: {
+    //   dist: {
+    //     options: {
+    //       pngquant: true,
+    //       optipng: false,
+    //       zopflipng: true,
+    //       jpegRecompress: false,
+    //       jpegoptim: true,
+    //       mozjpeg: true,
+    //       gifsicle: true,
+    //       svgo: true
+    //     },
+    //     files: [{
+    //       expand: true,
+    //       cwd: '<%= yeoman.client %>/assets/images',
+    //       // cwd: 'client/assets/images',
+    //       // src: ['**/*.{png,jpg,gif}'],
+    //       // src: ['**/*.jpg', '**/*.jpeg', '**/*.gif'],
+    //       // src: ['{,*/}*.{png,jpg,jpeg,gif}'],
+    //       // src: '[*/*.{png,jpg,jpeg,gif,svg}]',
+    //       src: ['**/*.{png,jpg,gif}'],
+    //       dest: '<%= yeoman.dist %>/public/assets/images'
+    //     }]
+    //   }
+    // },
 
     svgmin: {
       dist: {

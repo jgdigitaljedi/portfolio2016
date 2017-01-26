@@ -48,6 +48,7 @@ $ grunt serve
 - Make a social page
 - Finish Restaurant Roulette Remix
   - add button to launch google maps if viewed on a phone
+  - make it less ugly/boring
 - Eventually add a blog
 - pixel perfection
  
@@ -56,7 +57,6 @@ $ grunt serve
 - projects modal doesn't work as intended on mobile
 - cdnify grunt task not injecting tags/should also stop cdnified deps from ending up in vendor.js
 - get rev task working for browser cache
-- maybe add ng-templates
 - nodemailer works in local dev and not on site/figure it out
 
 ### Eventual improvements
@@ -70,4 +70,5 @@ $ grunt serve
 - Serving with gzip if file > 256 kb
 - Serving with SSL and certs auto renew
 - Linux service to auto start app if server reboots
+- Everything is minified/optimized
 
