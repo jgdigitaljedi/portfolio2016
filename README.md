@@ -56,7 +56,6 @@ $ grunt serve
 ### Todos that came to my attention after deployment
 - projects modal doesn't work as intended on mobile
 - cdnify grunt task not injecting tags/should also stop cdnified deps from ending up in vendor.js
-- get rev task working for browser cache
 - nodemailer works in local dev and not on site/figure it out
 
 ### Eventual improvements
@@ -71,4 +70,5 @@ $ grunt serve
 - Serving with SSL and certs auto renew
 - Linux service to auto start app if server reboots
 - Everything is minified/optimized
+- Cache-control & expiration headers conditionally set in Express
 
