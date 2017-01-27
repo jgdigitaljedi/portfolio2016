@@ -47,12 +47,17 @@ angular.module('portfolioApp', [
 
     $mdThemingProvider.alwaysWatchTheme(true);
     $mdThemingProvider.enableBrowserColor({theme: 'night'});
-}).controller('AppCtrl', function ($scope, $rootScope) {
+}).controller('AppCtrl', function ($scope, $rootScope, $state) {
     var theHour = parseInt(moment().format('HH'));
     $scope.theme = (theHour >= 7 && theHour < 19) ? 'day' : 'night';
     $rootScope.theme = $scope.theme;
 
-    // konami code
+    $rootScope.$on('$stateChangeSuccess', function () {
+      $rootScope.title = $state.current.title;
+    });
+
+
+  // konami code
     var neededkeys = [38,38,40,40,37,39,37,39,66,65],
         started = false,
         count = 0;
