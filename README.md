@@ -44,7 +44,6 @@ $ grunt serve
 
 ### Todos
 - Style it up
-- Redesign fun page (no thoughts on something visually appealing yet)
 - Make a social page
 - Finish Restaurant Roulette Remix
   - add button to launch google maps if viewed on a phone
@@ -57,6 +56,8 @@ $ grunt serve
 - projects modal doesn't work as intended on mobile
 - cdnify grunt task not injecting tags/should also stop cdnified deps from ending up in vendor.js
 - nodemailer works in local dev and not on site/figure it out
+- update outdated deps
+- 2048 game board too big on mobile
 
 ### Eventual improvements
 - Change video game library to MongoDB instead of JSON

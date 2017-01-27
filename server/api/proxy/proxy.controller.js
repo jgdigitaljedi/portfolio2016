@@ -139,6 +139,8 @@ exports.sendMail = function(req, res) {
 			{
 				service: 'aol',
 				auth: {
+				  host: 'smtp.aol.com',
+				  port: 587,
 					user: process.env.JYAHOOUSER,
 					pass: process.env.JYAHOOPASS
 				}

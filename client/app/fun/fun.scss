@@ -13,7 +13,26 @@
 		font-family: 'mr_robot';
         font-size: 5em;
     	padding-top: 20px;
+    text-align: center;
 	}
+
+  .fun-card {
+    width: 100%;
+    max-width: 900px;
+
+    .fun-title {
+      font-size: 2em;
+    }
+
+    .card-media {
+      max-width: 220px;
+      @include box_shadow(1);
+    }
+
+    .fun-card-contents {
+      padding: 0 20px;
+    }
+  }
 
 	.gray-card {
 		background-color: $blue-gray;

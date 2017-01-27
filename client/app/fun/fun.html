@@ -3,57 +3,141 @@
 	<div layout="row" layout-align="center center" class="title-area">
 		fun stuff
 	</div>
-	<div layout="row" layout-align="center center" style="margin-top: 40px;" layout-padding>
-		<div layout="row" layout-align="center center" class="disclaimer" flex="80">
-			I think of this site less as just a portfolio and more of a personal playground.
-			That said, I occasionally tinker on something that I wouldn't mind sharing with the rest of the world.
-			This is where I'll be sharing that stuff! Below are some apps that I've created for fun. Enjoy!
-		</div>
-	</div>
-	<div layout="row" layout-align="center start" class="apps-area">
-		<div layout="row" layout-align="center start" class="app-row" layout-padding flex="80">
-			<md-card layout="column" class="app-card" flex="50" flex-sm="100">
-				<p class="app-title">
-          Phangular 2048 &nbsp;
-          <md-icon md-svg-icon="hardware:gamepad" class="nav-icon" aria-label="projects" size="128"></md-icon>
-        </p>
-				<md-card-contents>
-					<div class="app-description" hide-xs>
-						This is just a little 2048 game I developed. I had never really done any game development and figured this
-						would be an easy one to get me going. I used this as an opportunity to explore Phaser which is a sort of
-						game engine for JavaScript. After getting a feel for what Phaser does, I can definitely say that I'll be
-						using this to create more little games in the future. Make sure to enter your name because this is hooked up
-						to a little database that will store the highest score!
-					</div>
-					<md-button ui-sref="2048">Play It!</md-button>
-				</md-card-contents>
-			</md-card>
-			<md-card layout="column" class="app-card" flex="50" flex-sm="100">
-				<p class="app-title">
-          Restaurant Roulette Remix
-          <md-icon md-svg-icon="maps:local_dining" class="nav-icon" aria-label="projects" size="128"></md-icon>
-        </p>
-				<md-card-contents>
-					<div class="app-description" hide-xs>
-						A few years ago while attending MakerSquare I participated in a short hackathon. I was on a team with a couple
-						of other guys and we had a fifteen minute debate about where to eat lunch the day before. That inspired us to write
-						something that would settle future debates and just tell us where to eat based off of location and call it Restaurant
-						Roulette. Years later I still liked the idea and knew I had enough knowledge to do it a lot better. This is the result,
-						hence the name Restaurant Roulette Remix. Put and end to those "where should we eat" arguments!
-					</div>
-					<md-button ui-sref="rrr.main">Try It!</md-button>
-				</md-card-contents>
-			</md-card>
-		</div>
-	</div>
-  <div layout="row" layout-align="center center">
-    <md-card class="there-are-games" layout="row" layout-align="center center" layout-padding flex="80">
-      <md-card-content>
-        Also, it might be kind of interesting to some folks to see my video game collection. I threw together some
-        data tables for myself so I could see what I had already or remind myself of things I decided I wanted to add
-        to the collection soon. I realized that some folks might find it interesting as well. You can view my collection
-        <a href="/games">HERE</a>!
-      </md-card-content>
+  <div layout="row" layout-align="center center" class="fun-description">
+    Welcome to my personal playground!
+  </div>
+  <div layout="row" layout-align="center center" flex="100">
+    <md-card class="fun-card">
+      <md-card-title>
+        <md-card-title-text>
+          <span class="fun-title">Restaraunt Roulette Remix
+            <md-icon md-svg-icon="maps:local_dining" class="nav-icon" aria-label="projects" size="128"></md-icon>
+          </span>
+          <!--<span class="md-subhead">Large</span>-->
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="card-media">
+            <img src="../../assets/images/fun/rrrThumb.jpg" />
+          </div>
+        </md-card-title-media>
+      </md-card-title>
+      <md-card-contents class="fun-card-contents">
+        A few years ago while attending MakerSquare I participated in a short hackathon. I was on a team with a couple
+        of other guys and we had a fifteen minute debate about where to eat lunch the day before. That inspired us to write
+        something that would settle future debates and just tell us where to eat based off of location and call it Restaurant
+        Roulette. Years later I still liked the idea and knew I had enough knowledge to do it a lot better. This is the result,
+        hence the name Restaurant Roulette Remix. Put and end to those "where should we eat" arguments!
+      </md-card-contents>
+      <md-card-actions>
+        <md-button ui-sref="rrr.main">Try It!</md-button>
+      </md-card-actions>
     </md-card>
   </div>
+  <div layout="row" layout-align="center center" flex="100">
+    <md-card class="fun-card">
+      <md-card-title>
+        <md-card-title-text>
+          <span class="fun-title">Phangular 2048
+            <md-icon md-svg-icon="hardware:gamepad" class="nav-icon" aria-label="projects" size="128"></md-icon>
+          </span>
+          <!--<span class="md-subhead">Large</span>-->
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="card-media">
+            <img src="../../assets/images/fun/2048thumb.jpg" />
+          </div>
+        </md-card-title-media>
+      </md-card-title>
+      <md-card-contents class="fun-card-contents">
+        This is just a little 2048 game I developed. I had never really done any game development and figured this
+        would be an easy one to get me going. I used this as an opportunity to explore Phaser which is a sort of
+        game engine for JavaScript. After getting a feel for what Phaser does, I can definitely say that I'll be
+        using this to create more little games in the future. Make sure to enter your name because this is hooked up
+        to a little database that will store the highest score!
+      </md-card-contents>
+      <md-card-actions>
+        <md-button ui-sref="2048">Play It!</md-button>
+      </md-card-actions>
+    </md-card>
+  </div>
+  <div layout="row" layout-align="center center" flex="100">
+    <md-card class="fun-card">
+      <md-card-title>
+        <md-card-title-text>
+          <span class="fun-title">Video Game Library
+            <md-icon md-svg-icon="image:grid_on" class="nav-icon" aria-label="projects" size="128"></md-icon>
+          </span>
+          <!--<span class="md-subhead">Large</span>-->
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="card-media">
+            <img src="../../assets/images/fun/gamesThumb.jpg" />
+          </div>
+        </md-card-title-media>
+      </md-card-title>
+      <md-card-contents class="fun-card-contents">
+        Also, it might be kind of interesting to some folks to see my video game collection. I threw together some
+        data tables for myself so I could see what I had already and remind myself of things I decided I wanted to add
+        to the collection soon. My collection is growing fairly quickly so I can keep up with it this way.
+        I realized that some folks might find it interesting as well. This was originally developed to be standalone so
+        excuse the boring appearance. This is a bit more utilitarian.
+      </md-card-contents>
+      <md-card-actions>
+        <md-button ui-sref="games">See It!</md-button>
+      </md-card-actions>
+    </md-card>
+  </div>
+	<!--<div layout="row" layout-align="center center" style="margin-top: 40px;" layout-padding>-->
+		<!--<div layout="row" layout-align="center center" class="disclaimer" flex="80">-->
+			<!--I think of this site less as just a portfolio and more of a personal playground.-->
+			<!--That said, I occasionally tinker on something that I wouldn't mind sharing with the rest of the world.-->
+			<!--This is where I'll be sharing that stuff! Below are some apps that I've created for fun. Enjoy!-->
+		<!--</div>-->
+	<!--</div>-->
+	<!--<div layout="row" layout-align="center start" class="apps-area">-->
+		<!--<div layout="row" layout-align="center start" class="app-row" layout-padding flex="80">-->
+			<!--<md-card layout="column" class="app-card" flex="50" flex-sm="100">-->
+				<!--<p class="app-title">-->
+          <!--Phangular 2048 &nbsp;-->
+          <!--<md-icon md-svg-icon="hardware:gamepad" class="nav-icon" aria-label="projects" size="128"></md-icon>-->
+        <!--</p>-->
+				<!--<md-card-contents>-->
+					<!--<div class="app-description" hide-xs>-->
+						<!--This is just a little 2048 game I developed. I had never really done any game development and figured this-->
+						<!--would be an easy one to get me going. I used this as an opportunity to explore Phaser which is a sort of-->
+						<!--game engine for JavaScript. After getting a feel for what Phaser does, I can definitely say that I'll be-->
+						<!--using this to create more little games in the future. Make sure to enter your name because this is hooked up-->
+						<!--to a little database that will store the highest score!-->
+					<!--</div>-->
+					<!--<md-button ui-sref="2048">Play It!</md-button>-->
+				<!--</md-card-contents>-->
+			<!--</md-card>-->
+			<!--<md-card layout="column" class="app-card" flex="50" flex-sm="100">-->
+				<!--<p class="app-title">-->
+          <!--Restaurant Roulette Remix-->
+          <!--<md-icon md-svg-icon="maps:local_dining" class="nav-icon" aria-label="projects" size="128"></md-icon>-->
+        <!--</p>-->
+				<!--<md-card-contents>-->
+					<!--<div class="app-description" hide-xs>-->
+						<!--A few years ago while attending MakerSquare I participated in a short hackathon. I was on a team with a couple-->
+						<!--of other guys and we had a fifteen minute debate about where to eat lunch the day before. That inspired us to write-->
+						<!--something that would settle future debates and just tell us where to eat based off of location and call it Restaurant-->
+						<!--Roulette. Years later I still liked the idea and knew I had enough knowledge to do it a lot better. This is the result,-->
+						<!--hence the name Restaurant Roulette Remix. Put and end to those "where should we eat" arguments!-->
+					<!--</div>-->
+					<!--<md-button ui-sref="rrr.main">Try It!</md-button>-->
+				<!--</md-card-contents>-->
+			<!--</md-card>-->
+		<!--</div>-->
+	<!--</div>-->
+  <!--<div layout="row" layout-align="center center">-->
+    <!--<md-card class="there-are-games" layout="row" layout-align="center center" layout-padding flex="80">-->
+      <!--<md-card-content>-->
+        <!--Also, it might be kind of interesting to some folks to see my video game collection. I threw together some-->
+        <!--data tables for myself so I could see what I had already or remind myself of things I decided I wanted to add-->
+        <!--to the collection soon. I realized that some folks might find it interesting as well. You can view my collection-->
+        <!--<a href="/games">HERE</a>!-->
+      <!--</md-card-content>-->
+    <!--</md-card>-->
+  <!--</div>-->
 </section>

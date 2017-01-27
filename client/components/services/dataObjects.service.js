@@ -87,12 +87,13 @@ angular.module('portfolioApp').factory('Dataobjects', [
                     color: '#FBC02D',
                     tile: '../assets/images/port/gallery.jpg',
                     description: 'Well, this is the page you\'re looking at right now. Why list it as a project? There\'s a lot going on here, that\'s why! '+
-                        'This is running on a DigitalOcean server on my '+
-                        'server config setup and build process. Aside from that and just from generally liking what I\'ve done '+
-                        'here, I\'ve got some things going on that you can\'t see. I decided to use this server for more than just hosting my portfolio. ' +
-                        'There\'s a game I created in the "Fun" tab as well as a remake of an app I did a couple years ago that helps you decide where to eat.' +
-                        'I\'ve even got a quasi-hidden page for cataloging my video game collection. There\'s more than meets the eye here, and I plan on ' +
-                        'continually adding to it!',
+                        'Sure, I developed this as an Angular app that is mobile friendly. That\'s great and all I suppose. It could be more '+
+                        'visually appealing I guess and I\'m working on that here and there. This site allowed me to flex my architecture and DevOps ' +
+                        'muscle a bit. I\'ve got a full MEAN stack running here. I\'m also running this on a DigitalOcean droplet which means I basically '+
+                        'pay for an Ubuntu server and that\'s it. That said, the DNS routing, Nginx config, Node installation, build process, and everything else was '+
+                        'my doing. I\'m serving everything minified with gzip compression using SSL. I\'ve got a cron job updating my SSL certs automatically '+
+                        'and a startup service that reloads my site if the server reboots. There is some code in my Express middleware that writes headers '+
+                        'for browser caching and makes sure my internal API calls are also served with gzip compression. I\'m not just a front-end guy!',
                     github: 'https://github.com/jgdigitaljedi/portfolio2016',
                     techs: 'MongoDB, ExpressJS, AngularJS, NodeJS, Angular Material, MomentJS, Nodemailer, d3, Phaser',
                     apis: 'Weather Underground, Last.fm, Bing Maps, GitHub, Yelp, Google Maps'
