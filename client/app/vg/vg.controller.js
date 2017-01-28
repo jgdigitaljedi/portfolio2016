@@ -154,8 +154,6 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData',
     function libraryTotals () {
       var totalsData = VgData.gameTotals(gc.gameLibrary, gc.hwLibrary);
       gc.gamesData = totalsData.gameLib;
-      console.log('gamesData', gc.gamesData);
-      console.log('totol', totalsData.genres);
       gc.firstGenreTable = {};
       gc.secondGenreTable = {};
       var genresLength = Object.keys(gc.gamesData.genres).length,

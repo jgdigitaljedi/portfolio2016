@@ -106,7 +106,6 @@ angular.module('portfolioApp').directive('svgBar', ['Dataobjects',
 
           yRight.domain([0, d3.max(data, function (d) {return (d[dataExtra]);})]);
 
-          console.log('data', data);
           svg.append('g')
             .attr('class', 'svg-line')
             .append('path')

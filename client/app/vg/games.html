@@ -38,58 +38,39 @@
 	      	<md-tab id="library-totals-tab" md-on-select="gc.tabClick('LT')">
 	        	<md-tab-label>Totals</md-tab-label>
 	        	<md-tab-body>
+              <div layout="row" layout-align="center center" flex="100">
+                <h2>Game Library Totals</h2>
+              </div>
 		            <div class="games-totals" layout="column" layout-gt-md="row" layout-align-gt-md="space-around start" layout-align="center center">
-		                <div>
-		                  	<h2>Game Library Totals</h2>
-		                  	<table class="ng-custom-table">
-		                    	<thead>
-		                      		<th>Console</th>
-		                      		<th>Games</th>
-		                      		<th>Avg Price</th>
-		                      		<th>Total Price</th>
-		                    	</thead>
-		                    	<tbody>
-		                      		<tr ng-repeat="(key, value) in gc.gamesData.gamesByConsole">
-		                        		<td>{{key}}</td>
-		                        		<td class="number-format">{{value.items}}</td>
-		                        		<td class="number-format">${{(value.total / value.items).toFixed(2)}}</td>
-		                        	<td class="number-format">${{value.total}}</td>
-		                      		</tr>
-		                    	</tbody>
-		                    	<tfoot>
-		                    		<tr class="table-foot">
-		                    			<td>Total</td>
-		                    			<td class="number-format">{{gc.gamesData.count}}</td>
-		                    			<td class="number-format">--</td>
-		                    			<td class="number-format">${{gc.gamesData.totalPrice.toFixed(2)}}</td>
-		                    		</tr>
-		                    	</tfoot>
-		                  	</table>
-		                </div>
-		                <div>
-		                  	<h2>Hardware Library Totals</h2>
-		                  	<table class="ng-custom-table">
-		                    	<thead>
-		                      		<th>Console</th>
-		                      		<th>Items</th>
-		                      		<th>Total Price</th>
-		                    	</thead>
-		                    	<tbody>
-		                      		<tr ng-repeat="(key, value) in gc.hwData.hwByConsole">
-		                        		<td>{{key}}</td>
-		                        		<td class="number-format">{{value.items}}</td>
-		                        		<td class="number-format">${{value.total}}</td>
-		                      		</tr>
-		                    	</tbody>
-		                    	<tfoot>
-		                    		<tr class="table-foot">
-		                    			<td>Total</td>
-		                    			<td class="number-format">{{gc.hwData.items}}</td>
-		                    			<td class="number-format">${{gc.hwData.totalPrice.toFixed(2)}}</td>
-		                    		</tr>
-		                    	</tfoot>
-		                  	</table>
-		                </div>
+                  <div ng-if="gc.barOptions">
+                    <svg-bar bar-options="gc.barOptions"></svg-bar>
+                  </div>
+                  <div>
+                    <table class="ng-custom-table">
+                      <thead>
+                          <th>Console</th>
+                          <th>Games</th>
+                          <th>Avg Price</th>
+                          <th>Total Price</th>
+                      </thead>
+                      <tbody>
+                          <tr ng-repeat="(key, value) in gc.gamesData.gamesByConsole">
+                            <td>{{key}}</td>
+                            <td class="number-format">{{value.items}}</td>
+                            <td class="number-format">${{(value.total / value.items).toFixed(2)}}</td>
+                          <td class="number-format">${{value.total}}</td>
+                          </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr class="table-foot">
+                          <td>Total</td>
+                          <td class="number-format">{{gc.gamesData.count}}</td>
+                          <td class="number-format">--</td>
+                          <td class="number-format">${{gc.gamesData.totalPrice.toFixed(2)}}</td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
 		            </div>
               <md-divider></md-divider>
               <div layout="row" layout-align="center center">
@@ -97,7 +78,7 @@
                   <h2>Game Genres</h2>
                 </div>
               </div>
-              <div layout="row" layout-align="space-around center" layout-sm="column" layout-xs="column" ng-if="gc.genrePieOptions">
+              <div  layout="column" layout-gt-md="row" layout-align-gt-md="space-around start" layout-align="center center" ng-if="gc.genrePieOptions">
                 <div layout="row">
                   <div>
                   <table class="ng-custom-table">
@@ -136,17 +117,35 @@
                 </div>
               </div>
               <md-divider></md-divider>
-              <div layout="row" layout-align="space-around center" layout-sm="column" layout-xs="column" ng-if="gc.barOptions">
-                <div layout="column" layout-align="center center">
-                  <div>
-                    <h4>Game by Console</h4>
-                  </div>
-                  <svg-bar bar-options="gc.barOptions"></svg-bar>
+              <div layout="row" layout-align="center center">
+                <h2>Hardware Library Totals</h2>
+              </div>
+              <div layout="column" layout-gt-md="row" layout-align-gt-md="space-around start" layout-align="center center">
+                <table class="ng-custom-table">
+                  <thead>
+                    <th>Console</th>
+                    <th>Items</th>
+                    <th>Total Price</th>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="(key, value) in gc.hwData.hwByConsole">
+                      <td>{{key}}</td>
+                      <td class="number-format">{{value.items}}</td>
+                      <td class="number-format">${{value.total}}</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr class="table-foot">
+                      <td>Total</td>
+                      <td class="number-format">{{gc.hwData.items}}</td>
+                      <td class="number-format">${{gc.hwData.totalPrice.toFixed(2)}}</td>
+                    </tr>
+                  </tfoot>
+                </table>
                 </div>
               </div>
 	        	</md-tab-body>
 	      	</md-tab>
-
 		</md-tabs>
 	</md-content>
 
