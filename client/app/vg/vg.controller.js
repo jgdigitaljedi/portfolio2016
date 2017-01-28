@@ -200,11 +200,12 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData',
         dataExtra: 'value',
         margin: {
 		      top: 20,
-          right: 20,
+          right: 50,
           bottom: 30,
           left: 40
         },
-        xLabelOffset: 80
+        xLabelOffset: 80,
+        includeLine: true
       };
 		}
 

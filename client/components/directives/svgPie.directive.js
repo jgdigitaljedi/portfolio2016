@@ -61,7 +61,7 @@ angular.module('portfolioApp').directive('svgPie', ['Dataobjects',
           tooltip.transition()
           .style('opacity', 1);
 
-          tooltip.html(ele.data[scope.pieOptions.dataKey])
+          tooltip.html('<p><b><u>' + ele.data[scope.pieOptions.dataKey] + '</u></b></p>')
           .style('left',(d3.event.pageX + 10) + 'px')
           .style('top', (d3.event.pageY + 10) + 'px')
           .append('p')
@@ -93,33 +93,33 @@ angular.module('portfolioApp').directive('svgPie', ['Dataobjects',
         });
 
         g.append('text')
-        .attr('fill', '#ffc107')
-        .attr('class', 'shadow')
-        .attr('transform', function(d) {
-          var midAngle = d.endAngle < Math.PI ? d.startAngle / 2 + d.endAngle / 2 : d.startAngle / 2  + d.endAngle / 2 + Math.PI ;
-          return 'translate(' + labelArc.centroid(d)[0] + ',' + labelArc.centroid(d)[1] + ') rotate(-90) rotate(' + (midAngle * 180 / Math.PI) + ')'; })
-        .attr('dy', '.35em')
-        .attr('text-anchor', function (d) {
-          return d.endAngle < Math.PI ? 'end' : 'start';
-        })
-        .attr('shape-rendering', 'optimizeQuality')
-        .attr('cursor', 'default')
-        .text(function(d) {return (d.data[scope.pieOptions.dataValue] > 2) ? d.data[scope.pieOptions.dataKey] : null})
-        .on('mouseover', function (d) {
-          var idName = d.data.genre.replace(/[~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/\s]/gi, '');
-          mouseAction(d3.select('path#' + idName).node(), d3.select('path#' + idName)._groups[0][0].__data__);
-        })
-        .on('mouseout', function (d) {
-          tooltip.transition()
-            .style('opacity', 0);
+          .attr('fill', '#ffc107')
+          .attr('class', 'shadow')
+          .attr('transform', function(d) {
+            var midAngle = d.endAngle < Math.PI ? d.startAngle / 2 + d.endAngle / 2 : d.startAngle / 2  + d.endAngle / 2 + Math.PI ;
+            return 'translate(' + labelArc.centroid(d)[0] + ',' + labelArc.centroid(d)[1] + ') rotate(-90) rotate(' + (midAngle * 180 / Math.PI) + ')'; })
+          .attr('dy', '.35em')
+          .attr('text-anchor', function (d) {
+            return d.endAngle < Math.PI ? 'end' : 'start';
+          })
+          .attr('shape-rendering', 'optimizeQuality')
+          .attr('cursor', 'default')
+          .text(function(d) {return (d.data[scope.pieOptions.dataValue] > 2) ? d.data[scope.pieOptions.dataKey] : null})
+          .on('mouseover', function (d) {
+            var idName = d.data.genre.replace(/[~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/\s]/gi, '');
+            mouseAction(d3.select('path#' + idName).node(), d3.select('path#' + idName)._groups[0][0].__data__);
+          })
+          .on('mouseout', function (d) {
+            tooltip.transition()
+              .style('opacity', 0);
 
-          d3.select('#' + d.data.genre.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/\s]/gi, '')).transition()
-            .duration(500)
-            .attr('d', arc)
-            .style('fill', function (path) {
-              return colors[path.data.colorIndex];
-            });
-        });
+            d3.select('#' + d.data.genre.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/\s]/gi, '')).transition()
+              .duration(500)
+              .attr('d', arc)
+              .style('fill', function (path) {
+                return colors[path.data.colorIndex];
+              });
+          });
       }
     };
   }

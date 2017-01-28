@@ -23,6 +23,7 @@ angular.module('portfolioApp').directive('svgBar', ['Dataobjects',
           offset = {
             x: scope.barOptions.xLabelOffset
           };
+        var barWidth;
 
         // set the ranges
         var x = d3.scaleBand()
@@ -46,23 +47,23 @@ angular.module('portfolioApp').directive('svgBar', ['Dataobjects',
           .style('opacity', 1);
 
           tooltip
-          .html('<p><b><u>' + ele[scope.barOptions.dataKey] + '</u></b></p>')
-          .style('left',(d3.event.pageX + 10) + 'px')
-          .style('top', (d3.event.pageY + 10) + 'px')
-          .append('p')
-            .text(ele[scope.barOptions.dataValue] + ' games')
-          .append('p')
-            .text('Value: $' + ele[scope.barOptions.dataExtra].toFixed(2));
+            .html('<p><b><u>' + ele[scope.barOptions.dataKey] + '</u></b></p>')
+            .style('left',(d3.event.pageX + 10) + 'px')
+            .style('top', (d3.event.pageY + 10) + 'px')
+            .append('p')
+              .text(ele[scope.barOptions.dataValue] + ' games')
+            .append('p')
+              .text('Value: $' + ele[scope.barOptions.dataExtra].toFixed(2));
         }
 
         // append the svg object to the body of the page
         // append a 'group' element to 'svg'
         // moves the 'group' element to the top left margin
         var svg = d3.select(elemSvg)
-          .attr('width', width + margin.left + margin.right)
-          .attr('height', height + margin.top + margin.bottom)
-          .append('g')
-          .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+              .attr('width', width + margin.left + margin.right)
+              .attr('height', height + margin.top + margin.bottom)
+              .append('g')
+              .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
         var data = scope.barOptions.data,
           dataKey = scope.barOptions.dataKey,
@@ -79,7 +80,7 @@ angular.module('portfolioApp').directive('svgBar', ['Dataobjects',
           .attr('class', 'bar')
           .attr('fill', function (d) {return colors[d.colorIndex];})
           .attr('x', function(d) { return x(d[dataKey]); })
-          .attr('width', x.bandwidth())
+          .attr('width', function () { barWidth = x.bandwidth(); return x.bandwidth();})
           .attr('y', function(d) { return y(d[dataValue]); })
           .attr('height', function(d) { return height  - offset.x - y(d[dataValue]); })
           .on('mouseover', function (d) {
@@ -94,11 +95,47 @@ angular.module('portfolioApp').directive('svgBar', ['Dataobjects',
             .style('fill', function (d) {return colors[d.colorIndex];});
           });
 
+        if (scope.barOptions.includeLine) {
+          var dataExtra = scope.barOptions.dataExtra,
+            yRight = d3.scaleLinear()
+              .range([height - offset.x, 0]);
+
+          var valueline = d3.line()
+            .x(function (d) { return x(d[dataKey]); })
+            .y(function (d) { return yRight(d[dataExtra]); });
+
+          yRight.domain([0, d3.max(data, function (d) {return (d[dataExtra]);})]);
+
+          console.log('data', data);
+          svg.append('g')
+            .attr('class', 'svg-line')
+            .append('path')
+              .datum(data)
+              .attr('transform', 'translate(' + (barWidth / 2) + ', 0)')
+              .attr('class', 'line')
+              .style('stroke', 'green')
+              .attr('fill', 'none')
+              .attr('stroke-width', 1.5)
+              .attr('d', valueline);
+
+          // var linePath = svg.selectAll('.svg-line').data(function (d) {console.log('d', d); return d;}),
+          //   lineSeries = linePath.enter().append('g').attr('class', 'dots');
+          //
+          // lineSeries.append('circle')
+          //   .attr('r', 6)
+          //   .attr('fill', function (d) {return colors[d.colorIndex]});
+
+          var rightAxis = svg.append('g')
+            .attr('transform', 'translate(' + width + ', 0 )')
+            .call(d3.axisRight(yRight).tickFormat(function (d) { return '$' + d;}))
+              ;
+        }
+
         // add the x Axis
         svg.append('g')
           .attr('transform', 'translate(0,' + (height - offset.x) + ')')
           .call(d3.axisBottom(x))
-        .selectAll("text")
+        .selectAll('text')
           .attr('y', 6)
           .attr('x', -10)
           .attr('dy', '.35em')
@@ -107,8 +144,28 @@ angular.module('portfolioApp').directive('svgBar', ['Dataobjects',
 
         // add the y Axis
         svg.append('g')
-        .call(d3.axisLeft(y));
+          .call(d3.axisLeft(y));
 
+        svg.append("text")
+          .attr("transform", "translate(" + (width/2) + " ," + (height + margin.top - 6) + ")")
+          .style("text-anchor", "middle")
+          .text("Console");
+
+        svg.append('text')
+          .attr('transform', 'rotate(-90)')
+          .attr('y', 0 - margin.left)
+          .attr('x',0 - (height / 2) + 40)
+          .attr('dy', '1em')
+          .style('text-anchor', 'middle')
+          .text('Games');
+
+        svg.append('text')
+        .attr('transform', 'rotate(-90)')
+        .attr('y', width + 30)
+        .attr('x',0 - (height / 2) + 40)
+        .attr('dy', '1em')
+        .style('text-anchor', 'middle')
+        .text('Value');
       }
     };
   }
