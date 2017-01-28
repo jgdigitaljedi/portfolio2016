@@ -4,7 +4,8 @@
 angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData',
 	function ($scope, VgData) {
 		var gc = this,
-			genreObj = {};
+			genreObj = {},
+      screenWidth = window.innerWidth;
 
 		function glTable () {
 			$('#game-library-table').DataTable({
@@ -153,6 +154,8 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData',
     function libraryTotals () {
       var totalsData = VgData.gameTotals(gc.gameLibrary, gc.hwLibrary);
       gc.gamesData = totalsData.gameLib;
+      console.log('gamesData', gc.gamesData);
+      console.log('totol', totalsData.genres);
       gc.firstGenreTable = {};
       gc.secondGenreTable = {};
       var genresLength = Object.keys(gc.gamesData.genres).length,
@@ -167,12 +170,41 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData',
         counter++;
       }
 
+      var pieSize = screenWidth > 550 ? 550 : screenWidth;
 		  gc.genrePieOptions = {
-		    width: 550,
-        height: 550,
+		    width: pieSize,
+        height: pieSize,
         data: totalsData.genres,
         dataValue: 'count',
         dataKey: 'genre'
+      };
+
+		  var barData = [],
+        barCounter = 0;
+		  for (var key in gc.gamesData.gamesByConsole) {
+		    barData.push({
+          con: key,
+          count: gc.gamesData.gamesByConsole[key].items,
+          value: gc.gamesData.gamesByConsole[key].total,
+          colorIndex: barCounter
+        });
+		    barCounter++;
+      }
+
+		  gc.barOptions = {
+		    width: pieSize,
+        height: pieSize,
+        data: barData,
+        dataKey: 'con',
+        dataValue: 'count',
+        dataExtra: 'value',
+        margin: {
+		      top: 20,
+          right: 20,
+          bottom: 30,
+          left: 40
+        },
+        xLabelOffset: 80
       };
 		}
 
@@ -202,9 +234,5 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData',
 					buildLibraryTotals();
 			}
 		};
-    //
-    // (function () {
-    //   buildGameLibraryTable();
-    // })();
 	}
 ]);

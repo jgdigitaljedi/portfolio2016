@@ -43,8 +43,7 @@ $ grunt serve
 
 
 ### Todos
-- Style it up
-- Make a social page
+- Make a social page (even though I don't really do social networking)
 - Finish Restaurant Roulette Remix
   - add button to launch google maps if viewed on a phone
   - make it less ugly/boring
@@ -56,6 +55,7 @@ $ grunt serve
 - cdnify grunt task not injecting tags/should also stop cdnified deps from ending up in vendor.js
 - update outdated deps
 - 2048 game board too big on mobile
+- projects modal still too tall on mobile
 
 ### Eventual improvements
 - Change video game library to MongoDB instead of JSON

@@ -135,10 +135,15 @@
                   <svg-pie pie-options="gc.genrePieOptions"></svg-pie>
                 </div>
               </div>
-		            <!--<md-divider></md-divider>-->
-
-              <!--<div class="misc-totals" layout="row" layout-align="space-around center">-->
-		            <!--</div>-->
+              <md-divider></md-divider>
+              <div layout="row" layout-align="space-around center" layout-sm="column" layout-xs="column" ng-if="gc.barOptions">
+                <div layout="column" layout-align="center center">
+                  <div>
+                    <h4>Game by Console</h4>
+                  </div>
+                  <svg-bar bar-options="gc.barOptions"></svg-bar>
+                </div>
+              </div>
 	        	</md-tab-body>
 	      	</md-tab>
 

@@ -48,13 +48,17 @@
   height: auto;
   padding: 8px;
   background-color: #f1f1f1;
-  @include box_shadow(2);
+  @include box_shadow(3);
   pointer-events: none;
   z-index: 10;
   color: black;
   font-size: 0.8em;
   border-radius: 4px;
   text-align: center;
+
+  p {
+    line-height: 0.8em;
+  }
 }
 
 text.shadow {
