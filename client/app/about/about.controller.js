@@ -15,7 +15,7 @@ angular.module('portfolioApp').controller('AboutCtrl', ['$scope','$rootScope', '
         ac.photoArr = ['../assets/images/about/meDsShow.jpg', '../assets/images/about/coachingSoccer.jpg',
         	'../assets/images/about/meGuitarShoot.jpg'];
         // ac.photo = ac.photoArr[0];
-        ac.photo = '../assets/images/about/meDsShow.jpg';
+        ac.photo = '../assets/images/about/meGuitarShoot.png';
         var paLen = ac.photoArr.length;
 
         ac.skills = Dataobjects.getSkills();

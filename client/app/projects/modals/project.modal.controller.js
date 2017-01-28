@@ -6,7 +6,10 @@ angular.module('portfolioApp').controller('ProjectsModalCtrl', ['$scope', 'Datao
     $scope.theme = modalData.theme;
     $scope.which = modalData.selectedProject;
     var thumbs = document.getElementsByClassName('film-square'),
-      screenwidth = window.innerWidth;
+      screenwidth = window.innerWidth,
+      screenHeight = window.innerHeight;
+
+    $scope.heightLimit = screenHeight - 40;
 
     if($scope.which.images) {
       $scope.selectedPic = modalData.selectedProject.images[0];

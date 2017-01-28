@@ -11,6 +11,14 @@ angular.module('portfolioApp')
             mainVm.todImage = mainVm.theme === 'day' ? 'sun.png' : 'moon.png';
         });
 
+        var descArr = ['Disc golfer, guitar player, Raspberry Pi tinkerer, & bearded gentleman.',
+          'Extreme allergy sufferer, video game collector, Android fanboy, & dog person.',
+          'Clean freak, craft beer snob, total Linux geek, & all-around good guy.',
+          'Music snob, casual Dallas Cowboys fan, & has a complete lack of fashion sense.',
+          'My wife calls me both a hipster and a robot. That does not compute with me.'];
+
+        mainVm.description = descArr[Math.floor((Math.random() * descArr.length))];
+
         function makeLastFmWidget(result) {
             for(var i = 0; i < 5; i++) {
                 var artistWeb = result[i].artist['#text'].split(' ').join('+'),

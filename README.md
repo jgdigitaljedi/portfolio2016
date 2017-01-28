@@ -53,9 +53,7 @@ $ grunt serve
  
  
 ### Todos that came to my attention after deployment
-- projects modal doesn't work as intended on mobile
 - cdnify grunt task not injecting tags/should also stop cdnified deps from ending up in vendor.js
-- nodemailer works in local dev and not on site/figure it out
 - update outdated deps
 - 2048 game board too big on mobile
 

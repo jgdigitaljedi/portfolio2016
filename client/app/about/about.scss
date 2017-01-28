@@ -38,8 +38,8 @@
 			.big-photo {
 				max-width: 350px;
 				max-height: 350px;
-				@include box_shadow(2);
-				border-radius: 2px;
+				//@include box_shadow(2);
+				//border-radius: 2px;
 			}
 		}
 	}
