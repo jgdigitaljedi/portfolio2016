@@ -15,14 +15,14 @@
 		</div>
 		<div class="about-me-bio-area">
 	        <div  layout-align="center center" class="writeup-box" layout="column">
-	            <p class="my-name fade-in">joey gauthier</p>
+	            <p class="my-name fade-in mr-robot-text">joey gauthier</p>
 	            <p class="my-profession fade-in">JavaScript / UXUI Developer</p>
 	            <!--<p class="small-desc-line fade-in">Disc golfer, guitar player, Raspberry Pi hacker, and beard enthusiast.</p>-->
 	            <p class="small-desc-line fade-in">{{mainVm.description}}</p>
 	        </div>
 		</div>
 	</div>
-	<div class="last-fm-section" layout="row" layout-align="center end" ng-show="mainVm.showLastfm">
+	<div class="last-fm-section" layout="row" layout-align="center end" ng-show="mainVm.showLastfm" hide-xs>
 	    <div class="last-card">
 	        <span><em>Last 5 songs I've listened to (hover for info)...</em></span>
 	        <div id="lastfm-widget"></div>

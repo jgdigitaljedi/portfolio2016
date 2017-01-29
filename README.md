@@ -43,7 +43,6 @@ $ grunt serve
 
 
 ### Todos
-- Make a social page (even though I don't really do social networking)
 - Finish Restaurant Roulette Remix
   - add button to launch google maps if viewed on a phone
   - make it less ugly/boring

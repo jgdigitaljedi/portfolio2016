@@ -168,7 +168,7 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData',
         counter++;
       }
 
-      var pieSize = screenWidth > 550 ? 550 : screenWidth;
+      var pieSize = screenWidth > 550 ? 550 : screenWidth - 40;
 		  gc.genrePieOptions = {
 		    width: pieSize,
         height: pieSize,

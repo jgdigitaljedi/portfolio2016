@@ -15,7 +15,8 @@ angular.module('portfolioApp').factory('GameLogicService', [
 						return parseInt(item);
 					});
 				}
-				var tileSize = 100,
+				var screenWidth = window.innerWidth,
+          tileSize = screenWidth > 500 ? 100 : 75,
 					fieldArray = previousBoard ? previousBoard : new Array(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
 					tileSprites,
 			    	upKey,
@@ -44,8 +45,13 @@ angular.module('portfolioApp').factory('GameLogicService', [
 			    	canMove = false;
 
 				function onPreload() {
-					game.load.image('tile', '../../assets/images/2048/tile.png');
-					game.load.image('grid', '../../assets/images/2048/grid.png');
+				  if (screenWidth > 500) {
+            game.load.image('tile', '../../assets/images/2048/tile.png');
+            game.load.image('grid', '../../assets/images/2048/grid.png');
+          } else {
+            game.load.image('tile', '../../assets/images/2048/tileSmall.png');
+            game.load.image('grid', '../../assets/images/2048/gridSmall.png');
+          }
 				}
 
         function endSwipe () {

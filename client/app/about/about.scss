@@ -15,8 +15,8 @@
 		margin-bottom: 40px;
 
 		.about-header {
-			font-family: 'mr_robot';
-			font-size: 5em;
+			//font-family: 'mr_robot';
+			//font-size: 5em;
 			margin-bottom: 16px;
 		}
 		.little-info {
@@ -111,4 +111,10 @@
 		}
 	}
 
+}
+
+@media screen and (max-width: 650px) {
+  .top-text, .summary-text, .random-facts, .feature-container {
+    text-align: center;
+  }
 }
