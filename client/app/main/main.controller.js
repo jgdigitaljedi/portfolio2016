@@ -11,6 +11,12 @@ angular.module('portfolioApp')
             mainVm.todImage = mainVm.theme === 'day' ? 'sun.png' : 'moon.png';
         });
 
+        //******************************
+        // testing area
+        // mainVm.theme = 'night';
+        // mainVm.todImage = 'moon.png';
+        //*****************************
+
         var descArr = ['Disc golfer, guitar player, Raspberry Pi tinkerer, & bearded gentleman.',
           'Extreme allergy sufferer, video game collector, Android fanboy, & dog person.',
           'Clean freak, craft beer snob, total Linux geek, & all-around good guy.',
@@ -60,10 +66,21 @@ angular.module('portfolioApp')
           // mainVm.todImage = mainVm.theme === 'day' ? 'sun.png' : 'moon.png';
           function moonIcon (age) {
             // 8 main phases lasting a total of 29.5305882 days per cycle
+            mainVm.todImage = 'moon' + age.phaseofMoon.split(' ').join('') + '.png';
+            mainVm.showSunMoon = true;
             console.log('age', age);
           }
 
           function handleSunAndMoon (sunTimes) {
+
+            //*********************************
+            // testing for all this stuff
+            // sunTimes.sunrise = ' 06:00';
+            // sunTimes.sunset = ' 18:00';
+            // $rootScope.theme = 'night';
+            // $rootScope.$broadcast('theme change');
+            //*********************************
+
             console.log('sunTimes', sunTimes);
             var screenWidth = window.innerWidth,
               screenHeight = window.innerHeight - 206, // minus 64 for toolbar and 142 for image size and margin
@@ -77,33 +94,22 @@ angular.module('portfolioApp')
               moonTimeTotal = moment(tomorrow + sunTimes.sunrise).diff(today + sunTimes.sunset, 'minutes'),
               moonTimeTotalMorning = moment(today + sunTimes.sunrise).diff(yesterday + sunTimes.sunset, 'minutes');
 
+            // var timeSince = moment(today + ' 20:40', 'MM/DD/YYYY HH:mm').diff(today + start, 'minutes'),
+            var timeSince = moment().diff(today + start, 'minutes'), // minutes since start
+              timeElapsedPercent = $rootScope.theme === 'night' ? (timeSince / moonTimeTotal) : (timeSince/sunTimeTotal),
+              angle = 180 * timeElapsedPercent, // angle from half circle vertex in which sun or moon should be placed
+              x = (screenWidth / 2 - 90) + screenHeight * (Math.cos(angle * (Math.PI / 180))),
+              y = -60 + screenHeight * Math.sin(angle * (Math.PI / 180));
 
-            if ($rootScope.theme === 'night') {
-              console.log('fuck', $rootScope.theme);
-              // $rootScope.theme = 'night';
-              var timeSince = moment().diff(today + start, 'minutes'), // minutes since start
-                timeElapsedPercent = (timeSince / moonTimeTotal),
-                angle = 180 * timeElapsedPercent, // angle from half circle vertex in which sun or moon should be placed
-                x = (screenWidth / 2 - 90) + screenHeight * (Math.cos(angle * (Math.PI / 180))),
-                y = -60 + screenHeight * Math.sin(angle * (Math.PI / 180));;
-            } else {
-              // $rootScope.theme = 'day';
-              var timeSince = moment().diff(today + start, 'minutes'), // minutes since start
-                timeElapsedPercent = (timeSince / sunTimeTotal),
-                angle = 180 * timeElapsedPercent, // angle from half circle vertex in which sun or moon should be placed
-                x = (screenWidth / 2 - 90) + screenHeight * (Math.cos(angle * (Math.PI / 180))),
-                y = -60 + screenHeight * Math.sin(angle * (Math.PI / 180));;
-            }
-
-            console.log('sunTimeTotal', sunTimeTotal);
-            console.log('moonTimeTotalEvening', moonTimeTotalEvening);
-            console.log('moonTimeTotalMorning', moonTimeTotalMorning);
+            // console.log('sunTimeTotal', sunTimeTotal);
+            // console.log('moonTimeTotalEvening', moonTimeTotalEvening);
+            // console.log('moonTimeTotalMorning', moonTimeTotalMorning);
 
             mainVm.objCoords = {x: x, y: y};
+            console.log('coords', mainVm.objCoords);
             if (y < 2.87 || screenWidth - 180 < x) { // don't cause overflow
               mainVm.showSunMoon = false;
-            } else if ($rootScope.theme === 'day') {
-              console.log('why am I here');
+            } else if (mainVm.theme === 'day') {
               mainVm.todImage = 'sun.png';
               mainVm.showSunMoon = true;
             } else {
