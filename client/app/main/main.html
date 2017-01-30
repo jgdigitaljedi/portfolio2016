@@ -2,7 +2,7 @@
 <section class="about-section" md-theme="{{mainVm.theme}}"
 	ng-class="{'night':mainVm.theme === 'night', 'day': mainVm.theme === 'day'}">
 	<div class="sun-moon" ng-style="{'left': mainVm.objCoords.x, 'bottom': mainVm.objCoords.y}"
-		hide-md hide-sm hide-xs>
+		hide-sm hide-xs ng-if="mainVm.showSunMoon">
 		<img ng-src="../../assets/images/{{mainVm.todImage}}" class="sun-moon-pic" />
 	</div>
 	<img class="austin" src="../../assets/images/AustinSkylineCropped.svg" />

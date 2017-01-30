@@ -10,6 +10,7 @@ var router = express.Router();
 
 router.get('/lastfm', proxy.lastfm);
 router.get('/conditions/:state/:city', proxy.conditions);
+router.get('/astronomy/:state/:city', proxy.astronomy);
 router.get('/lastart/:band', proxy.lastArt);
 router.get('/lastfmweeklyartists', proxy.lastfmWeeklyArtists);
 router.get('/lastfmweeklytracks', proxy.lastfmWeeklyTracks);

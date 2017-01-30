@@ -45,16 +45,17 @@ $ grunt serve
 ### Todos
 - Finish Restaurant Roulette Remix
   - add button to launch google maps if viewed on a phone
+  - add walking directions
   - make it less ugly/boring
 - Eventually add a blog
-- pixel perfection
- 
+- make video game library table rows clickable; hit Giantbomb API and show game info in modal
+- more data viz in game library
+- home page sun/moon causing overflow around 7 o'clock
+- get home page sun and moon working on Austin sunrise and sunset times instead of 7 o'clock
  
 ### Todos that came to my attention after deployment
 - cdnify grunt task not injecting tags/should also stop cdnified deps from ending up in vendor.js
 - update outdated deps
-- 2048 game board too big on mobile
-- projects modal still too tall on mobile
 
 ### Eventual improvements
 - Change video game library to MongoDB instead of JSON

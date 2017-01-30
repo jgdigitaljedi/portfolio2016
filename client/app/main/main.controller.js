@@ -4,7 +4,7 @@ angular.module('portfolioApp')
     .controller('MainCtrl', function ($scope, $http, $compile, $rootScope, $timeout) {
         var mainVm = this;
         mainVm.showLastfm = true;
-        mainVm.theme = $rootScope.theme;
+        mainVm.theme = $rootScope.theme || 'day';
 
         $rootScope.$on('theme change', function () {
             mainVm.theme = $rootScope.theme;
@@ -56,8 +56,73 @@ angular.module('portfolioApp')
 
         }
 
-        (function init () {
+        function crazyTimeAstronomy (sunTimes) {
+          // mainVm.todImage = mainVm.theme === 'day' ? 'sun.png' : 'moon.png';
+          function moonIcon (age) {
+            // 8 main phases lasting a total of 29.5305882 days per cycle
+            console.log('age', age);
+          }
 
+          function handleSunAndMoon (sunTimes) {
+            console.log('sunTimes', sunTimes);
+            var screenWidth = window.innerWidth,
+              screenHeight = window.innerHeight - 206, // minus 64 for toolbar and 142 for image size and margin
+              start = mainVm.theme === 'day' ? sunTimes.sunrise : sunTimes.sunset, // day or night time to base position off of
+              today = moment().format('MM/DD/YYYY'),
+              tomorrow = moment().add(1, 'day').format('MM/DD/YYYY'),
+              yesterday = moment().subtract(1, 'day').format('MM/DD/YYYY');
+
+            var sunTimeTotal = moment(today + sunTimes.sunset).diff(today + sunTimes.sunrise, 'minutes'),
+              moonTimeTotalEvening = moment(tomorrow + sunTimes.sunrise).diff(today + sunTimes.sunset, 'minutes'),
+              moonTimeTotal = moment(tomorrow + sunTimes.sunrise).diff(today + sunTimes.sunset, 'minutes'),
+              moonTimeTotalMorning = moment(today + sunTimes.sunrise).diff(yesterday + sunTimes.sunset, 'minutes');
+
+
+            if ($rootScope.theme === 'night') {
+              console.log('fuck', $rootScope.theme);
+              // $rootScope.theme = 'night';
+              var timeSince = moment().diff(today + start, 'minutes'), // minutes since start
+                timeElapsedPercent = (timeSince / moonTimeTotal),
+                angle = 180 * timeElapsedPercent, // angle from half circle vertex in which sun or moon should be placed
+                x = (screenWidth / 2 - 90) + screenHeight * (Math.cos(angle * (Math.PI / 180))),
+                y = -60 + screenHeight * Math.sin(angle * (Math.PI / 180));;
+            } else {
+              // $rootScope.theme = 'day';
+              var timeSince = moment().diff(today + start, 'minutes'), // minutes since start
+                timeElapsedPercent = (timeSince / sunTimeTotal),
+                angle = 180 * timeElapsedPercent, // angle from half circle vertex in which sun or moon should be placed
+                x = (screenWidth / 2 - 90) + screenHeight * (Math.cos(angle * (Math.PI / 180))),
+                y = -60 + screenHeight * Math.sin(angle * (Math.PI / 180));;
+            }
+
+            console.log('sunTimeTotal', sunTimeTotal);
+            console.log('moonTimeTotalEvening', moonTimeTotalEvening);
+            console.log('moonTimeTotalMorning', moonTimeTotalMorning);
+
+            mainVm.objCoords = {x: x, y: y};
+            if (y < 2.87 || screenWidth - 180 < x) { // don't cause overflow
+              mainVm.showSunMoon = false;
+            } else if ($rootScope.theme === 'day') {
+              console.log('why am I here');
+              mainVm.todImage = 'sun.png';
+              mainVm.showSunMoon = true;
+            } else {
+              moonIcon(sunTimes.moon);
+            }
+          }
+          handleSunAndMoon(sunTimes);
+        }
+
+        // init
+        if ($rootScope.theme) {
+          crazyTimeAstronomy($rootScope.sunTimes);
+        } else {
+          $scope.$on('theme set', function () {
+            crazyTimeAstronomy($rootScope.sunTimes);
+          });
+        }
+
+        (function init () {
             $http.get('/api/proxy/lastfm')
                 .then(function successCallback (result) {
                   // console.log('result', result);
@@ -67,20 +132,5 @@ angular.module('portfolioApp')
                     console.log('error with lastfm', error);
                     $scope.showLastfm = false;
                 });
-
-            mainVm.todImage = mainVm.theme === 'day' ? 'sun.png' : 'moon.png';
-            $timeout(function () {
-                var screenWidth = window.innerWidth;
-                var screenHeight = window.innerHeight - 206; // minus 64 for toolbar and 20 more for a comfortable margin and 90 more to center object
-                var start = mainVm.theme === 'day' ? ' 07:00' : ' 19:00'; // day or night time to base position off of
-                var today = moment().format('MM/DD/YYYY');
-                var timeSince = moment().diff(today + start, 'minutes'); // minutes since start
-                var timeElapsedPercent = (timeSince / 720); // 12 hours is 720 minutes
-                var angle = 180 * timeElapsedPercent; // angle from half circle vertex in which sun or moon should be placed
-                // var angle = 90; // here for testing
-                var x = (screenWidth / 2 - 90) + screenHeight * (Math.cos(angle*(Math.PI/180)));
-                var y = -60 + screenHeight * Math.sin(angle*(Math.PI/180));
-                mainVm.objCoords = {x: x, y: y};
-            });
         })();
   });

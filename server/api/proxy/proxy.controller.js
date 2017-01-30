@@ -6,6 +6,7 @@ var request = require('request'),
 	path = require('path'),
 	moment = require('moment'),
 	weatherCache,
+  astronomyCache,
   fs = require('fs');
 
 var mongoose = require('mongoose');
@@ -29,6 +30,20 @@ db.once('open', function() {
 			weatherCache = item;
 		}
 	});
+  Randoms.findOne({name: 'astronomy'}, function (err, item) {
+    if (!item || err) {
+      console.log('setting initial astronomy cache');
+      astronomyCache = {name: 'astronomy', dateTime: '1234', value: '{}'};
+      var initWc = new Randoms(astronomyCache);
+      initWc.save(function (error) {
+        if (error) throw err;
+      });
+    } else {
+      var parsedValue = JSON.parse(item.value);
+      item.value = parsedValue;
+      astronomyCache = item;
+    }
+  });
 });
 
 exports.conditions = function(req, res) {
@@ -65,6 +80,41 @@ exports.conditions = function(req, res) {
 			res.json(obj);
 		});
 	}
+};
+
+exports.astronomy = function (req, res) {
+  if (parseInt(moment().unix()) - parseInt(astronomyCache.dateTime) >= 86400) {  // only allow astronomy calls once a day
+    var state = req.params.state,
+      city = req.params.city,
+      url = 'http://api.wunderground.com/api/' + process.env.JWUKEY + '/astronomy/q/' + state +
+        '/' + city + '.json';
+
+    request.get(
+      url,
+      function (error, response, body) {
+        if (!error && response.statusCode === 200) {
+          Randoms.findOneAndUpdate({name: 'astronomy'},
+            {$set: {name: 'astronomy', dateTime: moment().unix(), value: body}}, {new: true},
+            function (error, item) {
+              console.log('astronomy call made');
+            });
+          var obj = JSON.parse(body);
+          astronomyCache = obj;
+          res.json(obj);
+        } else {
+          var obj = JSON.parse(body);
+          res.json(obj);
+          console.log('why are we here astronomy');
+        }
+      }
+    );
+  } else { // use cached weather if called less than 15 minutes ago
+    Randoms.findOne({name: 'astronomy'}, function (err, item) {
+      var obj = JSON.parse(item.value)
+      obj.cached = true;
+      res.json(obj);
+    });
+  }
 };
 
 exports.lastfm = function(req, res) {
