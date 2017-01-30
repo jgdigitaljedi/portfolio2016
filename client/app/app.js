@@ -28,7 +28,7 @@ angular.module('portfolioApp', [
         .iconSet('social', '../assets/iconsets/social-icons.svg', 24)
         .iconSet('toggle', '../assets/iconsets/toggle-icons.svg', 24)
         .iconSet('avatar', '../assets/iconsets/avatar-icons.svg', 128);
-// }).config(function ($stateProvider, $urlRouterProvider, $locationProvider, $mdThemingProvider) {
+
     $urlRouterProvider
         .otherwise('/');
 
@@ -47,66 +47,71 @@ angular.module('portfolioApp', [
 
     $mdThemingProvider.alwaysWatchTheme(true);
     $mdThemingProvider.enableBrowserColor({theme: 'night'});
-}).controller('AppCtrl', function ($scope, $rootScope, $state, $http) {
+}).controller('AppCtrl', function ($scope, $state, SunMoon, $rootScope) {
+  SunMoon.getSunMoonData();
+  $scope.theme = 'day'; // backup selection in case something goes wrong
+  $rootScope.$on('theme set', function () {
+    $scope.theme = $rootScope.theme;
 
+  });
     // $rootScope.$on('$stateChangeSuccess', function () {
     //   $rootScope.title = $state.current.title;
     // });
 
-    var today = moment().format('MM/DD/YYYY'),
-      sunTimes = {sunrise: '', sunset: '', hours: {rise: '', sset: ''}, moon: {}},
-      dateFormat = 'MM/DD/YYYY HH:mm';
-
-    function setThemeAndSunTimes (sunTimes) {
-      $rootScope.sunTimes = sunTimes;
-      console.log('sunrise', today + sunTimes.sunrise);
-      console.log('sunset', today + sunTimes.sunset);
-      console.log('now', moment());
-      console.log('dateFormat', dateFormat);
-      if (moment().isBefore(today + sunTimes.sunrise, dateFormat) || moment().isAfter(today + sunTimes.sunset, dateFormat)) {
-        $scope.theme = 'night';
-        console.log('night');
-      } else {
-        $scope.theme = 'day';
-      }
-      $rootScope.theme = $scope.theme;
-      $rootScope.$broadcast('theme set');
-    }
-
-    function fixSunTimes (hour, minute) {
-      hour = hour.toString();
-      if (hour.length === 1) hour = '0' + hour;
-      return ' ' + hour + ':' + minute;
-    }
-
-    $http.get('/api/proxy/astronomy/TX/Manor')
-    /*jshint camelcase: false */
-    .then(function (response) {
-      if (!response.error) {
-        var sun = response.data.sun_phase;
-        sunTimes.hours.rise = sun.sunrise.hour;
-        sunTimes.hours.sset = sun.sunset.hour;
-        sunTimes.sunrise = fixSunTimes(sun.sunrise.hour, sun.sunrise.minute);
-        sunTimes.sunset = fixSunTimes(sun.sunset.hour, sun.sunset.minute);
-        sunTimes.moon = response.data.moon_phase;
-      } else {
-        sunTimes.hours.rise = '07';
-        sunTimes.hours.sset = '19';
-        sunTimes.sunrise = ' 07:00';
-        sunTimes.sunset = ' 19:00';
-        sunTimes.moon = false;
-      }
-      setThemeAndSunTimes(sunTimes);
-    })
-    .catch(function (error) {
-      console.log('astronomy error', error);
-      sunTimes.hours.rise = '07';
-      sunTimes.hours.sset = '19';
-      sunTimes.sunrise = ' 07:00';
-      sunTimes.sunset = ' 19:00';
-      sunTimes.moon = false;
-      setThemeAndSunTimes(sunTimes);
-    });
+    // var today = moment().format('MM/DD/YYYY'),
+    //   sunTimes = {sunrise: '', sunset: '', hours: {rise: '', sset: ''}, moon: {}},
+    //   dateFormat = 'MM/DD/YYYY HH:mm';
+    //
+    // function setThemeAndSunTimes (sunTimes) {
+    //   $rootScope.sunTimes = sunTimes;
+    //   console.log('sunrise', today + sunTimes.sunrise);
+    //   console.log('sunset', today + sunTimes.sunset);
+    //   console.log('now', moment());
+    //   console.log('dateFormat', dateFormat);
+    //   if (moment().isBefore(today + sunTimes.sunrise, dateFormat) || moment().isAfter(today + sunTimes.sunset, dateFormat)) {
+    //     $scope.theme = 'night';
+    //     console.log('night');
+    //   } else {
+    //     $scope.theme = 'day';
+    //   }
+    //   $rootScope.theme = $scope.theme;
+    //   $rootScope.$broadcast('theme set');
+    // }
+    //
+    // function fixSunTimes (hour, minute) {
+    //   hour = hour.toString();
+    //   if (hour.length === 1) hour = '0' + hour;
+    //   return ' ' + hour + ':' + minute;
+    // }
+    //
+    // $http.get('/api/proxy/astronomy/TX/Manor')
+    // /*jshint camelcase: false */
+    // .then(function (response) {
+    //   if (!response.error) {
+    //     var sun = response.data.sun_phase;
+    //     sunTimes.hours.rise = sun.sunrise.hour;
+    //     sunTimes.hours.sset = sun.sunset.hour;
+    //     sunTimes.sunrise = fixSunTimes(sun.sunrise.hour, sun.sunrise.minute);
+    //     sunTimes.sunset = fixSunTimes(sun.sunset.hour, sun.sunset.minute);
+    //     sunTimes.moon = response.data.moon_phase;
+    //   } else {
+    //     sunTimes.hours.rise = '07';
+    //     sunTimes.hours.sset = '19';
+    //     sunTimes.sunrise = ' 07:00';
+    //     sunTimes.sunset = ' 19:00';
+    //     sunTimes.moon = false;
+    //   }
+    //   setThemeAndSunTimes(sunTimes);
+    // })
+    // .catch(function (error) {
+    //   console.log('astronomy error', error);
+    //   sunTimes.hours.rise = '07';
+    //   sunTimes.hours.sset = '19';
+    //   sunTimes.sunrise = ' 07:00';
+    //   sunTimes.sunset = ' 19:00';
+    //   sunTimes.moon = false;
+    //   setThemeAndSunTimes(sunTimes);
+    // });
 
 
   // konami code
