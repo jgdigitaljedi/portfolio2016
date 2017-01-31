@@ -14,12 +14,12 @@ angular.module('portfolioApp').factory('SunMoon', ['$rootScope', '$http',
           $rootScope.sunTimes = sunTimes;
           console.log('sunrise', today + sunTimes.sunrise);
           console.log('sunset', today + sunTimes.sunset);
-          console.log('now', moment());
-          console.log('dateFormat', dateFormat);
           if (moment().isBefore(today + sunTimes.sunrise, dateFormat) || moment().isAfter(today + sunTimes.sunset, dateFormat)) {
+            console.log('setting night');
             $rootScope.theme = 'night';
             console.log('night');
           } else {
+            console.log('setting day');
             $rootScope.theme = 'day';
           }
           // $rootScope.theme = $scope.theme;

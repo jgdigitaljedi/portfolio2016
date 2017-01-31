@@ -49,9 +49,9 @@ angular.module('portfolioApp', [
     $mdThemingProvider.enableBrowserColor({theme: 'night'});
 }).controller('AppCtrl', function ($scope, $state, SunMoon, $rootScope) {
   SunMoon.getSunMoonData();
-  $scope.theme = 'day'; // backup selection in case something goes wrong
+  // $scope.theme = 'day'; // backup selection in case something goes wrong
   $rootScope.$on('theme set', function () {
-    $scope.theme = $rootScope.theme;
+    $scope.theme = $rootScope.theme || 'day';
 
   });
     // $rootScope.$on('$stateChangeSuccess', function () {

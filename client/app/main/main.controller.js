@@ -8,7 +8,7 @@ angular.module('portfolioApp')
 
         $rootScope.$on('theme change', function () {
             mainVm.theme = $rootScope.theme;
-            mainVm.todImage = mainVm.theme === 'day' ? 'sun.png' : 'moon.png';
+            mainVm.todImage = mainVm.theme === 'day' ? 'sun.png' : $rootScope.moonImage || 'moon.png';
         });
 
         //******************************
@@ -66,7 +66,32 @@ angular.module('portfolioApp')
           // mainVm.todImage = mainVm.theme === 'day' ? 'sun.png' : 'moon.png';
           function moonIcon (age) {
             // 8 main phases lasting a total of 29.5305882 days per cycle
-            mainVm.todImage = 'moon' + age.phaseofMoon.split(' ').join('') + '.png';
+            // 3.69 days per phase
+            if (!age) {
+              mainVm.todImage = 'moon.png';
+            } else {
+              var moonAge = parseFloat(age.ageOfMoon);
+              if (moonAge < 1.5) {
+                mainVm.todImage = 'moonNewMoon.png';
+              } else if (moonAge >= 1.5 && moonAge < 7) {
+                mainVm.todImage = 'moonWaxingCrescent.png';
+              } else if (moonAge >= 7 && moonAge <= 8) {
+                mainVm.todImage = 'moonFirstQuarter.png';
+              } else if (moonAge > 8 && moonAge < 14) {
+                mainVm.todImage = 'moonWaxingGibbous.png';
+              } else if (moonAge >= 14 && moonAge <= 15) {
+                mainVm.todImage = 'moonFullMoon.png';
+              } else if (moonAge > 15 && moonAge < 22) {
+                mainVm.todImage = 'moonWaningGibbous.png';
+              } else if (moonAge >= 22 && moonAge <= 23) {
+                mainVm.todImage = 'moonThirdQuarter.png';
+              } else {
+                mainVm.todImage = 'moonWaningCrescent.png';
+              }
+              $rootScope.moonImage = mainVm.todImage;
+            }
+
+            // mainVm.todImage = 'moon' + age.phaseofMoon.split(' ').join('') + '.png';
             mainVm.showSunMoon = true;
             console.log('age', age);
           }
@@ -94,7 +119,7 @@ angular.module('portfolioApp')
               moonTimeTotal = moment(tomorrow + sunTimes.sunrise).diff(today + sunTimes.sunset, 'minutes'),
               moonTimeTotalMorning = moment(today + sunTimes.sunrise).diff(yesterday + sunTimes.sunset, 'minutes');
 
-            // var timeSince = moment(today + ' 20:40', 'MM/DD/YYYY HH:mm').diff(today + start, 'minutes'),
+            // var timeSince = moment(today + ' 12:40', 'MM/DD/YYYY HH:mm').diff(today + start, 'minutes'),
             var timeSince = moment().diff(today + start, 'minutes'), // minutes since start
               timeElapsedPercent = $rootScope.theme === 'night' ? (timeSince / moonTimeTotal) : (timeSince/sunTimeTotal),
               angle = 180 * timeElapsedPercent, // angle from half circle vertex in which sun or moon should be placed
@@ -108,11 +133,14 @@ angular.module('portfolioApp')
             mainVm.objCoords = {x: x, y: y};
             console.log('coords', mainVm.objCoords);
             if (y < 2.87 || screenWidth - 180 < x) { // don't cause overflow
+              console.log('not showing because too low');
               mainVm.showSunMoon = false;
             } else if (mainVm.theme === 'day') {
+              console.log('show sun');
               mainVm.todImage = 'sun.png';
               mainVm.showSunMoon = true;
             } else {
+            console.log('show moon');
               moonIcon(sunTimes.moon);
             }
           }
@@ -120,13 +148,7 @@ angular.module('portfolioApp')
         }
 
         // init
-        if ($rootScope.theme) {
-          crazyTimeAstronomy($rootScope.sunTimes);
-        } else {
-          $scope.$on('theme set', function () {
-            crazyTimeAstronomy($rootScope.sunTimes);
-          });
-        }
+
 
         (function init () {
             $http.get('/api/proxy/lastfm')
@@ -138,5 +160,18 @@ angular.module('portfolioApp')
                     console.log('error with lastfm', error);
                     $scope.showLastfm = false;
                 });
+
+            if ($rootScope.theme) {
+              mainVm.theme = $rootScope.theme;
+              crazyTimeAstronomy($rootScope.sunTimes);
+              console.log('theme set so calling', $rootScope.theme);
+            } else {
+              console.log('hit the else');
+              $scope.$on('theme set', function () {
+                mainVm.theme = $rootScope.theme;
+                console.log('calling delayed on event');
+                crazyTimeAstronomy($rootScope.sunTimes);
+              });
+            }
         })();
   });
