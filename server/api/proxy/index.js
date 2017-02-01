@@ -24,5 +24,6 @@ router.get('/hardwarelibrary', games.getHWLibrary);
 router.get('/gameswishlist', games.getGamesWishlist);
 router.get('/consolewl', games.getConsoleWishlist);
 router.get('/resumepdf', proxy.getresume);
+router.get('/giantbomb/:platform/:id', proxy.giantbomb);
 
 module.exports = router;

@@ -201,3 +201,36 @@ exports.getresume = function (req, res) {
   res.setHeader('Content-Disposition', 'attachment; filename=quote.pdf');
   file.pipe(res);
 };
+
+exports.giantbomb = function (req, res) {
+    var options = {
+      hostname: 'www.giantbomb.com',
+      path: '/api/' + req.params.platform + '/' + req.params.id + '/?api_key=' + process.env.JGBKEY + '&format=json',
+      method: 'GET',
+      headers: {'user-agent': 'DigitalJedi'}
+    };
+    var req = http.request(options, function (response) {
+      var body = '';
+      var i = 0;
+      response.on('data', function (chunk) {
+        i++;
+        body += chunk;
+      });
+      response.on('end', function () {
+        console.log('body', body);
+        body = JSON.parse(body);
+        if(body) res.json(body);
+        else res.json({});
+      });
+    });
+
+    req.on('error', function (e) {
+      res.send({error: true, message: e});
+    });
+    req.end();
+    // Keys.find({key: 'giantbomb_api_key'}, function (err, key) {
+    // 	if (!Array.isArray(key)) key = [key];
+    // 	var auth = key[0].value;
+    // 	proxy('http://www.giantbomb.com/api/' + req.params.platform + '/' + req.params.id + '/?api_key=XXXXX&format=json', res);
+    // });
+};

@@ -105,4 +105,11 @@ angular.module('portfolioApp')
             controllerAs: 'gc',
             title: 'Joey Gauthier - Video Games'
           });
+          // .state('games/crud', {
+          //   url: '/games/crud',
+          //   templateUrl: 'app/vg/crud/crud.html',
+          //   controller: 'CrudCtrl',
+          //   controllerAs: 'crc',
+          //   title: 'Update Game Library'
+          // });
   	});

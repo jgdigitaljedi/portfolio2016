@@ -8,7 +8,7 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData',
       screenWidth = window.innerWidth;
 
 		function glTable () {
-			$('#game-library-table').DataTable({
+      var glTable = $('#game-library-table').DataTable({
 				aaData: gc.gameLibrary,
 				aoColumns: [
 					{'mDataProp': 'title', title: 'Title'},
@@ -20,6 +20,12 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData',
 				'lengthMenu': [[10, 25, 50, -1], [10, 25, 50, 'All']],
 				'iDisplayLength': -1
 			});
+
+      $('#game-library-table tbody').on( 'click', 'tr', function () {
+        console.log('this', this);
+        var data = glTable.row(this).data();
+        console.log('row data', data);
+      });
 		}
 
 		function buildGameLibraryTable () {
@@ -214,6 +220,9 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData',
 				libraryTotals();
 			}
 		}
+
+		// need an on click function for datatables row to hit gb api call and create modal
+
 
 		gc.tabClick = function (which) {
 			switch(which) {
