@@ -119,6 +119,7 @@ angular.module('portfolioApp')
               moonTimeTotal = moment(tomorrow + sunTimes.sunrise).diff(today + sunTimes.sunset, 'minutes'),
               moonTimeTotalMorning = moment(today + sunTimes.sunrise).diff(yesterday + sunTimes.sunset, 'minutes');
 
+            console.log('rs theme', $rootScope.theme);
             // var timeSince = moment(today + ' 12:40', 'MM/DD/YYYY HH:mm').diff(today + start, 'minutes'),
             var timeSince = moment().diff(today + start, 'minutes'), // minutes since start
               timeElapsedPercent = $rootScope.theme === 'night' ? (timeSince / moonTimeTotal) : (timeSince/sunTimeTotal),
