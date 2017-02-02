@@ -1,8 +1,8 @@
 'use strict';
 /*jshint camelcase: false */
 
-angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData', 'GB',
-	function ($scope, VgData, GB) {
+angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData', 'GB', '$mdDialog',
+	function ($scope, VgData, GB, $mdDialog) {
 		var gc = this,
 			genreObj = {},
       screenWidth = window.innerWidth;
@@ -27,7 +27,16 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData', 'GB'
         var game = $(this).parent();
         var data = glTable.row(game).data();
         GB.getGameData(data.gbId).then(function (response) {
-          console.log('game response', response);
+          if (!response.error) {
+            $mdDialog.show({
+              templateUrl: 'app/vg/modals/gameInfo.modal.html',
+              controller: 'GamesDialogCtrl as gd',
+              clickOutsideToClose: true,
+              locals: {
+                game: response.response
+              }
+            });
+          }
         });
       });
 		}

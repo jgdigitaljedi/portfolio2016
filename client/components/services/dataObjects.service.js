@@ -96,7 +96,7 @@ angular.module('portfolioApp').factory('Dataobjects', [
                         'for browser caching and makes sure my internal API calls are also served with gzip compression. I\'m not just a front-end guy!',
                     github: 'https://github.com/jgdigitaljedi/portfolio2016',
                     techs: 'MongoDB, ExpressJS, AngularJS, NodeJS, Angular Material, MomentJS, Nodemailer, d3, Phaser',
-                    apis: 'Weather Underground, Last.fm, Bing Maps, GitHub, Yelp, Google Maps'
+                    apis: 'Weather Underground, Last.fm, Bing Maps, GitHub, Yelp, Google Maps, GiantBomb'
                 },
                 toolbox: {
                     shortName: 'toolbox',

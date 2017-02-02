@@ -1,0 +1,52 @@
+.game-dialog-container {
+  color: white;
+
+  .hell-no {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #D50000;
+  }
+
+  .nope {
+    font-weight: bold;
+    color: #B71C1C;
+  }
+
+  .possibly {
+    color: #FF8F00;
+  }
+
+  .just-fine {
+    color: #558B2F;
+  }
+
+  md-dialog {
+
+    .dialog-top {
+
+      img {
+        max-height: 500px;
+      }
+
+      .top-info {
+        max-height: 550px;
+
+        .info-row {
+          // margin-bottom: 6px;
+
+          .point-title {
+            font-weight: bold;
+            width: 180px;
+          }
+
+          .point-data {
+            width: calc(~"100% - 140px");
+          }
+          .point-title, .point-data {
+            padding: 4px;
+          }
+        }
+      }
+    }
+  }
+}

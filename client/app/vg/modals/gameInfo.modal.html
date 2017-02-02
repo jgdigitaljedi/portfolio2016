@@ -1,0 +1,93 @@
+<div class="game-dialog-container" layout-align="center center">
+  <md-dialog ng-style="{'max-height': gd.height, 'width': gd.width}">
+    <md-dialog-content layout-padding flex>
+      <h1>{{gd.gameInfo.name}}</h1>
+      <div class="dialog-top" layout="row" layout-align="space-between start" flex>
+        <div class="top-info" flex="60">
+          <md-divider></md-divider>
+          <div layout="row" class="info-row" layout-align="start start" flex>
+            <div layout="column" class="point-title">
+              Description:
+            </div>
+            <div layout="column" class="point-data">
+              {{gd.gameInfo.deck}}
+            </div>
+          </div>
+          <md-divider></md-divider>
+          <div layout="row" class="info-row" layout-align="start start" flex>
+            <div layout="column" class="point-title">
+              Release Date:
+            </div>
+            <div layout="column" class="point-data">
+              {{gd.releaseDate}}
+            </div>
+          </div>
+          <md-divider></md-divider>
+          <div layout="row" class="info-row" layout-align="start start" flex>
+            <div layout="column" class="point-title">
+              Original Rating:
+            </div>
+            <div layout="column" class="point-data">
+              {{gd.rating || 'UNKNOWN'}}
+            </div>
+          </div>
+          <md-divider></md-divider>
+          <div layout="row" class="info-row" layout-align="start start" flex>
+            <div layout="column" class="point-title">
+              Genres:
+            </div>
+            <div layout="column" class="point-data">
+              {{gd.concattedGenres || 'UNKNOWN'}}
+            </div>
+          </div>
+          <md-divider></md-divider>
+          <div layout="row" class="info-row" layout-align="start start" flex>
+            <div layout="column" class="point-title">
+              Platforms:
+            </div>
+            <div layout="column" class="point-data">
+              {{gd.concattedPlatforms || 'UNKNOWN'}}
+            </div>
+          </div>
+          <md-divider></md-divider>
+          <div layout="row" class="info-row" layout-align="start start" flex>
+            <div layout="column" class="point-title">
+              Publishers:
+            </div>
+            <div layout="column" class="point-data">
+              {{gd.concattedPublishers || 'UNKNOWN'}}
+            </div>
+          </div>
+          <md-divider></md-divider>
+          <div layout="row" class="info-row" layout-align="start start" flex>
+            <div layout="column" class="point-title">
+              Similar Games:
+            </div>
+            <div layout="column" class="point-data">
+              {{gd.concattedSimilar || 'UNKNOWN'}}
+            </div>
+          </div>
+          <md-divider></md-divider>
+          <div layout="row" class="info-row" layout-align="start start" flex>
+            <div layout="column" class="point-title">
+              Themes:
+            </div>
+            <div layout="column" class="point-data">
+              {{gd.concattedThemes || 'UNKNOWN'}}
+            </div>
+          </div>
+        </div>
+        <div class="game-pic" flex="39">
+          <p ng-show="gd.onHd" style="font-style: italic;">Game is on console hard drive and accessible by menu. No disc.</p>
+          <img class="game-image" ng-src="{{gd.gameInfo.image.small_url}}" />
+        </div>
+      </div>
+      <!--</div>-->
+    </md-dialog-content>
+    <md-dialog-actions>
+      <md-button ng-click="gd.closeDialog()">
+        <i class="fa fa-close"></i> &nbsp; close
+      </md-button>
+    </md-dialog-actions>
+  </md-dialog>
+</div>
