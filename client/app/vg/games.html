@@ -1,152 +1,158 @@
-
 <section ng-class="{'night':gc.theme === 'night', 'day': gc.theme === 'day'}" md-theme="day"
-	class="games-collection-section" ng-cloak>
-	<md-content style="min-height: 100%;">
-	    <md-tabs md-theme="{{gc.theme}}">
-	    	<md-tab id="lib-game-tab" md-on-select="gc.tabClick('GL')" md-autoselect="true">
-	        	<md-tab-label>Game Library</md-tab-label>
-	        	<md-tab-body>
-	          		These are the games I already have. This way I never end up with duplicates!
-	          		<table id="game-library-table" class="display" cellspacing="0" width="100%" height="100%">
-					</table>
-	        	</md-tab-body>
-	      	</md-tab>
-	      	<md-tab id="lib-hardware-tab" md-on-select="gc.tabClick('HL')">
-	        	<md-tab-label>Hardware Library</md-tab-label>
-	        	<md-tab-body>
-	          		This is the game hardware I have.
-	          		<table id="hardware-library-table" class="display" cellspacing="0" width="100%" height="100%">
-					</table>
-	        	</md-tab-body>
-	      	</md-tab>
-	      	<md-tab id="wish-game-tab" md-on-select="gc.tabClick('GW')">
-	        	<md-tab-label>Games Wishlist</md-tab-label>
-	        	<md-tab-body>
-	          		These are the games I want for the hardware I already have.
-	          		<table id="games-wishlist-table" class="display" cellspacing="0" width="100%" height="100%">
-					</table>
-	        	</md-tab-body>
-	      	</md-tab>
-	      	<md-tab id="wish-hardware-tab" md-on-select="gc.tabClick('HW')">
-	        	<md-tab-label>Console Wishlist</md-tab-label>
-	        	<md-tab-body>
-	          		These are the consoles I'd like to collect.
-	          		<table id="console-wishlist-table" class="display" cellspacing="0" width="100%" height="100%">
-					</table>
-	        	</md-tab-body>
-	      	</md-tab>
-	      	<md-tab id="library-totals-tab" md-on-select="gc.tabClick('LT')">
-	        	<md-tab-label>Totals</md-tab-label>
-	        	<md-tab-body>
-              <div layout="row" layout-align="center center" flex="100">
-                <h2>Game Library Totals</h2>
-              </div>
-		            <div class="games-totals" layout="column" layout-gt-md="row" layout-align-gt-md="space-around start" layout-align="center center">
-                  <div ng-if="gc.barOptions">
-                    <svg-bar bar-options="gc.barOptions"></svg-bar>
-                  </div>
-                  <div>
-                    <table class="ng-custom-table">
-                      <thead>
-                          <th>Console</th>
-                          <th>Games</th>
-                          <th>Avg Price</th>
-                          <th>Total Price</th>
-                      </thead>
-                      <tbody>
-                          <tr ng-repeat="(key, value) in gc.gamesData.gamesByConsole">
-                            <td>{{key}}</td>
-                            <td class="number-format">{{value.items}}</td>
-                            <td class="number-format">${{(value.total / value.items).toFixed(2)}}</td>
-                          <td class="number-format">${{value.total}}</td>
-                          </tr>
-                      </tbody>
-                      <tfoot>
-                        <tr class="table-foot">
-                          <td>Total</td>
-                          <td class="number-format">{{gc.gamesData.count}}</td>
-                          <td class="number-format">--</td>
-                          <td class="number-format">${{gc.gamesData.totalPrice.toFixed(2)}}</td>
-                        </tr>
-                      </tfoot>
-                    </table>
-                  </div>
-		            </div>
-              <md-divider></md-divider>
-              <div layout="row" layout-align="center center">
-                <div layout="column" layout-align="center center">
-                  <h2>Game Genres</h2>
-                </div>
-              </div>
-              <div  layout="column" layout-gt-md="row" layout-align-gt-md="space-around start" layout-align="center center" ng-if="gc.genrePieOptions">
-                <div layout="row">
-                  <div>
-                  <table class="ng-custom-table">
-                    <thead>
-                    <th>Genre</th>
-                    <th>Games</th>
-                    </thead>
-                    <tbody>
-                    <tr ng-repeat="(key, value) in gc.firstGenreTable">
-                      <td>{{key}}</td>
-                      <td class="number-format">{{value}}</td>
-                    </tr>
-                    </tbody>
-                  </table>
-                  </div>
-                  <div>
-                    <table class="ng-custom-table">
-                      <thead>
-                      <th>Genre</th>
-                      <th>Games</th>
-                      </thead>
-                      <tbody>
-                      <tr ng-repeat="(key, value) in gc.secondGenreTable">
-                        <td>{{key}}</td>
-                        <td class="number-format">{{value}}</td>
-                      </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                <div layout="column" layout-align="center center">
-                  <div>
-                    <h4 style="font-style: italic">(hover to see hidden labels of smaller slices)</h4>
-                  </div>
-                  <svg-pie pie-options="gc.genrePieOptions"></svg-pie>
-                </div>
-              </div>
-              <md-divider></md-divider>
-              <div layout="row" layout-align="center center">
-                <h2>Hardware Library Totals</h2>
-              </div>
-              <div layout="column" layout-gt-md="row" layout-align-gt-md="space-around start" layout-align="center center">
+         class="games-collection-section" ng-cloak>
+  <md-content style="min-height: 100%;">
+    <md-tabs md-theme="{{gc.theme}}">
+      <md-tab id="lib-game-tab" md-on-select="gc.tabClick('GL')" md-autoselect="true">
+        <md-tab-label>Game Library</md-tab-label>
+        <md-tab-body>
+          These are the games I already have. This way I never end up with duplicates!
+          <table id="game-library-table" class="display" cellspacing="0" width="100%" height="100%">
+          </table>
+        </md-tab-body>
+      </md-tab>
+      <md-tab id="lib-hardware-tab" md-on-select="gc.tabClick('HL')">
+        <md-tab-label>Hardware Library</md-tab-label>
+        <md-tab-body>
+          This is the game hardware I have.
+          <table id="hardware-library-table" class="display" cellspacing="0" width="100%" height="100%">
+          </table>
+        </md-tab-body>
+      </md-tab>
+      <md-tab id="wish-game-tab" md-on-select="gc.tabClick('GW')">
+        <md-tab-label>Games Wishlist</md-tab-label>
+        <md-tab-body>
+          These are the games I want for the hardware I already have.
+          <table id="games-wishlist-table" class="display" cellspacing="0" width="100%" height="100%">
+          </table>
+        </md-tab-body>
+      </md-tab>
+      <md-tab id="wish-hardware-tab" md-on-select="gc.tabClick('HW')">
+        <md-tab-label>Console Wishlist</md-tab-label>
+        <md-tab-body>
+          These are the consoles I'd like to collect.
+          <table id="console-wishlist-table" class="display" cellspacing="0" width="100%" height="100%">
+          </table>
+        </md-tab-body>
+      </md-tab>
+      <md-tab id="library-totals-tab" md-on-select="gc.tabClick('LT')">
+        <md-tab-label>Totals</md-tab-label>
+        <md-tab-body>
+          <div layout="row" layout-align="center center" flex="100">
+            <h2>Game Library Totals</h2>
+          </div>
+          <div class="games-totals" layout="column" layout-gt-md="row" layout-align-gt-md="space-around start"
+               layout-align="center center">
+            <div ng-if="gc.barOptions">
+              <svg-bar bar-options="gc.barOptions"></svg-bar>
+            </div>
+            <div>
+              <table class="ng-custom-table">
+                <thead>
+                <th>Console</th>
+                <th>Games</th>
+                <th>Avg Price</th>
+                <th>Total Price</th>
+                </thead>
+                <tbody>
+                <tr ng-repeat="(key, value) in gc.gamesData.gamesByConsole">
+                  <td>{{key}}</td>
+                  <td class="number-format">{{value.items}}</td>
+                  <td class="number-format">${{(value.total / value.items).toFixed(2)}}</td>
+                  <td class="number-format">${{value.total}}</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr class="table-foot">
+                  <td>Total</td>
+                  <td class="number-format">{{gc.gamesData.count}}</td>
+                  <td class="number-format">--</td>
+                  <td class="number-format">${{gc.gamesData.totalPrice.toFixed(2)}}</td>
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+          <md-divider></md-divider>
+          <div layout="row" layout-align="center center">
+            <div layout="column" layout-align="center center">
+              <h2>Game Genres</h2>
+            </div>
+          </div>
+          <div layout="column" layout-gt-md="row" layout-align-gt-md="space-around start" layout-align="center center"
+               ng-if="gc.genrePieOptions">
+            <div layout="row">
+              <div>
                 <table class="ng-custom-table">
                   <thead>
-                    <th>Console</th>
-                    <th>Items</th>
-                    <th>Total Price</th>
+                  <th>Genre</th>
+                  <th>Games</th>
                   </thead>
                   <tbody>
-                    <tr ng-repeat="(key, value) in gc.hwData.hwByConsole">
-                      <td>{{key}}</td>
-                      <td class="number-format">{{value.items}}</td>
-                      <td class="number-format">${{value.total}}</td>
-                    </tr>
+                  <tr ng-repeat="(key, value) in gc.firstGenreTable">
+                    <td>{{key}}</td>
+                    <td class="number-format">{{value}}</td>
+                  </tr>
                   </tbody>
-                  <tfoot>
-                    <tr class="table-foot">
-                      <td>Total</td>
-                      <td class="number-format">{{gc.hwData.items}}</td>
-                      <td class="number-format">${{gc.hwData.totalPrice.toFixed(2)}}</td>
-                    </tr>
-                  </tfoot>
                 </table>
-                </div>
               </div>
-	        	</md-tab-body>
-	      	</md-tab>
-		</md-tabs>
-	</md-content>
+              <div>
+                <table class="ng-custom-table">
+                  <thead>
+                  <th>Genre</th>
+                  <th>Games</th>
+                  </thead>
+                  <tbody>
+                  <tr ng-repeat="(key, value) in gc.secondGenreTable">
+                    <td>{{key}}</td>
+                    <td class="number-format">{{value}}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div layout="column" layout-align="center center">
+              <div>
+                <h4 style="font-style: italic">(hover to see hidden labels of smaller slices)</h4>
+              </div>
+              <svg-pie pie-options="gc.genrePieOptions"></svg-pie>
+            </div>
+          </div>
+          <md-divider></md-divider>
+          <div layout="row" layout-align="center center">
+            <h2>Hardware Library Totals</h2>
+          </div>
+          <div layout="column" layout-gt-md="row" layout-align-gt-md="space-around start" layout-align="center center">
+            <div ng-if="gc.hwBarOptions">
+              <svg-bar bar-options="gc.hwBarOptions"></svg-bar>
+            </div>
+            <div>
+              <table class="ng-custom-table">
+                <thead>
+                <th>Console</th>
+                <th>Items</th>
+                <th>Total Price</th>
+                </thead>
+                <tbody>
+                <tr ng-repeat="(key, value) in gc.hwData.hwByConsole">
+                  <td>{{key}}</td>
+                  <td class="number-format">{{value.items}}</td>
+                  <td class="number-format">${{value.total}}</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr class="table-foot">
+                  <td>Total</td>
+                  <td class="number-format">{{gc.hwData.items}}</td>
+                  <td class="number-format">${{gc.hwData.totalPrice.toFixed(2)}}</td>
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+          </div>
+        </md-tab-body>
+      </md-tab>
+    </md-tabs>
+  </md-content>
 
 </section>

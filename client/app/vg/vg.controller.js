@@ -150,27 +150,7 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData', 'GB'
       }
 		}
 
-		function genreTracker (genre) {
-			var gen = genre.split(',');
-			if (gen.length > 1) {
-				gen.forEach(function (item) {
-					item = item.trim();
-					if (!genreObj.hasOwnProperty(item)) {
-						genreObj[item] = 1;
-					} else {
-						genreObj[item]++;
-					}
-				});
-			} else {
-				if (!genreObj.hasOwnProperty(genre)) {
-					genreObj[genre] = 1;
-				} else {
-					genreObj[genre]++;
-				}
-			}
-		}
-
-    function libraryTotals () {
+		function libraryTotals () {
       var totalsData = VgData.gameTotals(gc.gameLibrary, gc.hwLibrary);
       gc.gamesData = totalsData.gameLib;
       gc.firstGenreTable = {};
@@ -186,6 +166,7 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData', 'GB'
         }
         counter++;
       }
+      console.log('hw data', gc.hwData);
 
       var pieSize = screenWidth > 550 ? 550 : screenWidth - 40;
 		  gc.genrePieOptions = {
@@ -197,7 +178,9 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData', 'GB'
       };
 
 		  var barData = [],
-        barCounter = 0;
+        barCounter = 0,
+        hwBarData = [],
+        hwCounter = 0;
 		  for (var key in gc.gamesData.gamesByConsole) {
 		    barData.push({
           con: key,
@@ -206,6 +189,16 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData', 'GB'
           colorIndex: barCounter
         });
 		    barCounter++;
+      }
+
+      for (var hw in gc.hwData.hwByConsole) {
+		    hwBarData.push({
+		      con: hw,
+          count: gc.hwData.hwByConsole[hw].items,
+          value: gc.hwData.hwByConsole[hw].total,
+          colorIndex: hwCounter
+        });
+		    hwCounter++;
       }
 
 		  gc.barOptions = {
@@ -222,7 +215,30 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData', 'GB'
           left: 40
         },
         xLabelOffset: 80,
-        includeLine: true
+        includeLine: true,
+        firstYLabel: 'Games',
+        secondYLabel: 'Value',
+        xLabel: 'Console'
+      };
+
+		  gc.hwBarOptions = {
+		    width: pieSize,
+        height: pieSize,
+        data: hwBarData,
+        dataKey: 'con',
+        dataValue: 'count',
+        dataExtra: 'value',
+        margin: {
+          top: 20,
+          right: 50,
+          bottom: 30,
+          left: 40
+        },
+        xLabelOffset: 80,
+        includeLine: true,
+        firstYLabel: 'Accessories',
+        secondYLabel: 'Value',
+        xLabel: 'Console'
       };
 		}
 
@@ -233,9 +249,6 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData', 'GB'
 				libraryTotals();
 			}
 		}
-
-		// need an on click function for datatables row to hit gb api call and create modal
-
 
 		gc.tabClick = function (which) {
 			switch(which) {

@@ -51,7 +51,7 @@ angular.module('portfolioApp').directive('svgBar', ['Dataobjects',
             .style('left',(d3.event.pageX + 10) + 'px')
             .style('top', (d3.event.pageY + 10) + 'px')
             .append('p')
-              .text(ele[scope.barOptions.dataValue] + ' games')
+              .text(ele[scope.barOptions.dataValue] + ' ' + scope.barOptions.firstYLabel.toLowerCase())
             .append('p')
               .text('Value: $' + ele[scope.barOptions.dataExtra].toFixed(2));
         }
@@ -145,10 +145,10 @@ angular.module('portfolioApp').directive('svgBar', ['Dataobjects',
         svg.append('g')
           .call(d3.axisLeft(y));
 
-        svg.append("text")
-          .attr("transform", "translate(" + (width/2) + " ," + (height + margin.top - 6) + ")")
-          .style("text-anchor", "middle")
-          .text("Console");
+        svg.append('text')
+          .attr('transform', 'translate(' + (width/2) + ' ,' + (height + margin.top - 6) + ')')
+          .style('text-anchor', 'middle')
+          .text(scope.barOptions.xLabel);
 
         svg.append('text')
           .attr('transform', 'rotate(-90)')
@@ -156,7 +156,7 @@ angular.module('portfolioApp').directive('svgBar', ['Dataobjects',
           .attr('x',0 - (height / 2) + 40)
           .attr('dy', '1em')
           .style('text-anchor', 'middle')
-          .text('Games');
+          .text(scope.barOptions.firstYLabel);
 
         svg.append('text')
         .attr('transform', 'rotate(-90)')
@@ -164,7 +164,7 @@ angular.module('portfolioApp').directive('svgBar', ['Dataobjects',
         .attr('x',0 - (height / 2) + 40)
         .attr('dy', '1em')
         .style('text-anchor', 'middle')
-        .text('Value');
+        .text(scope.barOptions.secondYLabel);
       }
     };
   }
