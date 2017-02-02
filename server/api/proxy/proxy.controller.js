@@ -6,7 +6,8 @@ var request = require('request'),
 	path = require('path'),
 	moment = require('moment'),
 	weatherCache,
-  fs = require('fs');
+  fs = require('fs'),
+  http = require('http');
 
 var mongoose = require('mongoose');
 mongoose.createConnection('mongodb://localhost/random');
@@ -217,7 +218,6 @@ exports.giantbomb = function (req, res) {
         body += chunk;
       });
       response.on('end', function () {
-        console.log('body', body);
         body = JSON.parse(body);
         if(body) res.json(body);
         else res.json({});
@@ -228,9 +228,4 @@ exports.giantbomb = function (req, res) {
       res.send({error: true, message: e});
     });
     req.end();
-    // Keys.find({key: 'giantbomb_api_key'}, function (err, key) {
-    // 	if (!Array.isArray(key)) key = [key];
-    // 	var auth = key[0].value;
-    // 	proxy('http://www.giantbomb.com/api/' + req.params.platform + '/' + req.params.id + '/?api_key=XXXXX&format=json', res);
-    // });
 };

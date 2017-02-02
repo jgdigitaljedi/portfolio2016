@@ -1,8 +1,8 @@
 'use strict';
 /*jshint camelcase: false */
 
-angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData',
-	function ($scope, VgData) {
+angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData', 'GB',
+	function ($scope, VgData, GB) {
 		var gc = this,
 			genreObj = {},
       screenWidth = window.innerWidth;
@@ -14,17 +14,21 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData',
 					{'mDataProp': 'title', title: 'Title'},
 					{'mDataProp': 'platform', title: 'Platform'},
 					{'mDataProp': 'genre', title: 'Genre'},
-					{'mDataProp': 'price', title: 'Value', render: {'_': 'filter', 'filter': 'filter', 'display': 'display'}}
+					{'mDataProp': 'price', title: 'Value', render: {'_': 'filter', 'filter': 'filter', 'display': 'display'}},
+          {'mDataProp': null, 'bSortable': false, 'mRender': function (o) {return '<button class="game-info">Info</button>';}}
 				],
 				'aaSorting': [[1,'asc'], [0,'asc']],
 				'lengthMenu': [[10, 25, 50, -1], [10, 25, 50, 'All']],
 				'iDisplayLength': -1
 			});
 
-      $('#game-library-table tbody').on( 'click', 'tr', function () {
-        console.log('this', this);
-        var data = glTable.row(this).data();
-        console.log('row data', data);
+      // $('#game-library-table tbody').on( 'click', 'tr', function () {
+      $('#game-library-table .game-info').on( 'click', function () {
+        var game = $(this).parent();
+        var data = glTable.row(game).data();
+        GB.getGameData(data.gbId).then(function (response) {
+          console.log('game response', response);
+        });
       });
 		}
 
