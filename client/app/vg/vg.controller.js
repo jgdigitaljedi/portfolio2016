@@ -26,7 +26,7 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData', 'GB'
       $('#game-library-table .game-info').on( 'click', function () {
         var game = $(this).parent();
         var data = glTable.row(game).data();
-        GB.getGameData(data.gbId).then(function (response) {
+        GB.getGameData(data.gbId, 'game').then(function (response) {
           if (!response.error) {
             $mdDialog.show({
               templateUrl: 'app/vg/modals/gameInfo.modal.html',
@@ -124,12 +124,13 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData', 'GB'
 		}
 
 		function buildConsoleWLTable () {
-      $('#console-wishlist-table').DataTable({
+      var conWlTable = $('#console-wishlist-table').DataTable({
         aaData: gc.consoleWL,
         aoColumns: [
           {'mDataProp': 'name', title: 'Console'},
           {'mDataProp': 'releaseYear', title: 'Release Year'},
-          {'mDataProp': 'ebayPrice', title: 'Ebay Price', render: {'_': 'filter', 'filter': 'filter', 'display': 'display'}}
+          {'mDataProp': 'ebayPrice', title: 'Ebay Price', render: {'_': 'filter', 'filter': 'filter', 'display': 'display'}},
+          {'mDataProp': null, 'bSortable': false, 'mRender': function (o) {return '<button class="console-wl-info">Info</button>';}}
         ],
         'aaSorting': [[1,'asc'], [0,'asc']],
         'iDisplayLength': -1
@@ -137,6 +138,25 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData', 'GB'
       var table = $('#console-wishlist-table').dataTable();
       table.fnClearTable();
       table.fnAddData(gc.consoleWL);
+
+      $('#console-wishlist-table .console-wl-info').on( 'click', function () {
+        var con = $(this).parent();
+        console.log('con', con);
+        var data = conWlTable.row(con).data();
+        console.log('console wl item', data);
+        GB.getGameData(data.gbId, 'platform').then(function (response) {
+          if (!response.error) {
+            $mdDialog.show({
+              templateUrl: 'app/vg/modals/console.modal.html',
+              controller: 'ConsolesDialogCtrl as cd',
+              clickOutsideToClose: true,
+              locals: {
+                con: response.response
+              }
+            });
+          }
+        });
+      });
     }
 
 		function buildHWWishlist () {

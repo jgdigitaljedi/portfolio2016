@@ -2,7 +2,7 @@
 /*jshint camelcase: false */
 
 angular.module('portfolioApp').controller('GamesDialogCtrl', ['game', '$q', '$mdDialog',
-  function (game, $g, $mdDialog) {
+  function (game, $q, $mdDialog) {
     var gd = this,
       dateFormats = 'MMM D, YYYY',
       screenHeight = window.innerHeight,
