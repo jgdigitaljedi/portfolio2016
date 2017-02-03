@@ -141,9 +141,7 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData', 'GB'
 
       $('#console-wishlist-table .console-wl-info').on( 'click', function () {
         var con = $(this).parent();
-        console.log('con', con);
         var data = conWlTable.row(con).data();
-        console.log('console wl item', data);
         GB.getGameData(data.gbId, 'platform').then(function (response) {
           if (!response.error) {
             $mdDialog.show({

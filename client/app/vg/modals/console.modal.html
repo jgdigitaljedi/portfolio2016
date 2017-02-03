@@ -1,5 +1,73 @@
-<section class="console-info">
-  <md-dialog>
-
+<section class="console-info game-dialog-container">
+  <md-dialog ng-style="{'max-height': cd.height, 'width': cd.width}">
+    <md-dialog-content layout-padding flex>
+      <h1>{{cd.conProps.name}}</h1>
+      <div class="dialog-top" layout="row" layout-align="space-between start" flex>
+        <div class="top-info" flex="60">
+          <md-divider></md-divider>
+          <div layout="row" class="info-row" layout-align="start start" flex>
+            <div layout="column" class="point-title">
+              Description:
+            </div>
+            <div layout="column" class="point-data">
+              {{cd.conProps.desc}}
+            </div>
+          </div>
+          <md-divider></md-divider>
+          <div layout="row" class="info-row" layout-align="start start" flex>
+            <div layout="column" class="point-title">
+              Company:
+            </div>
+            <div layout="column" class="point-data">
+              {{cd.conProps.company}}
+            </div>
+          </div>
+          <md-divider></md-divider>
+          <div layout="row" class="info-row" layout-align="start start" flex>
+            <div layout="column" class="point-title">
+              Release Date:
+            </div>
+            <div layout="column" class="point-data">
+              {{cd.conProps.date}}
+            </div>
+          </div>
+          <md-divider></md-divider>
+          <div layout="row" class="info-row" layout-align="start start" flex>
+            <div layout="column" class="point-title">
+              Release Price:
+            </div>
+            <div layout="column" class="point-data">
+              ${{cd.conProps.price}}
+            </div>
+          </div>
+          <md-divider></md-divider>
+          <div layout="row" class="info-row" layout-align="start start" flex>
+            <div layout="column" class="point-title">
+              Online Support:
+            </div>
+            <div layout="column" class="point-data">
+              {{cd.conProps.online}}
+            </div>
+          </div>
+          <md-divider></md-divider>
+          <div layout="row" class="info-row" layout-align="start start" flex ng-if="cd.con.aliases">
+            <div layout="column" class="point-title">
+              Aliases:
+            </div>
+            <div layout="column" class="point-data">
+              {{cd.conProps.aliases}}
+            </div>
+          </div>
+        </div>
+        <div class="game-pic" flex="39">
+          <img class="game-image" ng-src="{{cd.conProps.image}}" />
+        </div>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions>
+      <md-button ng-click="cd.closeDialog()">
+        <md-icon md-svg-icon="content:clear" aria-label="close" size="24"></md-icon> &nbsp; close
+      </md-button>
+    </md-dialog-actions>
   </md-dialog>
 </section>
