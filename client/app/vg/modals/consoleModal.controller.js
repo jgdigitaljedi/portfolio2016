@@ -1,8 +1,8 @@
 'use strict';
 /*jshint camelcase: false */
 
-angular.module('portfolioApp').controller('ConsolesDialogCtrl', ['con', '$mdDialog',
-  function (con, $mdDialog) {
+angular.module('portfolioApp').controller('ConsolesDialogCtrl', ['con', '$mdDialog', 'mods',
+  function (con, $mdDialog, mods) {
     var cd = this,
       screenHeight = window.innerHeight,
       screenWidth = window.innerWidth;
@@ -18,7 +18,8 @@ angular.module('portfolioApp').controller('ConsolesDialogCtrl', ['con', '$mdDial
       company: con.company.name,
       aliases: con.aliases === null ? false : con.aliases,
       online: con.online_support ? 'Yes' : 'No',
-      image: con.image.small_url
+      image: con.image.small_url,
+      mods: mods
     };
 
     cd.closeDialog = function () {

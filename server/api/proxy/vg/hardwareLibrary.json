@@ -363,98 +363,128 @@
       "Console" : "Dreamcast",
       "Quantity" : 1,
       "Value" : 40,
-      "Total" : 40
+      "Total" : 40,
+      "con": true,
+      "gbId": "3045-37"
     },
     {
       "Accessory" : "Wii U",
       "Console" : "Wii U",
       "Quantity" : 1,
       "Value" : 200,
-      "Total" : 200
+      "Total" : 200,
+      "con": true,
+      "gbId": "3045-139"
     },
     {
       "Accessory" : "N64",
       "Console" : "N64",
       "Quantity" : 1,
       "Value" : 65,
-      "Total" : 65
+      "Total" : 65,
+      "con": true,
+      "gbId": "3045-43"
     },
     {
       "Accessory" : "Genesis",
       "Console" : "Genesis",
       "Quantity" : 1,
       "Value" : 60,
-      "Total" : 60
+      "Total" : 60,
+      "con": true,
+      "gbId": "3045-6"
     },
     {
       "Accessory" : "PS2 Slim",
       "Console" : "PS2",
       "Quantity" : 1,
       "Value" : 65,
-      "Total" : 65
+      "Total" : 65,
+      "con": true,
+      "gbId": "3045-19"
     },
     {
       "Accessory" : "PS3",
       "Console" : "PS3",
       "Quantity" : 1,
       "Value" : 100,
-      "Total" : 100
+      "Total" : 100,
+      "con": true,
+      "gbId": "3045-35"
     },
     {
       "Accessory" : "Wii",
       "Console" : "Wii",
       "Quantity" : 1,
       "Value" : 75,
-      "Total" : 75
+      "Total" : 75,
+      "con": true,
+      "gbId": "3045-36",
+      "mods": "homebrew, 320GB HD, 78 games on disk"
     },
     {
       "Accessory" : "PSP 1001",
       "Console" : "PSP",
       "Quantity" : 1,
       "Value" : 60,
-      "Total" : 60
+      "Total" : 60,
+      "con": true,
+      "gbId": "3045-18",
+      "mods": "custom firmware, SNES emulator"
     },
     {
       "Accessory" : "GBA SP",
       "Console" : "GBA SP",
       "Quantity" : 1,
       "Value" : 30,
-      "Total" : 30
+      "Total" : 30,
+      "con": true,
+      "gbId": "3045-4"
     },
     {
       "Accessory" : "3DS",
       "Console" : "3DS",
       "Quantity" : 1,
       "Value" : 150,
-      "Total" : 150
+      "Total" : 150,
+      "con": true,
+      "gbId": "3045-117"
     },
     {
       "Accessory" : "NES",
       "Console" : "NES",
       "Quantity" : 1,
       "Value" : 75,
-      "Total" : 75
+      "Total" : 75,
+      "con": true,
+      "gbId": "3045-21"
     },
     {
       "Accessory" : "Gamecube",
       "Console" : "Gamecube",
       "Quantity" : 1,
       "Value" : 50,
-      "Total" : 50
+      "Total" : 50,
+      "con": true,
+      "gbId": "3045-23"
     },
     {
       "Accessory" : "32X",
       "Console" : "32X",
       "Quantity" : 1,
       "Value" : 40,
-      "Total" : 40
+      "Total" : 40,
+      "con": true,
+      "gbId": "3045-31"
     },
     {
       "Accessory" : "Playstation 4 Pro",
       "Console" : "PS4",
       "Quantity" : 1,
       "Value" : 400,
-      "Total" : 400
+      "Total" : 400,
+      "con": true,
+      "gbId": "3045-146"
     }
   ]
 }

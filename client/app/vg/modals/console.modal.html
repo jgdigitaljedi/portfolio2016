@@ -49,13 +49,22 @@
               {{cd.conProps.online}}
             </div>
           </div>
-          <md-divider></md-divider>
-          <div layout="row" class="info-row" layout-align="start start" flex ng-if="cd.con.aliases">
+          <md-divider ng-if="cd.conProps.aliases"></md-divider>
+          <div layout="row" class="info-row" layout-align="start start" flex ng-if="cd.conProps.aliases">
             <div layout="column" class="point-title">
               Aliases:
             </div>
             <div layout="column" class="point-data">
               {{cd.conProps.aliases}}
+            </div>
+          </div>
+          <md-divider ng-if="cd.conProps.mods"></md-divider>
+          <div layout="row" class="info-row" layout-align="start start" flex ng-if="cd.conProps.mods">
+            <div layout="column" class="point-title">
+              Mods:
+            </div>
+            <div layout="column" class="point-data">
+              {{cd.conProps.mods}}
             </div>
           </div>
         </div>

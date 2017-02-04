@@ -7,6 +7,22 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData', 'GB'
 			genreObj = {},
       screenWidth = window.innerWidth;
 
+		function hwModal (data) {
+      GB.getGameData(data.gbId, 'platform').then(function (response) {
+        if (!response.error) {
+          $mdDialog.show({
+            templateUrl: 'app/vg/modals/console.modal.html',
+            controller: 'ConsolesDialogCtrl as cd',
+            clickOutsideToClose: true,
+            locals: {
+              con: response.response,
+              mods: data.hasOwnProperty('mods') ? data.mods : false
+            }
+          });
+        }
+      });
+    }
+
 		function glTable () {
       var glTable = $('#game-library-table').DataTable({
 				aaData: gc.gameLibrary,
@@ -53,14 +69,21 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData', 'GB'
 		}
 
 		function hwTable () {
-			$('#hardware-library-table').DataTable({
+			var hwTable = $('#hardware-library-table').DataTable({
 				aaData: gc.hwLibrary,
 				aoColumns: [
 					{'mDataProp': 'Accessory', title: 'Hardware'},
 					{'mDataProp': 'Console', title: 'Console'},
 					{'mDataProp': 'Quantity', title: 'Quantity'},
 					{'mDataProp': 'Value', title: 'Value', render: {'_': 'filter', 'filter': 'filter', 'display': 'display'}},
-					{'mDataProp': 'Total', title: 'Total Value', render: {'_': 'filter', 'filter': 'filter', 'display': 'display'}}
+					{'mDataProp': 'Total', title: 'Total Value', render: {'_': 'filter', 'filter': 'filter', 'display': 'display'}},
+          {'mDataProp': null, 'bSortable': false, 'mRender': function (o) {
+				    if (o.hasOwnProperty('con') && o.con) {
+				      return '<button class="hw-info">Info</button>';
+            } else {
+				      return ' ';
+            }
+				  }}
 				],
 				'aaSorting': [[1,'asc'], [0,'asc']],
 				'lengthMenu': [[10, 25, 50, -1], [10, 25, 50, 'All']],
@@ -69,6 +92,12 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData', 'GB'
 			var table = $('#hardware-library-table').dataTable();
 			table.fnClearTable();
 			table.fnAddData(gc.hwLibrary.hardware);
+
+      $('#hardware-library-table .hw-info').on( 'click', function () {
+        var con = $(this).parent();
+        var data = hwTable.row(con).data();
+        hwModal(data);
+      });
 		}
 
 		function buildHWLibraryTable (justGet) {
@@ -142,18 +171,19 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData', 'GB'
       $('#console-wishlist-table .console-wl-info').on( 'click', function () {
         var con = $(this).parent();
         var data = conWlTable.row(con).data();
-        GB.getGameData(data.gbId, 'platform').then(function (response) {
-          if (!response.error) {
-            $mdDialog.show({
-              templateUrl: 'app/vg/modals/console.modal.html',
-              controller: 'ConsolesDialogCtrl as cd',
-              clickOutsideToClose: true,
-              locals: {
-                con: response.response
-              }
-            });
-          }
-        });
+        hwModal(data);
+        // GB.getGameData(data.gbId, 'platform').then(function (response) {
+        //   if (!response.error) {
+        //     $mdDialog.show({
+        //       templateUrl: 'app/vg/modals/console.modal.html',
+        //       controller: 'ConsolesDialogCtrl as cd',
+        //       clickOutsideToClose: true,
+        //       locals: {
+        //         con: response.response
+        //       }
+        //     });
+        //   }
+        // });
       });
     }
 
