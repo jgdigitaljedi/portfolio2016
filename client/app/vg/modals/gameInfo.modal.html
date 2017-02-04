@@ -1,9 +1,13 @@
 <div class="game-dialog-container" layout-align="center center">
   <md-dialog ng-style="{'max-height': gd.height, 'width': gd.width}">
     <md-dialog-content layout-padding flex>
-      <h1>{{gd.gameInfo.name}}</h1>
+      <!--<h1>{{gd.gameInfo.name}}</h1>-->
+      <span class="game-name">
+        {{gd.gameInfo.name}}
+        <img class="mobile-game-pic" ng-src="{{gd.gameInfo.image.small_url}}" hide-gt-sm />
+      </span>
       <div class="dialog-top" layout="row" layout-align="space-between start" flex>
-        <div class="top-info" flex="60">
+        <div class="top-info" ng-style="{'width': gd.infoWidth}">
           <md-divider></md-divider>
           <div layout="row" class="info-row" layout-align="start start" flex>
             <div layout="column" class="point-title">
@@ -77,7 +81,7 @@
             </div>
           </div>
         </div>
-        <div class="game-pic" flex="39">
+        <div class="game-pic" hide-sm hide-xs>
           <p ng-show="gd.onHd" style="font-style: italic;">Game is on console hard drive and accessible by menu. No disc.</p>
           <img class="game-image" ng-src="{{gd.gameInfo.image.small_url}}" />
         </div>

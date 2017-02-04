@@ -10,6 +10,7 @@ angular.module('portfolioApp').controller('GamesDialogCtrl', ['game', '$q', '$md
 
     gd.height = (screenHeight - 20) + 'px';
     gd.width = (screenWidth > 1280 ? 1000 : screenWidth - 20) + 'px';
+    gd.infoWidth = screenWidth < 960 ? '100%' : '60%';
 
     gd.gameInfo = game;
     gd.releaseDate = moment(game.original_release_date).format(dateFormats);

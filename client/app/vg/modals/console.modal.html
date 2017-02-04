@@ -1,9 +1,12 @@
 <section class="console-info game-dialog-container">
   <md-dialog ng-style="{'max-height': cd.height, 'width': cd.width}">
     <md-dialog-content layout-padding flex>
-      <h1>{{cd.conProps.name}}</h1>
+      <span class="game-name">
+        {{cd.conProps.name}}
+        <img class="mobile-game-pic" ng-src="{{cd.conProps.image}}" hide-gt-sm />
+      </span>
       <div class="dialog-top" layout="row" layout-align="space-between start" flex>
-        <div class="top-info" flex="60">
+        <div class="top-info" ng-style="{'width': cd.infoWidth}">
           <md-divider></md-divider>
           <div layout="row" class="info-row" layout-align="start start" flex>
             <div layout="column" class="point-title">
@@ -68,7 +71,7 @@
             </div>
           </div>
         </div>
-        <div class="game-pic" flex="39">
+        <div class="game-pic" hide-sm hide-xs>
           <img class="game-image" ng-src="{{cd.conProps.image}}" />
         </div>
       </div>

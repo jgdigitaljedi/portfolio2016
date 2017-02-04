@@ -1,26 +1,22 @@
 .game-dialog-container {
   color: white;
 
-  .hell-no {
-    font-weight: bold;
-    font-size: 1.2em;
-    color: #D50000;
-  }
-
-  .nope {
-    font-weight: bold;
-    color: #B71C1C;
-  }
-
-  .possibly {
-    color: #FF8F00;
-  }
-
-  .just-fine {
-    color: #558B2F;
-  }
-
   md-dialog {
+
+    .game-name {
+      font-size: 2em;
+      margin-top: 0.67em;
+      margin-bottom: 0.67em;
+      margin-left: 0;
+      margin-right: 0;
+      font-weight: bold;
+
+      .mobile-game-pic {
+        max-width: 75px;
+        max-height: 75px;
+        margin-left: 12px;
+      }
+    }
 
     .dialog-top {
 
@@ -46,6 +42,14 @@
             padding: 4px;
           }
         }
+      }
+    }
+
+    .game-pic {
+      max-width: 39%;
+
+      img {
+        max-width: 100%;
       }
     }
   }

@@ -9,6 +9,7 @@ angular.module('portfolioApp').controller('ConsolesDialogCtrl', ['con', '$mdDial
 
     cd.height = (screenHeight - 20) + 'px';
     cd.width = (screenWidth > 1280 ? 1000 : screenWidth - 20) + 'px';
+    cd.infoWidth = screenWidth < 960 ? '100%' : '60%';
 
     cd.conProps = {
       name: con.name,
