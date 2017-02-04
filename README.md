@@ -46,15 +46,9 @@ $ grunt serve
 - Finish Restaurant Roulette Remix
   - add button to launch google maps if viewed on a phone
   - make it less ugly/boring
-- Eventually add a blog
-- pixel perfection
- 
  
 ### Todos that came to my attention after deployment
-- cdnify grunt task not injecting tags/should also stop cdnified deps from ending up in vendor.js
 - update outdated deps
-- 2048 game board too big on mobile
-- projects modal still too tall on mobile
 
 ### Eventual improvements
 - Change video game library to MongoDB instead of JSON
@@ -62,6 +56,7 @@ $ grunt serve
 - Use weather conditions to add clouds, rain, fog, etc to landing page
 - Refactor some of the older code for cleanliness and performance
 - Think of another app to dev and add to Fun page
+- Add a blog (I plan to write my own blog platform in MEAN stack) 
 
 ### Deployment goals accomplished
 - Serving with gzip if file > 256 kb
