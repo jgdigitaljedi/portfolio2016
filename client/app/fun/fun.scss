@@ -85,3 +85,13 @@
   }
 
 }
+
+@media screen and (max-width: 600px) {
+  .fun-title {
+    font-size: 1.5em !important;
+  }
+
+  .card-media {
+    margin-left: 6px;
+  }
+}
