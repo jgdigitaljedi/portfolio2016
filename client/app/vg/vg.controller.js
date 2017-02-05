@@ -7,6 +7,8 @@ angular.module('portfolioApp').controller('GamesCtrl', ['$scope', 'VgData', 'GB'
 			genreObj = {},
       screenWidth = window.innerWidth;
 
+		gc.showBackButton = screenWidth >= 960;
+
 		function hwModal (data) {
       GB.getGameData(data.gbId, 'platform').then(function (response) {
         if (!response.error) {

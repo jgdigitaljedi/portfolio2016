@@ -1,10 +1,29 @@
 .games-collection-section {
+
+    md-tabs-wrapper {
+
+    }
+
     min-height: 100%;
     @include fade-In(1s);
 
     md-tabs {
       height: calc(100vh);
       min-height: 100%;
+
+      md-tabs-wrapper {
+
+        background: $blue-gray;
+
+
+        md-tab-item {
+          color: #fff !important;
+        }
+
+        .md-active {
+          color: $dark-amber !important;
+        }
+      }
     }
 
   .games-totals {
