@@ -26,6 +26,7 @@ This app/site uses a number of open source projects to work properly:
  - Last.fm
  - Bing!
  - GitHub
+ - GiantBomb
 
 ### Installation
 You must have Ruby and Sass installed for this to work. Also, you would need to set env variables for all of the API key references in the server code.

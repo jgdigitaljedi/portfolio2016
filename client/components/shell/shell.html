@@ -57,7 +57,7 @@
                 </md-list-item>
             </md-list>
         </md-content>
-        <div layout="column" layout-align="end start" style="min-height: 220px; padding-left: 80px;">
+        <div layout="column" layout-align="end start" style="min-height: 220px; padding-left: 80px;" class="mobile-social">
             <div fb-like="socialCrap.url"></div>
             <div google-plus="socialCrap.url" style="margin: 2px auto 0 8px;"></div>
             <div tweet="socialCrap.name" tweet-url="socialCrap.url"></div>
@@ -109,6 +109,10 @@
                 <md-button ui-sref="fun" ng-class="{'selected-nav': highlight === 'fun'}">
                     Fun Stuff
                 </md-button>
+                <md-button ng-click="toggleSocial()">
+                  <md-icon md-svg-icon="social:share" class="nav-icon" aria-label="fun" size="24"
+                    ng-style="showSocial && {fill: '#ffc107'} || {fill: 'white'}"></md-icon>
+                </md-button>
             </div>
             <div layout layout-align="end center">
                 <div layout="row" layout-align="end center">
@@ -125,5 +129,20 @@
                 </div>
             </div>
         </div>
+
     </md-toolbar>
+    <div class="desktop-social" layout="row" layout-align="center center" ng-show="showSocial" ng-class="{'show-social': showSocial}">
+        <div class="social-wrapper" layout="row" layout-align="space-around center">
+          <!--<div class="sm-container">-->
+            <!--<div fb-like="socialCrap.url" style="margin-top: -4px;"></div>-->
+          <!--</div>-->
+          <!--<div class="sm-container">-->
+            <!--<div google-plus="socialCrap.url" style="margin: 2px auto 0 8px; width: 60px;"></div>-->
+          <!--</div>-->
+          <div class="sm-container" layout="row">
+            <div tweet="socialCrap.name" tweet-url="socialCrap.url" style="margin-top: 2px;"></div>
+            <div twitter-follow twt-name="'jgdigitaljedi'" style="margin-left: 8px; margin-top: 2px;"></div>
+          </div>
+        </div>
+    </div>
 </div>

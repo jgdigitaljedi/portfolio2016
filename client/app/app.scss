@@ -77,9 +77,13 @@ $flat-white: #f1f1f1;
    color: $flat-white;
  }
 
- .fb-like, .twitter-share-button, .twitter-follow-button {
-  margin: 8px;
+ .mobile-social {
+
+   .fb-like, .twitter-share-button, .twitter-follow-button {
+     margin: 8px;
+   }
  }
+
 
  .selected-nav {
    color: $dark-amber !important;
@@ -307,6 +311,33 @@ $prefix:'-moz-', '-webkit-', '-o-', '-ms-', '';
 
  .twitter-follow-button {
   margin-top: 0;
+ }
+
+ .desktop-social {
+   background-color: $blue-gray;
+   color: 'white';
+   position: absolute;
+   width: 100%;
+   z-index: 100;
+   @include box_shadow(1);
+   max-height: 0;
+   transition: max-height 0.5s ease-out;
+   overflow: hidden;
+
+   .social-wrapper {
+     width: 500px;
+
+     .sm-container {
+       div {
+         margin: 0;
+       }
+     }
+   }
+ }
+
+ .show-social {
+   max-height: 40px;
+   transition: max-height 0.5s ease-in;
  }
 
 // Component styles are injected through grunt

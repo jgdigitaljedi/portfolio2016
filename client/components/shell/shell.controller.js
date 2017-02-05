@@ -7,6 +7,7 @@ angular.module('portfolioApp').controller('ShellCtrl', ['$mdSidenav', '$mdDialog
       url: 'http://joeyg.me',
       name: 'Joey Gauthier\'s Portfolio'
     };
+    $scope.showSocial = false;
     // SocialButtons.initButtons();
     $scope.overrideTheme = function () {
       $rootScope.theme = $rootScope.theme === 'day' ? 'night' : 'day';
@@ -22,6 +23,10 @@ angular.module('portfolioApp').controller('ShellCtrl', ['$mdSidenav', '$mdDialog
 
     $scope.toggleLeft = function() {
       $mdSidenav('left').toggle();
+    };
+
+    $scope.toggleSocial = function () {
+      $scope.showSocial = !$scope.showSocial;
     };
 
     var originatorEv;
