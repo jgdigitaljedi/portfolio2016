@@ -100,16 +100,9 @@ angular.module('portfolioApp')
           })
           .state('games', {
             url:'/games',
-            templateUrl: 'app/vg/games.html',
-            controller: 'GamesCtrl',
-            controllerAs: 'gc',
-            title: 'Joey Gauthier - Video Games'
+            templateUrl: 'app/vg/crud/crud.html',
+            controller: 'GamesEditorCtrl',
+            controllerAs: 'gec',
+            title: 'Joey Gauthier - Edit Games'
           });
-          // .state('games/crud', {
-          //   url: '/games/crud',
-          //   templateUrl: 'app/vg/crud/crud.html',
-          //   controller: 'CrudCtrl',
-          //   controllerAs: 'crc',
-          //   title: 'Update Game Library'
-          // });
   	});
