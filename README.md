@@ -43,11 +43,6 @@ $ grunt serve
 ```
 
 
-### Todos
-- Finish Restaurant Roulette Remix
-  - add button to launch google maps if viewed on a phone
-  - make it less ugly/boring
- 
 ### Todos that came to my attention after deployment
 - update outdated deps
 
