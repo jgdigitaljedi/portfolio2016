@@ -28,11 +28,13 @@ angular.module('portfolioApp', [
         .iconSet('social', '../assets/iconsets/social-icons.svg', 24)
         .iconSet('toggle', '../assets/iconsets/toggle-icons.svg', 24)
         .iconSet('avatar', '../assets/iconsets/avatar-icons.svg', 128);
-}).config(function ($stateProvider, $urlRouterProvider, $locationProvider, $mdThemingProvider) {
+}).config(function ($stateProvider, $urlRouterProvider, $locationProvider, $mdThemingProvider, $compileProvider) {
     $urlRouterProvider
         .otherwise('/');
 
     $locationProvider.html5Mode(true);
+
+    $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|geo?|maps?):/);
 
     $mdThemingProvider.theme('night')
         .primaryPalette('blue-grey')

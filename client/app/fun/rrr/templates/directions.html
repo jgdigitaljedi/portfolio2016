@@ -4,6 +4,8 @@
 			<div id="map_canvas" layout="row" style="height: 480px;"></div>
 		</md-card-content>
 		<md-card-actions layout="row" layout-align="center center">
+      <a class="md-button" ng-if="rrrc.mapView === 'directions' && rrrc.screenWidth < 600"
+         ng-href="{{rrrc.geoCoords}}" style="margin-right: 12px;">Open in Maps</a>
 			<md-button ng-if="rrrc.mapView === 'directions'" ng-click="rrrc.backToResults()">Back to Results</md-button>
 			<md-button ng-if="rrrc.mapView === 'manual'" ng-click="rrrc.acceptAddress()">Use This Place</md-button>
 			<md-button ng-if="rrrc.mapView === 'manual'" ng-click="rrrc.backToStart()">Back to Start</md-button>

@@ -142,7 +142,8 @@ angular.module('portfolioApp').service('Googlemaps', ['$http', '$q', '$rootScope
 		  	var center = new google.maps.LatLng(options.centerLat, options.centerLong),
 		  		mapOptions = {
 		    	zoom: options.zoom,
-		    	center: center
+		    	center: center,
+            mode: options.travelMode.toLowerCase()
 		  	};
 		  	map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 		  	directionsDisplay.setMap(map);

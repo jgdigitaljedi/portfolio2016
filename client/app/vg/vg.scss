@@ -1,9 +1,4 @@
 .games-collection-section {
-
-    md-tabs-wrapper {
-
-    }
-
     min-height: 100%;
     @include fade-In(1s);
 
@@ -15,6 +10,13 @@
 
         background: $blue-gray;
 
+        md-next-button, md-prev-button {
+          md-icon {
+            svg {
+              fill: #fff !important;
+            }
+          }
+        }
 
         md-tab-item {
           color: #fff !important;
