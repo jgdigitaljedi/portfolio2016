@@ -98,11 +98,11 @@ angular.module('portfolioApp')
             templateUrl: 'app/fun/rrr/templates/manual.html',
             title: 'Restaurant Roulette Remix'
           })
-          .state('games', {
-            url:'/games',
+          .state('games.editor.login', {
+            url:'/games/editor',
             templateUrl: 'app/vg/crud/crud.html',
             controller: 'GamesEditorCtrl',
             controllerAs: 'gec',
-            title: 'Joey Gauthier - Edit Games'
+            title: 'Edit Games'
           });
   	});
