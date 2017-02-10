@@ -11,7 +11,7 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
 
     function getData (which) {
       var def = $q.defer();
-      $http.get('/api/proxy/' + which)
+      $http.get('/api/games/' + which)
       .then(function (data) {
         if (!data.data.error) {
           def.resolve(data.data.data);

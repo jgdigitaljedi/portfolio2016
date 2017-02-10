@@ -1,3 +1,29 @@
 <section class="crud-section">
+  <section class="editor-login">
+    <div layout="row" layout-align="center center">
+      <div layout="column" layout-align="center center" class="login-wrapper">
+        <md-card class="login-card">
+          <md-card-header>
+            <h4>Login to Edit Game Library</h4>
+          </md-card-header>
+          <md-card-contents>
 
+          </md-card-contents>
+          <md-card-actions>
+            <div layout="row" layout-align="end center" class="login-buttons">
+              <md-button class="login-button">
+                Login
+              </md-button>
+              <md-button class="back-to-games-button">
+                See Games Page
+              </md-button>
+            </div>
+          </md-card-actions>
+        </md-card>
+      </div>
+    </div>
+  </section>
+  <section ng-if="gec.loggedIn" class="games-editor">
+
+  </section>
 </section>

@@ -98,11 +98,16 @@ angular.module('portfolioApp')
             templateUrl: 'app/fun/rrr/templates/manual.html',
             title: 'Restaurant Roulette Remix'
           })
-          .state('games.editor.login', {
-            url:'/games/editor',
+          .state('games', {
+            url:'/games',
+            templateUrl: 'app/vg/games.html',
+            controller: 'GamesCtrl',
+            controllerAs: 'gc'
+          })
+          .state('gameseditor', {
+            url: '/games/editor',
             templateUrl: 'app/vg/crud/crud.html',
             controller: 'GamesEditorCtrl',
-            controllerAs: 'gec',
-            title: 'Edit Games'
+            controllerAs: 'gec'
           });
   	});
