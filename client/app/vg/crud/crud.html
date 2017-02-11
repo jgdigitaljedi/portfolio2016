@@ -6,15 +6,28 @@
           <md-card-header>
             <h4>Login to Edit Game Library</h4>
           </md-card-header>
-          <md-card-contents>
-
+          <md-card-contents layout="row" layout-align="center center">
+            <div layout="column" class="auth-wrapper" layout-align="center center" layout-padding>
+              <div>
+                <md-input-container>
+                  <label class="auth-input-label">Username: </label>
+                  <input class="auth-input" ng-model="gec.state.user" />
+                </md-input-container>
+              </div>
+              <div>
+                <md-input-container>
+                  <label class="auth-input-label">Password: </label>
+                  <input class="auth-input" ng-model="gec.state.password" type="password" />
+                </md-input-container>
+              </div>
+            </div>
           </md-card-contents>
           <md-card-actions>
             <div layout="row" layout-align="end center" class="login-buttons">
-              <md-button class="login-button">
+              <md-button class="login-button" ng-click="gec.authenticate()">
                 Login
               </md-button>
-              <md-button class="back-to-games-button">
+              <md-button class="back-to-games-button" ui-sref="games">
                 See Games Page
               </md-button>
             </div>

@@ -194,12 +194,31 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       return {gameLib: gameReturn, hwLib: hwData, genres: genresCleaned};
     }
 
+    function gamesAuth (options) {
+      var def = $q.defer();
+      $http.get('/api/games/simplegameauth/' + options.user + '/' + options.pass)
+        .then(function (data) {
+          if (!data.data.error) {
+            def.resolve(data);
+          } else {
+            console.warn('data error', data);
+            def.resolve(data);
+          }
+        })
+        .catch(function (data) {
+          console.warn('data error', data);
+          def.reject(data);
+        });
+      return def.promise;
+    }
+
     return {
       getOwnedGames: getOwnedGames,
       getOwnedHardware: getOwnedHardware,
       getGameWishlist: getGameWishlist,
       getConsoleWishlist: getConsoleWishlist,
-      gameTotals: gameTotals
+      gameTotals: gameTotals,
+      gamesAuth: gamesAuth
     };
   }
 ]);
