@@ -1,0 +1,13 @@
+<section ng-show="showToast" class="gf-toast-wrapper" ng-style="{'background-color': dirOptions.color}">
+  <div class="gf-toast-icon">
+    <md-icon md-svg-icon="{{dirOptions.icon}}" style="fill: #fff"></md-icon>
+  </div>
+  <div class="gf-toast-text-wrapper">
+    <div class="gf-toast-title">
+      {{dirOptions.title}}
+    </div>
+    <div class="gf-toast-text">
+      {{options.text}}
+    </div>
+  </div>
+</section>

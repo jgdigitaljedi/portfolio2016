@@ -1,0 +1,32 @@
+.gf-toast-wrapper {
+  display: flex;
+  position: absolute;
+  z-index: 999;
+  @include box_shadow(2);
+  flex-direction: row;
+  width: 300px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  right: 8px;
+  bottom: 8px;
+  transition: opacity 0.6s;
+
+  .gf-toast-icon {
+
+  }
+
+  .gf-toast-text-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .gf-toast-title {
+
+    }
+
+    .gf-toast-text {
+
+    }
+  }
+}

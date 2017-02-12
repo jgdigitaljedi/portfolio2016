@@ -4,6 +4,10 @@ angular.module('portfolioApp').controller('GamesEditorCtrl', ['VgData', '$state'
   function (VgData, $state) {
     var gec = this;
 
+    gec.toastOptions = {
+      trigger: false
+    };
+
     gec.state = {
       loggedIn: false,
       which: 'gameLib'
@@ -22,6 +26,12 @@ angular.module('portfolioApp').controller('GamesEditorCtrl', ['VgData', '$state'
     VgData.checkToken(getToken()).then(function (response) {
       if (response.data.loggedIn && !response.data.error) {
         gec.state.loggedIn = true;
+        gec.toastOptions = {
+          style: 'success',
+          timeout: 3500,
+          text: 'Welcome Joey!',
+          trigger: true
+        };
       } else {
         badToken();
       }

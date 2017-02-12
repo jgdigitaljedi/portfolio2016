@@ -98,7 +98,7 @@ function writeToJson (data, fileName) {
 function setTokenInterval () {
   console.log('token interval reset');
   tokenInterval = setInterval(function () {
-    writeToJson({token: '', timestamp: 1234});
+    writeToJson({token: '', timestamp: 1234}, 'tokenStorage.json');
   }, 900000);
 }
 
