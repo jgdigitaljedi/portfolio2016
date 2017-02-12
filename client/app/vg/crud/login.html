@@ -11,20 +11,20 @@
               <div>
                 <md-input-container>
                   <label class="auth-input-label">Username: </label>
-                  <input class="auth-input" ng-model="gec.state.user" />
+                  <input class="auth-input" ng-model="glc.state.user" />
                 </md-input-container>
               </div>
               <div>
                 <md-input-container>
                   <label class="auth-input-label">Password: </label>
-                  <input class="auth-input" ng-model="gec.state.password" type="password" />
+                  <input class="auth-input" ng-model="glc.state.password" type="password" />
                 </md-input-container>
               </div>
             </div>
           </md-card-contents>
           <md-card-actions>
             <div layout="row" layout-align="end center" class="login-buttons">
-              <md-button class="login-button" ng-click="gec.authenticate()">
+              <md-button class="login-button" ng-click="glc.authenticate()">
                 Login
               </md-button>
               <md-button class="back-to-games-button" ui-sref="games">
@@ -35,8 +35,5 @@
         </md-card>
       </div>
     </div>
-  </section>
-  <section ng-if="gec.loggedIn" class="games-editor">
-
   </section>
 </section>

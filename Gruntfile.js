@@ -119,7 +119,8 @@ module.exports = function (grunt) {
       },
       express: {
         files: [
-          'server/**/*.{js,json}'
+          'server/**/*.{js,json}',
+          '!server/api/gameCrud/vg/*'
         ],
         tasks: ['express:dev', 'wait'],
         options: {

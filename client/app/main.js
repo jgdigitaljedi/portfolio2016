@@ -104,9 +104,15 @@ angular.module('portfolioApp')
             controller: 'GamesCtrl',
             controllerAs: 'gc'
           })
+          .state('gameslogin', {
+            url: '/games/login',
+            templateUrl: 'app/vg/crud/login.html',
+            controller: 'GamesLoginCtrl',
+            controllerAs: 'glc'
+          })
           .state('gameseditor', {
             url: '/games/editor',
-            templateUrl: 'app/vg/crud/crud.html',
+            templateUrl: 'app/vg/crud/editor.html',
             controller: 'GamesEditorCtrl',
             controllerAs: 'gec'
           });

@@ -11,6 +11,7 @@ router.get('/gameswishlist', games.getGamesWishlist);
 router.get('/consolewl', games.getConsoleWishlist);
 
 router.get('/simplegameauth/:user/:pass', games.simpleAuth);
+router.get('/checktoken/:token', games.checkToken);
 router.post('/addgame', games.addGame);
 router.post('/addconsole', games.addConsole);
 router.post('/editgame', games.editGame);

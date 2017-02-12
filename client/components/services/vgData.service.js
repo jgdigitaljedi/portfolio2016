@@ -9,15 +9,20 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       return '$' + price.toFixed(2);
     }
 
-    function getData (which) {
-      var def = $q.defer();
-      $http.get('/api/games/' + which)
+    function getData (which, auth) {
+      var def = $q.defer(),
+        path = auth ? '' : '/api/games/';
+      $http.get(path + which)
       .then(function (data) {
-        if (!data.data.error) {
-          def.resolve(data.data.data);
+        if (auth) {
+          def.resolve(data);
         } else {
-          console.warn('data error', data);
-          def.resolve(data.data.data);
+          if (!data.data.error) {
+            def.resolve(data.data.data);
+          } else {
+            console.warn('data error', data);
+            def.resolve(data.data.data);
+          }
         }
       })
       .catch(function (data) {
@@ -31,7 +36,6 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       var def = $q.defer();
       getData('gameslibrary').then(function (response) {
         if (!response.error) {
-          // buildGameLibraryTable(response);
           response.games.forEach(function (item) {
             if (!item.price) {
               item.price = {
@@ -195,20 +199,20 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
     }
 
     function gamesAuth (options) {
-      var def = $q.defer();
-      $http.get('/api/games/simplegameauth/' + options.user + '/' + options.pass)
-        .then(function (data) {
-          if (!data.data.error) {
-            def.resolve(data);
-          } else {
-            console.warn('data error', data);
-            def.resolve(data);
-          }
-        })
-        .catch(function (data) {
-          console.warn('data error', data);
-          def.reject(data);
-        });
+      var def = $q.defer(),
+        which = '/api/games/simplegameauth/' + options.user + '/' + options.pass;
+      getData(which, true).then(function (response) {
+        def.resolve(response);
+      });
+      return def.promise;
+    }
+
+    function checkToken (token) {
+      var def = $q.defer(),
+        which = '/api/games/checktoken/' + token;
+      getData(which, true).then(function (response) {
+        def.resolve(response);
+      });
       return def.promise;
     }
 
@@ -218,7 +222,8 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       getGameWishlist: getGameWishlist,
       getConsoleWishlist: getConsoleWishlist,
       gameTotals: gameTotals,
-      gamesAuth: gamesAuth
+      gamesAuth: gamesAuth,
+      checkToken: checkToken
     };
   }
 ]);
