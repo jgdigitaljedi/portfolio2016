@@ -13,7 +13,7 @@ angular.module('portfolioApp').directive('gfToast', ['$timeout',
   function ($timeout) {
     return {
       restrict: 'AE',
-      transclude: true,
+      // transclude: true,
       templateUrl: 'components/directives/glutenFreeToast.directive.html',
       scope: {
         options: '='
@@ -28,11 +28,12 @@ angular.module('portfolioApp').directive('gfToast', ['$timeout',
         //  color?: String | (optional) color code for toast color when using 'custom' style
         // }
 
+        console.log('trigger', scope.options.trigger);
         if (scope.options.trigger) {
           var styleDefaults = {
-            warning: {color: '#B71C1C', icon: 'alert:warning'},
+            warning: {color: '#B71C1C', icon: 'alert:warning', title: 'Warning!'},
             info: {color: '#0D47A1', icon: 'action:info'},
-            success: {color: '#1B5E20', icon: 'action:check_circle'},
+            success: {color: '#1B5E20', icon: 'action:check_circle', title: 'Success!'},
             other: {color: '#E65100', icon: scope.options.icon || 'action:stars'},
             custom: {color: scope.options.color || '#263238', icon: scope.options.icon || 'action:thumb_up'}
           };
@@ -43,11 +44,12 @@ angular.module('portfolioApp').directive('gfToast', ['$timeout',
             title: styleDefaults[scope.options.style].title
           };
 
+          console.log('dirOptions', scope.dirOptions);
           scope.showToast = true;
 
-          // $timeout(function () {
-          //   scope.showToast = false;
-          // }, scope.options.timeout || 3500);
+          $timeout(function () {
+            scope.showToast = false;
+          }, scope.options.timeout || 3500);
         }
 
       }
