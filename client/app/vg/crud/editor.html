@@ -5,8 +5,34 @@
     </div>
   </div>
   <div layout="row" layout-align="center center" class="editor-contents">
-    <!--tabs for what to edit-->
-    <!--forms in each tab-->
+    <md-content class="main-content-wrapper" style="min-height: 100%;">
+      <md-tabs class="editor-tabs-wrapper" md-selected="0">
+        <md-tab ui-sref="gameseditor.gamesLib">
+          <md-tab-label>Games Library</md-tab-label>
+          <md-tab-body>
+            <div ui-view="gamesLib"></div>
+          </md-tab-body>
+        </md-tab>
+        <md-tab ui-sref="gameseditor.hwLib">
+          <md-tab-label>Hardware Library</md-tab-label>
+          <md-tab-body>
+            <div ui-view="hwLib"></div>
+          </md-tab-body>
+        </md-tab>
+        <md-tab>
+          <md-tab-label>Games Wishlist</md-tab-label>
+          <md-tab-body>
+            blah
+          </md-tab-body>
+        </md-tab>
+        <md-tab>
+          <md-tab-label>Console Wishlist</md-tab-label>
+          <md-tab-body>
+            blah
+          </md-tab-body>
+        </md-tab>
+      </md-tabs>
+    </md-content>
   </div>
   <gf-toast ng-if="gec.toastOptions.trigger" options="gec.toastOptions"></gf-toast>
 </section>
