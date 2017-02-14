@@ -127,8 +127,8 @@ angular.module('portfolioApp')
 
         views: {
           'gamesLib': {
-            controller: 'GamesEditTabCtrl',
-            templateUrl: 'app/vg/crud/gamesEditorGamesLib.html'
+            controller: 'EditGamesLibCtrl',
+            templateUrl: 'app/vg/crud/gamesLib/gamesEditorGamesLib.html'
           }
         }
       })
@@ -142,8 +142,8 @@ angular.module('portfolioApp')
         url: '/hwlib',
         views: {
           'hwLib': {
-            templateUrl: 'app/vg/crud/gamesEditorHwLib.html',
-            controller: 'GamesEditHwCtrl'
+            templateUrl: 'app/vg/crud/hwLib/gamesEditorHwLib.html',
+            controller: 'EditHwLibCtrl'
           }
         }
 
@@ -158,8 +158,8 @@ angular.module('portfolioApp')
         url: '/gameswl',
         views: {
           'gamesWl': {
-            templateUrl: 'app/vg/crud/gamesEditorHwLib.html',
-            controller: 'GamesEditHwCtrl'
+            templateUrl: 'app/vg/crud/gamesWl/EditGameWl.html',
+            controller: 'EditGamesWlCtrl'
           }
         }
 
@@ -171,11 +171,11 @@ angular.module('portfolioApp')
           //   $rootScope.$broadcast('gameslib');
           // });
         },
-        url: '/conwl',
+        url: '/conWl',
         views: {
-          'conwl': {
-            templateUrl: 'app/vg/crud/gamesEditorHwLib.html',
-            controller: 'GamesEditHwCtrl'
+          'conWl': {
+            templateUrl: 'app/vg/crud/conWl/EditConWl.html',
+            controller: 'EditConWlCtrl'
           }
         }
 
