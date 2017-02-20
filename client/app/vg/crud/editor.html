@@ -1,11 +1,11 @@
-<section class="games-editor">
+<section class="games-editor" ng-if="gec.state.loggedIn" md-theme="{{gec.theme}}" ng-class="{'night':gec.theme === 'night', 'day': gec.theme === 'day'}">
   <div layout="row" layout-align="center center" class="editor-header">
     <div>
       <h3>Game Collection Editor</h3>
     </div>
   </div>
   <div layout="row" layout-align="center center" class="editor-contents">
-    <md-content class="main-content-wrapper" style="min-height: 100%;">
+    <md-content class="main-content-wrapper">
       <md-tabs class="editor-tabs-wrapper" md-selected="0">
         <md-tab ui-sref="gameseditor.gamesLib">
           <md-tab-label>Games Library</md-tab-label>
@@ -35,4 +35,8 @@
     </md-content>
   </div>
   <gf-toast ng-if="gec.toastOptions.trigger" options="gec.toastOptions"></gf-toast>
+</section>
+<section ng-if="!gec.state.loggedIn" class="editor-access-denied">
+  Access Denied Stuff Here
+  <gf-toast ng-if="gec.deniedOptions.trigger" options="gec.deniedOptions"></gf-toast>
 </section>

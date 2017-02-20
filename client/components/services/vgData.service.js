@@ -27,7 +27,7 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       })
       .catch(function (data) {
         console.warn('data error', data);
-        def.reject(data);
+        def.resolve(data);
       });
       return def.promise;
     }
@@ -211,7 +211,12 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       var def = $q.defer(),
         which = '/api/games/checktoken/' + token;
       getData(which, true).then(function (response) {
-        def.resolve(response);
+        if (!response.error) {
+          def.resolve(response);
+        } else {
+          def.resolve(response);
+        }
+
       });
       return def.promise;
     }

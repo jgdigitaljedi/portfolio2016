@@ -1,0 +1,11 @@
+.vg-editor-card {
+
+  .editor-form-nav-button {
+    @include box_shadow(1);
+  }
+
+  .selected-state {
+    background-color: $dark-amber;
+    color: black;
+  }
+}

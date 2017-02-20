@@ -1,0 +1,21 @@
+<md-card class="vg-editor-card" layout-padding>
+  Editor Form
+  <div layout="row" layout-align="center center">
+    <div>
+      <md-button class="add-to-library editor-form-nav-button" ng-class="{'selected-state': state.add}">
+        <md-icon md-svg-icon="action:note_add"></md-icon> &nbsp; Add
+      </md-button>
+    </div>
+    <div>
+      <md-button class="edit-library editor-form-nav-button" ng-class="{'selected-state': !state.add}">
+        <md-icon md-svg-icon="editor:mode_edit"></md-icon> &nbsp; Edit
+      </md-button>
+    </div>
+  </div>
+  <div layout="row" layout-align="center center" class="edit-form-area" ng-if="state.add">
+
+  </div>
+  <div layout="row" layout-align="center center" class="edit-form-area" ng-if="!state.add">
+
+  </div>
+</md-card>

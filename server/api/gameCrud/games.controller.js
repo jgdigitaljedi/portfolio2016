@@ -99,7 +99,7 @@ function setTokenInterval () {
   console.log('token interval reset');
   tokenInterval = setInterval(function () {
     writeToJson({token: '', timestamp: 1234}, 'tokenStorage.json');
-  }, 900000);
+  }, 1800000); // token good for 30 minutes after last data call made
 }
 
 function generateToken (password, user) {

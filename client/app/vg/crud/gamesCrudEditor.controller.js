@@ -1,22 +1,35 @@
 'use strict';
 
-angular.module('portfolioApp').controller('GamesEditorCtrl', ['VgData', '$state',
-  function (VgData, $state) {
+angular.module('portfolioApp').controller('GamesEditorCtrl', ['VgData', '$state', '$timeout', '$rootScope',
+  function (VgData, $state, $timeout, $rootScope) {
     var gec = this;
 
+    gec.theme = $rootScope.theme;
     gec.toastOptions = {
       trigger: false
     };
 
     gec.state = {
       loggedIn: false,
-      which: 'gameLib'
+      editing: false
     };
+
+    if ($state.current.name === 'gameseditor') {
+      $state.go('gameseditor.gamesLib');
+    }
 
     function badToken () {
       gec.state.loggedIn = false;
       sessionStorage.setItem('jgToken', '');
-      $state.go('gameslogin');
+      gec.deniedOptions = {
+        style: 'warning',
+        timeout: 3500,
+        text: 'Access Denied',
+        trigger: true
+      };
+      $timeout(function () {
+        $state.go('gameslogin');
+      }, 4000);
     }
 
     function getToken () {
