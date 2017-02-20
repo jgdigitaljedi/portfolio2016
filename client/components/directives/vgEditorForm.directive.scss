@@ -1,4 +1,6 @@
 .vg-editor-card {
+  background-color: $flat-white !important;
+  color: #000 !important;
 
   .editor-form-nav-button {
     @include box_shadow(1);

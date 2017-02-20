@@ -1,21 +1,34 @@
 <md-card class="vg-editor-card" layout-padding>
-  Editor Form
   <div layout="row" layout-align="center center">
     <div>
-      <md-button class="add-to-library editor-form-nav-button" ng-class="{'selected-state': state.add}">
+      <md-button class="add-to-library editor-form-nav-button" ng-class="{'selected-state': state.current === 'add'}"
+        ng-click="changeState('add')">
         <md-icon md-svg-icon="action:note_add"></md-icon> &nbsp; Add
       </md-button>
     </div>
     <div>
-      <md-button class="edit-library editor-form-nav-button" ng-class="{'selected-state': !state.add}">
+      <md-button class="edit-library editor-form-nav-button" ng-class="{'selected-state': state.current === 'edit'}"
+        ng-click="changeState('edit')">
         <md-icon md-svg-icon="editor:mode_edit"></md-icon> &nbsp; Edit
       </md-button>
     </div>
   </div>
-  <div layout="row" layout-align="center center" class="edit-form-area" ng-if="state.add">
+  <div layout="row" layout-align="center center" class="edit-form-area" ng-if="state.current === 'add'">
+    <div class="editor-form-content" ng-switch="which">
 
+    </div>
   </div>
-  <div layout="row" layout-align="center center" class="edit-form-area" ng-if="!state.add">
-
+  <div layout="row" layout-align="center center" class="edit-form-area" ng-if="state.current === 'edit'">
+    <div class="editor-form-content" ng-switch="which">
+      <div layout="row" layout-align="center center">
+        <md-input-container class="edit-search">
+          <label>Search</label>
+          <input class="edit-search-field" />
+        </md-input-container>
+        <md-button>
+          <md-icon md-svg-icon="action:search"></md-icon>
+        </md-button>
+      </div>
+    </div>
   </div>
 </md-card>

@@ -10,7 +10,13 @@ angular.module('portfolioApp').directive('vgForm', [
       },
       link: function (scope, elem) {
         scope.state = {
-          add: true
+          current: 'add',
+          which: scope.formOptions.which
+        };
+
+        scope.changeState = function (state) {
+          scope.state.current = state;
+
         };
       }
     };

@@ -3,14 +3,11 @@
 angular.module('portfolioApp').controller('EditGamesLibCtrl', ['VgData',
   function (VgData) {
     var eglc = this;
-    console.log('games edit tabs ctrl');
+    console.log('games edit ctrl');
     eglc.formOptions = {
-      inputs: {
-
-      },
+      which: 'games',
       submitEvent: 'editGames',
       editEndpoint: ''
-
     }
   }
 ]);

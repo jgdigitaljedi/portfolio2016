@@ -128,7 +128,8 @@ angular.module('portfolioApp')
         views: {
           'gamesLib': {
             controller: 'EditGamesLibCtrl',
-            templateUrl: 'app/vg/crud/gamesLib/gamesEditorGamesLib.html'
+            templateUrl: 'app/vg/crud/gamesLib/gamesEditorGamesLib.html',
+            controllerAs: 'eglc'
           }
         }
       })
