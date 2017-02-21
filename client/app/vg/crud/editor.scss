@@ -11,6 +11,15 @@
       width: 100%;
       min-height: calc(100vh - 62.5px);
       height: 100%;
+      background-color: $flat-white;
+      color: $flat-black;
+
+      .editor-tabs-wrapper {
+        background-color: $flat-white;
+        color: $flat-black;
+        min-height: calc(100vh - 62.5px);
+        height: 100%;
+      }
     }
   }
 }

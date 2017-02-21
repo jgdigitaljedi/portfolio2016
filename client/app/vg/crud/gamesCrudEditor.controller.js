@@ -4,7 +4,7 @@ angular.module('portfolioApp').controller('GamesEditorCtrl', ['VgData', '$state'
   function (VgData, $state, $timeout, $rootScope) {
     var gec = this;
 
-    gec.theme = $rootScope.theme;
+    gec.theme = 'day';
     gec.toastOptions = {
       trigger: false
     };

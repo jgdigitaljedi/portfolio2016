@@ -221,6 +221,11 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       return def.promise;
     }
 
+    function gbLookup (which) {
+      var def = $q.defer();
+      getData
+    }
+
     return {
       getOwnedGames: getOwnedGames,
       getOwnedHardware: getOwnedHardware,
@@ -228,7 +233,8 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       getConsoleWishlist: getConsoleWishlist,
       gameTotals: gameTotals,
       gamesAuth: gamesAuth,
-      checkToken: checkToken
+      checkToken: checkToken,
+      gbLookup: gbLookup
     };
   }
 ]);

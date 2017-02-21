@@ -1,4 +1,7 @@
 <md-card class="vg-editor-card" layout-padding>
+  <div layout="row" layout-align="center center" class="card-title">
+    <h3>{{formOptions.title}}</h3>
+  </div>
   <div layout="row" layout-align="center center">
     <div>
       <md-button class="add-to-library editor-form-nav-button" ng-class="{'selected-state': state.current === 'add'}"
@@ -14,9 +17,19 @@
     </div>
   </div>
   <div layout="row" layout-align="center center" class="edit-form-area" ng-if="state.current === 'add'">
-    <div class="editor-form-content" ng-switch="which">
-
+    <div class="editor-form-content" layout="row" layout-align="center center">
+      <md-input-container class="dynamic-input" ng-repeat="field in formOptions.inputs">
+        <label>{{field.display}}</label>
+        <input data-name="{{field.name}}" ng-model="searchParams[field.name]"/>
+        <a ng-href="{{field.link}}" ng-if="field.link" class="lookup-link" target="_blank">
+          <md-icon md-svg-icon="action:info"></md-icon>
+        </a>
+      </md-input-container>
     </div>
+    <md-button ng-click="lookup()">
+      <md-icon md-svg-icon="action:search"></md-icon>
+      &nbsp; Lookup
+    </md-button>
   </div>
   <div layout="row" layout-align="center center" class="edit-form-area" ng-if="state.current === 'edit'">
     <div class="editor-form-content" ng-switch="which">
@@ -30,5 +43,8 @@
         </md-button>
       </div>
     </div>
+  </div>
+  <div ng-if="gbInfo" layout="row" layout-align="center center" class="gb-results">
+
   </div>
 </md-card>
