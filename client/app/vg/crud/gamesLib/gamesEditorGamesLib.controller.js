@@ -8,13 +8,19 @@ angular.module('portfolioApp').controller('EditGamesLibCtrl', ['VgData',
       title: 'Add a Game',
       which: 'games',
       gbSearch: 'game',
-      submitEvent: 'editGames',
       editEndpoint: '',
       inputs: [
-        {name: 'gbId', display: 'GiantBomb ID', link: 'http://www.giantbomb.com', type: 'number'},
-        {name: 'dateAdded', display: 'Date Added', type: 'date'},
-        {name: 'value', display: 'Value', link: 'https://www.pricecharting.com/', type: 'currency'}
-      ]
+        {name: 'gbId', display: 'GiantBomb ID', link: 'http://www.giantbomb.com', required: true},
+        {name: 'dateAdded', display: 'Date Added', required: true},
+        {name: 'value', display: 'Value', link: 'https://www.pricecharting.com/', required: true}
+      ],
+      resultFields: [
+        {field: 'name', label: 'Title'},
+        {field: 'original_game_rating', label: 'Rating'},
+        {field: 'original_release_date', label: 'Release Date'},
+        {field: 'genres', label: 'Genres'}
+      ],
+      consoleDd: true
     }
   }
 ]);

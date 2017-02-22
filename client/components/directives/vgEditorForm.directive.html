@@ -17,19 +17,44 @@
     </div>
   </div>
   <div layout="row" layout-align="center center" class="edit-form-area" ng-if="state.current === 'add'">
-    <div class="editor-form-content" layout="row" layout-align="center center">
-      <md-input-container class="dynamic-input" ng-repeat="field in formOptions.inputs">
-        <label>{{field.display}}</label>
-        <input data-name="{{field.name}}" ng-model="searchParams[field.name]"/>
-        <a ng-href="{{field.link}}" ng-if="field.link" class="lookup-link" target="_blank">
-          <md-icon md-svg-icon="action:info"></md-icon>
-        </a>
-      </md-input-container>
+    <div class="editor-form-content" layout="column" layout-align="center center">
+      <div layout="row" layout-align="center center">
+        <md-input-container class="dynamic-input" ng-repeat="field in formOptions.inputs">
+          <label>{{field.display}}</label>
+          <input data-name="{{field.name}}" ng-model="searchParams[field.name]" />
+          <a ng-href="{{field.link}}" ng-if="field.link" class="lookup-link" target="_blank">
+            <md-icon md-svg-icon="action:info"></md-icon>
+          </a>
+        </md-input-container>
+        <md-button ng-click="lookup()">
+          <md-icon md-svg-icon="action:search"></md-icon>
+          &nbsp; Lookup
+        </md-button>
+      </div>
+      <div ng-if="gbInfo" layout="row" layout-align="center center" class="gb-results">
+        <md-input-container ng-repeat="obj in gbInfo" class="dynamic-input">
+          <label>{{obj.label}}</label>
+          <input ng-model="searchParams[obj.field]" />
+        </md-input-container>
+      </div>
+      <div layout="row" layout-align="center center">
+        <label style="margin-right: 20px;">Console</label>
+        <md-select ng-model="searchParams.platform" ng-if="consoleDd" placeholder="Select Console">
+          <md-option ng-repeat="console in consoleDd" ng-value="console">{{console}}</md-option>
+        </md-select>
+      </div>
+      <div ng-if="gbInfo">
+        <md-button ng-click="saveNew()">
+          <md-icon md-svg-icon="content:save"></md-icon>
+          &nbsp; Save
+        </md-button>
+        <md-button ng-click="clearFields()">
+          <md-icon md-svg-icon="communication:clear_all"></md-icon>
+          &nbsp; Clear Fields
+        </md-button>
+      </div>
     </div>
-    <md-button ng-click="lookup()">
-      <md-icon md-svg-icon="action:search"></md-icon>
-      &nbsp; Lookup
-    </md-button>
+
   </div>
   <div layout="row" layout-align="center center" class="edit-form-area" ng-if="state.current === 'edit'">
     <div class="editor-form-content" ng-switch="which">
@@ -43,8 +68,5 @@
         </md-button>
       </div>
     </div>
-  </div>
-  <div ng-if="gbInfo" layout="row" layout-align="center center" class="gb-results">
-
   </div>
 </md-card>
