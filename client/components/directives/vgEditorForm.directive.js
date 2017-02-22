@@ -15,6 +15,7 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData',
         };
 
         if (scope.formOptions.consoleDd) {
+          scope.showConDd = true;
           var consoleDd = [];
           VgData.getOwnedGames().then(function (result) {
             console.log('owned games', result);
@@ -28,7 +29,7 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData',
           });
         }
 
-        scope.searchParams = {dateAdded: moment().format('MM/DD/YYYY')};
+        scope.searchParams = {addeddate: moment().format('MM/DD/YYYY')};
 
         scope.changeState = function (state) {
           scope.state.current = state;
@@ -43,7 +44,7 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData',
                 item.value = Array.isArray(item.value) ? item.value[0].name : (item.value.hasOwnProperty('name') ? item.value.name : 'none');
                 break;
               case 'original_release_date':
-                item.field = 'releaseDate';
+                item.field = 'releasedate';
                 item.value = moment(item.value, 'YYYY-MM-DD HH:mm:ss').format('MM/DD/YYYY');
                 break;
               case 'genres':
@@ -54,6 +55,10 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData',
                   genArr.push(i.name);
                 });
                 item.value = genArr.join(', ');
+                break;
+              case 'name':
+                item.field = 'title';
+                break;
               default:
                 item = item;
             }
@@ -84,7 +89,11 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData',
         };
 
         scope.clearFields = function () {
-          scope.searchParams = {dateAdded: moment().format('MM/DD/YYYY')};
+          scope.searchParams = {addeddate: moment().format('MM/DD/YYYY')};
+        };
+
+        scope.newConsole = function () {
+          scope.showConDd = !scope.showConDd;
         };
       }
     };

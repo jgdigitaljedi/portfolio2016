@@ -38,23 +38,36 @@
         </md-input-container>
       </div>
       <div layout="row" layout-align="center center">
-        <label style="margin-right: 20px;">Console</label>
-        <md-select ng-model="searchParams.platform" ng-if="consoleDd" placeholder="Select Console">
-          <md-option ng-repeat="console in consoleDd" ng-value="console">{{console}}</md-option>
-        </md-select>
+        <div ng-if="showConDd">
+          <label style="margin-right: 20px;">Console</label>
+          <md-select ng-model="searchParams.platform" ng-if="consoleDd" placeholder="Select Console">
+            <md-option ng-repeat="console in consoleDd" ng-value="console">{{console}}</md-option>
+          </md-select>
+        </div>
+        <div ng-if="!showConDd" style="padding-top: 22px;">
+          <md-input-container>
+            <label>Console</label>
+            <input ng-model="searchParams.platform" />
+          </md-input-container>
+        </div>
+        <div>
+          <md-button ng-click="newConsole()" class="form-action-button">
+            <md-icon md-svg-icon="action:note_add"></md-icon>
+            &nbsp {{showConDd ? 'Add New Console' : 'Use Console Select'}}
+          </md-button>
+        </div>
       </div>
       <div ng-if="gbInfo">
-        <md-button ng-click="saveNew()">
+        <md-button ng-click="saveNew()" class="form-action-button">
           <md-icon md-svg-icon="content:save"></md-icon>
           &nbsp; Save
         </md-button>
-        <md-button ng-click="clearFields()">
+        <md-button ng-click="clearFields()" class="form-action-button">
           <md-icon md-svg-icon="communication:clear_all"></md-icon>
           &nbsp; Clear Fields
         </md-button>
       </div>
     </div>
-
   </div>
   <div layout="row" layout-align="center center" class="edit-form-area" ng-if="state.current === 'edit'">
     <div class="editor-form-content" ng-switch="which">

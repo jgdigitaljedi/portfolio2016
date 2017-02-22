@@ -11,17 +11,47 @@
     }
   }
 
+  .edit-form-area {
+
+    .form-action-button {
+      background-color: $blue-gray !important;
+      color: $flat-white !important;
+      @include box_shadow(1);
+
+      md-icon {
+        fill: $flat-white !important;
+      }
+
+      &:hover {
+        background-color: $dark-amber !important;
+        color: $flat-black !important;
+
+        md-icon {
+          fill: $flat-black !important;
+        }
+      }
+    }
+  }
+
   .editor-form-nav-button {
     @include box_shadow(1);
   }
 
   .selected-state {
-    background-color: $dark-amber;
-    color: black;
+    background-color: $dark-amber !important;
+    color: $flat-black !important;
+
+    md-icon {
+      fill: $flat-black !important;
+    }
 
     &:hover {
       background-color: $flat-black !important;
-      color: #ffffff;
+      color: $flat-white !important;
+
+      md-icon {
+        fill: $flat-white !important;
+      }
     }
   }
 }
