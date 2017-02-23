@@ -6,6 +6,7 @@ var path = require('path'),
   crypto = require('crypto'),
   algorithm = 'aes-256-ctr',
   moment = require('moment'),
+  Promise = require('bluebird'),
   tokenInterval;
 
 exports.editConsole = function(req, res) {
@@ -81,6 +82,20 @@ exports.getConsoleWishlist = function (req, res) {
 // auth route and token logic
 //*****************************
 
+function validateToken (uToken) {
+  console.log('validating token', uToken);
+  return new Promise(function (resolve, reject) {
+    fs.readFile(path.join(__dirname,'vg/tokenStorage.json'), 'utf-8', function (err, data) {
+      console.log('read file', data);
+      if (uToken === JSON.parse(data).token) {
+        resolve(true);
+      } else {
+        reject(false);
+      }
+    });
+  });
+}
+
 function writeToJson (data, fileName) {
   var output = {};
   var file = path.join(__dirname, 'vg', fileName);
@@ -150,13 +165,31 @@ exports.checkToken = function (req, res) {
 };
 
 exports.addGame = function(req, res) {
-  console.log('add game called');
+  console.log('add game called', req.body.gameRequest.gameData);
+  validateToken(req.body.gameRequest.token)
+    .then(function (loggedIn) {
+      setTokenInterval();
+      fs.readFile(path.join(__dirname,'vg/gameLibrary.json'), 'utf-8', function (err, data) {
+        var oldData = JSON.parse(data),
+          reqData = req.body.gameRequest.gameData;
+        reqData.price = parseFloat(reqData.price);
+        oldData.games.push(reqData);
+        writeToJson(oldData, 'gameLibrary.json');
+        res.status(200).send({error: false, message: 'Game Successfully Added'});
+      });
+    })
+    .catch(function (err) {
+      res.status(401).send({error: true, message: 'Access Denied: Bad Token'});
+      console.log('token error');
+    });
 };
 
 exports.addConsole = function(req, res) {
   console.log('add console called');
+  setTokenInterval();
 };
 
 exports.editGame = function(req, res) {
   console.log('edit game called');
+  setTokenInterval();
 };

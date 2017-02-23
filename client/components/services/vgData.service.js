@@ -5,6 +5,10 @@
 angular.module('portfolioApp').service('VgData', ['$q', '$http',
   function ($q, $http) {
 
+    //****************************
+    //**** helpers ***************
+    //****************************
+
     function formatPrice (price) {
       return '$' + price.toFixed(2);
     }
@@ -31,6 +35,27 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       });
       return def.promise;
     }
+
+    function postWithJson (which, params) {
+      var def = $q.defer();
+      $http({
+        method: 'POST',
+        url: '/api/games/' + which,
+        dataType: 'application/json',
+        data: params
+      })
+        .then(function (response) {
+          def.resolve(response);
+        })
+        .catch(function (err) {
+          def.reject(err);
+        });
+      return def.promise;
+    }
+
+    //**********************************
+    //**** getters (mainly for tables)**
+    //**********************************
 
     function getOwnedGames () {
       var def = $q.defer();
@@ -135,6 +160,10 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       return def.promise;
     }
 
+    //*******************************
+    //** helpers for tables**********
+    //*******************************
+
     function genreTracker (genre, data) {
       var gen = genre.split(',');
       if (gen.length > 1) {
@@ -198,6 +227,10 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       return {gameLib: gameReturn, hwLib: hwData, genres: genresCleaned};
     }
 
+    //********************************
+    //** game editor auth ************
+    //********************************
+
     function gamesAuth (options) {
       var def = $q.defer(),
         which = '/api/games/simplegameauth/' + options.user + '/' + options.pass;
@@ -221,10 +254,30 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       return def.promise;
     }
 
-    function gbLookup (which) {
+    //**************************
+    //** game editor setters ***
+    //**************************
+
+    function addGame (game) {
       var def = $q.defer();
-      getData
+      console.log('add game', game);
+      postWithJson('addGame', game)
+        .then(function (result) {
+          console.log('add game result', result);
+          def.resolve(result);
+        })
+        .catch(function (err) {
+          console.log('add game error in vgdata addGame');
+          def.reject('add game error');
+        });
+      return def.promise;
     }
+
+    function editGame (game) {
+      var def = $q.defer();
+      console.log('edit game', game);
+    }
+
 
     return {
       getOwnedGames: getOwnedGames,
@@ -234,7 +287,8 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       gameTotals: gameTotals,
       gamesAuth: gamesAuth,
       checkToken: checkToken,
-      gbLookup: gbLookup
+      addGame: addGame,
+      editGame: editGame
     };
   }
 ]);

@@ -86,6 +86,16 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData',
 
         scope.saveNew = function () {
           console.log('would save this', scope.searchParams);
+          var request = {
+            gameRequest: {
+              gameData: scope.searchParams,
+              token: sessionStorage.getItem('jgToken')
+            }
+          };
+
+          VgData.addGame(request).then(function (result) {
+            console.log('response in directive', result);
+          });
         };
 
         scope.clearFields = function () {

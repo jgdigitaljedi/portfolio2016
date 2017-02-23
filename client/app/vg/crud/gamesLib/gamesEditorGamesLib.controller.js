@@ -8,7 +8,7 @@ angular.module('portfolioApp').controller('EditGamesLibCtrl', ['VgData',
       title: 'Add a Game',
       which: 'games',
       gbSearch: 'game',
-      editEndpoint: '',
+      editEndpoint: {add: 'addGame', edit: 'editGame'},
       inputs: [
         {name: 'gbId', display: 'GiantBomb ID', link: 'http://www.giantbomb.com', required: true},
         {name: 'addeddate', display: 'Date Added', required: true},
