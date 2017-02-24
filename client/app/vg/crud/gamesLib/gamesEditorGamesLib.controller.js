@@ -20,7 +20,13 @@ angular.module('portfolioApp').controller('EditGamesLibCtrl', ['VgData',
         {field: 'original_release_date', label: 'Release Date'},
         {field: 'genres', label: 'Genres'}
       ],
-      consoleDd: true
+      consoleDd: true,
+      toast: {
+        trigger: false,
+        options: {
+
+        }
+      }
     }
   }
 ]);

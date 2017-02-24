@@ -234,9 +234,14 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
     function gamesAuth (options) {
       var def = $q.defer(),
         which = '/api/games/simplegameauth/' + options.user + '/' + options.pass;
-      getData(which, true).then(function (response) {
-        def.resolve(response);
-      });
+      getData(which, true)
+        .then(function (response) {
+          console.log('vgdata auth response', response);
+          def.resolve(response);
+        })
+        .catch(function (err) {
+          def.reject(err);
+        });
       return def.promise;
     }
 

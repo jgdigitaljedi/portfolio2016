@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData',
-  function (GB, VgData) {
+angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout',
+  function (GB, VgData, $timeout) {
     return {
       restrict: 'AE',
       templateUrl: 'components/directives/vgEditorForm.directive.html',
@@ -95,6 +95,21 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData',
 
           VgData.addGame(request).then(function (result) {
             console.log('response in directive', result);
+            if (!result.data.error) {
+              scope.formOptions.toast = {
+                options: {
+                  style: 'success',
+                  timeout: 3500,
+                  text: 'Game Added!',
+                  trigger: true
+                }
+                $timeout(function () {
+                  scope.formOptions.toast.trigger = false;
+                }, 4000);
+              };
+            } else {
+
+            }
           });
         };
 

@@ -19,8 +19,10 @@ angular.module('portfolioApp').controller('GamesLoginCtrl', ['VgData', '$state',
         var pass = simpleEncryptPassword(glc.state.password);
 
         VgData.gamesAuth({user: glc.state.user, pass: pass}).then(function (response) {
-          sessionStorage.setItem('jgToken', response.data.token);
-          $state.go('gameseditor');
+          if (!response.data.error) {
+            sessionStorage.setItem('jgToken', response.data.token);
+            $state.go('gameseditor');
+          }
         });
       }
     };
@@ -29,7 +31,7 @@ angular.module('portfolioApp').controller('GamesLoginCtrl', ['VgData', '$state',
       var sessionToken = sessionStorage.getItem('jgToken') || false;
       if (sessionToken) {
         VgData.checkToken(sessionToken).then(function (response) {
-          if (response.data.loggedIn && !response.data.error) {
+          if (response.data.status === 200 && !response.data.error) {
             $state.go('gameseditor');
           }
         });

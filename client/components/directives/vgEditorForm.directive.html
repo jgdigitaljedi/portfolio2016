@@ -18,7 +18,7 @@
   </div>
   <div layout="row" layout-align="center center" class="edit-form-area" ng-if="state.current === 'add'">
     <div class="editor-form-content" layout="column" layout-align="center center">
-      <div layout="row" layout-align="center center">
+      <div layout="row" layout-align="center center" class="wrap-row">
         <md-input-container class="dynamic-input" ng-repeat="field in formOptions.inputs">
           <label>{{field.display}}</label>
           <input data-name="{{field.name}}" ng-model="searchParams[field.name]" />
@@ -31,13 +31,13 @@
           &nbsp; Lookup
         </md-button>
       </div>
-      <div ng-if="gbInfo" layout="row" layout-align="center center" class="gb-results">
+      <div ng-if="gbInfo" layout="row" layout-align="center center" class="gb-results wrap-row">
         <md-input-container ng-repeat="obj in gbInfo" class="dynamic-input">
           <label>{{obj.label}}</label>
           <input ng-model="searchParams[obj.field]" />
         </md-input-container>
       </div>
-      <div layout="row" layout-align="center center">
+      <div layout="row" layout-align="center center" class="wrap-row">
         <div ng-if="showConDd">
           <label style="margin-right: 20px;">Console</label>
           <md-select ng-model="searchParams.platform" ng-if="consoleDd" placeholder="Select Console">

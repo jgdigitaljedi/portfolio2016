@@ -5,6 +5,7 @@
   .dynamic-input {
     color: $flat-black !important;
     margin: 8px;
+    width: 400px;
 
     input {
       margin: 8px;
@@ -12,6 +13,10 @@
   }
 
   .edit-form-area {
+
+    .wrap-row {
+      flex-wrap: wrap;
+    }
 
     .form-action-button {
       background-color: $blue-gray !important;

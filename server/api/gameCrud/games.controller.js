@@ -82,15 +82,34 @@ exports.getConsoleWishlist = function (req, res) {
 // auth route and token logic
 //*****************************
 
-function validateToken (uToken) {
+function validateToken (uToken, reset) {
   console.log('validating token', uToken);
   return new Promise(function (resolve, reject) {
     fs.readFile(path.join(__dirname,'vg/tokenStorage.json'), 'utf-8', function (err, data) {
-      console.log('read file', data);
-      if (uToken === JSON.parse(data).token) {
-        resolve(true);
+      if (!err) {
+        var now = moment().unix();
+        data = JSON.parse(data);
+        if (uToken === data.token && (now - data.timestamp <= 1800)) {
+          console.log('ts good');
+          if (reset) {
+            console.log('token reset ts');
+            data.timestamp = moment().unix();
+            writeToJson(data, 'tokenStorage.json');
+            clearInterval(tokenInterval);
+            setTokenInterval(true, uToken);
+          }
+          resolve({error: false, message: 'Successful Authentication/Good Token', status: 200});
+        } else {
+          console.log('bad or old token');
+          clearInterval(tokenInterval);
+          setTokenInterval(false);
+          reject({error: true, message: 'Token incorrect or too old', status: 401});
+        }
       } else {
-        reject(false);
+        console.log('token error');
+        clearInterval(tokenInterval);
+        setTokenInterval(false);
+        reject({error: true, message: 'Server error', status: 500});
       }
     });
   });
@@ -105,15 +124,16 @@ function writeToJson (data, fileName) {
     output = {error: true, message: err};
   } finally {
     if (!output.error) output = {error: false, message: 'success'};
-    console.log('JSON write', output);
     return output;
   }
 }
 
-function setTokenInterval () {
+function setTokenInterval (reset, token) {
   console.log('token interval reset');
+  var ts = reset ? moment().unix() : 1234,
+    t = token || '';
   tokenInterval = setInterval(function () {
-    writeToJson({token: '', timestamp: 1234}, 'tokenStorage.json');
+    writeToJson({token: t, timestamp: ts}, 'tokenStorage.json');
   }, 1800000); // token good for 30 minutes after last data call made
 }
 
@@ -140,41 +160,43 @@ exports.simpleAuth = function (req, res) {
 
 exports.checkToken = function (req, res) {
   var token = req.params.token;
-  fs.readFile(path.join(__dirname,'vg/tokenStorage.json'), 'utf-8', function (err, data) {
-    var returnData = {},
-      status;
-
-    if (!err) {
-      var storedToken = JSON.parse(data),
-        now = moment().unix();
-      if (storedToken.token === token && ((now - storedToken.timestamp) <= 900)) {
-        status = 200;
-        returnData = {error: false, loggedIn: true, message: 'Success'};
-        clearInterval(tokenInterval);
-        setTokenInterval();
-      } else {
-        status = 401;
-        returnData = {error: false, loggedIn: false, message: 'Wrong token or token too old (ACCESS DENIED)'};
-      }
-    } else {
-      returnData = {error: true, loggedIn: false, message: err};
-      status = 500;
-    }
-    res.status(status).send(returnData);
+  validateToken(token, false).then(function (result) {
+    res.status(result.status).send(result);
   });
+  // fs.readFile(path.join(__dirname,'vg/tokenStorage.json'), 'utf-8', function (err, data) {
+  //   var returnData = {},
+  //     status;
+  //
+  //   if (!err) {
+  //     var storedToken = JSON.parse(data),
+  //       now = moment().unix();
+  //     if (storedToken.token === token && ((now - storedToken.timestamp) <= 1800)) {
+  //       status = 200;
+  //       returnData = {error: false, loggedIn: true, message: 'Success'};
+  //       clearInterval(tokenInterval);
+  //       setTokenInterval();
+  //     } else {
+  //       status = 401;
+  //       returnData = {error: false, loggedIn: false, message: 'Wrong token or token too old (ACCESS DENIED)'};
+  //     }
+  //   } else {
+  //     returnData = {error: true, loggedIn: false, message: err};
+  //     status = 500;
+  //   }
+  //   res.status(status).send(returnData);
+  // });
 };
 
 exports.addGame = function(req, res) {
   console.log('add game called', req.body.gameRequest.gameData);
-  validateToken(req.body.gameRequest.token)
+  validateToken(req.body.gameRequest.token, true)
     .then(function (loggedIn) {
-      setTokenInterval();
       fs.readFile(path.join(__dirname,'vg/gameLibrary.json'), 'utf-8', function (err, data) {
         var oldData = JSON.parse(data),
           reqData = req.body.gameRequest.gameData;
         reqData.price = parseFloat(reqData.price);
         oldData.games.push(reqData);
-        writeToJson(oldData, 'gameLibrary.json');
+        // writeToJson(oldData, 'gameLibrary.json');
         res.status(200).send({error: false, message: 'Game Successfully Added'});
       });
     })
@@ -186,10 +208,8 @@ exports.addGame = function(req, res) {
 
 exports.addConsole = function(req, res) {
   console.log('add console called');
-  setTokenInterval();
 };
 
 exports.editGame = function(req, res) {
   console.log('edit game called');
-  setTokenInterval();
 };

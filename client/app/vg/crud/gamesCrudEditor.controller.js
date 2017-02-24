@@ -37,7 +37,8 @@ angular.module('portfolioApp').controller('GamesEditorCtrl', ['VgData', '$state'
     }
 
     VgData.checkToken(getToken()).then(function (response) {
-      if (response.data.loggedIn && !response.data.error) {
+      console.log('editor token check', response);
+      if (response.data.status === 200 && !response.data.error) {
         gec.state.loggedIn = true;
         gec.toastOptions = {
           style: 'success',

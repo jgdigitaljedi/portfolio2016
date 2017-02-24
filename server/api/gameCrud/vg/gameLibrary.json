@@ -2052,6 +2052,16 @@
             "releasedate": "03/24/2015",
             "genre": "Role-Playing, Compilation, First-Person Shooter",
             "platform": "PlayStation 4"
+        },
+        {
+            "addeddate": "02/24/2017",
+            "gbId": "3030-48618",
+            "price": 20,
+            "title": "Borderlands: The Handsome Collection",
+            "rating": "ESRB: M",
+            "releasedate": "03/24/2015",
+            "genre": "Role-Playing, Compilation, First-Person Shooter",
+            "platform": "PlayStation 4"
         }
     ]
 }
