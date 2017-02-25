@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout',
-  function (GB, VgData, $timeout) {
+angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', '$q',
+  function (GB, VgData, $timeout, $q) {
     return {
       restrict: 'AE',
       templateUrl: 'components/directives/vgEditorForm.directive.html',
@@ -67,6 +67,20 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout',
           return obj;
         }
 
+        function triggerToast (options) {
+          scope.formOptions.toast = {
+            options: {
+              style: options.style,
+              timeout: 3500,
+              text: options.text,
+              trigger: true
+            }
+          };
+          $timeout(function () {
+            scope.formOptions.toast.trigger = false;
+          }, 4000);
+        }
+
         scope.lookup = function () {
           GB.getGameData(scope.searchParams.gbId, scope.formOptions.gbSearch).then(function (response) {
             console.log('response', response);
@@ -84,33 +98,50 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout',
           });
         };
 
+        function validateSearchParams (params) {
+          var def = $q.defer(),
+            valid = true,
+            paramsArr = scope.formOptions.paramsArr,
+            exit = scope.formOptions.paramsArr.length - 1;
+
+          paramsArr.forEach(function (item, index) {
+            if (!params.hasOwnProperty(item) || typeof(params[item]) !== 'string' || params[item].length <= 0) {
+              valid = false;
+            }
+            if (item === 'addeddate' || item === 'releasedate') {
+              var validDate = moment(params[item], 'MM/DD/YYYY', true).isValid();
+              if (!validDate) valid = false;
+            }
+            if (index === exit) def.resolve(valid);
+          });
+
+          return def.promise;
+        }
+
         scope.saveNew = function () {
           console.log('would save this', scope.searchParams);
-          var request = {
-            gameRequest: {
-              gameData: scope.searchParams,
-              token: sessionStorage.getItem('jgToken')
-            }
-          };
+          validateSearchParams(scope.searchParams)
+            .then(function (valid) {
+              if (valid) {
+                var request = {
+                  gameRequest: {
+                    gameData: scope.searchParams,
+                    token: sessionStorage.getItem('jgToken')
+                  }
+                };
 
-          VgData.addGame(request).then(function (result) {
-            console.log('response in directive', result);
-            if (!result.data.error) {
-              scope.formOptions.toast = {
-                options: {
-                  style: 'success',
-                  timeout: 3500,
-                  text: 'Game Added!',
-                  trigger: true
-                }
-                $timeout(function () {
-                  scope.formOptions.toast.trigger = false;
-                }, 4000);
-              };
-            } else {
+                VgData.addGame(request).then(function (result) {
+                  console.log('response in directive', result);
+                  if (!result.data.error) {
+                    triggerToast({style: 'success', text: request.gameRequest.gameData.title + ' Added!'});
+                  } else {
 
-            }
-          });
+                  }
+                });
+              } else {
+                triggerToast({style: 'warning', text: 'ERROR ADDING GAME!'});
+              }
+            });
         };
 
         scope.clearFields = function () {
