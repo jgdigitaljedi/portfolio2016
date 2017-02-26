@@ -2062,6 +2062,86 @@
             "releasedate": "03/24/2015",
             "genre": "Role-Playing, Compilation, First-Person Shooter",
             "platform": "PlayStation 4"
+        },
+        {
+            "addeddate": "02/26/2017",
+            "gbId": "3030-5393",
+            "title": "Battle Squadron",
+            "rating": "none",
+            "releasedate": "11/01/1990",
+            "genre": "Action",
+            "price": 14,
+            "platform": "Genesis / Mega Drive"
+        },
+        {
+            "addeddate": "02/26/2017",
+            "gbId": "3030-48113",
+            "price": 31,
+            "title": "Battlefield 1",
+            "rating": "none",
+            "releasedate": "10/21/2016",
+            "genre": "FPS",
+            "platform": "PlayStation 4"
+        },
+        {
+            "addeddate": "02/26/2017",
+            "gbId": "3030-48618",
+            "title": "Borderlands: The Handsome Collection",
+            "rating": "ESRB: M",
+            "releasedate": "03/24/2015",
+            "genre": "RPG, Compilation, FPS",
+            "price": 16.5,
+            "platform": "PlayStation 4"
+        },
+        {
+            "addeddate": "02/26/2017",
+            "gbId": "3030-46567",
+            "title": "LittleBigPlanet 3",
+            "rating": "ESRB: E",
+            "releasedate": "11/18/2014",
+            "genre": "Platformer",
+            "platform": "PlayStation 4",
+            "price": 11
+        },
+        {
+            "addeddate": "02/26/2017",
+            "gbId": "3030-19571",
+            "title": "T2: The Arcade Game",
+            "rating": "none",
+            "releasedate": "01/01/1991",
+            "price": 6.5,
+            "genre": "Shooter",
+            "platform": "Genesis / Mega Drive"
+        },
+        {
+            "addeddate": "02/26/2017",
+            "gbId": "3030-10715",
+            "title": "Star Wars Arcade",
+            "rating": "none",
+            "releasedate": "09/30/1993",
+            "genre": "Action, Shooter, Flight Simulator, Shoot 'Em Up",
+            "price": 8,
+            "platform": "32X"
+        },
+        {
+            "addeddate": "02/26/2017",
+            "gbId": "3030-47970",
+            "title": "Fluster Cluck",
+            "rating": "none",
+            "releasedate": "10/21/2014",
+            "genre": "Dual-Joystick Shooter",
+            "price": 2,
+            "platform": "PlayStation 4"
+        },
+        {
+            "addeddate": "02/26/2017",
+            "gbId": "3030-12572",
+            "title": "The Legend of Zelda: Ocarina of Time",
+            "rating": "ESRB: E",
+            "releasedate": "11/21/1998",
+            "genre": "Role-Playing, Action-Adventure",
+            "price": 17,
+            "platform": "Nintendo 3DS"
         }
     ]
 }

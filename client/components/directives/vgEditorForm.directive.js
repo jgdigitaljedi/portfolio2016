@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', '$q',
-  function (GB, VgData, $timeout, $q) {
+angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', '$q', '$compile',
+  function (GB, VgData, $timeout, $q, $compile) {
     return {
       restrict: 'AE',
       templateUrl: 'components/directives/vgEditorForm.directive.html',
@@ -9,25 +9,52 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
         formOptions: '='
       },
       link: function (scope, elem) {
+        var consoleDd = [],
+          genreList = [];
+
         scope.state = {
           current: 'add',
-          which: scope.formOptions.which
+          which: scope.formOptions.which,
+          tooltip: {
+            show: false,
+            arr: []
+          }
         };
 
-        if (scope.formOptions.consoleDd) {
-          scope.showConDd = true;
-          var consoleDd = [];
+        if (scope.formOptions.which === 'games') {
           VgData.getOwnedGames().then(function (result) {
             console.log('owned games', result);
             result.forEach(function (item) {
-              if (consoleDd.indexOf(item.platform) < 0) {
+              if (scope.formOptions.consoleDd && consoleDd.indexOf(item.platform) < 0) {
                 consoleDd.push(item.platform);
               }
+              var genres = item.genre.split(',');
+              genres.forEach(function (g) {
+                if (genreList.indexOf(g) < 0) genreList.push(g);
+              });
             });
             scope.consoleDd = consoleDd;
             console.log('scope consoles', scope.consoleDd);
+            console.log('genreList', genreList);
+            scope.genreList = genreList;
           });
         }
+
+
+        // if (scope.formOptions.consoleDd) {
+        //   scope.showConDd = true;
+        //   var consoleDd = [];
+        //   VgData.getOwnedGames().then(function (result) {
+        //     console.log('owned games', result);
+        //     result.forEach(function (item) {
+        //       if (consoleDd.indexOf(item.platform) < 0) {
+        //         consoleDd.push(item.platform);
+        //       }
+        //     });
+        //     scope.consoleDd = consoleDd;
+        //     console.log('scope consoles', scope.consoleDd);
+        //   });
+        // }
 
         scope.searchParams = {addeddate: moment().format('MM/DD/YYYY')};
 
@@ -37,15 +64,23 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
         };
 
         function resultCleaner (obj) { // necessary only for my sanity in the DB
+          console.log('obj', obj);
           obj.forEach(function (item) {
             switch(item.field) {
               case 'original_game_rating':
                 item.field = 'rating';
-                item.value = Array.isArray(item.value) ? item.value[0].name : (item.value.hasOwnProperty('name') ? item.value.name : 'none');
+                if (item.value && Array.isArray(item.value)) {
+                  item.value = item.value.map(function (x) {return x.name}).join(',');
+                } else if (item.value && item.value.hasOwnProperty('name')) {
+                  item.value = item.value.name;
+                } else {
+                  item.value = 'none';
+                }
+                // item.value = Array.isArray(item.value) ? item.value[0].name : (item.value && item.value.hasOwnProperty('name') ? item.value.name : 'none');
                 break;
               case 'original_release_date':
                 item.field = 'releasedate';
-                item.value = moment(item.value, 'YYYY-MM-DD HH:mm:ss').format('MM/DD/YYYY');
+                item.value = item.value ? moment(item.value, 'YYYY-MM-DD HH:mm:ss').format('MM/DD/YYYY') : 'unknown';
                 break;
               case 'genres':
                 var genArr = [];
@@ -81,6 +116,40 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
           }, 4000);
         }
 
+        scope.showTooltip = function (which) {
+          console.log('show tt', which);
+          scope.state.tooltip.show = true;
+          if (which === 'genreList') {
+            var template = '<table class="genre-table"><tr>',
+              gLen = scope.genreList.length;
+            scope.genreList.forEach(function (item, index) {
+              template += '<td>' + item + '</td>';
+              if ((gLen - 1) === index) {
+                template += '</tr></table>';
+              } else if ((index + 1) % 3 === 0) {
+                template += '</tr><tr>';
+              }
+            });
+            var compiled = $compile(template)(scope);
+            // var el = document.getElementById('tt-template-content'),
+            //   ele = angular.element(el);
+            // var ele = elem.getElementById('tt-template-content');
+            $timeout(function () {
+              var ele = angular.element('#tt-template-content');
+              console.log('ele', ele);
+              ele.append(compiled);
+            }, 250);
+
+          }
+
+        };
+
+        scope.removeTooltip = function () {
+          // var element = angular.element('#tt-template-content');
+          scope.state.tooltip.show = false;
+
+        };
+
         scope.lookup = function () {
           GB.getGameData(scope.searchParams.gbId, scope.formOptions.gbSearch).then(function (response) {
             console.log('response', response);
@@ -109,8 +178,10 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
               valid = false;
             }
             if (item === 'addeddate' || item === 'releasedate') {
-              var validDate = moment(params[item], 'MM/DD/YYYY', true).isValid();
-              if (!validDate) valid = false;
+              if (params[item] !== 'unknown') {
+                var validDate = moment(params[item], 'MM/DD/YYYY', true).isValid();
+                if (!validDate) valid = false;
+              }
             }
             if (index === exit) def.resolve(valid);
           });

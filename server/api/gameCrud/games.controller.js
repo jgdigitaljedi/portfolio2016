@@ -160,31 +160,13 @@ exports.simpleAuth = function (req, res) {
 
 exports.checkToken = function (req, res) {
   var token = req.params.token;
-  validateToken(token, false).then(function (result) {
-    res.status(result.status).send(result);
-  });
-  // fs.readFile(path.join(__dirname,'vg/tokenStorage.json'), 'utf-8', function (err, data) {
-  //   var returnData = {},
-  //     status;
-  //
-  //   if (!err) {
-  //     var storedToken = JSON.parse(data),
-  //       now = moment().unix();
-  //     if (storedToken.token === token && ((now - storedToken.timestamp) <= 1800)) {
-  //       status = 200;
-  //       returnData = {error: false, loggedIn: true, message: 'Success'};
-  //       clearInterval(tokenInterval);
-  //       setTokenInterval();
-  //     } else {
-  //       status = 401;
-  //       returnData = {error: false, loggedIn: false, message: 'Wrong token or token too old (ACCESS DENIED)'};
-  //     }
-  //   } else {
-  //     returnData = {error: true, loggedIn: false, message: err};
-  //     status = 500;
-  //   }
-  //   res.status(status).send(returnData);
-  // });
+  validateToken(token, false)
+    .then(function (result) {
+      res.status(result.status).send(result);
+    })
+    .catch(function (err) {
+      res.status(500).send({error: true, message: err});
+    });
 };
 
 exports.addGame = function(req, res) {
@@ -196,7 +178,7 @@ exports.addGame = function(req, res) {
           reqData = req.body.gameRequest.gameData;
         reqData.price = parseFloat(reqData.price);
         oldData.games.push(reqData);
-        // writeToJson(oldData, 'gameLibrary.json');
+        writeToJson(oldData, 'gameLibrary.json');
         res.status(200).send({error: false, message: 'Game Successfully Added'});
       });
     })

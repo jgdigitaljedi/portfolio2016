@@ -60,3 +60,15 @@
     }
   }
 }
+
+.hover-tooltip {
+  position: absolute;
+  @include box_shadow(3);
+  background-color: $blue-gray;
+  color: #fff;
+  line-height: 0.9em;
+  font-size: 0.8em;
+  right: 20px;
+  top: 20px;
+  z-index: 99;
+}
