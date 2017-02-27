@@ -10,7 +10,8 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
       },
       link: function (scope, elem) {
         var consoleDd = [],
-          genreList = [];
+          genreList = [],
+          gamesData;
 
         scope.state = {
           current: 'add',
@@ -22,8 +23,10 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
         };
 
         if (scope.formOptions.which === 'games') {
+          scope.showConDd = true;
           VgData.getOwnedGames().then(function (result) {
             console.log('owned games', result);
+            gamesData = result;
             result.forEach(function (item) {
               if (scope.formOptions.consoleDd && consoleDd.indexOf(item.platform) < 0) {
                 consoleDd.push(item.platform);
@@ -34,49 +37,81 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
               });
             });
             scope.consoleDd = consoleDd;
-            console.log('scope consoles', scope.consoleDd);
-            console.log('genreList', genreList);
             scope.genreList = genreList;
           });
         }
 
-
-        // if (scope.formOptions.consoleDd) {
-        //   scope.showConDd = true;
-        //   var consoleDd = [];
-        //   VgData.getOwnedGames().then(function (result) {
-        //     console.log('owned games', result);
-        //     result.forEach(function (item) {
-        //       if (consoleDd.indexOf(item.platform) < 0) {
-        //         consoleDd.push(item.platform);
-        //       }
-        //     });
-        //     scope.consoleDd = consoleDd;
-        //     console.log('scope consoles', scope.consoleDd);
-        //   });
-        // }
-
         scope.searchParams = {addeddate: moment().format('MM/DD/YYYY')};
+
+        function makeEditTable (data, container) {
+          console.log('container', container);
+          $timeout(function () {
+            $('#' + container).DataTable(data);
+          }, 250);
+
+        }
+
+        function getDataForEditTable (which, container) {
+          console.log('gamesData', gamesData);
+          if (which === 'games') {
+            gamesData.forEach(function (item) {
+              if (!item.hasOwnProperty('rating')) item.rating = 'none';
+              if (!item.hasOwnProperty('releasedate')) item.releasedate = ' -- ';
+            });
+            var tableData = {
+              aaData: gamesData,
+              aoColumns: [
+                {'mDataProp': 'title', title: 'Title'},
+                {'mDataProp': 'platform', title: 'Platform'},
+                {'mDataProp': 'genre', title: 'Genre'},
+                {'mDataProp': 'price', title: 'Value', render: {'_': 'filter', 'filter': 'filter', 'display': 'display'}},
+                {'mDataProp': 'rating', title: 'Rating'},
+                {'mDataProp': 'releasedate', title: 'Released'},
+                {'mDataProp': 'addeddate', title: 'Added'},
+                {'mDataProp': null, 'bSortable': false, 'mRender': function (o) {return '<button class="game-delete">Delete</button>';}}
+              ],
+              aaSorting: [[1,'asc'], [0,'asc']],
+              lengthMenu: [[10, 25, 50, -1], [10, 25, 50, 'All']],
+              iDisplayLength: -1
+            };
+            makeEditTable(tableData, container);
+            // attach row click event for editing
+            // attach delete button click event for confirmation dialog and delete action
+          }
+        }
 
         scope.changeState = function (state) {
           scope.state.current = state;
+          if (state === 'edit') {
+            $timeout(function () {
+              var ele = angular.element(document.querySelector('.edit-table-container')),
+                container = scope.formOptions.which + '-' + state + '-table',
+                tableCon = $compile('<table id="' + container + '"></table>')(scope);
+              ele.append(tableCon);
+              getDataForEditTable(scope.formOptions.which, container);
+            }, 200);
+          }
 
         };
 
         function resultCleaner (obj) { // necessary only for my sanity in the DB
-          console.log('obj', obj);
           obj.forEach(function (item) {
             switch(item.field) {
               case 'original_game_rating':
+                var result = false,
+                  resultArr = [];
                 item.field = 'rating';
                 if (item.value && Array.isArray(item.value)) {
-                  item.value = item.value.map(function (x) {return x.name}).join(',');
+                  resultArr = item.value.map(function (x) {
+                    if (x.name.substring(0, 4) === 'ESRB') result = x.name;
+                    return x.name;
+                  }).join(',');
+                  item.value = result || resultArr;
                 } else if (item.value && item.value.hasOwnProperty('name')) {
                   item.value = item.value.name;
                 } else {
                   item.value = 'none';
                 }
-                // item.value = Array.isArray(item.value) ? item.value[0].name : (item.value && item.value.hasOwnProperty('name') ? item.value.name : 'none');
                 break;
               case 'original_release_date':
                 item.field = 'releasedate';
@@ -131,21 +166,17 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
               }
             });
             var compiled = $compile(template)(scope);
-            // var el = document.getElementById('tt-template-content'),
-            //   ele = angular.element(el);
-            // var ele = elem.getElementById('tt-template-content');
             $timeout(function () {
-              var ele = angular.element('#tt-template-content');
-              console.log('ele', ele);
+              var ele = angular.element(document.querySelector('#tt-template-content'));
               ele.append(compiled);
-            }, 250);
-
+            }, 250); // give it a chance to render the element before appending
           }
 
         };
 
         scope.removeTooltip = function () {
-          // var element = angular.element('#tt-template-content');
+          var element = angular.element(document.querySelector('#tt-template-content'));
+          element.empty();
           scope.state.tooltip.show = false;
 
         };
@@ -163,7 +194,6 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
             } else {
               scope.gbInfo = false;
             }
-            console.log('searchParams', scope.searchParams);
           });
         };
 
