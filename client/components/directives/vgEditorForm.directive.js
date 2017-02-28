@@ -19,6 +19,11 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
           tooltip: {
             show: false,
             arr: []
+          },
+          edit: {
+            cellData: '',
+            cellEle: '',
+            editing: false
           }
         };
 
@@ -43,10 +48,51 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
 
         scope.searchParams = {addeddate: moment().format('MM/DD/YYYY')};
 
+        scope.taKeypress = function (key) {
+            if (key.charCode === 13) {
+              scope.state.edit.cellData.data(scope.editText);
+              angular.element('#edit-textarea').remove();
+              scope.state.edit.editing = false;
+              // data object is updated; need to send back to server
+            }
+        };
+
+        scope.handleInlineEditing = function (rowData, rowEle, cellData, cellEle) {
+          if (angular.element(cellEle).find('.game-delete').length > 0) {
+            console.log('delete action goes here');
+          } else if (!scope.state.edit.editing) {
+            var cellProps = {
+              width: angular.element(cellEle).width() + 18,
+              height: angular.element(cellEle).height() + 14
+            };
+            scope.editText = angular.element(cellEle).text();
+            var ta = $compile('<textarea id="edit-textarea" style="width: ' + cellProps.width + 'px; height: '
+              + cellProps.height + 'px;" ng-keypress="taKeypress($event)" ng-model="editText">' + cellData.data() + '</textarea>')(scope);
+            angular.element(cellEle).empty().append(ta);
+
+            $('#edit-textarea').focus();
+            scope.state.edit.cellData = cellData;
+            scope.state.edit.cellEle = cellEle;
+            scope.state.edit.editing = true;
+          } else if (angular.element('#edit-textarea').length && angular.element(cellEle)[0] !== (angular.element('#edit-textarea').parent())[0]) {
+            scope.state.edit.cellData.data(scope.editText);
+            angular.element('#edit-textarea').remove();
+            scope.state.edit.editing = false;
+          }
+        };
+
         function makeEditTable (data, container) {
           console.log('container', container);
           $timeout(function () {
-            $('#' + container).DataTable(data);
+            var table = $('#' + container).DataTable(data);
+            // attach row click event for editing
+            $('#' + container + ' tbody').on('click', 'td', function () { // jQuery because the library uses it :(
+              var rowEle = table.row(this),
+                rowData = table.row(this).data(),
+                cell = table.cell(this),
+                cellEle = this;
+              scope.handleInlineEditing(rowData, rowEle, cell, cellEle);
+            } );
           }, 250);
 
         }
@@ -60,22 +106,13 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
             });
             var tableData = {
               aaData: gamesData,
-              aoColumns: [
-                {'mDataProp': 'title', title: 'Title'},
-                {'mDataProp': 'platform', title: 'Platform'},
-                {'mDataProp': 'genre', title: 'Genre'},
-                {'mDataProp': 'price', title: 'Value', render: {'_': 'filter', 'filter': 'filter', 'display': 'display'}},
-                {'mDataProp': 'rating', title: 'Rating'},
-                {'mDataProp': 'releasedate', title: 'Released'},
-                {'mDataProp': 'addeddate', title: 'Added'},
-                {'mDataProp': null, 'bSortable': false, 'mRender': function (o) {return '<button class="game-delete">Delete</button>';}}
-              ],
+              aoColumns: scope.formOptions.dataTable,
               aaSorting: [[1,'asc'], [0,'asc']],
               lengthMenu: [[10, 25, 50, -1], [10, 25, 50, 'All']],
               iDisplayLength: -1
             };
             makeEditTable(tableData, container);
-            // attach row click event for editing
+
             // attach delete button click event for confirmation dialog and delete action
           }
         }

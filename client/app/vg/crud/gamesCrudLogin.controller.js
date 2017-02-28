@@ -27,6 +27,10 @@ angular.module('portfolioApp').controller('GamesLoginCtrl', ['VgData', '$state',
       }
     };
 
+    glc.keypress = function (key) {
+      if (key.which === 13) glc.authenticate();
+    };
+
     (function () {
       var sessionToken = sessionStorage.getItem('jgToken') || false;
       if (sessionToken) {

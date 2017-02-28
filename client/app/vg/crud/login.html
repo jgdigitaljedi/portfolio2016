@@ -17,7 +17,7 @@
               <div>
                 <md-input-container>
                   <label class="auth-input-label">Password: </label>
-                  <input class="auth-input" ng-model="glc.state.password" type="password" />
+                  <input class="auth-input" ng-model="glc.state.password" type="password" ng-keypress="glc.keypress($event)" />
                 </md-input-container>
               </div>
             </div>

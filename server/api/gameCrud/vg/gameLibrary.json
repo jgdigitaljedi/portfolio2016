@@ -2142,6 +2142,26 @@
             "genre": "Role-Playing, Action-Adventure",
             "price": 17,
             "platform": "Nintendo 3DS"
+        },
+        {
+            "addeddate": "02/27/2017",
+            "gbId": "3030-13960",
+            "title": "Life Force",
+            "rating": "ESRB: E",
+            "releasedate": "09/25/1987",
+            "genre": "Action, Shoot 'Em Up",
+            "platform": "NES",
+            "price": 11
+        },
+        {
+            "addeddate": "02/28/2017",
+            "gbId": "3030-5825",
+            "title": "Frequency",
+            "rating": "ESRB: E",
+            "releasedate": "11/19/2001",
+            "genre": "Music",
+            "price": 8,
+            "platform": "PlayStation 2"
         }
     ]
 }

@@ -36,6 +36,25 @@
         }
       }
     }
+
+    .edit-table-container {
+
+      table {
+
+        tr {
+          cursor: pointer;
+        }
+
+        tbody tr:nth-child(odd) {
+          background-color: #f1f1f1;
+        }
+
+        tbody tr {
+          @include box_shadow(1);
+
+        }
+      }
+    }
   }
 
   .editor-form-nav-button {
