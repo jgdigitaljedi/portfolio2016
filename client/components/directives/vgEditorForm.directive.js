@@ -56,9 +56,20 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
 
         }
 
-        function makeEditCall (data) {
-          console.log('rowData', data);
-          console.log('scope.table data', scope.table.data());
+        function makeEditCall (request, which) {
+          console.log('request', request);
+          // console.log('scope.table data', scope.table.data());
+
+          if (which === 'Game') {
+            request.game.price = request.game.price.filter;
+          }
+          VgData['edit' + which](request)
+            .then(function (response) {
+              console.log('resposne from edit', response);
+            })
+            .catch(function (err) {
+              console.log('error from edit', err);
+            });
         }
 
         scope.taKeypress = function (key) {
@@ -66,7 +77,7 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
               scope.state.edit.cellData.data(scope.editText);
               angular.element('#edit-textarea').remove();
               scope.state.edit.editing = false;
-              makeEditCall(scope.state.edit.rowData);
+              makeEditCall({game: scope.state.edit.rowData, token: sessionStorage.getItem('jgToken')}, 'Game');
             }
         };
 

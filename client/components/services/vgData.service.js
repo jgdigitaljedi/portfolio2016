@@ -281,6 +281,15 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
     function editGame (game) {
       var def = $q.defer();
       console.log('edit game', game);
+      postWithJson('editgame', game)
+        .then(function (result) {
+          def.resolve(result);
+
+        })
+        .catch(function (err) {
+          def.reject(err);
+        });
+      return def.promise;
     }
 
 

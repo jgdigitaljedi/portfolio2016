@@ -204,15 +204,16 @@ exports.addConsole = function(req, res) {
 
 exports.editGame = function(req, res) {
   console.log('edit game called');
-  validateToken(req.body.gameRequest.token, true)
+  validateToken(req.body.token, true)
     .then(function (loggedIn) {
       fs.readFile(path.join(__dirname, 'vg/gameLibrary.json'), 'utf-8', function (err, data) {
         var newGameData = req.body.game,
           gameLib = JSON.parse(data);
 
-        gameLib.forEach(function (item) {
+        gameLib.games.forEach(function (item, index) {
           if (parseInt(newGameData.id) === parseInt(item.id)) {
-            item = newGameData;
+            console.log('editing game with id', item.id);
+            gameLib.games[index] = newGameData;
           }
         });
         writeToJson(gameLib, 'gameLibrary.json');

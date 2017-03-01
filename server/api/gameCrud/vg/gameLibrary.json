@@ -33,7 +33,8 @@
             "addeddate": 42560,
             "price": 10.25,
             "gbId": "3030-422",
-            "id": 3
+            "id": 3,
+            "rating": "ESRB: M"
         },
         {
             "title": "Jet Set Radio",
@@ -80,7 +81,8 @@
             "addeddate": "1/6/17",
             "price": 8,
             "gbId": "3030-4652",
-            "id": 7
+            "id": 7,
+            "rating": "ESRB: M"
         },
         {
             "title": "Quake III: Arena",
@@ -92,7 +94,8 @@
             "addeddate": 42559,
             "price": 15.5,
             "gbId": "3030-3874",
-            "id": 8
+            "id": 8,
+            "rating": "ESRB: M"
         },
         {
             "title": "San Francisco Rush 2049",
