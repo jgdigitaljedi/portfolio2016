@@ -16,5 +16,6 @@ router.post('/addgame', games.addGame);
 router.post('/addconsole', games.addConsole);
 router.post('/editgame', games.editGame);
 router.post('/editconsole', games.editConsole);
+router.post('/deleteGame', games.deleteGame);
 
 module.exports = router;

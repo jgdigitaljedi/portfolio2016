@@ -15,6 +15,7 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
 
         scope.state = {
           current: 'add',
+          lastId: 0,
           which: scope.formOptions.which,
           tooltip: {
             show: false,
@@ -23,6 +24,8 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
           edit: {
             cellData: '',
             cellEle: '',
+            rowData: '',
+            rowEle: '',
             editing: false
           }
         };
@@ -40,6 +43,7 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
               genres.forEach(function (g) {
                 if (genreList.indexOf(g) < 0) genreList.push(g);
               });
+              if (parseInt(item.id) > scope.state.lastId) scope.state.lastId = parseInt(item.id);
             });
             scope.consoleDd = consoleDd;
             scope.genreList = genreList;
@@ -48,18 +52,33 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
 
         scope.searchParams = {addeddate: moment().format('MM/DD/YYYY')};
 
+        function deleteDataCall () {
+
+        }
+
+        function makeEditCall (data) {
+          console.log('rowData', data);
+          console.log('scope.table data', scope.table.data());
+        }
+
         scope.taKeypress = function (key) {
             if (key.charCode === 13) {
               scope.state.edit.cellData.data(scope.editText);
               angular.element('#edit-textarea').remove();
               scope.state.edit.editing = false;
-              // data object is updated; need to send back to server
+              makeEditCall(scope.state.edit.rowData);
             }
         };
 
+        function deleteRow (data, ele) {
+          scope.table.row(ele).remove();
+          scope.table.draw();
+          deleteDataCall();
+        }
+
         scope.handleInlineEditing = function (rowData, rowEle, cellData, cellEle) {
           if (angular.element(cellEle).find('.game-delete').length > 0) {
-            console.log('delete action goes here');
+            deleteRow(rowData, rowEle);
           } else if (!scope.state.edit.editing) {
             var cellProps = {
               width: angular.element(cellEle).width() + 18,
@@ -73,23 +92,25 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
             $('#edit-textarea').focus();
             scope.state.edit.cellData = cellData;
             scope.state.edit.cellEle = cellEle;
+            scope.state.edit.rowEle = rowEle;
+            scope.state.edit.rowData = rowData;
             scope.state.edit.editing = true;
           } else if (angular.element('#edit-textarea').length && angular.element(cellEle)[0] !== (angular.element('#edit-textarea').parent())[0]) {
             scope.state.edit.cellData.data(scope.editText);
             angular.element('#edit-textarea').remove();
             scope.state.edit.editing = false;
+            makeEditCall(rowData);
           }
         };
 
         function makeEditTable (data, container) {
-          console.log('container', container);
           $timeout(function () {
-            var table = $('#' + container).DataTable(data);
-            // attach row click event for editing
+            scope.table = $('#' + container).DataTable(data);
+
             $('#' + container + ' tbody').on('click', 'td', function () { // jQuery because the library uses it :(
-              var rowEle = table.row(this),
-                rowData = table.row(this).data(),
-                cell = table.cell(this),
+              var rowEle = scope.table.row(this),
+                rowData = scope.table.row(this).data(),
+                cell = scope.table.cell(this),
                 cellEle = this;
               scope.handleInlineEditing(rowData, rowEle, cell, cellEle);
             } );
@@ -98,7 +119,6 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
         }
 
         function getDataForEditTable (which, container) {
-          console.log('gamesData', gamesData);
           if (which === 'games') {
             gamesData.forEach(function (item) {
               if (!item.hasOwnProperty('rating')) item.rating = 'none';
@@ -112,8 +132,6 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
               iDisplayLength: -1
             };
             makeEditTable(tableData, container);
-
-            // attach delete button click event for confirmation dialog and delete action
           }
         }
 
@@ -157,7 +175,6 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
               case 'genres':
                 var genArr = [];
                 item.field = 'genre';
-                console.log('genres', item.value);
                 item.value.forEach(function (i) {
                   genArr.push(i.name);
                 });
@@ -189,7 +206,6 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
         }
 
         scope.showTooltip = function (which) {
-          console.log('show tt', which);
           scope.state.tooltip.show = true;
           if (which === 'genreList') {
             var template = '<table class="genre-table"><tr>',
@@ -267,7 +283,8 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
                     token: sessionStorage.getItem('jgToken')
                   }
                 };
-
+                request.gameRequest.gameData.id = scope.state.lastId + 1;
+                scope.state.lastId++;
                 VgData.addGame(request).then(function (result) {
                   console.log('response in directive', result);
                   if (!result.data.error) {

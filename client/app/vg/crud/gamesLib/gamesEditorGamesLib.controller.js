@@ -32,13 +32,15 @@ angular.module('portfolioApp').controller('EditGamesLibCtrl', ['VgData',
         {'mDataProp': 'title', title: 'Title'},
         {'mDataProp': 'platform', title: 'Platform'},
         {'mDataProp': 'genre', title: 'Genre'},
-        {'mDataProp': 'price', title: 'Value', render: {'_': 'filter', 'filter': 'filter', 'display': 'display'}},
+        {'mDataProp': 'price.filter', title: 'Value'},
         {'mDataProp': 'rating', title: 'Rating'},
         {'mDataProp': 'releasedate', title: 'Released'},
         {'mDataProp': 'addeddate', title: 'Added'},
         {'mDataProp': null, 'bSortable': false, 'mRender': function (o) {return '<button class="game-delete">Delete</button>';}}
-      ]
+      ],
+      deleteRow: true
     }
   }
 ]);
 
+// {'mDataProp': 'price', title: 'Value', render: {'_': 'filter', 'filter': 'filter', 'display': 'display'}},
