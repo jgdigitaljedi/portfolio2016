@@ -2,67 +2,71 @@
     "games": [
         {
             "title": "Metal Head",
-            "releasedate": "02/24/95",
+            "releasedate": "02/24/1995",
             "platform": "32X",
-            "genre": "Action, Mech",
+            "genre": "Action, Mech, Simulation",
             "publisher": "Sega",
-            "addeddate": "01/06/17",
-            "price": 9,
+            "addeddate": "01/06/2017",
             "gbId": "3030-4621",
-            "id": 1
+            "id": 1,
+            "rating": "ESRB: E",
+            "price": "9.41"
         },
         {
             "title": "Crazy Taxi",
-            "releasedate": 36560,
+            "releasedate": "01/24/2000",
             "platform": "Dreamcast",
             "genre": "Racing",
             "publisher": "Sega",
             "developer": "AM3",
             "addeddate": 42559,
-            "price": 8.5,
             "gbId": "3030-9112",
-            "id": 2
+            "id": 2,
+            "rating": "ESRB: E",
+            "price": "10"
         },
         {
             "title": "House of the Dead 2",
-            "releasedate": 36462,
+            "releasedate": "11/01/1998",
             "platform": "Dreamcast",
-            "genre": "Action, Shooter",
+            "genre": "Action, Shooter, Horror",
             "publisher": "Sega",
             "developer": "AM1",
             "addeddate": 42560,
-            "price": 10.25,
             "gbId": "3030-422",
             "id": 3,
-            "rating": "ESRB: M"
+            "rating": "ESRB: M",
+            "price": "15"
         },
         {
-            "title": "Jet Set Radio",
-            "releasedate": 36706,
+            "title": "Jet Grind Radio",
+            "releasedate": "06/29/2000",
             "platform": "Dreamcast",
-            "genre": "Skating",
+            "genre": "Skating, Action",
             "publisher": "Sega",
             "developer": "Smilebit",
             "addeddate": 42560,
-            "price": 19.5,
             "gbId": "3030-20096",
-            "id": 4
+            "id": 4,
+            "rating": "ESRB: T",
+            "price": "18"
         },
         {
             "title": "Looney Tunes: Space Race",
-            "releasedate": 36857,
+            "releasedate": "11/27/2000",
             "platform": "Dreamcast",
             "genre": "Action, Racing",
             "publisher": "Atari",
             "developer": "Atari",
             "addeddate": 42560,
-            "price": 14,
             "gbId": "3030-21261",
-            "id": 5
+            "id": 5,
+            "rating": "ESRB: E",
+            "price": "13.4"
         },
         {
             "title": "Marvel vs. Capcom",
-            "releasedate": 36244,
+            "releasedate": "01/23/1998",
             "platform": "Dreamcast",
             "genre": "Fighting",
             "publisher": "Capcom",
@@ -70,15 +74,16 @@
             "addeddate": 42560,
             "price": 26,
             "gbId": "3030-8605",
-            "id": 6
+            "id": 6,
+            "rating": "ESRB: T"
         },
         {
             "title": "Mortal Kombat Gold",
-            "releasedate": "10/24/00",
+            "releasedate": "10/24/2000",
             "platform": "Dreamcast",
             "genre": "Fighting",
             "publisher": "Sega",
-            "addeddate": "1/6/17",
+            "addeddate": "01/06/2017",
             "price": 8,
             "gbId": "3030-4652",
             "id": 7,
@@ -86,7 +91,7 @@
         },
         {
             "title": "Quake III: Arena",
-            "releasedate": 36412,
+            "releasedate": "12/02/1999",
             "platform": "Dreamcast",
             "genre": "FPS",
             "publisher": "Midway",
@@ -99,19 +104,20 @@
         },
         {
             "title": "San Francisco Rush 2049",
-            "releasedate": 36799,
+            "releasedate": "09/07/2000",
             "platform": "Dreamcast",
-            "genre": "Racing",
+            "genre": "Racing, Vehicular Combat",
             "publisher": "Midway",
             "developer": "Midway",
             "addeddate": 42560,
             "price": 16,
             "gbId": "3030-18834",
-            "id": 9
+            "id": 9,
+            "rating": "ESRB: E"
         },
         {
             "title": "Sonic Adventure",
-            "releasedate": 36152,
+            "releasedate": "11/27/1998",
             "platform": "Dreamcast",
             "genre": "Platformer",
             "publisher": "Sega",
@@ -119,11 +125,12 @@
             "addeddate": 42559,
             "price": 12.75,
             "gbId": "3030-7852",
-            "id": 10
+            "id": 10,
+            "rating": "ESRB: E"
         },
         {
             "title": "Tony Hawk's Pro Skater 2",
-            "releasedate": 36837,
+            "releasedate": "09/20/2000",
             "platform": "Dreamcast",
             "genre": "Sports, Skating",
             "publisher": "Activision",
@@ -131,11 +138,12 @@
             "addeddate": 42559,
             "price": 8,
             "gbId": "3030-990",
-            "id": 11
+            "id": 11,
+            "rating": "ESRB: T"
         },
         {
             "title": "Virtua Tennis",
-            "releasedate": 36777,
+            "releasedate": "07/12/2000",
             "platform": "Dreamcast",
             "genre": "Sports",
             "publisher": "Sega",
@@ -143,11 +151,12 @@
             "addeddate": 42560,
             "price": 5.5,
             "gbId": "3030-10676",
-            "id": 12
+            "id": 12,
+            "rating": "ESRB: E"
         },
         {
             "title": "Wacky Races",
-            "releasedate": 36707,
+            "releasedate": "06/26/2000",
             "platform": "Dreamcast",
             "genre": "Racing",
             "publisher": "Atari",
@@ -155,11 +164,12 @@
             "addeddate": 42560,
             "price": 19,
             "gbId": "3030-21342",
-            "id": 13
+            "id": 13,
+            "rating": "ESRB: E"
         },
         {
             "title": "Worms: Armageddon",
-            "releasedate": 36504,
+            "releasedate": "05/31/1999",
             "platform": "Dreamcast",
             "genre": "Puzzle, Strategy",
             "publisher": "MicroProse Software, Inc.",
@@ -167,11 +177,12 @@
             "addeddate": 42678,
             "price": 10,
             "gbId": "3030-17255",
-            "id": 14
+            "id": 14,
+            "rating": "ESRB: E"
         },
         {
             "title": "Donkey Konga 2",
-            "releasedate": 38482,
+            "releasedate": "05/09/2005",
             "platform": "GameCube",
             "genre": "Music, Party",
             "publisher": "Nintendo",
@@ -179,11 +190,12 @@
             "addeddate": 42515,
             "price": 7.75,
             "gbId": "3030-19832",
-            "id": 15
+            "id": 15,
+            "rating": "ESRB: T"
         },
         {
             "title": "F-Zero GX",
-            "releasedate": 37859,
+            "releasedate": "07/25/2003",
             "platform": "GameCube",
             "genre": "Racing",
             "publisher": "Nintendo",
@@ -191,7 +203,8 @@
             "addeddate": 42515,
             "price": 30,
             "gbId": "3030-20448",
-            "id": 16
+            "id": 16,
+            "rating": "ESRB: T"
         },
         {
             "title": "The Legend of Zelda Collector's Edition",
@@ -203,7 +216,8 @@
             "addeddate": 42515,
             "price": 37,
             "gbId": "3030-14114",
-            "id": 17
+            "id": 17,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "The Legend of Zelda: The Wind Waker",
@@ -215,11 +229,12 @@
             "addeddate": 42515,
             "price": 25,
             "gbId": "3030-18508",
-            "id": 18
+            "id": 18,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Mario Golf: Toadstool Tour",
-            "releasedate": 37830,
+            "releasedate": "07/28/2003",
             "platform": "GameCube",
             "genre": "Sports, Golf",
             "publisher": "Nintendo",
@@ -227,11 +242,12 @@
             "addeddate": 42515,
             "price": 9.5,
             "gbId": "3030-1598",
-            "id": 19
+            "id": 19,
+            "rating": "ESRB: E"
         },
         {
             "title": "Mario Kart: Double Dash!!",
-            "releasedate": 37942,
+            "releasedate": "11/18/2003",
             "platform": "GameCube",
             "genre": "Racing",
             "publisher": "Nintendo",
@@ -239,11 +255,12 @@
             "addeddate": 42515,
             "price": 35,
             "gbId": "3030-18757",
-            "id": 20
+            "id": 20,
+            "rating": "ESRB: E"
         },
         {
             "title": "Mario Party 6",
-            "releasedate": 38327,
+            "releasedate": "12/06/2004",
             "platform": "GameCube",
             "genre": "Party, Puzzle",
             "publisher": "Nintendo",
@@ -251,11 +268,12 @@
             "addeddate": 42515,
             "price": 35,
             "gbId": "3030-8380",
-            "id": 21
+            "id": 21,
+            "rating": "ESRB: E"
         },
         {
             "title": "Metroid Prime",
-            "releasedate": 37578,
+            "releasedate": "11/18/2002",
             "platform": "GameCube",
             "genre": "FPS, RPG",
             "publisher": "Nintendo",
@@ -263,7 +281,8 @@
             "addeddate": 42678,
             "price": 15,
             "gbId": "3030-15473",
-            "id": 22
+            "id": 22,
+            "rating": "ESRB: T"
         },
         {
             "title": "NBA Street Vol. 2",
@@ -275,7 +294,8 @@
             "addeddate": 42515,
             "price": 13,
             "gbId": "3030-9866",
-            "id": 23
+            "id": 23,
+            "rating": "ESRB: E"
         },
         {
             "title": "Need for Speed Carbon",
@@ -287,7 +307,8 @@
             "addeddate": 42515,
             "price": 9,
             "gbId": "3030-8844",
-            "id": 24
+            "id": 24,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Prince of Persia: The Sands of Time",
@@ -299,7 +320,8 @@
             "addeddate": 42515,
             "price": 8.25,
             "gbId": "3030-5235",
-            "id": 25
+            "id": 25,
+            "rating": "ESRB: T"
         },
         {
             "title": "Resident Evil 4",
@@ -311,7 +333,8 @@
             "addeddate": 42515,
             "price": 11,
             "gbId": "3030-1578",
-            "id": 26
+            "id": 26,
+            "rating": "ESRB: M"
         },
         {
             "title": "Sonic Gems Collection",
@@ -323,7 +346,8 @@
             "addeddate": 42515,
             "price": 20,
             "gbId": "3030-14113",
-            "id": 27
+            "id": 27,
+            "rating": "ESRB: E"
         },
         {
             "title": "Sonic Mega Collection",
@@ -335,7 +359,8 @@
             "addeddate": 42515,
             "price": 8,
             "gbId": "3030-17691",
-            "id": 28
+            "id": 28,
+            "rating": "ESRB: E"
         },
         {
             "title": "Super Mario Sunshine",
@@ -347,7 +372,8 @@
             "addeddate": 42515,
             "price": 32.5,
             "gbId": "3030-6649",
-            "id": 29
+            "id": 29,
+            "rating": "ESRB: E"
         },
         {
             "title": "Super Monkey Ball 2",
@@ -359,7 +385,8 @@
             "addeddate": 42515,
             "price": 10,
             "gbId": "3030-5122",
-            "id": 30
+            "id": 30,
+            "rating": "ESRB: E"
         },
         {
             "title": "XGRA: Extreme G Racing Association",
@@ -371,7 +398,8 @@
             "addeddate": 42515,
             "price": 15,
             "gbId": "3030-19665",
-            "id": 31
+            "id": 31,
+            "rating": "ESRB: T"
         },
         {
             "title": "Columns",
@@ -382,7 +410,8 @@
             "addeddate": "01/06/17",
             "price": 9,
             "gbId": "3030-5487",
-            "id": 32
+            "id": 32,
+            "rating": "JOEY: E"
         },
         {
             "title": "General Chaos",
@@ -394,7 +423,8 @@
             "addeddate": 42519,
             "price": 18,
             "gbId": "3030-2267",
-            "id": 33
+            "id": 33,
+            "rating": "JOEY: E"
         },
         {
             "title": "NFL Football '94",
@@ -406,7 +436,8 @@
             "addeddate": 42519,
             "price": 3.6,
             "gbId": "3030-164",
-            "id": 34
+            "id": 34,
+            "rating": "JOEY: E"
         },
         {
             "title": "Sonic & Knuckles",
@@ -418,7 +449,8 @@
             "addeddate": 42559,
             "price": 11.5,
             "gbId": "3030-18115",
-            "id": 35
+            "id": 35,
+            "rating": "JOEY: E"
         },
         {
             "title": "Sonic the Hedgehog 2",
@@ -430,7 +462,8 @@
             "addeddate": 42519,
             "price": 3.5,
             "gbId": "3030-1662",
-            "id": 36
+            "id": 36,
+            "rating": "JOEY: E"
         },
         {
             "title": "Bubble Bobble",
@@ -442,7 +475,8 @@
             "addeddate": 42563,
             "price": 20,
             "gbId": "3030-4995",
-            "id": 37
+            "id": 37,
+            "rating": "JOEY: E"
         },
         {
             "title": "BurgerTime",
@@ -454,7 +488,8 @@
             "addeddate": 42515,
             "price": 9.5,
             "gbId": "3030-4702",
-            "id": 38
+            "id": 38,
+            "rating": "JOEY: E"
         },
         {
             "title": "California Games",
@@ -466,7 +501,8 @@
             "addeddate": 42515,
             "price": 6,
             "gbId": "3030-3193",
-            "id": 39
+            "id": 39,
+            "rating": "JOEY: E"
         },
         {
             "title": "Castlevania III: Dracula's Curse",
@@ -478,7 +514,8 @@
             "addeddate": 42515,
             "price": 24,
             "gbId": "3030-19328",
-            "id": 40
+            "id": 40,
+            "rating": "JOEY: E10+"
         },
         {
             "title": "Dr. Mario",
@@ -490,7 +527,8 @@
             "addeddate": 42515,
             "price": 5.6,
             "gbId": "3030-17641",
-            "id": 41
+            "id": 41,
+            "rating": "ESRB: E"
         },
         {
             "title": "Jeopardy! 25th Anniversary Edition",
@@ -502,7 +540,8 @@
             "addeddate": 42515,
             "price": 4,
             "gbId": "3030-18405",
-            "id": 42
+            "id": 42,
+            "rating": "JOEY: E"
         },
         {
             "title": "John Elway's Quarterback",
@@ -514,7 +553,8 @@
             "addeddate": 42515,
             "price": 2.7,
             "gbId": "3030-98",
-            "id": 43
+            "id": 43,
+            "rating": "JOEY: E"
         },
         {
             "title": "Kirby's Adventure",
@@ -526,7 +566,8 @@
             "addeddate": 42515,
             "price": 19,
             "gbId": "3030-15890",
-            "id": 44
+            "id": 44,
+            "rating": "ESRB: E"
         },
         {
             "title": "Little Nemo: The Dream Master",
@@ -538,7 +579,8 @@
             "addeddate": 42515,
             "price": 10,
             "gbId": "3030-15110",
-            "id": 45
+            "id": 45,
+            "rating": "JOEY: E"
         },
         {
             "title": "Mickey Mousecapade",
@@ -550,7 +592,8 @@
             "addeddate": 42515,
             "price": 6,
             "gbId": "3030-17706",
-            "id": 46
+            "id": 46,
+            "rating": "JOEY: E"
         },
         {
             "title": "Monopoly",
@@ -562,7 +605,8 @@
             "addeddate": 42515,
             "price": 5,
             "gbId": "3030-2958",
-            "id": 47
+            "id": 47,
+            "rating": "JOEY: E"
         },
         {
             "title": "Q*bert",
@@ -574,7 +618,8 @@
             "addeddate": 42515,
             "price": 7.5,
             "gbId": "3030-20782",
-            "id": 48
+            "id": 48,
+            "rating": "JOEY: E"
         },
         {
             "title": "Spy vs. Spy",
@@ -586,7 +631,8 @@
             "addeddate": 42515,
             "price": 7.5,
             "gbId": "3030-15637",
-            "id": 49
+            "id": 49,
+            "rating": "JOEY: E"
         },
         {
             "title": "Super Mario Bros. / Duckhunt",
@@ -598,7 +644,8 @@
             "addeddate": 42515,
             "price": 4.25,
             "gbId": "3030-12460",
-            "id": 50
+            "id": 50,
+            "rating": "JOEY: E"
         },
         {
             "title": "Super Mario Bros. 3",
@@ -610,7 +657,8 @@
             "addeddate": 42515,
             "price": 12.5,
             "gbId": "3030-10299",
-            "id": 51
+            "id": 51,
+            "rating": "ESRB: E"
         },
         {
             "title": "Super Team Games",
@@ -622,7 +670,8 @@
             "addeddate": 42515,
             "price": 4.5,
             "gbId": "3030-10067",
-            "id": 52
+            "id": 52,
+            "rating": "JOEY: E"
         },
         {
             "title": "Teenage Mutant Ninja Turtles",
@@ -634,7 +683,8 @@
             "addeddate": 42515,
             "price": 8.5,
             "gbId": "3030-20790",
-            "id": 53
+            "id": 53,
+            "rating": "JOEY: E"
         },
         {
             "title": "Teenage Mutant Ninja Turtles II: The Arcade Game",
@@ -646,7 +696,8 @@
             "addeddate": 42515,
             "price": 12.5,
             "gbId": "3030-23408",
-            "id": 54
+            "id": 54,
+            "rating": "JOEY: E"
         },
         {
             "title": "Thundercade",
@@ -658,7 +709,8 @@
             "addeddate": 42515,
             "price": 8,
             "gbId": "3030-21477",
-            "id": 55
+            "id": 55,
+            "rating": "JOEY: E"
         },
         {
             "title": "Wheel of Fortune: Junior Edition",
@@ -670,7 +722,8 @@
             "addeddate": 42515,
             "price": 3,
             "gbId": "3030-8864",
-            "id": 56
+            "id": 56,
+            "rating": "JOEY: E"
         },
         {
             "title": "World Class Track Meet",
@@ -682,7 +735,8 @@
             "addeddate": 42515,
             "price": 4.75,
             "gbId": "3030-7309",
-            "id": 57
+            "id": 57,
+            "rating": "JOEY: E"
         },
         {
             "title": "Adventure Time: Explore the Dungeon Because I DON'T KNOW!",
@@ -694,7 +748,8 @@
             "addeddate": 42678,
             "price": 6,
             "gbId": "3030-42746",
-            "id": 58
+            "id": 58,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Animal Crossing: New Leaf",
@@ -706,7 +761,8 @@
             "addeddate": 42515,
             "price": 16.5,
             "gbId": "3030-31752",
-            "id": 59
+            "id": 59,
+            "rating": "ESRB: E"
         },
         {
             "title": "Kirby Planet Robobot",
@@ -718,7 +774,8 @@
             "addeddate": 42678,
             "price": 28.5,
             "gbId": "3030-52921",
-            "id": 60
+            "id": 60,
+            "rating": "ESRB: E"
         },
         {
             "title": "LEGO Batman 3: Beyond Gotham",
@@ -730,7 +787,8 @@
             "addeddate": 42515,
             "price": 11.5,
             "gbId": "3030-46430",
-            "id": 61
+            "id": 61,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "LEGO Jurassic World",
@@ -742,7 +800,8 @@
             "addeddate": 42515,
             "price": 11,
             "gbId": "3030-48682",
-            "id": 62
+            "id": 62,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "LEGO Lord of the Rings",
@@ -754,7 +813,8 @@
             "addeddate": 42515,
             "price": 5,
             "gbId": "3030-38282",
-            "id": 63
+            "id": 63,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "LEGO Ninjago Droids",
@@ -766,7 +826,8 @@
             "addeddate": 42515,
             "price": 7,
             "gbId": "3030-46610",
-            "id": 64
+            "id": 64,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Luigi's Mansion: Dark Moon",
@@ -777,7 +838,8 @@
             "addeddate": "01/06/17",
             "price": 17.66,
             "gbId": "3030-35572",
-            "id": 65
+            "id": 65,
+            "rating": "ESRB: E"
         },
         {
             "title": "Pokemon X/Y",
@@ -789,7 +851,8 @@
             "addeddate": "01/09/17",
             "price": 40,
             "gbId": "3030-41088",
-            "id": 66
+            "id": 66,
+            "rating": "ESRB: E"
         },
         {
             "title": "Super Mario 3D Land",
@@ -801,7 +864,8 @@
             "addeddate": 42560,
             "price": 15,
             "gbId": "3030-34303",
-            "id": 67
+            "id": 67,
+            "rating": "ESRB: E"
         },
         {
             "title": "Super Mario Maker 3DS",
@@ -813,7 +877,8 @@
             "addeddate": 42560,
             "price": 40,
             "gbId": "3030-55308",
-            "id": 68
+            "id": 68,
+            "rating": "ESRB: E"
         },
         {
             "title": "Terraria",
@@ -825,7 +890,8 @@
             "addeddate": 42515,
             "price": 15,
             "gbId": "3030-34940",
-            "id": 69
+            "id": 69,
+            "rating": "ESRB: T"
         },
         {
             "title": "Cruis'n USA",
@@ -837,7 +903,8 @@
             "addeddate": 42517,
             "price": 5,
             "gbId": "3030-9890",
-            "id": 70
+            "id": 70,
+            "rating": "ESRB: E"
         },
         {
             "title": "Donkey Kong 64",
@@ -849,7 +916,8 @@
             "addeddate": 42515,
             "price": 15,
             "gbId": "3030-15000",
-            "id": 71
+            "id": 71,
+            "rating": "ESRB: E"
         },
         {
             "title": "Extreme-G 2",
@@ -861,7 +929,8 @@
             "addeddate": 42515,
             "price": 5,
             "gbId": "3030-9774",
-            "id": 72
+            "id": 72,
+            "rating": "ESRB: E"
         },
         {
             "title": "F1 Pole Position 64",
@@ -873,7 +942,8 @@
             "addeddate": 42517,
             "price": 4.7,
             "gbId": "3030-3764",
-            "id": 73
+            "id": 73,
+            "rating": "ESRB: E"
         },
         {
             "title": "GoldenEye 007",
@@ -885,7 +955,8 @@
             "addeddate": 42678,
             "price": 16.5,
             "gbId": "3030-3166",
-            "id": 74
+            "id": 74,
+            "rating": "ESRB: T"
         },
         {
             "title": "The Legend of Zelda: Ocarina of Time",
@@ -897,7 +968,8 @@
             "addeddate": 42678,
             "price": 40,
             "gbId": "3030-12572",
-            "id": 75
+            "id": 75,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Perfect Dark",
@@ -909,7 +981,8 @@
             "addeddate": 42515,
             "price": 9,
             "gbId": "3030-21256",
-            "id": 76
+            "id": 76,
+            "rating": "ESRB: M"
         },
         {
             "title": "San Francisco Rush: Extreme Racing",
@@ -921,7 +994,8 @@
             "addeddate": 42517,
             "price": 6,
             "gbId": "3030-8458",
-            "id": 77
+            "id": 77,
+            "rating": "ESRB: KA"
         },
         {
             "title": "South Park",
@@ -933,7 +1007,8 @@
             "addeddate": 42515,
             "price": 7.7,
             "gbId": "3030-8845",
-            "id": 78
+            "id": 78,
+            "rating": "ESRB: M"
         },
         {
             "title": "Star Wars: Rogue Squadron",
@@ -944,7 +1019,8 @@
             "addeddate": "01/06/17",
             "price": 9,
             "gbId": "3030-4011",
-            "id": 79
+            "id": 79,
+            "rating": "ESRB: T"
         },
         {
             "title": "Amplitude",
@@ -956,7 +1032,8 @@
             "addeddate": 42515,
             "price": 10,
             "gbId": "3030-1420",
-            "id": 80
+            "id": 80,
+            "rating": "ESRB: E"
         },
         {
             "title": "Buzz!: The Mega Quiz",
@@ -968,7 +1045,8 @@
             "addeddate": 42515,
             "price": 4,
             "gbId": "3030-10866",
-            "id": 81
+            "id": 81,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Devil May Cry",
@@ -980,7 +1058,8 @@
             "addeddate": 42515,
             "price": 4.4,
             "gbId": "3030-13072",
-            "id": 82
+            "id": 82,
+            "rating": "ESRB: M"
         },
         {
             "title": "FIFA World Cup Germany 2006",
@@ -992,7 +1071,8 @@
             "addeddate": 42515,
             "price": 5,
             "gbId": "3030-1787",
-            "id": 83
+            "id": 83,
+            "rating": "ESRB: E"
         },
         {
             "title": "God of War",
@@ -1004,7 +1084,8 @@
             "addeddate": 42515,
             "price": 6.2,
             "gbId": "3030-6959",
-            "id": 84
+            "id": 84,
+            "rating": "ESRB: M"
         },
         {
             "title": "Grand Theft Auto: San Andreas",
@@ -1016,7 +1097,8 @@
             "addeddate": 42515,
             "price": 6.2,
             "gbId": "3030-7120",
-            "id": 85
+            "id": 85,
+            "rating": "ESRB: AO"
         },
         {
             "title": "Guitar Hero",
@@ -1028,7 +1110,8 @@
             "addeddate": 42515,
             "price": 12.5,
             "gbId": "3030-6311",
-            "id": 86
+            "id": 86,
+            "rating": "ESRB: T"
         },
         {
             "title": "Guitar Hero Encore: Rocks the 80s",
@@ -1040,7 +1123,8 @@
             "addeddate": 42515,
             "price": 3.8,
             "gbId": "3030-12241",
-            "id": 87
+            "id": 87,
+            "rating": "ESRB: T"
         },
         {
             "title": "Guitar Hero II",
@@ -1052,7 +1136,8 @@
             "addeddate": 42515,
             "price": 3,
             "gbId": "3030-14916",
-            "id": 88
+            "id": 88,
+            "rating": "ESRB: T"
         },
         {
             "title": "Guitar Hero III: Legends of Rock",
@@ -1064,7 +1149,8 @@
             "addeddate": 42515,
             "price": 5.5,
             "gbId": "3030-4031",
-            "id": 89
+            "id": 89,
+            "rating": "ESRB: T"
         },
         {
             "title": "Heroes of Might and Magic: Quest for the DragonBone Staff",
@@ -1076,7 +1162,8 @@
             "addeddate": 42515,
             "price": 7,
             "gbId": "3030-17108",
-            "id": 90
+            "id": 90,
+            "rating": "ESRB: E"
         },
         {
             "title": "Hitman 2: Silent Assassin",
@@ -1088,7 +1175,8 @@
             "addeddate": 42515,
             "price": 3,
             "gbId": "3030-7004",
-            "id": 91
+            "id": 91,
+            "rating": "ESRB: M"
         },
         {
             "title": "Hot Shots Golf 3",
@@ -1100,7 +1188,8 @@
             "addeddate": 42515,
             "price": 4,
             "gbId": "3030-11691",
-            "id": 92
+            "id": 92,
+            "rating": "ESRB: E"
         },
         {
             "title": "Marvel Ultimate Alliance",
@@ -1112,7 +1201,8 @@
             "addeddate": 42515,
             "price": 6.5,
             "gbId": "3030-7527",
-            "id": 93
+            "id": 93,
+            "rating": "ESRB: T"
         },
         {
             "title": "Max Payne",
@@ -1124,7 +1214,8 @@
             "addeddate": 42515,
             "price": 4.6,
             "gbId": "3030-2414",
-            "id": 94
+            "id": 94,
+            "rating": "ESRB: M"
         },
         {
             "title": "Micro Machines V4",
@@ -1136,7 +1227,8 @@
             "addeddate": 42515,
             "price": 10,
             "gbId": "3030-36264",
-            "id": 95
+            "id": 95,
+            "rating": "ESRB: E"
         },
         {
             "title": "Midnight Club 3: DUB Edition",
@@ -1148,7 +1240,8 @@
             "addeddate": 42515,
             "price": 10,
             "gbId": "3030-5875",
-            "id": 96
+            "id": 96,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Midway Arcade Treasures",
@@ -1160,7 +1253,8 @@
             "addeddate": 42515,
             "price": 8,
             "gbId": "3030-18579",
-            "id": 97
+            "id": 97,
+            "rating": "ESRB: T"
         },
         {
             "title": "Scarface: The World is Yours",
@@ -1172,7 +1266,8 @@
             "addeddate": 42515,
             "price": 14,
             "gbId": "3030-9966",
-            "id": 98
+            "id": 98,
+            "rating": "ESRB: M"
         },
         {
             "title": "SpyHunter",
@@ -1184,7 +1279,8 @@
             "addeddate": 42515,
             "price": 3.8,
             "gbId": "3030-14843",
-            "id": 99
+            "id": 99,
+            "rating": "ESRB: T"
         },
         {
             "title": "SSX 3",
@@ -1196,7 +1292,8 @@
             "addeddate": 42515,
             "price": 7,
             "gbId": "3030-17149",
-            "id": 100
+            "id": 100,
+            "rating": "ESRB: E"
         },
         {
             "title": "Taiko Drum Master",
@@ -1208,7 +1305,8 @@
             "addeddate": 42515,
             "price": 40,
             "gbId": "3030-21429",
-            "id": 101
+            "id": 101,
+            "rating": "ESRB: E"
         },
         {
             "title": "Tetris Worlds",
@@ -1220,7 +1318,8 @@
             "addeddate": 42515,
             "price": 4.5,
             "gbId": "3030-14116",
-            "id": 102
+            "id": 102,
+            "rating": "ESRB: E"
         },
         {
             "title": "Tony Hawk's Pro Skater 3",
@@ -1232,7 +1331,8 @@
             "addeddate": 42559,
             "price": 5.75,
             "gbId": "3030-5688",
-            "id": 103
+            "id": 103,
+            "rating": "ESRB: T"
         },
         {
             "title": "Tony Hawk's Project 8",
@@ -1244,7 +1344,8 @@
             "addeddate": 42515,
             "price": 4.5,
             "gbId": "3030-12077",
-            "id": 104
+            "id": 104,
+            "rating": "ESRB: T"
         },
         {
             "title": "Twisted Metal: Black",
@@ -1256,7 +1357,8 @@
             "addeddate": 42559,
             "price": 7,
             "gbId": "3030-6426",
-            "id": 105
+            "id": 105,
+            "rating": "ESRB: M"
         },
         {
             "title": "Worms 3D",
@@ -1268,7 +1370,8 @@
             "addeddate": 42515,
             "price": 7.25,
             "gbId": "3030-522",
-            "id": 106
+            "id": 106,
+            "rating": "ESRB: T"
         },
         {
             "title": "2014 FIFA World Cup Brazil",
@@ -1280,7 +1383,8 @@
             "addeddate": 42515,
             "price": 9.3,
             "gbId": "3030-45354",
-            "id": 107
+            "id": 107,
+            "rating": "ESRB: E"
         },
         {
             "title": "Assassin's Creed II",
@@ -1292,7 +1396,8 @@
             "addeddate": 42515,
             "price": 5,
             "gbId": "3030-22928",
-            "id": 108
+            "id": 108,
+            "rating": "ESRB: M"
         },
         {
             "title": "Batman: Arkham City",
@@ -1304,7 +1409,8 @@
             "addeddate": 42515,
             "price": 7,
             "gbId": "3030-29443",
-            "id": 109
+            "id": 109,
+            "rating": "ESRB: T"
         },
         {
             "title": "Bejeweled 2 (PSN)",
@@ -1315,7 +1421,8 @@
             "developer": "PopCap Games",
             "addeddate": 42560,
             "gbId": "3030-22608",
-            "id": 110
+            "id": 110,
+            "rating": "ESRB: E"
         },
         {
             "title": "Borderlands",
@@ -1327,7 +1434,8 @@
             "addeddate": 42515,
             "price": 5.9,
             "gbId": "3030-20487",
-            "id": 111
+            "id": 111,
+            "rating": "ESRB: M"
         },
         {
             "title": "Brutal Legend",
@@ -1339,7 +1447,8 @@
             "addeddate": 42515,
             "price": 7,
             "gbId": "3030-20700",
-            "id": 112
+            "id": 112,
+            "rating": "ESRB: M"
         },
         {
             "title": "Call Of Duty: Black Ops II",
@@ -1351,7 +1460,8 @@
             "addeddate": 42515,
             "price": 10,
             "gbId": "3030-38039",
-            "id": 113
+            "id": 113,
+            "rating": "ESRB: M"
         },
         {
             "title": "Dungeon Hunter: Alliance (PSN)",
@@ -1362,7 +1472,8 @@
             "developer": "Gameloft",
             "addeddate": 42560,
             "gbId": "3030-28868",
-            "id": 114
+            "id": 114,
+            "rating": "ESRB: T"
         },
         {
             "title": "echochrome (PSN)",
@@ -1373,7 +1484,8 @@
             "developer": "SCEJ",
             "addeddate": 42560,
             "gbId": "3030-20604",
-            "id": 115
+            "id": 115,
+            "rating": "ESRB: E"
         },
         {
             "title": "The Eye of Judgment",
@@ -1385,7 +1497,8 @@
             "addeddate": 42515,
             "price": 4,
             "gbId": "3030-16019",
-            "id": 116
+            "id": 116,
+            "rating": "ESRB: T"
         },
         {
             "title": "God of War Collection",
@@ -1397,7 +1510,8 @@
             "addeddate": 42515,
             "price": 7,
             "gbId": "3030-28001",
-            "id": 117
+            "id": 117,
+            "rating": "ESRB: M"
         },
         {
             "title": "God of War III",
@@ -1409,7 +1523,8 @@
             "addeddate": 42515,
             "price": 6,
             "gbId": "3030-20461",
-            "id": 118
+            "id": 118,
+            "rating": "ESRB: M"
         },
         {
             "title": "God of War: Ascension",
@@ -1421,7 +1536,8 @@
             "addeddate": 42515,
             "price": 7,
             "gbId": "3030-38043",
-            "id": 119
+            "id": 119,
+            "rating": "ESRB: M"
         },
         {
             "title": "Gran Turismo 5",
@@ -1433,7 +1549,8 @@
             "addeddate": "12/4/2016",
             "price": 6,
             "gbId": "3030-21790",
-            "id": 120
+            "id": 120,
+            "rating": "ESRB: E"
         },
         {
             "title": "Grand Theft Auto V",
@@ -1445,7 +1562,8 @@
             "addeddate": 42515,
             "price": 17,
             "gbId": "3030-36765",
-            "id": 121
+            "id": 121,
+            "rating": "ESRB: M"
         },
         {
             "title": "High Stakes on the Vegas Strip: Poker Edition (PSN)",
@@ -1455,7 +1573,10 @@
             "developer": "Coresoft",
             "addeddate": 42560,
             "gbId": "3030-22417",
-            "id": 122
+            "id": 122,
+            "rating": "ESRB: T",
+            "releasedate": " -- ",
+            "price": "0"
         },
         {
             "title": "High Velocity Bowling (PSN)",
@@ -1466,7 +1587,9 @@
             "developer": "SCEI",
             "addeddate": 42560,
             "gbId": "3030-20605",
-            "id": 123
+            "id": 123,
+            "rating": "ESRB: E",
+            "price": "0"
         },
         {
             "title": "Infamous Collection",
@@ -1478,7 +1601,8 @@
             "addeddate": 42678,
             "price": 13,
             "gbId": "3030-20599",
-            "id": 124
+            "id": 124,
+            "rating": "ESRB: T"
         },
         {
             "title": "Jeopardy! (PSN)",
@@ -1488,7 +1612,10 @@
             "developer": "Pipeworks",
             "addeddate": 42560,
             "gbId": "3030-40064",
-            "id": 125
+            "id": 125,
+            "rating": "ESRB: E",
+            "releasedate": " -- ",
+            "price": "0"
         },
         {
             "title": "LittleBigPlanet (PSN)",
@@ -1499,7 +1626,9 @@
             "developer": "Media Molecule",
             "addeddate": 42560,
             "gbId": "3030-20602",
-            "id": 126
+            "id": 126,
+            "rating": "ESRB: E",
+            "price": "3.5"
         },
         {
             "title": "NBA Jam: On Fire Edition (PSN)",
@@ -1509,7 +1638,10 @@
             "developer": "EA Canada",
             "addeddate": 42560,
             "gbId": "3030-34710",
-            "id": 127
+            "id": 127,
+            "rating": "ESRB: E",
+            "releasedate": " -- ",
+            "price": "0"
         },
         {
             "title": "The Price Is Right (PSN)",
@@ -1519,7 +1651,10 @@
             "developer": "Ludia Inc.",
             "addeddate": 42560,
             "gbId": "3030-16675",
-            "id": 128
+            "id": 128,
+            "rating": "ESRB: E",
+            "releasedate": " -- ",
+            "price": "0"
         },
         {
             "title": "Resistance 2",
@@ -1531,7 +1666,8 @@
             "addeddate": 42515,
             "price": 4.6,
             "gbId": "3030-20699",
-            "id": 129
+            "id": 129,
+            "rating": "ESRB: M"
         },
         {
             "title": "Resistance 3",
@@ -1543,7 +1679,8 @@
             "addeddate": 42515,
             "price": 7,
             "gbId": "3030-29021",
-            "id": 130
+            "id": 130,
+            "rating": "ESRB: M"
         },
         {
             "title": "Resistance: Fall of Man",
@@ -1555,7 +1692,8 @@
             "addeddate": 42515,
             "price": 5,
             "gbId": "3030-9741",
-            "id": 131
+            "id": 131,
+            "rating": "ESRB: M"
         },
         {
             "title": "Rock Band 2",
@@ -1567,7 +1705,8 @@
             "addeddate": 42515,
             "price": 6,
             "gbId": "3030-20714",
-            "id": 132
+            "id": 132,
+            "rating": "ESRB: T"
         },
         {
             "title": "Sonic's Ultimate Genesis Collection",
@@ -1579,7 +1718,8 @@
             "addeddate": 42515,
             "price": 11.5,
             "gbId": "3030-24218",
-            "id": 133
+            "id": 133,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Tom Clancy's Ghost Recon: Future Soldier (PSN)",
@@ -1590,7 +1730,9 @@
             "developer": "Ubisoft",
             "addeddate": 42560,
             "gbId": "3030-26095",
-            "id": 134
+            "id": 134,
+            "rating": "ESRB: M",
+            "price": "4"
         },
         {
             "title": "Wipeout HD Fury (PSN)",
@@ -1601,7 +1743,9 @@
             "developer": "SCEE",
             "addeddate": 42560,
             "gbId": "3030-20610",
-            "id": 135
+            "id": 135,
+            "rating": "ESRB: E10+",
+            "price": "7"
         },
         {
             "title": "Wolfenstein 3D (PSN)",
@@ -1612,7 +1756,9 @@
             "developer": "id Software",
             "addeddate": 42560,
             "gbId": "3030-7694",
-            "id": 136
+            "id": 136,
+            "rating": "ESRB: M",
+            "price": "0"
         },
         {
             "title": "Worms (PSN)",
@@ -1623,7 +1769,9 @@
             "developer": "Team 17",
             "addeddate": 42560,
             "gbId": "3030-20815",
-            "id": 137
+            "id": 137,
+            "rating": "ESRB: E10+",
+            "price": "0"
         },
         {
             "title": "Amplitude (PSN)",
@@ -2132,7 +2280,7 @@
         },
         {
             "title": "Advance Wars 2: Black Hole Rising",
-            "releasedate": 37795,
+            "releasedate": "06/24/2003",
             "platform": "Gameboy Advance SP",
             "genre": "Strategy",
             "publisher": "Nintendo",
@@ -2140,43 +2288,47 @@
             "addeddate": 42681,
             "price": 16,
             "gbId": "3030-5255",
-            "id": 182
+            "id": 182,
+            "rating": "ESRB: E"
         },
         {
             "title": "Harry Potter and the Sorcerer's Stone",
-            "releasedate": 37211,
+            "releasedate": "11/15/2001",
             "platform": "Gameboy Advance SP",
             "genre": "Adventure",
             "publisher": "Electronic Arts",
             "addeddate": 42681,
             "price": 4,
             "gbId": "3030-577",
-            "id": 183
+            "id": 183,
+            "rating": "ESRB: E"
         },
         {
             "title": "The Incredible Hulk",
-            "releasedate": 37768,
+            "releasedate": "05/27/2003",
             "platform": "Gameboy Advance SP",
             "genre": "Action",
             "addeddate": 42681,
             "price": 3.67,
             "gbId": "3030-24609",
-            "id": 184
+            "id": 184,
+            "rating": "ESRB: E"
         },
         {
             "title": "Jimmy Neutron: Jet Fusion",
-            "releasedate": 37895,
+            "releasedate": "09/16/2003",
             "platform": "Gameboy Advance SP",
             "genre": "Action",
             "publisher": "THQ",
             "addeddate": 42681,
             "price": 2.76,
             "gbId": "3030-22076",
-            "id": 185
+            "id": 185,
+            "rating": "ESRB: E"
         },
         {
             "title": "The Legend of Zelda: A Link to the Past w/ the Four Swords",
-            "releasedate": 37593,
+            "releasedate": "12/02/2002",
             "platform": "Gameboy Advance SP",
             "genre": "Action, RPG",
             "publisher": "Nintendo",
@@ -2184,22 +2336,24 @@
             "addeddate": 42681,
             "price": 13.5,
             "gbId": "3030-35064",
-            "id": 186
+            "id": 186,
+            "rating": "ESRB: E"
         },
         {
             "title": "LEGO Star Wars II: The Original Trilogy",
-            "releasedate": 38972,
+            "releasedate": "09/11/2006",
             "platform": "Gameboy Advance SP",
             "genre": "Action, Adventure",
             "publisher": "Lucas Arts Entertainment",
             "addeddate": 42681,
             "price": 3.68,
             "gbId": "3030-9631",
-            "id": 187
+            "id": 187,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Metroid: Zero Mission",
-            "releasedate": 38027,
+            "releasedate": "02/09/2004",
             "platform": "Gameboy Advance SP",
             "genre": "Shooter",
             "publisher": "Nintendo of America, Inc.",
@@ -2207,17 +2361,19 @@
             "addeddate": 42681,
             "price": 26.28,
             "gbId": "3030-17356",
-            "id": 188
+            "id": 188,
+            "rating": "ESRB: E"
         },
         {
             "title": "Power Rangers: DinoThunder",
-            "releasedate": 38230,
+            "releasedate": "09/14/2004",
             "platform": "Gameboy Advance SP",
             "genre": "Action",
             "addeddate": 42681,
             "price": 4,
             "gbId": "3030-22141",
-            "id": 189
+            "id": 189,
+            "rating": "ESRB: E"
         },
         {
             "title": "SpongeBob SquarePants: The Battle For Bikini Bottom",
@@ -2226,7 +2382,9 @@
             "addeddate": 42681,
             "price": 3,
             "gbId": "3030-10556",
-            "id": 190
+            "id": 190,
+            "rating": "ESRB: E",
+            "releasedate": "10/31/2003"
         },
         {
             "title": "Tony Hawk Pro Skater 2",
@@ -2235,7 +2393,9 @@
             "addeddate": "12/4/2016",
             "price": 5,
             "gbId": "3030-990",
-            "id": 191
+            "id": 191,
+            "rating": "ESRB: E",
+            "releasedate": "09/20/2000"
         },
         {
             "addeddate": "02/23/2017",
@@ -2263,7 +2423,7 @@
             "addeddate": "02/26/2017",
             "gbId": "3030-5393",
             "title": "Battle Squadron",
-            "rating": "none",
+            "rating": "JOEY: E",
             "releasedate": "11/01/1990",
             "genre": "Action",
             "price": 14,
@@ -2307,7 +2467,7 @@
             "addeddate": "02/26/2017",
             "gbId": "3030-19571",
             "title": "T2: The Arcade Game",
-            "rating": "none",
+            "rating": "JOEY: E10+",
             "releasedate": "01/01/1991",
             "price": 6.5,
             "genre": "Shooter",
@@ -2318,9 +2478,9 @@
             "addeddate": "02/26/2017",
             "gbId": "3030-10715",
             "title": "Star Wars Arcade",
-            "rating": "none",
+            "rating": "JOEY: E",
             "releasedate": "09/30/1993",
-            "genre": "Action, Shooter, Flight Simulator, Shoot 'Em Up",
+            "genre": "Action, Shooter, Flight Simulator, SHMUP",
             "price": 8,
             "platform": "32X",
             "id": 199
@@ -2351,9 +2511,9 @@
             "addeddate": "02/27/2017",
             "gbId": "3030-13960",
             "title": "Life Force",
-            "rating": "ESRB: E",
+            "rating": "JOEY: E",
             "releasedate": "09/25/1987",
-            "genre": "Action, Shoot 'Em Up",
+            "genre": "Action, SHMUP",
             "platform": "NES",
             "price": 11,
             "id": 202

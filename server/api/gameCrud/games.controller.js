@@ -1,4 +1,7 @@
 'use strict';
+//refactor this mess some day
+// needs to be WAY DRYer
+// writeToJson and others need more exception handling
 
 var path = require('path'),
   moment = require('moment'),
@@ -145,6 +148,32 @@ function generateToken (password, user) {
   return crypted.split('').reverse().join('');
 }
 
+function findById (id, fileName, param) {
+  return new Promise(function (resolve, reject) {
+    fs.readFile(path.join(__dirname,'vg/' + fileName), 'utf-8', function (err, data) {
+      if (err) reject('file read error');
+      var found = false;
+      if (param) {
+        data[param].forEach(function (item, index) {
+          if (item.id === id) {
+            found = true;
+            resolve({item: item, index: index});
+          }
+        });
+        if (!found) reject('no match found');
+      } else {
+        data.forEach(function (item, index) {
+          if (item.id === id) {
+            found = true;
+            resolve(item);
+          }
+        });
+        if (!found) reject('no match found');
+      }
+    });
+  });
+}
+
 exports.simpleAuth = function (req, res) {
   var user = req.params.user,
     pass = req.params.pass;
@@ -206,19 +235,21 @@ exports.editGame = function(req, res) {
   console.log('edit game called');
   validateToken(req.body.token, true)
     .then(function (loggedIn) {
-      fs.readFile(path.join(__dirname, 'vg/gameLibrary.json'), 'utf-8', function (err, data) {
-        var newGameData = req.body.game,
-          gameLib = JSON.parse(data);
+      if (!loggedIn.error) {
+        fs.readFile(path.join(__dirname, 'vg/gameLibrary.json'), 'utf-8', function (err, data) {
+          var newGameData = req.body.game,
+            gameLib = JSON.parse(data);
 
-        gameLib.games.forEach(function (item, index) {
-          if (parseInt(newGameData.id) === parseInt(item.id)) {
-            console.log('editing game with id', item.id);
-            gameLib.games[index] = newGameData;
-          }
+          gameLib.games.forEach(function (item, index) {
+            if (parseInt(newGameData.id) === parseInt(item.id)) {
+              console.log('editing game with id', item.id);
+              gameLib.games[index] = newGameData;
+            }
+          });
+          writeToJson(gameLib, 'gameLibrary.json');
+          res.status(200).send({error: false, message: newGameData.title + ' added!'})
         });
-        writeToJson(gameLib, 'gameLibrary.json');
-        res.status(200).send({error: false, message: newGameData.title + ' added!'})
-      });
+      }
     })
     .catch(function (err) {
       res.status(401).send({error: true, message: 'Access Denied: Bad Token'});
@@ -227,4 +258,25 @@ exports.editGame = function(req, res) {
 
 exports.deleteGame = function (req, res) {
   console.log('deleteGame called');
+  validateToken(req.body.token, true)
+    .then(function (loggedIn) {
+      if (!loggedIn.error) {
+        fs.readFile(path.join(__dirname, 'vg/gameLibrary.json'), 'utf-8', function (err, data) {
+          var delGameData = req.body.game,
+            gameLib = JSON.parse(data);
+
+          gameLib.games.forEach(function (item, index) {
+            if (parseInt(newGameData.id) === parseInt(item.id)) {
+              console.log('deleting game with id', item.id);
+              gameLib.games.splice(index, 1);
+            }
+          });
+          writeToJson(gameLib, 'gameLibrary.json');
+          res.status(200).send({error: false, message: newGameData.title + ' deleted!'})
+        });
+      }
+    })
+    .catch(function (err) {
+      res.status(401).send({error: true, message: 'Access Denied: Bad Token'});
+    });
 };

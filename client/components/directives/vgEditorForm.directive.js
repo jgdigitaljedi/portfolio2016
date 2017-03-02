@@ -32,7 +32,7 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
 
         if (scope.formOptions.which === 'games') {
           scope.showConDd = true;
-          VgData.getOwnedGames().then(function (result) {
+          VgData.getOwnedGames(true).then(function (result) {
             console.log('owned games', result);
             gamesData = result;
             result.forEach(function (item) {
@@ -60,9 +60,9 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
           console.log('request', request);
           // console.log('scope.table data', scope.table.data());
 
-          if (which === 'Game') {
-            request.game.price = request.game.price.filter;
-          }
+          // if (which === 'Game') {
+          //   request.game.price = request.game.price.filter;
+          // }
           VgData['edit' + which](request)
             .then(function (response) {
               console.log('resposne from edit', response);

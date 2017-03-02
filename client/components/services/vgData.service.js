@@ -57,26 +57,27 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
     //**** getters (mainly for tables)**
     //**********************************
 
-    function getOwnedGames () {
+    function getOwnedGames (noclean) {
       var def = $q.defer();
       getData('gameslibrary').then(function (response) {
         if (!response.error) {
           response.games.forEach(function (item) {
-            if (!item.price) {
-              item.price = {
-                filter: null,
-                display: '--'
-              };
-            } else {
-              item.price = {
-                filter: item.price,
-                display: formatPrice(item.price)
-              };
+            if (!noclean) {
+              if (!item.price) {
+                item.price = {
+                  filter: null,
+                  display: '--'
+                };
+              } else {
+                item.price = {
+                  filter: item.price,
+                  display: formatPrice(item.price)
+                };
+              }
+              if (!item.genre) {
+                item.genre = '--';
+              }
             }
-            if (!item.genre) {
-              item.genre = '--';
-            }
-
           });
           def.resolve(response.games);
         } else {
