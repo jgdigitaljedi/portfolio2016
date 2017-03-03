@@ -1781,7 +1781,8 @@
             "addeddate": "01/06/17",
             "price": 20,
             "gbId": "3030-46389",
-            "id": 138
+            "id": 138,
+            "rating": "ESRB: E"
         },
         {
             "title": "Child of Light",
@@ -1792,7 +1793,8 @@
             "addeddate": "01/24/17",
             "price": 15,
             "gbId": "3030-43612",
-            "id": 139
+            "id": 139,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Doom",
@@ -1803,7 +1805,8 @@
             "addeddate": "01/06/17",
             "price": 22,
             "gbId": "3030-20654",
-            "id": 140
+            "id": 140,
+            "rating": "ESRB: M"
         },
         {
             "title": "Gauntlet: Slayer Edition",
@@ -1814,7 +1817,8 @@
             "addeddate": "01/24/17",
             "price": 5,
             "gbId": "3030-45705",
-            "id": 141
+            "id": 141,
+            "rating": "ESRB: M"
         },
         {
             "title": "Killzone: Shadow Fall",
@@ -1825,7 +1829,8 @@
             "addeddate": "01/06/17",
             "price": 8.36,
             "gbId": "3030-41690",
-            "id": 142
+            "id": 142,
+            "rating": "ESRB: M"
         },
         {
             "title": "The Last of Us Remastered",
@@ -1836,7 +1841,8 @@
             "addeddate": "01/06/17",
             "price": 17.21,
             "gbId": "3030-36989",
-            "id": 143
+            "id": 143,
+            "rating": "ESRB: M"
         },
         {
             "title": "LEGO: The Hobbit",
@@ -1847,7 +1853,8 @@
             "addeddate": "01/24/17",
             "price": 13.5,
             "gbId": "3030-44652",
-            "id": 144
+            "id": 144,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Mortal Kombat XL",
@@ -1858,7 +1865,8 @@
             "addeddate": "01/06/17",
             "price": 29,
             "gbId": "3030-46447",
-            "id": 145
+            "id": 145,
+            "rating": "ESRB: M"
         },
         {
             "title": "Outlast",
@@ -1869,7 +1877,8 @@
             "addeddate": "01/24/17",
             "price": 5,
             "gbId": "3030-40089",
-            "id": 146
+            "id": 146,
+            "rating": "ESRB: M"
         },
         {
             "title": "Ratchet & Clank",
@@ -1880,7 +1889,8 @@
             "addeddate": "01/06/17",
             "price": 21.45,
             "gbId": "3030-48727",
-            "id": 147
+            "id": 147,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Rayman Legends",
@@ -1891,7 +1901,8 @@
             "addeddate": "01/06/17",
             "price": 17.74,
             "gbId": "3030-38141",
-            "id": 148
+            "id": 148,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Rocket League GOTY Edition",
@@ -1902,7 +1913,8 @@
             "addeddate": "01/09/17",
             "price": 20,
             "gbId": "3030-34407",
-            "id": 149
+            "id": 149,
+            "rating": "ESRB: E"
         },
         {
             "title": "Star Wars Battlefront Ultimate Edition",
@@ -1911,7 +1923,9 @@
             "addeddate": "02/02/17",
             "price": 23,
             "gbId": "3030-42912",
-            "id": 150
+            "id": 150,
+            "rating": "ESRB: T",
+            "releasedate": " -- "
         },
         {
             "title": "The Walking Dead",
@@ -1922,7 +1936,8 @@
             "addeddate": "01/24/17",
             "price": 17,
             "gbId": "3030-34205",
-            "id": 151
+            "id": 151,
+            "rating": "ESRB: M"
         },
         {
             "title": "Watch Dogs",
@@ -1933,7 +1948,8 @@
             "addeddate": "01/06/17",
             "price": 13.23,
             "gbId": "3030-38538",
-            "id": 152
+            "id": 152,
+            "rating": "ESRB: M"
         },
         {
             "title": "The Wolf Among Us",
@@ -1944,7 +1960,8 @@
             "addeddate": "01/24/17",
             "price": 17,
             "gbId": "3030-34213",
-            "id": 153
+            "id": 153,
+            "rating": "ESRB: M"
         },
         {
             "title": "God of War: Chains of Olympus",
@@ -1956,7 +1973,8 @@
             "addeddate": 42515,
             "price": 7.6,
             "gbId": "3030-20592",
-            "id": 154
+            "id": 154,
+            "rating": "ESRB: M"
         },
         {
             "title": "SEGA Genesis Collection",
@@ -1968,7 +1986,8 @@
             "addeddate": 42515,
             "price": 15,
             "gbId": "3030-14457",
-            "id": 155
+            "id": 155,
+            "rating": "ESRB: T"
         },
         {
             "title": "Battle of the Bands",
@@ -1980,7 +1999,8 @@
             "addeddate": 42515,
             "price": 3,
             "gbId": "3030-20872",
-            "id": 156
+            "id": 156,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Call of Duty 3",
@@ -1992,7 +2012,8 @@
             "addeddate": 42515,
             "price": 5,
             "gbId": "3030-7524",
-            "id": 157
+            "id": 157,
+            "rating": "ESRB: T"
         },
         {
             "title": "Crash of the Titans",
@@ -2004,7 +2025,8 @@
             "addeddate": 42515,
             "price": 12,
             "gbId": "3030-7670",
-            "id": 158
+            "id": 158,
+            "rating": "ESRB: E"
         },
         {
             "title": "Epic Mickey",
@@ -2016,7 +2038,8 @@
             "addeddate": 42515,
             "price": 5,
             "gbId": "3030-27562",
-            "id": 159
+            "id": 159,
+            "rating": "ESRB: E"
         },
         {
             "title": "Epic Mickey 2: The Power Of Two",
@@ -2028,7 +2051,8 @@
             "addeddate": 42515,
             "price": 6.2,
             "gbId": "3030-37164",
-            "id": 160
+            "id": 160,
+            "rating": "ESRB: E"
         },
         {
             "title": "Just Dance 3",
@@ -2037,7 +2061,9 @@
             "addeddate": "02/02/17",
             "price": 4,
             "gbId": "3030-35553/",
-            "id": 161
+            "id": 161,
+            "rating": "ESRB: E10+",
+            "releasedate": " -- "
         },
         {
             "title": "Link's Crossbow Training",
@@ -2049,7 +2075,8 @@
             "addeddate": 42515,
             "price": 5.5,
             "gbId": "3030-1074",
-            "id": 162
+            "id": 162,
+            "rating": "ESRB: T"
         },
         {
             "title": "Mario Kart Wii",
@@ -2061,7 +2088,8 @@
             "addeddate": 42515,
             "price": 20.5,
             "gbId": "3030-20645",
-            "id": 163
+            "id": 163,
+            "rating": "ESRB: E"
         },
         {
             "title": "Mario Party 8",
@@ -2073,7 +2101,8 @@
             "addeddate": 42515,
             "price": 17.5,
             "gbId": "3030-8362",
-            "id": 164
+            "id": 164,
+            "rating": "ESRB: E"
         },
         {
             "title": "Star Wars: The Clone Wars: Lightsaber Duels",
@@ -2085,7 +2114,8 @@
             "addeddate": 42515,
             "price": 5,
             "gbId": "3030-21023",
-            "id": 165
+            "id": 165,
+            "rating": "ESRB: T"
         },
         {
             "title": "Super Mario Galaxy",
@@ -2097,7 +2127,8 @@
             "addeddate": 42515,
             "price": 9.7,
             "gbId": "3030-16094",
-            "id": 166
+            "id": 166,
+            "rating": "ESRB: E"
         },
         {
             "title": "Super Smash Bros. Brawl",
@@ -2109,7 +2140,8 @@
             "addeddate": 42515,
             "price": 15,
             "gbId": "3030-20588",
-            "id": 167
+            "id": 167,
+            "rating": "ESRB: T"
         },
         {
             "title": "Wii Sports",
@@ -2121,7 +2153,8 @@
             "addeddate": 42515,
             "price": 10,
             "gbId": "3030-13328",
-            "id": 168
+            "id": 168,
+            "rating": "ESRB: E"
         },
         {
             "title": "Wii Sports Resort",
@@ -2133,7 +2166,8 @@
             "addeddate": 42515,
             "price": 15,
             "gbId": "3030-21098",
-            "id": 169
+            "id": 169,
+            "rating": "ESRB: E"
         },
         {
             "title": "Angry Birds Star Wars",
@@ -2145,7 +2179,8 @@
             "addeddate": 42515,
             "price": 13,
             "gbId": "3030-39945",
-            "id": 170
+            "id": 170,
+            "rating": "ESRB: E"
         },
         {
             "title": "Donkey Kong Country: Tropical Freeze",
@@ -2157,7 +2192,8 @@
             "addeddate": 42515,
             "price": 16.5,
             "gbId": "3030-42932",
-            "id": 171
+            "id": 171,
+            "rating": "ESRB: E"
         },
         {
             "title": "LEGO Marvel Super Heroes",
@@ -2169,7 +2205,8 @@
             "addeddate": 42515,
             "price": 11.4,
             "gbId": "3030-41090",
-            "id": 172
+            "id": 172,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Mario & Sonic at the Winter Olympic Games 2014",
@@ -2181,7 +2218,8 @@
             "addeddate": "12/4/2016",
             "price": 10,
             "gbId": "3030-42658",
-            "id": 173
+            "id": 173,
+            "rating": "ESRB: E"
         },
         {
             "title": "Mario Kart 8",
@@ -2193,7 +2231,8 @@
             "addeddate": 42515,
             "price": 37,
             "gbId": "3030-42929",
-            "id": 174
+            "id": 174,
+            "rating": "ESRB: E"
         },
         {
             "title": "Nintendo Land",
@@ -2205,7 +2244,8 @@
             "addeddate": 42515,
             "price": 9.5,
             "gbId": "3030-38549",
-            "id": 175
+            "id": 175,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Sonic & All-Stars Racing Transformed",
@@ -2217,7 +2257,8 @@
             "addeddate": 42515,
             "price": 14,
             "gbId": "3030-38173",
-            "id": 176
+            "id": 176,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Star Fox Guard",
@@ -2228,7 +2269,8 @@
             "developer": "Nintendo",
             "addeddate": 42515,
             "gbId": "3030-46595",
-            "id": 177
+            "id": 177,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Star Fox Zero",
@@ -2240,7 +2282,8 @@
             "addeddate": 42515,
             "price": 34,
             "gbId": "3030-46584",
-            "id": 178
+            "id": 178,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Super Mario 3D World",
@@ -2252,7 +2295,8 @@
             "addeddate": 42515,
             "price": 16.6,
             "gbId": "3030-42931",
-            "id": 179
+            "id": 179,
+            "rating": "ESRB: E"
         },
         {
             "title": "Super Mario Maker",
@@ -2264,7 +2308,8 @@
             "addeddate": 42515,
             "price": 40.4,
             "gbId": "3030-46580",
-            "id": 180
+            "id": 180,
+            "rating": "ESRB: E"
         },
         {
             "title": "Super Smash Bros. for Wii U",
@@ -2276,7 +2321,8 @@
             "addeddate": 42515,
             "price": 40,
             "gbId": "3030-35573",
-            "id": 181
+            "id": 181,
+            "rating": "ESRB: E10+"
         },
         {
             "title": "Advance Wars 2: Black Hole Rising",
@@ -2435,7 +2481,7 @@
             "gbId": "3030-48113",
             "price": 31,
             "title": "Battlefield 1",
-            "rating": "none",
+            "rating": "ESRB: M",
             "releasedate": "10/21/2016",
             "genre": "FPS",
             "platform": "PlayStation 4",
@@ -2489,7 +2535,7 @@
             "addeddate": "02/26/2017",
             "gbId": "3030-47970",
             "title": "Fluster Cluck",
-            "rating": "none",
+            "rating": "ESRB: E",
             "releasedate": "10/21/2014",
             "genre": "Dual-Joystick Shooter",
             "price": 2,
