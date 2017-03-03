@@ -12,7 +12,8 @@ angular.module('portfolioApp').controller('EditGamesLibCtrl', ['VgData',
       inputs: [
         {name: 'gbId', display: 'GiantBomb ID', link: 'http://www.giantbomb.com', required: true},
         {name: 'addeddate', display: 'Date Added (MM/DD/YYYY)', required: true},
-        {name: 'price', display: 'Value', link: 'https://www.pricecharting.com/', required: true}
+        {name: 'price', display: 'Value', link: 'https://www.pricecharting.com/', required: true},
+        {name: 'cib', display: 'Box/Case/Sleeve/Loose', required: true}
       ],
       resultFields: [
         {field: 'name', label: 'Title'},

@@ -293,6 +293,18 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       return def.promise;
     }
 
+    function deleteGame (item, token) {
+      var def = $q.defer();
+      postWithJson('deleteGame',{game: item, token: token})
+        .then(function (response) {
+          def.resolve(response);
+        })
+        .catch(function (err) {
+          def.reject(err);
+        });
+      return def.promise;
+    }
+
 
     return {
       getOwnedGames: getOwnedGames,
@@ -303,7 +315,8 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       gamesAuth: gamesAuth,
       checkToken: checkToken,
       addGame: addGame,
-      editGame: editGame
+      editGame: editGame,
+      deleteGame: deleteGame
     };
   }
 ]);

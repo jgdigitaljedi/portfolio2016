@@ -831,7 +831,7 @@
         },
         {
             "title": "Luigi's Mansion: Dark Moon",
-            "releasedate": "03/28/13",
+            "releasedate": "03/28/2013",
             "platform": "Nintendo 3DS",
             "genre": "Action, Adventure",
             "publisher": "Nintendo",
@@ -843,7 +843,7 @@
         },
         {
             "title": "Pokemon X/Y",
-            "releasedate": "10/12/13",
+            "releasedate": "10/12/2013",
             "platform": "Nintendo 3DS",
             "genre": "RPG",
             "publisher": "Nintendo",
@@ -869,7 +869,7 @@
         },
         {
             "title": "Super Mario Maker 3DS",
-            "releasedate": "12/01/16",
+            "releasedate": "12/01/2016",
             "platform": "Nintendo 3DS",
             "genre": "Puzzle, Platformer",
             "publisher": "Nintendo",
@@ -1012,7 +1012,7 @@
         },
         {
             "title": "Star Wars: Rogue Squadron",
-            "releasedate": "04/12/98",
+            "releasedate": "04/12/1998",
             "platform": "Nintendo 64",
             "genre": "Flight Combat",
             "publisher": "Lucas Arts",
@@ -1422,7 +1422,8 @@
             "addeddate": 42560,
             "gbId": "3030-22608",
             "id": 110,
-            "rating": "ESRB: E"
+            "rating": "ESRB: E",
+            "price": "0"
         },
         {
             "title": "Borderlands",
@@ -1473,7 +1474,8 @@
             "addeddate": 42560,
             "gbId": "3030-28868",
             "id": 114,
-            "rating": "ESRB: T"
+            "rating": "ESRB: T",
+            "price": "0"
         },
         {
             "title": "echochrome (PSN)",
@@ -1485,7 +1487,8 @@
             "addeddate": 42560,
             "gbId": "3030-20604",
             "id": 115,
-            "rating": "ESRB: E"
+            "rating": "ESRB: E",
+            "price": "0"
         },
         {
             "title": "The Eye of Judgment",
@@ -1775,7 +1778,7 @@
         },
         {
             "title": "Amplitude (PSN)",
-            "releasedate": "01/05/16",
+            "releasedate": "01/05/2016",
             "platform": "PlayStation 4",
             "genre": "Music",
             "addeddate": "01/06/17",
@@ -1786,7 +1789,7 @@
         },
         {
             "title": "Child of Light",
-            "releasedate": "04/29/14",
+            "releasedate": "04/29/2014",
             "platform": "PlayStation 4",
             "genre": "RPG",
             "publisher": "Ubisoft",
@@ -1798,7 +1801,7 @@
         },
         {
             "title": "Doom",
-            "releasedate": "05/13/16",
+            "releasedate": "05/13/2016",
             "platform": "PlayStation 4",
             "genre": "FPS",
             "publisher": "Bethesda",
@@ -1810,7 +1813,7 @@
         },
         {
             "title": "Gauntlet: Slayer Edition",
-            "releasedate": "09/23/14",
+            "releasedate": "09/23/2014",
             "platform": "PlayStation 4",
             "genre": "Adventure, Action, Hack & Slash",
             "publisher": "WB Games",
@@ -1822,7 +1825,7 @@
         },
         {
             "title": "Killzone: Shadow Fall",
-            "releasedate": "11/29/13",
+            "releasedate": "11/29/2013",
             "platform": "PlayStation 4",
             "genre": "Action, FPS",
             "publisher": "SCEE",
@@ -1834,7 +1837,7 @@
         },
         {
             "title": "The Last of Us Remastered",
-            "releasedate": "08/01/14",
+            "releasedate": "08/01/2014",
             "platform": "PlayStation 4",
             "genre": "Action, Adventure, FPS",
             "publisher": "SCEE",
@@ -1846,7 +1849,7 @@
         },
         {
             "title": "LEGO: The Hobbit",
-            "releasedate": "04/08/14",
+            "releasedate": "04/08/2014",
             "platform": "PlayStation 4",
             "genre": "Adventure, Action",
             "publisher": "TT Games",
@@ -1858,7 +1861,7 @@
         },
         {
             "title": "Mortal Kombat XL",
-            "releasedate": "03/14/16",
+            "releasedate": "03/14/2016",
             "platform": "PlayStation 4",
             "genre": "Fighting",
             "publisher": "Warner Bros",
@@ -1870,7 +1873,7 @@
         },
         {
             "title": "Outlast",
-            "releasedate": "09/04/13",
+            "releasedate": "09/04/2013",
             "platform": "PlayStation 4",
             "genre": "Horror",
             "publisher": "Red Barrels",
@@ -1882,7 +1885,7 @@
         },
         {
             "title": "Ratchet & Clank",
-            "releasedate": "04/22/16",
+            "releasedate": "04/22/2016",
             "platform": "PlayStation 4",
             "genre": "Platformer",
             "publisher": "SCEE",
@@ -1894,7 +1897,7 @@
         },
         {
             "title": "Rayman Legends",
-            "releasedate": "02/21/14",
+            "releasedate": "02/21/2014",
             "platform": "PlayStation 4",
             "genre": "Action, Adventure, Platformer",
             "publisher": "Ubisoft",
@@ -1906,7 +1909,7 @@
         },
         {
             "title": "Rocket League GOTY Edition",
-            "releasedate": "07/07/15",
+            "releasedate": "07/07/2015",
             "platform": "PlayStation 4",
             "genre": "Driving, Vehicular Combat, Soccer",
             "publisher": "Psyonix",
@@ -1929,7 +1932,7 @@
         },
         {
             "title": "The Walking Dead",
-            "releasedate": "11/21/12",
+            "releasedate": "11/21/2012",
             "platform": "PlayStation 4",
             "genre": "Adventure",
             "publisher": "Telltale Games",
@@ -1941,7 +1944,7 @@
         },
         {
             "title": "Watch Dogs",
-            "releasedate": "05/27/14",
+            "releasedate": "05/27/2014",
             "platform": "PlayStation 4",
             "genre": "Action",
             "publisher": "Ubisoft",
@@ -1953,7 +1956,7 @@
         },
         {
             "title": "The Wolf Among Us",
-            "releasedate": "10/11/13",
+            "releasedate": "10/11/2013",
             "platform": "PlayStation 4",
             "genre": "Adventure",
             "publisher": "WB Games",
@@ -2270,7 +2273,8 @@
             "addeddate": 42515,
             "gbId": "3030-46595",
             "id": 177,
-            "rating": "ESRB: E10+"
+            "rating": "ESRB: E10+",
+            "price": "3"
         },
         {
             "title": "Star Fox Zero",
@@ -2444,28 +2448,6 @@
             "releasedate": "09/20/2000"
         },
         {
-            "addeddate": "02/23/2017",
-            "gbId": "3030-48618",
-            "price": 20,
-            "title": "Borderlands: The Handsome Collection",
-            "rating": "ESRB: M",
-            "releasedate": "03/24/2015",
-            "genre": "Role-Playing, Compilation, First-Person Shooter",
-            "platform": "PlayStation 4",
-            "id": 192
-        },
-        {
-            "addeddate": "02/24/2017",
-            "gbId": "3030-48618",
-            "price": 20,
-            "title": "Borderlands: The Handsome Collection",
-            "rating": "ESRB: M",
-            "releasedate": "03/24/2015",
-            "genre": "Role-Playing, Compilation, First-Person Shooter",
-            "platform": "PlayStation 4",
-            "id": 193
-        },
-        {
             "addeddate": "02/26/2017",
             "gbId": "3030-5393",
             "title": "Battle Squadron",
@@ -2527,7 +2509,7 @@
             "rating": "JOEY: E",
             "releasedate": "09/30/1993",
             "genre": "Action, Shooter, Flight Simulator, SHMUP",
-            "price": 8,
+            "price": "8",
             "platform": "32X",
             "id": 199
         },

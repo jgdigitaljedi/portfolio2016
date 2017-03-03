@@ -52,23 +52,28 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
 
         scope.searchParams = {addeddate: moment().format('MM/DD/YYYY')};
 
-        function deleteDataCall () {
-
+        function deleteDataCall (item, which) {
+          // need to open confirmation modal here
+          var token = sessionStorage.getItem('jgToken');
+          VgData['delete' + which](item, token)
+            .then(function (response) {
+              triggerToast({style: 'success', text: item.title + ' deleted!'});
+            })
+            .catch(function (err) {
+              triggerToast({style: 'warning', text: item.title + ' NOT DELETED!! ERROR!'});
+            });
         }
 
         function makeEditCall (request, which) {
           console.log('request', request);
-          // console.log('scope.table data', scope.table.data());
-
-          // if (which === 'Game') {
-          //   request.game.price = request.game.price.filter;
-          // }
           VgData['edit' + which](request)
             .then(function (response) {
               console.log('resposne from edit', response);
+              triggerToast({style: 'success', text: request.game.title + ' edited!!'});
             })
             .catch(function (err) {
               console.log('error from edit', err);
+              triggerToast({style: 'warning', text: request.game.title + ' NOT EDITED!! ERROR!'});
             });
         }
 
@@ -84,7 +89,7 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
         function deleteRow (data, ele) {
           scope.table.row(ele).remove();
           scope.table.draw();
-          deleteDataCall();
+          deleteDataCall({id: data.id, title: data.title}, 'Game');
         }
 
         scope.handleInlineEditing = function (rowData, rowEle, cellData, cellEle) {

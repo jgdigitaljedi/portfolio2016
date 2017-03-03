@@ -95,7 +95,6 @@ function validateToken (uToken, reset) {
         if (uToken === data.token && (now - data.timestamp <= 1800)) {
           console.log('ts good');
           if (reset) {
-            console.log('token reset ts');
             data.timestamp = moment().unix();
             writeToJson(data, 'tokenStorage.json');
             clearInterval(tokenInterval);
@@ -103,13 +102,11 @@ function validateToken (uToken, reset) {
           }
           resolve({error: false, message: 'Successful Authentication/Good Token', status: 200});
         } else {
-          console.log('bad or old token');
           clearInterval(tokenInterval);
           setTokenInterval(false);
           reject({error: true, message: 'Token incorrect or too old', status: 401});
         }
       } else {
-        console.log('token error');
         clearInterval(tokenInterval);
         setTokenInterval(false);
         reject({error: true, message: 'Server error', status: 500});
@@ -148,31 +145,31 @@ function generateToken (password, user) {
   return crypted.split('').reverse().join('');
 }
 
-function findById (id, fileName, param) {
-  return new Promise(function (resolve, reject) {
-    fs.readFile(path.join(__dirname,'vg/' + fileName), 'utf-8', function (err, data) {
-      if (err) reject('file read error');
-      var found = false;
-      if (param) {
-        data[param].forEach(function (item, index) {
-          if (item.id === id) {
-            found = true;
-            resolve({item: item, index: index});
-          }
-        });
-        if (!found) reject('no match found');
-      } else {
-        data.forEach(function (item, index) {
-          if (item.id === id) {
-            found = true;
-            resolve(item);
-          }
-        });
-        if (!found) reject('no match found');
-      }
-    });
-  });
-}
+// function findById (id, fileName, param) {
+//   return new Promise(function (resolve, reject) {
+//     fs.readFile(path.join(__dirname,'vg/' + fileName), 'utf-8', function (err, data) {
+//       if (err) reject('file read error');
+//       var found = false;
+//       if (param) {
+//         data[param].forEach(function (item, index) {
+//           if (item.id === id) {
+//             found = true;
+//             resolve({item: item, index: index});
+//           }
+//         });
+//         if (!found) reject('no match found');
+//       } else {
+//         data.forEach(function (item, index) {
+//           if (item.id === id) {
+//             found = true;
+//             resolve(item);
+//           }
+//         });
+//         if (!found) reject('no match found');
+//       }
+//     });
+//   });
+// }
 
 exports.simpleAuth = function (req, res) {
   var user = req.params.user,
@@ -223,7 +220,6 @@ exports.addGame = function(req, res) {
     })
     .catch(function (err) {
       res.status(401).send({error: true, message: 'Access Denied: Bad Token'});
-      console.log('token error');
     });
 };
 
@@ -232,7 +228,6 @@ exports.addConsole = function(req, res) {
 };
 
 exports.editGame = function(req, res) {
-  console.log('edit game called');
   validateToken(req.body.token, true)
     .then(function (loggedIn) {
       if (!loggedIn.error) {
@@ -242,7 +237,6 @@ exports.editGame = function(req, res) {
 
           gameLib.games.forEach(function (item, index) {
             if (parseInt(newGameData.id) === parseInt(item.id)) {
-              console.log('editing game with id', item.id);
               gameLib.games[index] = newGameData;
             }
           });
@@ -262,17 +256,16 @@ exports.deleteGame = function (req, res) {
     .then(function (loggedIn) {
       if (!loggedIn.error) {
         fs.readFile(path.join(__dirname, 'vg/gameLibrary.json'), 'utf-8', function (err, data) {
-          var delGameData = req.body.game,
+          var delGame = req.body.game,
             gameLib = JSON.parse(data);
 
           gameLib.games.forEach(function (item, index) {
-            if (parseInt(newGameData.id) === parseInt(item.id)) {
-              console.log('deleting game with id', item.id);
+            if (parseInt(delGame.id) === parseInt(item.id)) {
               gameLib.games.splice(index, 1);
             }
           });
           writeToJson(gameLib, 'gameLibrary.json');
-          res.status(200).send({error: false, message: newGameData.title + ' deleted!'})
+          res.status(200).send({error: false, message: delGame.title + ' deleted!'})
         });
       }
     })
