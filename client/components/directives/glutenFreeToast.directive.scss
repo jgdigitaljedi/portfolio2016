@@ -1,6 +1,6 @@
 .gf-toast-wrapper {
   display: flex;
-  position: absolute;
+  position: fixed;
   z-index: 999;
   @include box_shadow(2);
   flex-direction: row;

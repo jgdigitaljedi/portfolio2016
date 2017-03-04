@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', '$q', '$compile',
-  function (GB, VgData, $timeout, $q, $compile) {
+angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', '$q', '$compile', '$mdDialog',
+  function (GB, VgData, $timeout, $q, $compile, $mdDialog) {
     return {
       restrict: 'AE',
       templateUrl: 'components/directives/vgEditorForm.directive.html',
@@ -87,9 +87,21 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
         };
 
         function deleteRow (data, ele) {
-          scope.table.row(ele).remove();
-          scope.table.draw();
-          deleteDataCall({id: data.id, title: data.title}, 'Game');
+          var confirm = $mdDialog.confirm()
+            .title('Are you sure you want to delete ' + data.title + ' from your library?')
+            .textContent('Dude, you\'re trying to collect, not get rid of stuff!')
+            .ariaLabel('Really?')
+            .targetEvent(ele)
+            .ok('Confirm')
+            .cancel('Nope');
+
+          $mdDialog.show(confirm).then(function () {
+            scope.table.row(ele).remove();
+            scope.table.draw();
+            deleteDataCall({id: data.id, title: data.title}, 'Game');
+          }, function () {
+            console.log('user cancelled delete');
+          });
         }
 
         scope.handleInlineEditing = function (rowData, rowEle, cellData, cellEle) {

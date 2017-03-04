@@ -186,12 +186,12 @@ exports.simpleAuth = function (req, res) {
 
 exports.checkToken = function (req, res) {
   //*****************************
-  //** helper to add id's 1 time
+  //** helper to add stuff 1 time
   //****************************
   // fs.readFile(path.join(__dirname, 'vg/gameLibrary.json'), 'utf-8', function (err, data) {
   //   var data = JSON.parse(data);
   //   data.games.forEach(function (item, index) {
-  //     item.id = index + 1;
+  //     item.cib = '';
   //   });
   //   writeToJson(data, 'gameLibrary.json');
   // });

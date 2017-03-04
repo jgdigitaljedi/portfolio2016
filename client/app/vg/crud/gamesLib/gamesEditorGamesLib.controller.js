@@ -37,6 +37,7 @@ angular.module('portfolioApp').controller('EditGamesLibCtrl', ['VgData',
         {'mDataProp': 'rating', title: 'Rating'},
         {'mDataProp': 'releasedate', title: 'Released'},
         {'mDataProp': 'addeddate', title: 'Added'},
+        {'mDataProp': 'cib', title: 'Box/Case'},
         {'mDataProp': null, 'bSortable': false, 'mRender': function (o) {return '<button class="game-delete">Delete</button>';}}
       ],
       deleteRow: true
