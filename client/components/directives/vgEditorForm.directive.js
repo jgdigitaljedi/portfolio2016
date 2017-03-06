@@ -4,6 +4,7 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
   function (GB, VgData, $timeout, $q, $compile, $mdDialog) {
     return {
       restrict: 'AE',
+      // replace: true,
       templateUrl: 'components/directives/vgEditorForm.directive.html',
       scope: {
         formOptions: '='
@@ -30,15 +31,15 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
           }
         };
 
-        if (scope.formOptions.which === 'games') {
-          scope.showConDd = true;
-          VgData.getOwnedGames(true).then(function (result) {
+        function getGames (endpoint) {
+          VgData[endpoint](true).then(function (result) {
             console.log('owned games', result);
             gamesData = result;
             result.forEach(function (item) {
               if (scope.formOptions.consoleDd && consoleDd.indexOf(item.platform) < 0) {
                 consoleDd.push(item.platform);
               }
+              // console.log('item', item);
               var genres = item.genre.split(',');
               genres.forEach(function (g) {
                 if (genreList.indexOf(g) < 0) genreList.push(g);
@@ -48,6 +49,15 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
             scope.consoleDd = consoleDd;
             scope.genreList = genreList;
           });
+        }
+
+        if (scope.formOptions.which === 'games') {
+          scope.showConDd = true;
+          getGames('getOwnedGames');
+        } if (scope.formOptions.which === 'gamesWl') {
+          console.log('which is gamesWl');
+          scope.showConDd = true;
+          getGames('getGamesWishlist');
         }
 
         scope.searchParams = {addeddate: moment().format('MM/DD/YYYY')};
@@ -147,7 +157,8 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
         }
 
         function getDataForEditTable (which, container) {
-          if (which === 'games') {
+          if (which === 'games' || which === 'gamesWl') {
+            console.log('gamesData', gamesData);
             gamesData.forEach(function (item) {
               if (!item.hasOwnProperty('rating')) item.rating = 'none';
               if (!item.hasOwnProperty('releasedate')) item.releasedate = ' -- ';
@@ -317,6 +328,7 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
                   console.log('response in directive', result);
                   if (!result.data.error) {
                     triggerToast({style: 'success', text: request.gameRequest.gameData.title + ' Added!'});
+                    getGames();
                   } else {
 
                   }

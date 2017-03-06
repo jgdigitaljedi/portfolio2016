@@ -2,6 +2,8 @@
 //refactor this mess some day
 // needs to be WAY DRYer
 // writeToJson and others need more exception handling
+// now that I've made data structures uniform I can create caller functions and just pass different json file names
+//TODO: make this code not suck once I get the CRUD finished
 
 var path = require('path'),
   moment = require('moment'),
@@ -188,14 +190,31 @@ exports.checkToken = function (req, res) {
   //*****************************
   //** helper to add stuff 1 time
   //****************************
-  // fs.readFile(path.join(__dirname, 'vg/gameLibrary.json'), 'utf-8', function (err, data) {
+  // fs.readFile(path.join(__dirname, 'vg/newGameWl.json'), 'utf-8', function (err, data) {
   //   var data = JSON.parse(data);
   //   data.games.forEach(function (item, index) {
-  //     item.cib = '';
+  //     item.rating = 'not set';
+  //     item.releasedate = '01/01/1900';
+  //     item.addeddate = '01/01/1900';
   //   });
-  //   writeToJson(data, 'gameLibrary.json');
+  //   writeToJson(data, 'newGameWl.json');
+  // });
+
+
+  // fs.readFile(path.join(__dirname, 'vg/gameWishlist.json'), 'utf-8', function (err, data) {
+  //   var data = JSON.parse(data),
+  //     result = {games: []};
+  //   for (var con in data) {
+  //     for (var game in data[con]) {
+  //       result.games.push({title: data[con][game].games, price: data[con][game].price, platform: con});
+  //     }
+  //   }
+  //   writeToJson(result, 'newGameWl.json');
+  //   console.log('result', result);
   // });
   //*********************************
+
+
   var token = req.params.token;
   validateToken(token, false)
     .then(function (result) {
@@ -266,6 +285,43 @@ exports.deleteGame = function (req, res) {
           });
           writeToJson(gameLib, 'gameLibrary.json');
           res.status(200).send({error: false, message: delGame.title + ' deleted!'})
+        });
+      }
+    })
+    .catch(function (err) {
+      res.status(401).send({error: true, message: 'Access Denied: Bad Token'});
+    });
+};
+
+exports.getGamesWl = function (req, res) {
+  fs.readFile(path.join(__dirname,'vg/newGameWl.json'), 'utf-8', function (err, data) {
+    var returnData = {},
+      status;
+    // if (err.code !== 'ENOENT') throw err;
+    if (!err) {
+      returnData = {error: false, data: JSON.parse(data)};
+      status = 200;
+    } else {
+      returnData = {error: true, data: err};
+      status = 500;
+    }
+    res.status(status).send(returnData);
+  });
+};
+
+exports.addGameWl = function (req, res) {
+  console.log('addGameWl called');
+  validateToken(req.body.token, true)
+    .then(function (loggedIn) {
+      if (!loggedIn.error) {
+        fs.readFile(path.join(__dirname, 'vg/newGameWl.json'), 'utf-8', function (err, data) {
+          var addGame = req.body.game,
+            gameWl = JSON.parse(data);
+
+          addGame.price = parseFloat(reqData.price);
+          gameWl.games.push(addGame);
+          writeToJson(gameWl, 'newGameWl.json');
+          res.status(200).send({error: false, message: 'Game Successfully Added to WL'});
         });
       }
     })

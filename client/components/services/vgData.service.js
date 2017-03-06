@@ -10,7 +10,13 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
     //****************************
 
     function formatPrice (price) {
-      return '$' + price.toFixed(2);
+      console.log('price', price);
+      if (price > 0) {
+        return '$' + parseFloat(price).toFixed(2);
+      } else {
+        return '$0.00';
+      }
+
     }
 
     function getData (which, auth) {
@@ -63,7 +69,7 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
         if (!response.error) {
           response.games.forEach(function (item) {
             if (!noclean) {
-              if (!item.price) {
+              if (!item.price || item.price === 0) {
                 item.price = {
                   filter: null,
                   display: '--'
@@ -83,6 +89,37 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
         } else {
           console.warn('game lib error', response);
           def.reject({error: true, message: 'error retrieving game library'});
+        }
+      });
+      return def.promise;
+    }
+
+    function getGamesWishlist (noclean) {
+      var def = $q.defer();
+      getData('getgameswl').then(function (response) {
+        if (!response.error) {
+          response.games.forEach(function (item) {
+            if (!noclean) {
+              if (!item.price || item.price === 0) {
+                item.price = {
+                  filter: null,
+                  display: '--'
+                };
+              } else {
+                item.price = {
+                  filter: item.price,
+                  display: formatPrice(item.price)
+                };
+              }
+              if (!item.genre) {
+                item.genre = '--';
+              }
+            }
+          });
+          def.resolve(response.games);
+        } else {
+          console.warn('game wl error', response);
+          def.reject({error: true, message: 'error retrieving game wishlist'});
         }
       });
       return def.promise;
@@ -201,7 +238,7 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       gameData.forEach(function (item) {
         if (!gameReturn.gamesByConsole.hasOwnProperty(item.platform)) gameReturn.gamesByConsole[item.platform] = {items: 0, total: 0};
         gameReturn.gamesByConsole[item.platform].items++;
-        gameReturn.gamesByConsole[item.platform].total += item.price.filter !== null ? parseFloat(item.price.filter.toFixed(2)) : 0;
+        gameReturn.gamesByConsole[item.platform].total += item.price.filter !== null ? parseFloat(parseFloat(item.price.filter).toFixed(2)) : 0;
         gameReturn.totalPrice += item.price.filter;
         gameReturn.count++;
         genreTracker(item.genre, genreObj);
@@ -305,6 +342,18 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       return def.promise;
     }
 
+    function addGameWl (item, token) {
+      var def = $q.defer();
+      postWithJson('addGameWl',{game: item, token: token})
+        .then(function (response) {
+          def.resolve(response);
+        })
+        .catch(function (err) {
+          def.reject(err);
+        });
+      return def.promise;
+    }
+
 
     return {
       getOwnedGames: getOwnedGames,
@@ -316,7 +365,9 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       checkToken: checkToken,
       addGame: addGame,
       editGame: editGame,
-      deleteGame: deleteGame
+      deleteGame: deleteGame,
+      addGameWl: addGameWl,
+      getGamesWishlist: getGamesWishlist
     };
   }
 ]);

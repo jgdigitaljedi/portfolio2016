@@ -1,3 +1,6 @@
 <section class="game-wl-editor">
-  Games Wishlist
+  <vg-form form-options="egwl.formOptions" ng-if="egwl.formOptions"></vg-form>
+  <div class="toast-outer-wrapper" style="position: fixed !important;">
+    <gf-toast ng-if="egwl.formOptions.toast.options.trigger" options="egwl.formOptions.toast.options"></gf-toast>
+  </div>
 </section>

@@ -160,7 +160,8 @@ angular.module('portfolioApp')
         views: {
           'gamesWl': {
             templateUrl: 'app/vg/crud/gamesWl/EditGameWl.html',
-            controller: 'EditGamesWlCtrl'
+            controller: 'EditGamesWlCtrl',
+            controllerAs: 'egwl'
           }
         }
 

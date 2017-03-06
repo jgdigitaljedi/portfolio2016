@@ -18,4 +18,7 @@ router.post('/editgame', games.editGame);
 router.post('/editconsole', games.editConsole);
 router.post('/deleteGame', games.deleteGame);
 
+router.get('/getgameswl', games.getGamesWl);
+router.post('/addgamewl', games.addGameWl);
+
 module.exports = router;

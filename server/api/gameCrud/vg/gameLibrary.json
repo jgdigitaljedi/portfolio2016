@@ -435,7 +435,7 @@
         {
             "title": "Columns",
             "releasedate": 1990,
-            "platform": "Genesis / Mega Drive",
+            "platform": "Genesis",
             "genre": "Puzzle",
             "publisher": "Sega",
             "addeddate": "01/06/17",
@@ -448,7 +448,7 @@
         {
             "title": "General Chaos",
             "releasedate": 1994,
-            "platform": "Genesis / Mega Drive",
+            "platform": "Genesis",
             "genre": "Strategy",
             "publisher": "Electronic Arts",
             "developer": "Game Refuge Inc.",
@@ -462,7 +462,7 @@
         {
             "title": "NFL Football '94",
             "releasedate": 1993,
-            "platform": "Genesis / Mega Drive",
+            "platform": "Genesis",
             "genre": "Sports, Football",
             "publisher": "Sega of America Inc.",
             "developer": "SEGA",
@@ -476,7 +476,7 @@
         {
             "title": "Sonic & Knuckles",
             "releasedate": 34624,
-            "platform": "Genesis / Mega Drive",
+            "platform": "Genesis",
             "genre": "Platformer",
             "publisher": "Sega",
             "developer": "SEGA",
@@ -490,7 +490,7 @@
         {
             "title": "Sonic the Hedgehog 2",
             "releasedate": 33932,
-            "platform": "Genesis / Mega Drive",
+            "platform": "Genesis",
             "genre": "Platformer",
             "publisher": "Sega",
             "developer": "Sonic Team",
@@ -1497,7 +1497,7 @@
             "title": "Assassin's Creed II",
             "releasedate": 40134,
             "platform": "PlayStation 3",
-            "genre": "Action/Adventure",
+            "genre": "Action, Adventure",
             "publisher": "Ubisoft",
             "developer": "Ubisoft",
             "addeddate": 42515,
@@ -2512,7 +2512,7 @@
         {
             "title": "Advance Wars 2: Black Hole Rising",
             "releasedate": "06/24/2003",
-            "platform": "Gameboy Advance SP",
+            "platform": "Gameboy Advance",
             "genre": "Strategy",
             "publisher": "Nintendo",
             "developer": "Intelligent Systems",
@@ -2526,7 +2526,7 @@
         {
             "title": "Harry Potter and the Sorcerer's Stone",
             "releasedate": "11/15/2001",
-            "platform": "Gameboy Advance SP",
+            "platform": "Gameboy Advance",
             "genre": "Adventure",
             "publisher": "Electronic Arts",
             "addeddate": 42681,
@@ -2539,7 +2539,7 @@
         {
             "title": "The Incredible Hulk",
             "releasedate": "05/27/2003",
-            "platform": "Gameboy Advance SP",
+            "platform": "Gameboy Advance",
             "genre": "Action",
             "addeddate": 42681,
             "price": 3.67,
@@ -2551,7 +2551,7 @@
         {
             "title": "Jimmy Neutron: Jet Fusion",
             "releasedate": "09/16/2003",
-            "platform": "Gameboy Advance SP",
+            "platform": "Gameboy Advance",
             "genre": "Action",
             "publisher": "THQ",
             "addeddate": 42681,
@@ -2564,7 +2564,7 @@
         {
             "title": "The Legend of Zelda: A Link to the Past w/ the Four Swords",
             "releasedate": "12/02/2002",
-            "platform": "Gameboy Advance SP",
+            "platform": "Gameboy Advance",
             "genre": "Action, RPG",
             "publisher": "Nintendo",
             "developer": "Nintendo",
@@ -2578,7 +2578,7 @@
         {
             "title": "LEGO Star Wars II: The Original Trilogy",
             "releasedate": "09/11/2006",
-            "platform": "Gameboy Advance SP",
+            "platform": "Gameboy Advance",
             "genre": "Action, Adventure",
             "publisher": "Lucas Arts Entertainment",
             "addeddate": 42681,
@@ -2591,7 +2591,7 @@
         {
             "title": "Metroid: Zero Mission",
             "releasedate": "02/09/2004",
-            "platform": "Gameboy Advance SP",
+            "platform": "Gameboy Advance",
             "genre": "Shooter",
             "publisher": "Nintendo of America, Inc.",
             "developer": "Nintendo Co. Ltd.",
@@ -2605,7 +2605,7 @@
         {
             "title": "Power Rangers: DinoThunder",
             "releasedate": "09/14/2004",
-            "platform": "Gameboy Advance SP",
+            "platform": "Gameboy Advance",
             "genre": "Action",
             "addeddate": 42681,
             "price": 4,
@@ -2616,7 +2616,7 @@
         },
         {
             "title": "SpongeBob SquarePants: The Battle For Bikini Bottom",
-            "platform": "Gameboy Advance SP",
+            "platform": "Gameboy Advance",
             "genre": "Platformer",
             "addeddate": 42681,
             "price": 3,
@@ -2628,7 +2628,7 @@
         },
         {
             "title": "Tony Hawk Pro Skater 2",
-            "platform": "Gameboy Advance SP",
+            "platform": "Gameboy Advance",
             "genre": "Sports, Skating",
             "addeddate": "12/4/2016",
             "price": 5,
@@ -2646,7 +2646,7 @@
             "releasedate": "11/01/1990",
             "genre": "Action",
             "price": 14,
-            "platform": "Genesis / Mega Drive",
+            "platform": "Genesis",
             "id": 194,
             "cib": "loose"
         },
@@ -2694,7 +2694,7 @@
             "releasedate": "01/01/1991",
             "price": 6.5,
             "genre": "Shooter",
-            "platform": "Genesis / Mega Drive",
+            "platform": "Genesis",
             "id": 198,
             "cib": "loose"
         },
@@ -2728,7 +2728,7 @@
             "title": "The Legend of Zelda: Ocarina of Time",
             "rating": "ESRB: E",
             "releasedate": "11/21/1998",
-            "genre": "Role-Playing, Action-Adventure",
+            "genre": "RPG, Action, Adventure",
             "price": 17,
             "platform": "Nintendo 3DS",
             "id": 201,
@@ -2757,6 +2757,90 @@
             "cib": "case",
             "platform": "GameCube",
             "id": 206
+        },
+        {
+            "addeddate": "03/05/2017",
+            "gbId": "3030-10276",
+            "price": 31,
+            "cib": "sleeve",
+            "title": "The Legend of Zelda: A Link to the Past",
+            "rating": "ESRB: K-A",
+            "releasedate": "11/21/1991",
+            "genre": "Action, Adventure, RPG",
+            "platform": "SNES",
+            "id": 207
+        },
+        {
+            "addeddate": "03/05/2017",
+            "gbId": "3030-1334",
+            "price": 20,
+            "cib": "sleeve",
+            "title": "Super Mario World",
+            "rating": "ESRB: E",
+            "releasedate": "11/21/1990",
+            "genre": "Platformer",
+            "platform": "SNES",
+            "id": 208
+        },
+        {
+            "addeddate": "03/05/2017",
+            "gbId": "3030-19071",
+            "price": 30,
+            "cib": "sleeve",
+            "title": "Super Mario Kart",
+            "rating": "ESRB: E",
+            "releasedate": "08/27/1992",
+            "genre": "Racing, Vehicular Combat",
+            "platform": "SNES",
+            "id": 209
+        },
+        {
+            "addeddate": "03/05/2017",
+            "gbId": "3030-42164",
+            "price": 0,
+            "cib": "DL",
+            "platform": "PC",
+            "title": "Organ Trail: Director's Cut",
+            "rating": "JOEY: E10+",
+            "releasedate": "03/19/2013",
+            "genre": "Strategy, Simulation",
+            "id": 210
+        },
+        {
+            "addeddate": "03/05/2017",
+            "gbId": "3030-21170",
+            "price": 0,
+            "cib": "DL",
+            "platform": "PC",
+            "title": "Portal",
+            "rating": "ESRB: T",
+            "releasedate": "10/10/2007",
+            "genre": "Puzzle, Platformer",
+            "id": 211
+        },
+        {
+            "addeddate": "03/05/2017",
+            "gbId": "3030-21662",
+            "price": 0,
+            "cib": "DL",
+            "platform": "PC",
+            "title": "Portal 2",
+            "rating": "ESRB: E10+",
+            "releasedate": "04/19/2011",
+            "genre": "Puzzle, FPS",
+            "id": 212
+        },
+        {
+            "addeddate": "03/05/2017",
+            "gbId": "3030-2980",
+            "price": 0,
+            "cib": "DL",
+            "platform": "PC",
+            "title": "Half-Life",
+            "rating": "ESRB: M",
+            "releasedate": "11/19/1998",
+            "genre": "FPS",
+            "id": 213
         }
     ]
 }
