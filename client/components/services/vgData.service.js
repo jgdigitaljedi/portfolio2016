@@ -301,6 +301,21 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
     //** game editor setters ***
     //**************************
 
+    function editorCall (request, ep) {
+      var def = $q.defer();
+      console.log('editor call', ep);
+      postWithJson(ep, request)
+        .then(function (result) {
+          console.log('editor call result', result);
+          def.resolve(result);
+        })
+        .catch(function (err) {
+          console.log('editor call error in vgdata');
+          def.reject('editor call error');
+        });
+      return def.promise;
+    }
+
     function addGame (game) {
       var def = $q.defer();
       console.log('add game', game);
@@ -317,6 +332,7 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
     }
 
     function editGame (game) {
+      console.log('game from lib edit', game);
       var def = $q.defer();
       console.log('edit game', game);
       postWithJson('editgame', game)
@@ -344,7 +360,7 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
 
     function addGameWl (item, token) {
       var def = $q.defer();
-      postWithJson('addGameWl',{game: item, token: token})
+      postWithJson('addgamewl',{game: item, token: token})
         .then(function (response) {
           def.resolve(response);
         })
@@ -354,6 +370,31 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       return def.promise;
     }
 
+    function editGameWl (item, token) {
+      console.log('game from edit wl', item);
+      var def = $q.defer();
+      postWithJson('editgamewl', item)
+        .then(function (response) {
+          def.resolve(response);
+        })
+        .catch(function (err) {
+          def.reject(err);
+        });
+      return def.promise;
+    }
+
+    function deleteGameWl (item, token) {
+      console.log('game from delete wl', item);
+      var def = $q.defer();
+      postWithJson('deleteGameWl',{game: item, token: token})
+        .then(function (response) {
+          def.resolve(response);
+        })
+        .catch(function (err) {
+          def.reject(err);
+        });
+      return def.promise;
+    }
 
     return {
       getOwnedGames: getOwnedGames,
@@ -367,7 +408,10 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       editGame: editGame,
       deleteGame: deleteGame,
       addGameWl: addGameWl,
-      getGamesWishlist: getGamesWishlist
+      getGamesWishlist: getGamesWishlist,
+      editGameWl: editGameWl,
+      deleteGameWl: deleteGameWl,
+      editorCall: editorCall
     };
   }
 ]);

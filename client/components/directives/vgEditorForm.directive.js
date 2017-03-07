@@ -62,10 +62,10 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
 
         scope.searchParams = {addeddate: moment().format('MM/DD/YYYY')};
 
-        function deleteDataCall (item, which) {
-          // need to open confirmation modal here
+        function deleteDataCall (item) {
           var token = sessionStorage.getItem('jgToken');
-          VgData['delete' + which](item, token)
+          // VgData[scope.formOptions.endpoints.delete](item, token)
+          VgData.editorCall({game: item, token: token}, scope.formOptions.endpoints.delete)
             .then(function (response) {
               triggerToast({style: 'success', text: item.title + ' deleted!'});
             })
@@ -74,9 +74,8 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
             });
         }
 
-        function makeEditCall (request, which) {
-          console.log('request', request);
-          VgData['edit' + which](request)
+        function makeEditCall (request) {
+          VgData.editorCall(request, scope.formOptions.endpoints.edit)
             .then(function (response) {
               console.log('resposne from edit', response);
               triggerToast({style: 'success', text: request.game.title + ' edited!!'});
@@ -92,11 +91,12 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
               scope.state.edit.cellData.data(scope.editText);
               angular.element('#edit-textarea').remove();
               scope.state.edit.editing = false;
-              makeEditCall({game: scope.state.edit.rowData, token: sessionStorage.getItem('jgToken')}, 'Game');
+              makeEditCall({game: scope.state.edit.rowData, token: sessionStorage.getItem('jgToken')});
             }
         };
 
         function deleteRow (data, ele) {
+
           var confirm = $mdDialog.confirm()
             .title('Are you sure you want to delete ' + data.title + ' from your library?')
             .textContent('Dude, you\'re trying to collect, not get rid of stuff!')
@@ -108,7 +108,7 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
           $mdDialog.show(confirm).then(function () {
             scope.table.row(ele).remove();
             scope.table.draw();
-            deleteDataCall({id: data.id, title: data.title}, 'Game');
+            deleteDataCall({id: data.id, title: data.title});
           }, function () {
             console.log('user cancelled delete');
           });
@@ -137,7 +137,7 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
             scope.state.edit.cellData.data(scope.editText);
             angular.element('#edit-textarea').remove();
             scope.state.edit.editing = false;
-            makeEditCall(rowData);
+            makeEditCall({game: rowData, token: sessionStorage.getItem('jgToken')});
           }
         };
 
@@ -324,7 +324,8 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
                 };
                 request.gameRequest.gameData.id = scope.state.lastId + 1;
                 scope.state.lastId++;
-                VgData.addGame(request).then(function (result) {
+                // VgData.addGame(request).then(function (result) {
+                VgData.editorCall(request, scope.formOptions.endpoints.add).then(function (result) {
                   console.log('response in directive', result);
                   if (!result.data.error) {
                     triggerToast({style: 'success', text: request.gameRequest.gameData.title + ' Added!'});
@@ -334,7 +335,7 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
                   }
                 });
               } else {
-                triggerToast({style: 'warning', text: 'ERROR ADDING GAME!'});
+                triggerToast({style: 'warning', text: 'ERROR ADDING ' + scope.formOptions.type + '!'});
               }
             });
         };

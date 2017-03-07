@@ -329,3 +329,50 @@ exports.addGameWl = function (req, res) {
       res.status(401).send({error: true, message: 'Access Denied: Bad Token'});
     });
 };
+
+exports.editGameWl = function(req, res) {
+  validateToken(req.body.token, true)
+    .then(function (loggedIn) {
+      if (!loggedIn.error) {
+        fs.readFile(path.join(__dirname, 'vg/newGameWl.json'), 'utf-8', function (err, data) {
+          var newGameData = req.body.game,
+            gameWl = JSON.parse(data);
+
+          gameWl.games.forEach(function (item, index) {
+            if (parseInt(newGameData.id) === parseInt(item.id)) {
+              gameWl.games[index] = newGameData;
+            }
+          });
+          writeToJson(gameWl, 'newGameWl.json');
+          res.status(200).send({error: false, message: newGameData.title + ' added!'})
+        });
+      }
+    })
+    .catch(function (err) {
+      res.status(401).send({error: true, message: 'Access Denied: Bad Token'});
+    });
+};
+
+exports.deleteGameWl = function (req, res) {
+  console.log('deleteGameWl called');
+  validateToken(req.body.token, true)
+    .then(function (loggedIn) {
+      if (!loggedIn.error) {
+        fs.readFile(path.join(__dirname, 'vg/newGameWl.json'), 'utf-8', function (err, data) {
+          var delGame = req.body.game,
+            gameLib = JSON.parse(data);
+
+          gameLib.games.forEach(function (item, index) {
+            if (parseInt(delGame.id) === parseInt(item.id)) {
+              gameLib.games.splice(index, 1);
+            }
+          });
+          writeToJson(gameLib, 'newGameWl.json');
+          res.status(200).send({error: false, message: delGame.title + ' deleted!'})
+        });
+      }
+    })
+    .catch(function (err) {
+      res.status(401).send({error: true, message: 'Access Denied: Bad Token'});
+    });
+};

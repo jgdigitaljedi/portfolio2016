@@ -7,8 +7,9 @@ angular.module('portfolioApp').controller('EditGamesWlCtrl', [
     egwl.formOptions = {
       title: 'Add a Game to Wish List',
       which: 'gamesWl',
+      type: 'Game',
       gbSearch: 'game',
-      editEndpoint: {add: 'addGameWl', edit: 'editGameWl'},
+      endpoints: {add: 'addGameWl', edit: 'editGameWl', get: 'getGamesWl', delete: 'deleteGameWl'},
       inputs: [
         {name: 'gbId', display: 'GiantBomb ID', link: 'http://www.giantbomb.com', required: true},
         {name: 'addeddate', display: 'Date Added (MM/DD/YYYY)', required: true},
@@ -36,7 +37,8 @@ angular.module('portfolioApp').controller('EditGamesWlCtrl', [
         {'mDataProp': 'rating', title: 'Rating'},
         {'mDataProp': 'releasedate', title: 'Released'},
         {'mDataProp': 'addeddate', title: 'Added'},
-        {'mDataProp': null, 'bSortable': false, 'mRender': function (o) {return '<button class="game-delete">Delete</button>';}}
+        {'mDataProp': null, 'bSortable': false, 'mRender': function (o) {return '<button class="game-delete">Delete</button>';}},
+        {'mDataProp': null, 'bSortable': false, 'mRender': function (o) {return '<button class="move-to-library">Move to Library</button>';}}
       ],
       deleteRow: true
     }
