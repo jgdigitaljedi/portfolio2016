@@ -304,6 +304,7 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
     function editorCall (request, ep) {
       var def = $q.defer();
       console.log('editor call', ep);
+      console.log('editor call request', request);
       postWithJson(ep, request)
         .then(function (result) {
           console.log('editor call result', result);
@@ -316,86 +317,6 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       return def.promise;
     }
 
-    function addGame (game) {
-      var def = $q.defer();
-      console.log('add game', game);
-      postWithJson('addGame', game)
-        .then(function (result) {
-          console.log('add game result', result);
-          def.resolve(result);
-        })
-        .catch(function (err) {
-          console.log('add game error in vgdata addGame');
-          def.reject('add game error');
-        });
-      return def.promise;
-    }
-
-    function editGame (game) {
-      console.log('game from lib edit', game);
-      var def = $q.defer();
-      console.log('edit game', game);
-      postWithJson('editgame', game)
-        .then(function (result) {
-          def.resolve(result);
-
-        })
-        .catch(function (err) {
-          def.reject(err);
-        });
-      return def.promise;
-    }
-
-    function deleteGame (item, token) {
-      var def = $q.defer();
-      postWithJson('deleteGame',{game: item, token: token})
-        .then(function (response) {
-          def.resolve(response);
-        })
-        .catch(function (err) {
-          def.reject(err);
-        });
-      return def.promise;
-    }
-
-    function addGameWl (item, token) {
-      var def = $q.defer();
-      postWithJson('addgamewl',{game: item, token: token})
-        .then(function (response) {
-          def.resolve(response);
-        })
-        .catch(function (err) {
-          def.reject(err);
-        });
-      return def.promise;
-    }
-
-    function editGameWl (item, token) {
-      console.log('game from edit wl', item);
-      var def = $q.defer();
-      postWithJson('editgamewl', item)
-        .then(function (response) {
-          def.resolve(response);
-        })
-        .catch(function (err) {
-          def.reject(err);
-        });
-      return def.promise;
-    }
-
-    function deleteGameWl (item, token) {
-      console.log('game from delete wl', item);
-      var def = $q.defer();
-      postWithJson('deleteGameWl',{game: item, token: token})
-        .then(function (response) {
-          def.resolve(response);
-        })
-        .catch(function (err) {
-          def.reject(err);
-        });
-      return def.promise;
-    }
-
     return {
       getOwnedGames: getOwnedGames,
       getOwnedHardware: getOwnedHardware,
@@ -404,13 +325,7 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       gameTotals: gameTotals,
       gamesAuth: gamesAuth,
       checkToken: checkToken,
-      addGame: addGame,
-      editGame: editGame,
-      deleteGame: deleteGame,
-      addGameWl: addGameWl,
       getGamesWishlist: getGamesWishlist,
-      editGameWl: editGameWl,
-      deleteGameWl: deleteGameWl,
       editorCall: editorCall
     };
   }

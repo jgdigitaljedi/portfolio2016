@@ -9,7 +9,7 @@ angular.module('portfolioApp').controller('EditGamesWlCtrl', [
       which: 'gamesWl',
       type: 'Game',
       gbSearch: 'game',
-      endpoints: {add: 'addGameWl', edit: 'editGameWl', get: 'getGamesWl', delete: 'deleteGameWl'},
+      endpoints: {add: 'addGameWl', edit: 'editGameWl', get: 'getGamesWishlist', delete: 'deleteGameWl'},
       inputs: [
         {name: 'gbId', display: 'GiantBomb ID', link: 'http://www.giantbomb.com', required: true},
         {name: 'addeddate', display: 'Date Added (MM/DD/YYYY)', required: true},
@@ -24,9 +24,7 @@ angular.module('portfolioApp').controller('EditGamesWlCtrl', [
       consoleDd: true,
       toast: {
         trigger: false,
-        options: {
-
-        }
+        options: {}
       },
       paramsArr: ['addeddate', 'gbId', 'genre', 'platform', 'price', 'rating', 'releasedate', 'title'],
       dataTable: [
@@ -38,9 +36,12 @@ angular.module('portfolioApp').controller('EditGamesWlCtrl', [
         {'mDataProp': 'releasedate', title: 'Released'},
         {'mDataProp': 'addeddate', title: 'Added'},
         {'mDataProp': null, 'bSortable': false, 'mRender': function (o) {return '<button class="game-delete">Delete</button>';}},
-        {'mDataProp': null, 'bSortable': false, 'mRender': function (o) {return '<button class="move-to-library">Move to Library</button>';}}
+        {'mDataProp': null, 'bSortable': false, 'mRender': function (o) {return '<button class="extra-action">Move to Library</button>';}}
       ],
-      deleteRow: true
+      deleteRow: true,
+      extraAction: {
+        type: 'modal'
+      }
     }
   }
 ]);

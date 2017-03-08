@@ -9,7 +9,7 @@ angular.module('portfolioApp').controller('EditGamesLibCtrl', ['VgData',
       which: 'games',
       gbSearch: 'game',
       type: 'Game',
-      endpoints: {add: 'addGame', edit: 'editGame', delete: 'deleteGame'},
+      endpoints: {add: 'addGame', edit: 'editGame', delete: 'deleteGame', get: 'getOwnedGames'},
       inputs: [
         {name: 'gbId', display: 'GiantBomb ID', link: 'http://www.giantbomb.com', required: true},
         {name: 'addeddate', display: 'Date Added (MM/DD/YYYY)', required: true},

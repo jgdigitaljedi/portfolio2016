@@ -4,7 +4,6 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
   function (GB, VgData, $timeout, $q, $compile, $mdDialog) {
     return {
       restrict: 'AE',
-      // replace: true,
       templateUrl: 'components/directives/vgEditorForm.directive.html',
       scope: {
         formOptions: '='
@@ -39,7 +38,6 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
               if (scope.formOptions.consoleDd && consoleDd.indexOf(item.platform) < 0) {
                 consoleDd.push(item.platform);
               }
-              // console.log('item', item);
               var genres = item.genre.split(',');
               genres.forEach(function (g) {
                 if (genreList.indexOf(g) < 0) genreList.push(g);
@@ -51,20 +49,12 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
           });
         }
 
-        if (scope.formOptions.which === 'games') {
-          scope.showConDd = true;
-          getGames('getOwnedGames');
-        } if (scope.formOptions.which === 'gamesWl') {
-          console.log('which is gamesWl');
-          scope.showConDd = true;
-          getGames('getGamesWishlist');
-        }
-
+        getGames(scope.formOptions.endpoints.get);
+        scope.showConDd = scope.formOptions.consoleDd || false;
         scope.searchParams = {addeddate: moment().format('MM/DD/YYYY')};
 
         function deleteDataCall (item) {
           var token = sessionStorage.getItem('jgToken');
-          // VgData[scope.formOptions.endpoints.delete](item, token)
           VgData.editorCall({game: item, token: token}, scope.formOptions.endpoints.delete)
             .then(function (response) {
               triggerToast({style: 'success', text: item.title + ' deleted!'});
@@ -75,6 +65,8 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
         }
 
         function makeEditCall (request) {
+          console.log('edit call in directive', request);
+          console.log('edit call endpoint', scope.formOptions.endpoints.edit);
           VgData.editorCall(request, scope.formOptions.endpoints.edit)
             .then(function (response) {
               console.log('resposne from edit', response);
@@ -114,9 +106,15 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
           });
         }
 
+        function handleExtraAction (data, ele) {
+          console.log('extra action', data);
+        }
+
         scope.handleInlineEditing = function (rowData, rowEle, cellData, cellEle) {
-          if (angular.element(cellEle).find('.game-delete').length > 0) {
+          if (angular.element(cellEle).find('.game-delete').length > 0 ) {
             deleteRow(rowData, rowEle);
+          } else if (angular.element(cellEle).find('.extra-action').length > 0 ) {
+            handleExtraAction(rowData, rowEle);
           } else if (!scope.state.edit.editing) {
             var cellProps = {
               width: angular.element(cellEle).width() + 18,

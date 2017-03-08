@@ -193,9 +193,7 @@ exports.checkToken = function (req, res) {
   // fs.readFile(path.join(__dirname, 'vg/newGameWl.json'), 'utf-8', function (err, data) {
   //   var data = JSON.parse(data);
   //   data.games.forEach(function (item, index) {
-  //     item.rating = 'not set';
-  //     item.releasedate = '01/01/1900';
-  //     item.addeddate = '01/01/1900';
+  //     item.gbId = '0';
   //   });
   //   writeToJson(data, 'newGameWl.json');
   // });
@@ -311,14 +309,14 @@ exports.getGamesWl = function (req, res) {
 
 exports.addGameWl = function (req, res) {
   console.log('addGameWl called');
-  validateToken(req.body.token, true)
+  validateToken(req.body.gameRequest.token, true)
     .then(function (loggedIn) {
       if (!loggedIn.error) {
         fs.readFile(path.join(__dirname, 'vg/newGameWl.json'), 'utf-8', function (err, data) {
-          var addGame = req.body.game,
+          var addGame = req.body.gameRequest.gameData,
             gameWl = JSON.parse(data);
 
-          addGame.price = parseFloat(reqData.price);
+          addGame.price = parseFloat(addGame.price);
           gameWl.games.push(addGame);
           writeToJson(gameWl, 'newGameWl.json');
           res.status(200).send({error: false, message: 'Game Successfully Added to WL'});

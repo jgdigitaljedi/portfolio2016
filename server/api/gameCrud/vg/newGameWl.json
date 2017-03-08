@@ -5,110 +5,121 @@
             "price": 12,
             "platform": "NES",
             "id": 1,
-            "genre": "not set",
+            "genre": "Action, Adventure, Puzzle, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "releasedate": "10/16/1989",
+            "addeddate": "01/01/1900",
+            "gbId": "3030-20314"
         },
         {
             "title": "Baseball Stars",
             "price": 11,
             "platform": "NES",
             "id": 2,
-            "genre": "not set",
+            "genre": "Sports, Baseball",
             "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "releasedate": "05/19/1989",
+            "addeddate": "01/01/1900",
+            "gbId": "3030-5811"
         },
         {
             "title": "Baseball Stars 2",
             "price": 18,
             "platform": "NES",
             "id": 3,
-            "genre": "not set",
+            "genre": "Sports, Baseball",
             "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "releasedate": "01/01/1992",
+            "addeddate": "01/01/1900",
+            "gbId": "3030-5577"
         },
         {
             "title": "Batman",
             "price": 8,
             "platform": "NES",
             "id": 4,
-            "genre": "not set",
+            "genre": "Action",
             "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "releasedate": "12/02/1989",
+            "addeddate": "01/01/1900",
+            "gbId": "3030-21264"
         },
         {
             "title": "Blaster Master",
             "price": 10,
             "platform": "NES",
             "id": 5,
-            "genre": "not set",
+            "genre": "Action, Shooter, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "releasedate": "06/17/1988",
+            "addeddate": "01/01/1900",
+            "gbId": "3030-1257"
         },
         {
             "title": "Castlevania ",
             "price": 19,
             "platform": "NES",
             "id": 6,
-            "genre": "not set",
+            "genre": "Action, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "releasedate": "09/26/1986",
+            "addeddate": "01/01/1900",
+            "gbId": "3030-6673"
         },
         {
             "title": "Castlevania  2",
             "price": 9,
             "platform": "NES",
             "id": 7,
-            "genre": "not set",
+            "genre": "Action, Adventure, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "releasedate": "08/28/1987",
+            "addeddate": "01/01/1900",
+            "gbId": "3030-11820"
         },
         {
             "title": "Contra",
             "price": 32,
             "platform": "NES",
             "id": 8,
-            "genre": "not set",
+            "genre": "Action, Shooter",
             "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "releasedate": "02/20/1987",
+            "addeddate": "01/01/1900",
+            "gbId": "3030-4350"
         },
         {
             "title": "Double Dragon",
             "price": 10,
             "platform": "NES",
             "id": 9,
-            "genre": "not set",
+            "genre": "Fighting, Brawler",
             "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "releasedate": "06/01/1987",
+            "addeddate": "01/01/1900",
+            "gbId": "3030-20752"
         },
         {
             "title": "Double Dragon 2",
             "price": 11,
             "platform": "NES",
             "id": 10,
-            "genre": "not set",
+            "genre": "Fighting, Brawler",
             "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "releasedate": "12/01/1988",
+            "addeddate": "01/01/1900",
+            "gbId": "3030-4816"
         },
         {
             "title": "Excitebike",
             "price": 8,
             "platform": "NES",
             "id": 11,
-            "genre": "not set",
+            "genre": "Sports, Racing",
             "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "releasedate": "11/30/1984",
+            "addeddate": "01/01/1900",
+            "gbId": "3030-15025"
         },
         {
             "title": "Final Fantasy",
@@ -118,7 +129,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Ghosts and Goblins",
@@ -128,7 +140,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Gradius",
@@ -138,7 +151,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Kid Icarus",
@@ -148,7 +162,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Kung Fu",
@@ -158,7 +173,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Lifeforce",
@@ -168,7 +184,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mario 2",
@@ -178,7 +195,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mega Man (all)",
@@ -188,7 +206,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Metroid",
@@ -198,7 +217,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mike Tyson's Punch Out",
@@ -208,7 +228,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Ninja Gaiden",
@@ -218,7 +239,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Ninja Gaiden 2",
@@ -228,7 +250,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "RC Pro Am",
@@ -238,7 +261,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "RC Pro AM 2",
@@ -248,7 +272,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Space Shuttle",
@@ -258,7 +283,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Super C",
@@ -268,7 +294,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Tecmo Super Bowl",
@@ -278,7 +305,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Zelda",
@@ -288,7 +316,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Zelda II: The Adventure of Link",
@@ -298,7 +327,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Aladdin",
@@ -308,7 +338,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Altered Beast",
@@ -318,7 +349,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Blades of Vengence",
@@ -328,7 +360,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Castlevania: Bloodlines",
@@ -338,7 +371,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Ghouls 'n Ghosts",
@@ -348,7 +382,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Golden Axe",
@@ -358,7 +393,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mazin Saga Mutant Fighter",
@@ -368,7 +404,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Michael Jackson’s Moonwalker",
@@ -378,7 +415,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mortal Kombat II",
@@ -388,7 +426,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "NBA Jam TE",
@@ -398,7 +437,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Revenge of Shinobi",
@@ -408,7 +448,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Sonic 3D Blast",
@@ -418,7 +459,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Sonic Spinball",
@@ -428,7 +470,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Sonic the Hedgehog",
@@ -438,7 +481,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Sonic the Hedgehog 3",
@@ -448,7 +492,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Streets of Rage",
@@ -458,7 +503,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Streets of Rage 2",
@@ -468,7 +514,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Streets of Rage 3",
@@ -478,7 +525,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Super Baseball 2020",
@@ -488,7 +536,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Super Street Fighter 2",
@@ -498,7 +547,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Toejam and Earl",
@@ -508,7 +558,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Banjo Kazooie",
@@ -518,7 +569,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Blast Corps",
@@ -528,7 +580,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Castlevania",
@@ -538,7 +591,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Conker’s Bad Fur Day",
@@ -548,7 +602,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Diddy Kong Racing",
@@ -558,7 +613,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Diddy Kong Racing 2",
@@ -568,7 +624,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Duke Nukem: Zero Hour",
@@ -578,7 +635,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Excitebike 64",
@@ -588,7 +646,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Extreme G",
@@ -598,7 +657,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "F-Zero X",
@@ -608,7 +668,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Kirby 64",
@@ -618,7 +679,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mario 64",
@@ -628,7 +690,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mario Golf",
@@ -638,7 +701,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mario Kart 64",
@@ -648,7 +712,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mario Party",
@@ -658,7 +723,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Micro Machines 64",
@@ -668,7 +734,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mortal Kombat 4",
@@ -678,7 +745,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Star Fox 64",
@@ -688,7 +756,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Star Wars Episode 1 Racer",
@@ -698,7 +767,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Super Smash Bros",
@@ -708,7 +778,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "The World is not Enough",
@@ -718,7 +789,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Yoshi's Story",
@@ -728,7 +800,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Zelda: Majora's Mask",
@@ -738,7 +811,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Chu Chu Rocket",
@@ -748,7 +822,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Crazy Taxi 2",
@@ -758,7 +833,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Ecco the Dolphin: Defender of the Future",
@@ -768,7 +844,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Jet Grind Radio",
@@ -778,7 +855,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Marvel vs Capcom 2",
@@ -788,7 +866,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Power Stone 2",
@@ -798,7 +877,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Re-Volt",
@@ -808,7 +888,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Ready 2 Rumble Boxing",
@@ -818,7 +899,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Shenmue",
@@ -828,7 +910,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Sonic Adventure 2",
@@ -838,7 +921,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Soul Calibur",
@@ -848,7 +932,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Street Fighter 3: Double Impact",
@@ -858,7 +943,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Toy Commander",
@@ -868,7 +954,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Worms World Party",
@@ -878,7 +965,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Donkey Kong: Jungle Beat",
@@ -888,7 +976,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Eternal Darkness: Sanity's Requiem",
@@ -898,7 +987,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Luigi's Mansion",
@@ -908,7 +998,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mario Party 4",
@@ -918,7 +1009,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mario Party 5",
@@ -928,7 +1020,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mario Power Tennis",
@@ -938,7 +1031,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Metroid Prime 2: Echoes",
@@ -948,7 +1042,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Sonic Adventure 2 DX",
@@ -958,7 +1053,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Soul Calibur 2",
@@ -968,7 +1064,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Star Fox: Assault",
@@ -978,7 +1075,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Star Wars Rogue Squadron 2",
@@ -988,7 +1086,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Super Mario Strikers",
@@ -998,7 +1097,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Super Monkey Ball",
@@ -1008,7 +1108,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Super Smash Bros Melee",
@@ -1018,7 +1119,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Time Splitters 2",
@@ -1028,7 +1130,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Viewtiful Joe",
@@ -1038,7 +1141,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Viewtiful Joe 2",
@@ -1048,7 +1152,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Zelda Twilight Princess",
@@ -1058,7 +1163,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "007 Nightfire",
@@ -1068,7 +1174,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Bully",
@@ -1078,7 +1185,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Devil May Cry 2",
@@ -1088,7 +1196,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Devil May Cry 3",
@@ -1098,7 +1207,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Final Fantasy X",
@@ -1108,7 +1218,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Final Fantasy XII",
@@ -1118,7 +1229,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Frequency",
@@ -1128,7 +1240,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "God of War 2",
@@ -1138,7 +1251,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Gran Turismo 4",
@@ -1148,7 +1262,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Grand Theft Auto III",
@@ -1158,7 +1273,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Grand Theft Auto Vice City",
@@ -1168,7 +1284,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Guitaroo-Man",
@@ -1178,7 +1295,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Half Life",
@@ -1188,7 +1306,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Katamari Damacy",
@@ -1198,7 +1317,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Manhunt",
@@ -1208,7 +1328,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Manhunt 2",
@@ -1218,7 +1339,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Ratchet and Clank: Up Your Arsenal",
@@ -1228,7 +1350,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Shadow of the Colossus",
@@ -1238,7 +1361,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Star Wars: Battlefront 1",
@@ -1248,7 +1372,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Star Wars: Battlefront 2",
@@ -1258,7 +1383,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Star Wars: Jedi Starfighter",
@@ -1268,7 +1394,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Tekken Tag Tournament",
@@ -1278,7 +1405,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "The Warriors",
@@ -1288,7 +1416,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Time Splitters: Future Perfect",
@@ -1298,7 +1427,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Tony Hawk Pro Skater 3",
@@ -1308,7 +1438,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Unreal Tournament",
@@ -1318,7 +1449,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Assassin's Creed Brotherhood",
@@ -1328,7 +1460,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Assassin's Creed IV",
@@ -1338,7 +1471,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Assassin's Creed Revelations",
@@ -1348,7 +1482,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Assassins Creed",
@@ -1358,7 +1493,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Assassins Creed III",
@@ -1368,7 +1504,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Battlefield (all)",
@@ -1378,7 +1515,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Borderlands 2",
@@ -1388,7 +1526,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Gran Turismo 6",
@@ -1398,7 +1537,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Grand Theft Auto 4",
@@ -1408,7 +1548,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Killzone",
@@ -1418,7 +1559,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Killzone 2",
@@ -1428,7 +1570,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Killzone 3",
@@ -1438,7 +1581,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Little Big Planet 2",
@@ -1448,7 +1592,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "ModNation Racers",
@@ -1458,7 +1603,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Portal 2",
@@ -1468,7 +1614,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Red Dead Redemption",
@@ -1478,7 +1625,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Resident Evil 5",
@@ -1488,7 +1636,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Sonic Generations",
@@ -1498,7 +1647,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Uncharted",
@@ -1508,7 +1658,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Uncharted 2",
@@ -1518,7 +1669,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Uncharted 3",
@@ -1528,7 +1680,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Uncharted 4",
@@ -1538,7 +1691,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Warhawk",
@@ -1548,7 +1702,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "ExciteBots",
@@ -1558,7 +1713,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mario and Sonic London 2012 Olympics",
@@ -1568,7 +1724,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mario and Sonic Olympic Winter games",
@@ -1578,7 +1735,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "New Super Mario Bros Wii",
@@ -1588,7 +1746,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Resident Evil 4",
@@ -1598,7 +1757,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Sega Superstar Tennis",
@@ -1608,7 +1768,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Tiger Woods PGA Tour 10",
@@ -1618,7 +1779,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Wacky Races: Crash & Dash",
@@ -1628,7 +1790,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Warioware: Smooth Moves",
@@ -1638,7 +1801,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Wii Party",
@@ -1648,7 +1812,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Wii Play",
@@ -1658,7 +1823,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Xenoblade Chronicles",
@@ -1668,7 +1834,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Zelda: Skyward Sword",
@@ -1678,7 +1845,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Bayonetta 2",
@@ -1688,7 +1856,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Hyrule Warriors",
@@ -1698,7 +1867,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Lego Star Wars: The Force Awakens",
@@ -1708,7 +1878,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mario & Sonic Rio 2016 Olympics",
@@ -1718,7 +1889,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mario Party 10",
@@ -1728,7 +1900,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Minecraft Wii U Edition",
@@ -1738,7 +1911,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "New Super Luigi U",
@@ -1748,7 +1922,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "New Super Mario Bros U",
@@ -1758,7 +1933,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Pikmin 3",
@@ -1768,7 +1944,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Sonic Lost World",
@@ -1778,7 +1955,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Splatoon",
@@ -1788,7 +1966,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Wii Sports Club",
@@ -1798,7 +1977,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Xenoblade Chronicles X",
@@ -1808,7 +1988,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Yoshi's Wooly World",
@@ -1818,7 +1999,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Zelda: Twilight Princess HD",
@@ -1828,7 +2010,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Zelda: Wind Waker HD",
@@ -1838,7 +2021,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "ZombiU",
@@ -1848,7 +2032,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Battlefield 1",
@@ -1858,7 +2043,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Call of Duty: Black Ops 3",
@@ -1868,7 +2054,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Dark Souls 3",
@@ -1878,7 +2065,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Destiny",
@@ -1888,7 +2076,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Grand Theft Auto V",
@@ -1898,7 +2087,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Overwatch",
@@ -1908,7 +2098,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Pro Evolution Soccer 2017",
@@ -1918,7 +2109,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "The Witcher 3",
@@ -1928,7 +2120,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Uncharted 4",
@@ -1938,7 +2131,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Final Fantasy 7: Crisis Core",
@@ -1948,7 +2142,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Twisted Metal Head On",
@@ -1958,7 +2153,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Pursuit Force",
@@ -1968,7 +2164,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "SOCOM Fireteam Bravo  1, 2, & 3",
@@ -1978,7 +2175,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "SOCOM Tactical Strike",
@@ -1988,7 +2186,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Metal Gear Solid Portable Ops",
@@ -1998,7 +2197,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Silent Hill: Shattered Memories",
@@ -2008,7 +2208,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Hexyz Force",
@@ -2018,7 +2219,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Daxter",
@@ -2028,7 +2230,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Gradius Collection",
@@ -2038,7 +2241,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Castlevania: Aria of Sorrow",
@@ -2048,7 +2252,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Final Fantasy 6 Advance",
@@ -2058,7 +2263,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Final Fantasy Tactics Advance",
@@ -2068,7 +2274,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Kirby & the Amazing Mirror",
@@ -2078,7 +2285,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mario & Luigi: Superstar Saga",
@@ -2088,7 +2296,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mario Golf: Advance Tour",
@@ -2098,7 +2307,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mario Kart: Super Circuit",
@@ -2108,7 +2318,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Metroid Fusion",
@@ -2118,7 +2329,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Super Mario Advance 4",
@@ -2128,7 +2340,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Wario Land 4",
@@ -2138,7 +2351,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "WarioWare Inc.",
@@ -2148,7 +2362,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "After Burner",
@@ -2158,7 +2373,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1901"
+            "addeddate": "01/01/1901",
+            "gbId": "0"
         },
         {
             "title": "Blackthorne",
@@ -2168,7 +2384,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/2000",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Doom",
@@ -2178,7 +2395,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Knuckles Choatix",
@@ -2188,7 +2406,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Kolibri",
@@ -2198,7 +2417,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Mortal Kombat II",
@@ -2208,7 +2428,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "NBA Jam Tournament Edition",
@@ -2218,7 +2439,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Shadow Squadron",
@@ -2228,7 +2450,8 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
         },
         {
             "title": "Virtua Fighter",
@@ -2238,7 +2461,19 @@
             "genre": "not set",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900"
+            "addeddate": "01/01/1900",
+            "gbId": "0"
+        },
+        {
+            "addeddate": "03/08/2017",
+            "gbId": "0",
+            "price": 15,
+            "title": "Uniracers",
+            "rating": "ESRB: K-A",
+            "releasedate": "12/31/1994",
+            "genre": "Driving/Racing",
+            "platform": "SNES",
+            "id": 227
         }
     ]
 }
