@@ -126,440 +126,429 @@
             "price": 16,
             "platform": "NES",
             "id": 12,
-            "genre": "not set",
+            "genre": "RPG",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/18/1987",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-8403"
         },
         {
             "title": "Ghosts and Goblins",
             "price": 13,
             "platform": "NES",
             "id": 13,
-            "genre": "not set",
+            "genre": "Action",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "09/01/1985",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-17031"
         },
         {
             "title": "Gradius",
             "price": 11,
             "platform": "NES",
             "id": 14,
-            "genre": "not set",
+            "genre": "SHMUP",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "05/29/1985",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-15508"
         },
         {
             "title": "Kid Icarus",
             "price": 18,
             "platform": "NES",
             "id": 15,
-            "genre": "not set",
+            "genre": "Action, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/19/1986",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-15154"
         },
         {
             "title": "Kung Fu",
             "price": 6,
             "platform": "NES",
             "id": 16,
-            "genre": "not set",
+            "genre": "Action, Brawler",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/01/1984",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-5996"
         },
         {
-            "title": "Lifeforce",
+            "title": "Life Force",
             "price": 12,
             "platform": "NES",
             "id": 17,
-            "genre": "not set",
+            "genre": "SHMUP",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/25/1987",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-13960"
         },
         {
-            "title": "Mario 2",
+            "title": "Super Mario Bros 2",
             "price": 16,
             "platform": "NES",
             "id": 18,
-            "genre": "not set",
+            "genre": "Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/01/1988",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-7406"
         },
         {
-            "title": "Mega Man (all)",
-            "price": "",
+            "title": "Mega Man",
+            "price": "56",
             "platform": "NES",
             "id": 19,
-            "genre": "not set",
+            "genre": "Action, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/17/1987",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-5251"
         },
         {
             "title": "Metroid",
             "price": 18,
             "platform": "NES",
             "id": 20,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "08/06/1986",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-21761"
         },
         {
             "title": "Mike Tyson's Punch Out",
             "price": 25,
             "platform": "NES",
             "id": 21,
-            "genre": "not set",
+            "genre": "Sports, Boxing",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/01/1987",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-4848"
         },
         {
             "title": "Ninja Gaiden",
             "price": 11,
             "platform": "NES",
             "id": 22,
-            "genre": "not set",
+            "genre": "Action, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/09/1988",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-1653"
         },
         {
             "title": "Ninja Gaiden 2",
             "price": 10,
             "platform": "NES",
             "id": 23,
-            "genre": "not set",
+            "genre": "Action, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "04/06/1990",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-14416"
         },
         {
             "title": "RC Pro Am",
             "price": 6,
             "platform": "NES",
             "id": 24,
-            "genre": "not set",
+            "genre": "Driving, Racing",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "02/01/1988",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-1374"
         },
         {
             "title": "RC Pro AM 2",
             "price": 74,
             "platform": "NES",
             "id": 25,
-            "genre": "not set",
+            "genre": "Driving, Racing",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "01/01/1992",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-1316"
         },
         {
-            "title": "Space Shuttle",
+            "title": "Space Shuttle Project",
             "price": 16,
             "platform": "NES",
             "id": 26,
-            "genre": "not set",
+            "genre": "Simulation",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/01/1991",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-22831"
         },
         {
             "title": "Super C",
             "price": 17,
             "platform": "NES",
             "id": 27,
-            "genre": "not set",
+            "genre": "Action, Shooter",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "01/01/1987",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-10077"
         },
         {
             "title": "Tecmo Super Bowl",
             "price": 26,
             "platform": "NES",
             "id": 28,
-            "genre": "not set",
+            "genre": "Sports, Football",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/01/1993",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-31196"
         },
         {
-            "title": "Zelda",
+            "title": "The Legend of Zelda",
             "price": 20,
             "platform": "NES",
             "id": 29,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "02/21/1986",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-11949"
         },
         {
             "title": "Zelda II: The Adventure of Link",
             "price": 15,
             "platform": "NES",
             "id": 30,
-            "genre": "not set",
+            "genre": "RPG, Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "01/14/1987",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-16241"
         },
         {
             "title": "Aladdin",
             "price": 9,
             "platform": "Genesis",
             "id": 31,
-            "genre": "not set",
+            "genre": "Action, Adventure, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/11/1993",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-19944"
         },
         {
             "title": "Altered Beast",
             "price": 9,
             "platform": "Genesis",
             "id": 32,
-            "genre": "not set",
+            "genre": "Action, Brawler, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/27/1988",
             "addeddate": "01/01/1900",
-            "gbId": "0"
-        },
-        {
-            "title": "Blades of Vengence",
-            "price": 40,
-            "platform": "Genesis",
-            "id": 33,
-            "genre": "not set",
-            "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-2536"
         },
         {
             "title": "Castlevania: Bloodlines",
             "price": 50,
             "platform": "Genesis",
             "id": 34,
-            "genre": "not set",
+            "genre": "Action, Adventure, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "03/17/1994",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-945"
         },
         {
             "title": "Ghouls 'n Ghosts",
             "price": 23.5,
             "platform": "Genesis",
             "id": 35,
-            "genre": "not set",
+            "genre": "Action, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "08/03/1989",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-12381"
         },
         {
             "title": "Golden Axe",
             "price": 11.5,
             "platform": "Genesis",
             "id": 36,
-            "genre": "not set",
+            "genre": "Brawler",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "01/01/1989",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-14351"
         },
         {
             "title": "Mazin Saga Mutant Fighter",
             "price": 28,
             "platform": "Genesis",
             "id": 37,
-            "genre": "not set",
+            "genre": "Brawler",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "01/01/1993",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-26959"
         },
         {
             "title": "Michael Jackson’s Moonwalker",
             "price": 40,
             "platform": "Genesis",
             "id": 38,
-            "genre": "not set",
+            "genre": "Action, Music, Brawler",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "08/24/1990",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-21182"
         },
         {
             "title": "Mortal Kombat II",
             "price": 8,
             "platform": "Genesis",
             "id": 39,
-            "genre": "not set",
+            "genre": "Fighting",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "06/25/1993",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-3571"
         },
         {
             "title": "NBA Jam TE",
             "price": 7,
             "platform": "Genesis",
             "id": 40,
-            "genre": "not set",
+            "genre": "Sports, Basketball",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "01/01/1994",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-14792"
         },
         {
             "title": "Revenge of Shinobi",
             "price": 12,
             "platform": "Genesis",
             "id": 41,
-            "genre": "not set",
+            "genre": "Action, Brawler",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/02/1989",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-236"
         },
         {
             "title": "Sonic 3D Blast",
             "price": 6,
             "platform": "Genesis",
             "id": 42,
-            "genre": "not set",
+            "genre": "Action",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/01/1996",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-6782"
         },
         {
             "title": "Sonic Spinball",
             "price": 5,
             "platform": "Genesis",
             "id": 43,
-            "genre": "not set",
+            "genre": "Action, Pinball, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/15/1993",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-18592"
         },
         {
             "title": "Sonic the Hedgehog",
             "price": 7,
             "platform": "Genesis",
             "id": 44,
-            "genre": "not set",
+            "genre": "Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "06/21/1991",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-2465"
         },
         {
             "title": "Sonic the Hedgehog 3",
             "price": 10,
             "platform": "Genesis",
             "id": 45,
-            "genre": "not set",
+            "genre": "Action, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "02/02/1994",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-4628"
         },
         {
             "title": "Streets of Rage",
             "price": 15,
             "platform": "Genesis",
             "id": 46,
-            "genre": "not set",
+            "genre": "Brawler",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "08/02/1991",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-20436"
         },
         {
             "title": "Streets of Rage 2",
             "price": 15,
             "platform": "Genesis",
             "id": 47,
-            "genre": "not set",
+            "genre": "Brawler",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/20/1992",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-18122"
         },
         {
             "title": "Streets of Rage 3",
             "price": 36,
             "platform": "Genesis",
             "id": 48,
-            "genre": "not set",
+            "genre": "Brawler",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/21/1994",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-15924"
         },
         {
             "title": "Super Baseball 2020",
             "price": 7,
             "platform": "Genesis",
             "id": 49,
-            "genre": "not set",
+            "genre": "Sports, Baseball",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "01/01/1991",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-5259"
         },
         {
             "title": "Super Street Fighter 2",
             "price": 11,
             "platform": "Genesis",
             "id": 50,
-            "genre": "not set",
+            "genre": "Fighting",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "06/25/1994",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-6665"
         },
         {
-            "title": "Toejam and Earl",
+            "title": "Toejam and Earl Panic in Funkotron",
             "price": 13,
             "platform": "Genesis",
             "id": 51,
-            "genre": "not set",
+            "genre": "Action, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "04/01/1993",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-16795"
         },
         {
             "title": "Banjo Kazooie",
