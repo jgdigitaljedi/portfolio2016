@@ -555,11 +555,11 @@
             "price": 17,
             "platform": "N64",
             "id": 52,
-            "genre": "not set",
+            "genre": "Action, Adventure, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "06/29/1998",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-10920"
         },
         {
             "title": "Blast Corps",
@@ -577,22 +577,22 @@
             "price": 10,
             "platform": "N64",
             "id": 54,
-            "genre": "not set",
+            "genre": "Action, Driving, Puzzle",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "02/28/1997",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-13245"
         },
         {
             "title": "Conker’s Bad Fur Day",
             "price": 80,
             "platform": "N64",
             "id": 55,
-            "genre": "not set",
+            "genre": "Action, Adventure, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "03/04/2001",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-10533"
         },
         {
             "title": "Diddy Kong Racing",
@@ -610,550 +610,550 @@
             "price": 10,
             "platform": "N64",
             "id": 57,
-            "genre": "not set",
+            "genre": "Driving, Racing",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/21/1997",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-15990"
         },
         {
             "title": "Duke Nukem: Zero Hour",
             "price": 10,
             "platform": "N64",
             "id": 58,
-            "genre": "not set",
+            "genre": "Action, FPS",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "08/01/1999",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-2711"
         },
         {
             "title": "Excitebike 64",
             "price": 8,
             "platform": "N64",
             "id": 59,
-            "genre": "not set",
+            "genre": "Driving, Racing",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "04/30/2000",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-15429"
         },
         {
             "title": "Extreme G",
             "price": 6,
             "platform": "N64",
             "id": 60,
-            "genre": "not set",
+            "genre": "Driving, Racing",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/25/1997",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-2379"
         },
         {
             "title": "F-Zero X",
             "price": 13,
             "platform": "N64",
             "id": 61,
-            "genre": "not set",
+            "genre": "Driving, Racing",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "07/14/1998",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-18808"
         },
         {
             "title": "Kirby 64",
             "price": 18,
             "platform": "N64",
             "id": 62,
-            "genre": "not set",
+            "genre": "Action, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "03/24/2000",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-17093"
         },
         {
             "title": "Mario 64",
             "price": 24,
             "platform": "N64",
             "id": 63,
-            "genre": "not set",
+            "genre": "Adventure, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "06/23/1996",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-2931"
         },
         {
             "title": "Mario Golf",
             "price": 13,
             "platform": "N64",
             "id": 64,
-            "genre": "not set",
+            "genre": "Sports, Golf",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "06/11/1999",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-19716"
         },
         {
             "title": "Mario Kart 64",
             "price": 37,
             "platform": "N64",
             "id": 65,
-            "genre": "not set",
+            "genre": "Racing, Vehicular Combat",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/14/1996",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-10084"
         },
         {
             "title": "Mario Party",
             "price": 37,
             "platform": "N64",
             "id": 66,
-            "genre": "not set",
+            "genre": "Trivia, Board Game",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/18/1998",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-6424"
         },
         {
-            "title": "Micro Machines 64",
+            "title": "Micro Machines 64 Turbo",
             "price": 10,
             "platform": "N64",
             "id": 67,
-            "genre": "not set",
+            "genre": "Driving, Racing",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "03/24/1999",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-2888"
         },
         {
             "title": "Mortal Kombat 4",
             "price": 14,
             "platform": "N64",
             "id": 68,
-            "genre": "not set",
+            "genre": "Fighting",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/15/1997",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-6421"
         },
         {
             "title": "Star Fox 64",
             "price": 11,
             "platform": "N64",
             "id": 70,
-            "genre": "not set",
+            "genre": "Action, Shooter",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "04/27/1997",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-19203"
         },
         {
             "title": "Star Wars Episode 1 Racer",
             "price": 5,
             "platform": "N64",
             "id": 71,
-            "genre": "not set",
+            "genre": "Driving, Racing",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "05/17/1999",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-13526"
         },
         {
             "title": "Super Smash Bros",
             "price": 46,
             "platform": "N64",
             "id": 72,
-            "genre": "not set",
+            "genre": "Fighting",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "01/21/1999",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-19125"
         },
         {
             "title": "The World is not Enough",
             "price": 7,
             "platform": "N64",
             "id": 73,
-            "genre": "not set",
+            "genre": "FPS",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/01/2000",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-18168"
         },
         {
             "title": "Yoshi's Story",
             "price": 16,
             "platform": "N64",
             "id": 74,
-            "genre": "not set",
+            "genre": "Action, Adventure, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/21/1997",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-15207"
         },
         {
-            "title": "Zelda: Majora's Mask",
+            "title": "The Legend of Zelda: Majora's Mask",
             "price": 32,
             "platform": "N64",
             "id": 75,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "04/27/2000",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-13594"
         },
         {
-            "title": "Chu Chu Rocket",
+            "title": "ChuChu Rocket",
             "price": 8,
             "platform": "Dreamcast",
             "id": 76,
-            "genre": "not set",
+            "genre": "Action, Strategy, Puzzle",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900",
-            "gbId": "0"
+            "addeddate": "11/11/1999",
+            "gbId": "3030-13715"
         },
         {
             "title": "Crazy Taxi 2",
             "price": 11,
             "platform": "Dreamcast",
             "id": 77,
-            "genre": "not set",
+            "genre": "Action, Driving, Racing",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "05/28/2001",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-18195"
         },
         {
             "title": "Ecco the Dolphin: Defender of the Future",
             "price": 8,
             "platform": "Dreamcast",
             "id": 78,
-            "genre": "not set",
+            "genre": "Action",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/16/2000",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-3937"
         },
         {
             "title": "Jet Grind Radio",
             "price": 16,
             "platform": "Dreamcast",
             "id": 79,
-            "genre": "not set",
+            "genre": "Action, Adventure, Skating",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "06/29/2000",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-20096"
         },
         {
             "title": "Marvel vs Capcom 2",
             "price": 46,
             "platform": "Dreamcast",
             "id": 80,
-            "genre": "not set",
+            "genre": "Fighting",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "02/24/2000",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-2612"
         },
         {
             "title": "Power Stone 2",
             "price": 72,
             "platform": "Dreamcast",
             "id": 81,
-            "genre": "not set",
+            "genre": "Action, Fighting",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "08/24/2000",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-3712"
         },
         {
             "title": "Re-Volt",
             "price": 13,
             "platform": "Dreamcast",
             "id": 82,
-            "genre": "not set",
+            "genre": "Driving, Racing, Vehicular Combat",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "07/31/1999",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-5037"
         },
         {
             "title": "Ready 2 Rumble Boxing",
             "price": 6,
             "platform": "Dreamcast",
             "id": 83,
-            "genre": "not set",
+            "genre": "Sports, Boxing",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "09/08/1999",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-19836"
         },
         {
             "title": "Shenmue",
             "price": 29,
             "platform": "Dreamcast",
             "id": 84,
-            "genre": "not set",
+            "genre": "Action, Brawler, RPG",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/29/1999",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-7812"
         },
         {
             "title": "Sonic Adventure 2",
             "price": 25,
             "platform": "Dreamcast",
             "id": 85,
-            "genre": "not set",
+            "genre": "Action, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "06/05/2001",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-19060"
         },
         {
             "title": "Soul Calibur",
             "price": 12,
             "platform": "Dreamcast",
             "id": 86,
-            "genre": "not set",
+            "genre": "Action, Fighting",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "07/01/1998",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-12411"
         },
         {
             "title": "Street Fighter 3: Double Impact",
             "price": 31,
             "platform": "Dreamcast",
             "id": 87,
-            "genre": "not set",
+            "genre": "Fighting",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "06/19/2000",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-28446"
         },
         {
             "title": "Toy Commander",
             "price": 8,
             "platform": "Dreamcast",
             "id": 88,
-            "genre": "not set",
+            "genre": "Action, Driving, Racing",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "09/30/1999",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-3544"
         },
         {
             "title": "Worms World Party",
             "price": 16,
             "platform": "Dreamcast",
             "id": 89,
-            "genre": "not set",
+            "genre": "Action, Strategy",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "03/16/2001",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-18822"
         },
         {
             "title": "Donkey Kong: Jungle Beat",
             "price": 11,
             "platform": "Gamecube",
             "id": 90,
-            "genre": "not set",
+            "genre": "Action, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/16/2004",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-17976"
         },
         {
             "title": "Eternal Darkness: Sanity's Requiem",
             "price": 39,
             "platform": "Gamecube",
             "id": 91,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "06/24/2002",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-7512"
         },
         {
             "title": "Luigi's Mansion",
             "price": 27,
             "platform": "Gamecube",
             "id": 92,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/17/2001",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-10996"
         },
         {
             "title": "Mario Party 4",
             "price": 27,
             "platform": "Gamecube",
             "id": 93,
-            "genre": "not set",
+            "genre": "Minigame Collection, Board Game",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/21/2002",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-4660"
         },
         {
             "title": "Mario Party 5",
             "price": 36,
             "platform": "Gamecube",
             "id": 94,
-            "genre": "not set",
+            "genre": "Minigame Collection, Board Game",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/07/2003",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-3410"
         },
         {
             "title": "Mario Power Tennis",
             "price": 12.5,
             "platform": "Gamecube",
             "id": 95,
-            "genre": "not set",
+            "genre": "Sports, Tennis",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/08/2004",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-15398"
         },
         {
             "title": "Metroid Prime 2: Echoes",
             "price": 15,
             "platform": "Gamecube",
             "id": 96,
-            "genre": "not set",
+            "genre": "Action, Adventure, RPG, FPS",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/16/2004",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-1597"
         },
         {
-            "title": "Sonic Adventure 2 DX",
+            "title": "Sonic Adventure DX",
             "price": 21,
             "platform": "Gamecube",
             "id": 97,
-            "genre": "not set",
+            "genre": "Action, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/23/1998",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-13158"
         },
         {
             "title": "Soul Calibur 2",
             "price": 15,
             "platform": "Gamecube",
             "id": 98,
-            "genre": "not set",
+            "genre": "Action, Fighting",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "07/10/2002",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-11822"
         },
         {
             "title": "Star Fox: Assault",
             "price": 24,
             "platform": "Gamecube",
             "id": 99,
-            "genre": "not set",
+            "genre": "Action, Shooter",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "02/14/2005",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-2727"
         },
         {
-            "title": "Star Wars Rogue Squadron 2",
+            "title": "Star Wars Rogue Squadron II: Rogue Leader",
             "price": 11,
             "platform": "Gamecube",
             "id": 100,
-            "genre": "not set",
+            "genre": "Action, Shooter",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/18/2001",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-4231"
         },
         {
             "title": "Super Mario Strikers",
             "price": 30,
             "platform": "Gamecube",
             "id": 101,
-            "genre": "not set",
+            "genre": "Sports, Soccer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/18/2005",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-12476"
         },
         {
             "title": "Super Monkey Ball",
             "price": 13,
             "platform": "Gamecube",
             "id": 102,
-            "genre": "not set",
+            "genre": "Puzzle, Minigame Collection",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/14/2001",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-7247"
         },
         {
             "title": "Super Smash Bros Melee",
             "price": 49,
             "platform": "Gamecube",
             "id": 103,
-            "genre": "not set",
+            "genre": "Fighting, Brawler",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/21/2001",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-17743"
         },
         {
-            "title": "Time Splitters 2",
+            "title": "TimeSplitters 2",
             "price": 15.5,
             "platform": "Gamecube",
             "id": 104,
             "genre": "not set",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/09/2002",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-17246"
         },
         {
             "title": "Viewtiful Joe",
             "price": 11,
             "platform": "Gamecube",
             "id": 105,
-            "genre": "not set",
+            "genre": "Brawler",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/07/2003",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-15876"
         },
         {
             "title": "Viewtiful Joe 2",
             "price": 11,
             "platform": "Gamecube",
             "id": 106,
-            "genre": "not set",
+            "genre": "Action, Brawler",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/18/2004",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-8112"
         },
         {
-            "title": "Zelda Twilight Princess",
+            "title": "The Legend of Zelda: Twilight Princess",
             "price": 42,
             "platform": "Gamecube",
             "id": 107,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/19/2006",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-19467"
         },
         {
             "title": "007 Nightfire",
@@ -2359,99 +2359,99 @@
             "price": 27,
             "platform": "32X",
             "id": 217,
-            "genre": "not set",
+            "genre": "Action, Simulation",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/30/1994",
             "addeddate": "01/01/1901",
-            "gbId": "0"
+            "gbId": "3030-3629"
         },
         {
             "title": "Blackthorne",
             "price": 73,
             "platform": "32X",
             "id": 218,
-            "genre": "not set",
+            "genre": "Action, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/2000",
+            "releasedate": "08/03/1995",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-4549"
         },
         {
             "title": "Doom",
             "price": 8,
             "platform": "32X",
             "id": 219,
-            "genre": "not set",
+            "genre": "FPS",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/21/1994",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-7326"
         },
         {
             "title": "Knuckles Choatix",
             "price": 50,
             "platform": "32X",
             "id": 220,
-            "genre": "not set",
+            "genre": "Action, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "04/20/1995",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-8284"
         },
         {
             "title": "Kolibri",
             "price": 50,
             "platform": "32X",
             "id": 221,
-            "genre": "not set",
+            "genre": "Action, Shooter",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/30/1995",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-18959"
         },
         {
             "title": "Mortal Kombat II",
             "price": 20,
             "platform": "32X",
             "id": 222,
-            "genre": "not set",
+            "genre": "Fighting",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/04/1994",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-3571"
         },
         {
             "title": "NBA Jam Tournament Edition",
             "price": 21,
             "platform": "32X",
             "id": 223,
-            "genre": "not set",
+            "genre": "Sports, Basketball",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "02/23/1995",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-14792"
         },
         {
             "title": "Shadow Squadron",
             "price": 16,
             "platform": "32X",
             "id": 224,
-            "genre": "not set",
+            "genre": "Action, Flight Simulator",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "04/26/1995",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-11386"
         },
         {
             "title": "Virtua Fighter",
             "price": 9,
             "platform": "32X",
             "id": 226,
-            "genre": "not set",
+            "genre": "Fighting",
             "rating": "not set",
             "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900",
-            "gbId": "0"
+            "addeddate": "06/01/1995",
+            "gbId": "3030-15584"
         },
         {
             "addeddate": "03/08/2017",
