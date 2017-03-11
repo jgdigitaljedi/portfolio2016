@@ -29,7 +29,7 @@
             "id": 3,
             "genre": "Sports, Baseball",
             "rating": "not set",
-            "releasedate": "01/01/1992",
+            "releasedate": "04/28/1992",
             "addeddate": "01/01/1900",
             "gbId": "3030-5577"
         },
@@ -133,13 +133,13 @@
             "gbId": "3030-8403"
         },
         {
-            "title": "Ghosts and Goblins",
+            "title": "Ghosts n Goblins",
             "price": 13,
             "platform": "NES",
             "id": 13,
             "genre": "Action",
             "rating": "not set",
-            "releasedate": "09/01/1985",
+            "releasedate": "09/19/1985",
             "addeddate": "01/01/1900",
             "gbId": "3030-17031"
         },
@@ -227,7 +227,7 @@
             "id": 21,
             "genre": "Sports, Boxing",
             "rating": "not set",
-            "releasedate": "10/01/1987",
+            "releasedate": "09/18/1987",
             "addeddate": "01/01/1900",
             "gbId": "3030-4848"
         },
@@ -271,7 +271,7 @@
             "id": 25,
             "genre": "Driving, Racing",
             "rating": "not set",
-            "releasedate": "01/01/1992",
+            "releasedate": "12/01/1992",
             "addeddate": "01/01/1900",
             "gbId": "3030-1316"
         },
@@ -293,7 +293,7 @@
             "id": 27,
             "genre": "Action, Shooter",
             "rating": "not set",
-            "releasedate": "01/01/1987",
+            "releasedate": "02/02/1990",
             "addeddate": "01/01/1900",
             "gbId": "3030-10077"
         },
@@ -381,7 +381,7 @@
             "id": 36,
             "genre": "Brawler",
             "rating": "not set",
-            "releasedate": "01/01/1989",
+            "releasedate": "05/01/1989",
             "addeddate": "01/01/1900",
             "gbId": "3030-14351"
         },
@@ -392,7 +392,7 @@
             "id": 37,
             "genre": "Brawler",
             "rating": "not set",
-            "releasedate": "01/01/1993",
+            "releasedate": "02/25/1993",
             "addeddate": "01/01/1900",
             "gbId": "3030-26959"
         },
@@ -419,13 +419,13 @@
             "gbId": "3030-3571"
         },
         {
-            "title": "NBA Jam TE",
+            "title": "NBA Jam Tournament Edition",
             "price": 7,
             "platform": "Genesis",
             "id": 40,
             "genre": "Sports, Basketball",
             "rating": "not set",
-            "releasedate": "01/01/1994",
+            "releasedate": "02/23/1995",
             "addeddate": "01/01/1900",
             "gbId": "3030-14792"
         },
@@ -524,7 +524,7 @@
             "id": 49,
             "genre": "Sports, Baseball",
             "rating": "not set",
-            "releasedate": "01/01/1991",
+            "releasedate": "09/20/1991",
             "addeddate": "01/01/1900",
             "gbId": "3030-5259"
         },
@@ -566,11 +566,11 @@
             "price": 7,
             "platform": "N64",
             "id": 53,
-            "genre": "not set",
+            "genre": "Driving, Action, Puzzle",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "02/28/1997",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-13245"
         },
         {
             "title": "Castlevania",
@@ -599,11 +599,11 @@
             "price": 13,
             "platform": "N64",
             "id": 56,
-            "genre": "not set",
+            "genre": "Driving, Racing",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/21/1997",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-15990"
         },
         {
             "title": "Diddy Kong Racing 2",
@@ -810,8 +810,8 @@
             "id": 76,
             "genre": "Action, Strategy, Puzzle",
             "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "11/11/1999",
+            "releasedate": "11/11/1999",
+            "addeddate": "01/01/1900",
             "gbId": "3030-13715"
         },
         {
@@ -1116,7 +1116,7 @@
             "price": 15.5,
             "platform": "Gamecube",
             "id": 104,
-            "genre": "not set",
+            "genre": "FPS",
             "rating": "not set",
             "releasedate": "10/09/2002",
             "addeddate": "01/01/1900",
@@ -1160,1199 +1160,1133 @@
             "price": 6,
             "platform": "Playstation 2",
             "id": 108,
-            "genre": "not set",
+            "genre": "Action, FPS, Driving",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/18/2002",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-6647"
         },
         {
             "title": "Bully",
             "price": 11,
             "platform": "Playstation 2",
             "id": 109,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/17/2006",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-10281"
         },
         {
             "title": "Devil May Cry 2",
             "price": 6,
             "platform": "Playstation 2",
             "id": 110,
-            "genre": "not set",
+            "genre": "Action, Adventure, Shooter",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "01/25/2003",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-16741"
         },
         {
             "title": "Devil May Cry 3",
             "price": 5.25,
             "platform": "Playstation 2",
             "id": 111,
-            "genre": "not set",
+            "genre": "Action. Shooter",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "03/01/2005",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-890"
         },
         {
             "title": "Final Fantasy X",
             "price": 9,
             "platform": "Playstation 2",
             "id": 112,
-            "genre": "not set",
+            "genre": "RPG",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "07/19/2001",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-11237"
         },
         {
             "title": "Final Fantasy XII",
             "price": 7,
             "platform": "Playstation 2",
             "id": 113,
-            "genre": "not set",
+            "genre": "RPG",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/31/2006",
             "addeddate": "01/01/1900",
-            "gbId": "0"
-        },
-        {
-            "title": "Frequency",
-            "price": 6,
-            "platform": "Playstation 2",
-            "id": 114,
-            "genre": "not set",
-            "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-11497"
         },
         {
             "title": "God of War 2",
             "price": 7,
             "platform": "Playstation 2",
             "id": 115,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "03/13/2007",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-11314"
         },
         {
             "title": "Gran Turismo 4",
             "price": 6,
             "platform": "Playstation 2",
             "id": 116,
-            "genre": "not set",
+            "genre": "Driving, Racing, Simulation",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "02/22/2005",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-17784"
         },
         {
             "title": "Grand Theft Auto III",
             "price": 4,
             "platform": "Playstation 2",
             "id": 117,
-            "genre": "not set",
+            "genre": "Action, Driving, Sandbox",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/22/2001",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-3724"
         },
         {
             "title": "Grand Theft Auto Vice City",
             "price": 4,
             "platform": "Playstation 2",
             "id": 118,
-            "genre": "not set",
+            "genre": "Action, Driving, Sandbox",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/27/2002",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-17036"
         },
         {
-            "title": "Guitaroo-Man",
+            "title": "Gitaroo-Man",
             "price": 17,
             "platform": "Playstation 2",
             "id": 119,
-            "genre": "not set",
+            "genre": "Music, Rhythm",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "02/18/2002",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-7708"
         },
         {
             "title": "Half Life",
             "price": 16,
             "platform": "Playstation 2",
             "id": 120,
-            "genre": "not set",
+            "genre": "FPS",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/21/2001",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-2980"
         },
         {
             "title": "Katamari Damacy",
             "price": 13,
             "platform": "Playstation 2",
             "id": 121,
-            "genre": "not set",
+            "genre": "Action, Puzzle",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "03/18/2004",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-11867"
         },
         {
             "title": "Manhunt",
             "price": 10,
             "platform": "Playstation 2",
             "id": 122,
-            "genre": "not set",
+            "genre": "Action, Shooter",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/18/2003",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-6108"
         },
         {
             "title": "Manhunt 2",
             "price": 15,
             "platform": "Playstation 2",
             "id": 123,
-            "genre": "not set",
+            "genre": "Action",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/31/2007",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-21258"
         },
         {
             "title": "Ratchet and Clank: Up Your Arsenal",
             "price": 10,
             "platform": "Playstation 2",
             "id": 124,
-            "genre": "not set",
+            "genre": "Action, Shooter, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/02/2004",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-4966"
         },
         {
             "title": "Shadow of the Colossus",
             "price": 15,
             "platform": "Playstation 2",
             "id": 125,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/18/2005",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-6522"
         },
         {
-            "title": "Star Wars: Battlefront 1",
+            "title": "Star Wars: Battlefront",
             "price": 10.5,
             "platform": "Playstation 2",
             "id": 126,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "09/20/2004",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-15481"
         },
         {
-            "title": "Star Wars: Battlefront 2",
+            "title": "Star Wars: Battlefront II",
             "price": 13,
             "platform": "Playstation 2",
             "id": 127,
-            "genre": "not set",
+            "genre": "Action, Shooter",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/01/2005",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-7094"
         },
         {
             "title": "Star Wars: Jedi Starfighter",
             "price": 5,
             "platform": "Playstation 2",
             "id": 128,
-            "genre": "not set",
+            "genre": "Action, Flight Simulator",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "03/10/2002",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-4017"
         },
         {
             "title": "Tekken Tag Tournament",
             "price": 5,
             "platform": "Playstation 2",
             "id": 129,
-            "genre": "not set",
+            "genre": "Fighting",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "06/18/1999",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-10162"
         },
         {
             "title": "The Warriors",
             "price": 22,
             "platform": "Playstation 2",
             "id": 130,
-            "genre": "not set",
+            "genre": "Action, Brawler",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/17/2005",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-16206"
         },
         {
-            "title": "Time Splitters: Future Perfect",
+            "title": "TimeSplitters: Future Perfect",
             "price": 23,
             "platform": "Playstation 2",
             "id": 131,
-            "genre": "not set",
+            "genre": "FPS",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "03/21/2005",
             "addeddate": "01/01/1900",
-            "gbId": "0"
-        },
-        {
-            "title": "Tony Hawk Pro Skater 3",
-            "price": 5.3,
-            "platform": "Playstation 2",
-            "id": 132,
-            "genre": "not set",
-            "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-8099"
         },
         {
             "title": "Unreal Tournament",
             "price": 6,
             "platform": "Playstation 2",
             "id": 133,
-            "genre": "not set",
+            "genre": "FPS",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/30/1999",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-17448"
         },
         {
             "title": "Assassin's Creed Brotherhood",
             "price": 5,
             "platform": "Playstation 3",
             "id": 134,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/16/2010",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-31001"
         },
         {
             "title": "Assassin's Creed IV",
             "price": 6,
             "platform": "Playstation 3",
             "id": 135,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/29/2013",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-41518"
         },
         {
             "title": "Assassin's Creed Revelations",
             "price": 5,
             "platform": "Playstation 3",
             "id": 136,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/15/2011",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-34975"
         },
         {
             "title": "Assassins Creed",
             "price": 5,
             "platform": "Playstation 3",
             "id": 137,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/13/2007",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-2950"
         },
         {
             "title": "Assassins Creed III",
             "price": 5,
             "platform": "Playstation 3",
             "id": 138,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/30/2012",
             "addeddate": "01/01/1900",
-            "gbId": "0"
-        },
-        {
-            "title": "Battlefield (all)",
-            "price": "",
-            "platform": "Playstation 3",
-            "id": 139,
-            "genre": "not set",
-            "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-37494"
         },
         {
             "title": "Borderlands 2",
             "price": 5,
             "platform": "Playstation 3",
             "id": 140,
-            "genre": "not set",
+            "genre": "FPS, RPG",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "09/18/2012",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-36055"
         },
         {
             "title": "Gran Turismo 6",
             "price": 11,
             "platform": "Playstation 3",
             "id": 141,
-            "genre": "not set",
+            "genre": "Driving, Racing, Simulation",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/05/2013",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-39193"
         },
         {
             "title": "Grand Theft Auto 4",
             "price": 6,
             "platform": "Playstation 3",
             "id": 142,
-            "genre": "not set",
+            "genre": "Action, Driving, Sandbox",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "04/29/2008",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-20457"
         },
         {
             "title": "Killzone",
             "price": 6,
-            "platform": "Playstation 3",
+            "platform": "Playstation 2",
             "id": 143,
-            "genre": "not set",
+            "genre": "FPS",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/02/2004",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-15048"
         },
         {
             "title": "Killzone 2",
             "price": 5,
             "platform": "Playstation 3",
             "id": 144,
-            "genre": "not set",
+            "genre": "FPS",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "02/27/2001",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-20601"
         },
         {
             "title": "Killzone 3",
             "price": 5,
             "platform": "Playstation 3",
             "id": 145,
-            "genre": "not set",
+            "genre": "FPS",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "02/22/2011",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-30431"
         },
         {
-            "title": "Little Big Planet 2",
+            "title": "LittleBigPlanet 2",
             "price": 9,
             "platform": "Playstation 3",
             "id": 146,
-            "genre": "not set",
+            "genre": "Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "01/18/2011",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-31214"
         },
         {
             "title": "ModNation Racers",
             "price": 8,
             "platform": "Playstation 3",
             "id": 147,
-            "genre": "not set",
+            "genre": "Driving, Racing, Vehicular Combat",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "05/25/2010",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-26848"
         },
         {
             "title": "Portal 2",
             "price": 12,
             "platform": "Playstation 3",
             "id": 148,
-            "genre": "not set",
+            "genre": "FPS, Puzzle",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "04/19/2011",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-21662"
         },
         {
             "title": "Red Dead Redemption",
             "price": 8,
             "platform": "Playstation 3",
             "id": 149,
-            "genre": "not set",
+            "genre": "Shooter, Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "05/18/2010",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-25249"
         },
         {
             "title": "Resident Evil 5",
             "price": 7,
             "platform": "Playstation 3",
             "id": 150,
-            "genre": "not set",
+            "genre": "Action, Shooter",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "03/05/2009",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-20569"
         },
         {
             "title": "Sonic Generations",
             "price": 13,
             "platform": "Playstation 3",
             "id": 151,
-            "genre": "not set",
+            "genre": "Action, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/01/2011",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-34833"
         },
         {
-            "title": "Uncharted",
+            "title": "Uncharted: Drake's Fortune",
             "price": 6,
             "platform": "Playstation 3",
             "id": 152,
-            "genre": "not set",
+            "genre": "Action, Adventure, Shooter",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/19/2007",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-13992"
         },
         {
-            "title": "Uncharted 2",
+            "title": "Uncharted 2: Among Thieves",
             "price": 4,
             "platform": "Playstation 3",
             "id": 153,
-            "genre": "not set",
+            "genre": "Action, Adventure, Shooter",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/13/2009",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-22420"
         },
         {
-            "title": "Uncharted 3",
+            "title": "Uncharted 3: Drake's Deception",
             "price": 5,
             "platform": "Playstation 3",
             "id": 154,
-            "genre": "not set",
+            "genre": "Action, Adventure, Shooter",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/01/2011",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-32982"
         },
         {
-            "title": "Uncharted 4",
+            "title": "Uncharted 4: A Thief's End",
             "price": 35,
-            "platform": "Playstation 3",
+            "platform": "Playstation 4",
             "id": 155,
-            "genre": "not set",
+            "genre": "Action, Adventure, Shooter",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "05/10/2016",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-44507"
         },
         {
             "title": "Warhawk",
             "price": 5,
             "platform": "Playstation 3",
             "id": 156,
-            "genre": "not set",
+            "genre": "Action, Shooter, Vehicular Combat",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "08/28/2007",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-20458"
         },
         {
-            "title": "ExciteBots",
+            "title": "ExciteBots: Trick Racing",
             "price": 8,
             "platform": "Wii",
             "id": 157,
-            "genre": "not set",
+            "genre": "Driving, Racing",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "04/20/2009",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-25438"
         },
         {
             "title": "Mario and Sonic London 2012 Olympics",
             "price": 8,
             "platform": "Wii",
             "id": 158,
-            "genre": "not set",
+            "genre": "Sports, Track & Field",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/15/2011",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-34986"
         },
         {
-            "title": "Mario and Sonic Olympic Winter games",
+            "title": "Mario and Sonic at the Winter Olympics",
             "price": 9,
             "platform": "Wii",
             "id": 159,
-            "genre": "not set",
+            "genre": "Sports, Minigame Collection",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/13/2009",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-25318"
         },
         {
             "title": "New Super Mario Bros Wii",
             "price": 13.5,
             "platform": "Wii",
             "id": 160,
-            "genre": "not set",
+            "genre": "Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/12/2009",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-26841"
         },
         {
             "title": "Resident Evil 4",
             "price": 6,
             "platform": "Wii",
             "id": 161,
-            "genre": "not set",
-            "rating": "not set",
-            "releasedate": "01/01/1900",
+            "genre": "Shooter, Action, Horror",
+            "rating": "ESRB: M",
+            "releasedate": "06/19/2007",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-1578"
         },
         {
             "title": "Sega Superstar Tennis",
             "price": 4,
             "platform": "Wii",
             "id": 162,
-            "genre": "not set",
+            "genre": "Sports, Tennis",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "03/18/2008",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-20578"
         },
         {
             "title": "Tiger Woods PGA Tour 10",
             "price": 6,
             "platform": "Wii",
             "id": 163,
-            "genre": "not set",
+            "genre": "Sports, Golf, Simulation",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "06/08/2009",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-25442"
         },
         {
             "title": "Wacky Races: Crash & Dash",
             "price": 9,
             "platform": "Wii",
             "id": 164,
-            "genre": "not set",
+            "genre": "Driving, Racing",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "06/17/2008",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-20622"
         },
         {
             "title": "Warioware: Smooth Moves",
             "price": 14,
             "platform": "Wii",
             "id": 165,
-            "genre": "not set",
+            "genre": "Minigame Collection",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/02/2006",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-13685"
         },
         {
             "title": "Wii Party",
             "price": 20,
             "platform": "Wii",
             "id": 166,
-            "genre": "not set",
+            "genre": "Minigame Collection",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "07/08/2010",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-31210"
         },
         {
             "title": "Wii Play",
             "price": 5,
             "platform": "Wii",
             "id": 167,
-            "genre": "not set",
+            "genre": "Minigame Collection",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "02/12/2007",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-9439"
         },
         {
             "title": "Xenoblade Chronicles",
             "price": 40,
             "platform": "Wii",
             "id": 168,
-            "genre": "not set",
+            "genre": "RPG",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "06/10/2010",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-26920"
         },
         {
-            "title": "Zelda: Skyward Sword",
+            "title": "The Legend of Zelda: Skyward Sword",
             "price": 30,
             "platform": "Wii",
             "id": 169,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/18/2011",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-26934"
         },
         {
             "title": "Bayonetta 2",
             "price": 50,
             "platform": "Wii U",
             "id": 170,
-            "genre": "not set",
+            "genre": "Action, Brawler",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "09/20/2014",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-39764"
         },
         {
             "title": "Hyrule Warriors",
             "price": 38,
             "platform": "Wii U",
             "id": 171,
-            "genre": "not set",
+            "genre": "Action",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "08/14/2014",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-44782"
         },
         {
             "title": "Lego Star Wars: The Force Awakens",
             "price": 30,
             "platform": "Wii U",
             "id": 172,
-            "genre": "not set",
+            "genre": "Action, Brawler",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "06/28/2016",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-52537"
         },
         {
-            "title": "Mario & Sonic Rio 2016 Olympics",
+            "title": "Mario & Sonic at the Rio 2016 Olympic Games",
             "price": "",
             "platform": "Wii U",
             "id": 173,
-            "genre": "not set",
+            "genre": "Sports, Track & Field",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "06/24/2016",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-49802"
         },
         {
             "title": "Mario Party 10",
             "price": 32,
             "platform": "Wii U",
             "id": 174,
-            "genre": "not set",
+            "genre": "Minigame Collection, Board Game",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "03/20/2015",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-46586"
         },
         {
             "title": "Minecraft Wii U Edition",
             "price": 28,
             "platform": "Wii U",
             "id": 175,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/19/2016",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-30475"
         },
         {
             "title": "New Super Luigi U",
             "price": 30,
             "platform": "Wii U",
             "id": 176,
-            "genre": "not set",
+            "genre": "Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "06/19/2013",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-42657"
         },
         {
             "title": "New Super Mario Bros U",
             "price": 28,
             "platform": "Wii U",
             "id": 177,
-            "genre": "not set",
+            "genre": "Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/18/2012",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-35574"
         },
         {
             "title": "Pikmin 3",
             "price": 22,
             "platform": "Wii U",
             "id": 178,
-            "genre": "not set",
+            "genre": "Strategy, Puzzle",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "07/13/2013",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-27930"
         },
         {
             "title": "Sonic Lost World",
             "price": 22,
             "platform": "Wii U",
             "id": 179,
-            "genre": "not set",
+            "genre": "Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/18/2013",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-42655"
         },
         {
             "title": "Splatoon",
             "price": 46,
             "platform": "Wii U",
             "id": 180,
-            "genre": "not set",
+            "genre": "Action, Shooter, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "05/28/2015",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-46582"
         },
         {
             "title": "Wii Sports Club",
             "price": 60,
             "platform": "Wii U",
             "id": 181,
-            "genre": "not set",
+            "genre": "Sports, Compilation",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "10/30/2013",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-43957"
         },
         {
             "title": "Xenoblade Chronicles X",
             "price": 30,
             "platform": "Wii U",
             "id": 182,
-            "genre": "not set",
+            "genre": "Action, RPG",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "04/29/2015",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-41347"
         },
         {
-            "title": "Yoshi's Wooly World",
+            "title": "Yoshi's Woolly World",
             "price": 27,
             "platform": "Wii U",
             "id": 183,
-            "genre": "not set",
+            "genre": "Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "06/25/2015",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-41349"
         },
         {
-            "title": "Zelda: Twilight Princess HD",
+            "title": "The Legend of Zelda: Twilight Princess HD",
             "price": 37,
             "platform": "Wii U",
             "id": 184,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "03/04/2016",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-51484"
         },
         {
-            "title": "Zelda: Wind Waker HD",
+            "title": "The Legend of Zelda: Wind Waker HD",
             "price": 25,
             "platform": "Wii U",
             "id": 185,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "09/20/2013",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-41348"
         },
         {
             "title": "ZombiU",
             "price": 9.5,
             "platform": "Wii U",
             "id": 186,
-            "genre": "not set",
+            "genre": "FPS, Brawler",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/18/2012",
             "addeddate": "01/01/1900",
-            "gbId": "0"
-        },
-        {
-            "title": "Battlefield 1",
-            "price": 60,
-            "platform": "Playstation 4",
-            "id": 187,
-            "genre": "not set",
-            "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-35619"
         },
         {
             "title": "Call of Duty: Black Ops 3",
             "price": 50,
             "platform": "Playstation 4",
             "id": 188,
-            "genre": "not set",
-            "rating": "not set",
-            "releasedate": "01/01/1900",
+            "genre": "FPS",
+            "rating": "ESRB: M",
+            "releasedate": "11/06/2015",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-48754"
         },
         {
             "title": "Dark Souls 3",
             "price": 40,
             "platform": "Playstation 4",
             "id": 189,
-            "genre": "not set",
+            "genre": "Action, Adventure, RPG",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "04/12/2016",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-49884"
         },
         {
             "title": "Destiny",
             "price": 60,
             "platform": "Playstation 4",
             "id": 190,
-            "genre": "not set",
+            "genre": "FPS",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "09/09/2014",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-36067"
         },
         {
             "title": "Grand Theft Auto V",
             "price": 39,
             "platform": "Playstation 4",
             "id": 191,
-            "genre": "not set",
+            "genre": "Action, Driving, Sandbox",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "09/17/2013",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-36765"
         },
         {
             "title": "Overwatch",
             "price": 60,
             "platform": "Playstation 4",
             "id": 192,
-            "genre": "not set",
+            "genre": "FPS",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "05/23/2016",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-48190"
         },
         {
             "title": "Pro Evolution Soccer 2017",
             "price": 40,
             "platform": "Playstation 4",
             "id": 193,
-            "genre": "not set",
+            "genre": "Sports, Soccer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "09/13/2016",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-54179"
         },
         {
-            "title": "The Witcher 3",
+            "title": "The Witcher 3: Wild Hunt",
             "price": 39,
             "platform": "Playstation 4",
             "id": 194,
-            "genre": "not set",
+            "genre": "Action, Adventure, RPG",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "05/19/2015",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-41484"
         },
         {
-            "title": "Uncharted 4",
-            "price": 40,
-            "platform": "Playstation 4",
-            "id": 195,
-            "genre": "not set",
-            "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900",
-            "gbId": "0"
-        },
-        {
-            "title": "Final Fantasy 7: Crisis Core",
+            "title": "Crisis Core: Final Fantasy VII",
             "price": 10,
             "platform": "PSP",
             "id": 196,
-            "genre": "not set",
+            "genre": "Action, RPG",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "03/25/2008",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-2361"
         },
         {
             "title": "Twisted Metal Head On",
             "price": 5.5,
             "platform": "PSP",
             "id": 197,
-            "genre": "not set",
+            "genre": "Driving, Vehicular Combat",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "03/24/2005",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-9259"
         },
         {
             "title": "Pursuit Force",
             "price": 10,
             "platform": "PSP",
             "id": 198,
-            "genre": "not set",
+            "genre": "Action, Driving, Vehicular Combat",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/18/2005",
             "addeddate": "01/01/1900",
-            "gbId": "0"
-        },
-        {
-            "title": "SOCOM Fireteam Bravo  1, 2, & 3",
-            "price": 5,
-            "platform": "PSP",
-            "id": 199,
-            "genre": "not set",
-            "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-205"
         },
         {
             "title": "SOCOM Tactical Strike",
             "price": 4,
             "platform": "PSP",
             "id": 200,
-            "genre": "not set",
+            "genre": "Action, RTS",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/06/2007",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-7023"
         },
         {
             "title": "Metal Gear Solid Portable Ops",
             "price": 12,
             "platform": "PSP",
             "id": 201,
-            "genre": "not set",
+            "genre": "Action, Strategy, Shooter",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/05/2006",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-14555"
         },
         {
             "title": "Silent Hill: Shattered Memories",
             "price": 19,
             "platform": "PSP",
             "id": 202,
-            "genre": "not set",
+            "genre": "Horror, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "12/08/2009",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-25707"
         },
         {
             "title": "Hexyz Force",
             "price": 59,
             "platform": "PSP",
             "id": 203,
-            "genre": "not set",
+            "genre": "RPG",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/12/2009",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-27501"
         },
         {
             "title": "Daxter",
             "price": 7,
             "platform": "PSP",
             "id": 204,
-            "genre": "not set",
+            "genre": "Action, Adventure, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "03/14/2006",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-14604"
         },
         {
             "title": "Gradius Collection",
             "price": 31,
             "platform": "PSP",
             "id": 205,
-            "genre": "not set",
+            "genre": "SHMUP, Compilation",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "06/06/2006",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-21409"
         },
         {
             "title": "Castlevania: Aria of Sorrow",
             "price": 35,
             "platform": "Gameboy Advance",
             "id": 206,
-            "genre": "not set",
+            "genre": "Action, Adventure",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "05/06/2003",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-12036"
         },
         {
             "title": "Final Fantasy 6 Advance",
             "price": 35,
             "platform": "Gameboy Advance",
             "id": 207,
-            "genre": "not set",
+            "genre": "RPG",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "02/05/2007",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-6336"
         },
         {
             "title": "Final Fantasy Tactics Advance",
             "price": 10,
             "platform": "Gameboy Advance",
             "id": 208,
-            "genre": "not set",
+            "genre": "RPG, Strategy",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "02/14/2003",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-8721"
         },
         {
             "title": "Kirby & the Amazing Mirror",
             "price": 17,
             "platform": "Gameboy Advance",
             "id": 209,
-            "genre": "not set",
+            "genre": "Action, Adventure, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "04/15/2004",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-3095"
         },
         {
             "title": "Mario & Luigi: Superstar Saga",
             "price": 14,
             "platform": "Gameboy Advance",
             "id": 210,
-            "genre": "not set",
+            "genre": "Action, RPG",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/17/2003",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-9306"
         },
         {
             "title": "Mario Golf: Advance Tour",
             "price": 15,
             "platform": "Gameboy Advance",
             "id": 211,
-            "genre": "not set",
+            "genre": "Sports, Golf",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "04/22/2004",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-20058"
         },
         {
             "title": "Mario Kart: Super Circuit",
             "price": 9,
             "platform": "Gameboy Advance",
             "id": 212,
-            "genre": "not set",
+            "genre": "Action, Driving, Racing",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "08/27/2001",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-16769"
         },
         {
             "title": "Metroid Fusion",
             "price": 21,
             "platform": "Gameboy Advance",
             "id": 213,
-            "genre": "not set",
+            "genre": "Action, Adventure, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "11/19/2002",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-10323"
         },
         {
             "title": "Super Mario Advance 4",
             "price": 26,
             "platform": "Gameboy Advance",
             "id": 214,
-            "genre": "not set",
+            "genre": "Adventure, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "07/11/2003",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-20748"
         },
         {
             "title": "Wario Land 4",
             "price": 10,
             "platform": "Gameboy Advance",
             "id": 215,
-            "genre": "not set",
+            "genre": "Puzzle, Platformer",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "08/21/2001",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-4300"
         },
         {
             "title": "WarioWare Inc.",
             "price": 27,
             "platform": "Gameboy Advance",
             "id": 216,
-            "genre": "not set",
+            "genre": "Minigame Collection",
             "rating": "not set",
-            "releasedate": "01/01/1900",
+            "releasedate": "03/21/2003",
             "addeddate": "01/01/1900",
-            "gbId": "0"
+            "gbId": "3030-14405"
         },
         {
             "title": "After Burner",
@@ -2449,8 +2383,8 @@
             "id": 226,
             "genre": "Fighting",
             "rating": "not set",
-            "releasedate": "01/01/1900",
-            "addeddate": "06/01/1995",
+            "releasedate": "06/01/1995",
+            "addeddate": "01/01/1900",
             "gbId": "3030-15584"
         },
         {
