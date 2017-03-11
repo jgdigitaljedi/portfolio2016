@@ -14,8 +14,20 @@ angular.module('portfolioApp').controller('GamesEditorCtrl', ['VgData', '$state'
       editing: false
     };
 
-    if ($state.current.name === 'gameseditor') {
-      $state.go('gameseditor.gamesLib');
+    switch($state.current.name) {
+      case 'gameseditor.hwLib':
+        gec.currentTabIndex = 1;
+        break;
+      case 'gameseditor.gameWl':
+        gec.currentTabIndex = 2;
+        break;
+      case 'gameseditor.conWl':
+        gec.currentTabIndex = 3;
+        break;
+      default:
+        gec.currentTabIndex = 0
+        $state.go('gameseditor.gamesLib');
+        break;
     }
 
     function badToken () {

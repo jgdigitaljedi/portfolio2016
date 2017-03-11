@@ -12,6 +12,7 @@ var path = require('path'),
   algorithm = 'aes-256-ctr',
   moment = require('moment'),
   Promise = require('bluebird'),
+  http = require('http'),
   tokenInterval;
 
 exports.editConsole = function(req, res) {
@@ -190,13 +191,6 @@ exports.checkToken = function (req, res) {
   //*****************************
   //** helper to add stuff 1 time
   //****************************
-  // fs.readFile(path.join(__dirname, 'vg/newGameWl.json'), 'utf-8', function (err, data) {
-  //   var data = JSON.parse(data);
-  //   data.games.forEach(function (item, index) {
-  //     item.gbId = '0';
-  //   });
-  //   writeToJson(data, 'newGameWl.json');
-  // });
 
 
   // fs.readFile(path.join(__dirname, 'vg/gameWishlist.json'), 'utf-8', function (err, data) {

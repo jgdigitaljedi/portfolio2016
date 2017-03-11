@@ -108,6 +108,22 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
 
         function handleExtraAction (data, ele) {
           console.log('extra action', data);
+          //**********************************
+          //here to programatically get ratings for wishlist games, then will be deleted
+          console.log('extra', data);
+          GB.getGameData(data.gbId, 'game').then(function (response) {
+            console.log('response yo', response);
+            var ogr = response.response.original_game_rating;
+            if (ogr && ogr !== undefined && ogr !== null) {
+              if (!Array.isArray(ogr)) ogr = [ogr];
+              ogr.forEach(function (item, index) {
+                if (item.name.substring(0, 4) === 'ESRB') {
+                  data.rating = item.name;
+                  makeEditCall({game: data, token: sessionStorage.getItem('jgToken')});
+                }
+              });
+            }
+          });
         }
 
         scope.handleInlineEditing = function (rowData, rowEle, cellData, cellEle) {
