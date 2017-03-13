@@ -42,7 +42,7 @@ angular.module('portfolioApp').controller('EditGamesWlCtrl', [
       extraAction: {
         type: 'modal'
       }
-    }
+    };
   }
 ]);
 

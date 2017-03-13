@@ -177,7 +177,8 @@ angular.module('portfolioApp')
         views: {
           'conWl': {
             templateUrl: 'app/vg/crud/conWl/EditConWl.html',
-            controller: 'EditConWlCtrl'
+            controller: 'EditConWlCtrl',
+            controllerAs: 'egcwl'
           }
         }
 

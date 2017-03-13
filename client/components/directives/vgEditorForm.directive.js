@@ -30,8 +30,8 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
           }
         };
 
-        function getGames (endpoint) {
-          VgData[endpoint](true).then(function (result) {
+        function getGames () {
+          VgData[scope.formOptions.endpoints.get](true).then(function (result) {
             console.log('owned games', result);
             gamesData = result;
             result.forEach(function (item) {
@@ -65,8 +65,6 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
         }
 
         function makeEditCall (request) {
-          console.log('edit call in directive', request);
-          console.log('edit call endpoint', scope.formOptions.endpoints.edit);
           VgData.editorCall(request, scope.formOptions.endpoints.edit)
             .then(function (response) {
               console.log('resposne from edit', response);
@@ -107,23 +105,40 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
         }
 
         function handleExtraAction (data, ele) {
-          console.log('extra action', data);
-          //**********************************
-          //here to programatically get ratings for wishlist games, then will be deleted
-          console.log('extra', data);
-          GB.getGameData(data.gbId, 'game').then(function (response) {
-            console.log('response yo', response);
-            var ogr = response.response.original_game_rating;
-            if (ogr && ogr !== undefined && ogr !== null) {
-              if (!Array.isArray(ogr)) ogr = [ogr];
-              ogr.forEach(function (item, index) {
-                if (item.name.substring(0, 4) === 'ESRB') {
-                  data.rating = item.name;
-                  makeEditCall({game: data, token: sessionStorage.getItem('jgToken')});
+
+          //TODO: make this legit modal so case option can be added
+          if (scope.formOptions.which === 'gamesWl') {
+            data.cib = '';
+            var confirm = $mdDialog.confirm()
+              .title('Are you sure you want to add ' + data.title + ' to your library?')
+              .textContent('Yeah! New game day!')
+              .ariaLabel('Really?')
+              .targetEvent(ele)
+              .ok('Confirm')
+              .cancel('Nope');
+
+            $mdDialog.show(confirm).then(function () {
+              var request = {
+                gameRequest: {
+                  gameData: data,
+                  token: sessionStorage.getItem('jgToken')
+                }
+              };
+              VgData.editorCall(request, 'addGame').then(function (result) {
+                if (!result.data.error) {
+                  triggerToast({style: 'success', text: request.gameRequest.gameData.title + ' Added!'});
+                  scope.table.row(ele).remove();
+                  scope.table.draw();
+                  deleteDataCall({id: data.id, title: data.title});
+                  getGames();
+                } else {
+
                 }
               });
-            }
-          });
+            }, function () {
+              console.log('user cancelled move');
+            });
+          }
         }
 
         scope.handleInlineEditing = function (rowData, rowEle, cellData, cellEle) {
