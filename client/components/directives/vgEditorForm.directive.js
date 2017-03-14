@@ -38,10 +38,12 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
               if (scope.formOptions.consoleDd && consoleDd.indexOf(item.platform) < 0) {
                 consoleDd.push(item.platform);
               }
-              var genres = item.genre.split(',');
-              genres.forEach(function (g) {
-                if (genreList.indexOf(g) < 0) genreList.push(g);
-              });
+              if (scope.formOptions.which !== 'consoleWl') {
+                var genres = item.genre.split(',');
+                genres.forEach(function (g) {
+                  if (genreList.indexOf(g) < 0) genreList.push(g);
+                });
+              }
               if (parseInt(item.id) > scope.state.lastId) scope.state.lastId = parseInt(item.id);
             });
             scope.consoleDd = consoleDd;
@@ -171,6 +173,8 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
         };
 
         function makeEditTable (data, container) {
+          console.log('make edit table data', data);
+          console.log('make edit table container', container);
           $timeout(function () {
             scope.table = $('#' + container).DataTable(data);
 
@@ -192,15 +196,17 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
               if (!item.hasOwnProperty('rating')) item.rating = 'none';
               if (!item.hasOwnProperty('releasedate')) item.releasedate = ' -- ';
             });
-            var tableData = {
-              aaData: gamesData,
-              aoColumns: scope.formOptions.dataTable,
-              aaSorting: [[1,'asc'], [0,'asc']],
-              lengthMenu: [[10, 25, 50, -1], [10, 25, 50, 'All']],
-              iDisplayLength: -1
-            };
-            makeEditTable(tableData, container);
           }
+          console.log('get edit data', gamesData)
+          var tableData = {
+            aaData: gamesData,
+            aoColumns: scope.formOptions.dataTable,
+            aaSorting: [[1,'asc'], [0,'asc']],
+            lengthMenu: [[10, 25, 50, -1], [10, 25, 50, 'All']],
+            iDisplayLength: -1
+          };
+          makeEditTable(tableData, container);
+
         }
 
         scope.changeState = function (state) {
@@ -211,6 +217,7 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
                 container = scope.formOptions.which + '-' + state + '-table',
                 tableCon = $compile('<table id="' + container + '"></table>')(scope);
               ele.append(tableCon);
+              console.log('state changed', container);
               getDataForEditTable(scope.formOptions.which, container);
             }, 200);
           }
@@ -237,6 +244,7 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
                 }
                 break;
               case 'original_release_date':
+              case 'release_date':
                 item.field = 'releasedate';
                 item.value = item.value ? moment(item.value, 'YYYY-MM-DD HH:mm:ss').format('MM/DD/YYYY') : 'unknown';
                 break;
@@ -308,7 +316,14 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
             if (!response.error) {
               var cleaned = [];
               scope.formOptions.resultFields.forEach(function (item) {
-                cleaned.push({value: response.response[item.field], label: item.label, field: item.field});
+                if (item.field.indexOf('.') > -1) { // only would ever be 2 deep so simplifying
+                  var splitItem = item.field.split('.');
+                  console.log('this shit', response.response[splitItem[0]][splitItem[1]]);
+                  cleaned.push({value: response.response[splitItem[0]][splitItem[1]], label: item.label, field: item.field});
+
+                } else {
+                  cleaned.push({value: response.response[item.field], label: item.label, field: item.field});
+                }
               });
               scope.gbInfo = resultCleaner(cleaned);
               console.log('gbInfo', scope.gbInfo);

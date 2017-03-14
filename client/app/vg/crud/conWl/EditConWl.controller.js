@@ -13,26 +13,27 @@ angular.module('portfolioApp').controller('EditConWlCtrl', [
       inputs: [
         {name: 'gbId', display: 'GiantBomb ID', link: 'http://www.giantbomb.com', required: true},
         {name: 'addeddate', display: 'Date Added (MM/DD/YYYY)', required: true},
-        {name: 'price', display: 'Value', link: 'https://www.ebay.com/', required: true}
+        {name: 'ebayPrice', display: 'Price on Ebay', link: 'https://www.ebay.com/', required: true}
       ],
       resultFields: [
         {field: 'name', label: 'Name'},
-        {field: 'releaseYear', label: 'Year Released'},
-        {field: 'ebayPrice', label: 'Price on Ebay'},
-        {field: 'gbId', label: 'Giantbomb ID'}
+        {field: 'company.name', label: 'Company'},
+        {field: 'release_date', label: 'Release Date'},
+        {field: 'install_base', label: 'Install Base'},
+        {field: 'original_price', label: 'Original Price'}
       ],
       consoleDd: false,
       toast: {
         trigger: false,
         options: {}
       },
-      paramsArr: ['addeddate', 'gbId', 'genre', 'price', 'rating', 'releasedate', 'title'],
+      paramsArr: ['addeddate', 'gbId', 'price', 'releasedate', 'title'],
       dataTable: [
         {'mDataProp': 'name', title: 'Name'},
         {'mDataProp': 'releaseYear', title: 'Year Released'},
-        {'mDataProp': 'ebayPrice', title: 'Price on Ebay'},
-        {'mDataProp': 'gbId', title: 'Ginatbomb ID'},
-        {'mDataProp': 'addeddate', title: 'Added'},
+        {'mDataProp': 'ebayPrice.display', title: 'Price on Ebay'},
+        {'mDataProp': 'gbId', title: 'Giantbomb ID'},
+        {'mDataProp': 'addeddate', title: 'Added Date'},
         {'mDataProp': null, 'bSortable': false, 'mRender': function (o) {return '<button class="game-delete">Delete</button>';}},
         {'mDataProp': null, 'bSortable': false, 'mRender': function (o) {return '<button class="extra-action">Move to Library</button>';}}
       ],

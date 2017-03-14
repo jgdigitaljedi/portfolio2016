@@ -46,14 +46,14 @@
             <md-option ng-repeat="console in consoleDd" ng-value="console">{{console}}</md-option>
           </md-select>
         </div>
-        <div ng-if="!showConDd" style="padding-top: 22px;">
+        <div ng-if="!showConDd && formOptions.consoleDd" style="padding-top: 22px;">
           <md-input-container>
             <label>Console</label>
             <input ng-model="searchParams.platform" />
           </md-input-container>
         </div>
         <div>
-          <md-button ng-click="newConsole()" class="form-action-button">
+          <md-button ng-click="newConsole()" class="form-action-button" ng-if="formOptions.consoleDd">
             <md-icon md-svg-icon="action:note_add"></md-icon>
             &nbsp {{showConDd ? 'Add New Console' : 'Use Console Select'}}
           </md-button>

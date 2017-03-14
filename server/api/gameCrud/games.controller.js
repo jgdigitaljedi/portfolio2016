@@ -193,16 +193,12 @@ exports.checkToken = function (req, res) {
   //****************************
 
 
-  // fs.readFile(path.join(__dirname, 'vg/gameWishlist.json'), 'utf-8', function (err, data) {
-  //   var data = JSON.parse(data),
-  //     result = {games: []};
-  //   for (var con in data) {
-  //     for (var game in data[con]) {
-  //       result.games.push({title: data[con][game].games, price: data[con][game].price, platform: con});
-  //     }
-  //   }
-  //   writeToJson(result, 'newGameWl.json');
-  //   console.log('result', result);
+  // fs.readFile(path.join(__dirname, 'vg/hardwareWishlist.json'), 'utf-8', function (err, data) {
+  //   var data = JSON.parse(data);
+  //   data.hardwareWL.forEach(function (item, index) {
+  //     item.addeddate = '01/01/1900';
+  //   });
+  //   writeToJson(data, 'hardwareWishlist.json');
   // });
   //*********************************
 
