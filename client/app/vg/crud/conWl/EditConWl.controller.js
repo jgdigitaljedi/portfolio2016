@@ -27,13 +27,15 @@ angular.module('portfolioApp').controller('EditConWlCtrl', [
         trigger: false,
         options: {}
       },
-      paramsArr: ['addeddate', 'gbId', 'price', 'releasedate', 'title'],
+      paramsArr: ['addeddate', 'gbId', 'ebayPrice', 'releasedate', 'title', 'install_base', 'companyName', 'original_price'],
       dataTable: [
-        {'mDataProp': 'name', title: 'Name'},
-        {'mDataProp': 'releaseYear', title: 'Year Released'},
+        {'mDataProp': 'title', title: 'Name'},
+        {'mDataProp': 'companyName', title: 'Company'},
+        {'mDataProp': 'releaseDate', title: 'Date Released'},
         {'mDataProp': 'ebayPrice.display', title: 'Price on Ebay'},
         {'mDataProp': 'gbId', title: 'Giantbomb ID'},
-        {'mDataProp': 'addeddate', title: 'Added Date'},
+        {'mDataProp': 'installBase', title: 'Units Sold'},
+        {'mDataProp': 'originalPrice', title: 'Orig. Price'},
         {'mDataProp': null, 'bSortable': false, 'mRender': function (o) {return '<button class="game-delete">Delete</button>';}},
         {'mDataProp': null, 'bSortable': false, 'mRender': function (o) {return '<button class="extra-action">Move to Library</button>';}}
       ],

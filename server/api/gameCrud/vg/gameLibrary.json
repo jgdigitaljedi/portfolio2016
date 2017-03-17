@@ -2875,7 +2875,8 @@
             "genre": "Platformer, Action-Adventure",
             "platform": "Wii",
             "price": 7,
-            "id": 228
+            "id": 228,
+            "cib": "case"
         }
     ]
 }

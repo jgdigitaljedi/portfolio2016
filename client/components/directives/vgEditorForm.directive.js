@@ -67,14 +67,15 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
         }
 
         function makeEditCall (request) {
+          console.log('reuest', request);
           VgData.editorCall(request, scope.formOptions.endpoints.edit)
             .then(function (response) {
               console.log('resposne from edit', response);
-              triggerToast({style: 'success', text: request.game.title + ' edited!!'});
+              triggerToast({style: 'success', text: request.data.title + ' edited!!'});
             })
             .catch(function (err) {
               console.log('error from edit', err);
-              triggerToast({style: 'warning', text: request.game.title + ' NOT EDITED!! ERROR!'});
+              triggerToast({style: 'warning', text: request.data.title + ' NOT EDITED!! ERROR!'});
             });
         }
 
@@ -83,7 +84,7 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
               scope.state.edit.cellData.data(scope.editText);
               angular.element('#edit-textarea').remove();
               scope.state.edit.editing = false;
-              makeEditCall({game: scope.state.edit.rowData, token: sessionStorage.getItem('jgToken')});
+              makeEditCall({data: scope.state.edit.rowData, token: sessionStorage.getItem('jgToken')});
             }
         };
 
@@ -140,6 +141,39 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
             }, function () {
               console.log('user cancelled move');
             });
+          } else if (scope.formOptions.which === 'consoleWl') {
+            // here temporarily to nomralize con wl to new data structure
+            console.log('console wl action', data);
+            GB.getGameData(data.gbId, 'platform')
+              .then(function (response) {
+                console.log('console wl action response', response);
+                var newData = {
+                  gbId: data.gbId,
+                  ebayPrice: data.ebayPrice.filter,
+                  id: data.id,
+                  lastModified: moment().format('MM/DD/YYYY'),
+                  companyName: response.response.company.name,
+                  installBase: response.response.install_base,
+                  originalPrice: parseFloat(response.response.original_price),
+                  releaseDate: moment(response.response.release_date).format('MM/DD/YYYY'),
+                  title: response.response.name
+                }
+                var request = {
+                  data: newData,
+                  token: sessionStorage.getItem('jgToken')
+                };
+                VgData.editorCall(request, scope.formOptions.endpoints.edit)
+                  .then(function (response) {
+                    console.log('consoleWl edit response', response);
+                  })
+                  .catch(function (err) {
+                    console.log('consoleWl edit err', err);
+                  });
+                console.log('newData', newData);
+              })
+              .catch(function (err) {
+
+              });
           }
         }
 
@@ -168,7 +202,7 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
             scope.state.edit.cellData.data(scope.editText);
             angular.element('#edit-textarea').remove();
             scope.state.edit.editing = false;
-            makeEditCall({game: rowData, token: sessionStorage.getItem('jgToken')});
+            makeEditCall({data: rowData, token: sessionStorage.getItem('jgToken')});
           }
         };
 
@@ -259,6 +293,9 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
               case 'name':
                 item.field = 'title';
                 break;
+              case 'company.name':
+                item.field = 'companyName';
+                break;
               default:
                 item = item;
             }
@@ -334,6 +371,7 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
         };
 
         function validateSearchParams (params) {
+          console.log('params', params);
           var def = $q.defer(),
             valid = true,
             paramsArr = scope.formOptions.paramsArr,
@@ -360,19 +398,23 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
           validateSearchParams(scope.searchParams)
             .then(function (valid) {
               if (valid) {
+                // var request = {
+                //   gameRequest: {
+                //     gameData: scope.searchParams,
+                //     token: sessionStorage.getItem('jgToken')
+                //   }
+                // };
                 var request = {
-                  gameRequest: {
-                    gameData: scope.searchParams,
+                    data: scope.searchParams,
                     token: sessionStorage.getItem('jgToken')
-                  }
                 };
-                request.gameRequest.gameData.id = scope.state.lastId + 1;
+                request.data.id = scope.state.lastId + 1;
                 scope.state.lastId++;
-                // VgData.addGame(request).then(function (result) {
+                console.log('add request', request);
                 VgData.editorCall(request, scope.formOptions.endpoints.add).then(function (result) {
                   console.log('response in directive', result);
                   if (!result.data.error) {
-                    triggerToast({style: 'success', text: request.gameRequest.gameData.title + ' Added!'});
+                    triggerToast({style: 'success', text: request.data.title + ' Added!'});
                     getGames();
                   } else {
 
@@ -381,6 +423,9 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
               } else {
                 triggerToast({style: 'warning', text: 'ERROR ADDING ' + scope.formOptions.type + '!'});
               }
+            })
+            .catch(function (err) {
+              console.log('search params validation error', err);
             });
         };
 

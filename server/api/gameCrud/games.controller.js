@@ -15,10 +15,6 @@ var path = require('path'),
   http = require('http'),
   tokenInterval;
 
-exports.editConsole = function(req, res) {
-  console.log('edit console called');
-};
-
 exports.getlibrary = function (req, res) {
   fs.readFile(path.join(__dirname,'vg/gameLibrary.json'), 'utf-8', function (err, data) {
     var returnData = {},
@@ -213,50 +209,6 @@ exports.checkToken = function (req, res) {
     });
 };
 
-exports.addGame = function(req, res) {
-  validateToken(req.body.gameRequest.token, true)
-    .then(function (loggedIn) {
-      fs.readFile(path.join(__dirname,'vg/gameLibrary.json'), 'utf-8', function (err, data) {
-        var oldData = JSON.parse(data),
-          reqData = req.body.gameRequest.gameData;
-        reqData.price = parseFloat(reqData.price);
-        oldData.games.push(reqData);
-        writeToJson(oldData, 'gameLibrary.json');
-        res.status(200).send({error: false, message: 'Game Successfully Added'});
-      });
-    })
-    .catch(function (err) {
-      res.status(401).send({error: true, message: 'Access Denied: Bad Token'});
-    });
-};
-
-exports.addConsole = function(req, res) {
-  console.log('add console called');
-};
-
-exports.editGame = function(req, res) {
-  validateToken(req.body.token, true)
-    .then(function (loggedIn) {
-      if (!loggedIn.error) {
-        fs.readFile(path.join(__dirname, 'vg/gameLibrary.json'), 'utf-8', function (err, data) {
-          var newGameData = req.body.game,
-            gameLib = JSON.parse(data);
-
-          gameLib.games.forEach(function (item, index) {
-            if (parseInt(newGameData.id) === parseInt(item.id)) {
-              gameLib.games[index] = newGameData;
-            }
-          });
-          writeToJson(gameLib, 'gameLibrary.json');
-          res.status(200).send({error: false, message: newGameData.title + ' added!'})
-        });
-      }
-    })
-    .catch(function (err) {
-      res.status(401).send({error: true, message: 'Access Denied: Bad Token'});
-    });
-};
-
 exports.deleteGame = function (req, res) {
   console.log('deleteGame called');
   validateToken(req.body.token, true)
@@ -297,50 +249,6 @@ exports.getGamesWl = function (req, res) {
   });
 };
 
-exports.addGameWl = function (req, res) {
-  console.log('addGameWl called');
-  validateToken(req.body.gameRequest.token, true)
-    .then(function (loggedIn) {
-      if (!loggedIn.error) {
-        fs.readFile(path.join(__dirname, 'vg/newGameWl.json'), 'utf-8', function (err, data) {
-          var addGame = req.body.gameRequest.gameData,
-            gameWl = JSON.parse(data);
-
-          addGame.price = parseFloat(addGame.price);
-          gameWl.games.push(addGame);
-          writeToJson(gameWl, 'newGameWl.json');
-          res.status(200).send({error: false, message: 'Game Successfully Added to WL'});
-        });
-      }
-    })
-    .catch(function (err) {
-      res.status(401).send({error: true, message: 'Access Denied: Bad Token'});
-    });
-};
-
-exports.editGameWl = function(req, res) {
-  validateToken(req.body.token, true)
-    .then(function (loggedIn) {
-      if (!loggedIn.error) {
-        fs.readFile(path.join(__dirname, 'vg/newGameWl.json'), 'utf-8', function (err, data) {
-          var newGameData = req.body.game,
-            gameWl = JSON.parse(data);
-
-          gameWl.games.forEach(function (item, index) {
-            if (parseInt(newGameData.id) === parseInt(item.id)) {
-              gameWl.games[index] = newGameData;
-            }
-          });
-          writeToJson(gameWl, 'newGameWl.json');
-          res.status(200).send({error: false, message: newGameData.title + ' added!'})
-        });
-      }
-    })
-    .catch(function (err) {
-      res.status(401).send({error: true, message: 'Access Denied: Bad Token'});
-    });
-};
-
 exports.deleteGameWl = function (req, res) {
   console.log('deleteGameWl called');
   validateToken(req.body.token, true)
@@ -356,6 +264,83 @@ exports.deleteGameWl = function (req, res) {
             }
           });
           writeToJson(gameLib, 'newGameWl.json');
+          res.status(200).send({error: false, message: delGame.title + ' deleted!'})
+        });
+      }
+    })
+    .catch(function (err) {
+      res.status(401).send({error: true, message: 'Access Denied: Bad Token'});
+    });
+};
+
+exports.gamesAdd = function (req, res) {
+  validateToken(req.body.token, true)
+    .then(function (loggedIn) {
+      console.log('loggedIn', loggedIn);
+      if (!loggedIn.error) {
+        console.log('file', req.body.file);
+        fs.readFile(path.join(__dirname, 'vg/' + req.body.file), 'utf-8', function (err, data) {
+          console.log('read file fine');
+          var newAdd = req.body.data,
+            currentData = JSON.parse(data);
+
+          if (newAdd.hasOwnProperty('price')) {
+            newAdd.price = parseFloat(newAdd.price);
+          }
+
+          if (newAdd.hasOwnProperty('ebayPrice')) {
+            newAdd.ebayPrice = parseFloat(newAdd.ebayPrice);
+          }
+
+          if (newAdd.hasOwnProperty('original_price')) {
+            newAdd.original_price = parseFloat(newAdd.original_price);
+          }
+
+          currentData.games.push(newAdd);
+          writeToJson(currentData, req.body.file);
+          res.status(200).send({error: false, message: 'Addition successfully made'});
+        });
+      }
+    })
+    .catch(function (err) {
+      res.status(401).send({error: true, message: 'Access Denied: Bad Token', rawMessage: err});
+    });
+};
+
+exports.gamesEdit = function (req, res) {
+  validateToken(req.body.token, true)
+    .then(function (loggedIn) {
+      if (!loggedIn.error) {
+        fs.readFile(path.join(__dirname, 'vg/' + req.body.file), 'utf-8', function (err, data) {
+          var newData = req.body.data,
+            list = JSON.parse(data);
+
+          list.games.forEach(function (item, index) {
+            if (parseInt(newData.id) === parseInt(item.id)) {
+              list.games[index] = newData;
+            }
+          });
+          writeToJson(list, req.body.file);
+          res.status(200).send({error: false, message: newData.title + ' added!'})
+        });
+      }
+    })
+};
+
+exports.gamesDelete = function (req, res) {
+  validateToken(req.body.token, true)
+    .then(function (loggedIn) {
+      if (!loggedIn.error) {
+        fs.readFile(path.join(__dirname, 'vg/' + req.body.file), 'utf-8', function (err, data) {
+          var delGame = req.body.data,
+            gameLib = JSON.parse(data);
+
+          gameLib.games.forEach(function (item, index) {
+            if (parseInt(delGame.id) === parseInt(item.id)) {
+              gameLib.games.splice(index, 1);
+            }
+          });
+          writeToJson(gameLib, req.body.file);
           res.status(200).send({error: false, message: delGame.title + ' deleted!'})
         });
       }

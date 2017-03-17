@@ -186,7 +186,7 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
     function getConsoleWishlist () {
       var def = $q.defer();
       getData('consolewl').then(function (response) {
-        var consoles = response.hardwareWL.map(function (item) {
+        var consoles = response.games.map(function (item) {
             item.ebayPrice = {
               filter: item.ebayPrice,
               display: formatPrice(item.ebayPrice)
@@ -301,18 +301,45 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
     //** game editor setters ***
     //**************************
 
+    function fileForRequest (ep) {
+      var epParams;
+      switch (ep) {
+        case 'addGame':
+          epParams = {endpoint: 'gamesAdd', file: 'gameLibrary.json'};
+          break;
+        case 'addGameWl':
+          epParams = {endpoint: 'gamesAdd', file: 'newGameWl.json'};
+          break;
+        case 'addConsoleWl':
+          epParams = {endpoint: 'gamesAdd', file: 'hardwareWishlist.json'};
+          break;
+        case 'editGame':
+          epParams = {endpoint: 'gamesEdit', file: 'gameLibrary.json'};
+          break;
+        case 'editGameWl':
+          epParams = {endpoint: 'gamesEdit', file: 'newGameWl.json'};
+          break;
+        case 'editConsoleWl':
+          epParams = {endpoint: 'gamesEdit', file: 'hardwareWishlist.json'};
+      }
+      return epParams;
+    }
+
     function editorCall (request, ep) {
       var def = $q.defer();
       console.log('editor call', ep);
       console.log('editor call request', request);
-      postWithJson(ep, request)
+      var params = fileForRequest(ep),
+        endpoint = params.endpoint;
+      request.file = params.file;
+      postWithJson(endpoint, request)
         .then(function (result) {
           console.log('editor call result', result);
           def.resolve(result);
         })
         .catch(function (err) {
           console.log('editor call error in vgdata');
-          def.reject('editor call error');
+          def.reject({error: true, message: 'editor call error'});
         });
       return def.promise;
     }
