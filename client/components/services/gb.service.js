@@ -10,7 +10,8 @@ angular.module('portfolioApp').factory('GB', ['$http', '$q',
         url: '/api/proxy/giantbomb/' + which + '/' + id,
       }).then(function (response) {
         if (which === 'game' || which === 'platform') {
-          def.resolve({error: false, response: response.data.results});
+          response.data.body = JSON.parse(response.data.body);
+          def.resolve({error: false, response: response.data.body.results});
         }
       }).catch(function (error) {
         def.reject({error: true, response: error});

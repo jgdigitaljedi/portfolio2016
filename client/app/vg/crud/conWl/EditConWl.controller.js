@@ -27,11 +27,11 @@ angular.module('portfolioApp').controller('EditConWlCtrl', [
         trigger: false,
         options: {}
       },
-      paramsArr: ['addeddate', 'gbId', 'ebayPrice', 'releasedate', 'title', 'install_base', 'companyName', 'original_price'],
+      paramsArr: ['addeddate', 'gbId', 'ebayPrice', 'releasedate', 'title', 'installBase', 'companyName', 'originalPrice'],
       dataTable: [
         {'mDataProp': 'title', title: 'Name'},
         {'mDataProp': 'companyName', title: 'Company'},
-        {'mDataProp': 'releaseDate', title: 'Date Released'},
+        {'mDataProp': 'releasedate', title: 'Date Released'},
         {'mDataProp': 'ebayPrice.display', title: 'Price on Ebay'},
         {'mDataProp': 'gbId', title: 'Giantbomb ID'},
         {'mDataProp': 'installBase', title: 'Units Sold'},

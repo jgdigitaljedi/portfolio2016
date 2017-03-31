@@ -1,6 +1,7 @@
 .vg-editor-card {
   background-color: #fff !important;
   color: $flat-black !important;
+  overflow: auto;
 
   .dynamic-input {
     color: $flat-black !important;

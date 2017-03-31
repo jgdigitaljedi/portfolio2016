@@ -12,6 +12,7 @@ var path = require('path'),
   algorithm = 'aes-256-ctr',
   moment = require('moment'),
   Promise = require('bluebird'),
+  Archiver = require('archiver'),
   http = require('http'),
   tokenInterval;
 
@@ -144,32 +145,6 @@ function generateToken (password, user) {
   return crypted.split('').reverse().join('');
 }
 
-// function findById (id, fileName, param) {
-//   return new Promise(function (resolve, reject) {
-//     fs.readFile(path.join(__dirname,'vg/' + fileName), 'utf-8', function (err, data) {
-//       if (err) reject('file read error');
-//       var found = false;
-//       if (param) {
-//         data[param].forEach(function (item, index) {
-//           if (item.id === id) {
-//             found = true;
-//             resolve({item: item, index: index});
-//           }
-//         });
-//         if (!found) reject('no match found');
-//       } else {
-//         data.forEach(function (item, index) {
-//           if (item.id === id) {
-//             found = true;
-//             resolve(item);
-//           }
-//         });
-//         if (!found) reject('no match found');
-//       }
-//     });
-//   });
-// }
-
 exports.simpleAuth = function (req, res) {
   var user = req.params.user,
     pass = req.params.pass;
@@ -208,30 +183,30 @@ exports.checkToken = function (req, res) {
       res.status(500).send({error: true, message: err});
     });
 };
-
-exports.deleteGame = function (req, res) {
-  console.log('deleteGame called');
-  validateToken(req.body.token, true)
-    .then(function (loggedIn) {
-      if (!loggedIn.error) {
-        fs.readFile(path.join(__dirname, 'vg/gameLibrary.json'), 'utf-8', function (err, data) {
-          var delGame = req.body.game,
-            gameLib = JSON.parse(data);
-
-          gameLib.games.forEach(function (item, index) {
-            if (parseInt(delGame.id) === parseInt(item.id)) {
-              gameLib.games.splice(index, 1);
-            }
-          });
-          writeToJson(gameLib, 'gameLibrary.json');
-          res.status(200).send({error: false, message: delGame.title + ' deleted!'})
-        });
-      }
-    })
-    .catch(function (err) {
-      res.status(401).send({error: true, message: 'Access Denied: Bad Token'});
-    });
-};
+//
+// exports.deleteGame = function (req, res) {
+//   console.log('deleteGame called');
+//   validateToken(req.body.token, true)
+//     .then(function (loggedIn) {
+//       if (!loggedIn.error) {
+//         fs.readFile(path.join(__dirname, 'vg/gameLibrary.json'), 'utf-8', function (err, data) {
+//           var delGame = req.body.game,
+//             gameLib = JSON.parse(data);
+//
+//           gameLib.games.forEach(function (item, index) {
+//             if (parseInt(delGame.id) === parseInt(item.id)) {
+//               gameLib.games.splice(index, 1);
+//             }
+//           });
+//           writeToJson(gameLib, 'gameLibrary.json');
+//           res.status(200).send({error: false, message: delGame.title + ' deleted!'})
+//         });
+//       }
+//     })
+//     .catch(function (err) {
+//       res.status(401).send({error: true, message: 'Access Denied: Bad Token'});
+//     });
+// };
 
 exports.getGamesWl = function (req, res) {
   fs.readFile(path.join(__dirname,'vg/newGameWl.json'), 'utf-8', function (err, data) {
@@ -249,29 +224,29 @@ exports.getGamesWl = function (req, res) {
   });
 };
 
-exports.deleteGameWl = function (req, res) {
-  console.log('deleteGameWl called');
-  validateToken(req.body.token, true)
-    .then(function (loggedIn) {
-      if (!loggedIn.error) {
-        fs.readFile(path.join(__dirname, 'vg/newGameWl.json'), 'utf-8', function (err, data) {
-          var delGame = req.body.game,
-            gameLib = JSON.parse(data);
-
-          gameLib.games.forEach(function (item, index) {
-            if (parseInt(delGame.id) === parseInt(item.id)) {
-              gameLib.games.splice(index, 1);
-            }
-          });
-          writeToJson(gameLib, 'newGameWl.json');
-          res.status(200).send({error: false, message: delGame.title + ' deleted!'})
-        });
-      }
-    })
-    .catch(function (err) {
-      res.status(401).send({error: true, message: 'Access Denied: Bad Token'});
-    });
-};
+// exports.deleteGameWl = function (req, res) {
+//   console.log('deleteGameWl called');
+//   validateToken(req.body.token, true)
+//     .then(function (loggedIn) {
+//       if (!loggedIn.error) {
+//         fs.readFile(path.join(__dirname, 'vg/newGameWl.json'), 'utf-8', function (err, data) {
+//           var delGame = req.body.game,
+//             gameLib = JSON.parse(data);
+//
+//           gameLib.games.forEach(function (item, index) {
+//             if (parseInt(delGame.id) === parseInt(item.id)) {
+//               gameLib.games.splice(index, 1);
+//             }
+//           });
+//           writeToJson(gameLib, 'newGameWl.json');
+//           res.status(200).send({error: false, message: delGame.title + ' deleted!'})
+//         });
+//       }
+//     })
+//     .catch(function (err) {
+//       res.status(401).send({error: true, message: 'Access Denied: Bad Token'});
+//     });
+// };
 
 exports.gamesAdd = function (req, res) {
   validateToken(req.body.token, true)
@@ -348,4 +323,34 @@ exports.gamesDelete = function (req, res) {
     .catch(function (err) {
       res.status(401).send({error: true, message: 'Access Denied: Bad Token'});
     });
+};
+
+exports.sendBackup = function (req, res) {
+  //use archiver to zip JSON directory and stream it back
+  //gonna setup home server to do this on a cron job every few days
+
+  var output = fs.createWriteStream(path.join(__dirname, 'vgBackup.zip'));
+  var archiver =  require('archiver');
+  var zipArchive = archiver('zip');
+
+  zipArchive.pipe(output);
+  zipArchive.directory(path.join(__dirname, 'vg'), true);
+  zipArchive.finalize(function(err, bytes) {
+    if (err)
+      throw err;
+
+    res.download(path.join(__dirname, 'vgBackup.zip'));
+    console.log('done:', base, bytes);
+  });
+
+  // var archive = Archiver('zip');
+  // archive.on('error', function(err) {
+  //   res.status(500).send({error: err.message});
+  // });
+  // //set the archive name
+  // res.attachment('vgBackup.zip');
+  // //this is the streaming magic
+  // archive.pipe(res);
+  // archive.directory(__dirname + 'vg/', false);
+  // archive.finalize();
 };

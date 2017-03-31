@@ -8,29 +8,41 @@
             "companyName": "Atari",
             "installBase": "30000000",
             "originalPrice": 200,
-            "releaseDate": "10/31/1977",
+            "releasedate": "10/31/1977",
             "title": "Atari 2600"
         },
         {
             "gbId": "3045-67",
-            "ebayPrice": 45,
+            "ebayPrice": {
+                "filter": {
+                    "filter": 45,
+                    "display": "$45.00"
+                },
+                "display": "$100.00"
+            },
             "id": 2,
             "lastModified": "03/16/2017",
             "companyName": "Atari",
-            "installBase": null,
+            "installBase": "1000000",
             "originalPrice": 270,
-            "releaseDate": "03/31/1982",
+            "releasedate": "03/31/1982",
             "title": "Atari 5200"
         },
         {
             "gbId": "3045-70",
-            "ebayPrice": 56,
+            "ebayPrice": {
+                "filter": {
+                    "filter": 56,
+                    "display": "$56.00"
+                },
+                "display": "$85.00"
+            },
             "id": 3,
             "lastModified": "03/16/2017",
             "companyName": "Atari SA",
-            "installBase": null,
+            "installBase": "2500000",
             "originalPrice": 140,
-            "releaseDate": "06/30/1986",
+            "releasedate": "06/30/1986",
             "title": "Atari 7800"
         },
         {
@@ -41,7 +53,7 @@
             "companyName": "Atari SA",
             "installBase": "500000",
             "originalPrice": 250,
-            "releaseDate": "11/30/1993",
+            "releasedate": "11/30/1993",
             "title": "Jaguar"
         },
         {
@@ -52,18 +64,21 @@
             "companyName": "Coleco",
             "installBase": "6000000",
             "originalPrice": 200,
-            "releaseDate": "08/31/1982",
+            "releasedate": "08/31/1982",
             "title": "ColecoVision"
         },
         {
             "gbId": "3045-51",
-            "ebayPrice": 45,
+            "ebayPrice": {
+                "filter": 45,
+                "display": "$45.00"
+            },
             "id": 6,
             "lastModified": "03/16/2017",
-            "companyName": "Mattel Electronics",
+            "companyName": "Mattel",
             "installBase": "3000000",
             "originalPrice": 299,
-            "releaseDate": "01/31/1979",
+            "releasedate": "01/31/1979",
             "title": "Intellivision"
         },
         {
@@ -74,7 +89,7 @@
             "companyName": "Magnavox",
             "installBase": "330000",
             "originalPrice": 100,
-            "releaseDate": "08/31/1972",
+            "releasedate": "08/31/1972",
             "title": "Odyssey"
         },
         {
@@ -85,7 +100,7 @@
             "companyName": "SNK",
             "installBase": "1000000",
             "originalPrice": 650,
-            "releaseDate": "01/31/1990",
+            "releasedate": "01/31/1990",
             "title": "Neo Geo"
         },
         {
@@ -96,13 +111,16 @@
             "companyName": "SNK",
             "installBase": "1000000",
             "originalPrice": 300,
-            "releaseDate": "10/31/1994",
+            "releasedate": "10/31/1994",
             "title": "Neo Geo CD"
         },
         {
             "gbId": "3045-26",
             "ebayPrice": {
-                "filter": 150,
+                "filter": {
+                    "filter": 150,
+                    "display": "$150.00"
+                },
                 "display": "$150.00"
             },
             "id": 10,
@@ -110,41 +128,50 @@
             "companyName": "Panasonic",
             "installBase": "2000000",
             "originalPrice": 700,
-            "releaseDate": "08/31/1993",
+            "releasedate": "08/31/1993",
             "title": "3DO"
         },
         {
             "gbId": "3045-27",
             "ebayPrice": {
-                "filter": 70,
-                "display": "$70.00"
+                "filter": {
+                    "filter": 70,
+                    "display": "$70.00"
+                },
+                "display": "$150.00"
             },
             "id": 11,
             "lastModified": "03/16/2017",
             "companyName": "Philips",
             "installBase": "570000",
             "originalPrice": 700,
-            "releaseDate": "12/03/1991",
+            "releasedate": "12/03/1991",
             "title": "CD-i"
         },
         {
             "gbId": "3045-22",
             "ebayPrice": {
-                "filter": 40,
-                "display": "$40.00"
+                "filter": {
+                    "filter": 40,
+                    "display": "$40.00"
+                },
+                "display": "$50.00"
             },
             "id": 12,
             "lastModified": "03/16/2017",
             "companyName": "Sony",
             "installBase": "102490000",
             "originalPrice": 299,
-            "releaseDate": "12/03/1994",
+            "releasedate": "12/03/1994",
             "title": "PlayStation"
         },
         {
             "gbId": "3045-129",
             "ebayPrice": {
-                "filter": 150,
+                "filter": {
+                    "filter": 150,
+                    "display": "$150.00"
+                },
                 "display": "$150.00"
             },
             "id": 13,
@@ -152,7 +179,7 @@
             "companyName": "Sony",
             "installBase": "6000000",
             "originalPrice": 249,
-            "releaseDate": "02/29/2012",
+            "releasedate": "02/29/2012",
             "title": "PlayStation Vita"
         },
         {
@@ -163,7 +190,7 @@
             "companyName": "Sega",
             "installBase": "6000000",
             "originalPrice": 299,
-            "releaseDate": "10/15/1992",
+            "releasedate": "10/15/1992",
             "title": "Sega CD"
         },
         {
@@ -174,7 +201,7 @@
             "companyName": "Sega",
             "installBase": "11000000",
             "originalPrice": 150,
-            "releaseDate": "10/28/1990",
+            "releasedate": "10/28/1990",
             "title": "Game Gear"
         },
         {
@@ -185,7 +212,7 @@
             "companyName": "Sega",
             "installBase": "16390000",
             "originalPrice": 200,
-            "releaseDate": "10/20/1985",
+            "releasedate": "10/20/1985",
             "title": "Sega Master System"
         },
         {
@@ -196,7 +223,7 @@
             "companyName": "Sega",
             "installBase": "40000000",
             "originalPrice": 189,
-            "releaseDate": "10/29/1988",
+            "releasedate": "10/29/1988",
             "title": "Nomad"
         },
         {
@@ -207,7 +234,7 @@
             "companyName": "Sega",
             "installBase": "17000000",
             "originalPrice": 399,
-            "releaseDate": "11/22/1994",
+            "releasedate": "11/22/1994",
             "title": "Saturn"
         },
         {
@@ -218,69 +245,84 @@
             "companyName": "Nintendo",
             "installBase": "49100000",
             "originalPrice": 199,
-            "releaseDate": "11/21/1990",
+            "releasedate": "11/21/1990",
             "title": "Super Nintendo Entertainment System"
         },
         {
             "gbId": "3045-55",
-            "ebayPrice": 200,
+            "ebayPrice": {
+                "filter": 200,
+                "display": "$200.00"
+            },
             "id": 20,
             "lastModified": "03/16/2017",
-            "companyName": "Delete",
+            "companyName": "NEC",
             "installBase": "10000000",
             "originalPrice": 199,
-            "releaseDate": "10/30/1987",
+            "releasedate": "10/30/1987",
             "title": "TurboGrafx-16"
         },
         {
             "gbId": "3045-32",
             "ebayPrice": {
-                "filter": 65,
-                "display": "$65.00"
+                "filter": {
+                    "filter": 65,
+                    "display": "$65.00"
+                },
+                "display": "$70.00"
             },
             "id": 21,
             "lastModified": "03/16/2017",
             "companyName": "Microsoft",
             "installBase": "24000000",
             "originalPrice": 299,
-            "releaseDate": "11/30/2001",
+            "releasedate": "11/30/2001",
             "title": "Xbox"
         },
         {
             "gbId": "3045-20",
             "ebayPrice": {
-                "filter": 120,
-                "display": "$120.00"
+                "filter": {
+                    "filter": 120,
+                    "display": "$120.00"
+                },
+                "display": "$130.00"
             },
             "id": 22,
             "lastModified": "03/16/2017",
             "companyName": "Microsoft",
             "installBase": "80000000",
             "originalPrice": 399,
-            "releaseDate": "11/22/2005",
+            "releasedate": "11/22/2005",
             "title": "Xbox 360"
         },
         {
             "gbId": "3045-65",
-            "ebayPrice": 80,
+            "ebayPrice": {
+                "filter": {
+                    "filter": 80,
+                    "display": "$80.00"
+                },
+                "display": "$50.00"
+            },
             "id": 23,
             "lastModified": "03/16/2017",
-            "companyName": "Bandai Co., Ltd.",
-            "installBase": null,
-            "originalPrice": 0,
-            "releaseDate": "03/01/1999",
+            "companyName": "Bandai",
+            "installBase": "3500000",
+            "originalPrice": "59",
+            "releasedate": "03/01/1999",
             "title": "WonderSwan"
         },
         {
+            "addeddate": "03/19/2017",
             "gbId": "3045-39",
-            "ebayPrice": 250,
-            "id": 24,
-            "lastModified": "03/16/2017",
+            "title": "Amiga CD32",
             "companyName": "Commodore",
+            "releasedate": "09/17/1993",
             "installBase": "100000",
-            "originalPrice": 250,
-            "releaseDate": "09/17/1993",
-            "title": "Amiga CD32"
+            "originalPrice": "250.00",
+            "ebayPrice": 250,
+            "id": 24
         }
     ]
 }

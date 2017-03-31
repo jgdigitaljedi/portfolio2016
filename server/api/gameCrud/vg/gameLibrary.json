@@ -2877,6 +2877,30 @@
             "price": 7,
             "id": 228,
             "cib": "case"
+        },
+        {
+            "addeddate": "03/31/2017",
+            "gbId": "3030-51484",
+            "title": "The Legend of Zelda: Twilight Princess HD",
+            "rating": "ESRB: T",
+            "releasedate": "03/04/2016",
+            "genre": "Action, Adventure",
+            "price": 60,
+            "cib": "case",
+            "platform": "Wii U",
+            "id": 229
+        },
+        {
+            "addeddate": "03/31/2017",
+            "gbId": "3030-34833",
+            "title": "Sonic Generations",
+            "rating": "ESRB: E",
+            "releasedate": "11/01/2011",
+            "genre": "Action, Platformer",
+            "price": 10,
+            "cib": "case",
+            "platform": "PlayStation 3",
+            "id": 230
         }
     ]
 }

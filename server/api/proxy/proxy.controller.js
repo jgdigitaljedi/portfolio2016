@@ -8,6 +8,8 @@ var request = require('request'),
 	weatherCache,
   fs = require('fs'),
   http = require('http');
+var GiantBomb = require('giant-bomb');
+var gb = new GiantBomb(process.env.JGBKEY, 'My Portfolio');
 
 var mongoose = require('mongoose');
 mongoose.createConnection('mongodb://localhost/random');
@@ -204,28 +206,21 @@ exports.getresume = function (req, res) {
 };
 
 exports.giantbomb = function (req, res) {
-    var options = {
-      hostname: 'www.giantbomb.com',
-      path: '/api/' + req.params.platform + '/' + req.params.id + '/?api_key=' + process.env.JGBKEY + '&format=json',
-      method: 'GET',
-      headers: {'user-agent': 'DigitalJedi'}
-    };
-    var req = http.request(options, function (response) {
-      var body = '';
-      var i = 0;
-      response.on('data', function (chunk) {
-        i++;
-        body += chunk;
-      });
-      response.on('end', function () {
-        body = JSON.parse(body);
-        if(body) res.json(body);
-        else res.json({});
-      });
+  if (req.params.platform === 'game') {
+    gb.getGame({id: req.params.id}, function (error, response) {
+      if (!error && response.statusCode === 200) {
+        res.send(response);
+      } else {
+        res.status(500).send({error: true, message: error});
+      }
     });
-
-    req.on('error', function (e) {
-      res.send({error: true, message: e});
+  } else {
+    gb.getPlatform({id: req.params.id}, function (error, response) {
+      if (!error && response.statusCode === 200) {
+        res.send(response);
+      } else {
+        res.status(500).send({error: true, message: error});
+      }
     });
-    req.end();
+  }
 };

@@ -321,6 +321,19 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
           break;
         case 'editConsoleWl':
           epParams = {endpoint: 'gamesEdit', file: 'hardwareWishlist.json'};
+          break;
+        case 'deleteGame':
+          epParams = {endpoint: 'gamesDelete', file: 'gameLibrary.json'};
+          break;
+        case 'deleteGameWl':
+          epParams = {endpoint: 'gamesDelete', file: 'newGameWl.json'};
+          break;
+        case 'deleteConsoleWl':
+          epParams = {endpoint: 'gamesDelete', file: 'hardwareWishlist.json'};
+          break;
+        default:
+          epParams = false;
+          break;
       }
       return epParams;
     }
@@ -332,15 +345,20 @@ angular.module('portfolioApp').service('VgData', ['$q', '$http',
       var params = fileForRequest(ep),
         endpoint = params.endpoint;
       request.file = params.file;
-      postWithJson(endpoint, request)
-        .then(function (result) {
-          console.log('editor call result', result);
-          def.resolve(result);
-        })
-        .catch(function (err) {
-          console.log('editor call error in vgdata');
-          def.reject({error: true, message: 'editor call error'});
-        });
+      if (params) {
+        postWithJson(endpoint, request)
+          .then(function (result) {
+            console.log('editor call result', result);
+            def.resolve(result);
+          })
+          .catch(function (err) {
+            console.log('editor call error in vgdata');
+            def.reject({error: true, message: 'editor call error'});
+          });
+      } else {
+        def.reject({error: true, message: 'error with request'});
+      }
+
       return def.promise;
     }
 
