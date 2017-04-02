@@ -41,7 +41,8 @@ angular.module('portfolioApp').controller('EditGamesLibCtrl', ['VgData',
         {'mDataProp': 'cib', title: 'Box/Case'},
         {'mDataProp': null, 'bSortable': false, 'mRender': function (o) {return '<button class="game-delete">Delete</button>';}}
       ],
-      deleteRow: true
+      deleteRow: true,
+      toastScrollContainer: '#tab-content-0'
     }
   }
 ]);

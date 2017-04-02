@@ -42,7 +42,8 @@ angular.module('portfolioApp').controller('EditConWlCtrl', [
       deleteRow: true,
       extraAction: {
         type: 'modal'
-      }
+      },
+      toastScrollContainer: '#tab-content-3'
     }
   }
 ]);

@@ -316,7 +316,8 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
               style: options.style,
               timeout: 3500,
               text: options.text,
-              trigger: true
+              trigger: true,
+              scrollContainer: scope.formOptions.toastScrollContainer
             }
           };
           $timeout(function () {

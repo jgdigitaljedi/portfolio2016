@@ -1,7 +1,13 @@
+.gf-position {
+  bottom: 8px;
+  right: 8px;
+  position: fixed;
+}
+
 .gf-toast-wrapper {
   display: flex;
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   @include box_shadow(2);
   flex-direction: row;
   width: 200px;

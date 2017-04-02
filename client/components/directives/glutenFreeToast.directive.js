@@ -9,8 +9,8 @@
 // var currentScriptPath = scripts[scripts.length-1].src;
 // console.log('cs path', currentScriptPath);
 
-angular.module('portfolioApp').directive('gfToast', ['$timeout',
-  function ($timeout) {
+angular.module('portfolioApp').directive('gfToast', ['$timeout', '$window',
+  function ($timeout, $window) {
     return {
       restrict: 'AE',
       // transclude: true,
@@ -18,10 +18,11 @@ angular.module('portfolioApp').directive('gfToast', ['$timeout',
       scope: {
         options: '='
       },
-      link: function (scope, elem) {
+      link: function (scope, elem, attrs) {
 
         function triggerToast () {
           if (scope.options.trigger) {
+            elem.addClass('gf-position');
             var styleDefaults = {
               warning: {color: '#B71C1C', icon: 'alert:warning', title: 'Warning!'},
               info: {color: '#0D47A1', icon: 'action:info'},
@@ -36,10 +37,17 @@ angular.module('portfolioApp').directive('gfToast', ['$timeout',
               title: styleDefaults[scope.options.style].title
             };
 
-            console.log('dirOptions', scope.dirOptions);
             scope.showToast = true;
+            if (scope.options.scrollContainer) {
+              var scroller = angular.element(document.querySelector(scope.options.scrollContainer)),
+                topScroll = scroller[0].scrollTop;
+
+              $('.gf-toast-wrapper').css('bottom', 8 - topScroll + 'px');
+            }
 
             $timeout(function () {
+              // debugger;
+              elem.removeClass('gf-position');
               scope.showToast = false;
             }, scope.options.timeout || 3500);
 

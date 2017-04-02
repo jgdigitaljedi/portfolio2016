@@ -2180,7 +2180,7 @@
         },
         {
             "title": "Final Fantasy 6 Advance",
-            "price": 35,
+            "price": "35",
             "platform": "Gameboy Advance",
             "id": 207,
             "genre": "RPG",

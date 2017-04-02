@@ -41,7 +41,8 @@ angular.module('portfolioApp').controller('EditGamesWlCtrl', [
       deleteRow: true,
       extraAction: {
         type: 'modal'
-      }
+      },
+      toastScrollContainer: '#tab-content-2'
     };
   }
 ]);

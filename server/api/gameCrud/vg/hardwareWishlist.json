@@ -94,12 +94,138 @@
         },
         {
             "gbId": "3045-25",
-            "ebayPrice": 250,
+            "ebayPrice": {
+                "filter": {
+                    "filter": {
+                        "filter": {
+                            "filter": {
+                                "filter": {
+                                    "filter": {
+                                        "filter": {
+                                            "filter": {
+                                                "filter": {
+                                                    "filter": {
+                                                        "filter": {
+                                                            "filter": {
+                                                                "filter": {
+                                                                    "filter": {
+                                                                        "filter": {
+                                                                            "filter": {
+                                                                                "filter": {
+                                                                                    "filter": {
+                                                                                        "filter": {
+                                                                                            "filter": {
+                                                                                                "filter": {
+                                                                                                    "filter": {
+                                                                                                        "filter": {
+                                                                                                            "filter": {
+                                                                                                                "filter": {
+                                                                                                                    "filter": {
+                                                                                                                        "filter": {
+                                                                                                                            "filter": {
+                                                                                                                                "filter": {
+                                                                                                                                    "filter": {
+                                                                                                                                        "filter": {
+                                                                                                                                            "filter": {
+                                                                                                                                                "filter": {
+                                                                                                                                                    "filter": {
+                                                                                                                                                        "filter": {
+                                                                                                                                                            "filter": {
+                                                                                                                                                                "filter": {
+                                                                                                                                                                    "filter": {
+                                                                                                                                                                        "filter": {
+                                                                                                                                                                            "filter": {
+                                                                                                                                                                                "filter": {
+                                                                                                                                                                                    "filter": 250,
+                                                                                                                                                                                    "display": "$250.00"
+                                                                                                                                                                                },
+                                                                                                                                                                                "display": "$0.00"
+                                                                                                                                                                            },
+                                                                                                                                                                            "display": "$0.00"
+                                                                                                                                                                        },
+                                                                                                                                                                        "display": "$0.00"
+                                                                                                                                                                    },
+                                                                                                                                                                    "display": "$0.00"
+                                                                                                                                                                },
+                                                                                                                                                                "display": "$0.00"
+                                                                                                                                                            },
+                                                                                                                                                            "display": "$0.00"
+                                                                                                                                                        },
+                                                                                                                                                        "display": "$0.00"
+                                                                                                                                                    },
+                                                                                                                                                    "display": "$0.00"
+                                                                                                                                                },
+                                                                                                                                                "display": "$0.00"
+                                                                                                                                            },
+                                                                                                                                            "display": "$0.00"
+                                                                                                                                        },
+                                                                                                                                        "display": "$0.00"
+                                                                                                                                    },
+                                                                                                                                    "display": "$0.00"
+                                                                                                                                },
+                                                                                                                                "display": "$0.00"
+                                                                                                                            },
+                                                                                                                            "display": "$0.00"
+                                                                                                                        },
+                                                                                                                        "display": "$0.00"
+                                                                                                                    },
+                                                                                                                    "display": "$0.00"
+                                                                                                                },
+                                                                                                                "display": "$0.00"
+                                                                                                            },
+                                                                                                            "display": "$0.00"
+                                                                                                        },
+                                                                                                        "display": "$0.00"
+                                                                                                    },
+                                                                                                    "display": "$0.00"
+                                                                                                },
+                                                                                                "display": "$0.00"
+                                                                                            },
+                                                                                            "display": "$0.00"
+                                                                                        },
+                                                                                        "display": "$0.00"
+                                                                                    },
+                                                                                    "display": "$0.00"
+                                                                                },
+                                                                                "display": "$0.00"
+                                                                            },
+                                                                            "display": "$0.00"
+                                                                        },
+                                                                        "display": "$0.00"
+                                                                    },
+                                                                    "display": "$0.00"
+                                                                },
+                                                                "display": "$0.00"
+                                                            },
+                                                            "display": "$0.00"
+                                                        },
+                                                        "display": "$0.00"
+                                                    },
+                                                    "display": "$0.00"
+                                                },
+                                                "display": "$0.00"
+                                            },
+                                            "display": "$0.00"
+                                        },
+                                        "display": "$0.00"
+                                    },
+                                    "display": "$0.00"
+                                },
+                                "display": "$0.00"
+                            },
+                            "display": "$0.00"
+                        },
+                        "display": "$0.00"
+                    },
+                    "display": "$0.00"
+                },
+                "display": "$0.00"
+            },
             "id": 8,
             "lastModified": "03/16/2017",
             "companyName": "SNK",
             "installBase": "1000000",
-            "originalPrice": 650,
+            "originalPrice": "650",
             "releasedate": "01/31/1990",
             "title": "Neo Geo"
         },
@@ -239,12 +365,15 @@
         },
         {
             "gbId": "3045-9",
-            "ebayPrice": 100,
+            "ebayPrice": {
+                "filter": 100,
+                "display": "$100.00"
+            },
             "id": 19,
             "lastModified": "03/16/2017",
             "companyName": "Nintendo",
             "installBase": "49100000",
-            "originalPrice": 199,
+            "originalPrice": "199",
             "releasedate": "11/21/1990",
             "title": "Super Nintendo Entertainment System"
         },
