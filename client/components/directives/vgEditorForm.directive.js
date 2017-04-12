@@ -112,9 +112,41 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
           //TODO: make this legit modal so case option can be added
           if (scope.formOptions.which === 'gamesWl') {
             data.cib = '';
+            // var confirm = $mdDialog.confirm()
+            //   .title('Are you sure you want to add ' + data.title + ' to your library?')
+            //   .textContent('Yeah! New game day!')
+            //   .ariaLabel('Really?')
+            //   .targetEvent(ele)
+            //   .ok('Confirm')
+            //   .cancel('Nope');
+            //
+            // $mdDialog.show(confirm).then(function () {
+            //   var request = {
+            //     gameRequest: {
+            //       gameData: data,
+            //       token: sessionStorage.getItem('jgToken')
+            //     }
+            //   };
+            //   VgData.editorCall(request, 'addGame').then(function (result) {
+            //     if (!result.data.error) {
+            //       triggerToast({style: 'success', text: request.gameRequest.gameData.title + ' Added!'});
+            //       scope.table.row(ele).remove();
+            //       scope.table.draw();
+            //       deleteDataCall({id: data.id, title: data.title});
+            //       // getGames();
+            //     } else {
+            //
+            //     }
+            //   });
+            // }, function () {
+            //   console.log('user cancelled move');
+            // });
+          } else if (scope.formOptions.which === 'consoleWl') {
+            // here temporarily to nomralize con wl to new data structure
+            console.log('console wl action', data);
             var confirm = $mdDialog.confirm()
               .title('Are you sure you want to add ' + data.title + ' to your library?')
-              .textContent('Yeah! New game day!')
+              .textContent('Yeah! New console day!')
               .ariaLabel('Really?')
               .targetEvent(ele)
               .ok('Confirm')
@@ -127,9 +159,10 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
                   token: sessionStorage.getItem('jgToken')
                 }
               };
-              VgData.editorCall(request, 'addGame').then(function (result) {
+              VgData.editorCall(request, 'addConsole').then(function (result) {
                 if (!result.data.error) {
-                  triggerToast({style: 'success', text: request.gameRequest.gameData.title + ' Added!'});
+                  console.log('result', result);
+                  // triggerToast({style: 'success', text: request.gameRequest.gameData.title + ' Added!'});
                   scope.table.row(ele).remove();
                   scope.table.draw();
                   deleteDataCall({id: data.id, title: data.title});
@@ -141,39 +174,6 @@ angular.module('portfolioApp').directive('vgForm', ['GB', 'VgData', '$timeout', 
             }, function () {
               console.log('user cancelled move');
             });
-          } else if (scope.formOptions.which === 'consoleWl') {
-            // here temporarily to nomralize con wl to new data structure
-            console.log('console wl action', data);
-            // GB.getGameData(data.gbId, 'platform')
-            //   .then(function (response) {
-            //     console.log('console wl action response', response);
-            //     var newData = {
-            //       gbId: data.gbId,
-            //       ebayPrice: data.ebayPrice.filter,
-            //       id: data.id,
-            //       lastModified: moment().format('MM/DD/YYYY'),
-            //       companyName: response.response.company.name,
-            //       installBase: response.response.install_base,
-            //       originalPrice: parseFloat(response.response.original_price),
-            //       releaseDate: moment(response.response.release_date).format('MM/DD/YYYY'),
-            //       title: response.response.name
-            //     }
-            //     var request = {
-            //       data: newData,
-            //       token: sessionStorage.getItem('jgToken')
-            //     };
-            //     VgData.editorCall(request, scope.formOptions.endpoints.edit)
-            //       .then(function (response) {
-            //         console.log('consoleWl edit response', response);
-            //       })
-            //       .catch(function (err) {
-            //         console.log('consoleWl edit err', err);
-            //       });
-            //     console.log('newData', newData);
-            //   })
-            //   .catch(function (err) {
-            //
-            //   });
           }
         }
 

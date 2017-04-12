@@ -13,6 +13,12 @@
             <div ui-view="gamesLib"></div>
           </md-tab-body>
         </md-tab>
+        <md-tab ui-sref="gameseditor.consoleLib">
+          <md-tab-label>Console Collection</md-tab-label>
+          <md-tab-body>
+            <div ui-view="consoleCol"></div>
+          </md-tab-body>
+        </md-tab>
         <md-tab ui-sref="gameseditor.hwLib">
           <md-tab-label>Hardware Library</md-tab-label>
           <md-tab-body>
@@ -29,6 +35,12 @@
           <md-tab-label>Console Wishlist</md-tab-label>
           <md-tab-body>
             <div ui-view="conWl"></div>
+          </md-tab-body>
+        </md-tab>
+        <md-tab ui-sref="gameseditor.hwWl">
+          <md-tab-label>Hardware Wishlist</md-tab-label>
+          <md-tab-body>
+            <div ui-view="hwWl"></div>
           </md-tab-body>
         </md-tab>
       </md-tabs>

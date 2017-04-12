@@ -11,7 +11,7 @@
             "id": 1,
             "rating": "ESRB: E",
             "price": "9.41",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "Crazy Taxi",
@@ -25,7 +25,7 @@
             "id": 2,
             "rating": "ESRB: E",
             "price": "10",
-            "cib": "case"
+            "cib": "custom case"
         },
         {
             "title": "House of the Dead 2",
@@ -53,7 +53,7 @@
             "id": 4,
             "rating": "ESRB: T",
             "price": "18",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "Looney Tunes: Space Race",
@@ -67,7 +67,7 @@
             "id": 5,
             "rating": "ESRB: E",
             "price": "13.4",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "Marvel vs. Capcom",
@@ -81,7 +81,7 @@
             "gbId": "3030-8605",
             "id": 6,
             "rating": "ESRB: T",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "Mortal Kombat Gold",
@@ -122,7 +122,7 @@
             "gbId": "3030-18834",
             "id": 9,
             "rating": "ESRB: E",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "Sonic Adventure",
@@ -136,7 +136,7 @@
             "gbId": "3030-7852",
             "id": 10,
             "rating": "ESRB: E",
-            "cib": "generic case"
+            "cib": "custom case"
         },
         {
             "title": "Tony Hawk's Pro Skater 2",
@@ -150,7 +150,7 @@
             "gbId": "3030-990",
             "id": 11,
             "rating": "ESRB: T",
-            "cib": "generic case"
+            "cib": "custom case"
         },
         {
             "title": "Virtua Tennis",
@@ -164,7 +164,7 @@
             "gbId": "3030-10676",
             "id": 12,
             "rating": "ESRB: E",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "Wacky Races",
@@ -178,7 +178,7 @@
             "gbId": "3030-21342",
             "id": 13,
             "rating": "ESRB: E",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "Worms: Armageddon",
@@ -332,7 +332,7 @@
             "gbId": "3030-8844",
             "id": 24,
             "rating": "ESRB: E10+",
-            "cib": "generic case"
+            "cib": "custom case"
         },
         {
             "title": "Prince of Persia: The Sands of Time",
@@ -471,7 +471,7 @@
             "gbId": "3030-164",
             "id": 34,
             "rating": "JOEY: E",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "Sonic & Knuckles",
@@ -485,7 +485,7 @@
             "gbId": "3030-18115",
             "id": 35,
             "rating": "JOEY: E",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "Sonic the Hedgehog 2",
@@ -499,7 +499,7 @@
             "gbId": "3030-1662",
             "id": 36,
             "rating": "JOEY: E",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "Bubble Bobble",
@@ -974,7 +974,7 @@
             "gbId": "3030-9890",
             "id": 70,
             "rating": "ESRB: E",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "Donkey Kong 64",
@@ -988,7 +988,7 @@
             "gbId": "3030-15000",
             "id": 71,
             "rating": "ESRB: E",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "Extreme-G 2",
@@ -1002,7 +1002,7 @@
             "gbId": "3030-9774",
             "id": 72,
             "rating": "ESRB: E",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "F1 Pole Position 64",
@@ -1016,7 +1016,7 @@
             "gbId": "3030-3764",
             "id": 73,
             "rating": "ESRB: E",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "GoldenEye 007",
@@ -1030,7 +1030,7 @@
             "gbId": "3030-3166",
             "id": 74,
             "rating": "ESRB: T",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "The Legend of Zelda: Ocarina of Time",
@@ -1044,7 +1044,7 @@
             "gbId": "3030-12572",
             "id": 75,
             "rating": "ESRB: E10+",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "Perfect Dark",
@@ -1058,7 +1058,7 @@
             "gbId": "3030-21256",
             "id": 76,
             "rating": "ESRB: M",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "San Francisco Rush: Extreme Racing",
@@ -1072,7 +1072,7 @@
             "gbId": "3030-8458",
             "id": 77,
             "rating": "ESRB: KA",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "South Park",
@@ -1086,7 +1086,7 @@
             "gbId": "3030-8845",
             "id": 78,
             "rating": "ESRB: M",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "Star Wars: Rogue Squadron",
@@ -1099,7 +1099,7 @@
             "gbId": "3030-4011",
             "id": 79,
             "rating": "ESRB: T",
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "title": "Amplitude",
@@ -1253,7 +1253,7 @@
             "gbId": "3030-17108",
             "id": 90,
             "rating": "ESRB: E",
-            "cib": "generic case"
+            "cib": "custom case"
         },
         {
             "title": "Hitman 2: Silent Assassin",
@@ -2131,7 +2131,7 @@
             "gbId": "3030-20592",
             "id": 154,
             "rating": "ESRB: M",
-            "cib": "generic case"
+            "cib": "custom case"
         },
         {
             "title": "SEGA Genesis Collection",
@@ -2648,7 +2648,7 @@
             "price": 14,
             "platform": "Genesis",
             "id": 194,
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "addeddate": "02/26/2017",
@@ -2696,7 +2696,7 @@
             "genre": "Shooter",
             "platform": "Genesis",
             "id": 198,
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "addeddate": "02/26/2017",
@@ -2708,7 +2708,7 @@
             "price": "8",
             "platform": "32X",
             "id": 199,
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "addeddate": "02/26/2017",
@@ -2762,7 +2762,7 @@
             "addeddate": "03/05/2017",
             "gbId": "3030-10276",
             "price": 31,
-            "cib": "sleeve",
+            "cib": "custom case",
             "title": "The Legend of Zelda: A Link to the Past",
             "rating": "ESRB: K-A",
             "releasedate": "11/21/1991",
@@ -2774,7 +2774,7 @@
             "addeddate": "03/05/2017",
             "gbId": "3030-1334",
             "price": 20,
-            "cib": "sleeve",
+            "cib": "custom case",
             "title": "Super Mario World",
             "rating": "ESRB: E",
             "releasedate": "11/21/1990",
@@ -2786,7 +2786,7 @@
             "addeddate": "03/05/2017",
             "gbId": "3030-19071",
             "price": 30,
-            "cib": "sleeve",
+            "cib": "custom case",
             "title": "Super Mario Kart",
             "rating": "ESRB: E",
             "releasedate": "08/27/1992",
@@ -2864,7 +2864,7 @@
             "genre": "Driving, Racing",
             "platform": "SNES",
             "id": 227,
-            "cib": "loose"
+            "cib": "custom case"
         },
         {
             "addeddate": "03/13/2017",
@@ -2901,6 +2901,186 @@
             "cib": "case",
             "platform": "PlayStation 3",
             "id": 230
+        },
+        {
+            "addeddate": "04/04/2017",
+            "gbId": "3030-49077",
+            "title": "Rock Band 4",
+            "rating": "ESRB: T",
+            "releasedate": "10/06/2015",
+            "genre": "Music, Rhythm",
+            "cib": "Case",
+            "price": 100,
+            "platform": "PlayStation 4",
+            "id": 231
+        },
+        {
+            "addeddate": "04/04/2017",
+            "gbId": "3030-49598",
+            "price": 18,
+            "title": "Need for Speed",
+            "rating": "ESRB: T",
+            "releasedate": "11/03/2015",
+            "genre": "Driving, Racing",
+            "cib": "case",
+            "platform": "PlayStation 4",
+            "id": 232
+        },
+        {
+            "addeddate": "04/04/2017",
+            "gbId": "3030-49973",
+            "price": 60,
+            "cib": "case",
+            "title": "Horizon Zero Dawn",
+            "rating": "ESRB: T",
+            "releasedate": "02/28/2017",
+            "genre": "RPG, Shooter, Action, Adventure",
+            "platform": "PlayStation 4",
+            "id": 233
+        },
+        {
+            "addeddate": "04/04/2017",
+            "gbId": "3030-44655",
+            "price": 20,
+            "cib": "DL",
+            "title": "Game of Thrones: A Telltale Game Series",
+            "rating": "ESRB: M",
+            "releasedate": "12/02/2014",
+            "genre": "Adventure",
+            "platform": "PlayStation 4",
+            "id": 234
+        },
+        {
+            "addeddate": "04/04/2017",
+            "gbId": "3030-55302",
+            "price": 40,
+            "cib": "case",
+            "title": "Poochy & Yoshi’s Woolly World",
+            "rating": "ESRB: E",
+            "releasedate": "01/19/2017",
+            "genre": "Platformer",
+            "platform": "Nintendo 3DS",
+            "id": 235
+        },
+        {
+            "addeddate": "04/07/2017",
+            "gbId": "3030-20569",
+            "title": "Resident Evil 5",
+            "rating": "ESRB: M",
+            "releasedate": "03/05/2009",
+            "genre": "Action, Shooter",
+            "cib": "case",
+            "price": 14,
+            "platform": "PlayStation 4",
+            "id": 236
+        },
+        {
+            "addeddate": "04/07/2017",
+            "gbId": "3030-46300",
+            "title": "Diablo III: Ultimate Evil Edition",
+            "rating": "ESRB: M",
+            "releasedate": "08/19/2014",
+            "genre": "Action, RPG, Compilation",
+            "cib": "case",
+            "price": 22,
+            "platform": "PlayStation 4",
+            "id": 237
+        },
+        {
+            "addeddate": "04/08/2017",
+            "gbId": "3030-15738",
+            "price": 40,
+            "cib": "custom case",
+            "title": "Donkey Kong Country",
+            "rating": "ESRB: K-A",
+            "releasedate": "11/25/1994",
+            "genre": "Platformer",
+            "platform": "SNES",
+            "id": 238
+        },
+        {
+            "addeddate": "04/08/2017",
+            "gbId": "3030-15584",
+            "price": 10,
+            "cib": "custom case",
+            "title": "Virtua Fighter",
+            "rating": "ESRB: T",
+            "releasedate": "12/31/1993",
+            "genre": "Action, Fighting",
+            "platform": "32X",
+            "id": 239
+        },
+        {
+            "addeddate": "04/08/2017",
+            "gbId": "3030-2600",
+            "cib": "case",
+            "price": 10,
+            "title": "Halo: Combat Evolved",
+            "rating": "ESRB: M",
+            "releasedate": "11/15/2001",
+            "genre": "FPS",
+            "platform": "XBOX",
+            "id": 240
+        },
+        {
+            "addeddate": "04/08/2017",
+            "gbId": "3030-7110",
+            "cib": "case",
+            "price": 10,
+            "title": "Halo 2",
+            "rating": "ESRB: M",
+            "releasedate": "11/09/2004",
+            "genre": "FPS",
+            "platform": "XBOX",
+            "id": 241
+        },
+        {
+            "addeddate": "04/08/2017",
+            "gbId": "3030-11822",
+            "cib": "case",
+            "price": 10,
+            "title": "Soulcalibur II",
+            "rating": "ESRB: T",
+            "releasedate": "07/10/2002",
+            "genre": "Action, Fighting",
+            "platform": "XBOX",
+            "id": 242
+        },
+        {
+            "addeddate": "04/08/2017",
+            "gbId": "3030-12254",
+            "cib": "case",
+            "price": 10,
+            "title": "Need for Speed Underground",
+            "rating": "ESRB: E",
+            "releasedate": "11/17/2003",
+            "genre": "Driving, Racing",
+            "platform": "XBOX",
+            "id": 243
+        },
+        {
+            "addeddate": "04/10/2017",
+            "gbId": "3030-17050",
+            "title": "Leisure Suit Larry: Magna Cum Laude",
+            "rating": "ESRB: AO",
+            "releasedate": "10/05/2004",
+            "genre": "Adventure, Minigame Collection",
+            "cib": "custom case",
+            "price": 11,
+            "platform": "XBOX",
+            "id": 244
+        },
+        {
+            "addeddate": "04/10/2017",
+            "gbId": "3030-18484",
+            "title": "Killer Instinct",
+            "rating": "ESRB: K-A",
+            "releasedate": "10/28/1994",
+            "genre": "Fighting",
+            "price": 10.5,
+            "cib": "custom case",
+            "platform": "SNES",
+            "id": 245
         }
     ]
 }

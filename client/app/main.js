@@ -182,5 +182,38 @@ angular.module('portfolioApp')
           }
         }
 
+      }).state('gameseditor.consoleLib', {
+      parent: 'gameseditor',
+      onEnter: function ($rootScope, $timeout, $stateParams) {
+        // $timeout(function() {
+        //   $rootScope.$broadcast('gameslib');
+        // });
+      },
+      url: '/consoleCol',
+      views: {
+        'consoleCol': {
+          templateUrl: 'app/vg/crud/conWl/EditConCol.html',
+          controller: 'EditConColCtrl',
+          controllerAs: 'egcc'
+        }
+      }
+
+    })
+      .state('gameseditor.hwWl', {
+        parent: 'gameseditor',
+        onEnter: function ($rootScope, $timeout, $stateParams) {
+          // $timeout(function() {
+          //   $rootScope.$broadcast('gameslib');
+          // });
+        },
+        url: '/hwWl',
+        views: {
+          'hwWl': {
+            templateUrl: 'app/vg/crud/conWl/EditHwWl.html',
+            controller: 'EditHwWlCtrl',
+            controllerAs: 'eghwl'
+          }
+        }
+
       });
   });
